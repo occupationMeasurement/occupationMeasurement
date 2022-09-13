@@ -485,7 +485,8 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
   columns <- colnames(matching_entries)
   columns_to_remove <- c(
     "aggregated_answer_id_combination",
-    "answer_id_combination"
+    "answer_id_combination",
+    "corresponding_answer_level"
   )
   columns <- columns[!columns %in% columns_to_remove]
   answer_columns <- c(

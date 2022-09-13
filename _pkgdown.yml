@@ -1,0 +1,40 @@
+url: ~
+template:
+  bootstrap: 5
+reference:
+- title: Using the App / Api
+- contents:
+  - app
+  - create_app_settings
+  - demo_app
+  - api
+- title: Questionnaires
+- subtitle: Pre-Built
+  desc: >
+    Pre-built questionnaires for use within the interactive app. These can be
+    extended using pages.
+- contents:
+  - ends_with("questionnaire")
+- subtitle: Page
+  desc: >
+    Functions to create pages to either extend the existing questionnaires
+    or build your own from scratch.
+- contents:
+  - Page
+  - starts_with("page")
+- title: Creating Suggestions
+  desc: >
+    Functions to create suggestions manually e.g. for generating suggestions
+    post-hoc or for use within another package.
+- subtitle: Main
+- contents:
+  - starts_with("get")
+  - preprocess_string
+- subtitle: Algorithms
+- contents:
+  - starts_with("train")
+  - starts_with("algo")
+- title: Datasets
+- contents:
+  - has_keyword("datasets")
+  - load_kldb

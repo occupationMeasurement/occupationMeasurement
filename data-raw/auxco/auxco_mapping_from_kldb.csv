@@ -1,0 +1,1641 @@
+kldb_id,auxco_id,auxco_title,kldb_title
+01402,9999,Soldat/in,Angehörige der regulären Streitkräfte in sonstigen Rängen
+01302,9999,Soldat/in,Unteroffiziere ohne Portepee
+01203,9999,Soldat/in,Unteroffiziere mit Portepee
+01104,9999,Soldat/in,Offiziere
+11101,1010,Acker- und Erntehelfer/in,Berufe in der Landwirtschaft (o.S.) - Helfer-/Anlerntätigkeiten
+11101,1011,Helfer/in - Tierwirtschaft und im Ackerbau,Landwirtschaft (o.S.) - Helfer
+11102,1012,Landwirt/in,Berufe in der Landwirtschaft (o.S.) - fachlich ausgerichtete Tätigkeiten
+11102,1013,Ackerwirt/in,Berufe in der Landwirtschaft (o.S.) - fachlich ausgerichtete Tätigkeiten
+11103,1014,Landwirtschaftsberater/in,Berufe in der Landwirtschaft (o.S.) - komplexe Spezialistentätigkeiten
+11104,1014,Landwirtschaftsberater/in,Berufe in der Landwirtschaft (o.S.) - hoch komplexe Tätigkeiten
+11104,1015,Agraringenieur/in,Berufe in der Landwirtschaft (o.S.) - hoch komplexe Tätigkeiten
+11103,1015,Agraringenieur/in,Berufe in der Landwirtschaft (o.S.) - komplexe Spezialistentätigkeiten
+11113,1016,Agrotechniker/in / Mechanisator/in,Landtechnik - Spezialist
+11114,1017,Agraringenieur/in - Mechanisierung der Landwirtschaft,Landtechnik - Experte
+11123,1018,Landwirtschaftliche/r Gutachter/in,Landwirtschaftliche Sachverständige - komplexe Spezialistentätigkeiten
+11103,1019,Beamter/ Beamtin - Agrarverwaltung,Berufe in der Landwirtschaft (o.S.) - komplexe Spezialistentätigkeiten
+11124,1020,höherer landwirtschaftlicher Beratungsdienst,Landwirtschaftlicher Sachverständiger - hoch komplexe Tätigkeiten
+11132,1024,Landwirtschaftlicher Labortechniker/in,Berufe im landwirtschaftlich-technischen Laboratorium - fachlich ausgerichtete Tätigkeiten
+11133,1024,Landwirtschaftlicher Labortechniker/in,Berufe im landwirtschaftlich-technischen Laboratorium - komplexe Spezialistentätigkeiten
+11302,1035,Pferdepfleger/in - Pferdehaltung und Service,Berufe in der Pferdewirtschaft (o.S.) - fachlich ausgerichtete Tätigkeiten
+11302,1036,Pferdewirtschaftsfacharbeiter/in,Berufe in der Pferdewirtschaft (o.S.) - fachlich ausgerichtete Tätigkeiten
+11312,1037,Pferdewirt/in - Zucht,Berufe in der Pferdewirtschaft - Pferdezucht - fachlich ausgerichtete Tätigkeiten
+11322,1038,Pferdewirt/in - Pferdereiten,Berufe in der Pferdewirtschaft - Reiten - fachlich ausgerichtete Tätigkeiten
+11333,1039,Hufschmied/in,Hufbeschlagschmiede/innen - komplexe Spezialistentätigkeiten
+11342,1040,Kutscher/in,Kutscher/innen - fachlich ausgerichtete Tätigkeiten
+11501,1046,Tierpflegehelfer/in,Berufe in der Tierpflege (o.S.) - Helfer-/Anlerntätigkeiten
+11502,1047,Tierpfleger/in,Berufe in der Tierpflege (o.S.) - fachlich ausgerichtete Tätigkeiten
+11512,1047,Tierpfleger/in,Berufe in der Nutztierpflege - fachlich ausgerichtete Tätigkeiten
+11522,1047,Tierpfleger/in,Berufe in der Haus- und Zootierpflege
+11522,1048,Hundefriseur/in,Berufe in der Haus- und Zootierpflege - fachlich ausgerichtete Tätigkeiten
+11582,1049,Tierpfleger/in - Forschung und Klinik,Berufe in der Tierpflege (sonstige spezifische Tätigkeiten) - fachlich ausgerichtete Tätigkeiten
+11582,1050,Tierlehrer/in oder Falkner/in,Berufe in der Tierpflege (sonstige spezifische Tätigkeiten) - fachlich ausgerichtete Tätigkeiten
+12101,1053,Gartenbauhelfer/in,Berufe im Gartenbau (o.S.) - Helfer-/Anlerntätigkeiten
+12102,1054,Gärtner/in,Berufe im Gartenbau (o.S.) - fachlich ausgerichtete Tätigkeiten
+12103,1055,Gartenbautechniker/in,Berufe im Gartenbau (o.S.) - komplexe Spezialistentätigkeiten
+12104,1056,Gartenbauingenieur/in,Berufe im Gartenbau (o.S.)  - hoch komplexe Tätigkeiten
+12132,1057,Friedhofsgärtner/in,Berufe in der Friedhofsgärtnerei - fachlich ausgerichtete Tätigkeiten
+12133,1058,Gartenbautechniker/in - Friedhofsgärtnerei,Berufe in der Friedhofsgärtnerei - komplexe Spezialistentätigkeiten
+12112,1059,Gärtner/in - Gemüsebau,Berufe im Obst- und Gemüsebau - fachlich ausgerichtete Tätigkeiten
+12112,1060,Gärtner/in - Obstbau,Berufe im Obst- und Gemüsebau - fachlich ausgerichtete Tätigkeiten
+12113,1061,Fachberater/in - Obst- und Gemüseanbau,Berufe im Obst- und Gemüsebau - komplexe Spezialistentätigkeiten
+12122,1062,"Baumschul-, Stauden-, Zierpflanzengärtner/in","Berufe in Baumschule, Staudengärtnerei und Zierpflanzenbau - fachlich ausgerichtete Tätigkeiten"
+12123,1063,Fachberater/in - Pflanzen und Saatgut,"Berufe in Baumschule, Staudengärtnerei und Zierpflanzenbau - komplexe Spezialistentätigkeiten"
+12202,1064,Florist/in,Berufe in der Floristik - fachlich ausgerichtete Tätigkeiten
+12203,1065,Gestalter/in - Blumenkunst,Berufe in der Floristik - komplexe Spezialistentätigkeiten
+12142,1066,Landschaftsgärtner/in,"Berufe im Garten-, Landschafts- und Sportplatzbau - fachlich ausgerichtete Tätigkeiten"
+12143,1066,Landschaftsgärtner/in,"Berufe im garten-, Landschafts- und Sportplatzbau - komplexe Spezialistentätigkeiten"
+12144,1067,Landschaftsarchitekt/in,"Berufe im Garten-, Landschafts- und Sportplatzbau - hoch komplexe Tätigkeiten"
+11182,1074,Pflanzenschützer/in,Berufe in der Landwirtschaft (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+11182,1075,Anbauer/in mit Spezialisierung,Berufe in der Landwirtschaft (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+11184,1076,Pflanzenarzt/-ärztin,Berufe in der Landwirtschaft (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+11184,1077,Entwicklungshelfer/in - Pflanzenbauwissenschaften,Berufe in der Landwirtschaft (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+11211,1502,Helfer/in - Nutztierhaltung,Berufe in der Nutztierhaltung (außer Geflügel) - Helfer-/Anlerntätigkeiten
+11212,1503,Tierwirt/in - Nutztierhaltung,Berufe in der Nutztierhaltung (außer Geflügelhaltung) - fachlich ausgerichtete Tätigkeiten
+11213,1504,Fachagrarwirt/in - Zucht- und Fleischleistungsprüfung,Berufe in der Nutztierhaltung  (außer Geflügelhaltung) - komplexe Spezialistentätigkeiten
+11214,1505,Ingenieur/in - Vieh- und Fleischwirtschaft,Berufe in der Nutztierhaltung (außer Geflügelhaltung) - hoch komplexe Tätigkeiten
+11222,1506,Tierwirt/in - Geflügelhaltung,Berufe in der Geflügelhaltung - fachlich ausgerichtete Tätigkeiten
+11213,1507,Klauenpfleger/in,Berufe in der Nutztierhaltung  (außer Geflügelhaltung) - komplexe Spezialistentätigkeiten
+11223,1508,Fachberater/in – Geflügelzucht,Berufe in der Geflügelhaltung - komplexe Spezialistentätigkeiten
+11232,1509,Imker/in,Berufe in der Imkerei - fachlich ausgerichtete Tätigkeiten
+11233,1510,Bienenzuchtberater/in,Berufe in der Imkerei - komplexe Spezialistentätigkeiten
+11282,1511,Haustierzüchter/in,Berufe in der Tierwirtschaft (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+11282,1512,Pelztierzüchter/in,Berufe in der Tierwirtschaft (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+11283,1514,Futtermittelberater/in,Berufe in der Tierwirtschaft (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+11401,1517,Fischereihelfer/in,Berufe in der Fischwirtschaft (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+11422,1518,Fischer/in,Berufe in der Fischerei - fachlich ausgerichtete Tätigkeiten
+11412,1519,Fischwirt/in,Berufe in der Fischzucht - fachlich ausgerichtete Tätigkeiten
+11493,1519,Fischwirt/in,Aufsichtskräfte - Fischwirtschaft
+11494,1519,Fischwirt/in,Führungskräfte - Fischwirtschaft
+11423,1520,Fischereitechniker/in,Berufe in der Fischerei - komplexe Spezialistentätigkeiten
+11424,1520,Fischereitechniker/in,Berufe in der Fischerei - hoch komplexe Tätigkeiten
+11293,1710,Tierwirtschaftsmeister/in,Aufsichtskräfte - Tierwirtschaft
+11294,1710,Tierwirtschaftsmeister/in,Führungskräfte - Tierwirtschaft
+11393,1711,Pferdewirtschaftsmeister/in,Aufsichtskräfte - Pferdewirtschaft
+11394,1711,Pferdewirtschaftsmeister/in,Führungskräfte - Pferdewirtschaft
+11593,1712,Tierpflegemeister/in,Aufsichtskräfte - Tierpflege
+11594,1712,Tierpflegemeister/in,Führungskräfte - Tierpflege
+12193,1713,Gärtnermeister/in,Aufsichtskräfte - Gartenbau
+12194,1713,Gärtnermeister/in,Führungskräfte - Gartenbau
+12293,1714,Floristikmeister/in,Aufsichtskräfte - Floristik
+12294,1714,Floristikmeister/in,Führungskräfte - Floristik
+11493,1715,Fischwirtschaftsmeister/in,Aufsichtskräfte - Fischwirtschaft
+11494,1715,Fischwirtschaftsmeister/in,Führungskräfte - Fischwirtschaft
+11193,1851,Landwirtschaftliche/r Betriebsleiter/in,Aufsichtskräfte - Landwirtschaft
+11194,1851,Landwirtschaftliche/r Betriebsleiter/in,Führungskräfte - Landwirtschaft
+11283,1852,Zuchtbuchführer/in,Berufe in der Tierwirtschaft (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+11602,9200,Winzer/in,Berufe im Weinbau - fachlich ausgerichtete Tätigkeiten
+11603,9200,Winzer/in,Berufe im Weinbau - komplexe Spezialistentätigkeiten
+11603,9201,Weinbauberater/in,Berufe im Weinbau - komplexe Spezialistentätigkeiten
+11604,9201,Weinbauberater/in,Berufe im Weinbau - hoch komplexe Tätigkeiten
+11694,9202,Weinbergsverwalter/in,Führungskräfte - Weinbau
+11693,9202,Weinbergsverwalter/in,Aufsichtskräfte - Weinbau
+11712,9203,Forstwirt/in,Berufe in der Forstwirtschaft - fachlich ausgerichtete Tätigkeiten
+11711,9203,Forstwirt/in,Berufe in der Forstwirtschaft - Helfer-/Anlerntätigkeiten
+11713,9203,Forstwirt/in,Berufe in der Forstwirtschaft - komplexe Spezialistentätigkeiten
+11714,9203,Forstwirt/in,Berufe in der Forstwirtschaft - hoch komplexe Tätigkeiten
+11723,9204,Natur- und Landschaftspfleger/in,Berufe in der Natur- und Landschaftspflege - komplexe Spezialistentätigkeiten
+11711,9204,Natur- und Landschaftspfleger/in,Berufe in der Forstwirtschaft - Helfer-/Anlerntätigkeiten
+11722,9204,Natur- und Landschaftspfleger/in,Berufe in der Natur- und Landschaftspflege - fachlich ausgerichtete Tätigkeiten
+11724,9204,Natur- und Landschaftspfleger/in,Berufe in der Natur- und Landschaftspflege - hoch komplexe Tätigkeiten
+11732,9205,Berufsjäger/in,Berufe in der Jagdwirtschaft und Wildhege - fachlich ausgerichtete Tätigkeiten
+11793,9205,Berufsjäger/in,"Aufsichtskräfte - Forst- und Jagdwirtschaft, Landschaftspflege"
+11742,9206,Pflanzensammler/in,Sammeln und Gewinnen von Pflanzen und anderen Naturprodukten - fachlich ausgerichtete Tätigkeiten
+11793,9207,Forstverwalter/in,"Aufsichtskräfte - Forst- und Jagdwirtschaft, Landschaftspflege"
+11794,9207,Forstverwalter/in,"Führungskräfte - Forst- und Jagdwirtschaft, Landschaftspflege"
+23493,1700,Buchbindermeister/in,"Aufsichtskräfte - Drucktechnik und -weiterverarbeitung, Buchbinderei"
+23493,1701,Druckermeister/in,"Aufsichtskräfte - Drucktechnik und -weiterverarbeitung, Buchbinderei"
+24593,1702,Büchsenmachermeister/in,Aufsichtskräfte - Feinwerk- und Werkzeugtechnik
+24593,1703,Werkzeugmachermeister/in,Aufsichtskräfte - Feinwerk- und Werkzeugtechnik
+24593,1704,Uhrmachermeister/in,Aufsichtskräfte - Feinwerk- und Werkzeugtechnik
+25183,1705,Mühlenbautechniker/in,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+25184,1705,Mühlenbautechniker/in,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+25183,1706,Umweltschutzverfahrenstechniker/in,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+25184,1706,Umweltschutzverfahrenstechniker/in,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+26324,1707,Mikrotechnologe/-login,Berufe in der Mikrosystemtechnik - hoch komplexe Tätigkeiten
+26384,1708,Kybernetikingenieur/in,Berufe in der Elektrotechnik (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+27183,1709,Wehrverwaltungsbeamter/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+27182,1709,Wehrverwaltungsbeamter/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+27184,1709,Wehrverwaltungsbeamter/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+22103,1716,Techniker/in - Kunststoff- und Kautschuktechnik,"Kunststoff-,Kautschukhers(oS)-Spezialist"
+22104,1716,Techniker/in - Kunststoff- und Kautschuktechnik,Berufe in der Kunststoff- und Kautschukherstellung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+22393,1717,Industriemeister/in - Holz- und Sägeindustrie,Aufsichtskräfte - Holzbe- und -verarbeitung
+22394,1717,Industriemeister/in - Holz- und Sägeindustrie,"Führung - Holzbe-, -verarbeitung"
+23413,1718,Techniker/in - Druck- und Medientechnik,Drucktechnik - Spezialist
+23414,1718,Techniker/in - Druck- und Medientechnik,Drucktechnik - Experte
+24113,1719,Steuerer von Verfahren in der Metallerzeugung,Berufe in der Hüttentechnik - komplexe Spezialistentätigkeiten
+24114,1719,Steuerer von Verfahren in der Metallerzeugung,Berufe in der Hüttentechnik - hoch komplexe Tätigkeiten
+24423,1720,Schweißtechniker/in,Berufe in der Schweiß- und Verbindungstechnik - komplexe Spezialistentätigkeiten
+24424,1720,Schweißtechniker/in,Berufe in der Schweiß- und Verbindungstechnik - hoch komplexe Tätigkeiten
+24532,1721,Uhrmacher/in,Berufe im Uhrmacherhandwerk - fachlich ausgerichtete Tätigkeiten
+24533,1721,Uhrmacher/in,Berufe im Uhrmacherhandwerk - komplexe Spezialistentätigkeiten
+25104,1722,Maschinenbauingenieur/in,Berufe in der Maschinenbau- und Betriebstechnik (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+25103,1722,Maschinenbauingenieur/in,Berufe in der Maschinenbau- und Betriebstechnik (ohne Spezialisierung) -  komplexe Spezialistentätigkeiten
+25132,1723,Wartungs- und Servicetechniker/in,Technische Servicekräfte in Wartung und Instandhaltung - fachlich ausgerichtete Tätigkeiten
+25133,1723,Wartungs- und Servicetechniker/in,Technische Servicekräfte in Wartung und Instandhaltung - komplexe Spezialistentätigkeiten
+25134,1723,Wartungs- und Servicetechniker/in,Technische Servicekräfte in Wartung und Instandhaltung - hoch komplexe Tätigkeiten
+25183,1724,Hydraulik-Fachkraft,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+25184,1724,Hydraulik-Fachkraft,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+25223,1725,Land- und Baumaschinentechniker/in,Berufe in der Land- und Baumaschinentechnik - komplexe Spezialistentätigkeiten
+25224,1725,Land- und Baumaschinentechniker/in,Berufe in der Land- und Baumaschinentechnik - hoch komplexe Tätigkeiten
+25233,1726,Luftfahrttechniker/in,Berufe in der Luft- und Raumfahrttechnik - komplexe Spezialistentätigkeiten
+25234,1726,Luftfahrttechniker/in,Berufe in der Luft- und Raumfahrttechnik - hoch komplexe Tätigkeiten
+25243,1727,Schiffbautechniker/in,Berufe in der Schiffbautechnik - komplexe Spezialistentätigkeiten
+25244,1727,Schiffbautechniker/in,Schiffbautechnik - Experte
+25253,1728,Zweiradtechniker/in,Berufe in der Zweiradtechnik - komplexe Spezialistentätigkeiten
+25254,1728,Zweiradtechniker/in,Zweiradtechnik - Experte
+26113,1729,Mechatroniktechniker/in,Berufe in der Mechatronik - komplexe Spezialistentätigkeiten
+26114,1729,Mechatroniktechniker/in,Berufe in der Mechatronik - hoch komplexe Tätigkeiten
+26122,1730,Elektrotechniker/in - Automatisierungstechnik,Berufe in der Automatisierungstechnik - fachlich ausgerichtete Tätigkeiten
+26123,1730,Elektrotechniker/in - Automatisierungstechnik,Berufe in der Automatisierungstechnik - komplexe Spezialistentätigkeiten
+26124,1730,Elektrotechniker/in - Automatisierungstechnik,Berufe in der Automatisierungstechnik - hoch komplexe Tätigkeiten
+26243,1731,Solar- und Windenergietechniker/in,Berufe in der regenerativen Energietechnik - komplexe Spezialistentätigkeiten
+26244,1731,Solar- und Windenergietechniker/in,Berufe in der regenerativen Energietechnik - hoch komplexe Tätigkeiten
+26263,1732,Kabeltechniker/in,Berufe in der Leitungsinstallation und -wartung - komplexe Spezialistentätigkeiten
+26264,1732,Kabeltechniker/in,Berufe in der Leitungsinstallation und -wartung - hoch komplexe Tätigkeiten
+26303,1733,Elektrotechniker/in,Berufe in der Elektrotechnik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+26304,1733,Elektrotechniker/in,Berufe in der Elektrotechnik (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+26313,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Informations- und Telekommunikationstechnik - komplexe Spezialistentätigkeiten
+26314,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Informations- und Telekommunikationstechnik - hoch komplexe Tätigkeiten
+26303,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Elektrotechnik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+26323,1735,Mikrosystemtechniker/in,Berufe in der Mikrosystemtechnik - komplexe Spezialistentätigkeiten
+26324,1735,Mikrosystemtechniker/in,Berufe in der Mikrosystemtechnik - hoch komplexe Tätigkeiten
+26333,1736,Bordelektroniktechniker/in,"Berufe in der Luftverkehrs-, Schiffs- und Fahrzeugelektronik - komplexe Spezialistentätigkeiten"
+26334,1736,Bordelektroniktechniker/in,"Berufe in der Luftverkehrs-, Schiffs- und Fahrzeugelektronik - hoch komplexe Tätigkeiten"
+27223,1737,Konstruktionstechniker/in,Berufe in der Konstruktion und im Gerätebau - komplexe Spezialistentätigkeiten
+27224,1737,Konstruktionstechniker/in,Berufe in der Konstruktion und im Gerätebau - hoch komplexe Tätigkeiten
+27313,1738,Qualitätssicherungstechniker/In,Berufe in der technischen Qualitätssicherung - komplexe Spezialistentätigkeiten
+27314,1738,Qualitätssicherungstechniker/In,Berufe in der technischen Qualitätssicherung - hoch komplexe Tätigkeiten
+28103,1739,Textiltechniker/in,Berufe in der Textiltechnik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+28104,1739,Textiltechniker/in,Textiltechnik (o.S.) - Experte
+28133,1739,Textiltechniker/in,Berufe in der Garn- und Seilherstellung - komplexe Spezialistentätigkeiten
+28123,1739,Textiltechniker/in,Berufe in der Textilherstellung - komplexe Spezialistentätigkeiten
+28143,1739,Textiltechniker/in,Berufe in der Textilveredlung - komplexe Spezialistentätigkeiten
+28113,1740,Textilmustergestalter/in,Berufe in der Textilgestaltung - komplexe Spezialistentätigkeiten
+28112,1740,Textilmustergestalter/in,Textilgestaltung - Fachkraft
+28114,1740,Textilmustergestalter/in,Textilgestaltung - Experte
+28223,1741,Bekleidungstechniker/in,"Berufe in der Bekleidungs-, Hut- und Mützenherstellung - komplexe Spezialistentätigkeiten"
+28224,1741,Bekleidungstechniker/in,Bekleidungsherstellung - Experte
+28313,1742,Ledertechniker/in,Berufe in der Lederherstellung - komplexe Spezialistentätigkeiten
+28314,1742,Ledertechniker/in,Lederherstellung - Experte
+21201,1751,"Helfer/in - Mineralgewinnung, -aufbereitung",Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+21201,1752,Helfer/in - Rohkohlenaufbereitung,Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+21201,1753,Helfer/in - Baustoffherstellung,Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+24123,1843,Metallumformungstechniker/in,Berufe in der Metallumformung - komplexe Spezialistentätigkeiten
+24124,1843,Metallumformungstechniker/in,Berufe in der Metallumformung - hoch komplexe Tätigkeiten
+24133,1844,Gießereitechniker/in,Berufe in der industriellen Gießerei - komplexe Spezialistentätigkeiten
+24134,1844,Gießereitechniker/in,Berufe in der industriellen Gießerei - hoch komplexe Tätigkeiten
+24303,1845,Galvanotechniker/in,Berufe in der Metalloberflächenbehandlung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+24304,1845,Galvanotechniker/in,Berufe in der Metalloberflächenbehandlung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+24413,1846,Metallbautechniker/in,Berufe im Metallbau - komplexe Spezialistentätigkeiten
+24414,1846,Metallbautechniker/in,Berufe im Metallbau - hoch komplexe Tätigkeiten
+24523,1847,Werkzeugtechniker/in,Berufe in der Werkzeugtechnik - komplexe Spezialistentätigkeiten
+24524,1847,Werkzeugtechniker/in,Berufe in der Werkzeugtechnik - hoch komplexe Tätigkeiten
+24523,1848,Waffentechniker/in,Berufe in der Werkzeugtechnik - komplexe Spezialistentätigkeiten
+24524,1848,Waffentechniker/in,Berufe in der Werkzeugtechnik - hoch komplexe Tätigkeiten
+24212,1853,Maschineneinrichter/in (spanlose Metallbearbeitung),Berufe in der spanlosen Metallbearbeitung - fachlich ausgerichtete Tätigkeiten
+24101,2001,Gießereihelfer/in,Berufe in der Metallerzeugung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+24112,2002,Hüttentechnik - Fachkraft,Berufe in der Hüttentechnik - fachlich ausgerichtete Tätigkeiten
+24113,2004,Bergbau- und Hüttentechniker,Berufe in der Hüttentechnik - komplexe Spezialistentätigkeiten
+24122,2006,Walzer/in,Berufe in der Metallumformung - fachlich ausgerichtete Tätigkeiten
+24122,2007,Grob-/Hammerschmied/in,Berufe in der Metallumformung - fachlich ausgerichtete Tätigkeiten
+24132,2010,Gießereimechaniker/in,Berufe in der industriellen Gießerei - fachlich ausgerichtete Tätigkeiten
+24142,2014,Gießereiformer/in,Berufe in der handwerklichen Metall- und Glockengießerei - fachlich ausgerichtete Tätigkeiten
+24203,2018,Metallbearbeitungstechniker/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+24222,2022,Metallschleifer/in,Berufe in der schleifenden Metallbearbeitung - fachlich ausgerichtete Tätigkeiten
+24232,2023,Zerspanungsmechaniker/in,Berufe in der spanenden Metallbearbeitung - fachlich ausgerichtete Tätigkeiten
+24233,2024,CNC-Techniker/in,Berufe in der spanenden Metallbearbeitung - komplexe Spezialistentätigkeiten
+24243,2025,Lasertechnische/r Assistent/in,Berufe in der Metallbearbeitung durch Laserstrahl - komplexe Spezialistentätigkeiten
+24244,2028,Ingenieur/in - Lasertechnik,Berufe in der Metallbearbeitung durch Laserstrahl - hoch komplexe Tätigkeiten
+24302,2029,Oberflächenbeschichter/in,Berufe in der Metalloberflächenbehandlung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24301,2032,Metalloberflächenbearbeitungshelfer/in,Berufe in der Metalloberflächenbehandlung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+24382,2033,Emaillierer/in,Berufe in der Metalloberflächenbehandlung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+24412,2034,Metallbauer/in,Berufe im Metallbau - fachlich ausgerichtete Tätigkeiten
+24411,2040,Metallbauhelfer/in,Berufe im Metallbau - Helfer-/Anlerntätigkeiten
+24422,2042,Schweißer/in,Berufe in der Schweiß- und Verbindungstechnik - fachlich ausgerichtete Tätigkeiten
+24432,2045,Industrietaucher/in,Industrietaucher/innen und andere Taucherberufe - fachlich ausgerichtete Tätigkeiten
+24493,2047,Metallbaumeister/in,Aufsichtskräfte - Metallbau und Schweißtechnik
+24512,2048,Feinmechaniker/in,Berufe in der Feinwerktechnik - fachlich ausgerichtete Tätigkeiten
+24512,2049,Präzisionsinstrumentenmacher/in,Berufe in der Feinwerktechnik - fachlich ausgerichtete Tätigkeiten
+24513,2050,Feinwerktechniker/in,Berufe in der Feinwerktechnik - komplexe Spezialistentätigkeiten
+24514,2051,Feinwerktechnikingenieur/in,Berufe in der Feinwerktechnik - hoch komplexe Tätigkeiten
+24511,2052,Feinmechanikerhelfer/in,Berufe in der Feinwerktechnik - Helfer-/Anlerntätigkeiten
+24522,2053,Werkzeugmechaniker/in,Berufe in der Werkzeugtechnik - fachlich ausgerichtete Tätigkeiten
+24593,2058,Feinwerkmechanikermeister/in,Aufsichtskräfte - Feinwerk- und Werkzeugtechnik
+25102,2059,Maschinenschlosser/in,Berufe in der Maschinenbau- und Betriebstechnik (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24522,2062,Büchsenmacher/in,Berufe in der Werkzeugtechnik - fachlich ausgerichtete Tätigkeiten
+25101,2063,Montagehelfer/in,Berufe in der Maschinenbau- und Betriebstechnik (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+25112,2064,Fertigungsmechaniker/in,Maschinen- und Gerätezusammensetzer/innen - fachlich ausgerichtete Tätigkeiten
+25122,2066,Kesselwärter/in,Maschinen- und Anlagenführer/innen - fachlich ausgerichtete Tätigkeiten
+25131,2068,Zählerableser/in,Technische Servicekräfte in Wartung und Instandhaltung - Helfer-/Anlerntätigkeiten
+25182,2072,Hydraulikschlosser/in,Berufe in der Maschinenbau- und Betriebstechnik (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+25201,2075,Kraftfahrzeugmechanikerhelfer/in,Berufe in der Fahrzeugtechnik (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+25212,2076,Kraftfahrzeugmechatroniker/in,Berufe in der Kraftfahrzeugtechnik - fachlich ausgerichtete Tätigkeiten
+25213,2077,Kraftfahrzeugtechniker/in,Berufe in der Kraftfahrzeugtechnik - komplexe Spezialistentätigkeiten
+25214,2078,Kraftfahrzeugingenieur/in,Berufe in der Kraftfahrzeugtechnik - hoch komplexe Tätigkeiten
+25222,2079,Land- und Baumaschinenmechaniker/in,Berufe in der Land- und Baumaschinentechnik - fachlich ausgerichtete Tätigkeiten
+25232,2082,Fluggerätemechaniker/in - Triebwerkstechnik,Berufe in der Luft- und Raumfahrttechnik - fachlich ausgerichtete Tätigkeiten
+25232,2083,Fluggerätemechaniker/in - Fertigungstechnik,Berufe in der Luft- und Raumfahrttechnik - fachlich ausgerichtete Tätigkeiten
+25242,2086,Schiffbauer/in,Schiffbautechnik - Fachkraft
+25252,2089,Zweiradmechaniker/in - motorisierte Zweiräder,Berufe in der Zweiradtechnik - fachlich ausgerichtete Tätigkeiten
+25252,2090,Fahrradmechaniker/in,Berufe in der Zweiradtechnik - fachlich ausgerichtete Tätigkeiten
+24201,2093,Metallbearbeitungshelfer/in,Metallbearbeitung (o.S.) - Helfer
+26112,2094,Mechatroniker/in,Berufe in der Mechatronik - fachlich ausgerichtete Tätigkeiten
+26212,2100,Elektroinstallateur/in,Berufe in der Bauelektrik - fachlich ausgerichtete Tätigkeiten
+26222,2101,Elektromaschinenbauer/in,Berufe in der Elektromaschinentechnik - fachlich ausgerichtete Tätigkeiten
+26223,2102,Elektromaschinenbauer/in - Optimierung,Berufe in der Elektromaschinentechnik - komplexe Spezialistentätigkeiten
+26233,2104,Kraftwerker/in,Berufe in der Energie- und Kraftwerkstechnik - komplexe Spezialistentätigkeiten
+26232,2104,Kraftwerker/in,Berufe in der Energie- und Kraftwerkstechnik - fachlich ausgerichtete Tätigkeiten
+26234,2105,Kraftwerksingenieur/in,Berufe in der Energie- und Kraftwerkstechnik - hoch komplexe Tätigkeiten
+26242,2106,Technische/r Assistent/in für regenerative Energietechnik,Berufe in der regenerativen Energietechnik - fachlich ausgerichtete Tätigkeiten
+26252,2109,Betriebselektriker/in,Berufe in der elektrischen Betriebstechnik - fachlich ausgerichtete Tätigkeiten
+26253,2109,Betriebselektriker/in,Berufe in der elektrischen Betriebstechnik - komplexe Spezialistentätigkeiten
+26262,2111,Kabelmonteur/in,Berufe in der Leitungsinstallation und -wartung - fachlich ausgerichtete Tätigkeiten
+26301,2114,Elektrohelfer/in,Berufe in der Elektrotechnik (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+26302,2115,Elektromechaniker/in,Berufe in der Elektrotechnik (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+26312,2118,Informations- und Kommunikationselektroniker/in,Berufe in der Informations- und Telekommunikationstechnik - fachlich ausgerichtete Tätigkeiten
+24193,2121,Metall- und Glockengießermeister/in,Aufsichtskräfte - Metallerzeugung
+24293,2122,Leiter/in - Metallbearbeitung,Aufsichtskräfte - Metallbearbeitung
+24393,2123,Galvaniseurmeister/in,Aufsichtskräfte - Metalloberflächenbehandlung
+25193,2124,Instandhaltungsleiter/in,Aufsichtskräfte - Maschinenbau- und Betriebstechnik
+25194,2124,Instandhaltungsleiter/in,Führungskräfte - Maschinenbau- und Betriebstechnik
+25293,2126,Leiter/in Fahrzeugtechnik,"Aufsichtskräfte - Fahrzeug-, Luft-, Raumfahrt- und Schiffbautechnik"
+25294,2126,Leiter/in Fahrzeugtechnik,"Führungskräfte - Fahrzeug-, Luft-, Raumfahrt- und Schiffbautechnik"
+26193,2128,Mechatronikermeister/in,Aufsichtskräfte - Mechatronik und Automatisierungstechnik
+26293,2129,Leiter/in - Energietechnik,Aufsichtskräfte - Energietechnik
+26393,2130,Leiter/in - Elektrotechnik,Aufsichtskräfte - Elektrotechnik
+26322,2131,Mikrotechnologe/-technologin,Berufe in der Mikrosystemtechnik - fachlich ausgerichtete Tätigkeiten
+26332,2134,Bordelektroniker/in,"Berufe in der Luftverkehrs-, Schiffs- und Fahrzeugelektronik - fachlich ausgerichtete Tätigkeiten"
+26384,2139,Optoelektronikingenieur/in,Berufe in der Elektrotechnik (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+27183,2143,Wehrtechniker/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+27182,2143,Wehrtechniker/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+27184,2143,Wehrtechniker/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+27184,2144,Patentingenieur/in,Berufe in der technischen Forschung und Entwicklung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+27194,2145,Entwicklungsleiter/in,Führungskräfte - Technische Forschung und Entwicklung
+27212,2146,Technische/r Zeichner/in,Technische Zeichner/innen - fachlich ausgerichtete Tätigkeiten
+27232,2149,Modellbauer/in,Berufe im Modellbau - fachlich ausgerichtete Tätigkeiten
+27282,2150,Sportgerätebauer/in,"Technisches Zeichnen, Konstruktion und Modellbau (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten"
+27283,2151,Normentechniker/in,"Technisches Zeichnen, Konstruktion und Modellbau (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten"
+27284,2152,Sportingenieur/in,"Technisches Zeichnen, Konstruktion und Modellbau (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten"
+27294,2154,"Leiter/in - Technische Zeichnung, Konstruktion und Modellbau","Führungskräfte - Technisches Zeichnen, Konstruktion und Modellbau"
+27293,2154,"Leiter/in - Technische Zeichnung, Konstruktion und Modellbau","Aufsichtskräfte - Technisches Zeichnen, Konstruktion und Modellbau"
+27393,2155,Leiter/in - Technische Produktionssteuerung und Qualitätssicherung,Aufsichtskräfte - Technische Produktionsplanung und -steuerung
+27394,2155,Leiter/in - Technische Produktionssteuerung und Qualitätssicherung,Führungskräfte - Technische Produktionsplanung und -steuerung
+27302,2157,Fertigungstechnische/r Assistent/in,Berufe in der technischen Produktionsplanung und -steuerung - fachlich ausgerichtete Tätigkeiten
+27303,2158,Fertigungstechniker/in,Berufe in der technischen Produktionsplanung und -steuerung - komplexe Spezialistentätigkeiten
+27304,2159,Produktionsingenieur/in,Berufe in der technischen Produktionsplanung und -steuerung - hoch komplexe Tätigkeiten
+27312,2160,Qualitätskontrolleur/in,Berufe in der technischen Qualitätssicherung - fachlich ausgerichtete Tätigkeiten
+22101,5177,Produktionshelfer/in – Kunststoff und Kautschuk,"Kunststoff-,Kautschukherst. (oS.)-Helfer"
+22102,5178,Verfahrensmechaniker/in - Kunststofftechnik,Berufe in der Kunststoff- und Kautschukherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+22102,5179,Verfahrensmechaniker/in - Kautschuktechnik,Berufe in der Kunststoff- und Kautschukherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+22112,5183,Mechaniker/in - Reifen und Vulkanisation,Berufe in der Reifen- und Vulkanisationstechnik - fachlich ausgerichtete Tätigkeiten
+22193,5184,Industriemeister/in - Kunststoff und Kautschuk,"Aufsicht-Kunststoff,Kautschukher,verarb."
+22201,5185,Lackiererhelfer/in,"Farb-, Lacktechnik (o.S.) - Helfer"
+22202,5186,Lackierer/in,Berufe in der Farb- und Lacktechnik (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+22203,5187,Farb- und Lacktechniker/in,"Farb-, Lacktechnik (o.S.) - Spezialist"
+22204,5188,Farb- und Lackingenieur/in,"Farb-, Lacktechnik (o.S.) - Experte"
+22212,5189,Fahrzeuglackierer/in,Fahrzeuglackierung - Fachkraft
+22222,5190,Lacklaborant/in,Lacklaboratorium - Fachkraft
+22293,5191,Lackierermeister/in,"Aufsicht - Farb-, Lacktechnik"
+22301,5192,Helfer/in - Holz und Flechtwaren,"Holzbe-, -verarbeitung (o.S.) - Helfer"
+22302,5193,Holzbearbeitungsmechaniker/in,"Holzbe-,-verarbeitung (o.S.) - Fachkraft"
+22303,5194,Holztechniker/in,"Holzbe-,-verarbeitung(o.S.) - Spezialist"
+22304,5195,Holzingenieur/in,Berufe in der Holzbe- und -verarbeitung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+22312,5196,Holz- und Korktrockner/in und –imprägnierer/in,"Holztrocknung,-konservierung - Fachkraft"
+22322,5197,Sägewerker/in,"Prod. Holzwerkstoffe,-bauteile-Fachkraft"
+22332,5198,Holzmechaniker/in,Prod. Fertigprodukte aus Holz -Fachkraft
+22333,5199,Holztechniker/in – Automatisierungstechnik,Prod. Fertigprodukte aus Holz-Spezialist
+22342,5200,Tischler/in,"Holz-, Möbel-, Innenausbau - Fachkraft"
+22343,5201,Restaurator/in - Möbel und Holzobjekte,"Holz-, Möbel-, Innenausbau - Spezialist"
+22343,5202,Techniker/in - Holz- und Möbelbau,"Holz-, Möbel-, Innenausbau - Spezialist"
+22352,5203,Bürsten- und Pinselmacher/in,"Flechtwerk,Bürste,Pinselmacher-Fachkraft"
+22352,5204,Flechtwarenmacher/in,"Flechtwerk,Bürste,Pinselmacher-Fachkraft"
+22382,5205,Wagner/in,"Holzbe-, -verarbeitung (ssT) - Fachkraft"
+22382,5206,Böttcher/in,"Holzbe-, -verarbeitung (ssT) - Fachkraft"
+22393,5208,Handwerksmeister/in - Holz,"Aufsicht - Holzbe-, -verarbeitung"
+23101,5210,Papierverarbeitungshelfer/in,"Papier-,Verpackungstechnik (oS) - Helfer"
+23112,5211,Papiertechnologe/-technologin,Papierherstellung - Fachkraft
+23113,5212,Techniker/in - Papiertechnik,Papierherstellung - Spezialist
+23114,5213,Papieringenieur/in,Papierherstellung - Experte
+23122,5214,Packmitteltechnologe/-technologin,"Papierverarb,Verpackungstechn.-Fachkraft"
+23123,5215,Lebensmittelverpackungstechniker/in,Berufe in der Papierverarbeitung und Verpackungstechnik - komplexe Spezialistentätigkeiten
+23123,5216,Mustermacher/in - Verpackungsmittelherstellung,Berufe in der Papierverarbeitung und Verpackungstechnik - komplexe Spezialistentätigkeiten
+23124,5217,Verpackungsingenieur/in,Berufe in der Papierverarbeitung und Verpackungstechnik - hoch komplexe Tätigkeiten
+23193,5218,Industriemeister/in - Papiererzeugung,Aufsichtskräfte - Papier- und Verpackungstechnik
+23222,5219,Grafikdesigner/in,"Berufe im Grafik-, Kommunikations- und Fotodesign - fachlich ausgerichtete Tätigkeiten"
+23223,5219,Grafikdesigner/in,"Berufe im Grafik-, Kommunikations- und Fotodesign - komplexe Spezialistentätigkeiten"
+23224,5219,Grafikdesigner/in,"Grafik-Kommunikat.,Fotodesign-Experte"
+23223,5220,Video- und Game-Designer/in,"Berufe im Grafik-, Kommunikations- und Fotodesign - komplexe Spezialistentätigkeiten"
+23223,5221,Informationsarchitekt/in,"Berufe im Grafik-, Kommunikations- und Fotodesign - komplexe Spezialistentätigkeiten"
+23212,5222,Mediengestalter/in - Digital und Print,"Digital-,Printmediengestaltung-Fachkraft"
+23213,5222,Mediengestalter/in - Digital und Print,"Digital,Printmediengestaltung-Spezialist"
+23293,5224,Art-Direktor/in,Aufsichtskräfte - Technische Mediengestaltung
+23294,5224,Art-Direktor/in,Führungskräfte - Technische Mediengestaltung
+23312,5229,Fotolaborant/in,Fototechnik - Fachkraft
+23313,5230,Foto- und Medientechniker/in,Fototechnik - Spezialist
+23314,5231,Ingenieur - Foto und Medientechnik,Fototechnik - Experte
+23393,5232,Fotografenmeister/in,Aufsicht - Fototechnik und Fotografie
+23322,5233,Fotograf/in,Fotografie - Fachkraft
+23411,5234,Drucker/in,Drucktechnik - Helfer
+23412,5234,Drucker/in,Drucktechnik - Fachkraft
+23422,5237,Buchbinder/in,"Buchbinderei,Druckweiterverarb-Fachkraft"
+23423,5238,Buchrestaurator/in,"Buchbinderei,Druckweiterver.-Spezialist"
+23224,5240,Medien- und Kommunikationsdesigner/in,"Grafik-Kommunikat.,Fotodesign-Experte"
+23282,5241,Flexograf/in,Techn.Mediengestaltung (ssT) - Fachkraft
+28221,8999,Maschinenführer/in zur Fertigung von Kleidungsstücken,"Berufe in der Bekleidungs-, Hut- und Mützenherstellung - Helfer-/Anlerntätigkeiten"
+28222,8999,Maschinenführer/in zur Fertigung von Kleidungsstücken,Bekleidungsherstellung - Fachkraft
+28333,9002,Schuhmodelleur/in,Schuhherstellung - Spezialist
+28333,9003,Schuhtechniker/in,Schuhherstellung - Spezialist
+29143,9004,Lebensmitteltechniker/in in der Frucht- und Gemüsesaftproduktion,Berufe in der Fruchtsafttechnik - komplexe Spezialistentätigkeiten
+29193,9005,Getränkeproduktionsleiter/in,Aufsicht - Getränkeherstellung
+29194,9005,Getränkeproduktionsleiter/in,Führungskräfte - Getränkeherstellung
+29142,9006,Fachkraft in der Saftherstellung,Fruchtsafttechnik - Fachkraft
+29152,9007,Nahrungsmittelverkoster/in,"Nahrungsmittel-,Getränkekoster-Fachkraft"
+29122,9008,Weinküfer/in,Weinküfer/innen - Fachkraft
+29123,9009,Weinbautechniker/in,Weinküfer/innen - Spezialist
+28193,9010,Textilproduktionsleiter/in,"Aufsicht - Textiltechnik, -produktion"
+28194,9010,Textilproduktionsleiter/in,Führungskräfte - Textiltechnik und -produktion
+28212,9013,Schnittmustermacher/in für Kleidungsstücke,Modedesign - Fachkraft
+28213,9013,Schnittmustermacher/in für Kleidungsstücke,Modedesign - Spezialist
+28214,9013,Schnittmustermacher/in für Kleidungsstücke,Modedesign - Experte
+28214,9014,Modedesigner/in,Modedesign - Experte
+28212,9014,Modedesigner/in,Modedesign - Fachkraft
+28213,9014,Modedesigner/in,Modedesign - Spezialist
+29102,9015,Getränkemaschinensteuerer/-steuerin,Berufe in der Getränkeherstellung (o.S.)- fachlich ausgerichtete Tätigkeiten
+29103,9016,Getränketechniker/in,Berufe in der Getränkeherstellung - komplexe Spezialistentätigkeiten
+29104,9016,Getränketechniker/in,Berufe in der Getränkeherstellung (o.S.) - hoch komplexe Tätigkeiten
+29112,9018,Brauereifacharbeiter/in,"Brauer/innen, Mälzer/innen - Fachkraft"
+29113,9019,Brautechniker/in,"Brauer/innen, Mälzer/innen - Spezialist"
+29114,9019,Brautechniker/in,"Brauer/innen, Mälzer/innen - Experte"
+28221,9020,Textilverarbeitungshelfer/in,Bekleidungsherstellung - Helfer
+28222,9021,Schneider/in,Bekleidungsherstellung - Fachkraft
+29132,9023,Brenner/in,"Brenner, Destillateure - Fachkraft"
+29133,9024,Brennereitechniker/in,"Brenner, Destillateure - Spezialist"
+29134,9024,Brennereitechniker/in,"Brenner, Destillateure - Experte"
+28232,9026,Segelmacher/in,"Tech.Konfektionäre,Segelmacher-Fachkraft"
+28101,9029,Textilhilfsarbeiter/in,Textiltechnik (o.S.) - Helfer
+28102,9030,Textilmaschinenführer/in, Textiltechnik (o.S.) - Fachkraft
+28132,9030,Textilmaschinenführer/in,Berufe in der Garn- und Seilherstellung - fachlich ausgerichtete Tätigkeiten
+28122,9030,Textilmaschinenführer/in,Textilherstellung - Fachkraft
+28142,9030,Textilmaschinenführer/in,Berufe in der Textilveredlung - fachlich ausgerichtete Tätigkeiten
+28132,9035,Seiler/in,Garn- und Seilherstellung - Fachkraft
+28322,9039,Lederwarenhersteller/in,"Sattlerei,Herst. Lederutensil.-Fachkraft"
+29282,9040,Tiefkühlkosthersteller/in,Berufe in der Lebensmittelherstellung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+29201,9041,Helfer/in - Lebensmitteltechnik,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+28242,9045,Polsterer/Polsterin,"Polsterei,Fahrzeuginnenausstat-Fachkraft"
+28293,9046,Leiter/in - Textilverarbeitung,Aufsicht - Textilverarbeitung
+28294,9046,Leiter/in - Textilverarbeitung,Führung - Textilverarbeitung
+29284,9047,Lebensmittelingenieur/in für Spezialnahrung,Berufe in der Lebensmittelherstellung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+28301,9048,Lederverarbeitungshelfer/in,"Leder-,Pelzherstell.,-verarb.(oS)-Helfer"
+29283,9049,"Lebensmitteltechniker/in - Feinkost, Fertiggerichte, Obstverwertung",Berufe in der Lebensmittelherstellung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+28222,9051,Hut- und Mützenmacher/in,Bekleidungsherstellung - Fachkraft
+28332,9052,Schuhmacher/in,Schuhherstellung - Fachkraft
+28342,9053,Pelzveredler/in,Pelzbe- und -verarbeitung - Fachkraft
+28343,9054,Pelztechniker/in,Pelzbe- und -verarbeitung - Spezialist
+28393,9055,Leiter/in Leder- und Pelzbearbeitung,"Aufsicht - Leder-,Pelzherstell.,-verarbeitung"
+28394,9055,Leiter/in Leder- und Pelzbearbeitung,"Aufsicht - Leder-,Pelzherstell.,-verarb."
+29222,9061,Bäcker/in,"Back-, Konditoreiwarenherst.-Fachkraft"
+29223,9062,Bäckereitechniker/in,"Back-, Konditoreiwarenherst.-Spezialist"
+29232,9063,Fleischer/in,Fleischverarbeitung - Fachkraft
+29233,9064,Fleischereitechniker/in,Fleischverarbeitung - Spezialist
+29242,9065,Fischverarbeiter/in,Fischverarbeitung - Fachkraft
+29243,9066,Lebensmitteltechniker/in - Fischerzeugnisse,Fischverarbeitung - Spezialist
+29252,9067,Molkereifacharbeiter/in,Milchproduktherstellung - Fachkraft
+29253,9068,Molkereitechniker/in,Milchproduktherstellung - Spezialist
+29262,9069,Süßwarenfacharbeiter/in,Süßwarenherstellung - Fachkraft
+29263,9070,Süßwarentechniker/in,Süßwarenherstellung - Spezialist
+29272,9071,Tabakwarenmacher/in,Tabakwarenherstellung - Fachkraft
+29273,9072,Tabakwarentechniker/in,Tabakwarenherstellung - Spezialist
+29293,9076,Leiter/in - Lebensmittelindustrie,"Aufsicht - Lebens-,Genussmittelherstellung"
+29294,9076,Leiter/in - Lebensmittelindustrie,"Führung - Lebens-,Genussmittelherstellung"
+29293,9077,Leiter/in - Tabakwarenindustrie,"Aufsicht - Lebens-,Genussmittelherstellung"
+29294,9077,Leiter/in - Tabakwarenindustrie,"Führung - Lebens-,Genussmittelherstellung"
+29301,9078,Küchenhilfe,Köche/Köchinnen (o.S.) - Helfer
+29302,9079,Koch/Köchin,Köche/Köchinnen (o.S.) - Fachkraft
+63312,9079,Koch/Köchin,Berufe in der Systemgastronomie - fachlich ausgerichtete Tätigkeiten
+29312,9079,Koch/Köchin,"Vor-, Kalt-, Süßspeisenköche - Fachkraft"
+29322,9079,Koch/Köchin,"Grill-, Braten-, Fischköche - Fachkraft"
+29382,9079,Koch/Köchin,Köche/Köchinnen (s.s.T.) - Fachkraft
+29222,9086,Feinbäcker/in,"Back-, Konditoreiwarenherst.-Fachkraft"
+29222,9087,Bäckereimaschinenführer/in,"Back-, Konditoreiwarenherst.-Fachkraft"
+29393,9088,Küchenchef/in,Aufsichtskräfte - Speisenzubereitung
+29394,9088,Küchenchef/in,Führung - Speisenzubereitung
+28242,9089,Fahrzeuginnenausstatter/in,"Polsterei,Fahrzeuginnenausstat-Fachkraft"
+29252,9090,Speiseeishersteller/in,Milchproduktherstellung - Fachkraft
+28301,9092,Pelzverarbeitungshelfer/in,"Leder-,Pelzherstell.,-verarb.(oS)-Helfer"
+28232,9094,Technische/r Konfektionär/in,"Tech.Konfektionäre,Segelmacher-Fachkraft"
+29212,9096,Mühlenfacharbeiter/in,Berufe in der Mühlenprodukt- und Futtermittelherstellung - fachlich ausgerichtete Tätigkeiten
+29213,9097,Müllereitechniker/in,Berufe in der Mühlenprodukt- und Futtermittelherstellung - komplexe Spezialistentätigkeiten
+28312,9110,Gerber/in,Lederherstellung - Fachkraft
+28313,9110,Gerber/in,Lederherstellung - Spezialist
+29282,9113,Speisefetthersteller/in,Berufe in der Lebensmittelherstellung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+21112,9208,Bergmann/-frau,Berufe im Berg- und Tagebau - fachlich ausgerichtete Tätigkeiten
+21111,9208,Bergmann/-frau,Berufe im Berg- und Tagebau - Helfer-/Anlerntätigkeiten
+21113,9208,Bergmann/-frau,Berufe im Berg- und Tagebau - komplexe Spezialistentätigkeiten
+21114,9208,Bergmann/-frau,Berufe im Berg- und Tagebau - hoch komplexe Tätigkeiten
+21112,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)",Berufe im Berg- und Tagebau - fachlich ausgerichtete Tätigkeiten
+21111,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)",Berufe im Berg- und Tagebau - Helfer-/Anlerntätigkeiten
+21113,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)",Berufe im Berg- und Tagebau - komplexe Spezialistentätigkeiten
+21114,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)",Berufe im Berg- und Tagebau - hoch komplexe Tätigkeiten
+21123,9210,Sprengbeauftragte/r,Berufe in der Sprengtechnik - komplexe Spezialistentätigkeiten
+21122,9210,Sprengbeauftragte/r,Berufe in der Sprengtechnik - fachlich ausgerichtete Tätigkeiten
+21124,9210,Sprengbeauftragte/r,Berufe in der Sprengtechnik - hoch komplexe Tätigkeiten
+21193,9211,Leiter/in - Berg- und Tagebau,Aufsichtskräfte - Berg- und Tagebau und Sprengtechnik
+21194,9211,Leiter/in - Berg- und Tagebau,Führungskräfte - Berg- und Tagebau und Sprengtechnik
+21212,9212,Kohleaufbereiter/in,Berufe in der Naturstein- und Mineralaufbereitung - fachlich ausgerichtete Tätigkeiten
+21201,9212,Kohleaufbereiter/in,Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+21213,9212,Kohleaufbereiter/in,Berufe in der Naturstein- und Mineralaufbereitung - komplexe Spezialistentätigkeiten
+21212,9213,Aufbereitungsmechaniker/in,Berufe in der Naturstein- und Mineralaufbereitung - fachlich ausgerichtete Tätigkeiten
+21201,9213,Aufbereitungsmechaniker/in,Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+21213,9213,Aufbereitungsmechaniker/in,Berufe in der Naturstein- und Mineralaufbereitung - komplexe Spezialistentätigkeiten
+21222,9214,Arbeiter/in bei Herstellung von Baustoffen,Berufe in der Baustoffherstellung - fachlich ausgerichtete Tätigkeiten
+21201,9214,Arbeiter/in bei Herstellung von Baustoffen,Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+21223,9215,Baustofftechniker/in,Berufe in der Baustoffherstellung - komplexe Spezialistentätigkeiten
+21232,9216,Steinmetz/in,Berufe in der Steinmetztechnik - fachlich ausgerichtete Tätigkeiten
+21201,9216,Steinmetz/in,Berufe in der Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+21233,9216,Steinmetz/in,Berufe in der Steinmetztechnik - komplexe Spezialistentätigkeiten
+21293,9217,Leiter/in - Baustoffherstellung,Aufsichtskräfte - Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung
+21293,9218,Steinmetzmeister/in,Aufsichtskräfte - Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung
+21293,9219,Leiter/in - Gestein- und Mineralienaufbereitung,Aufsichtskräfte - Naturstein- und Mineralaufbereitung und -verarbeitung und Baustoffherstellung
+21312,9220,Glasmacher/in,Berufe in der Glasherstellung - fachlich ausgerichtete Tätigkeiten
+21312,9221,Glasmaschinenführer/in,Berufe in der Glasherstellung - fachlich ausgerichtete Tätigkeiten
+21311,9221,Glasmaschinenführer/in,Berufe in der Glasherstellung - Helfer-/Anlerntätigkeiten
+21313,9222,Glashüttentechniker/in,Berufe in der Glasherstellung - komplexe Spezialistentätigkeiten
+21322,9223,Glasapparatebauer/in,Berufe im Glasapparatebau - fachlich ausgerichtete Tätigkeiten
+21323,9223,Glasapparatebauer/in,Berufe im Glasapparatebau - komplexe Spezialistentätigkeiten
+21352,9224,Thermometermacher/in,Berufe in der Glasapparatejustierung - fachlich ausgerichtete Tätigkeiten
+21332,9224,Thermometermacher/in,Berufe in der industriellen Glasbläserei - fachlich ausgerichtete Tätigkeiten
+21332,9225,Leuchtröhrenglasbläser/in,Berufe in der industriellen Glasbläserei - fachlich ausgerichtete Tätigkeiten
+21342,9226,Glasgraveur/in,Berufe in der Glasveredelung - fachlich ausgerichtete Tätigkeiten
+21342,9227,Flachglasmechaniker/in,Berufe in der Glasveredelung - fachlich ausgerichtete Tätigkeiten
+21342,9228,Glasveredler/in,Berufe in der Glasveredelung - fachlich ausgerichtete Tätigkeiten
+21362,9229,Feinoptiker/in,Berufe in der Feinoptik - fachlich ausgerichtete Tätigkeiten
+21363,9229,Feinoptiker/in,Berufe in der Feinoptik - komplexe Spezialistentätigkeiten
+21393,9230,Leiter/in - Glasherstellung,Aufsichtskräfte - Industrielle Glasherstellung und -verarbeitung
+21412,9231,Industriekeramiker/in,Berufe in der Industriekeramik (Verfahrens- und Anlagentechnik) - fachlich ausgerichtete Tätigkeiten
+21411,9231,Industriekeramiker/in,Berufe in der Industriekeramik (Verfahrens- und Anlagentechnik) - Helfer-/Anlerntätigkeiten
+21413,9231,Industriekeramiker/in,Berufe in der Industriekeramik (Verfahrens- und Anlagentechnik) - komplexe Spezialistentätigkeiten
+21422,9232,Keramikmodelleur/in,Berufe in der Industriekeramik (Modelltechnik) - fachlich ausgerichtete Tätigkeiten
+21423,9232,Keramikmodelleur/in,Berufe in der Industriekeramik (Modelltechnik) - komplexe Spezialistentätigkeiten
+21493,9233,Leiter/in - Keramikfabrik,Aufsichtskräfte - Industrielle Keramikherstellung und -verarbeitung
+28301,9504,Bediener/in von Lederzurichtungsmaschinen,"Leder-,Pelzherstell.,-verarb.(oS)-Helfer"
+28312,9504,Bediener/in von Lederzurichtungsmaschinen,Lederherstellung - Fachkraft
+28332,9505,Bediener/in von Maschinen zur Schuhfertigung,Schuhherstellung - Fachkraft
+28342,9506,Kürschner/in,Pelzbe- und -verarbeitung - Fachkraft
+32253,1754,Tunnelbautechniker/in,Berufe im Kanal- und Tunnelbau - komplexe Spezialistentätigkeiten
+33101,1755,Helfer/in - Bodenverlegung,Berufe in der Bodenverlegung (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+33301,1756,Helfer/in - Gebäudeausbau,Berufe im Aus- und Trockenbau (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+34201,1757,"Helfer/in - Klempnerei, Installation",Berufe in der Klempnerei (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+34334,1758,Ingenieur/in - Abfallwirtschaft,Berufe in der Abfallwirtschaft - hoch komplexe Tätigkeiten
+31102,1775,Bautechniker/in,Berufe in der Bauplanung und -überwachung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+31103,1775,Bautechniker/in,"Bauplanung,-überwachung (oS)-Spezialist"
+32103,1775,Bautechniker/in,Berufe im Hochbau (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+32203,1775,Bautechniker/in,Berufe im Tiefbau (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+31133,1776,Verkehrswegeplaner/in,Berufe in der Bauplanung von Verkehrswegen und -anlagen - komplexe Spezialistentätigkeiten
+31132,1776,Verkehrswegeplaner/in,Berufe in der Bauplanung von Verkehrswegen und -anlagen - fachlich ausgerichtete Tätigkeiten
+31134,1776,Verkehrswegeplaner/in,"Bauplan. Verkehrswege,-anlagen - Experte"
+31153,1777,Denkmalsanierungsplaner/in,Berufe in der Bauwerkserhaltung und -erneuerung - komplexe Spezialistentätigkeiten
+31154,1777,Denkmalsanierungsplaner/in,Berufe in der Bauwerkserhaltung und -erneuerung - hoch komplexe Tätigkeiten
+32103,1778,Hochbauingenieur/in,Hochbau (o.S.) - Spezialist
+32104,1778,Hochbauingenieur/in,Hochbau (o.S.) - Experte
+32203,1779,Tiefbauingenieur/in,Berufe im Tiefbau (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+32204,1779,Tiefbauingenieur/in,Tiefbau (o.S.) - Experte
+32223,1780,Straßenbautechniker/in,Berufe im Straßen- und Asphaltbau - komplexe Spezialistentätigkeiten
+32224,1780,Straßenbautechniker/in,Straßen- und Asphaltbau - Experte
+32263,1781,Wasserbauingenieur/in,Berufe im Kultur- und Wasserbau - komplexe Spezialistentätigkeiten
+32264,1781,Wasserbauingenieur/in,Kultur- und Wasserbau - Experte
+34103,1782,Gebäudetechniker/in,Berufe in der Gebäudetechnik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+34104,1782,Gebäudetechniker/in,Gebäudetechnik (o.S.) - Experte
+34233,1783,Kälte-Klimatechniker/in,Berufe in der Kältetechnik - komplexe Spezialistentätigkeiten
+34293,1783,Kälte-Klimatechniker/in,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34234,1783,Kälte-Klimatechniker/in,Kältetechnik - Experte
+34302,1784,Fernwärmetechniker/in,Berufe in der Ver- und Entsorgung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+34303,1784,Fernwärmetechniker/in,Ver- und Entsorgung (o.S.) - Spezialist
+34304,1784,Fernwärmetechniker/in,Ver- und Entsorgung (o.S.) - Experte
+34314,1785,Wasserwerksingenieur/in,"Wasserversorg.,Abwassertechn.-Experte "
+34313,1785,Wasserwerksingenieur/in,Berufe in der Wasserversorgungs- und Abwassertechnik - komplexe Spezialistentätigkeiten
+34324,1786,Rohrnetzingenieur/in,Rohrleitungsbau - Experte
+34323,1786,Rohrnetzingenieur/in,Rohrleitungsbau - Spezialist
+34333,1787,Organsiator/in - Abfallwirtschaft,Berufe in der Abfallwirtschaft - fachlich ausgerichtete Tätigkeiten
+34301,1787,Organsiator/in - Abfallwirtschaft,Ver- und Entsorgung (o.S.) - Helfer
+34332,1787,Organsiator/in - Abfallwirtschaft,Abfallwirtschaft - Fachkraft
+34334,1787,Organsiator/in - Abfallwirtschaft,Abfallwirtschaft - Experte
+32201,1854,Bauhelfer/in,Berufe im Tiefbau (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+32101,1854,Bauhelfer/in,Hochbau (o.S.) - Helfer
+34302,1856,Gasversorgungstechniker/in,Berufe in der Ver- und Entsorgung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+34303,1856,Gasversorgungstechniker/in,Ver- und Entsorgung (o.S.) - Spezialist
+34304,1856,Gasversorgungstechniker/in,Ver- und Entsorgung (o.S.) - Experte
+33211,3001,Maler- und Lackiererhelfer/in,Maler- und Lackiererarbeiten - Helfer-/Anlerntätigkeiten
+33352,3010,Rollladen- und Sonnenschutzmechatroniker/in,Berufe im Rolladen- und Jalousiebau - fachlich ausgerichtete Tätigkeiten
+33393,3010,Rollladen- und Sonnenschutzmechatroniker/in,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+33312,3013,Isolierfacharbeiter/in,Berufe in der Isolierung - fachlich ausgerichtete Tätigkeiten
+33393,3013,Isolierfacharbeiter/in,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+33342,3017,Glaser/in,Berufe in der Glaserei - fachlich ausgerichtete Tätigkeiten
+33393,3017,Glaser/in,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+33212,3023,Maler/in und Lackierer/in,Berufe für Maler- und Lackiererarbeiten - fachlich ausgerichtete Tätigkeiten
+33232,3024,Bauwerksabdichter/in,Berufe in der Bauwerksabdichtung - fachlich ausgerichtete Tätigkeiten
+31104,5246,Bauingenieur/in,"Bauplanung, -überwachung (oS) - Experte"
+31134,5246,Bauingenieur/in,"Bauplan. Verkehrswege,-anlagen - Experte"
+31144,5246,Bauingenieur/in,Berufe in der Wasserwirtschaft - hoch komplexe Tätigkeiten
+32104,5246,Bauingenieur/in,Hochbau (o.S.) - Experte
+32224,5246,Bauingenieur/in,Straßen- und Asphaltbau - Experte
+32264,5246,Bauingenieur/in,Kultur- und Wasserbau - Experte
+32204,5246,Bauingenieur/in,Tiefbau (o.S.) - Experte
+31114,5252,Architekt/in,Berufe in der Architektur - hoch komplexe Tätigkeiten
+31164,5254,Bausachverständiger/in,Bausachverständige und Baukontrolleure/-kontrolleurinnen - hoch komplexe Tätigkeiten
+31164,5255,Baubiologe/ -biologin,Bausachverständige und Baukontrolleure/-kontrolleurinnen - hoch komplexe Tätigkeiten
+31193,5257,Leiter/in - Bauplanung,"Aufsichtskräfte - Bauplanung und -überwachung, Architektur"
+31194,5257,Leiter/in - Bauplanung,"Führungskräfte - Bauplanung und -überwachung, Architektur"
+31213,5260,Vermessungstechniker/in oder -ingeneur/in,Vermessungstechnik - Spezialist
+31212,5260,Vermessungstechniker/in oder -ingeneur/in,Vermessungstechnik - Fachkraft
+31214,5260,Vermessungstechniker/in oder -ingeneur/in,Vermessungstechnik - Experte
+31223,5261,Kartograf/in,Kartografie - Spezialist
+31222,5261,Kartograf/in,Kartografie - Fachkraft
+31224,5261,Kartograf/in,Kartografie - Experte
+32122,5262,Maurer/in,Berufe im Maurerhandwerk - fachlich ausgerichtete Tätigkeiten
+32193,5262,Maurer/in,Aufsichtskräfte - Hochbau
+32123,5263,Restaurator/in - Maurerhandwerk,Maurerhandwerk - Spezialist
+32132,5264,Feuerungs- und Schornsteinbauer/in,Schornsteinbau - Fachkraft
+32152,5265,Fassadenmonteur/in,Fassadenbau - Fachkraft
+32222,5268,Straßenbauer/in,Straßen- und Asphaltbau - Fachkraft
+32232,5271,Gleisbauer/in,Berufe im Gleisbau - fachlich ausgerichtete Tätigkeiten
+32233,5272,Gleisbautechniker/in,Gleisbau - Spezialist
+33133,5273,Restaurator/in - Parkettlegerhandwerk,Parkettverlegung - Spezialist
+32243,5274,Brunnenbautechniker/in,Brunnenbau - Spezialist
+32252,5275,Kanalbauer/in,Kanal- und Tunnelbau - Fachkraft
+32252,5276,Tunnelbauer/in,Kanal- und Tunnelbau - Fachkraft
+32253,5277,Kanalmeister/in,Kanal- und Tunnelbau - Spezialist
+32262,5278,Bodenkulturbauarbeiter/in,Kultur- und Wasserbau - Fachkraft
+31124,5279,Ingenieur/in - Stadt- und Regionalplanung,Stadt- und Raumplanung - Experte
+31152,5280,Denkmaltechnische/r Assistent/in,"Bauwerkserhaltung,-erneuerung-Fachkraft - fachlich ausgerichtete Tätigkeiten"
+31163,5281,Baukontrolleur/in,Bausachverständige und Baukontrolleure/-kontrolleurinnen - komplexe Spezialistentätigkeiten
+32112,5282,Beton- und Stahlbetonbauer/in,Berufe im Beton- und Stahlbetonbau - fachlich ausgerichtete Tätigkeiten
+32113,5282,Beton- und Stahlbetonbauer/in,Beton- und Stahlbetonbau - Spezialist
+32142,5283,Dachdecker/in,Berufe in der Dachdeckerei - fachlich ausgerichtete Tätigkeiten
+32172,5284,Bauwerksmechaniker/in - Abbruch und Betontrenntechnik,Berufe im Bauwerksabbruch - fachlich ausgerichtete Tätigkeiten
+32212,5285,Pflasterer/ Pflasterin,Pflasterer/Pflasterinnen und Steinsetzer/innen - fachlich ausgerichtete Tätigkeiten
+32242,5286,Brunnenbauer/in,Berufe im Brunnenbau - fachlich ausgerichtete Tätigkeiten
+33112,5287,"Fliesen-, Platten- und Mosaikleger/in","Berufe in der Fliesen-, Platten- und Mosaikverlegung - fachlich ausgerichtete Tätigkeiten"
+33122,5288,Estrich- und Terrazzoleger/in,Berufe in der Estrich- und Terrazzoverlegung - fachlich ausgerichtete Tätigkeiten
+33132,5289,Parkettleger/in,Berufe in der Parkettverlegung - fachlich ausgerichtete Tätigkeiten
+33322,5292,Zimmerer/Zimmerin,Berufe in der Zimmerei - fachlich ausgerichtete Tätigkeiten
+33393,5292,Zimmerer/Zimmerin,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+33332,5293,Bautischler/in,Berufe in der Bautischlerei - fachlich ausgerichtete Tätigkeiten
+33393,5293,Bautischler/in,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+34232,5294,Kälteanlagenbauer/in,Berufe in der Kältetechnik - fachlich ausgerichtete Tätigkeiten
+34293,5294,Kälteanlagenbauer/in,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34322,5295,Rohrleitungsbauer/in,Berufe im Rohrleitungsbau - fachlich ausgerichtete Tätigkeiten
+34212,5297,Gas- und Wasserinstallateur/in,"Berufe in der Sanitär-, Heizungs- und Klimatechnik - fachlich ausgerichtete Tätigkeiten"
+34293,5297,Gas- und Wasserinstallateur/in,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34201,5297,Gas- und Wasserinstallateur/in,Klempnerei (o.S.) - Helfer
+34213,5297,Gas- und Wasserinstallateur/in,"Sanitär,Heizung,Klimatechnik -Spezialist"
+33102,5298,Bodenleger/in,Berufe in der Bodenverlegung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+33101,5298,Bodenleger/in,Bodenverlegung (o.S.) - Helfer
+32293,5301,Vorarbeiter/in- Tiefbau,Aufsicht - Tiefbau
+33193,5302,Bodenlegermeister/in,Aufsicht - Bodenverlegung
+33213,5303,Restaurator/in - Maler- und Lackiererhandwerk,"Maler-, Lackiererarbeiten - Spezialist"
+33222,5304,Stuckateur/in,Stuckateurarbeiten - Fachkraft
+33223,5305,Restaurator/in - Stuckateurhandwerk,Stuckateurarbeiten - Spezialist
+33233,5311,Bauabdichtungstechniker/in,Bauwerksabdichtung - Spezialist
+33242,5312,Holz- und Bautenschützer/in,Holz- und Bautenschutz - Fachkraft
+33243,5313,Holz- und Bautenschutztechniker/in,Holz- und Bautenschutz - Spezialist
+33293,5314,"Handwerksmeister/in - Maler-, Lackier- und Stuckateurarbeiten",Aufsicht-MalerStuckBauwerksabdBautensch.
+33293,5315,Meister/in - Holz- und Bautenschutzgewerbe bzw. Abdichtungsarbeiten,Aufsicht-MalerStuckBauwerksabdBautensch.
+33302,5316,Trockenbauer/in,Aus- und Trockenbau (o.S.) - Fachkraft
+33393,5316,Trockenbauer/in,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+33301,5316,Trockenbauer/in,Aus- und Trockenbau (o.S.) - Helfer
+33303,5317,Ausbautechniker/in,Aus- und Trockenbau (o.S.) - Spezialist
+33393,5317,Ausbautechniker/in,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+33323,5318,Restaurator/in - Zimmererhandwerk,Zimmerei - Spezialist
+33393,5318,Restaurator/in - Zimmererhandwerk,"Aufsichtskräfte - Aus- und Trockenbau, Isolierung, Zimmerei, Glaserei, Rollladen- und Jalousiebau"
+34102,5319,Hausmeister/in,Gebäudetechnik (o.S.) - Fachkraft
+34112,5322,Gerätewart/in,"Platz-, Gerätewarte/innen - Fachkraft"
+34112,5323,Gemeindearbeiter/in,"Platz-, Gerätewarte/innen - Fachkraft"
+34112,5324,Platzwart/in,"Platz-, Gerätewarte/innen - Fachkraft"
+34112,5325,Schulassistent/in,"Platz-, Gerätewarte/innen - Fachkraft"
+34193,5326,Industriemeister/in - Gebäudetechnik,Aufsicht - Gebäudetechnik
+34202,5327,Klempner/in,Klempnerei (o.S.) - Fachkraft
+34293,5327,Klempner/in,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34201,5327,Klempner/in,Klempnerei (o.S.) - Helfer
+34203,5328,Blechverarbeitungstechniker/in,Klempnerei (o.S.) - Spezialist
+34293,5328,Blechverarbeitungstechniker/in,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34213,5329,"Anlagentechniker/in- Sanitär-, Heizungs- und Klimatechnik","Sanitär,Heizung,Klimatechnik -Spezialist"
+34293,5329,"Anlagentechniker/in- Sanitär-, Heizungs- und Klimatechnik","Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34214,5330,Ingenieur/in – Klimasystemtechnik,"Sanitär,Heizung,Klimatechnik - Experte"
+34293,5330,Ingenieur/in – Klimasystemtechnik,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34222,5331,Ofen- und Luftheizungsbauer/in,Ofen- und Luftheizungsbau - Fachkraft
+34293,5331,Ofen- und Luftheizungsbauer/in,"Aufsichtskräfte - Klempnerei, Sanitär-, Heizungs- und Klimatechnik"
+34301,5332,Straßenreiniger/in,Ver- und Entsorgung (o.S.) - Helfer
+34301,5333,Müllmann/Müllfrau,Ver- und Entsorgung (o.S.) - Helfer
+34312,5337,Ver- und Entsorger/in - Wasserversorgung,"Wasserversorg.,Abwassertechn.-Fachkraft"
+34342,5345,Anlagenmechaniker/in,"Anlagen-,Behälter-,Apparatebau-Fachkraft"
+34343,5346,Anlagenbautechniker/in,"Anlage-,Behälter-,Apparatebau-Spezialist"
+34344,5346,Anlagenbautechniker/in,"Anlagen-,Behälter-,Apparatebau-Experte"
+32102,5350,Hochbauarbeiter/in,Hochbau (o.S.) - Fachkraft
+32101,5350,Hochbauarbeiter/in,Hochbau (o.S.) - Helfer
+31104,5351,Statiker/in,"Bauplanung, -überwachung (oS) - Experte"
+34393,5355,Leiter/in - Anlagenbau,Aufsichtskräfte - Ver- und Entsorgung
+34393,5356,Leiter/in - Leitungsbau,Aufsichtskräfte - Ver- und Entsorgung
+34393,5357,Leiter/in - Wasserversorgung und -entsorgung,Aufsichtskräfte - Ver- und Entsorgung
+34393,5358,Leiter/in - Abfallentsorgung und Städtereinigung,Aufsichtskräfte - Ver- und Entsorgung
+32193,5400,Polier/in im Hochbau,Aufsichtskräfte - Hochbau
+32162,5401,Gerüstbauer/in,Berufe im Gerüstbau - fachlich ausgerichtete Tätigkeiten
+31173,5402,Baukalkulator/in,Berufe in der Bauabrechnung und -kalkulation - komplexe Spezialistentätigkeiten
+31174,5402,Baukalkulator/in,Berufe in der Bauabrechnung und -kalkulation - hoch komplexe Tätigkeiten
+31142,5403,Bauplaner/in für wasserwirtschaftliche Anlagen,Berufe in der Wasserwirtschaft - fachlich ausgerichtete Tätigkeiten
+31143,5403,Bauplaner/in für wasserwirtschaftliche Anlagen,Berufe in der Wasserwirtschaft - komplexe Spezialistentätigkeiten
+31144,5403,Bauplaner/in für wasserwirtschaftliche Anlagen,Berufe in der Wasserwirtschaft - hoch komplexe Tätigkeiten
+32202,9401,Spezialtiefbauer/in,Berufe im Tiefbau (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+42293,1759,Leiter/in - Umweltschutztechnik,Aufsichtskräfte - Umweltschutztechnik
+43412,1770,ERP-Anwendungsentwickler,Softwareentwicklung - Fachkraft
+43413,1770,ERP-Anwendungsentwickler,Softwareentwicklung - Spezialist
+43383,1771,IT-Sicherheitstechniker/in,"IT-Netzw,Koord,Admin,Org(ssT)-Spezialist"
+43384,1771,IT-Sicherheitstechniker/in,"IT-Netzw.,Koord.,Admin,Orga(ssT)-Experte"
+43313,1772,IT-Netzwerktechniker/in,IT-Netzwerktechnik - Spezialist
+43314,1772,IT-Netzwerktechniker/in,IT-Netzwerktechnik - Experte
+42333,1773,Strahlenschutzbeauftragte/r,Strahlenschutzbeauftragte - Spezialist
+42334,1773,Strahlenschutzbeauftragte/r,Strahlenschutzbeauftragte - Experte
+42323,1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r","Gewäs.Immissions,Abfallbeauf.-Spezialist"
+42324,1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r","Gewäs.Immissions,Abfallbeauf.-Experte"
+41104,1788,Mathematiker/in,Mathematik (o.S.) - Experte
+41103,1788,Mathematiker/in,Berufe in der Mathematik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+41293,1789,Biologisch-Technische/r Laborleiter/in,Aufsichtskräfte - Biologie
+41294,1789,Biologisch-Technische/r Laborleiter/in,Führung - Biologie
+41303,1790,Chemiker/in,Berufe in der Chemie (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+41304,1790,Chemiker/in,Chemie (o.S.) - Experte
+41312,1791,Chemikant/in / Pharmakant/in,Berufe in der Chemie- und Pharmatechnik - fachlich ausgerichtete Tätigkeiten
+41313,1791,Chemikant/in / Pharmakant/in,Chemie- und Pharmatechnik - Spezialist
+41394,1792,Laborleiter/in in der Chemie,Führungskräfte - Chemie
+41393,1792,Laborleiter/in in der Chemie,Aufsicht - Chemie
+41404,1793,Physiker/in,Berufe in der Physik (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41403,1793,Physiker/in,Physik (o.S.) - Spezialist
+41422,1794,Werkstoffprüfer/in,Berufe in der Werkstofftechnik - fachlich ausgerichtete Tätigkeiten
+41423,1794,Werkstoffprüfer/in,Werkstofftechnik - Spezialist
+41432,1795,Baustoffprüfer/in,Baustoffprüfung - Fachkraft
+41433,1795,Baustoffprüfer/in,Baustoffprüfung - Spezialist
+41493,1796,"Laborleiter/in - Physik, Werk- und Baustoffprüfung",Aufsicht - Physik
+41494,1796,"Laborleiter/in - Physik, Werk- und Baustoffprüfung",Führung - Physik
+42112,1797,Geologielaborant/in,Geotechnik - Fachkraft
+42113,1797,Geologielaborant/in,Geotechnik - Spezialist
+42143,1798,Meteorologe/Meteorologin,Meteorologie - Spezialist
+42142,1798,Meteorologe/Meteorologin,Meteorologie - Fachkraft
+42144,1798,Meteorologe/Meteorologin,Meteorologie - Experte
+42204,1799,Umweltschutzingenieur/in,Umweltschutztechnik (o.S.) - Experte
+42203,1799,Umweltschutzingenieur/in,Umweltschutztechnik (o.S.) - Spezialist
+41393,1800,Produktionsleiter/in in der Chemie,Aufsicht - Chemie
+41394,1800,Produktionsleiter/in in der Chemie,Führung - Chemie
+41212,4001,Biologisch-Technische/r Assistent/in,Biologisch-techn. Laboratorium-Fachkraft
+41213,4002,Biotechniker/in,Biologisch-techn.Laboratorium-Spezialist
+41214,4002,Biotechniker/in,Biologisch-techn.Laboratorium-Experte
+41222,4003,Fachkraft für medizinisch-biologische Präparation,Biologische Präparation - Fachkraft
+41234,4004,"Biologe/Biologin, Fachgebiet Ökologie",Biologie (Ökologie) - Experte
+41244,4005,"Biologe/Biologin, Fachgebiet Botanik",Biologie (Botanik) - Experte
+41254,4006,"Biologe/Biologin, Fachgebiet Zoologie",Biologie (Zoologie) - Experte
+41264,4007,Mikrobiologe/-biologin,Biologie (Mikrobiologie) - Experte
+41274,4008,Humanbiologe/-biologin,Biologie (Humanbiologie) - Experte
+41311,4009,Hilfskraft in der Chemieindustrie,Chemie- und Pharmatechnik - Helfer
+41314,4012,Ingenieur/in - Chemietechnik,Chemie- und Pharmatechnik - Experte
+41322,4013,Chemisch-Technische/r Assistent/in,Chemisch-techn. Laboratorium - Fachkraft
+41323,4014,Chemische/r Laboratorium-Spezialist/in,Chemisch-techn.Laboratorium - Spezialist
+41324,4014,Chemische/r Laboratorium-Spezialist/in,Chemisch-techn.Laboratorium - Experte
+41333,4015,Steuer(er/in) - chemische Verfahrensanlagen,Steuerer chem. Verfahrensanl.-Spezialist
+41343,4016,Steuer(er/in) - Erdöl- und Erdgasraffinationsanlagen,"Steuerer Erdöl,Erdgasraf.anl.-Spezialist"
+41412,4017,Physikalisch-Technische/r Assistent/in,Physikalisch-tech.Laboratorium-Fachkraft
+41413,4018,Physik-Techniker/in,Physikal.-techn. Laboratorium-Spezialist
+41414,4019,Physik-Ingenieur/in,Physikalisch-techn. Laboratorium-Experte
+41424,4022,Werkstofftechnik-Ingenieur/in,Werkstofftechnik - Experte
+41434,4025,Baustoffingenieur/in,Baustoffprüfung - Experte
+42114,4028,Geotechnikingenieur/in - Bau,Geotechnik - Experte
+42124,4029,Geologe/Geologin,Geologie - Experte
+42134,4030,Geograph/in,Geografie - Experte
+43113,4035,Betriebsinformatiker/in,Berufe in der Wirtschaftsinformatik - komplexe Spezialistentätigkeiten
+43112,4035,Betriebsinformatiker/in,Berufe in der Wirtschaftsinformatik - fachlich ausgerichtete Tätigkeiten
+43114,4035,Betriebsinformatiker/in,Berufe in der Wirtschaftsinformatik - hoch komplexe Tätigkeiten
+43123,4037,Technische/r Informatiker/in,Technische Informatik - Spezialist
+43122,4037,Technische/r Informatiker/in,Technische Informatik - Fachkraft
+43124,4037,Technische/r Informatiker/in,Technische Informatik - Experte
+43103,4038,Informatiker/in,Informatik (o.S.) - Spezialist
+43102,4038,Informatiker/in,Informatik (o.S.) - Fachkraft
+43104,4038,Informatiker/in,Informatik (o.S.) - Experte
+43134,4040,Bioinformatiker/in,"Bio-, Medizininformatik - Experte"
+43134,4041,Medizininformatiker/in,"Bio-, Medizininformatik - Experte"
+43144,4042,Geoinformatiker/in,Geoinformatik - Experte
+43153,4043,Medieninformatiker/in,Medieninformatik - Spezialist
+43152,4043,Medieninformatiker/in,Medieninformatik - Fachkraft
+43154,4043,Medieninformatiker/in,Medieninformatik - Experte
+43214,4046,IT-Systemanalytiker/in,IT-Systemanalyse - Experte
+43223,4047,Techniker/in im IT-Kundensupport,IT-Anwendungsberatung - Spezialist
+43224,4048,IT-Berater/in,IT-Anwendungsberatung - Experte
+43233,4049,IT-System-Kaufmann/ -frau,IT-Vertrieb - Spezialist
+43323,4052,IT-Qualitätssicherer/in,IT-Koordination - Spezialist
+43333,4053,EDV Operator/in,IT-Organisation - Spezialist
+43343,4054,System-/ Netzwerkadministrator/in,IT-Systemadministation - Spezialist
+43353,4055,Datenbankentwickler/in /-administrator/in,"Datenbankentwick.,-administr.-Spezialist"
+43363,4056,Webadministrator/in,Webadministration - Spezialist
+43414,4061,Softwareentwickler/in,Softwareentwicklung - Experte
+43423,4062,Organisationsprogrammierer/in,Programmierung - Spezialist
+42114,4100,Geotechnikingenieur/in - Erkundungs- und Rohstoffgeologie,Geotechnik - Experte
+41114,4202,Statistiker/in,Statistik - Experte
+41184,4203,Biomathematiker/in,Mathematik (s.s.T.) - Experte
+41184,4204,Computer-/ Technomathematiker/in,Mathematik (s.s.T.) - Experte
+41184,4205,Wirtschaftsmathematiker/in / Aktuar/in,Mathematik (s.s.T.) - Experte
+41194,4206,Mathe- und Statistik Abteilungsleiter/in,Führung - Mathematik und Statistik
+41284,4210,Molekularbiologe/-biologin,Biologie (s.s.T.) - Experte
+41284,4212,Genetiker/in,Biologie (s.s.T.) - Experte
+41284,4213,Biochemiker/in,Biologie (s.s.T.) - Experte
+41284,4214,Bioniker/in,Biologie (s.s.T.) - Experte
+41384,4219,Chemiker/in mit spezifischem Fachgebiet,Chemie (s.s.T.) - Experte
+41482,4224,Fachkraft für physikalische Messgeräte und Apparaturen,Physik (s.s.T.) - Fachkraft
+41483,4225,Messtechniker/in - Strahlenbelastung und physikalische Größen,Physik (s.s.T.) - Spezialist
+41484,4226,Akustiker/in,Physik (s.s.T.) - Experte
+41484,4227,Astrophysiker/in,Physik (s.s.T.) - Experte
+41484,4228,Biophysiker/in,Physik (s.s.T.) - Experte
+41484,4229,Kernphysiker/in,Physik (s.s.T.) - Experte
+41484,4230,Medizinphysiker/in,Physik (s.s.T.) - Experte
+41484,4231,Wirtschaftsphysiker/in,Physik (s.s.T.) - Experte
+42202,4234,Umweltschutztechnische/r Assistent/in,Umweltschutztechnik (o.S.) - Fachkraft
+42212,4237,Schornsteinfeger/in,Schornsteinfeger/innen - Fachkraft
+42293,4239,Schornsteinfegermeister/in,Aufsicht - Umweltschutztechnik
+42312,4240,Betriebsassistent/in - Umweltschutz,"Umweltschutzverwalt.,-beratung-Fachkraft"
+42314,4242,Umweltschutzbeauftragte/r,"Umweltschutzverwaltung,-beratung-Experte"
+42314,4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),"Umweltschutzverwaltung,-beratung-Experte"
+42324,4246,Störfallbeauftragte/r,"Gewäs.Immissions,Abfallbeauf.-Experte"
+42334,4248,Dekontaminateur/in,Strahlenschutzbeauftragte - Experte
+42394,4249,Leiter/in – Sachverständigenbüro für Umweltfragen,Führung - Umweltmanagement und -beratung
+43194,4250,Leiter/in - Informatik und Informationsmanagement,Führung - Informatik
+43294,4251,Leiter/in - IT-Vertrieb und -Anwendungsberatung,"Führung-IT-System,-Anwendung,-Vertrieb"
+43394,4252,IT-Projektleiter/in,"Führung-IT-Netzw.,-Koord.,-Admin.,-Orga."
+43494,4253,Software-Projektleiter/in,"Führung-Softwareentwickl.,Programmierung"
+42313,4254,Energieberater/in,"Umweltschutzverwalt,-beratung-Spezialist"
+42313,4255,Abfall- und Umweltberater/in,"Umweltschutzverwalt,-beratung-Spezialist"
+42314,4700,Klimaschutzmanager/in,"Umweltschutzverwaltung,-beratung-Experte"
+41222,4999,Fachkraft für Präparation in naturkundlichen Museen,Biologische Präparation - Fachkraft
+51422,1000,Schalterangestellte/r - Flughafen,Servicefachkräfte im Luftverkehr - fachlich ausgerichtete Tätigkeiten
+51422,1001,Steward/Stewardess (Flugzeug),Servicefachkräfte im Luftverkehr - fachlich ausgerichtete Tätigkeiten
+51321,1004,Postzusteller/in,Berufe für Post- und Zustelldienste - Helfer-/Anlerntätigkeiten
+51322,1004,Postzusteller/in,Berufe für Post- und Zustelldienste - fachlich ausgerichtete Tätigkeiten
+51393,1005,Lagerleiter/in,"Aufsichtskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
+51394,1005,Lagerleiter/in,"Führungskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
+51393,1006,Verladeaufseher/in,"Aufsichtskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
+51132,1743,Matrose/Matrosin,Techn. Schiffsverkehrsbetrieb-Fachkraft
+51193,1743,Matrose/Matrosin,"Aufsichtskräfte - Technischer Betrieb im Eisenbahn-, Luft- und Schiffsverkehr"
+51133,1743,Matrose/Matrosin,Techn. Schiffsverkehrsbetrieb-Spezialist
+51134,1743,Matrose/Matrosin,Techn. Schiffsverkehrsbetrieb - Experte
+51233,1744,Flugsicherungstechniker/in,Berufe in der Flugsicherungstechnik - komplexe Spezialistentätigkeiten
+51234,1744,Flugsicherungstechniker/in,Flugsicherungstechnik - Experte
+51242,1745,Wasserstraßenverkehrswart/in,"Wasserstraßen-,Brückenwärter - Fachkraft"
+51243,1745,Wasserstraßenverkehrswart/in,"Wasserstraßen-, Brückenwärter-Spezialist"
+51503,1746,Betriebs- und Verkehrstechniker/in,Überwach. Verkehrsbetrieb(oS)-Spezialist
+51504,1746,Betriebs- und Verkehrstechniker/in,Überwach. Verkehrsbetrieb (oS) - Experte
+51513,1746,Betriebs- und Verkehrstechniker/in,Überwach. Straßenverkehrsbetr-Spezialist
+51523,1746,Betriebs- und Verkehrstechniker/in,Überwach.Eisenbahnverkehrsbet-Spezialist
+51653,1760,Klarierungsagent/in,Schifffahrtskaufleute - komplexe Spezialistentätigkeiten
+53152,1761,Detektiv/in (Einzelhandel),Detektive/Detektivinnen - fachlich ausgerichtete Tätigkeiten
+53184,1762,Fahrprüfer/in,"Berufe in Objekt-, Personen-, Brandschutz, Arbeitssicherheit (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten"
+53193,1763,Aufsichtsleiter/in - Badeaufsicht,"Aufsichtskräfte - Objekt-, Personen-, Brandschutz, Arbeitssicherheit"
+54152,1764,"Fahrzeugpfleger/in (Schiffe, Flugzeuge, Züge)",Berufe in der Fahrzeugreinigung - fachlich ausgerichtete Tätigkeiten
+51311,5001,Lagerarbeiter/in,Lagerwirtschaft -Helfer
+51312,5001,Lagerarbeiter/in,Berufe in der Lagerwirtschaft - fachlich ausgerichtete Tätigkeiten
+51312,5002,Fachkraft - Lagerlogistik,Berufe in der Lagerwirtschaft - fachlich ausgerichtete Tätigkeiten
+51332,5005,Fachkraft - Hafenlogistik,Güter-und Warenumschlag-Fachkraft
+51512,5010,Fahrbetriebsregler/in (Straßenverkehr),Überwach. Straßenverkehrsbetr.-Fachkraft
+51593,5010,Fahrbetriebsregler/in (Straßenverkehr),Aufsichtskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51594,5010,Fahrbetriebsregler/in (Straßenverkehr),Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51522,5011,Eisenbahnbetriebsregler/in,Überwach.Eisenbahnverkehrsbetr-Fachkraft
+51593,5011,Eisenbahnbetriebsregler/in,Aufsichtskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51594,5011,Eisenbahnbetriebsregler/in,Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51311,5012,Hafenarbeiter/in,Lagerwirtschaft -Helfer
+51311,5013,Abpackmaschinenbediener/in,Lagerwirtschaft -Helfer
+51532,5014,Ramp-Agent,Überwachung Luftverkehrsbetr.-Fachkraft
+51593,5014,Ramp-Agent,Aufsichtskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51594,5014,Ramp-Agent,Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51533,5015,Fluglotse/in,Überwachung Luftverkehrsbetr.-Spezialist
+51593,5015,Fluglotse/in,Aufsichtskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51594,5015,Fluglotse/in,Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51534,5016,Flugunfalluntersucher/in,Überwachung Luftverkehrsbetr. -Experte
+51594,5016,Flugunfalluntersucher/in,Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51543,5017,Schiffslotse/-lotsin,Üerwach.Schiffsverkehrsbetr.-Spezialist
+51593,5017,Schiffslotse/-lotsin,Aufsichtskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51594,5017,Schiffslotse/-lotsin,Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51583,5018,Gefahrgutbeauftragte/r,Überwach.Verkehrsbetrieb(ssT)-Spezialist
+51593,5018,Gefahrgutbeauftragte/r,Aufsichtskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51594,5018,Gefahrgutbeauftragte/r,Führungskräfte - Überwachung und Steuerung des Verkehrsbetriebs
+51613,5022,Verkehrsbetriebswirt/in,Verkehrskaufleute - Spezialist
+51614,5022,Verkehrsbetriebswirt/in,Verkehrskaufleute - Experte
+51613,5023,Fachwirt/in - Personen- und Reiseverkehr,Verkehrskaufleute - Spezialist
+51614,5024,Betriebswirt/in im Verkehrsmanagement,Verkehrskaufleute - Experte
+51622,5025,Kaufmann/-frau für Spedition und Logistikdienstleistungen,"Speditions-,Logistikkaufleute-Fachkraft"
+51623,5025,Kaufmann/-frau für Spedition und Logistikdienstleistungen,Speditions- und Logistikkaufleute - komplexe Spezialistentätigkeiten
+51624,5025,Kaufmann/-frau für Spedition und Logistikdienstleistungen,Speditions- und Logistikkaufleute - hoch komplexe Tätigkeiten
+51623,5026,Sachbearbeiter/in für die Erstellung von Zollpapieren,"Speditions-,Logistikkaufleute-Spezialist"
+51312,5028,Kommissionierer/in,Lagerwirtschaft - Fachkraft
+51311,5028,Kommissionierer/in,Lagerwirtschaft -Helfer
+51624,5029,Logistikmanager/in,"51624 Speditions-, Logistikkaufleute - Experte"
+51633,5030,Bahnbetriebskoordinator/in,"Straße,Schienenverkehrskaufl.-Spezialist"
+51632,5031,Disponent/in für Eisenbahn und Straßenverkehr,"Straßen,Schienenverkehrskaufl.-Fachkraft"
+51652,5035,Schifffahrtskaufmann/-frau,Schifffahrtskaufleute - Fachkraft
+51653,5036,Schiffsmakler/in,Schifffahrtskaufleute - Spezialist
+51662,5037,"Kaufmann/-frau - Kurier-, Express- u. Postdienstleistungen",KurierExpressPostdienstl.kaufl-Fachkraft
+51663,5038,Postbeamt(er/in),KurierExpressPostdienst.kaufl-Spezialist
+51694,5039,Logistikleiter/in,"Führung-Verkehr,Logistik (kaufm.Bereich)"
+51212,5040,Straßenwärter/in,"Straßen-, Tunnelwärter/innen - Fachkraft"
+52112,5041,Taxifahrer/in,Berufskraftfahrer(Pers./PKW.)-Fachkraft
+52122,5042,Kraftfahrer/in,Berufskraftfahrer(Güterv./LKW)-Fachkraft
+52132,5043,U-Bahnfahrer/in,"Bus-, Straßenbahnfahrer/innen-Fachkraft"
+52132,5044,Bus - bzw. Straßenbahnfahrer/in,"Bus-, Straßenbahnfahrer/innen-Fachkraft"
+52182,5045,Lieferwagenfahrer/in,FahrzeugführerStraßenverk(ssT)-Fachkraft
+52202,5046,Lokführer/in,TriebfahrzeugführEisenbahn(oS)-Fachkraft
+52313,5047,Pilot/in,PilotenVerkehrsflugzeugführer-Spezialist
+52314,5047,Pilot/in,"Piloten,Verkehrsflugzeugführer - Experte"
+52383,5049,"Luftfahrzeugführer/in - Hubschrauber, Heißluftballons, Luftschiffe",Fahrzeugführer Flugverk.(ssT)-Spezialist
+52384,5050,Checkkapitän/in,Fahrzeugführer Flugverkehr (ssT)-Experte
+52413,5051,Nautische/r Schiffsoffizier/in,"NautSchiffsoffiziere,Kapitäne-Spezialist"
+52414,5052,Kapitän/in,"Naut.Schiffsoffiziere, Kapitäne-Experte"
+52422,5053,Binnenschiffsführer/in,"Schiffsführ.Binnen-,Hafenverk.-Fachkraft"
+52423,5053,Binnenschiffsführer/in,"Schiffsführ.Binnen,Hafenverk.-Spezialist"
+52512,5054,Land- und forstwirtschaftliche/r Maschinenführer/in,"Führer land-,forstw. Maschinen-Fachkraft"
+52522,5055,Baumaschinenführer/in,"Erdbeweg,verw.Maschinen-Fachkraft"
+52531,5056,Staplerfahrer/in,"Kranführ., Bediener Hebeeinricht.-Helfer"
+52532,5057,Kranfahrer/in,Kranführ.BedienerHebeeinricht.-Fachkraft
+52593,5058,Bauhofmeister/in,"Aufsicht - Bau-, Transportgeräteführung"
+53111,5059,Spielhallenaufsicht,"Objekt-, Werte-, Personenschutz - Helfer"
+53111,5060,Geldzähler/in,"Objekt-, Werte-, Personenschutz - Helfer"
+53112,5061,Sicherheitsdienstmitarbeiter/in,"Objekt-,Werte-, Personenschutz-Fachkraft"
+53122,5062,Brandbekämpfungsbeauftragte/r und Ersthelfer/in,"Arbeitssicherh.,Sich.-technik-Fachkraft"
+53123,5063,Sicherheitsbeauftragte/r- Arbeitsschutz,"Arbeitssicherh.,Sich.-technik-Spezialist"
+53124,5064,Arbeitsschutzingenieur/in,"Arbeitssicherh.,Sich.-technik-Experte"
+53132,5065,Feuerwehrmann/-frau,Brandschutz - Fachkraft
+53133,5067,Brandschutzbeauftragte/r,Brandschutz - Spezialist
+53134,5068,Brandschutzingenieur/in,Brandschutz - Experte
+53142,5069,Badeaufseher/in,Badeaufsicht - Fachkraft
+53152,5070,Detektiv/in,Detektive/Detektivinnen - Fachkraft
+53162,5071,Inkassobeauftragte/r,Inkassobeauftragte - Fachkraft
+53182,5072,Verkehrsüberwacher/in / Politesse,Obj.Pers.Brandschutz (ssT)-Fachkraft
+53182,5073,Diensthundführer/in,Obj.Pers.Brandschutz (ssT)-Fachkraft
+53183,5074,Schließ- und Sicherungstechniker/in,Obj.Pers.Brandschutz (ssT)-Spezialist
+53184,5075,Sicherheitsmanager/in,Obj.Pers.Brandschutz (ssT)-Experte
+53193,5076,Aufsichtsleiter/in – Sicherheitswesen,"Aufsicht-Objekt,Brandschutz,Arbeitssich."
+53194,5077,Leiter/in - Rettungsstelle,"Führung-Objekt-,Brandschutz,Arbeitssich."
+53212,5078,Polizeivollzugsbeamter/-beamtin,Polizeivollzugsdienst - Fachkraft
+53213,5078,Polizeivollzugsbeamter/-beamtin,Polizeivollzugsdienst - Spezialist
+53214,5078,Polizeivollzugsbeamter/-beamtin,Polizeivollzugsdienst - Experte
+53222,5079,Kriminalbeamter/-beamtin,Kriminaldienst - Fachkraft
+53223,5079,Kriminalbeamter/-beamtin,Kriminaldienst - Spezialist
+53224,5079,Kriminalbeamter/-beamtin,Kriminaldienst - Experte
+53232,5080,Vollziehungsbeamter/-beamtin,Gerichtsvollzug - Fachkraft
+53233,5081,Gerichtsvollzieher/in,53233 Gerichtsvollzug - Spezialist
+53241,5082,Justizwachtmeister/in,Justizvollzugsdienst - Helfer
+53244,5084,Gefängnisdirektor/in (höherer Dienst),Justizvollzugsdienst - Experte
+53312,5085,Beamt(er/in) - Gewerbeaufsicht,Gewerbeaufsicht - Fachkraft
+53313,5085,Beamt(er/in) - Gewerbeaufsicht,Gewerbeaufsicht - Spezialist
+53314,5085,Beamt(er/in) - Gewerbeaufsicht,Gewerbeaufsicht - Experte
+53322,5086,Gesundheitsaufseher/in,"Gesundheitsaufs.,Hygieneüberw.-Fachkraft"
+53323,5087,Fachkrankenschwester/-pfleger für Hygiene,Gesundheitsaufs.Hygieneüberw.-Spezialist
+53332,5088,amtliche/r Lebensmittelkontrolleur/in,Lebensmittelkontrolle - Fachkraft
+53333,5088,amtliche/r Lebensmittelkontrolleur/in,Lebensmittelkontrolle - Spezialist
+53342,5089,Schädlingsbekämpfer/in,"Desinfekt., Schädlingsbekämpf.-Fachkraft"
+53393,5089,Schädlingsbekämpfer/in,"Aufsicht-Gewerbe-, Gesundheitsaufsicht"
+53394,5090,Abteilungsleiter/in - Gewerbeaufsicht,"Führung-Gewerbe-, Gesundheitsaufsicht"
+54113,5092,Reinigungs- und Hygienetechniker/in,Gebäudereinigung - Spezialist
+54122,5093,Glas- und Fensterreiniger/in,"Glas-, Fensterreinigung - Fachkraft"
+54132,5094,Wäschereifacharbeiter/in bzw. Bügler/in,Textilreinigung - Fachkraft
+54101,5094,Wäschereifacharbeiter/in bzw. Bügler/in,Reinigung (o.S.) - Helfer
+54142,5095,Anlagenreiniger/in,"Maschinen-, Anlagenreinigung - Fachkraft"
+54152,5096,Fahrzeugpfleger/in,Fahrzeugreinigung - Fachkraft
+54182,5097,Spezialreiniger/in - Möbel und Teppiche,Reinigung (s.s.T.) - Fachkraft
+54193,5098,Objektleiter/in - Gebäudereinigung,Aufsicht - Reinigung
+51112,5099,Wagenuntersucher/in (Eisenbahn),Technischer Eisenbahnbetrieb - Fachkraft
+51193,5099,Wagenuntersucher/in (Eisenbahn),"Aufsichtskräfte - Technischer Betrieb im Eisenbahn-, Luft- und Schiffsverkehr"
+51113,5100,Eisenbahn-Wagenmeister/in,Technischer Eisenbahnbetrieb -Spezialist
+51193,5100,Eisenbahn-Wagenmeister/in,"Aufsichtskräfte - Technischer Betrieb im Eisenbahn-, Luft- und Schiffsverkehr"
+51122,5101,Flugzeugabfertiger/in,Techn. Luftverkehrsbetrieb - Fachkraft
+51193,5101,Flugzeugabfertiger/in,"Aufsichtskräfte - Technischer Betrieb im Eisenbahn-, Luft- und Schiffsverkehr"
+51123,5102,Technische/r Flugzeugprüfer/in,Techn. Luftverkehrsbetrieb - Spezialist
+51193,5102,Technische/r Flugzeugprüfer/in,"Aufsichtskräfte - Technischer Betrieb im Eisenbahn-, Luft- und Schiffsverkehr"
+51182,5105,Funker/in,TechBetEisenbLuftSchiffsv(ssT)-Fachkraft
+51183,5105,Funker/in,TechBetEisenbLuftSchiffv(ssT)-Spezialist
+51222,5107,Streckenwärter/in (Bahn),Wart. Eisenbahninfrastruktur - Fachkraft
+51223,5108,Bahnbeamter/-beamtin (gehobener technischer Dienst),Wart. Eisenbahninfrastruktur -Spezialist
+51224,5109,Ingenieur/in - Bahnbetrieb und Infrastruktur,Wart. Eisenbahninfrastruktur - Experte
+51293,5114,Straßenwärtermeister/in,"Aufsicht - Überw.,Wart.Verkehrsinfraktur"
+51412,5115,Kaufmann/-frau - Verkehrsservice,Servicefachk.StraßenSchienenv.-Fachkraft
+51412,5116,Schaffner/in,Servicefachk.StraßenSchienenv.-Fachkraft
+51432,5117,Schiffssteward/-stewardess,Servicefachkräfte Schiffsverk.-Fachkraft
+51493,5118,Leitender Fahrgastbetreuer im Reiseverkehr,Aufsicht-Personenverkehr(Servicebereich)
+52182,5171,Fahrradkurier/in bzw. Handwagenkurier/in,FahrzeugführerStraßenverk(ssT)-Fachkraft
+52182,5172,Kraftradkurier/in,FahrzeugführerStraßenverk(ssT)-Fachkraft
+53111,5173,Parkplatz- und Parkhausaufsicht,"Objekt-, Werte-, Personenschutz - Helfer"
+53224,5174,Leiter/in - Kriminalpolizeidienststellen,Kriminaldienst - Experte
+53242,5175,Justizvollzugsbeamter/-beamtin,Justizvollzugsdienst - Fachkraft
+53312,5176,Eichbeamt(er/in),Gewerbeaufsicht - Fachkraft
+54112,5223,Fassadenreiniger/in,Gebäudereinigung - Fachkraft
+54101,5225,Reinigungskraft in Privathaushalten,Reinigung (o.S.) - Helfer
+54101,5226,Gebäudeinnenreiniger/in,Reinigung (o.S.) - Helfer
+54112,5226,Gebäudeinnenreiniger/in,Gebäudereinigung - Fachkraft
+54101,5227,Toilettenwärter/in,Reinigung (o.S.) - Helfer
+53243,8083,Justizvollzugsfachwirt/in (gehobener Justizvollzugsdienst),Justizvollzugsdienst - Spezialist
+51642,9900,Luftverkehrskaufmann/-frau,Luftverkehrskaufleute - fachlich ausgerichtete Tätigkeiten
+51643,9900,Luftverkehrskaufmann/-frau,Luftverkehrskaufleute - komplexe Spezialistentätigkeiten
+61123,1747,Vertriebsspezialist/in,Vertrieb (außer IKT) - Spezialist
+61124,1747,Vertriebsspezialist/in,Vertrieb (auser IKT) - Experte
+61203,1748,Handelsagent/in,Kaufleute im Handel (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+61204,1748,Handelsagent/in,Kaufleute im Handel (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+61284,1748,Handelsagent/in,Kaufleute im Handel (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+61283,1748,Handelsagent/in,Kaufleute im Handel (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+61213,1749,internationale/r Handelsagent/in,Kaufleute im Groß- und Außenhandel - komplexe Spezialistentätigkeiten
+61214,1749,internationale/r Handelsagent/in,Kaufleute im Groß- und Außenhandel - hoch komplexe Tätigkeiten
+61284,1749,internationale/r Handelsagent/in,Kaufleute im Handel (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+61283,1749,internationale/r Handelsagent/in,Kaufleute im Handel (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+62193,1750,Verkaufs- und Kassenaufsicht,Aufsicht - Verkauf
+62194,1750,Verkaufs- und Kassenaufsicht,Führung - Verkauf
+63112,1820,Tourismuskaufmann/ -frau,Tourismuskaufleute - Fachkraft
+63113,1820,Tourismuskaufmann/ -frau,Tourismuskaufleute - Spezialist
+63212,1821,Hotelkaufmann/-frau,Hotelkaufleute - Fachkraft
+63213,1821,Hotelkaufmann/-frau,Hotelkaufleute - Spezialist
+63302,1822,Kellner/in,Gastronomieservice (o.S.) - Fachkraft
+63303,1822,Kellner/in,Gastronomieservice (o.S.) - Spezialist
+61313,1849,Immobilienmakler/in,"Immobilienvermarktung,verwal.-Spezialist"
+61312,1849,Immobilienmakler/in,"Immobilienvermarktung,-verwal.-Fachkraft"
+61314,1849,Immobilienmakler/in,"Immobilienvermarktung,-verwal.-Experte"
+61312,1850,Hausverwalter/in,"Immobilienvermarktung,-verwal.-Fachkraft"
+61313,1850,Hausverwalter/in,"Immobilienvermarktung,verwal.-Spezialist"
+61314,1850,Hausverwalter/in,"Immobilienvermarktung,-verwal.-Experte"
+61112,6001,Beschaffungsassistent/in,Berufe im Einkauf - fachlich ausgerichtete Tätigkeiten
+61113,6002,Einkäufer/in,Einkauf - Spezialist
+61122,6003,Vertriebsassistent/in, Vertrieb (außer IKT) - Fachkraft
+61142,6006,Automatenfachmann/ -frau,Kaufleute Automatenservice - Fachkraft
+61152,6007,Pfandleiher/in,Geld- und Pfandverleih - Fachkraft
+61162,6008,Verleiher/in,Verleih (außer Geld u. Pfand) -Fachkraft
+61132,6009,Auktionator/in,"Handelsmakler,Auktionatoren - Fachkraft"
+61133,6010,Handelsmakler/in,"Handelsmakler,Auktionatoren - Spezialist"
+61194,6011,Einkaufsleiter/in,Führung - Einkauf und Vertrieb
+61194,6012,Vertriebs- und Marketingmanager/in,Führung - Einkauf und Vertrieb
+62252,6013,Einrichtungsfachverkäufer/in,"Verkauf (Möbel, Einrichtung)-Fachkraft"
+62242,6015,"Fachverkäufer/in - Elektro-, Elektronik- und Haushaltswaren","Verkauf (Elektro-,Hauswaltsw.)-Fachkraft"
+61394,6017,Betriebswirt/in - Facility-Management,"Führung-Immobilienwirt., Facility-Manag."
+61294,6018,Exportleiter/in,Führung-Handel
+61323,6019,Facilitymanager/in,Facility-Management - Spezialist
+63194,6020,Betriebsleiter/in – Fitness und Freizeit,Führung - Tourismus und Sport
+63293,6021,Empfangschef/in,Aufsicht - Hotellerie
+61212,6022,Sachbearbeiter/in im Groß- und Außenhandel,Kaufleute im Groß- und Außenhandel - fachlich ausgerichtete Tätigkeiten
+61282,6022,Sachbearbeiter/in im Groß- und Außenhandel,Kaufleute im Handel (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+62122,6029,Marktverkäufer/in,"Verkaufsstand-,Marktverkäufer -Fachkraft"
+62102,6030,Verkäufer/in - Einzelhandel,Verkauf (ohne Produktspezial.)-Fachkraft
+62101,6033,Aushilfskraft - Einzelhandel,Verkauf (ohne Produktspezialis.)-Helfer
+62301,6034,Kiosk-/Imbissverkäufer/in,Verkauf Lebensmittel (o.S.) - Helfer
+62312,6035,Bäcker - und Konditoreifachverkäufer/in,"Verkauf Back-,Konditoreiwaren-Fachkraft"
+62412,6037,Drogeriefachverkäufer/in,Verkauf drog.apotheken.Waren-Fachkraft
+62322,6038,Fleischwarenfachverkäufer/in,Verkauf von Fleischwaren - Fachkraft
+62422,6039,Fachverkäufer/in - Sanitäts- und Medizinbedarf,"Verkauf Sanitäts, Medizinbedarf-Fachkraft"
+62512,6040,Buchhändler/in,Buchhandel - Fachkraft
+62212,6041,"Einzelhandelsverkäufer/in - Sport-, Textil- und Lederwaren","Verkauf (Bekleid.,Leder,Sport)-Fachkraft"
+62514,6042,Buch- und Medienhandelsmanager/in,Buchhandel - Experte
+62522,6043,Kunst- und Antiquitätenhändler/in,"Kunst-, Antiquitätenhandel - Fachkraft"
+62532,6044,Musikfachhändler/in,Musikfachhandel - Fachkraft
+63114,6047,Touristikmanager/in,Tourismuskaufleute - Experte
+63122,6048,Fitnessberater/in,"Sport-,Fitnesskaufl.Sportmanag-Fachkraft"
+63132,6049,Freizeit- und Reisebetreuer/in,Animateure und Gästebetreuer - Fachkraft
+63142,6050,Reiseleiter/in,"Reiseleiter, Fremdenführer - Fachkraft"
+63143,6051,Fremdenführer/in,"Reiseleiter, Fremdenführer - Spezialist"
+62302,6052,Lebensmittelfachverkäufer/in,Verkauf Lebensmittel (o.S.) - Fachkraft
+63122,6053,Sport- und Fitnesskaufmann/-frau,"Sport-,Fitnesskaufl.Sportmanag-Fachkraft"
+63194,6054,Betriebsleiter/in - Tourismus,Führung - Tourismus und Sport
+63293,6055,Pension- bzw. Herbergsleiter/in,Aufsicht - Hotellerie
+63293,6056,Hausdame/Housekeeper,Aufsicht - Hotellerie
+63294,6057,Hoteldirektor/in,Führung - Hotellerieg
+61282,6058,"Fachverkäufer/in - Holz-, Stahl- oder im Strom- und Gashandel",Kaufleute im Handel (s.s.T) - Fachkraft
+62112,6060,Kassierer/in,"Kassierer, Kartenverkäufer - Fachkraft"
+62182,6061,Promoter/in,Verkauf (o. Produktspez) (ssT)-Fachkraft
+62222,6063,Schmuckfachverkäufer/in,"Verkauf (Schmuck, Uhren) - Fachkraft"
+62232,6064,Bürobedarfsverkäufer/in,"Verkauf (Büro,Geschenk,Spiel)-Fachkraft"
+62262,6065,Fachverkäufer/in - Garten- und Heimwerkerbedarf,"Verkauf (Garten,Heimwerk,Tier)-Fachkraft"
+62272,6066,Automobilkaufmann/-frau,"Verkauf (KFZ, Zweirad,Zubehör)-Fachkraft"
+63124,6067,Sport- und Fitnessökonom/in,"Sport-,Fitnesskaufl.Sportmanag-Experte"
+63123,6068,Sport- und Fitnessfachwirt/in,"Sport,Fitnesskaufl.Sportmanag-Spezialist"
+63222,6070,Rezeptionist/in - Hotel,Hotelservice - Fachkraft
+63313,6071,Betriebswirt/in - Systemgastronomie,Systemgastronomie - Spezialist
+63322,6072,Barkeeper/in,Barkeeper/innen - Fachkraft
+63393,6073,Restaurantmeister/in,Aufsicht - Gastronomie
+63394,6073,Restaurantmeister/in,Führung - Gastronomie
+63301,6074,Fast-Food- und Imbisskoch/-köchin,Gastronomieservice (o.S.) - Helfer
+63301,6075,Küchenhelfer/in,Gastronomieservice (o.S.) - Helfer
+63221,6077,Zimmermädchen/ Roomboy,Hotelservice - Helfer
+62182,6078,Haustürverkäufer/in,Verkauf (o. Produktspez) (ssT)-Fachkraft
+62183,6079,Kundendienstberater/in,Verkauf (o. Produktspez)(ssT)-Spezialist
+62232,6080,Geschenkartikelverkäufer/in,"Verkauf (Büro,Geschenk,Spiel)-Fachkraft"
+62232,6081,Spielwarenkäufer/in,"Verkauf (Büro,Geschenk,Spiel)-Fachkraft"
+62262,6082,Fachverkäufer/in – Zoo- und Heimtierbedarf,"Verkauf (Garten,Heimwerk,Tier)-Fachkraft"
+63221,6083,Hotelpage,Hotelservice - Helfer
+62382,6085,Fachverkäufer/in - Reform- und Diätwaren,Verkauf Lebensmittel (s.s.T.)-Fachkraft
+62513,6086,Vertriebsagent/in - Buchhandel,Buchhandel - Spezialist
+63312,6090,Servicekraft - Systemgastronomie,Systemgastronomie - Fachkraft
+63382,6092,Food-and-Beverage-Assistant,Gastronomie (s.s.T.) - Fachkraft
+63382,6093,Bankettleiterassistent/in,Gastronomie (s.s.T.) - Fachkraft
+63382,6094,Zugsteward/-stewardess,Gastronomie (s.s.T.) - Fachkraft
+63382,6095,Büfettkraft,Gastronomie (s.s.T.) - Fachkraft
+63383,6097,Sommelier/Sommelière,Gastronomie (s.s.T.) - Spezialist
+63401,6098,Eintrittskartenkontrolleur/in,"Veranstaltungsservice,-manag. - Helfer"
+63401,6099,Hilfskraft - Veranstaltungsservice,"Veranstaltungsservice,-manag. - Helfer"
+63401,6100,Garderobenwärter/in,"Veranstaltungsservice,-manag. - Helfer"
+62282,6101,Tankwart/in,Verkauf (ssT) - Fachkraft
+63402,6102,Konferenz- und Veranstaltungsplaner,"Veranstaltungsservice,-manag. -Fachkraft"
+63404,6102,Konferenz- und Veranstaltungsplaner,Berufe im Veranstaltungsservice und -management - hoch komplexe Tätigkeiten
+63403,6102,Konferenz- und Veranstaltungsplaner,Berufe im Veranstaltungsservice und -management - komplexe Spezialistentätigkeiten
+72212,1823,Buchführungsfachkraft,Buchhaltung - Fachkraft
+72213,1823,Buchführungsfachkraft,Buchhaltung - Spezialist
+72223,1824,Kalkulator/in,"Kostenrechnung, Kalkulation - Spezialist"
+72224,1824,Kalkulator/in,"Kostenrechnung, Kalkulation - Experte"
+73323,1825,Bibliotheksangestellte/r,Bibliothekswesen - Spezialist
+73324,1825,Bibliotheksangestellte/r,Bibliothekswesen - Experte
+71104,3201,Top-Manager/in,Geschäftsführer/innen und Vorstände - hoch komplexe Tätigkeiten
+71214,3202,Politiker/in,Angehörige gesetzgebender Körperschaften - hoch komplexe Tätigkeiten
+71224,3203,Verbandsgeschäftsführer/in,Leitende Bedienstete von Interessenorganisationen - hoch komplexe Tätigkeiten
+71234,3204,gewählte/r Arbeitnehmervertreter/in,Betriebsinterne Wahlämter - hoch komplexe Tätigkeiten
+71302,3205,Technisch-kaufmännische/r Betriebassistent/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+71303,3205,Technisch-kaufmännische/r Betriebassistent/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+71302,3206,Betriebswirtschaftliche/r Assistent/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+71303,3206,Betriebswirtschaftliche/r Assistent/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+71314,3208,Betriebsplaner/in,Berufe in der Unternehmensorganisation und -planung - hoch komplexe Tätigkeiten
+71324,3209,Unternehmensberater/in,Berufe in der Unternehmensberatung - hoch komplexe Tätigkeiten
+71394,3210,Regionalleiter/in,Führungskräfte - Unternehmensorganisation und -strategie
+71394,3211,Kaufmännische/r Betriebsleiter/in,Führungskräfte - Unternehmensorganisation und -strategie
+71393,3211,Kaufmännische/r Betriebsleiter/in,Aufsichtskräfte - Unternehmensorganisation und -strategie
+71333,3212,Wirtschaftsförderer/-förderin,Berufe in der Wirtschaftsförderung - komplexe Spezialistentätigkeiten
+71384,3213,Liquidator/in,Berufe in der Unternehmensorganisation und -strategie (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+71423,3214,Dolmetscher/in und Übersetzer/in,Dolmetscher/innen und Übersetzer/innen - komplexe Spezialistentätigkeiten
+71424,3214,Dolmetscher/in und Übersetzer/in,Dolmetscher/innen und Übersetzer/innen - hoch komplexe Tätigkeiten
+71432,3215,Steno- und Phonotypist/in,Steno- und Phonotypisten/-typistinnen - fachlich ausgerichtete Tätigkeiten
+71433,3215,Steno- und Phonotypist/in,Steno- und Phonotypisten/-typistinnen - komplexe Spezialistentätigkeiten
+71442,3216,Korrektor/in,"Kodierer/innen, Korrekturleser/innen und verwandte Bürokräfte - fachlich ausgerichtete Tätigkeiten"
+71412,3216,Korrektor/in,Fremdsprachensekretäre/-sekretärinnen und Fremdsprachenkorrespondenten/-korrespondentinnen - fachlich ausgerichtete Tätigkeiten
+71442,3217,Kodierer/in,"Kodierer/innen, Korrekturleser/innen und verwandte Bürokräfte - fachlich ausgerichtete Tätigkeiten"
+71452,3218,Auskunfterteiler/in,Berufe in der Auskunft und Kundeninformation - fachlich ausgerichtete Tätigkeiten
+71412,3219,Fremdsprachenassistent/in,Fremdsprachensekretäre/-sekretärinnen und Fremdsprachenkorrespondenten/-korrespondentinnen - fachlich ausgerichtete Tätigkeiten
+71413,3219,Fremdsprachenassistent/in,Fremdsprachensekretäre/-sekretärinnen und Fremdsprachenkorrespondenten/-korrespondentinnen - komplexe Spezialistentätigkeiten
+71401,3220,Telefonist/in,Büro- und Sekretariatskräfte (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+71401,3221,Bürohilfskraft,Büro- und Sekretariatskräfte (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+71442,3221,Bürohilfskraft,"Kodierer/innen, Korrekturleser/innen und verwandte Bürokräfte - fachlich ausgerichtete Tätigkeiten"
+71402,3222,Sekretär/in,Büro- und Sekretariatskräfte (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+71403,3222,Sekretär/in,Büro- und Sekretariatskräfte (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+71412,3222,Sekretär/in,Fremdsprachensekretäre/-sekretärinnen und Fremdsprachenkorrespondenten/-korrespondentinnen - fachlich ausgerichtete Tätigkeiten
+71493,3223,Büroleiter/in ,Aufsichtskräfte - Büro- und Sekretariat
+73112,3529,Rechtsanwalts- und Notarfachangestellte/r,"Assistenz Rechtsanwalt.,Notar.-Fachkraft"
+73113,3529,Rechtsanwalts- und Notarfachangestellte/r,"Assistenz Rechtsanwalt.,Notar-Spezialist"
+73183,3530,Rechtliche/r Berater/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten"
+73134,3530,Rechtliche/r Berater/in,Rechtsanwälte/-anwältinnen - Experte
+73184,3530,Rechtliche/r Berater/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten"
+73124,3531,Notar/in,Notare/Notarinnen- Experte
+73144,3532,Staatsanwalt/-anwältin,Staatsanwälte/-anwältinnen - Experte
+73154,3533,Richter/in,Richter/innen- Experte
+73162,3534,Verfassungsschutzbeamt(er/in),Verfassungsschutz - Fachkraft
+73163,3534,Verfassungsschutzbeamt(er/in),Verfassungsschutz - Spezialist
+73164,3534,Verfassungsschutzbeamt(er/in),Verfassungsschutz - Experte
+73194,3537,Rechtsabteilungsleiter/in,"Führung-Rechtsberatung,sprechung,ordnung"
+73183,3539,Datenschutzbeauftragte/r,"Rechtsber.,sprech.,ordn.(ssT)-Spezialist"
+73252,3540,Sachbearbeiter/in in der öffentlichen Justizverwaltung,Justizverwaltung - Fachkraft
+73253,3541,Justizverwaltungsbeamter/-beamtin,Justizverwaltung - Spezialist
+73252,3541,Justizverwaltungsbeamter/-beamtin,Justizverwaltung - Fachkraft
+73254,3541,Justizverwaltungsbeamter/-beamtin,Justizverwaltung - Experte
+73214,3542,Sozialversicherungsbeamter/-beamtin (höh. Dienst),"Sozialverwaltung, -versicherung - Experte"
+73294,3543,Behördenleiter/in,Führung - Verwaltung
+73212,3544,Sozialversicherungsangestellte/r,"Sozialverwaltung,-versicherung-Fachkraft"
+73213,3544,Sozialversicherungsangestellte/r,"Sozialverwaltung,versicherung-Spezialist"
+73201,3545,Verwaltungshelfer/in,Öffentliche Verwaltung (o.S.) - Helfer
+73204,3546,Verwaltungswissenschaftler/in,Öffentliche Verwaltung (o.S.) - Experte
+73231,3547,Steuerverwaltungsbeamter/-beamtin (einf. Dienst),Steuerverwaltung - Helfer
+73202,3550,Verwaltungsangestellte/r im öffentlichen Dienst,Öffentliche Verwaltung(o.S.) - Fachkraft
+73203,3550,Verwaltungsangestellte/r im öffentlichen Dienst,Öffentliche Verwaltung (o.S.)-Spezialist
+73232,3551,Steuerverwaltungsbeamt(er/in),Steuerverwaltung - Fachkraft
+73233,3551,Steuerverwaltungsbeamt(er/in),Steuerverwaltung - Spezialist
+73234,3551,Steuerverwaltungsbeamt(er/in),Steuerverwaltung - Experte
+73241,3552,Zolldienstbeamt(er/in),Zolldienst - Helfer
+73242,3552,Zolldienstbeamt(er/in),Zolldienst - Fachkraft
+73243,3552,Zolldienstbeamt(er/in),Zolldienst - Spezialist
+73244,3552,Zolldienstbeamt(er/in),Zolldienst - Experte
+73312,3553,Archivdienstbeamter/-beamtin,Archivwesen - Fachkraft
+73313,3553,Archivdienstbeamter/-beamtin,Archivwesen - Spezialist
+73314,3553,Archivdienstbeamter/-beamtin,Archivwesen - Experte
+73332,3555,Rechercheur/in oder Dokumentar/in,"Dokument.-,Informationsdienst-Fachkraft"
+73333,3555,Rechercheur/in oder Dokumentar/in,"Dokument.-,Informationsdienst-Spezialist"
+73334,3555,Rechercheur/in oder Dokumentar/in,"Dokumentat.-, Informationsdienst-Experte"
+73342,3556,Medizinische/r Dokumentar/in,Medizinische Dokumentation - Fachkraft
+73394,3557,Leiter/in Bibliothek/Archiv/Registratur,"Führung-Medien-Dokument.-,Informationsd."
+73322,3560,Bibliotheksassistent/in,Bibliothekswesen - Fachkraft
+72112,3567,Bankkundenberater/in,Bankkaufleute - Fachkraft
+72144,3568,Finanzanalyst/in,Finanzanalysten/innen - Experte
+72194,3569,Filialleiter/in einer Bank oder Versicherung,"Führung-Versicherung-,Finanzdienstleist."
+72294,3570,Leiter/in Rechnungswesen/ Revision/ Controlling,"Führung-Rechnungsw.,Controlling,Revision"
+72233,3573,Controller/in,Controlling - Spezialist
+72234,3573,Controller/in,Controlling - Experte
+72122,3577,Geldanlageberater/in,"Anlageberater, Finanzdienstl.-Fachkraft"
+72124,3577,Geldanlageberater/in,"Anlageberater, Finanzdienstl.-Experte"
+72123,3577,Geldanlageberater/in,"Anlageberater, Finanzdienstl.-Spezialist"
+72132,3578,Versicherungssachbearbeiter/in,Versicherungskaufleute - Fachkraft
+72212,3580,Lohn- und Gehaltsbuchhalter/in,Buchhaltung - Fachkraft
+72244,3581,Wirtschaftsprüfer/in,Wirtschaftsprüfung - Experte
+72243,3581,Wirtschaftsprüfer/in,Wirtschaftsprüfung - Spezialist
+72113,3582,Kreditsachbearbeiter/in,Bankkaufleute - Spezialist
+72132,3584,Versicherungsagent/in,Versicherungskaufleute - Fachkraft
+72133,3584,Versicherungsagent/in,Versicherungskaufleute - Spezialist
+72132,3585,Versicherungsgutachter/in,Versicherungskaufleute - Fachkraft
+72133,3585,Versicherungsgutachter/in,Versicherungskaufleute - Spezialist
+72134,3586,Versicherungsberater/in,Versicherungskaufleute - Experte
+72302,3587,Steuerfachmann/-frau,Steuerberatung - Fachkraft
+72303,3587,Steuerfachmann/-frau,Steuerberatung - Spezialist
+72304,3587,Steuerfachmann/-frau,Steuerberatung - Experte
+72182,3590,Geldbearbeiter/in bei der deutschen Bundesbank,"Versicher-,Finanzdienstl.(ssT)-Fachkraft"
+72183,3591,Leasing-Berater/in,"Versicher,Finanzdienstl.(ssT)-Spezialist"
+72184,3593,Zentralbankbeamter/-beamtin,"Versicher-,Finanzdienstl.(ssT)-Experte"
+71512,3594,Personalsachbearbeiter/in,"Personalentwick.,sachbearbeit.-Fachkraft"
+71513,3595,Personalfachkaufmann/-frau,"Personalentwick.,sachbearbeit-Spezialist"
+71514,3596,Personalentwickler/in,"Personalentwickl.,-sachbearbeit.-Experte"
+71522,3597,Personalvermittler/in,Personaldienstleistung - Fachkraft
+71523,3597,Personalvermittler/in,Personaldienstleistung - Spezialist
+71524,3598,Berufsberater/in,Personaldienstleistung - Experte
+71594,3599,Personalleiter/in,"Führung - Personalwesen, -dienstleistung"
+73222,7003,Arztsekretär/in,Verwaltende Berufe im Sozial- und Gesundheitswesen - fachlich ausgerichtete Tätigkeiten
+73223,7003,Arztsekretär/in,Verwaltende Berufe im Sozial- und Gesundheitswesen - komplexe Spezialistentätigkeiten
+73223,7005,Gesundheitsbetriebswirt/in,Verwaltende Berufe im Sozial- und Gesundheitswesen - komplexe Spezialistentätigkeiten
+73224,7005,Gesundheitsbetriebswirt/in,Verwaltende Berufe im Sozial- und Gesundheitswesen - hoch komplexe Tätigkeiten
+81444,1007,Facharzt/-ärztin - Gynäkologie oder Urologie,"Fachärzte/-ärztinnen in den Bereichen Hautkrankheiten, Sinnes- und Geschlechtsorgane - hoch komplexe Tätigkeiten"
+81444,1008,Facharzt/-ärztin - Haut- und Geschlechtskrankheiten,"Fachärzte/-ärztinnen in den Bereichen Hautkrankheiten, Sinnes- und Geschlechtsorgane - hoch komplexe Tätigkeiten"
+81444,1009,Facharzt/-ärztin - Hals-Nasen-Ohren- oder Augenheilkunde,"Fachärzte/-ärztinnen in den Bereichen Hautkrankheiten, Sinnes- und Geschlechtsorgane - hoch komplexe Tätigkeiten"
+81393,1807,Leiter/in - Rettungsdienst,"Aufsichtskräfte - Gesundheits- und Krankenpflege, Rettungsdienst und Geburtshilfe"
+81394,1807,Leiter/in - Rettungsdienst,"Führungskräfte - Gesundheits- und Krankenpflege, Rettungsdienst und Geburtshilfe"
+81142,1826,Tierarzthelfer/in,Tiermedizinische Fachangestellte - fachlich ausgerichtete Tätigkeiten
+81143,1826,Tierarzthelfer/in,Tiermedizinische Fachangestellte - komplexe Spezialistentätigkeiten
+81393,1827,Stationsleiter/in,"Aufsichtskräfte - Gesundheits- und Krankenpflege, Rettungsdienst und Geburtshilfe"
+81394,1827,Stationsleiter/in,"Führungskräfte - Gesundheits- und Krankenpflege, Rettungsdienst und Geburtshilfe"
+82232,1828,Ernährungstrainer/in,Berufe in der Ernährungsberatung - fachlich ausgerichtete Tätigkeiten
+82233,1828,Ernährungstrainer/in,Berufe in der Ernährungsberatung - komplexe Spezialistentätigkeiten
+82503,1829,Medizintechniker/in,Berufe in der Medizintechnik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+82504,1829,Medizintechniker/in,Berufe in der Medizintechnik (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+82593,1830,Orthopädietechnikermeister/in,"Aufsichtskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82594,1830,Orthopädietechnikermeister/in,"Führungskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82593,1831,Zahntechnikermeister/in,"Aufsichtskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82594,1831,Zahntechnikermeister/in,"Führungskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82593,1832,Augenoptikermeister/in,"Aufsichtskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82594,1832,Augenoptikermeister/in,"Führungskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82593,1833,Hörgerätemeister/in,"Aufsichtskräfte - Medizin-, Orthopädie- und Rehatechnik"
+82594,1833,Hörgerätemeister/in,"Führungskräfte - Medizin-, Orthopädie- und Rehatechnik"
+83142,1834,Sozialassistent/in,Haus- und Familienpflege - Fachkraft
+83143,1834,Sozialassistent/in,Haus- und Familienpflege - Spezialist
+81102,7001,Arzthelfer/in,Medizinische Fachangestellte/r (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+81103,7001,Arzthelfer/in,Medizinische Fachangestellte (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+81112,7002,Zahnarzthelfer/in,Zahnmedizinische Fachangestellte - fachlich ausgerichtete Tätigkeiten
+81113,7002,Zahnarzthelfer/in,Zahnmedizinische Fachangestellte - komplexe Spezialistenfähigkeit
+81122,7004,medizinische/r Fußpfleger/in,Podologen/Podologinnen - Fachkraft
+81143,7008,Tierarztfachhelfer/in - Besamungswesen,Tiermedizinische Fachangestellte - komplexe Spezialistentätigkeiten
+81212,7009,Medizinisch-technische/r Laboratoriumsassistent/in (MTLA),Medizinisch-technische Berufe im Laboratorium - fachlich ausgerichtete Tätigkeiten
+81213,7009,Medizinisch-technische/r Laboratoriumsassistent/in (MTLA),Medizinisch-technische Berufe im Laboratorium - komplexe Spezialistentätigkeiten
+81214,7010,Facharzt/-ärztin für Mikrobiologie,Medizinisch-technische Berufe im Laboratorium - hoch komplexe Tätigkeiten
+81222,7011,Medizinisch-technische/r Assistent/in (MTA),Medizinisch-technische Berufe in der Funktionsdiagnostik - fachlich ausgerichtete Tätigkeiten
+81224,7012,Ingenieur/in - Kardiotechnik,Medizinisch-technische Berufe in der Funktionsdiagnostik - hoch komplexe Tätigkeiten
+81232,7013,Radiologieassistent/in,Medizinisch-technische Berufe in der Radiologie - fachlich ausgerichtete Tätigkeiten
+81233,7013,Radiologieassistent/in,Medizinisch-technische Berufe in der Radiologie - komplexe Spezialistentätigkeiten
+81234,7014,Radiologe/Radiologin,Medizinisch-technische Berufe in der Radiologie - hoch komplexe Tätigkeiten
+81242,7015,Veterinärmedizinische/r Laborant/in,Medizinisch-technische Berufe in der Veterinärmedizin - fachlich ausgerichtete Tätigkeiten
+81243,7015,Veterinärmedizinische/r Laborant/in,Medizinisch-technische Berufe in der Veterinärmedizin - komplexe Spezialistentätigkeiten
+81294,7016,Medizinisch-technische/r Laborleiter/in,Führungskräfte - Medizinisches Laboratorium
+81301,7017,Ambulante/r Pflegediensthelfer/in,Berufe in der Gesundheits- und Krankenpflege (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+81301,7018,Krankenpflegehelfer/in,Berufe in der Gesundheits- und Krankenpflege (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+81323,7020,Fachkinderkrankenschwester/ -pfleger,Berufe in der Fachkinderkrankenpflege - komplexe Spezialistentätigkeiten
+81332,7021,Operationstechnische/r Assistent/in,Berufe in der operations-/medizintechnischen Assistenz - fachlich ausgerichtete Tätigkeiten
+81333,7021,Operationstechnische/r Assistent/in,Operationstechn. Assistenz - Spezialist
+81341,7022,Rettungsdiensthelfer/in,Berufe im Rettungsdienst - Helfer-/Anlerntätigkeiten
+81353,7023,Hebamme/ Entbindungspfleger,Berufe in der Geburtshilfe und Entbindungspflege - komplexe Spezialistentätigkeiten
+81352,7023,Hebamme/ Entbindungspfleger,"Geburtshilfe,Entbindungspflege-Fachkraft"
+81182,7024,Sterilisationsassistent/in,Medizin. Fachangestellte (ssT)-Fachkraft
+81383,7025,Stomatherapeut/in,Berufe in der Gesundheits- und Krankenpflege (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+81404,7028,Allgemeinarzt /-ärztin,Ärzte/Ärztinnen (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+81484,7028,Allgemeinarzt /-ärztin,Ärzte/Ärztinnen (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+81414,7029,Facharzt/-ärztin – Kinder- und Jugendmedizin,Fachärzte/-ärztinnen in der Kinder- und Jugendmedizin - hoch komplexe Tätigkeiten
+81424,7030,Internist/in,Fachärzte/-ärztinnen in der Inneren Medizin - hoch komplexe Tätigkeiten
+81434,7031,Chirurg/in,Fachärzte/-ärztinnen in der Chirurgie - hoch komplexe Tätigkeiten
+81454,7032,Anästhesist/in,Fachärzte/-ärztinnen in der Anästhesiologie - hoch komplexe Tätigkeiten
+81464,7033,Neurologe/ Neurologin,"Fachärzte/-ärztinnen in der Neurologie, Psychiatrie, Psychotherapie und psychosomatischen Medizin - hoch komplexe Tätigkeiten"
+81474,7034,Zahnarzt/ -ärztin,Zahnärzte/-ärztinnen und Kieferorthopäden/-orthopädinnen - hoch komplexe Tätigkeiten
+81494,7035,Chefarzt/-ärztin,Führungskräfte - Human- und Zahnmedizin
+81504,7036,Tierarzt/-ärztin,Tierärzte/-ärztinnen (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+81514,7036,Tierarzt/-ärztin,"Tierärzte für Groß-, Nutztiere - Experte"
+81524,7036,Tierarzt/-ärztin,Tierärzte/-ärztinnen für Haus- und Heimtiere - hoch komplexe Tätigkeiten
+81532,7037,Tierheilpraktiker/in,Tierheilpraktiker/innen - fachlich ausgerichtete Tätigkeiten
+81584,7038,Tierpsychologe/-psychologin,Berufe in der Tiermedizin und Tierheilkunde (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+81594,7039,Tierärztliche/r Direktor/in,Führungskräfte - Tiermedizin und Tierheilkunde
+81623,7040,Psychologische/r Assistent/in,Berufe in der klinischen Psychologie - komplexe Spezialistentätigkeiten
+81624,7041,Psychologe/Psychologin,Berufe in der klinischen Psychologie - hoch komplexe Tätigkeiten
+81614,7041,Psychologe/Psychologin,Berufe in der nicht klinischen Psychologie - hoch komplexe Tätigkeiten
+81634,7042,Psychotherapeut/in,Berufe in der nicht ärztlichen Psychotherapie - hoch komplexe Tätigkeiten
+81713,7043,Physiotherapeut/in,Berufe in der Physiotherapie - komplexe Spezialistentätigkeiten
+81712,7043,Physiotherapeut/in,Berufe in der Physiotherapie - fachlich ausgerichtete Tätigkeiten
+81714,7043,Physiotherapeut/in,Berufe in der Physiotherapie - hoch komplexe Tätigkeiten
+81722,7045,Fachassistent/in Hirnleistungstraining,Berufe in der Ergotherapie - fachlich ausgerichtete Tätigkeiten
+81723,7047,Ergotherapeut/in,Berufe in der Ergotherapie - komplexe Spezialistentätigkeiten
+81724,7047,Ergotherapeut/in,Berufe in der Ergotherapie - hoch komplexe Tätigkeiten
+81733,7048,Logopäde/Logopädin,Berufe in der Sprachtherapie - komplexe Spezialistentätigkeiten
+81734,7048,Logopäde/Logopädin,Berufe in der Sprachtherapie - hoch komplexe Tätigkeiten
+81743,7049,Musik- oder Kunsttherapeut/in,Berufe in der Musik- und Kunsttherapie - komplexe Spezialistentätigkeiten
+81744,7049,Musik- oder Kunsttherapeut/in,Berufe in der Musik- und Kunsttherapie - hoch komplexe Tätigkeiten
+81752,7050,Heilpraktiker/in,Berufe in der Heilkunde und Homöopathie - fachlich ausgerichtete Tätigkeiten
+81753,7050,Heilpraktiker/in,Berufe in der Heilkunde und Homöopathie - komplexe Spezialistentätigkeiten
+81762,7051,Diätassistent/in,Berufe in der Diät- und Ernährungstherapie - fachlich ausgerichtete Tätigkeiten
+81763,7051,Diätassistent/in,Berufe in der Diät- und Ernährungstherapie - komplexe Spezialistentätigkeiten
+81764,7052,Verpflegungsmanager/in (Diätküchenleiter/in),Berufe in der Diät- und Ernährungstherapie - hoch komplexe Tätigkeiten
+81782,7053,Diabetesassistent/in ,Berufe in der nicht ärztlichen Therapie und Heilkunde (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+81783,7053,Diabetesassistent/in ,Berufe in der nicht ärztlichen Therapie und Heilkunde (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+81784,7053,Diabetesassistent/in , Berufe in der nicht ärztlichen Therapie und Heilkunde (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+81794,7056,therapeutische/r Einrichtungsleiter/in,Führungskräfte - Nicht ärztliche Therapie und Heilkunde
+81804,7057,Apotheker/in,"Apotheker/innen, Pharmazeuten/Pharmazeutinnen - hoch komplexe Tätigkeiten"
+81822,7057,Apotheker/in,Berufe in der pharmazeutisch-technischen Assistenz - fachlich ausgerichtete Tätigkeiten
+81814,7058,Pharmakologe/Pharmakologin,Fachärzte/-ärztinnen in der Pharmakologie - hoch komplexe Tätigkeiten
+81814,7059,Arzt/Ärztin - Pharmakologie und Toxikologie,Fachärzte/-ärztinnen in der Pharmakologie - hoch komplexe Tätigkeiten
+81883,7061,Pharmareferent/in,Berufe in der Pharmazie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+81884,7063,Referent/in - klinische Studien (CRA),Berufe in der Pharmazie (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+82101,7064,Altenpflegehelfer/in,Berufe in der Altenpflege (ohne Spezialisierung) - Helfer-/Anlerntätigkeiten
+82102,7065,Altenpfleger/in,Berufe in der Altenpflege (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+82103,7065,Altenpfleger/in,Berufe in der Altenpflege (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+82182,7066,Altenpfleger/in mit Spezialisierung,Berufe in der Altenpflege (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+82183,7066,Altenpfleger/in mit Spezialisierung,Berufe in der Altenpflege (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+82212,7067,Gesundheitstrainer/in,Berufe in der Gesundheitsberatung - fachlich ausgerichtete Tätigkeiten
+82213,7068,Gesundheitsberater/in,Berufe in der Gesundheitsberatung - komplexe Spezialistentätigkeiten
+82214,7070,Gesundheitsförderer/-förderin,Berufe in der Gesundheitsberatung - hoch komplexe Tätigkeiten
+82222,7072,Fachkraft - Beauty und Wellness,Wellnessberufe - fachlich ausgerichtete Tätigkeiten
+82223,7072,Fachkraft - Beauty und Wellness,Wellnessberufe - komplexe Spezialistentätigkeiten
+82243,7076,Qualitätsmanagementbeauftragte/r im Gesundheits-/Sozialwesen,Qualitätsbeauftragte im Gesundheitswesen - komplexe Spezialistentätigkeiten
+82284,7077,Ökotrophologe/Ökotrophologin,"Berufe in Ernährungs- und Gesundheitsberatung, Wellness (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten"
+82312,7078,Friseur/in,Berufe im Friseurgewerbe - fachlich ausgerichtete Tätigkeiten
+82311,7078,Friseur/in,Berufe im Friseurgewerbe - Helfer-/Anlerntätigkeiten
+82322,7080,Kosmetiker/in,Berufe in der Kosmetik - fachlich ausgerichtete Tätigkeiten
+82342,7081,Maskenbildner/in,Berufe in der Maskenbildnerei - fachlich ausgerichtete Tätigkeiten
+82343,7081,Maskenbildner/in,Berufe in der Maskenbildnerei - komplexe Spezialistentätigkeiten
+82402,7082,Bestatter/in,Berufe im Bestattungswesen - fachlich ausgerichtete Tätigkeiten
+82403,7082,Bestatter/in,Berufe im Bestattungswesen - komplexe Spezialistentätigkeiten
+82332,7084,Tätowierer/in und Piercer/in,Tätowierer/innen und Piercer/innen - fachlich ausgerichtete Tätigkeiten
+82393,7085,Friseurmeister/in,Aufsichtskräfte - Körperpflege
+82393,7086,Kosmetikmeister/in,Aufsichtskräfte - Körperpflege
+82393,7087,Chefmaskenbildner/in,Aufsichtskräfte - Körperpflege
+82493,7088,Bestattermeister/in,Aufsichtskräfte - Bestattungswesen
+82494,7088,Bestattermeister/in,Führungskräfte - Bestattungswesen
+82502,7090,Assistent/in - medizinische Gerätetechnik,Berufe in der Medizintechnik (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+82512,7094,Orthopädietechnik-Mechaniker/In,Berufe in der Orthopädie- und Rehatechnik - fachlich ausgerichtete Tätigkeiten
+82513,7094,Orthopädietechnik-Mechaniker/In,Berufe in der Orthopädie- und Rehatechnik - komplexe Spezialistentätigkeiten
+82514,7096,Ingenieur/in - Orthopädie- und Rehatechnik,Berufe in der Orthopädie- und Rehatechnik - hoch komplexe Tätigkeiten
+82522,7097,Augenoptiker/in,Berufe in der Augenoptik - fachlich ausgerichtete Tätigkeiten
+82523,7097,Augenoptiker/in,Berufe in der Augenoptik - komplexe Spezialistentätigkeiten
+82524,7098,Ingenieur/in - Augenoptik,Berufe in der Augenoptik - hoch komplexe Tätigkeiten
+82532,7099,Hörgeräteakustiker/in,Berufe in der Hörgeräteakustik - fachlich ausgerichtete Tätigkeiten
+82533,7099,Hörgeräteakustiker/in,Berufe in der Hörgeräteakustik - komplexe Spezialistentätigkeiten
+81182,7100,Werkpfleger/-schwester,Medizin. Fachangestellte (ssT)-Fachkraft
+81183,7100,Werkpfleger/-schwester,Medizinische Fachangestellte (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+81223,7101,Fachassistent/in - Herz-Kreislauf-Funktionsdiagnostik,Med-tech.Berufe Funktionsdiag-Spezialist
+81313,7104,Krankenschwester/-pfleger,Fachkrankenpflege - Spezialist
+81302,7104,Krankenschwester/-pfleger,"Gesundheits-,Krankenpflege(oS)-Fachkraft"
+81342,7105,Notfallsanitäter/in,Berufe im Rettungsdienst - fachlich ausgerichtete Tätigkeiten
+81343,7106,Disponent/in in einer Rettungsleitstelle,Rettungsdienst - Spezialist
+82534,7109,Ingenieur/in - Hörtechnik und Audiologie,Berufe in der Hörgeräteakustik - hoch komplexe Tätigkeiten
+82542,7110,Zahntechniker/in,Berufe in der Zahntechnik - fachlich ausgerichtete Tätigkeiten
+81894,7121,Apothekenleiter/in,Führungskräfte - Pharmazie
+82194,7122,Leiter/in - Altenpflegeeinrichtung,Führungskräfte - Altenpflege
+81132,8001,Augenarztgehilfe/-gehilfin (Orthoptist/in),Orthoptisten/Orthoptistinnen - Fachkraft
+83111,8002,Kinderbetreuer/in,"Kinderbetreuung, -erziehung - Helfer"
+83112,8003,Erzieher/in,"Kinderbetreuung, -erziehung - Fachkraft"
+83124,8004,Sozialpädagoge/- pädagogin,"Sozialarbeit, Sozialpädagogik - Experte"
+83123,8004,Sozialpädagoge/- pädagogin,Berufe in der Sozialarbeit und Sozialpädagogik - komplexe Spezialistentätigkeiten
+83112,8005,Heimerzieher/in,"Kinderbetreuung, -erziehung - Fachkraft"
+83131,8006,Heilerziehungspfleger/in in Privathaushalten,"Heilerziehungspflege, Sonderpäd. -Helfer"
+83132,8006,Heilerziehungspfleger/in in Privathaushalten,"Heilerziehungspflege,Sonderpäd-Fachkraft"
+83131,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,"Heilerziehungspflege, Sonderpäd. -Helfer"
+83132,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,"Heilerziehungspflege,Sonderpäd-Fachkraft"
+83133,8008,Heilpädagoge/ -pädagogin,"Heilerziehungspfl.,Sonderpäd.-Spezialist"
+83134,8008,Heilpädagoge/ -pädagogin,"Heilerziehungspflege,Sonderpäd.-Experte"
+83143,8010,Familienpfleger/in für Notsituationen,Haus- und Familienpflege - Spezialist
+83154,8011,Sozialberater/in,"Sozial-,Erziehungs-, Suchtberat.-Experte"
+83193,8012,Kindergartenleiter/in,"Aufsicht-Erziehung,Sozialarbeit,Heilerz."
+83211,8013,Haushaltshilfe,Hauswirtschaft - Helfer
+83212,8014,Hauswirtschafter/in in Privathaushalten,Hauswirtschaft - Fachkraft
+83213,8014,Hauswirtschafter/in in Privathaushalten,Hauswirtschaft - Spezialist
+83223,8015,Verbraucherberater/in,Verbraucherberatung - Spezialist
+83293,8016,Hauswirtschaftsleiter/in für Großbetriebe,"Aufsicht-Hauswirtschaft,Verbraucherber."
+83293,8017,Hauswirtschaftsleiter/in für Privathaushalte,"Aufsicht-Hauswirtschaft,Verbraucherber."
+83314,8018,Pfarrer/in,Theologie - Experte
+83322,8019,Gemeindereferent/in,Gemeindearbeit - Fachkraft
+83323,8019,Gemeindereferent/in,Gemeindearbeit - Spezialist
+83332,8020,Nonne/Mönch,"Angeh.geistl.Orden,Mutterhäus.-Fachkraft"
+83333,8021,Klostervorsteher/in,"Angeh.geistl.Orden, Mutterh.-Spezialist"
+83382,8022,Küster/in,"Theologie,Gemeindearbeit (ssT)-Fachkraft"
+83383,8023,Trauerredner/in,"Theologie,Gemeindearbeit(ssT)-Spezialist"
+83383,8024,Christliche/r Jugendbetreuer/in,"Theologie,Gemeindearbeit(ssT)-Spezialist"
+83384,8025,Missionar/in,"Theologie, Gemeindearbeit (ssT)-Experte"
+83394,8026,Bischof/Bischöfin,Führung - Theologie und Gemeindearbeit
+84114,8027,Grundschullehrer/in,Lehrkräfte in der Primarstufe - Experte
+84124,8028,Lehrer/in Sekundarstufe,Lehrkräfte in d. Sekundarstufe - Experte
+84134,8029,Sonderschullehrer/in,Lehrkräfte an Sonderschulen - Experte
+84144,8030,Ausbildungslehrer/in,Lehrerausbildung - Experte
+84183,8031,Lernbetreuer/in,Lehrkräfte allg. Schule (ssT)-Spezialist
+84184,8032,Beratungslehrer/in,Lehrkräfte allg. Schule (ssT)-Experte
+84194,8033,Schulleiter/in - allgemeinbildende Schulen,Führung - Allgemeinbildende Schulen
+84214,8034,Berufsschullehrer/in,Lehrkräfte berufsbildende Fächer-Experte
+84213,8034,Berufsschullehrer/in,Lehrkräfte für berufsbildende Fächer - komplexe Spezialistentätigkeiten
+84223,8035,Lehrlingsausbilder/in,"Betriebl.Ausbild., Berufspäd.-Spezialist"
+84224,8035,Lehrlingsausbilder/in,"Betriebl. Ausbild., Berufspäd.-Experte"
+84294,8036,Schulleiter/in – berufliche Schulen,"Führung - BBS, betriebl.Ausb., Betr.päd."
+84304,8037,Dozent/in / Professor/in,Hochschullehre und -forschung - Experte
+84394,8038,Hochschulpräsident/in bzw. Hochschulrektor/in,Führung - Hochschullehre und -forschung
+84404,8039,Dozent/in - Erwachsenenbildung,Erwachsenenbildung (o.S.) - Experte
+84413,8041,Musiklehrer/in,Musikpädagogik - Spezialist
+84412,8041,Musiklehrer/in,Musikpädagogik - Fachkraft
+84414,8041,Musiklehrer/in,Musikpädagogik - Experte
+84424,8043,Religionslehrer/in,Religionspädagogik - Experte
+84424,8044,Gemeindepädagoge/-pädagogin,Religionspädagogik - Experte
+84434,8045,Kunstpädagoge/-pädagogin bzw.Theaterpädagoge/-pädagogin,"Kunst-, Theaterpädagogik - Experte"
+84444,8046,IT- Trainer/in,IT-Anwendungstraining - Experte
+84454,8047,Fremdsprachlehrer/in,(Fremd-)Sprachenlehrer/innen - Experte
+84483,8048,Eurythmielehrer/in,Lehrkr.außerschul.Bild.(ssT)-Spezialist
+84483,8049,Erstehilfelehrer/in,Lehrkr.außerschul.Bild.(ssT)-Spezialist
+84484,8050,Museumspädagoge/- pädagogin,Lehrkr. außerschul.Bild.(ssT)-Experte
+84494,8051,Leiter/in - außerschulische Bildungseinrichtungen,Führung-Außerschul.Bildungseinrichtungen
+84503,8052,Trainer/in - Leistungssport,Sportlehrer/innen (o.S.) - Spezialist
+84504,8053,Sportpädagoge/-pädagogin,Sportlehrer/innen (o.S.) - Experte
+84513,8054,Fahrlehrer/in,Fahrlehrer/innen - Spezialist
+84523,8055,Fluglehrer/in,Fluglehrer/innen - Spezialist
+84533,8056,Tanzlehrer/in,Tanzlehrer/innen - Spezialist
+84543,8057,Trainer/in - Ballsport,Trainer - Ballsportarten - Spezialist
+84553,8058,Fitnesstrainer/in  bzw. Gymnastiklehrer/in,"Trainer - Fitness,Gymnastik - Spezialist"
+84583,8059,Freizeitsportlehrer/in,Sportlehrer/innen (s.s.T.) - Spezialist
+83194,8061,Leiter/in einer sozialpädagogischen Einrichtung,"Führungskräfte - Erziehung, Sozialarbeit, Heilerziehungspflege"
+83212,8062,Hauswirtschafter/in in sozialen und gewerblichen Einrichtungen,Hauswirtschaft - Fachkraft
+83213,8062,Hauswirtschafter/in in sozialen und gewerblichen Einrichtungen,Hauswirtschaft - Spezialist
+92122,1002,Callcenteragent/in (Inbound),Berufe im Dialogmarketing - fachlich ausgerichtete Tätigkeiten
+92122,1003,Verkäufer/in - Telemarketing,Berufe im Dialogmarketing - fachlich ausgerichtete Tätigkeiten
+91104,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in Sprach- und Literaturwissenschaften (o.S.) - hoch komplexe Tätigkeiten
+91114,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Germanistik - hoch komplexe Tätigkeiten
+91124,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Anglistik und Amerikanistik - hoch komplexe Tätigkeiten
+91134,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Romanistik - hoch komplexe Tätigkeiten
+91144,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Slawistik und verwandte Bereiche - hoch komplexe Tätigkeiten
+91154,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Arabistik und Orientalistik - hoch komplexe Tätigkeiten
+91164,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Sprach- und Literaturwissenschaft des asiatischen Raums - hoch komplexe Tätigkeiten
+91174,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in der Altphilologie - hoch klomplexe Tätigkeiten
+91184,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,Berufe in Sprach- und Literaturwissenschaften (sonstige spazifische Tätigkeitsangaben) - hoch komplexe Tätigkeiten
+91214,1101,Philosoph/in / Religionswissenschaftler/in,"Berufe in der Philosophie, Religion und Ethik - hoch komplexe Tätigkeiten"
+91224,1102,Historiker/in,Berufe in Geschichtswissenschaften - hoch komplexe Tätigkeiten
+91244,1105,Kommunikationswissenschaftler/in,Berufe in Medien- und Theaterwissenschaft - hoch komplexe Tätigkeiten
+91254,1107,Regionalwissenschaftler/in,Berufe in der Regionalwissenschaft - hoch komplexe Tätigkeiten
+91264,1108,Anthropologe/in / Ethnologe/in,Berufe in der Anthropologie und Ethnologie - hoch komplexe Tätigkeiten
+91314,1109,Politologe/in,Berufe in der Politologie - hoch komplexe Tätigkeiten
+91324,1110,Soziologe/in,Berufe in der Soziologie - hoch komplexe Tätigkeiten
+91354,1111,Demograf/in,Berufe in der Demografie - hoch komplexe Tätigkeiten
+91404,1112,Wirtschaftswissenschaftler/in,Berufe in Wirtschaftswissenschaften (o.S.) - hoch komplexe Tätigkeiten
+91341,1117,Interviewer/in,Berufe in der Markt- und Meinungsforschung - Helfer-/Anlerntätigkeiten
+91341,1118,Testkäufer/in,Berufe in der Markt- und Meinungsforschung - Helfer-/Anlerntätigkeiten
+91384,1123,Experte/in für spezielle Gesellschafts- und Kulturwissenschaften,Berufe in Gesellschaftswissenschaften (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+94114,1200,Musiker/in,Musiker/innen - hoch komplexe Tätigkeiten
+94114,1201,Musikwissenschaftler/in,Musiker/innen - hoch komplexe Tätigkeiten
+94124,1202,Sänger/in,Sänger/innen - hoch komplexe Tätigkeiten
+94134,1203,Dirigent/in / Chorleiter/in,Dirigenten/Dirigentinnen - hoch komplexe Tätigkeiten
+94144,1204,Komponist/in,Komponisten/Komponistinnen - hoch komplexe Tätigkeiten
+94183,1205,Musik- und Sounddesigner/in,"Musik-, Gesangs- und Dirigententätigkeiten (sonstige spezifische Tätigkeiten) - komplexe Spezialistentätigkeiten"
+94184,1206,Korrepetior/in - Gesang/Instrumentalisten/,"Musik-, Gesangs- und Dirigententätigkeiten (sonstige spezifische Tätigkeiten) - hoch komplexe Tätigkeiten"
+94184,1207,Korrepetitor/in - Ballett/Tanz,"Musik-, Gesangs- und Dirigententätigeiten (sonstige spezifische Tätigkeiten) - hoch komplexe Tätigkeiten"
+94214,1208,Schauspieler/in,Schauspieler/innen - hoch komplexe Tätigkeiten
+94224,1209,Tänzer/in / Choreograf/in,Tänzer/innen und Choreografen/Choreografinnen - hoch komplexe Tätigkeiten
+94232,1210,Model,"Mannequins, Dressmen und sonstige Models - fachlich ausgerichtete Tätigkeiten"
+94243,1211,Berufssportler/in,Athleten/Athletinnen und Berufsportler/innen - komplexe Spezialistentätigkeiten
+94252,1212,Striptease-Tänzer/in / Prostituierte/r,Berufe für personenbezogene Dienstleistungen - fachlich ausgerichtete Tätigkeiten
+94283,1213,Kleindarsteller/in,"Berufe in Schauspiel, Tanz und Bewegungskunst (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten"
+94283,1214,Artist/in / Akrobat/in,"Berufe in Schauspiel, Tanz und Bewegungskunst (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten"
+94323,1216,Illusionskünstler/in / Zauberer/ Zauberin,Zauberer/Zauberinnen und Illusionisten/Illusionistinnen - komplexe Spezialistentätigkeiten
+94313,1217,Komiker/in / Kabarettist/in,Komiker/innen und Kabarettisten/Kabarettistinnen - komplexe Spezialistentätigkeiten
+94334,1218,Hörfunk- und Fernsehmoderator/in,Hörfunk- und Fernsehmoderatoren/-moderatorinnen - hoch komplexe Tätigkeiten
+94342,1219,Croupier/Croupière / Glücksspielbetreiber/in,Berufe im Bereich Glücks- und Wettspiel - fachlich ausgerichtete Tätigkeiten
+94303,1220,Entertainer/in,Berufe in Moderation und Unterhaltung (o.S.) - komplexe Spezialistentätigkeiten
+94402,1225,Produktionsassistent/in,"Berufe in der Theater-, Film- und Fernsehproduktion (o.S.) - fachlich ausgerichtete Tätigkeiten"
+94403,1227,Film- und Fernsehwirt/in,"Theater-Film,Fernsehprod.(oS)-Spezialist"
+94404,1227,Film- und Fernsehwirt/in,"Berufe in der Theater-, Film- und Fernsehproduktion (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+94413,1228,Inspizient/in,Berufe in der Regie - komplexe Spezialistentätigkeiten
+94413,1229,Regieassistent/in,Berufe in der Regie - komplexe Spezialistentätigkeiten
+94414,1230,Regisseur/in,Berufe in der Regie - hoch komplexe Tätigkeiten
+94512,1231,Bühnenarbeiter/in,Berufe in der Veranstaltungs- und Bühnentechnik - fachlich ausgerichtete Tätigkeiten
+94512,1232,Veranstaltungstechnik - Fachkraft,Berufe in der Veranstaltungs- und Bühnentechnik - fachlich ausgerichtete Tätigkeiten
+94512,1233,Technische/r Assistent/in - Bühne/Film/Fernsehen,Berufe in der Veranstaltungs- und Bühnentechnik - fachlich ausgerichtete Tätigkeiten
+94513,1234,Beleuchter/in,Berufe in der Veranstaltungs- und Bühnentechnik - komplexe Spezialistentätigkeiten
+94513,1235,Ingenieur/in – Veranstaltungstechnik,Berufe in der Veranstaltungs- und Bühnentechnik - komplexe Spezialistentätigkeiten
+94514,1235,Ingenieur/in – Veranstaltungstechnik,Berufe in der Veranstaltungs- und Bühnentechnik - hoch komplexe Tätigkeiten
+94482,1237,Souffleur/Souffleuse,"Berufe in der Theater-, Film- und Fernsehproduktion (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten"
+94483,1238,Künstlervermittler/in,"Berufe in der Theater-, Film- und Fernsehproduktion (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten"
+94484,1239,Programmgestalter/in für Rundfunk und Fernsehen,"Berufe in der Theater-, Film- und Fernsehproduktion (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten"
+94493,1240,"Führungskraft in der Theater-, Film- und Fernsehproduktion","Aufsichtskräfte - Theater-, Film- und Fernsehproduktion"
+94494,1240,"Führungskraft in der Theater-, Film- und Fernsehproduktion","Führungskräfte - Theater-, Film- und Fernsehproduktion"
+94404,1241,Dramaturg/in,"Berufe in der Theater-, Film- und Fernsehproduktion (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+94522,1242,Kamera-Assistent/in,Berufe in der Kameratechnik - fachlich ausgerichtete Tätigkeiten
+94523,1243,Kameramann/-frau,Berufe in der Kameratechnik - komplexe Spezialistentätigkeiten
+94533,1246,Filmeditor/in,Berufe in der Bild- und Tontechnik - komplexe Spezialistentätigkeiten
+94532,1246,Filmeditor/in,Berufe in der Bild- und Tontechnik - fachlich ausgerichtete Tätigkeiten
+94534,1246,Filmeditor/in,Berufe in der Bild- und Tontechnik - hoch komplexe Tätigkeiten
+94582,1247,Pyrotechniker/in,"Berufe in der Veranstaltungs-, Kamera- und Tontechnik (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten"
+94593,1248,Meister/in – Veranstaltungstechnik,"Aufsichtskräfte - Veranstaltungs-, Kamera- und Tontechnik"
+94612,1249,Bühnen- und Kostümbildner/in,Berufe in der Bühnen- und Kostümbildnerei - fachlich ausgerichtete Tätigkeiten
+94613,1249,Bühnen- und Kostümbildner/in,Berufe in der Bühnen- und Kostümbildnerei - komplexe Spezialistentätigkeiten
+94614,1249,Bühnen- und Kostümbildner/in,Berufe in der Bühnen- und Kostümbildnerei - hoch komplexe Tätigkeiten
+94704,1300,Kurator/in / Museologe/in,Museumsberufe (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+94712,1301,Fachkraft - Präparator/in in Museen,Berufe in der Museums- und Ausstellungstechnik - fachlich ausgerichtete Tätigkeiten
+94713,1302,Museums- / Ausstellungstechniker/in,Berufe in der Museums- und Ausstellungstechnik - komplexe Spezialistentätigkeiten
+94714,1303,Konservator/in,Berufe in der Museums- und Ausstellungstechnik - hoch komplexe Tätigkeiten
+94714,1304,Denkmalpfleger/in,Berufe in der Museums- und Ausstellungstechnik - hoch komplexe Tätigkeiten
+94724,1305,Kunstsachverständige/r,Kunstsachverständige - Experte
+94724,1306,Gemmologe/Gemmologin,Kunstsachverständige - Experte
+94794,1307,Museumsleiter/in / Museumsdirektor/in,Führungskräfte - Museum
+94622,1308,Ankleider/in,Berufe in der Requisite - fachlich ausgerichtete Tätigkeiten
+94623,1309,Requisiteur/in,Berufe in der Requisite - komplexe Spezialistentätigkeiten
+94693,1310,Ausstattungsleiter/in - Bühne/Film/Fernsehen,"Aufsichtskräfte - Bühnen- und Kostümbildnerei, Requisite"
+91334,1501,Erziehungswissenschaftler/in,Berufe in der Erziehungswissenschaft - hoch komplexe Tätigkeiten
+94383,1600,Diskjockey / Bauchredner/in / Travestiekünstler/in,Berufe in Moderation und Unterhaltung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+94383,1601,Wahrsager/in / Astrolog/in,Berufe in Moderation und Unterhaltung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+91384,1765,Kriminologe/in,Berufe in Gesellschaftswissenschaften (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+91384,1766,Arbeitswissenschaftler/in,Berufe in Gesellschaftswissenschaften (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+93293,1768,Chefdekorateur/in,"Aufsichtskräfte - Innenarchitektur, visuelles Marketing, Raumausstattung"
+94252,1769,Striptease-Tänzer/in,Berufe für personenbezogene Dienstleistungen - fachlich ausgerichtete Tätigkeiten
+91233,1835,Techniker/in - Grabungstechnik,Berufe in der Archäologie - komplexe Spezialistentätigkeiten
+91234,1835,Techniker/in - Grabungstechnik,Berufe in der Archäologie  - hoch komplexe Tätigkeiten
+91343,1836,Fachangestellte/r - Markt- und Sozialforschung,"Markt-, Meinungsforschung - Spezialist"
+91342,1836,Fachangestellte/r - Markt- und Sozialforschung,Berufe in der Markt- und Meinungsforschung - fachlich ausgerichtete Tätigkeiten
+91344,1836,Fachangestellte/r - Markt- und Sozialforschung,"Markt-, Meinungsforschung - Experte"
+92113,1837,Produktmanager/in,Werbung und Marketing- Spezialist
+92114,1837,Produktmanager/in,Werbung und Marketing- Experte
+92413,1838,Redakteur/in,"Redakteure, Journalisten - Spezialist"
+92414,1838,Redakteur/in,"Redakteure, Journalisten - Experte"
+93102,1839,Produkt- und Industriedesigner/in,"Produkt-, Industriedesign - Fachkraft"
+93103,1839,Produkt- und Industriedesigner/in,"Produkt-, Industriedesign - Spezialist"
+93104,1839,Produkt- und Industriedesigner/in,"Produkt-, Industriedesign - Experte"
+93212,1840,Innenarchitekt/in,Innenarchitektur - Fachkraft
+93213,1840,Innenarchitekt/in,Innenarchitektur - Spezialist
+93214,1840,Innenarchitekt/in,Innenarchitektur - Experte
+93522,1841,Gold- und Silberschmied/in,Kunsth.Schmuckher.Edelsteinbe.-Fachkraft
+93523,1841,Gold- und Silberschmied/in,Kunsth.SchmuckherEdelsteinbe.-Spezialist
+93524,1841,Gold- und Silberschmied/in,Kunsth.Schmuckher.Edelsteinbear.-Experte
+94532,1842,Tontechniker/in,Berufe in der Bild- und Tontechnik - fachlich ausgerichtete Tätigkeiten
+94533,1842,Tontechniker/in,Berufe in der Bild- und Tontechnik - komplexe Spezialistentätigkeiten
+94534,1842,Tontechniker/in,Berufe in der Bild- und Tontechnik - hoch komplexe Tätigkeiten
+91384,1858,Kulturwissenschaftler/in,Berufe in Gesellschaftswissenschaften (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+92412,3501,Redaktionsassistent/in,"Redakteure, Journalisten- Fachkraft"
+92424,3502,Verlagslektor/in,Lektoren/innen- Experte
+92112,3503,Marketingassistent/in,Werbung und Marketing- Fachkraft
+92123,3504,Teamleiter/in - Callcenter,Dialogmarketing- Spezialist
+92384,3505,Literaturagent/in,"Verlags-, Medienkaufleute (ssT)- Experte"
+92303,3506,Medienfachwirt/in,"Verlags-,Medienkaufleute(oS)- Spezialist"
+92382,3507,Anzeigenverkäufer/in,"Verlags-, Medienkaufleute (ssT)- Fachkraft"
+92382,3508,Assistent/in - Filmgeschäftsführung,"Verlags-,Medienkaufleute (ssT)-Fachkraft"
+92383,3509,Art-Buyer,"Verlags-,Medienkaufleute (ssT)-Spezialist"
+92204,3510,Pressesprecher/in,Öffentlichkeitsarbeit-Experte
+92294,3511,Leiter/in- Presse- und Öffentlichkeitsarbeit,Führung- Öffentlichkeitsarbeit
+92494,3512,Chefredakteur/in,"Führung- Redaktion und Journalismus"""
+92203,3513,Public-Relations-Manager/in,Öffentlichkeitsarbeit- Spezialist
+92434,3514,Schriftsteller/in,"Autoren, Schriftsteller- Experte"
+92194,3515,Werbeleiter/in,Führung- Werbung und Marketing
+92133,3518,Account-Manager/in,Kundenmanagement- Spezialist
+43223,3518,Account-Manager/in,Berufe in der IT-Anwendungsberatung - komplexe Spezialistentätigkeiten
+92302,3519,Medienkaufmann/-frau - Digital und Print,"Verlags-,Medienkaufleute(oS) - Fachkraft"
+92304,3520,Medienmanager/in,"Verlags-, Medienkaufleute (oS) - Experte"
+92394,3521,Verleger/in (Medien/Musik),Führung- Verlags- und Medienwirtschaft
+92413,3524,Technische/r Redakteur/in,"Redakteure, Journalisten - Spezialist"
+92434,3525,Drehbuchautor/in,"Autoren, Schriftsteller- Experte"
+92384,3526,Listbroker/in,"Verlags-, Medienkaufleute (ssT)- Experte"
+92413,3527,Community-Manager/in,"Redakteure, Journalisten - Spezialist"
+93222,5124,Ausstellungsgestalter/in,Visuelles Marketing - Fachkraft
+93223,5124,Ausstellungsgestalter/in,Visuelles Marketing - Spezialist
+93233,5125,Raumausstatter/in- Restaurierungsarbeiten,Raumausstattung - Spezialist
+93293,5126,Raumausstattermeister/in,"Aufsicht-Innenarchitektur,Raumausstatt."
+93302,5127,Kunsthandwerker/in,"Kunsthandw., bild.Kunst (oS) - Fachkraft"
+93303,5128,bildende/r Künstler/in,"Kunsthandwerk,bild.Kunst (oS)-Spezialist"
+93304,5128,bildende/r Künstler/in,"Kunsthandwerk, bild. Kunst (oS)-Experte"
+93312,5129,Bildhauer/in,Bildhauerei - Fachkraft
+93312,5130,Holzbildhauer/in,Bildhauerei - Fachkraft
+93312,5131,Steinbildhauer/in,Bildhauerei - Fachkraft
+93313,5132,Skulpturenrestaurator/in,Bildhauerei - Spezialist
+93323,5133,Kunstmaler/in,"Kunstmaler, Zeichner - Spezialist"
+93332,5134,Drechsler/in,"Drechslerei,Spielzeugherstell.-Fachkraft"
+93333,5135,Spielzeugdesigner/in,"Drechslerei, Spielzeugherst.-Spezialist"
+93342,5136,Vergolder/in,Vergolderhandwerk - Fachkraft
+93343,5137,Restaurator/in - Vergolderhandwerk,Vergolderhandwerk - Spezialist
+93352,5138,Kerzenhersteller/in und Wachsbildner/in,Wachszieherei - Fachkraft
+93382,5139,Textilschmuckmacher/in,"Kunsthandwerk, bild.Kunst(ssT)-Fachkraft"
+93393,5141,Kunsthandwerksmeister/in,"Aufsicht - Kunsthandwerk,bildende Kunst"
+93493,5141,Kunsthandwerksmeister/in,"Aufsicht-Kunsthandw.Keramik,Glasgestalt."
+93593,5141,Kunsthandwerksmeister/in,Aufsicht-Kunsthandwerkl.Metallgestaltung
+93412,5142,Keramiker/in,Kunsthandw. Keramikgestaltung-Fachkraft
+93413,5143,Keramikdesigner/in,Kunsthandw. Keramikgestaltung-Spezialist
+93422,5144,Glas- und Porzellanmaler/in,KunsthandGlasKeramPorzellanmal-Fachkraft
+93432,5145,Glasbläser/in,Kunsthandwerkl. Glasbläserei - Fachkraft
+93433,5146,Glasdesigner/in,Kunsthandwerkl. Glasbläserei-Spezialist
+93512,5147,Metallbildner/in,Kunsthandw. Metallgestaltung - Fachkraft
+93513,5148,Metalldesigner/in,Kunsthandw. Metallgestaltung-Spezialist
+93523,5150,Restaurator/in - Gold- und Silberschmiedehandwerk,Kunsth.SchmuckherEdelsteinbe.-Spezialist
+93532,5152,Graveur/in,Gravur - Fachkraft
+93542,5153,Schilder- und Lichtreklamehersteller/in,"Schilder-,Lichtreklameherst. - Fachkraft"
+93602,5154,Musikinstrumentenbauer/in,Musikinstrumentenbau (o.S.) - Fachkraft
+93603,5155,Musikinstrumentenrestaurator/in,Musikinstrumentenbau (o.S.) - Spezialist
+93604,5156,Ingenieur/in- Musikinstrumentenbau,Musikinstrumentenbau (o.S.) - Experte
+93612,5157,Streich- und Zupfinstrumentenmacher/in,"Streich-,Zupfinstrumentenbau - Fachkraft"
+93613,5158,Restaurator/in- Streich- und Zupfinstrumente,"Streich-,Zupfinstrumentenbau-Spezialist"
+93622,5159,Holzblasinstrumentenmacher/in,Holzblasinstrumentenbau - Fachkraft
+93623,5160,Restaurator/in- Holzblasinstrumente,Holzblasinstrumentenbau - Spezialist
+93632,5161,Metallblasinstrumentenmacher/in,Metallblasinstrumentenbau - Fachkraft
+93633,5162,Restaurator/in- Metallblasinstrumente,Metallblasinstrumentenbau - Spezialist
+93642,5163,Klavier- und Cembalobauer/in,Klavier- und Cembalobau - Fachkraft
+93643,5164,Restaurator/in - Klavier- und Cembalo,Klavier- und Cembalobau - Spezialist
+93652,5165,Orgel- und Harmoniumbauer/in,Orgel- und Harmoniumbau - Fachkraft
+93653,5166,Restaurator/in – Orgel- und Harmonium,Orgel- und Harmoniumbau - Spezialist
+93682,5167,"Handzuginstrumentenmacher/in, Harmonikamacher/in oder Schlagzeugbauer/in",Musikinstrumentenbau (s.s.T.)-Fachkraft
+93683,5168,"Restaurator/in – Handzuginstrumente, Harmonika oder Schlaginstrumente",Musikinstrumentenbau (s.s.T.)-Spezialist
+93693,5169,Meister/in- Musikinstrumentenbau,Aufsicht - Musikinstrumentenbau
+93232,5170,Raumausstatter/in,Raumausstattung - Fachkraft
+11183,1014,Landwirtschaftsberater/in,Berufe in der Landwirtschaft (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+11183,1015,Agraringenieur/in,Berufe in der Landwirtschaft (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+11402,1518,Fischer/in,Berufe in der Fischwirtschaft (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+11402,1519,Fischwirt/in,Berufe in der Fischwirtschaft (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+22182,5178,Verfahrensmechaniker/in - Kunststofftechnik,Berufe in der Kunststoff- und Kautschukherstellung und -verarbeitung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+22182,5179,Verfahrensmechaniker/in - Kautschuktechnik,Berufe in der Kunststoff- und Kautschukherstellung und -verarbeitung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+22183,1716,Techniker/in - Kunststoff- und Kautschuktechnik,Berufe in der Kunststoff- und Kautschukherstellung und -verarbeitung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+22184,1716,Techniker/in - Kunststoff- und Kautschuktechnik,Berufe in der Kunststoff- und Kautschukherstellung und -verarbeitung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+24202,1853,Maschineneinrichter/in (spanlose Metallbearbeitung),Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24202,2018,Metallbearbeitungstechniker/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24202,2022,Metallschleifer/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24202,2023,Zerspanungsmechaniker/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24202,2029,Oberflächenbeschichter/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24202,2034,Metallbauer/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+24202,2093,Metallbearbeitungshelfer/in,Berufe in der Metallbearbeitung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+26382,2115,Elektromechaniker/in,Berufe in der Elektrotechnik (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+26383,1733,Elektrotechniker/in,Berufe in der Elektrotechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+26383,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Elektrotechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+27103,1722,Maschinenbauingenieur/in,Berufe in der technischen Forschung und Entwicklung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+27104,1722,Maschinenbauingenieur/in,Berufe in der technischen Forschung und Entwicklung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+29202,9040,Tiefkühlkosthersteller/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9041,Helfer/in - Lebensmitteltechnik,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9063,Fleischer/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9065,Fischverarbeiter/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9067,Molkereifacharbeiter/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9069,Süßwarenfacharbeiter/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9087,Bäckereimaschinenführer/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29202,9096,Mühlenfacharbeiter/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - fachlich ausgerichtete Tätigkeiten
+29203,9049,"Lebensmitteltechniker/in - Feinkost, Fertiggerichte, Obstverwertung",Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9062,Bäckereitechniker/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9064,Fleischereitechniker/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9066,Lebensmitteltechniker/in - Fischerzeugnisse,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9068,Molkereitechniker/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9070,Süßwarentechniker/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9076,Leiter/in - Lebensmittelindustrie,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29203,9097,Müllereitechniker/in,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+29204,9047,Lebensmittelingenieur/in für Spezialnahrung,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+29204,9049,"Lebensmitteltechniker/in - Feinkost, Fertiggerichte, Obstverwertung",Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+29204,9076,Leiter/in - Lebensmittelindustrie,Berufe in der Lebensmittelherstellung (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41203,4002,Biotechniker/in,Berufe in der Biologie (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
+41204,4002,Biotechniker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4004,"Biologe/Biologin, Fachgebiet Ökologie",Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4005,"Biologe/Biologin, Fachgebiet Botanik",Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4006,"Biologe/Biologin, Fachgebiet Zoologie",Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4007,Mikrobiologe/-biologin,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4008,Humanbiologe/-biologin,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4210,Molekularbiologe/-biologin,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4212,Genetiker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4213,Biochemiker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41204,4214,Bioniker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+41283,4002,Biotechniker/in,Berufe in der Biologie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+41383,1790,Chemiker/in,Berufe in der Chemie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+42283,1785,Wasserwerksingenieur/in,Berufe in der Umweltschutztechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+42283,1799,Umweltschutzingenieur/in,Berufe in der Umweltschutztechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+62103,1750,Verkaufs- und Kassenaufsicht,Berufe im Verkauf (ohne Produktspezialisierung) - komplexe Spezialistentätigkeiten
+62103,6030,Verkäufer/in - Einzelhandel,Berufe im Verkauf (ohne Produktspezialisierung) - komplexe Spezialistentätigkeiten
+71304,3205,Technisch-kaufmännische/r Betriebassistent/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+71304,3206,Betriebswirtschaftliche/r Assistent/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+71304,3208,Betriebsplaner/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+71304,3210,Regionalleiter/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+71304,3211,Kaufmännische/r Betriebsleiter/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+71304,3599,Personalleiter/in,Berufe in der kaufmännischen und technischen Betriebswirtschaft (ohne Spezialisierung) - hoch komplexe Tätigkeiten
+71382,3205,Technisch-kaufmännische/r Betriebassistent/in,Berufe in der Unternehmensorganisation und -strategie (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+71382,3206,Betriebswirtschaftliche/r Assistent/in,Berufe in der Unternehmensorganisation und -strategie (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+71383,3205,Technisch-kaufmännische/r Betriebassistent/in,Berufe in der Unternehmensorganisation und -strategie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+71383,3206,Betriebswirtschaftliche/r Assistent/in,Berufe in der Unternehmensorganisation und -strategie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+72214,3570,Leiter/in Rechnungswesen/ Revision/ Controlling,Berufe in der Buchhaltung - hoch komplexe Tätigkeiten
+72214,3573,Controller/in,Berufe in der Buchhaltung - hoch komplexe Tätigkeiten
+73104,3530,Rechtliche/r Berater/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+73104,3531,Notar/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+73104,3532,Staatsanwalt/-anwältin,"Berufe in Rechtsberatung, -sprechung und -ordnung (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+73104,3533,Richter/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+73104,3537,Rechtsabteilungsleiter/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+73104,3599,Personalleiter/in,"Berufe in Rechtsberatung, -sprechung und -ordnung (ohne Spezialisierung) - hoch komplexe Tätigkeiten"
+73282,3550,Verwaltungsangestellte/r im öffentlichen Dienst,Berufe in der öffentlichen Verwaltung (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+73283,3550,Verwaltungsangestellte/r im öffentlichen Dienst,Berufe in der öffentlichen Verwaltung (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+73284,3546,Verwaltungswissenschaftler/in,Berufe in der öffentlichen Verwaltung (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+73293,3541,Justizverwaltungsbeamter/-beamtin,Aufsichtskräfte - Verwaltung
+73293,3542,Sozialversicherungsbeamter/-beamtin (höh. Dienst),Aufsichtskräfte - Verwaltung
+73293,3551,Steuerverwaltungsbeamt(er/in),Aufsichtskräfte - Verwaltung
+73293,3552,Zolldienstbeamt(er/in),Aufsichtskräfte - Verwaltung
+73293,7005,Gesundheitsbetriebswirt/in,Aufsichtskräfte - Verwaltung
+81382,7104,Krankenschwester/-pfleger,Berufe in der Gesundheits- und Krankenpflege (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten
+81783,7043,Physiotherapeut/in,Berufe in der nicht ärztlichen Therapie und Heilkunde (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+81784,7043,Physiotherapeut/in,Berufe in der nicht ärztlichen Therapie und Heilkunde (sonstige spezifische Tätigkeitsangabe) -  hoch komplexe Tätigkeiten
+81784,7053,Diabetesassistent/in ,Berufe in der nicht ärztlichen Therapie und Heilkunde (sonstige spezifische Tätigkeitsangabe) -  hoch komplexe Tätigkeiten
+82283,1828,Ernährungstrainer/in,"Berufe in Ernährungs- und Gesundheitsberatung, Wellness (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten"
+91484,1112,Wirtschaftswissenschaftler/in,Berufe in Wirtschaftswissenschaften (sonstige spezifische Tätigkeitsangabe) - hoch komplexe Tätigkeiten
+93383,5128,bildende/r Künstler/in,Berufe in Kunsthandwerk und bildender Kunst (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
+93383,5141,Kunsthandwerksmeister/in,Berufe in Kunsthandwerk und bildender Kunst (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten

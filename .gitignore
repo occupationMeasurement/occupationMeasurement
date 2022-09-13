@@ -1,0 +1,19 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+
+# {shinytest2}: Ignore new debug snapshots for `$expect_values()`
+*_.new.png
+*.new.md
+
+output/*
+cache/*
+tests/testthat/cache/*
+!.gitkeep
+docs
+inst/doc
+/doc/
+/Meta/
+.vscode/

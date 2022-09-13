@@ -1,0 +1,105 @@
+---
+title: "Saving Results in a Database"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Saving Results in a Database}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Results from interactive occupation coding with the package via `app()` can easily be saved in a database by following this guide.
+
+The key feature to do this is by using `handle_data` in `create_app_settings()`. This function will be called whenever there is data to be saved by the package. Whenever it is called, it's called with the following arguments, with the function be called like this: `handle_data(table_name, data, session)`.
+
+Currently there are 3 different forms of `data` that are being handled. These are differentiated by different `table_name`(s).
+
+1. `table_name == "answers"`: The user's answers themselves, with one row per question. These are saved, whenever a page gets submitted and therefore multiple times per participation.
+2. `table_name == "results_overview"`: A combined version of the user's answers and information about the user themselves. These are saved at the end of the questionnaire and therefore only once per participation.
+3. `table_name == "occupations_suggested"`: The list of suggestions shown to the user. These are saved at the moment when suggestions are generated and therefore *typically* once per participation, but not necessarily.
+
+The `session` being passed holds information on the current [shiny session](https://shiny.rstudio.com/reference/shiny/latest/session.html) and can usually be ignored when it comes to saving data.
+
+## Option 1: Handling all data the same way
+
+Let's automatically save data in a database, creating tables as we need them.
+
+We're using `[RSQLite](https://cran.r-project.org/web/packages/RSQLite/index.html)` to connect to a SQLite in-memory database here for ease of use, but you can easily substitute this using `[RMariaDB](https://cran.r-project.org/web/packages/RMariaDB/index.html)` for MySQL / MariaDB or `[Rpostgres](https://cran.r-project.org/web/packages/RPostgres/index.html)` for Postgres (check out the [documentation for DBI](https://dbi.r-dbi.org/) for even more options).
+
+```{r eval=FALSE, include=TRUE}
+library(occupationMeasurement)
+
+# Connect to the database
+db_connection <- DBI::dbConnect(RSQLite::SQLite(), dbname = ":memory:")
+
+# Launch the interactive app
+app(
+  start = TRUE,
+  app_settings = create_app_settings(
+    handle_data = function(table_name, data, ...) {
+      # Write data into the database and automatically create the table if
+      # it doesn't exist already
+      DBI::dbWriteTable(
+        conn = db_connection,
+        name = table_name,
+        value = data,
+
+        # Important, to actually add data and not remove any existing data.
+        append = TRUE
+      )
+    },
+
+    # Let's not save data in files, when we're already using a database
+    save_to_file = FALSE
+  )
+)
+```
+
+## Option 2: Handling different types of data differently
+
+Handling all types of data the same way, might be a bit too simple for your usecase. In that case it's possible to distinguish between the different data types by checking for the value of `table_name`. Depending on which type of data you get passed, you can handle them completely different then.
+
+```{r eval=FALSE, include=TRUE}
+library(occupationMeasurement)
+
+# Connect to the database
+db_connection <- DBI::dbConnect(RSQLite::SQLite(), dbname = ":memory:")
+
+# Launch the interactive app
+app(
+  start = TRUE,
+  app_settings = create_app_settings(
+    handle_data = function(table_name, data, ...) {
+      # By checking for table_name we can identify which type of data is being handled
+      if (table_name == "results_overview") {
+        # Write data into the "results" table (creating it if necessary)
+        DBI::dbWriteTable(
+          conn = db_connection,
+          name = "results",
+          value = data,
+
+          # Important, to actually add data and not remove any existing data.
+          append = TRUE
+        )
+      }
+
+      if (table_name == "answers") {
+        # Don't save answers data, just output it into the R console
+        print("'answers' data (not saved):")
+        print(data)
+      }
+
+      # Ignoring any other type of data e.g. occupations_suggested
+    },
+
+    # Let's not save data in files, when we're already using a database
+    save_to_file = FALSE
+  )
+)
+```

@@ -1,0 +1,1299 @@
+auxco_id,question_id,question_index,entry_type,question_type,question_text_present,question_text_past,answer_id,answer_text,answer_id_combination,answer_kldb_id,answer_isco_id,corresponding_answer_level,last_question
+1004,Q1004_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,"","","","","","",
+1004,Q1004_1,1,answer_option,"","","",1,Ja,"",51322,4412,isco_skill_level_2,TRUE
+1004,Q1004_1,1,answer_option,"","","",2,Nein,"",51321,9621,isco_skill_level_1,TRUE
+1005,Q1005_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1005,Q1005_1,1,answer_option,"","","",1,Ja,"",51394,1324,isco_manager,TRUE
+1005,Q1005_1,1,answer_option,"","","",2,Nein,"",51393,4321,isco_supervisor,TRUE
+1012,Q1012_1,1,question,sonstige,Schließt Ihre Arbeit auch die Haltung und Zucht von Tieren mit ein?,Hat Ihre Arbeit auch die Haltung und Zucht von Tieren mit eingeschlossen?,"","","","","","",
+1012,Q1012_1,1,answer_option,"","","",1,Ja,"",11102,6130,"",TRUE
+1012,Q1012_1,1,answer_option,"","","",2,Nein,"",11102,6111,"",TRUE
+1014,Q1014_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1014,Q1014_1,1,answer_option,"","","",1,Ja,"",11104,2132,isco_skill_level_4,TRUE
+1014,Q1014_1,1,answer_option,"","","",2,Nein,"",11103,2132,isco_skill_level_3,TRUE
+1015,Q1015_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1015,Q1015_1,1,answer_option,"","","",1,Ja,"",11104,2132,isco_skill_level_4,TRUE
+1015,Q1015_1,1,answer_option,"","","",2,Nein,"",11103,2132,isco_skill_level_3,TRUE
+1024,Q1024_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1024,Q1024_1,1,answer_option,"","","",1,Nein,"",11132,3142,isco_skill_level_2,TRUE
+1024,Q1024_1,1,answer_option,"","","",2,Ja,"",11133,3142,isco_skill_level_3,TRUE
+1038,Q1038_1,1,question,sonstige,Beinhaltet ihre Tätigkeit die Ausbildung von Reitern?,Hat ihre Tätigkeit die Ausbildung von Reitern beinhaltet?,"","","","","","",
+1038,Q1038_1,1,answer_option,"","","",1,Nein,"",11322,5164,"",TRUE
+1038,Q1038_1,1,answer_option,"","","",2,Ja,"",11322,3423,"",TRUE
+1047,Q1047_1,1,question,sonstige,Mit welchen Tieren arbeiten Sie?,Mit welchen Tieren haben Sie gearbeitet?,"","","","","","",
+1047,Q1047_1,1,answer_option,"","","",1,Nutztieren,"",11512,5164,"",TRUE
+1047,Q1047_1,1,answer_option,"","","",2,Haus- oder Zootieren,"",11522,5164,"",TRUE
+1047,Q1047_1,1,answer_option,"","","",3,Keine der obigen Antworten trifft zu,"",11502,5164,"",TRUE
+1054,Q1054_1,1,question,sonstige,Mit welchen Pflanzen arbeiten Sie?,Mit welchen Pflanzen haben Sie gearbeitet?,"","","","","","",
+1054,Q1054_1,1,answer_option,"","","",1,Bäumen und Sträuchern,"",12102,6112,"",TRUE
+1054,Q1054_1,1,answer_option,"","","",2,Nutzpflanzen,"",12102,6111,"",TRUE
+1054,Q1054_1,1,answer_option,"","","",3,allgemein mit Pflanzen und Saatgut,"",12102,6113,"",TRUE
+1066,Q1066_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1066,Q1066_1,1,answer_option,"","","",1,Ja,"",12143,6113,isco_skill_level_3,TRUE
+1066,Q1066_1,1,answer_option,"","","",2,Nein,"",12142,6113,isco_skill_level_2,TRUE
+1100,Q1100_1,1,question,sonstige,Mit welchem Sprachraum beschäftigen Sie sich in Ihrer Arbeit?,Mit welchem Sprachraum haben Sie sich in Ihrer Arbeit beschäftigt?,"","","","","","",
+1100,Q1100_1,1,answer_option,"","","",1,Germanistik,"",91114,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",2,Anglistik/Amerikanistik,"",91124,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",3,Romanistik,"",91134,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",4,Slawistik,"",91144,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",5,Arabistik und Orientalistik,"",91154,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",6,Mit dem asiatischen Raum,"",91164,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",7,Altphilologie und/oder Neogriechisch,"",91174,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",8,Es handelt sich um einen anderen spezifischen Sprachraum (z.B. Skandinavistik),"",91184,2643,"",TRUE
+1100,Q1100_1,1,answer_option,"","","",9,Mehr als eine Antwort trifft zu,"",91104,2643,"",TRUE
+1206,Q1206_1,1,question,sonstige,Wen begleiten Sie mit dem Klavier?,Wen haben Sie mit dem Klavier begleitet?,"","","","","","",
+1206,Q1206_1,1,answer_option,"","","",1,Tänzer/innen,"",94184,2653,"",TRUE
+1206,Q1206_1,1,answer_option,"","","",2,Sänger/innen oder ähnliches,"",94184,2652,"",TRUE
+1227,Q1227_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1227,Q1227_1,1,answer_option,"","","",1,Ja,"",94404,2654,isco_skill_level_4,TRUE
+1227,Q1227_1,1,answer_option,"","","",2,Nein,"",94403,3435,isco_skill_level_3,TRUE
+1235,Q1235_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1235,Q1235_1,1,answer_option,"","","",1,Ja,"",94514,2149,isco_skill_level_4,TRUE
+1235,Q1235_1,1,answer_option,"","","",2,Nein,"",94513,2149,isco_skill_level_3,TRUE
+1240,Q1240_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1240,Q1240_1,1,answer_option,"","","",1,Ja,"",94494,1431,isco_manager,TRUE
+1240,Q1240_1,1,answer_option,"","","",2,Nein,"",94493,2654,isco_supervisor,TRUE
+1246,Q1246_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1246,Q1246_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",94532,3521,isco_skill_level_2,TRUE
+1246,Q1246_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",94533,3521,isco_skill_level_3,TRUE
+1246,Q1246_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Film- und Fernsehproduktion oder einem verwandten Fach,"",94533,3521,isco_skill_level_3,TRUE
+1246,Q1246_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Film- und Fernsehproduktion oder einem verwandten Fach,"",94534,3521,isco_skill_level_4,TRUE
+1249,Q1249_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1249,Q1249_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",94612,3435,isco_skill_level_2,TRUE
+1249,Q1249_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",94613,3435,isco_skill_level_3,TRUE
+1249,Q1249_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Bühnen- und Kostümbild oder einem verwandten Fach,"",94613,3435,isco_skill_level_3,TRUE
+1249,Q1249_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Bühnen- und Kostümbild oder einem verwandten Fach,"",94614,3435,isco_skill_level_4,TRUE
+1518,Q1518_1,1,question,sonstige,Wo fischen Sie?,Wo haben Sie gefischt?,"","","","","","",
+1518,Q1518_1,1,answer_option,"","","",1,In der Hochsee,"",11422,6223,"",TRUE
+1518,Q1518_1,1,answer_option,"","","",2,In Binnengewässern oder an der Küste,"",11422,6222,"",TRUE
+1519,Q1519_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+1519,Q1519_1,1,answer_option,"","","",1,weder Führungs- noch Ausichtstätigkeit,"",11412,6221,isco_not_supervising,TRUE
+1519,Q1519_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",11493,6221,isco_supervisor,TRUE
+1519,Q1519_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",11494,1312,isco_manager,TRUE
+1520,Q1520_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Ingenieurwissenschaften erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Ingenieurwissenschaften erforderlich?,"","","","","","",
+1520,Q1520_1,1,answer_option,"","","",1,Ja,"",11424,2132,isco_skill_level_4,TRUE
+1520,Q1520_1,1,answer_option,"","","",2,Nein,"",11423,3141,isco_skill_level_3,TRUE
+1705,Q1705_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1705,Q1705_1,1,answer_option,"","","",1,Ja,"",25184,2144,isco_skill_level_4,TRUE
+1705,Q1705_1,1,answer_option,"","","",2,Nein,"",25183,3115,isco_skill_level_3,TRUE
+1706,Q1706_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1706,Q1706_1,1,answer_option,"","","",1,Ja,"",25184,2144,isco_skill_level_4,TRUE
+1706,Q1706_1,1,answer_option,"","","",2,Nein,"",25183,3115,isco_skill_level_3,TRUE
+1709,Q1709_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im einfachen, mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im einfachen, mittleren, gehobenen oder höheren Dienst?","","","","","","",
+1709,Q1709_1,1,answer_option,"","","",1,im einfachen Dienst oder vergleichbar,"",27182,3119,isco_skill_level_2,TRUE
+1709,Q1709_1,1,answer_option,"","","",2,im mittleren Dienst oder vergleichbar,"",27182,3119,isco_skill_level_2,TRUE
+1709,Q1709_1,1,answer_option,"","","",3,im gehobenen Dienst oder vergleichbar,"",27183,3119,isco_skill_level_3,TRUE
+1709,Q1709_1,1,answer_option,"","","",4,im höheren Dienst oder vergleichbar,"",27184,2149,isco_skill_level_4,TRUE
+1710,Q1710_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1710,Q1710_1,1,answer_option,"","","",1,Ja,"",11294,1311,isco_manager,TRUE
+1710,Q1710_1,1,answer_option,"","","",2,Nein,"",11293,6129,isco_supervisor,FALSE
+1710,Q1710_2,2,question,sonstige,Über die Zucht welcher Tiere führen Sie Aufsicht?,Über die Zucht welcher Tiere haben Sie Aufsicht geführt?,"","","","","","",
+1710,Q1710_2,2,answer_option,"","","",1,Über die Zucht von Nutztieren,"",11293,6121,"",TRUE
+1710,Q1710_2,2,answer_option,"","","",2,Über die Zucht von Geflügeltieren,"",11293,6122,"",TRUE
+1710,Q1710_2,2,answer_option,"","","",3,Über die Zucht von Bienen,"",11293,6123,"",TRUE
+1710,Q1710_2,2,answer_option,"","","",4,Über die Zucht anderer Tiere,"",11293,6129,"",TRUE
+1711,Q1711_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1711,Q1711_1,1,answer_option,"","","",1,Ja,"",11394,1311,isco_manager,TRUE
+1711,Q1711_1,1,answer_option,"","","",2,Nein,"",11393,6121,isco_supervisor,FALSE
+1711,Q1711_2,2,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+1711,Q1711_2,2,answer_option,"","","",1,Pferdeversorgung und Administratives - z.B. Sicherstellen von Futter,"",11393,6121,"",TRUE
+1711,Q1711_2,2,answer_option,"","","",2,Pferdezucht und -haltung - z.B. Zuchtpläne erstellen,"",11393,3142,"",TRUE
+1711,Q1711_2,2,answer_option,"","","",3,Ausbildung und Pflege der Pferde - z.B. Pferde auf Tauglichkeit untersuchen,"",11393,5164,"",TRUE
+1711,Q1711_2,2,answer_option,"","","",4,Ausbildung von Reitern - z.B. Koordination und Durchführung von Reitkursen,"",11393,3423,"",TRUE
+1711,Q1711_2,2,answer_option,"","","",5,Mehr als ein Aufgabenbereich trifft zu,"",11393,6121,"",TRUE
+1712,Q1712_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1712,Q1712_1,1,answer_option,"","","",1,Ja,"",11594,1439,isco_manager,TRUE
+1712,Q1712_1,1,answer_option,"","","",2,Nein,"",11593,5164,isco_supervisor,TRUE
+1713,Q1713_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1713,Q1713_1,1,answer_option,"","","",1,Ja,"",12194,1311,isco_manager,TRUE
+1713,Q1713_1,1,answer_option,"","","",2,Nein,"",12193,6113,isco_supervisor,FALSE
+1713,Q1713_2,2,question,sonstige,Mit der Zucht welcher Art von Pflanzen befassen Sie sich hauptsächlich?,Mit der Zucht welcher Art von Pflanzen haben Sie sich hauptsächlich befasst?,"","","","","","",
+1713,Q1713_2,2,answer_option,"","","",1, Mit der Zucht von Bäumen und Sträuchern,"",12193,6112,"",TRUE
+1713,Q1713_2,2,answer_option,"","","",2,Mit der Zucht von Gemüse und Obst,"",12193,6111,"",TRUE
+1713,Q1713_2,2,answer_option,"","","",3,Keine der anderen Antworten trifft zu,"",12193,6113,"",TRUE
+1714,Q1714_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1714,Q1714_1,1,answer_option,"","","",1,Ja,"",12294,1321,isco_manager,TRUE
+1714,Q1714_1,1,answer_option,"","","",2,Nein,"",12293,3122,isco_supervisor,TRUE
+1715,Q1715_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1715,Q1715_1,1,answer_option,"","","",1,Ja,"",11494,1312,isco_manager,TRUE
+1715,Q1715_1,1,answer_option,"","","",2,Nein,"",11493,6223,isco_supervisor,FALSE
+1715,Q1715_2,2,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig? ,In welchem Bereich waren Sie vorwiegend tätig? ,"","","","","","",
+1715,Q1715_2,2,answer_option,"","","",1,In der Aquakultur,"",11493,6221,"",TRUE
+1715,Q1715_2,2,answer_option,"","","",2,In der Binnen- und Küstenfischerei,"",11493,6222,"",TRUE
+1715,Q1715_2,2,answer_option,"","","",3,In der Hochseefischerei,"",11493,6223,"",TRUE
+1716,Q1716_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1716,Q1716_1,1,answer_option,"","","",1,Ja,"",22104,2145,isco_skill_level_4,TRUE
+1716,Q1716_1,1,answer_option,"","","",2,Nein,"",22103,3116,isco_skill_level_3,TRUE
+1717,Q1717_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1717,Q1717_1,1,answer_option,"","","",1,Ja,"",22394,1321,isco_manager,TRUE
+1717,Q1717_1,1,answer_option,"","","",2,Nein,"",22393,3122,isco_supervisor,TRUE
+1718,Q1718_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1718,Q1718_1,1,answer_option,"","","",1,Ja,"",23414,2149,isco_skill_level_4,TRUE
+1718,Q1718_1,1,answer_option,"","","",2,Nein,"",23413,3119,isco_skill_level_3,TRUE
+1719,Q1719_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1719,Q1719_1,1,answer_option,"","","",1,Ja,"",24114,2146,isco_skill_level_4,TRUE
+1719,Q1719_1,1,answer_option,"","","",2,Nein,"",24113,3135,isco_skill_level_3,TRUE
+1720,Q1720_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1720,Q1720_1,1,answer_option,"","","",1,Ja,"",24424,2144,isco_skill_level_4,TRUE
+1720,Q1720_1,1,answer_option,"","","",2,Nein,"",24423,3115,isco_skill_level_3,TRUE
+1721,Q1721_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1721,Q1721_1,1,answer_option,"","","",1,Nein,"",24532,7311,isco_skill_level_2,TRUE
+1721,Q1721_1,1,answer_option,"","","",2,Ja,"",24533,7311,isco_skill_level_3,TRUE
+1722,Q1722_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Maschinenbau erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Maschinenbau erforderlich?,"","","","","","",
+1722,Q1722_1,1,answer_option,"","","",1,Ja,"",25104,2144,isco_skill_level_4,TRUE
+1722,Q1722_1,1,answer_option,"","","",2,Nein,"",25103,3115,isco_skill_level_3,TRUE
+1723,Q1723_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1723,Q1723_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",25132,7412,isco_skill_level_2,TRUE
+1723,Q1723_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",25133,3115,isco_skill_level_3,TRUE
+1723,Q1723_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",25133,3115,isco_skill_level_3,TRUE
+1723,Q1723_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",25134,2144,isco_skill_level_4,TRUE
+1724,Q1724_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1724,Q1724_1,1,answer_option,"","","",1,Ja,"",25184,2144,isco_skill_level_4,TRUE
+1724,Q1724_1,1,answer_option,"","","",2,Nein,"",25183,3115,isco_skill_level_3,TRUE
+1725,Q1725_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1725,Q1725_1,1,answer_option,"","","",1,Ja,"",25224,2144,isco_skill_level_4,TRUE
+1725,Q1725_1,1,answer_option,"","","",2,Nein,"",25223,3115,isco_skill_level_3,TRUE
+1726,Q1726_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1726,Q1726_1,1,answer_option,"","","",1,Ja,"",25234,2144,isco_skill_level_4,TRUE
+1726,Q1726_1,1,answer_option,"","","",2,Nein,"",25233,3115,isco_skill_level_3,TRUE
+1727,Q1727_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1727,Q1727_1,1,answer_option,"","","",1,Ja,"",25244,2144,isco_skill_level_4,TRUE
+1727,Q1727_1,1,answer_option,"","","",2,Nein,"",25243,3115,isco_skill_level_3,TRUE
+1728,Q1728_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1728,Q1728_1,1,answer_option,"","","",1,Ja,"",25254,2144,isco_skill_level_4,TRUE
+1728,Q1728_1,1,answer_option,"","","",2,Nein,"",25253,3115,isco_skill_level_3,TRUE
+1729,Q1729_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1729,Q1729_1,1,answer_option,"","","",1,Ja,"",26114,2151,isco_skill_level_4,TRUE
+1729,Q1729_1,1,answer_option,"","","",2,Nein,"",26113,3113,isco_skill_level_3,TRUE
+1730,Q1730_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1730,Q1730_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",26122,7421,isco_skill_level_2,TRUE
+1730,Q1730_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",26123,3113,isco_skill_level_3,TRUE
+1730,Q1730_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Automatisierungstechnik,"",26123,3113,isco_skill_level_3,TRUE
+1730,Q1730_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Automatisierungstechnik,"",26124,2152,isco_skill_level_4,TRUE
+1731,Q1731_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1731,Q1731_1,1,answer_option,"","","",1,Ja,"",26244,2151,isco_skill_level_4,TRUE
+1731,Q1731_1,1,answer_option,"","","",2,Nein,"",26243,3113,isco_skill_level_3,TRUE
+1732,Q1732_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1732,Q1732_1,1,answer_option,"","","",1,Ja,"",26264,2151,isco_skill_level_4,TRUE
+1732,Q1732_1,1,answer_option,"","","",2,Nein,"",26263,3113,isco_skill_level_3,TRUE
+1733,Q1733_1,1,question,spezialisierung,Liegt der Schwerpunkt Ihrer Arbeit im Bereich Elektrotechnik oder im Bereich Elektronik?,Lag der Schwerpunkt Ihrer Arbeit im Bereich Elektrotechnik oder im Bereich Elektronik?,"","","","","","",
+1733,Q1733_1,1,answer_option,"","","",1,Elektrotechnik,"","","","",FALSE
+1733,Q1733_1,1,answer_option,"","","",2,Elektronik,"","","","",FALSE
+1733,Q1733_2,2,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1733,Q1733_2,2,answer_option,"","","",1,Ja,"","","",isco_skill_level_4,TRUE
+1733,Q1733_2,2,answer_option,"","","",2,Nein,"","","",isco_skill_level_3,TRUE
+1733,,,aggregated_answer_encoding,"","","","","",Q1733_1=1&Q1733_2=1,26304,2151,"",
+1733,,,aggregated_answer_encoding,"","","","","",Q1733_1=1&Q1733_2=2,26303,3113,"",
+1733,,,aggregated_answer_encoding,"","","","","",Q1733_1=2&Q1733_2=1,26304,2152,"",
+1733,,,aggregated_answer_encoding,"","","","","",Q1733_1=2&Q1733_2=2,26303,3114,"",
+1734,Q1734_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1734,Q1734_1,1,answer_option,"","","",1,Ja,"",26314,2153,isco_skill_level_4,TRUE
+1734,Q1734_1,1,answer_option,"","","",2,Nein,"",26313,3522,isco_skill_level_3,FALSE
+1734,Q1734_2,2,question,spezialisierung,Liegt der Schwerpunkt Ihrer Arbeit im Bereich Rundfunk oder im Bereich Telekommunikationstechnik?,Lag der Schwerpunkt Ihrer Arbeit im Bereich Rundfunk oder im Bereich Telekommunikationstechnik?,"","","","","","",
+1734,Q1734_2,2,answer_option,"","","",1,Rundfunk,"",26303,3521,"",TRUE
+1734,Q1734_2,2,answer_option,"","","",2,Telekommunikationstechnik,"",26313,3522,"",TRUE
+1735,Q1735_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1735,Q1735_1,1,answer_option,"","","",1,Ja,"",26324,2152,isco_skill_level_4,TRUE
+1735,Q1735_1,1,answer_option,"","","",2,Nein,"",26323,3114,isco_skill_level_3,TRUE
+1736,Q1736_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1736,Q1736_1,1,answer_option,"","","",1,Ja,"",26334,2152,isco_skill_level_4,TRUE
+1736,Q1736_1,1,answer_option,"","","",2,Nein,"",26333,3114,isco_skill_level_3,TRUE
+1737,Q1737_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1737,Q1737_1,1,answer_option,"","","",1,Ja,"",27224,2149,isco_skill_level_4,TRUE
+1737,Q1737_1,1,answer_option,"","","",2,Nein,"",27223,3119,isco_skill_level_3,TRUE
+1738,Q1738_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1738,Q1738_1,1,answer_option,"","","",1,Ja,"",27314,2141,isco_skill_level_4,TRUE
+1738,Q1738_1,1,answer_option,"","","",2,Nein,"",27313,3119,isco_skill_level_3,TRUE
+1739,Q1739_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1739,Q1739_1,1,answer_option,"","","",1,Ja,"",28104,2149,isco_skill_level_4,TRUE
+1739,Q1739_1,1,answer_option,"","","",2,Nein,"",28103,3115,isco_skill_level_3,FALSE
+1739,Q1739_2,2,question,spezialisierung,In welchem Bereich sind sie vorwiegend tätig?,In welchem Bereich waren sie vorwiegend tätig?,"","","","","","",
+1739,Q1739_2,2,answer_option,"","","",1,"Herstellung von Fäden, Garnen oder Zwirnen","",28133,3115,"",TRUE
+1739,Q1739_2,2,answer_option,"","","",2,"Herstellung von textilen Flächengebilden wie Gewebe, Gewirke oder Strickwaren","",28123,3115,"",TRUE
+1739,Q1739_2,2,answer_option,"","","",3,"Veredelung der Textilien durch Bleichen, Färben, Schrumpfen oder andere Behandlung","",28143,3115,"",TRUE
+1739,Q1739_2,2,answer_option,"","","",4,oder trifft mehr als eines zu?,"",28103,3115,"",TRUE
+1740,Q1740_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1740,Q1740_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",28112,7532,isco_skill_level_2,TRUE
+1740,Q1740_1,1,answer_option,"","","",3,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",28113,2163,isco_skill_level_3,TRUE
+1740,Q1740_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",28113,2163,isco_skill_level_3,TRUE
+1740,Q1740_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium,"",28114,2163,isco_skill_level_4,TRUE
+1741,Q1741_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1741,Q1741_1,1,answer_option,"","","",1,Ja,"",28224,2149,isco_skill_level_4,TRUE
+1741,Q1741_1,1,answer_option,"","","",2,Nein,"",28223,3119,isco_skill_level_3,TRUE
+1742,Q1742_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1742,Q1742_1,1,answer_option,"","","",1,Ja,"",28314,2141,isco_skill_level_4,TRUE
+1742,Q1742_1,1,answer_option,"","","",2,Nein,"",28313,3119,isco_skill_level_3,TRUE
+1743,Q1743_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+1743,Q1743_1,1,answer_option,"","","",1,Ja,"",51193,3151,isco_supervisor,TRUE
+1743,Q1743_1,1,answer_option,"","","",2,Nein,"",51132,8350,isco_not_supervising,FALSE
+1743,Q1743_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1743,Q1743_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",51132,8350,isco_skill_level_2,TRUE
+1743,Q1743_2,2,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",51133,3151,isco_skill_level_3,TRUE
+1743,Q1743_2,2,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich der Schiffsbetriebstechnik,"",51133,3151,isco_skill_level_3,TRUE
+1743,Q1743_2,2,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich der Schiffsbetriebstechnik,"",51134,3151,isco_skill_level_4,TRUE
+1744,Q1744_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1744,Q1744_1,1,answer_option,"","","",1,Ja,"",51234,2152,isco_skill_level_4,TRUE
+1744,Q1744_1,1,answer_option,"","","",2,Nein,"",51233,3155,isco_skill_level_3,TRUE
+1745,Q1745_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1745,Q1745_1,1,answer_option,"","","",1,Nein,"",51242,8343,isco_skill_level_2,TRUE
+1745,Q1745_1,1,answer_option,"","","",2,Ja,"",51243,3112,isco_skill_level_3,TRUE
+1746,Q1746_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1746,Q1746_1,1,answer_option,"","","",1,Ja,"",51504,2164,isco_skill_level_4,TRUE
+1746,Q1746_1,1,answer_option,"","","",2,Nein,"",51503,3119,isco_skill_level_3,FALSE
+1746,Q1746_2,2,question,sonstige,Mit welchem Verkehrssystem beschäftigen Sie sich?,Mit welchem Verkehrssystem haben Sie sich beschäftigt?,"","","","","","",
+1746,Q1746_2,2,answer_option,"","","",1,Straßenverkehr,"",51513,3119,"",TRUE
+1746,Q1746_2,2,answer_option,"","","",2,Schienenverkehr,"",51523,3119,"",TRUE
+1746,Q1746_2,2,answer_option,"","","",3,mehrere Verkehrssysteme,"",51503,3119,"",TRUE
+1747,Q1747_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Betriebswirtschaftslehre erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Betriebswirtschaftslehre erforderlich?,"","","","","","",
+1747,Q1747_1,1,answer_option,"","","",1,Ja,"",61124,2433,isco_skill_level_4,TRUE
+1747,Q1747_1,1,answer_option,"","","",2,Nein,"",61123,3322,isco_skill_level_3,TRUE
+1748,Q1748_1,1,question,sonstige,Handelt Ihr Unternehmen mit Waren aus unterschiedlichen Branchen?,Hat Ihr Unternehmen mit Waren aus unterschiedlichen Branchen gehandelt?,"","","","","","",
+1748,Q1748_1,1,answer_option,"","","",1,Ja,"","","","",FALSE
+1748,Q1748_1,1,answer_option,"","","",2,Nein,"","","","",FALSE
+1748,Q1748_2,2,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1748,Q1748_2,2,answer_option,"","","",1,Ja,"","","",isco_skill_level_4,TRUE
+1748,Q1748_2,2,answer_option,"","","",2,Nein,"","","",isco_skill_level_3,TRUE
+1748,,,aggregated_answer_encoding,"","","","","",Q1748_1=1&Q1748_2=1,61204,2433,"",
+1748,,,aggregated_answer_encoding,"","","","","",Q1748_1=1&Q1748_2=2,61203,3324,"",
+1748,,,aggregated_answer_encoding,"","","","","",Q1748_1=2&Q1748_2=1,61284,2433,"",
+1748,,,aggregated_answer_encoding,"","","","","",Q1748_1=2&Q1748_2=2,61283,3324,"",
+1749,Q1749_1,1,question,sonstige,Handelt Ihr Unternehmen mit Waren aus unterschiedlichen Branchen?,Hat Ihr Unternehmen mit Waren aus unterschiedlichen Branchen gehandelt?,"","","","","","",
+1749,Q1749_1,1,answer_option,"","","",1,Ja,"","","","",FALSE
+1749,Q1749_1,1,answer_option,"","","",2,Nein,"","","","",FALSE
+1749,Q1749_2,2,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1749,Q1749_2,2,answer_option,"","","",1,Ja,"","","",isco_skill_level_4,TRUE
+1749,Q1749_2,2,answer_option,"","","",2,Nein,"","","",isco_skill_level_3,TRUE
+1749,,,aggregated_answer_encoding,"","","","","",Q1749_1=1&Q1749_2=1,61214,2433,"",
+1749,,,aggregated_answer_encoding,"","","","","",Q1749_1=1&Q1749_2=2,61213,3324,"",
+1749,,,aggregated_answer_encoding,"","","","","",Q1749_1=2&Q1749_2=1,61284,2433,"",
+1749,,,aggregated_answer_encoding,"","","","","",Q1749_1=2&Q1749_2=2,61283,3324,"",
+1750,Q1750_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1750,Q1750_1,1,answer_option,"","","",1,Ja,"",62194,1420,isco_manager,TRUE
+1750,Q1750_1,1,answer_option,"","","",2,Nein,"",62193,5222,isco_supervisor,TRUE
+1764,Q1764_1,1,question,sonstige,Reinigen Sie das Verkehrsmittel hauptsächlich von innen oder von außen?,Haben Sie das Verkehrsmittel hauptsächlich von innen oder von außen gereinigt?,"","","","","","",
+1764,Q1764_1,1,answer_option,"","","",1,von innen,"",54152,9112,"",TRUE
+1764,Q1764_1,1,answer_option,"","","",2,von außen,"",54152,9122,"",TRUE
+1770,Q1770_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1770,Q1770_1,1,answer_option,"","","",1,Nein,"",43412,2514,isco_skill_level_2,TRUE
+1770,Q1770_1,1,answer_option,"","","",2,Ja,"",43413,2512,isco_skill_level_3,TRUE
+1771,Q1771_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1771,Q1771_1,1,answer_option,"","","",1,Ja,"",43384,2529,isco_skill_level_4,TRUE
+1771,Q1771_1,1,answer_option,"","","",2,Nein,"",43383,2529,isco_skill_level_3,TRUE
+1772,Q1772_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1772,Q1772_1,1,answer_option,"","","",1,Ja,"",43314,2523,isco_skill_level_4,TRUE
+1772,Q1772_1,1,answer_option,"","","",2,Nein,"",43313,3513,isco_skill_level_3,TRUE
+1773,Q1773_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1773,Q1773_1,1,answer_option,"","","",1,Ja,"",42334,2263,isco_skill_level_4,TRUE
+1773,Q1773_1,1,answer_option,"","","",2,Nein,"",42333,3257,isco_skill_level_3,TRUE
+1774,Q1774_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1774,Q1774_1,1,answer_option,"","","",1,Ja,"",42324,2133,isco_skill_level_4,TRUE
+1774,Q1774_1,1,answer_option,"","","",2,Nein,"",42323,3257,isco_skill_level_3,TRUE
+1775,Q1775_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1775,Q1775_1,1,answer_option,"","","",1,Nein,"",31102,3112,isco_skill_level_2,TRUE
+1775,Q1775_1,1,answer_option,"","","",2,Ja,"",31103,3112,isco_skill_level_3,FALSE
+1775,Q1775_2,2,question,spezialisierung,"Arbeiten Sie hauptsächlich an Projekten im Hochbau, im Tiefbau oder an Projekten im Hoch- und Tiefbau gleichermaßen?","Haben Sie hauptsächlich an Projekten im Hochbau, im Tiefbau oder an Projekten im Hoch- und Tiefbau gleichermaßen gearbeitet?","","","","","","",
+1775,Q1775_2,2,answer_option,"","","",1,im Hochbau (d.h. Errichtung von Gebäuden),"",32103,3112,"",TRUE
+1775,Q1775_2,2,answer_option,"","","",2,"im Tiefbau (d.h. Bauarbeiten an Rohrleitungen, Tunneln, Straßen, Brücken, Kanälen, Gleisen usw.)","",32203,3112,"",TRUE
+1775,Q1775_2,2,answer_option,"","","",3,im Hoch- und Tiefbau gleichermaßen,"",31103,3112,"",TRUE
+1776,Q1776_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1776,Q1776_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",31132,3112,isco_skill_level_2,TRUE
+1776,Q1776_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",31133,3112,isco_skill_level_3,TRUE
+1776,Q1776_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Verkehrs- oder Bauingenieurwesen,"",31133,3112,isco_skill_level_3,TRUE
+1776,Q1776_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Verkehrs- oder Bauingenieurwesen,"",31134,2164,isco_skill_level_4,TRUE
+1777,Q1777_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1777,Q1777_1,1,answer_option,"","","",1,Ja,"",31154,2161,isco_skill_level_4,TRUE
+1777,Q1777_1,1,answer_option,"","","",2,Nein,"",31153,3112,isco_skill_level_3,TRUE
+1778,Q1778_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit ein abgeschlossenes Masterstudium im Bereich Bauingenieurwesen oder Architektur erforderlich?,War für diese Tätigkeit ein abgeschlossenes Masterstudium im Bereich Bauingenieurwesen oder Architektur erforderlich?,"","","","","","",
+1778,Q1778_1,1,answer_option,"","","",1,Ja,"",32104,2142,isco_skill_level_4,TRUE
+1778,Q1778_1,1,answer_option,"","","",2,Nein,"",32103,3112,isco_skill_level_3,TRUE
+1779,Q1779_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Bauingenieurwesen oder Architektur erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Bauingenieurwesen oder Architektur erforderlich?,"","","","","","",
+1779,Q1779_1,1,answer_option,"","","",1,Ja,"",32204,2142,isco_skill_level_4,TRUE
+1779,Q1779_1,1,answer_option,"","","",2,Nein,"",32203,3112,isco_skill_level_3,TRUE
+1780,Q1780_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Bauingenieurwesen erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Bauingenieurwesen erforderlich?,"","","","","","",
+1780,Q1780_1,1,answer_option,"","","",1,Ja,"",32224,2142,isco_skill_level_4,TRUE
+1780,Q1780_1,1,answer_option,"","","",2,Nein,"",32223,3112,isco_skill_level_3,TRUE
+1781,Q1781_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1781,Q1781_1,1,answer_option,"","","",1,Ja,"",32264,2142,isco_skill_level_4,TRUE
+1781,Q1781_1,1,answer_option,"","","",2,Nein,"",32263,3112,isco_skill_level_3,TRUE
+1782,Q1782_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1782,Q1782_1,1,answer_option,"","","",1,Ja,"",34104,2142,isco_skill_level_4,TRUE
+1782,Q1782_1,1,answer_option,"","","",2,Nein,"",34103,3112,isco_skill_level_3,TRUE
+1783,Q1783_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+1783,Q1783_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+1783,Q1783_1,1,answer_option,"","","",2,Nein,"",34233,3115,isco_not_supervising,FALSE
+1783,Q1783_2,2,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1783,Q1783_2,2,answer_option,"","","",1,Ja,"",34234,2144,isco_skill_level_4,TRUE
+1783,Q1783_2,2,answer_option,"","","",2,Nein,"",34233,3115,isco_skill_level_3,TRUE
+1784,Q1784_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1784,Q1784_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",34302,7126,isco_skill_level_2,TRUE
+1784,Q1784_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",34303,3115,isco_skill_level_3,TRUE
+1784,Q1784_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",34303,3115,isco_skill_level_3,TRUE
+1784,Q1784_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",34304,2144,isco_skill_level_4,TRUE
+1785,Q1785_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1785,Q1785_1,1,answer_option,"","","",1,Ja,"",34314,2143,isco_skill_level_4,TRUE
+1785,Q1785_1,1,answer_option,"","","",2,Nein,"",34313,3115,isco_skill_level_3,TRUE
+1786,Q1786_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1786,Q1786_1,1,answer_option,"","","",1,Ja,"",34324,2142,isco_skill_level_4,TRUE
+1786,Q1786_1,1,answer_option,"","","",2,Nein,"",34323,3112,isco_skill_level_3,TRUE
+1787,Q1787_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1787,Q1787_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",34301,9612,isco_skill_level_1,TRUE
+1787,Q1787_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",34332,9612,isco_skill_level_2,TRUE
+1787,Q1787_1,1,answer_option,"","","",3,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",34333,3132,isco_skill_level_3,TRUE
+1787,Q1787_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",34333,3132,isco_skill_level_3,TRUE
+1787,Q1787_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium,"",34334,2143,isco_skill_level_4,TRUE
+1788,Q1788_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Mathematik erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Mathematik erforderlich?,"","","","","","",
+1788,Q1788_1,1,answer_option,"","","",1,Ja,"",41104,2120,isco_skill_level_4,TRUE
+1788,Q1788_1,1,answer_option,"","","",2,Nein,"",41103,2120,isco_skill_level_3,TRUE
+1789,Q1789_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1789,Q1789_1,1,answer_option,"","","",1,Ja,"",41294,1349,isco_manager,TRUE
+1789,Q1789_1,1,answer_option,"","","",2,Nein,"",41293,3141,isco_supervisor,TRUE
+1790,Q1790_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Chemie erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Chemie erforderlich?,"","","","","","",
+1790,Q1790_1,1,answer_option,"","","",1,Ja,"",41304,2113,isco_skill_level_4,TRUE
+1790,Q1790_1,1,answer_option,"","","",2,Nein,"",41303,2113,isco_skill_level_3,TRUE
+1791,Q1791_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1791,Q1791_1,1,answer_option,"","","",1,Nein,"",41312,8131,isco_skill_level_2,TRUE
+1791,Q1791_1,1,answer_option,"","","",2,Ja,"",41313,3116,isco_skill_level_3,TRUE
+1792,Q1792_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1792,Q1792_1,1,answer_option,"","","",1,Ja,"",41394,1349,isco_manager,TRUE
+1792,Q1792_1,1,answer_option,"","","",2,Nein,"",41393,3122,isco_supervisor,TRUE
+1793,Q1793_1,1,question,anforderungsniveau,Ist für Ihre in der Regel Tätigkeit ein abgeschlossenes Masterstudium im Bereich Physik erforderlich?,War für Ihre in der Regel Tätigkeit ein abgeschlossenes Masterstudium im Bereich Physik erforderlich?,"","","","","","",
+1793,Q1793_1,1,answer_option,"","","",1,Ja,"",41404,2111,isco_skill_level_4,TRUE
+1793,Q1793_1,1,answer_option,"","","",2,Nein,"",41403,2111,isco_skill_level_3,TRUE
+1794,Q1794_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1794,Q1794_1,1,answer_option,"","","",1,Nein,"",41422,3111,isco_skill_level_2,TRUE
+1794,Q1794_1,1,answer_option,"","","",2,Ja,"",41423,3111,isco_skill_level_3,TRUE
+1795,Q1795_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1795,Q1795_1,1,answer_option,"","","",1,Nein,"",41432,3112,isco_skill_level_2,TRUE
+1795,Q1795_1,1,answer_option,"","","",2,Ja,"",41433,3112,isco_skill_level_3,TRUE
+1796,Q1796_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1796,Q1796_1,1,answer_option,"","","",1,Ja,"",41494,1349,isco_manager,TRUE
+1796,Q1796_1,1,answer_option,"","","",2,Nein,"",41493,3122,isco_supervisor,TRUE
+1797,Q1797_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1797,Q1797_1,1,answer_option,"","","",1,Nein,"",42112,3111,isco_skill_level_2,TRUE
+1797,Q1797_1,1,answer_option,"","","",2,Ja,"",42113,3111,isco_skill_level_3,TRUE
+1798,Q1798_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1798,Q1798_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",42142,3111,isco_skill_level_2,TRUE
+1798,Q1798_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",42143,3111,isco_skill_level_3,TRUE
+1798,Q1798_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Meteorologie,"",42143,3111,isco_skill_level_3,TRUE
+1798,Q1798_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Meteorologie,"",42144,2112,isco_skill_level_4,TRUE
+1799,Q1799_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Umweltschutztechnik erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Umweltschutztechnik erforderlich?,"","","","","","",
+1799,Q1799_1,1,answer_option,"","","",1,Ja,"",42204,2143,isco_skill_level_4,TRUE
+1799,Q1799_1,1,answer_option,"","","",2,Nein,"",42203,3119,isco_skill_level_3,TRUE
+1800,Q1800_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1800,Q1800_1,1,answer_option,"","","",1,Ja,"",41394,1321,isco_manager,TRUE
+1800,Q1800_1,1,answer_option,"","","",2,Nein,"",41393,3122,isco_supervisor,TRUE
+1807,Q1807_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1807,Q1807_1,1,answer_option,"","","",1,Ja,"",81394,1324,isco_manager,TRUE
+1807,Q1807_1,1,answer_option,"","","",2,Nein,"",81393,2221,isco_supervisor,TRUE
+1820,Q1820_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1820,Q1820_1,1,answer_option,"","","",1,Nein,"",63112,4221,isco_skill_level_2,TRUE
+1820,Q1820_1,1,answer_option,"","","",2,Ja,"",63113,4221,isco_skill_level_3,TRUE
+1821,Q1821_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1821,Q1821_1,1,answer_option,"","","",1,Nein,"",63212,3343,isco_skill_level_2,TRUE
+1821,Q1821_1,1,answer_option,"","","",2,Ja,"",63213,3343,isco_skill_level_3,TRUE
+1822,Q1822_1,1,question,sonstige,Ist Ihre Stellung mindestens die eines 'Chef de Rang' oder vergleichbar?,War Ihre Stellung mindestens die eines 'Chef de Rang' oder vergleichbar?,"","","","","","",
+1822,Q1822_1,1,answer_option,"","","",1,Nein,"",63302,5131,"",TRUE
+1822,Q1822_1,1,answer_option,"","","",2,Ja,"",63303,5131,"",TRUE
+1823,Q1823_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1823,Q1823_1,1,answer_option,"","","",1,Nein,"",72212,4311,isco_skill_level_2,TRUE
+1823,Q1823_1,1,answer_option,"","","",2,Ja,"",72213,3313,isco_skill_level_3,TRUE
+1824,Q1824_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1824,Q1824_1,1,answer_option,"","","",1,Ja,"",72224,2411,isco_skill_level_4,TRUE
+1824,Q1824_1,1,answer_option,"","","",2,Nein,"",72223,3313,isco_skill_level_3,TRUE
+1825,Q1825_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1825,Q1825_1,1,answer_option,"","","",1,Ja,"",73324,2622,isco_skill_level_4,TRUE
+1825,Q1825_1,1,answer_option,"","","",2,Nein,"",73323,3433,isco_skill_level_3,TRUE
+1826,Q1826_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1826,Q1826_1,1,answer_option,"","","",1,Nein,"",81142,3240,isco_skill_level_2,TRUE
+1826,Q1826_1,1,answer_option,"","","",2,Ja,"",81143,3240,isco_skill_level_3,TRUE
+1827,Q1827_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1827,Q1827_1,1,answer_option,"","","",1,Ja,"",81394,1342,isco_manager,TRUE
+1827,Q1827_1,1,answer_option,"","","",2,Nein,"",81393,2221,isco_supervisor,TRUE
+1828,Q1828_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1828,Q1828_1,1,answer_option,"","","",1,Nein,"",82232,3259,isco_skill_level_2,TRUE
+1828,Q1828_1,1,answer_option,"","","",2,Ja,"",82233,2265,isco_skill_level_3,TRUE
+1829,Q1829_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1829,Q1829_1,1,answer_option,"","","",1,Ja,"",82504,2149,isco_skill_level_4,TRUE
+1829,Q1829_1,1,answer_option,"","","",2,Nein,"",82503,3119,isco_skill_level_3,TRUE
+1830,Q1830_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1830,Q1830_1,1,answer_option,"","","",1,Ja,"",82594,1321,isco_manager,TRUE
+1830,Q1830_1,1,answer_option,"","","",2,Nein,"",82593,3214,isco_supervisor,TRUE
+1831,Q1831_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1831,Q1831_1,1,answer_option,"","","",1,Ja,"",82594,1321,isco_manager,TRUE
+1831,Q1831_1,1,answer_option,"","","",2,Nein,"",82593,3214,isco_supervisor,TRUE
+1832,Q1832_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1832,Q1832_1,1,answer_option,"","","",1,Ja,"",82594,1321,isco_manager,TRUE
+1832,Q1832_1,1,answer_option,"","","",2,Nein,"",82593,3254,isco_supervisor,TRUE
+1833,Q1833_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1833,Q1833_1,1,answer_option,"","","",1,Ja,"",82594,1321,isco_manager,TRUE
+1833,Q1833_1,1,answer_option,"","","",2,Nein,"",82593,3214,isco_supervisor,TRUE
+1834,Q1834_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+1834,Q1834_1,1,answer_option,"","","",1,Nein,"",83142,5322,isco_skill_level_2,TRUE
+1834,Q1834_1,1,answer_option,"","","",2,Ja,"",83143,5322,isco_skill_level_3,TRUE
+1835,Q1835_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Archäologie erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Archäologie erforderlich?,"","","","","","",
+1835,Q1835_1,1,answer_option,"","","",1,Ja,"",91234,2632,isco_skill_level_4,TRUE
+1835,Q1835_1,1,answer_option,"","","",2,Nein,"",91233,3119,isco_skill_level_3,TRUE
+1836,Q1836_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1836,Q1836_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",91342,3314,isco_skill_level_2,TRUE
+1836,Q1836_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",91343,3314,isco_skill_level_3,TRUE
+1836,Q1836_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",91343,3314,isco_skill_level_3,TRUE
+1836,Q1836_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",91344,2120,isco_skill_level_4,FALSE
+1836,Q1836_2,2,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+1836,Q1836_2,2,answer_option,"","","",1,Entwicklung statistischer Analysewerkzeuge; Evaluation und Analyse statistischer Daten,"",91344,2120,"",TRUE
+1836,Q1836_2,2,answer_option,"","","",2,Erarbeiten von Fragestellungen; Konzeption von Befragungsstudien; Diskussion der Ergebnisse,"",91344,2632,"",TRUE
+1837,Q1837_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1837,Q1837_1,1,answer_option,"","","",1,Ja,"",92114,2431,isco_skill_level_4,TRUE
+1837,Q1837_1,1,answer_option,"","","",2,Nein,"",92113,2431,isco_skill_level_3,TRUE
+1838,Q1838_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1838,Q1838_1,1,answer_option,"","","",1,Ja,"",92414,2642,isco_skill_level_4,TRUE
+1838,Q1838_1,1,answer_option,"","","",2,Nein,"",92413,2642,isco_skill_level_3,TRUE
+1839,Q1839_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1839,Q1839_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",93102,2163,isco_skill_level_2,TRUE
+1839,Q1839_1,1,answer_option,"","","",3,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",93103,2163,isco_skill_level_3,TRUE
+1839,Q1839_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",93103,2163,isco_skill_level_3,TRUE
+1839,Q1839_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium,"",93104,2163,isco_skill_level_4,TRUE
+1840,Q1840_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1840,Q1840_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",93212,3432,isco_skill_level_2,TRUE
+1840,Q1840_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",93213,3432,isco_skill_level_3,TRUE
+1840,Q1840_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",93213,3432,isco_skill_level_3,TRUE
+1840,Q1840_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",93214,2161,isco_skill_level_4,TRUE
+1841,Q1841_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1841,Q1841_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",93522,7313,isco_skill_level_2,TRUE
+1841,Q1841_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",93523,2163,isco_skill_level_3,TRUE
+1841,Q1841_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",93523,2163,isco_skill_level_3,TRUE
+1841,Q1841_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",93524,2163,isco_skill_level_4,TRUE
+1842,Q1842_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1842,Q1842_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",94532,3521,isco_skill_level_2,TRUE
+1842,Q1842_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",94533,3521,isco_skill_level_3,TRUE
+1842,Q1842_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",94533,3521,isco_skill_level_3,TRUE
+1842,Q1842_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",94534,2654,isco_skill_level_4,TRUE
+1843,Q1843_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1843,Q1843_1,1,answer_option,"","","",1,Ja,"",24124,2146,isco_skill_level_4,TRUE
+1843,Q1843_1,1,answer_option,"","","",2,Nein,"",24123,3135,isco_skill_level_3,TRUE
+1844,Q1844_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1844,Q1844_1,1,answer_option,"","","",1,Ja,"",24134,2146,isco_skill_level_4,TRUE
+1844,Q1844_1,1,answer_option,"","","",2,Nein,"",24133,3117,isco_skill_level_3,TRUE
+1845,Q1845_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1845,Q1845_1,1,answer_option,"","","",1,Ja,"",24304,2146,isco_skill_level_4,TRUE
+1845,Q1845_1,1,answer_option,"","","",2,Nein,"",24303,3116,isco_skill_level_3,TRUE
+1846,Q1846_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1846,Q1846_1,1,answer_option,"","","",1,Ja,"",24414,2142,isco_skill_level_4,TRUE
+1846,Q1846_1,1,answer_option,"","","",2,Nein,"",24413,3112,isco_skill_level_3,TRUE
+1847,Q1847_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1847,Q1847_1,1,answer_option,"","","",1,Ja,"",24524,2144,isco_skill_level_4,TRUE
+1847,Q1847_1,1,answer_option,"","","",2,Nein,"",24523,3115,isco_skill_level_3,TRUE
+1848,Q1848_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+1848,Q1848_1,1,answer_option,"","","",1,Ja,"",24524,2144,isco_skill_level_4,TRUE
+1848,Q1848_1,1,answer_option,"","","",2,Nein,"",24523,3115,isco_skill_level_3,TRUE
+1849,Q1849_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1849,Q1849_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",61312,3334,isco_skill_level_2,TRUE
+1849,Q1849_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",61313,3334,isco_skill_level_3,TRUE
+1849,Q1849_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",61313,3334,isco_skill_level_3,TRUE
+1849,Q1849_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",61314,3334,isco_skill_level_4,TRUE
+1850,Q1850_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1850,Q1850_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",61312,3334,isco_skill_level_2,TRUE
+1850,Q1850_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",61313,3334,isco_skill_level_3,TRUE
+1850,Q1850_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",61313,3334,isco_skill_level_3,TRUE
+1850,Q1850_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",61314,3334,isco_skill_level_4,TRUE
+1851,Q1851_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1851,Q1851_1,1,answer_option,"","","",1,Ja,"",11194,1311,isco_manager,TRUE
+1851,Q1851_1,1,answer_option,"","","",2,Nein,"",11193,6130,isco_supervisor,FALSE
+1851,Q1851_2,2,question,sonstige,Über welche landwirtschaftliche Tätigkeit führen Sie Aufsicht?,Über welche landwirtschaftliche Tätigkeit haben Sie Aufsicht geführt?,"","","","","","",
+1851,Q1851_2,2,answer_option,"","","",1,Über den Anbau von Gemüse und Ackerbau,"",11193,6111,"",TRUE
+1851,Q1851_2,2,answer_option,"","","",2,Über das Sammeln von landwirtschaftlich interessanten Daten wie beispielsweise zur Einhaltung der Qualitätsstandards,"",11193,3142,"",TRUE
+1851,Q1851_2,2,answer_option,"","","",3,Keine der vorigen Antworten trifft zu,"",11193,6130,"",TRUE
+1853,Q1853_1,1,question,sonstige,"Stellen Sie hauptsächlich Drähte, Drahtgewebe oder Federn her?","Haben Sie hauptsächlich Drähte, Drahtgewebe oder Federn hergestellt?","","","","","","",
+1853,Q1853_1,1,answer_option,"","","",1,Ja,"",24212,7221,"",TRUE
+1853,Q1853_1,1,answer_option,"","","",2,Nein,"",24212,7223,"",TRUE
+1854,Q1854_1,1,question,spezialisierung,Arbeiten Sie vorwiegend im Hochbau oder im Tiefbau?,Haben Sie vorwiegend im Hochbau oder im Tiefbau gearbeitet?,"","","","","","",
+1854,Q1854_1,1,answer_option,"","","",1,Hochbau (d.h. Errichtung von Gebäuden),"",32101,9313,"",TRUE
+1854,Q1854_1,1,answer_option,"","","",2,"Tiefbau (d.h. Bauarbeiten an Rohrleitungen, Tunneln, Straßen, Brücken, Kanälen, Gleisen usw.)","",32201,9312,"",TRUE
+1856,Q1856_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+1856,Q1856_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",34302,7126,isco_skill_level_2,TRUE
+1856,Q1856_1,1,answer_option,"","","",2,eine berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",34303,3115,isco_skill_level_3,TRUE
+1856,Q1856_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",34303,3115,isco_skill_level_3,TRUE
+1856,Q1856_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",34304,2144,isco_skill_level_4,TRUE
+2104,Q2104_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+2104,Q2104_1,1,answer_option,"","","",1,Ja,"",26233,3131,isco_skill_level_3,TRUE
+2104,Q2104_1,1,answer_option,"","","",2,Nein,"",26232,8182,isco_skill_level_2,TRUE
+2109,Q2109_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+2109,Q2109_1,1,answer_option,"","","",1,Ja,"",26253,3113,isco_skill_level_3,TRUE
+2109,Q2109_1,1,answer_option,"","","",2,Nein,"",26252,7412,isco_skill_level_2,TRUE
+2115,Q2115_1,1,question,sonstige,Arbeiten Sie hauptsächlich an elektronischen Geräten oder an elektrischen Anlagen und Maschinen?,Haben Sie hauptsächlich an elektronischen Geräten oder an elektrischen Anlagen und Maschinen gearbeitet?,"","","","","","",
+2115,Q2115_1,1,answer_option,"","","",1,an elektronischen Geräten,"",26302,7421,"",TRUE
+2115,Q2115_1,1,answer_option,"","","",2,an elektrischen Anlagen und Maschinen,"",26302,7412,"",TRUE
+2124,Q2124_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+2124,Q2124_1,1,answer_option,"","","",1,Ja,"",25194,1321,isco_manager,TRUE
+2124,Q2124_1,1,answer_option,"","","",2,Nein,"",25193,3122,isco_supervisor,TRUE
+2126,Q2126_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+2126,Q2126_1,1,answer_option,"","","",1,Ja,"",25294,1321,isco_manager,TRUE
+2126,Q2126_1,1,answer_option,"","","",2,Nein,"",25293,3122,isco_supervisor,TRUE
+2143,Q2143_1,1,question,anforderungsniveau,Welche Ausbildung ist für diese Tätigkeit in der Regel erforderlich?,Welche Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+2143,Q2143_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",27182,3119,isco_skill_level_2,TRUE
+2143,Q2143_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",27183,3119,isco_skill_level_3,TRUE
+2143,Q2143_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",27183,3119,isco_skill_level_3,TRUE
+2143,Q2143_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",27184,2149,isco_skill_level_4,TRUE
+2149,Q2149_1,1,question,sonstige,Mit welchem Material arbeiten Sie hauptsächlich?,Mit welchem Material haben Sie hauptsächlich gearbeitet?,"","","","","","",
+2149,Q2149_1,1,answer_option,"","","",2,Holz,"",27232,7522,"",TRUE
+2149,Q2149_1,1,answer_option,"","","",3,Metall,"",27232,7222,"",TRUE
+2149,Q2149_1,1,answer_option,"","","",4,unterschiedliche Materialien,"",27232,7222,"",TRUE
+2154,Q2154_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+2154,Q2154_1,1,answer_option,"","","",1,Ja,"",27294,1223,isco_manager,TRUE
+2154,Q2154_1,1,answer_option,"","","",2,Nein,"",27293,3122,isco_supervisor,TRUE
+2155,Q2155_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+2155,Q2155_1,1,answer_option,"","","",1,Ja,"",27394,1321,isco_manager,TRUE
+2155,Q2155_1,1,answer_option,"","","",2,Nein,"",27393,3122,isco_supervisor,TRUE
+3010,Q3010_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+3010,Q3010_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+3010,Q3010_1,1,answer_option,"","","",2,Nein,"",33352,8219,isco_not_supervising,TRUE
+3013,Q3013_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+3013,Q3013_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+3013,Q3013_1,1,answer_option,"","","",2,Nein,"",33312,7124,isco_not_supervising,TRUE
+3017,Q3017_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+3017,Q3017_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+3017,Q3017_1,1,answer_option,"","","",2,Nein,"",33342,7125,isco_not_supervising,TRUE
+3205,Q3205_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3205,Q3205_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",71302,4322,isco_skill_level_2,TRUE
+3205,Q3205_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",71303,4322,isco_skill_level_3,TRUE
+3205,Q3205_1,1,answer_option,"","","",3,"ein Bachelorstudium der Betriebswirtschaftslehre, Wirtschaftswissenschaften oder eines vergleichbaren Fachs","",71303,4322,isco_skill_level_3,TRUE
+3206,Q3206_1,1,question,anforderungsniveau,Welche Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Ausbildung war für Ihre Tätigkeit in der Regel erforderlich?,"","","","","","",
+3206,Q3206_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",71302,4110,isco_skill_level_2,TRUE
+3206,Q3206_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",71303,3343,isco_skill_level_3,TRUE
+3206,Q3206_1,1,answer_option,"","","",3,"ein Bachelorstudium der Betriebswirtschaftslehre, Wirtschaftswissenschaften oder eines vergleichbaren Fachs","",71303,3343,isco_skill_level_3,TRUE
+3211,Q3211_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+3211,Q3211_1,1,answer_option,"","","",1,Ja,"",71394,1213,isco_manager,TRUE
+3211,Q3211_1,1,answer_option,"","","",2,Nein,"",71393,3341,isco_supervisor,TRUE
+3214,Q3214_1,1,question,sonstige,Welcher Art sind Ihre Übersetzungen?,Welcher Art waren Ihre Übersetzungen?,"","","","","","",
+3214,Q3214_1,1,answer_option,"","","",1,simultanes oder konsekutives Dolmetschen auf Basis einer entsprechenden Ausbildung,"",71424,2643,"",TRUE
+3214,Q3214_1,1,answer_option,"","","",2,Übersetzung von literarischen Texten oder anspruchsvollen Fachtexten auf Basis einer entsprechenden Ausbildung,"",71424,2643,"",TRUE
+3214,Q3214_1,1,answer_option,"","","",3,Live-Übersetzung in die Gebärdensprache zur Assistenz von Gehörlosen,"",71424,2643,"",TRUE
+3214,Q3214_1,1,answer_option,"","","",4,andere Übersetzungsleistungen,"",71423,2643,"",TRUE
+3215,Q3215_1,1,question,sonstige,Schreiben Sie Wortprotokolle mittels stenographischer Methoden von Verhandlungen in Parlamenten oder Gerichten?,Haben Sie Wortprotokolle mittels stenographischer Methoden von Verhandlungen in Parlamenten oder Gerichten geschrieben?,"","","","","","",
+3215,Q3215_1,1,answer_option,"","","",1,Ja,"",71433,3343,"",TRUE
+3215,Q3215_1,1,answer_option,"","","",2,Nein,"",71432,4131,"",TRUE
+3216,Q3216_1,1,question,sonstige,Ist Ihre Tätigkeit auf die Überprüfung von Übersetzungen fremdsprachlicher Texte spezialisiert?,War Ihre Tätigkeit auf die Überprüfung von Übersetzungen fremdsprachlicher Texte spezialisiert?,"","","","","","",
+3216,Q3216_1,1,answer_option,"","","",1,Nein,"",71442,4413,"",TRUE
+3216,Q3216_1,1,answer_option,"","","",2,Ja,"",71412,2643,"",TRUE
+3219,Q3219_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+3219,Q3219_1,1,answer_option,"","","",1,"kaufmännische Aufgaben im Rahmen von grenzüberschreitenden Wirtschaftsbeziehungen (z.B. Import- und Exportaufträge bearbeiten, fremdsprachige Rechnungen ausstellen)","",71413,4419,"",TRUE
+3219,Q3219_1,1,answer_option,"","","",2,"Assistenzaufgaben im Büro oder Sekretariat (z.B. Schriftstücke und Protokolle übersetzen, Besprechungen und Konferenzen vorbereiten und organisieren)","",71412,4419,"",TRUE
+3221,Q3221_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+3221,Q3221_1,1,answer_option,"","","",1,"Rechnungen, Formulare und andere Aufzeichnungen im Computer eintragen","",71401,4132,"",TRUE
+3221,Q3221_1,1,answer_option,"","","",2,Dokumente kopieren und abheften,"",71401,4415,"",TRUE
+3221,Q3221_1,1,answer_option,"","","",3,"Formulare, Belege und andere Dokumente sortieren","",71442,4413,"",TRUE
+3221,Q3221_1,1,answer_option,"","","",4,Rundschreiben und Kuverts adressieren,"",71442,4413,"",TRUE
+3221,Q3221_1,1,answer_option,"","","",5,unterschiedliche Bürotätigkeiten,"",71401,4110,"",TRUE
+3222,Q3222_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+3222,Q3222_1,1,answer_option,"","","",1,persönliche Unterstützung von Führungskräften bei organisatorische Aufgaben,"",71403,3343,"",TRUE
+3222,Q3222_1,1,answer_option,"","","",2,Korrespondenz mit Auslandskontakten in einer Fremdsprache,"",71412,4419,"",TRUE
+3222,Q3222_1,1,answer_option,"","","",3,"Schreiben und Beantworten von Geschäftsbriefen, technischen Schriften oder Verträgen","",71403,3343,"",TRUE
+3222,Q3222_1,1,answer_option,"","","",4,Überprüfung und Formatierung von Texten sowie Erledigung des routinemäßigen Schriftverkehrs,"",71402,4120,"",TRUE
+3222,Q3222_1,1,answer_option,"","","",5,Erledigung verschiedener Büro- und Verwaltungstätigkeiten nach vorgegebenen Verfahren,"",71402,4110,"",TRUE
+3518,Q3518_1,1,question,sonstige,Arbeiten Sie im Bereich Informations- und Kommunikationstechnologie?,Haben Sie im Bereich Informations- und Kommunikationstechnologie gearbeitet?,"","","","","","",
+3518,Q3518_1,1,answer_option,"","","",1,Ja,"",43223,2434,"",TRUE
+3518,Q3518_1,1,answer_option,"","","",2,Nein,"",92133,2431,"",TRUE
+3529,Q3529_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine Prüfung zum Fachwirt erforderlich?,War für diese Tätigkeit in der Regel eine Prüfung zum Fachwirt erforderlich?,"","","","","","",
+3529,Q3529_1,1,answer_option,"","","",1,Ja,"",73113,3342,isco_skill_level_3,TRUE
+3529,Q3529_1,1,answer_option,"","","",2,Nein,"",73112,3342,isco_skill_level_2,TRUE
+3530,Q3530_1,1,question,sonstige,Welche Prüfung oder Zulassung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Prüfung oder Zulassung war für Ihre Tätigkeit in der Regel erforderlich?,"","","","","","",
+3530,Q3530_1,1,answer_option,"","","",1,Zulassung zur Rechtsanwaltschaft erforderlich,"",73134,2611,"",TRUE
+3530,Q3530_1,1,answer_option,"","","",2,erstes juristisches Staatsexamen erforderlich,"",73184,2619,"",TRUE
+3530,Q3530_1,1,answer_option,"","","",3,erstes juristischen Staatsexamen nicht erforderlich,"",73183,3411,"",TRUE
+3534,Q3534_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","","","","","","",
+3534,Q3534_1,1,answer_option,"","","",1,im mittleren Dienst oder vergleichbar,"",73162,3355,isco_skill_level_2,TRUE
+3534,Q3534_1,1,answer_option,"","","",2,im gehobenen Dienst oder vergleichbar,"",73163,3355,isco_skill_level_3,TRUE
+3534,Q3534_1,1,answer_option,"","","",3,im höheren Dienst oder vergleichbar,"",73164,2422,isco_skill_level_4,TRUE
+3537,Q3537_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+3537,Q3537_1,1,answer_option,"","","",1,Ja,"",73194,1349,isco_manager,TRUE
+3537,Q3537_1,1,answer_option,"","","",2,Nein,"",73194,2619,isco_supervisor,TRUE
+3541,Q3541_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","","","","","","",
+3541,Q3541_1,1,answer_option,"","","",1,im mittleren Dienst oder vergleichbar,"",73252,3411,isco_skill_level_2,TRUE
+3541,Q3541_1,1,answer_option,"","","",2,im gehobenen Dienst oder vergleichbar,"",73253,3411,isco_skill_level_3,TRUE
+3541,Q3541_1,1,answer_option,"","","",3,im höheren Dienst oder vergleichbar,"",73254,2619,isco_skill_level_4,TRUE
+3544,Q3544_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3544,Q3544_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",73212,3353,isco_skill_level_2,TRUE
+3544,Q3544_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",73213,3353,isco_skill_level_3,TRUE
+3544,Q3544_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",73213,3353,isco_skill_level_3,TRUE
+3550,Q3550_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3550,Q3550_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",73202,3354,isco_skill_level_2,TRUE
+3550,Q3550_1,1,answer_option,"","","",2,eine abgeschlossene berufliche Weiterbildung mit Mindestdauer 1 Jahr,"",73203,3354,isco_skill_level_3,TRUE
+3550,Q3550_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",73203,3354,isco_skill_level_3,TRUE
+3551,Q3551_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","","","","","","",
+3551,Q3551_1,1,answer_option,"","","",1,im mittleren Dienst oder vergleichbar,"",73232,3352,isco_skill_level_2,TRUE
+3551,Q3551_1,1,answer_option,"","","",2,im gehobenen Dienst oder vergleichbar,"",73233,3352,isco_skill_level_3,TRUE
+3551,Q3551_1,1,answer_option,"","","",3,im höheren Dienst oder vergleichbar,"",73234,2411,isco_skill_level_4,TRUE
+3552,Q3552_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im einfachen, mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im einfachen, mittleren, gehobenen oder höheren Dienst?","","","","","","",
+3552,Q3552_1,1,answer_option,"","","",1,im einfachen Dienst oder vergleichbar,"",73241,3351,isco_skill_level_1,TRUE
+3552,Q3552_1,1,answer_option,"","","",2,im mittleren Dienst oder vergleichbar,"",73242,3351,isco_skill_level_2,TRUE
+3552,Q3552_1,1,answer_option,"","","",3,im gehobenen Dienst oder vergleichbar,"",73243,3351,isco_skill_level_3,TRUE
+3552,Q3552_1,1,answer_option,"","","",4,im höheren Dienst oder vergleichbar,"",73244,3351,isco_skill_level_4,TRUE
+3553,Q3553_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3553,Q3553_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbilung,"",73312,4415,isco_skill_level_2,TRUE
+3553,Q3553_1,1,answer_option,"","","",2,eine Ausbildung für eine Laufbahn im gehobenen Dienst,"",73313,2621,isco_skill_level_3,TRUE
+3553,Q3553_1,1,answer_option,"","","",3,eine Ausbildung für eine Laufbahn im höheren Dienst,"",73314,2621,isco_skill_level_4,TRUE
+3555,Q3555_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3555,Q3555_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",73332,4419,isco_skill_level_2,TRUE
+3555,Q3555_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",73333,3433,isco_skill_level_3,TRUE
+3555,Q3555_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich bibliotheks- oder informationswissenschaften,"",73333,3433,isco_skill_level_3,TRUE
+3555,Q3555_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich bibliotheks- oder informationswissenschaften,"",73334,2622,isco_skill_level_4,TRUE
+3573,Q3573_1,1,question,sonstige,Berichten Sie persönlich an das übergeordnete Management?,Haben Sie persönlich an das übergeordnete Management berichtet?,"","","","","","",
+3573,Q3573_1,1,answer_option,"","","",1,Ja,"",72234,2411,"",TRUE
+3573,Q3573_1,1,answer_option,"","","",2,Nein,"",72233,3313,"",TRUE
+3577,Q3577_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+3577,Q3577_1,1,answer_option,"","","",1,individuelle Beratung und Unterstützung bei der Vermögensverwaltung,"",72124,2412,"",TRUE
+3577,Q3577_1,1,answer_option,"","","",2,Vermittlung und Durchführung von Geld- und Wertpapiergeschäften,"",72123,3311,"",TRUE
+3577,Q3577_1,1,answer_option,"","","",3,Sekretariatstätigkeiten und Aktenführung über durchgeführte Transaktionen,"",72122,4312,"",TRUE
+3577,Q3577_1,1,answer_option,"","","",4,Unterstützung des verantwortlichen Personals bei Handels- und Beratungsaktivitäten,"",72122,3311,"",TRUE
+3581,Q3581_1,1,question,sonstige,Arbeiten Sie unter Aufsicht einer verantwortlichen Person oder sind Sie selber für die Prüfergebnisse verantwortlich?,Haben Sie unter Aufsicht einer verantwortlichen Person gearbeitet oder waren Sie selber für die Prüfergebnisse verantwortlich?,"","","","","","",
+3581,Q3581_1,1,answer_option,"","","",1,Arbeit unter Aufsicht einer verantwortlichen Person,"",72243,2411,"",TRUE
+3581,Q3581_1,1,answer_option,"","","",2,selber verantwortlich,"",72244,2411,"",TRUE
+3584,Q3584_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3584,Q3584_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",72132,3321,isco_skill_level_2,TRUE
+3584,Q3584_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",72133,3321,isco_skill_level_3,TRUE
+3584,Q3584_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",72133,3321,isco_skill_level_3,TRUE
+3585,Q3585_1,1,question,anforderungsniveau,Welche Ausbildung ist für diese Tätigkeit in der Regel erforderlich?,Welche Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3585,Q3585_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",72132,3315,isco_skill_level_2,TRUE
+3585,Q3585_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",72133,3321,isco_skill_level_3,TRUE
+3585,Q3585_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",72133,3321,isco_skill_level_3,TRUE
+3587,Q3587_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3587,Q3587_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",72302,4311,isco_skill_level_2,TRUE
+3587,Q3587_1,1,answer_option,"","","",2,eine Fortbildung zum Steuerfachwirt oder vergleichbar,"",72303,3313,isco_skill_level_3,TRUE
+3587,Q3587_1,1,answer_option,"","","",3,ein Masterstudium im Bereich Wirtschafts- oder Rechtswissenschaften,"",72304,2411,isco_skill_level_4,TRUE
+3587,Q3587_1,1,answer_option,"","","",4,eine bestandene Steuerberaterprüfung,"",72304,2411,isco_skill_level_4,TRUE
+3597,Q3597_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+3597,Q3597_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",71522,3333,isco_skill_level_2,TRUE
+3597,Q3597_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",71523,3333,isco_skill_level_3,TRUE
+3597,Q3597_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",71523,3333,isco_skill_level_3,TRUE
+4002,Q4002_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+4002,Q4002_1,1,answer_option,"","","",1,Techniker/in der Fachrichtung Biotechnik oder eine verwandte Weiterbildung,"",41213,3141,isco_skill_level_3,TRUE
+4002,Q4002_1,1,answer_option,"","","",2,ein abgeschlossenes Bachelorstudium im Bereich Biotechnologie oder ein vergleichbares Studium,"",41213,3141,isco_skill_level_3,TRUE
+4002,Q4002_1,1,answer_option,"","","",3,ein abgeschlossenes Masterstudium im Bereich Biotechnologie oder ein vergleichbares Studium,"",41214,3141,isco_skill_level_4,TRUE
+4014,Q4014_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+4014,Q4014_1,1,answer_option,"","","",1,nein,"",41323,3111,isco_skill_level_3,TRUE
+4014,Q4014_1,1,answer_option,"","","",2,ja,"",41324,2145,isco_skill_level_4,TRUE
+4035,Q4035_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4035,Q4035_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","",2511,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",2,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",3,Entwicklung und Entwurf von Webseiten und Online-shops/ E-Commerce,"","",2513,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",4,Entwicklung und Wartung von Code,"","",2514,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",5,"Entwicklung, Kontrolle und Wartung von Datenbanken","","",2521,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",6,Wartung und Verwaltung von informationstechnischen Systemen,"","",2522,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",7,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","",2523,"",FALSE
+4035,Q4035_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+4035,Q4035_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43112,"",isco_skill_level_2,TRUE
+4035,Q4035_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43113,"",isco_skill_level_3,TRUE
+4035,Q4035_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43113,"",isco_skill_level_3,TRUE
+4035,Q4035_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43114,"",isco_skill_level_4,TRUE
+4037,Q4037_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4037,Q4037_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","",2511,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",2,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",3,Entwicklung von Steuerprogrammen für elektrotechnische Geräte und Maschinen,"","",2152,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",4,Entwicklung und Wartung von Code,"","",2514,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",5,Verwaltung von Netzwerkdaten und Computernetzwerken,"","",3513,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",6,"Überwachung von Hardware, Software und Computerzubehör; um optimale Leistung zu garantieren","","",3511,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",7,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","",2523,"",FALSE
+4037,Q4037_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+4037,Q4037_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43122,"",isco_skill_level_2,TRUE
+4037,Q4037_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43123,"",isco_skill_level_3,TRUE
+4037,Q4037_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43123,"",isco_skill_level_3,TRUE
+4037,Q4037_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43124,"",isco_skill_level_4,TRUE
+4038,Q4038_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4038,Q4038_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","",2511,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",2,Technischer Support für Problemdiagnosen und Fehlerbehebungen,"","",3512,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",3,Errichtung und Verwaltung von Computernetzwerken,"","",3513,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",4,Wartung und Administration von Webseiten,"","",3514,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",5,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",6,Schreiben und Wartung von Programmcode,"","",2514,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",7,"Entwicklung, Kontrolle und Wartung von Datenbanken","","",2521,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",8,Wartung und Verwaltung von informationstechnischen Systemen,"","",2522,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",9,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","",2523,"",FALSE
+4038,Q4038_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+4038,Q4038_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43102,"",isco_skill_level_2,TRUE
+4038,Q4038_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43103,"",isco_skill_level_3,TRUE
+4038,Q4038_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43103,"",isco_skill_level_3,TRUE
+4038,Q4038_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43104,"",isco_skill_level_4,TRUE
+4040,Q4040_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4040,Q4040_1,1,answer_option,"","","",1,Entwicklung von Computersoftware,"",43134,2512,"",TRUE
+4040,Q4040_1,1,answer_option,"","","",2,Konzeption und Entwicklung von IT-Systemen für spezielle Anforderungen,"",43134,2511,"",TRUE
+4041,Q4041_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4041,Q4041_1,1,answer_option,"","","",1,Entwicklung von Computersoftware,"",43134,2512,"",TRUE
+4041,Q4041_1,1,answer_option,"","","",2,Konzeption und Entwicklung von IT-Systemen für spezielle Anforderungen,"",43134,2511,"",TRUE
+4041,Q4041_1,1,answer_option,"","","",3,"Entwicklung, Kontrolle und Wartung von Datenbanken","",43134,2521,"",TRUE
+4042,Q4042_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4042,Q4042_1,1,answer_option,"","","",1,Entwicklung von Computersoftware,"",43144,2512,"",TRUE
+4042,Q4042_1,1,answer_option,"","","",2,Konzeption und Entwicklung von IT-Systemen für spezielle Anforderungen,"",43144,2511,"",TRUE
+4042,Q4042_1,1,answer_option,"","","",3,"Entwicklung, Kontrolle und Wartung von Datenbanken","",43144,2521,"",TRUE
+4043,Q4043_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4043,Q4043_1,1,answer_option,"","","",1,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
+4043,Q4043_1,1,answer_option,"","","",2,"Entwicklung und Entwurf von Webseiten, Grafiken, Videos und Animationen","","",2513,"",FALSE
+4043,Q4043_1,1,answer_option,"","","",3,Entwicklung und Wartung von Code,"","",2514,"",FALSE
+4043,Q4043_1,1,answer_option,"","","",4,"Entwicklung, Kontrolle und Wartung von Datenbanken","","",2521,"",FALSE
+4043,Q4043_1,1,answer_option,"","","",5,Wartung und Administration von Webseiten,"","",3514,"",FALSE
+4043,Q4043_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+4043,Q4043_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43152,"",isco_skill_level_2,TRUE
+4043,Q4043_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43153,"",isco_skill_level_3,TRUE
+4043,Q4043_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43153,"",isco_skill_level_3,TRUE
+4043,Q4043_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43154,"",isco_skill_level_4,TRUE
+4048,Q4048_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+4048,Q4048_1,1,answer_option,"","","",1,Konzeption und Bewertung von IT-Systemen für verschiedene Anwenderbedürfnisse,"",43224,2511,"",TRUE
+4048,Q4048_1,1,answer_option,"","","",2,Kundensupport und Überprüfung von IT-Systemen und Software,"",43224,3512,"",TRUE
+4219,Q4219_1,1,question,spezialisierung,Mit welchem spezifischen Fachgebiet beschäftigen Sie sich?,Mit welchem spezifischen Fachgebiet haben Sie sich beschäftigt?,"","","","","","",
+4219,Q4219_1,1,answer_option,"","","",1,Eigenschaften und Herstellung von Polymeren,"",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",2,Organische Chemie,"",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",3,Anorganische Chemie,"",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",4,"Chemische Analyse von Stoffen zu vorgegeben Zwecken, z.B. in der Forensik oder Produktionsüberwachung","",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",5,"Chemische Analyse von Arzneimitteln, z.B. im Hinblick auf toxikologische Risiken","",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",6,Lebensmittelchemie,"",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",7,Planung und Überwachung von Geschäfts- und Produktionsprozessen in der chemischen und pharmazeutischen Industrie,"",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",8,"Erforschung von Inhaltsstoffen natürlicher Organismen und Nutzung dieser Stoffe für Pharmazie, Landwirtschaft, Lebensmittelherstellung","",41384,2113,"",TRUE
+5001,Q5001_1,1,question,sonstige,Führen Sie Lageraufzeichnungen durch?,Haben Sie Lageraufzeichnungen durchgeführt?,"","","","","","",
+5001,Q5001_1,1,answer_option,"","","",1,Ja,"",51312,4321,"",TRUE
+5001,Q5001_1,1,answer_option,"","","",2,Nein,"",51311,9333,"",TRUE
+5010,Q5010_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+5010,Q5010_1,1,answer_option,"","","",1,weder Führungs- noch Aufsichtstätigkeit,"",51512,4323,isco_not_supervising,TRUE
+5010,Q5010_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",51593,4323,isco_supervisor,TRUE
+5010,Q5010_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",51594,1324,isco_manager,TRUE
+5011,Q5011_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+5011,Q5011_1,1,answer_option,"","","",1,weder Führungs- noch Aufsichtstätigkeit,"",51522,8312,isco_not_supervising,TRUE
+5011,Q5011_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",51593,8312,isco_supervisor,TRUE
+5011,Q5011_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",51594,1324,isco_manager,TRUE
+5014,Q5014_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+5014,Q5014_1,1,answer_option,"","","",1,weder Führungs- noch Aufsichtstätigkeit,"",51532,4323,isco_not_supervising,TRUE
+5014,Q5014_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",51593,4323,isco_supervisor,TRUE
+5014,Q5014_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",51594,1324,isco_manager,TRUE
+5015,Q5015_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+5015,Q5015_1,1,answer_option,"","","",1,weder Führungs- noch Aufsichtstätigkeit,"",51533,3154,isco_not_supervising,TRUE
+5015,Q5015_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",51593,3154,isco_supervisor,TRUE
+5015,Q5015_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",51594,1324,isco_manager,TRUE
+5016,Q5016_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+5016,Q5016_1,1,answer_option,"","","",1,Ja,"",51594,1324,isco_manager,TRUE
+5016,Q5016_1,1,answer_option,"","","",2,Nein,"",51534,2149,isco_not_supervising,TRUE
+5017,Q5017_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+5017,Q5017_1,1,answer_option,"","","",1,weder Führungs- noch Aufsichtstätigkeit,"",51543,3152,isco_not_supervising,TRUE
+5017,Q5017_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",51593,3152,isco_supervisor,TRUE
+5017,Q5017_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",51594,1324,isco_manager,TRUE
+5018,Q5018_1,1,question,aufsicht,"Ist ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","War ein wesentlicher Bestandteil ihrer Arbeit, andere Arbeitnehmer zu beaufsichtigen oder als Führungskraft strategische Entscheidungen für das Unternehmen zu treffen?","","","","","","",
+5018,Q5018_1,1,answer_option,"","","",1,weder Führungs- noch Aufsichtstätigkeit,"",51583,3119,isco_not_supervising,TRUE
+5018,Q5018_1,1,answer_option,"","","",2,Aufsichtstätigkeit mit Verantwortung für untergeordnetes Personal,"",51593,3119,isco_supervisor,TRUE
+5018,Q5018_1,1,answer_option,"","","",3,"Führungstätigkeit mit strategischer Entscheidungsbefugnis (z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen, oder zur Einstellung und Entlassung von Personal)","",51594,1324,isco_manager,TRUE
+5022,Q5022_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium der Verkehrswirtschaft erforderlich?,War für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium der Verkehrswirtschaft erforderlich?,"","","","","","",
+5022,Q5022_1,1,answer_option,"","","",1,Ja,"",51614,2433,isco_skill_level_4,TRUE
+5022,Q5022_1,1,answer_option,"","","",2,Nein,"",51613,3322,isco_skill_level_3,TRUE
+5025,Q5025_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5025,Q5025_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",51622,4323,isco_skill_level_2,TRUE
+5025,Q5025_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",51623,3331,isco_skill_level_3,TRUE
+5025,Q5025_1,1,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium im Bereich Betriebswirtschaftslehre, Logistik oder ein vergleichbares Studium","",51623,3331,isco_skill_level_3,TRUE
+5025,Q5025_1,1,answer_option,"","","",4,"ein abgeschlossenes Masterstudium im Bereich Betriebswirtschaftslehre, Logistik oder ein vergleichbares Studium","",51624,2421,isco_skill_level_4,TRUE
+5028,Q5028_1,1,question,sonstige,Führen Sie Lageraufzeichnungen durch?,Haben Sie Lageraufzeichnungen durchgeführt?,"","","","","","",
+5028,Q5028_1,1,answer_option,"","","",1,Ja,"",51312,4321,"",TRUE
+5028,Q5028_1,1,answer_option,"","","",2,Nein,"",51311,9333,"",TRUE
+5047,Q5047_1,1,question,sonstige,"Gehört es zu Ihren Tätigkeiten, Piloten auszubilden oder Personaleinsatzpläne zu entwerfen?","Hat es zu Ihren Tätigkeiten gehört, Piloten auszubilden oder Personaleinsatzpläne zu entwerfen?","","","","","","",
+5047,Q5047_1,1,answer_option,"","","",1,Ja,"",52314,3153,"",TRUE
+5047,Q5047_1,1,answer_option,"","","",2,Nein,"",52313,3153,"",TRUE
+5053,Q5053_1,1,question,sonstige,Sind Sie verantwortlich für die wirtschaftliche Führung von Schiffen sowie die Durchführung von Ausbildungen an Bord?,Waren Sie verantwortlich für die wirtschaftliche Führung von Schiffen sowie die Durchführung von Ausbildungen an Bord?,"","","","","","",
+5053,Q5053_1,1,answer_option,"","","",1,Ja,"",52423,3152,"",TRUE
+5053,Q5053_1,1,answer_option,"","","",2,Nein,"",52422,3152,"",TRUE
+5076,Q5076_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+5076,Q5076_1,1,answer_option,"","","",1,im Wach- und Sicherheitsgewerbe,"",53193,5414,"",TRUE
+5076,Q5076_1,1,answer_option,"","","",2,im Werkschutz,"",53193,3119,"",TRUE
+5076,Q5076_1,1,answer_option,"","","",3,in der Badeaufsicht,"",53193,5419,"",TRUE
+5078,Q5078_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","","","","","","",
+5078,Q5078_1,1,answer_option,"","","",1,im mittleren Dienst oder vergleichbar,"",53212,5412,isco_skill_level_2,TRUE
+5078,Q5078_1,1,answer_option,"","","",2,im gehobenen Dienst oder vergleichbar,"",53213,5412,isco_skill_level_3,TRUE
+5078,Q5078_1,1,answer_option,"","","",3,im höheren Dienst oder vergleichbar,"",53214,1349,isco_skill_level_4,FALSE
+5078,Q5078_2,2,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+5078,Q5078_2,2,answer_option,"","","",1,ja,"",53214,1349,isco_manager,TRUE
+5078,Q5078_2,2,answer_option,"","","",2,Nein,"",53214,5412,isco_not_supervising,TRUE
+5079,Q5079_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","Waren Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?","","","","","","",
+5079,Q5079_1,1,answer_option,"","","",1,im mittleren Dienst oder vergleichbar,"",53222,3355,isco_skill_level_2,TRUE
+5079,Q5079_1,1,answer_option,"","","",2,im gehobenen Dienst oder vergleichbar,"",53223,3355,isco_skill_level_3,TRUE
+5079,Q5079_1,1,answer_option,"","","",3,im höheren Dienst oder vergleichbar,"",53224,3355,isco_skill_level_4,TRUE
+5080,Q5080_1,1,question,sonstige,Für welche/n Auftraggeber arbeiten Sie hauptsächlich?,Für welche/n Auftraggeber haben Sie hauptsächlich gearbeitet?,"","","","","","",
+5080,Q5080_1,1,answer_option,"","","",1,für Justizbehörden,"",53232,3411,"",TRUE
+5080,Q5080_1,1,answer_option,"","","",2,für Finanzverwaltungen,"",53232,3352,"",TRUE
+5085,Q5085_1,1,question,anforderungsniveau,"Sind Sie Beamte/r im mittleren, gehobenen oder höheren technischen Dienst?","Waren Sie Beamte/r im mittleren, gehobenen oder höheren technischen Dienst?","","","","","","",
+5085,Q5085_1,1,answer_option,"","","",1,im mittleren technischen Dienst oder vergleichbar,"",53312,3354,isco_skill_level_2,TRUE
+5085,Q5085_1,1,answer_option,"","","",2,im gehobenen technischen Dienst oder vergleichbar,"",53313,3354,isco_skill_level_3,TRUE
+5085,Q5085_1,1,answer_option,"","","",3,im höheren technischen Dienst oder vergleichbar,"",53314,2263,isco_skill_level_4,TRUE
+5088,Q5088_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung als Lebensmittelkontrolleur/in erforderlich und werden Sie durch Behörden beauftragt?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung als Lebensmittelkontrolleur/in erforderlich und werden Sie durch Behörden beauftragt?,"","","","","","",
+5088,Q5088_1,1,answer_option,"","","",1,Ja,"",53333,3257,isco_skill_level_3,TRUE
+5088,Q5088_1,1,answer_option,"","","",2,Nein,"",53332,3257,isco_skill_level_2,TRUE
+5089,Q5089_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5089,Q5089_1,1,answer_option,"","","",1,Ja,"",53393,7544,isco_supervisor,TRUE
+5089,Q5089_1,1,answer_option,"","","",2,Nein,"",53342,7544,isco_not_supervising,TRUE
+5094,Q5094_1,1,question,anforderungsniveau,Mussten Sie für diese Tätigkeit neues Wissen lernen?,Mussten Sie für diese Tätigkeit neues Wissen lernen?,"","","","","","",
+5094,Q5094_1,1,answer_option,"","","",1,Ja,"",54132,8157,isco_skill_level_2,TRUE
+5094,Q5094_1,1,answer_option,"","","",2,Nein,"",54101,8157,isco_skill_level_1,TRUE
+5099,Q5099_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5099,Q5099_1,1,answer_option,"","","",1,Ja,"",51193,3115,isco_supervisor,TRUE
+5099,Q5099_1,1,answer_option,"","","",2,Nein,"",51112,8312,isco_not_supervising,TRUE
+5100,Q5100_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5100,Q5100_1,1,answer_option,"","","",1,Ja,"",51193,3115,isco_supervisor,TRUE
+5100,Q5100_1,1,answer_option,"","","",2,Nein,"",51113,3115,isco_not_supervising,TRUE
+5101,Q5101_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5101,Q5101_1,1,answer_option,"","","",1,Ja,"",51193,3115,isco_supervisor,TRUE
+5101,Q5101_1,1,answer_option,"","","",2,Nein,"",51122,9333,isco_not_supervising,TRUE
+5102,Q5102_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5102,Q5102_1,1,answer_option,"","","",1,Ja,"",51193,3115,isco_supervisor,TRUE
+5102,Q5102_1,1,answer_option,"","","",2,Nein,"",51123,3115,isco_not_supervising,TRUE
+5105,Q5105_1,1,question,sonstige,Sind Sie für die Wartung funktechnischer Geräte auf dem Schiff verantwortlich?,Waren Sie für die Wartung funktechnischer Geräte auf dem Schiff verantwortlich?,"","","","","","",
+5105,Q5105_1,1,answer_option,"","","",1,Ja,"",51183,3521,"",TRUE
+5105,Q5105_1,1,answer_option,"","","",2,Nein,"",51182,3521,"",TRUE
+5124,Q5124_1,1,question,sonstige,Gehört es zu Ihren Tätigkeiten die Budgetierung von Werbemaßnahmen zu übernehmen und Gestaltungs- und Präsentationskonzepte zu entwerfen?,Gehörte es zu Ihren Tätigkeiten die Budgetierung von Werbemaßnahmen zu übernehmen und Gestaltungs- und Präsentationskonzepte zu entwerfen?,"","","","","","",
+5124,Q5124_1,1,answer_option,"","","",1,Ja,"",93223,3432,"",TRUE
+5124,Q5124_1,1,answer_option,"","","",2,Nein,"",93222,3432,"",TRUE
+5128,Q5128_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+5128,Q5128_1,1,answer_option,"","","",1,Ja,"",93304,2651,isco_skill_level_4,TRUE
+5128,Q5128_1,1,answer_option,"","","",2,Nein,"",93303,2651,isco_skill_level_3,TRUE
+5141,Q5141_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
+5141,Q5141_1,1,answer_option,"","","",1,"in der Bildhauerei, Drechslerei und Spielzeugherstellung, in der Wachszieherei, im Vergolderhandwerk oder in anderen Bereichen der bildenden Kunst","",93393,3122,"",TRUE
+5141,Q5141_1,1,answer_option,"","","",2,In der Keramik- und Glasgestaltung,"",93493,3122,"",TRUE
+5141,Q5141_1,1,answer_option,"","","",3,"In der Schmuckherstellung und Gravur, Schilder- und Lichtreklameherstellung oder Metallbildnerei","",93593,3122,"",TRUE
+5219,Q5219_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5219,Q5219_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",23222,2166,isco_skill_level_2,TRUE
+5219,Q5219_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",23223,2166,isco_skill_level_3,TRUE
+5219,Q5219_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Design und Mediendesign oder eines vergleichbaren Fachs,"",23223,2166,isco_skill_level_3,TRUE
+5219,Q5219_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Design und Mediendesign oder eines vergleichbaren Fachs,"",23224,2166,isco_skill_level_4,TRUE
+5222,Q5222_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5222,Q5222_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",23212,7321,isco_skill_level_2,TRUE
+5222,Q5222_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",23213,7321,isco_skill_level_3,TRUE
+5222,Q5222_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",23213,7321,isco_skill_level_3,TRUE
+5224,Q5224_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+5224,Q5224_1,1,answer_option,"","","",1,Ja,"",23294,1222,isco_manager,TRUE
+5224,Q5224_1,1,answer_option,"","","",2,Nein,"",23293,2166,isco_supervisor,TRUE
+5226,Q5226_1,1,question,anforderungsniveau,Mussten Sie für diese Tätigkeit neues Wissen lernen?,Mussten Sie für diese Tätigkeit neues Wissen lernen?,"","","","","","",
+5226,Q5226_1,1,answer_option,"","","",1,Ja,"",54112,9112,isco_skill_level_2,TRUE
+5226,Q5226_1,1,answer_option,"","","",2,Nein,"",54101,9112,isco_skill_level_1,TRUE
+5234,Q5234_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung im Bereich Druck erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung im Bereich Druck erforderlich?,"","","","","","",
+5234,Q5234_1,1,answer_option,"","","",1,Ja,"",23412,7322,isco_skill_level_2,TRUE
+5234,Q5234_1,1,answer_option,"","","",2,Nein,"",23411,9329,isco_skill_level_1,TRUE
+5246,Q5246_1,1,question,spezialisierung,"Arbeiten Sie hauptsächlich an Projekten im Hochbau, im Tiefbau oder an Projekten im Hoch- und Tiefbau gleichermaßen?","Haben Sie hauptsächlich an Projekten im Hochbau, im Tiefbau oder an Projekten im Hoch- und Tiefbau gleichermaßen gearbeitet?","","","","","","",
+5246,Q5246_1,1,answer_option,"","","",1,Verkehrswege und Verkehrsanlagen planen,"",31134,2164,"",TRUE
+5246,Q5246_1,1,answer_option,"","","",2,wasserwirtschaftliche Anlagen planen,"",31144,2142,"",TRUE
+5246,Q5246_1,1,answer_option,"","","",3,im Hochbau Bauarbeiten an Gebäuden planen und überwachen,"",32104,2142,"",TRUE
+5246,Q5246_1,1,answer_option,"","","",4,im Tiefbau Bauarbeiten an Straßen überwachen,"",32224,2142,"",TRUE
+5246,Q5246_1,1,answer_option,"","","",5,im Tiefbau Bauarbeiten an Wasserstraßen und Wasserbauwerken überwachen,"",32264,2142,"",TRUE
+5246,Q5246_1,1,answer_option,"","","",6,im Tiefbau Bauarbeiten verschiedener Art überwachen,"",32204,2142,"",TRUE
+5246,Q5246_1,1,answer_option,"","","",7,im Hoch- und Tiefbau Bauarbeiten verschiedener Art planen und überwachen,"",31104,2142,"",TRUE
+5257,Q5257_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen in das eigene Unternehmen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen in das eigene Unternehmen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+5257,Q5257_1,1,answer_option,"","","",1,Ja,"",31194,1323,isco_manager,TRUE
+5257,Q5257_1,1,answer_option,"","","",2,Nein,"",31193,3123,isco_supervisor,TRUE
+5260,Q5260_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5260,Q5260_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",31212,3112,isco_skill_level_2,TRUE
+5260,Q5260_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",31213,3112,isco_skill_level_3,TRUE
+5260,Q5260_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",31213,3112,isco_skill_level_3,TRUE
+5260,Q5260_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",31214,2165,isco_skill_level_4,TRUE
+5261,Q5261_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5261,Q5261_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",31222,3118,isco_skill_level_2,TRUE
+5261,Q5261_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",31223,3118,isco_skill_level_3,TRUE
+5261,Q5261_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",31223,3118,isco_skill_level_3,TRUE
+5261,Q5261_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",31224,2165,isco_skill_level_4,TRUE
+5262,Q5262_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5262,Q5262_1,1,answer_option,"","","",1,Ja,"",32193,3123,isco_supervisor,TRUE
+5262,Q5262_1,1,answer_option,"","","",2,Nein,"",32122,7112,isco_not_supervising,TRUE
+5282,Q5282_1,1,question,sonstige,Ist Ihre Tätigkeit hauptsächlich körperliche Arbeit unter Verwendung von Baumaschinen oder beschäftigen Sie sich hauptsächlich mit der Planung und Koordination von Baumaßnahmen?,War Ihre Tätigkeit hauptsächlich körperliche Arbeit unter Verwendung von Baumaschinen oder haben Sie sich hauptsächlich mit der Planung und Koordination von Baumaßnahmen beschäftigt?,"","","","","","",
+5282,Q5282_1,1,answer_option,"","","",1,körperliche Arbeit unter Verwendung von Maschinen,"",32112,7114,"",TRUE
+5282,Q5282_1,1,answer_option,"","","",2,Planung und Koordination der Baumaßnahmen,"",32113,3112,"",TRUE
+5292,Q5292_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5292,Q5292_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+5292,Q5292_1,1,answer_option,"","","",2,Nein,"",33322,7115,isco_not_supervising,TRUE
+5293,Q5293_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5293,Q5293_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+5293,Q5293_1,1,answer_option,"","","",2,Nein,"",33332,7115,isco_not_supervising,TRUE
+5294,Q5294_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5294,Q5294_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5294,Q5294_1,1,answer_option,"","","",2,Nein,"",34232,7127,isco_not_supervising,TRUE
+5297,Q5297_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5297,Q5297_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5297,Q5297_1,1,answer_option,"","","",2,Nein,"",34212,7126,isco_not_supervising,FALSE
+5297,Q5297_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5297,Q5297_2,2,answer_option,"","","",1,eine kurze Anlernphase,"",34201,9313,isco_skill_level_1,TRUE
+5297,Q5297_2,2,answer_option,"","","",2,"eine abgeschlossene Berufsausbildung im Bereich Sanitär-, Heizungs- und Klimatechnik","",34212,7126,isco_skill_level_2,TRUE
+5297,Q5297_2,2,answer_option,"","","",3,eine vertiefende berufliche Weiterbildung mit einer Mindestdauer von 18 Monaten,"",34213,3112,isco_skill_level_3,TRUE
+5297,Q5297_2,2,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",34213,3112,isco_skill_level_3,TRUE
+5298,Q5298_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Bodenleger/in erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Bodenleger/in erforderlich?,"","","","","","",
+5298,Q5298_1,1,answer_option,"","","",1,Ja,"",33102,7122,isco_skill_level_2,TRUE
+5298,Q5298_1,1,answer_option,"","","",2,Nein,"",33101,9313,isco_skill_level_1,TRUE
+5316,Q5316_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5316,Q5316_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+5316,Q5316_1,1,answer_option,"","","",2,Nein,"",33302,7123,isco_not_supervising,FALSE
+5316,Q5316_2,2,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung im Bereich Trockenbau erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung im Bereich Trockenbau erforderlich?,"","","","","","",
+5316,Q5316_2,2,answer_option,"","","",1,Ja,"",33302,7123,isco_skill_level_2,TRUE
+5316,Q5316_2,2,answer_option,"","","",2,Nein,"",33301,9313,isco_skill_level_1,TRUE
+5317,Q5317_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5317,Q5317_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+5317,Q5317_1,1,answer_option,"","","",2,Nein,"",33303,3112,isco_not_supervising,TRUE
+5318,Q5318_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5318,Q5318_1,1,answer_option,"","","",1,Ja,"",33393,3123,isco_supervisor,TRUE
+5318,Q5318_1,1,answer_option,"","","",2,Nein,"",33323,7115,isco_not_supervising,TRUE
+5327,Q5327_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5327,Q5327_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5327,Q5327_1,1,answer_option,"","","",2,Nein,"",34202,7126,isco_not_supervising,FALSE
+5327,Q5327_2,2,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Klempner/in erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Klempner/in erforderlich?,"","","","","","",
+5327,Q5327_2,2,answer_option,"","","",1,Ja,"",34202,7126,isco_skill_level_2,TRUE
+5327,Q5327_2,2,answer_option,"","","",2,Nein,"",34201,9313,isco_skill_level_1,TRUE
+5328,Q5328_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5328,Q5328_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5328,Q5328_1,1,answer_option,"","","",2,Nein,"",34203,3112,isco_not_supervising,TRUE
+5329,Q5329_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5329,Q5329_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5329,Q5329_1,1,answer_option,"","","",2,Nein,"",34213,3112,isco_not_supervising,TRUE
+5330,Q5330_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5330,Q5330_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5330,Q5330_1,1,answer_option,"","","",2,Nein,"",34214,2142,isco_not_supervising,TRUE
+5331,Q5331_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+5331,Q5331_1,1,answer_option,"","","",1,Ja,"",34293,3123,isco_supervisor,TRUE
+5331,Q5331_1,1,answer_option,"","","",2,Nein,"",34222,7112,isco_not_supervising,TRUE
+5346,Q5346_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Anlagenbau erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Anlagenbau erforderlich?,"","","","","","",
+5346,Q5346_1,1,answer_option,"","","",1,Ja,"",34344,2144,isco_skill_level_4,TRUE
+5346,Q5346_1,1,answer_option,"","","",2,Nein,"",34343,3115,isco_skill_level_3,TRUE
+5350,Q5350_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Hochbaufacharbeiter/in erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Hochbaufacharbeiter/in erforderlich?,"","","","","","",
+5350,Q5350_1,1,answer_option,"","","",1,Ja,"",32102,7111,isco_skill_level_2,TRUE
+5350,Q5350_1,1,answer_option,"","","",2,Nein,"",32101,9313,isco_skill_level_1,TRUE
+5402,Q5402_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5402,Q5402_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",31173,3112,isco_skill_level_2,TRUE
+5402,Q5402_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",31173,3112,isco_skill_level_3,TRUE
+5402,Q5402_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",31173,2149,isco_skill_level_3,TRUE
+5402,Q5402_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",31174,2149,isco_skill_level_4,TRUE
+5403,Q5403_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+5403,Q5403_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",31142,3112,isco_skill_level_2,TRUE
+5403,Q5403_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",31143,3112,isco_skill_level_3,TRUE
+5403,Q5403_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Wasser- und Bodenmanagement oder eines vergleichbaren Fachs,"",31143,3112,isco_skill_level_3,TRUE
+5403,Q5403_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Wasser- und Bodenmanagement oder eines vergleichbaren Fachs,"",31144,2142,isco_skill_level_4,TRUE
+6022,Q6022_1,1,question,sonstige,Handelt Ihr Unternehmen mit Waren aus unterschiedlichen Branchen?,Hat Ihr Unternehmen mit Waren aus unterschiedlichen Branchen gehandelt?,"","","","","","",
+6022,Q6022_1,1,answer_option,"","","",1,Ja,"",61212,4419,"",TRUE
+6022,Q6022_1,1,answer_option,"","","",2,Nein,"",61282,4419,"",TRUE
+6034,Q6034_1,1,question,sonstige,Verkaufen Sie Ihre Speisen an ständig wechselnden Standorten?,Haben Sie Ihre Speisen an ständig wechselnden Standorten verkauft?,"","","","","","",
+6034,Q6034_1,1,answer_option,"","","",1,Nein,"",62301,5246,"",TRUE
+6034,Q6034_1,1,answer_option,"","","",2,Ja,"",62301,5212,"",TRUE
+6066,Q6066_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung zum/zur geprüften Fachverkäufer/in für Automobilteile und -zubehör erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung zum/zur geprüften Fachverkäufer/in für Automobilteile und -zubehör erforderlich?,"","","","","","",
+6066,Q6066_1,1,answer_option,"","","",1,Nein,"",62272,5223,isco_skill_level_2,TRUE
+6066,Q6066_1,1,answer_option,"","","",2,Ja,"",62272,5223,isco_skill_level_3,TRUE
+6073,Q6073_1,1,question,sonstige,"Sind Sie außerdem für den Einsatz finanzieller Ressourcen, die Erstellung von Speiseplänen und die Beschaffung sowie Lagerung von Waren bzw. Lebensmitteln zuständig?","Waren Sie außerdem für den Einsatz finanzieller Ressourcen, die Erstellung von Speiseplänen und die Beschaffung sowie Lagerung von Waren bzw. Lebensmitteln zuständig?","","","","","","",
+6073,Q6073_1,1,answer_option,"","","",1,Nein,"",63393,1412,"",TRUE
+6073,Q6073_1,1,answer_option,"","","",2,Ja,"",63394,1412,"",TRUE
+6102,Q6102_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+6102,Q6102_1,1,answer_option,"","","",1,Großveranstaltungen mit mehr als 1000 Teilnehmern managen,"",63404,3332,"",TRUE
+6102,Q6102_1,1,answer_option,"","","",2,Veranstaltungen mit weniger als 1000 Teilnehmern managen,"",63403,3332,"",TRUE
+6102,Q6102_1,1,answer_option,"","","",3,das Veranstaltungsmanagement bei einzelnen Aufgaben unterstützen,"",63402,3332,"",TRUE
+7001,Q7001_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7001,Q7001_1,1,answer_option,"","","",1,Nein,"",81102,3256,isco_skill_level_2,TRUE
+7001,Q7001_1,1,answer_option,"","","",2,Ja,"",81103,3256,isco_skill_level_3,TRUE
+7002,Q7002_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7002,Q7002_1,1,answer_option,"","","",1,Nein,"",81112,3251,isco_skill_level_2,TRUE
+7002,Q7002_1,1,answer_option,"","","",2,Ja,"",81113,3251,isco_skill_level_3,TRUE
+7003,Q7003_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7003,Q7003_1,1,answer_option,"","","",1,Nein,"",73222,3344,isco_skill_level_2,TRUE
+7003,Q7003_1,1,answer_option,"","","",2,Ja,"",73223,3344,isco_skill_level_3,TRUE
+7005,Q7005_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+7005,Q7005_1,1,answer_option,"","","",1,Nein,"",73223,3343,isco_skill_level_3,TRUE
+7005,Q7005_1,1,answer_option,"","","",2,Ja,"",73224,2421,isco_skill_level_4,TRUE
+7009,Q7009_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine Weiterbildung als biomedizinische/r Fachanalytiker/in für Immunhämatologie und Transfusionsmedizin erforderlich?,War für diese Tätigkeit in der Regel eine Weiterbildung als biomedizinische/r Fachanalytiker/in für Immunhämatologie und Transfusionsmedizin erforderlich?,"","","","","","",
+7009,Q7009_1,1,answer_option,"","","",1,Nein,"",81212,3212,isco_skill_level_2,TRUE
+7009,Q7009_1,1,answer_option,"","","",2,Ja,"",81213,3212,isco_skill_level_3,TRUE
+7013,Q7013_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7013,Q7013_1,1,answer_option,"","","",1,Nein,"",81232,3211,isco_skill_level_2,TRUE
+7013,Q7013_1,1,answer_option,"","","",2,Ja,"",81233,3211,isco_skill_level_3,TRUE
+7015,Q7015_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossene Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossene Weiterbildung erforderlich?,"","","","","","",
+7015,Q7015_1,1,answer_option,"","","",1,Nein,"",81242,3240,isco_skill_level_2,TRUE
+7015,Q7015_1,1,answer_option,"","","",2,Ja,"",81243,3240,isco_skill_level_3,TRUE
+7021,Q7021_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+7021,Q7021_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",81332,3256,isco_skill_level_2,TRUE
+7021,Q7021_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",81333,3256,isco_skill_level_3,TRUE
+7021,Q7021_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",81333,3256,isco_skill_level_3,TRUE
+7022,Q7022_1,1,question,sonstige,Gehört die medizinische Versorgung von Patienten zu Ihren Aufgaben?,Gehörte die medizinische Versorgung von Patienten zu Ihren Aufgaben?,"","","","","","",
+7022,Q7022_1,1,answer_option,"","","",1,Ja,"",81341,3258,"",TRUE
+7022,Q7022_1,1,answer_option,"","","",2,Nein,"",81341,8322,"",TRUE
+7023,Q7023_1,1,question,sonstige,Führen Sie normale Entbindungen selbstständig durch oder unterstützen Sie hauptsächlich andere Hebammen bei der Betreuung von Mutter und Kind?,Haben Sie normale Entbindungen selbstständig durchgeführt oder unterstützten Sie hauptsächlich andere Hebammen bei der Betreuung von Mutter und Kind?,"","","","","","",
+7023,Q7023_1,1,answer_option,"","","",1,Durchführung von Entbindungen,"",81353,2222,"",TRUE
+7023,Q7023_1,1,answer_option,"","","",2,Unterstützung bei der Betreuung von Mutter und Kind,"",81352,3222,"",TRUE
+7028,Q7028_1,1,question,spezialisierung,"Arbeiten Sie in der Arbeits-, Sport- oder Umweltmedizin?","Haben Sie in der Arbeits-, Sport- oder Umweltmedizin gearbeitet?","","","","","","",
+7028,Q7028_1,1,answer_option,"","","",1,Nein,"",81404,2211,"",TRUE
+7028,Q7028_1,1,answer_option,"","","",2,Ja,"",81484,2212,"",TRUE
+7036,Q7036_1,1,question,sonstige,Welche Tiere behandeln Sie?,Welche Tiere haben Sie behandelt?,"","","","","","",
+7036,Q7036_1,1,answer_option,"","","",1,Groß- und Nutztiere ,"",81514,2250,"",TRUE
+7036,Q7036_1,1,answer_option,"","","",2,Haus- und Heimtiere ,"",81524,2250,"",TRUE
+7036,Q7036_1,1,answer_option,"","","",3,sonstige,"",81504,2250,"",TRUE
+7041,Q7041_1,1,question,spezialisierung,Sind Sie in der klinischen Psychologie tätig?,Waren Sie in der klinischen Psychologie tätig?,"","","","","","",
+7041,Q7041_1,1,answer_option,"","","",1,Ja,"",81624,2634,"",TRUE
+7041,Q7041_1,1,answer_option,"","","",2,Nein,"",81614,2634,"",TRUE
+7043,Q7043_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+7043,Q7043_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung als Masseur/in und medizinische/r Bademeister/in,"",81712,3255,isco_skill_level_2,TRUE
+7043,Q7043_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung oder ein Bachelorstudium im Bereich Physiotherapie,"",81713,2264,isco_skill_level_3,TRUE
+7043,Q7043_1,1,answer_option,"","","",3,ein abgeschlossenes Masterstudium im Bereich Motologie,"",81714,2264,isco_skill_level_4,TRUE
+7047,Q7047_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Ergotherapie erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Ergotherapie erforderlich?,"","","","","","",
+7047,Q7047_1,1,answer_option,"","","",1,Nein,"",81723,2269,isco_skill_level_3,TRUE
+7047,Q7047_1,1,answer_option,"","","",2,Ja,"",81724,2269,isco_skill_level_4,TRUE
+7048,Q7048_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+7048,Q7048_1,1,answer_option,"","","",1,Nein,"",81733,2266,isco_skill_level_3,TRUE
+7048,Q7048_1,1,answer_option,"","","",2,Ja,"",81734,2266,isco_skill_level_4,TRUE
+7049,Q7049_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Kunst- oder Musiktherapie erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Kunst- oder Musiktherapie erforderlich?,"","","","","","",
+7049,Q7049_1,1,answer_option,"","","",1,Nein,"",81743,2269,isco_skill_level_3,TRUE
+7049,Q7049_1,1,answer_option,"","","",2,Ja,"",81744,2269,isco_skill_level_4,TRUE
+7050,Q7050_1,1,question,sonstige,Wenden Sie überwiegend homöopathische Heilverfahren an?,Haben Sie überwiegend homöopathische Heilverfahren angewendet?,"","","","","","",
+7050,Q7050_1,1,answer_option,"","","",1,Nein,"",81752,2230,"",TRUE
+7050,Q7050_1,1,answer_option,"","","",2,Ja,"",81753,2230,"",TRUE
+7051,Q7051_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7051,Q7051_1,1,answer_option,"","","",1,Ja,"",81763,2265,isco_skill_level_3,TRUE
+7051,Q7051_1,1,answer_option,"","","",2,Nein,"",81762,2265,isco_skill_level_2,TRUE
+7053,Q7053_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+7053,Q7053_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",81782,3259,isco_skill_level_2,TRUE
+7053,Q7053_1,1,answer_option,"","","",2,eine berufliche Weiterbildung zum Diabetesberater/in,"",81783,3259,isco_skill_level_3,TRUE
+7053,Q7053_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",81783,2269,isco_skill_level_3,TRUE
+7053,Q7053_1,1,answer_option,"","","",4, ein abgeschlossenes Masterstudium,"",81784,2269,isco_skill_level_4,TRUE
+7057,Q7057_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+7057,Q7057_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",81822,3213,isco_skill_level_2,TRUE
+7057,Q7057_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",81822,3213,isco_skill_level_3,TRUE
+7057,Q7057_1,1,answer_option,"","","",3,ein abgeschlossenes Hochschulstudium der Pharmazie,"",81804,2262,isco_skill_level_4,TRUE
+7065,Q7065_1,1,question,sonstige,Leiten Sie Altenpflegeschüler/innen und Hilfskräfte an?,Haben Sie Altenpflegeschüler/innen und Hilfskräfte angeleitet?,"","","","","","",
+7065,Q7065_1,1,answer_option,"","","",1,Ja,"",82103,3221,"",TRUE
+7065,Q7065_1,1,answer_option,"","","",2,Nein,"",82102,3221,"",TRUE
+7066,Q7066_1,1,question,sonstige,Leiten Sie Altenpflegeschüler/innen und Hilfskräfte an?,Haben Sie Altenpflegeschüler/innen und Hilfskräfte angeleitet?,"","","","","","",
+7066,Q7066_1,1,answer_option,"","","",1,Nein,"",82182,3221,"",TRUE
+7066,Q7066_1,1,answer_option,"","","",2,Ja,"",82183,3221,"",TRUE
+7072,Q7072_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7072,Q7072_1,1,answer_option,"","","",1,Nein,"",82222,5142,isco_skill_level_2,TRUE
+7072,Q7072_1,1,answer_option,"","","",2,Ja,"",82223,3423,isco_skill_level_3,TRUE
+7078,Q7078_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Friseur/in erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Friseur/in erforderlich?,"","","","","","",
+7078,Q7078_1,1,answer_option,"","","",1,Nein,"",82311,9629,isco_skill_level_1,TRUE
+7078,Q7078_1,1,answer_option,"","","",2,Ja,"",82312,5141,isco_skill_level_2,TRUE
+7081,Q7081_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Bachelorstudium im Bereich Maskenbild erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Bachelorstudium im Bereich Maskenbild erforderlich?,"","","","","","",
+7081,Q7081_1,1,answer_option,"","","",1,Nein,"",82342,5142,isco_skill_level_2,TRUE
+7081,Q7081_1,1,answer_option,"","","",2,Ja,"",82343,2163,isco_skill_level_3,TRUE
+7082,Q7082_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung als Bestattungsfachwirt/in erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung als Bestattungsfachwirt/in erforderlich?,"","","","","","",
+7082,Q7082_1,1,answer_option,"","","",1,Nein,"",82402,5163,isco_skill_level_2,TRUE
+7082,Q7082_1,1,answer_option,"","","",2,Ja,"",82403,5163,isco_skill_level_3,TRUE
+7088,Q7088_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+7088,Q7088_1,1,answer_option,"","","",1,Strategische Planung und Führung des Unternehmens,"",82494,1439,"",TRUE
+7088,Q7088_1,1,answer_option,"","","",2,Abwicklung von einzelnen Bestattungsaufträgen,"",82493,5163,"",TRUE
+7094,Q7094_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+7094,Q7094_1,1,answer_option,"","","",1,Nein,"",82512,3214,isco_skill_level_2,TRUE
+7094,Q7094_1,1,answer_option,"","","",2,Ja,"",82513,3214,isco_skill_level_3,TRUE
+7097,Q7097_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung als staatlich geprüfte/r Augenoptiker/in erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung als staatlich geprüfte/r Augenoptiker/in erforderlich?,"","","","","","",
+7097,Q7097_1,1,answer_option,"","","",1,Nein,"",82522,3254,isco_skill_level_2,TRUE
+7097,Q7097_1,1,answer_option,"","","",2,Ja,"",82523,3254,isco_skill_level_3,TRUE
+7099,Q7099_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung als Hörgerätetechniker/in erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung als Hörgerätetechniker/in erforderlich?,"","","","","","",
+7099,Q7099_1,1,answer_option,"","","",1,Nein,"",82532,3214,isco_skill_level_2,TRUE
+7099,Q7099_1,1,answer_option,"","","",2,Ja,"",82533,3214,isco_skill_level_3,TRUE
+7100,Q7100_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung als Arbeitsmedizinische/r Assistent/in erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung als Arbeitsmedizinische/r Assistent/in erforderlich?,"","","","","","",
+7100,Q7100_1,1,answer_option,"","","",1,Nein,"",81182,3256,isco_skill_level_2,TRUE
+7100,Q7100_1,1,answer_option,"","","",2,Ja,"",81183,3256,isco_skill_level_3,TRUE
+7104,Q7104_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung als Fachkrankenschwester/-pfleger erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung als Fachkrankenschwester/-pfleger erforderlich?,"","","","","","",
+7104,Q7104_1,1,answer_option,"","","",1,Ja,"",81313,3221,isco_skill_level_3,TRUE
+7104,Q7104_1,1,answer_option,"","","",2,Nein,"",81302,3221,isco_skill_level_2,TRUE
+8004,Q8004_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+8004,Q8004_1,1,answer_option,"","","",1,Ja,"",83124,2635,isco_skill_level_4,TRUE
+8004,Q8004_1,1,answer_option,"","","",2,Nein,"",83123,3412,isco_skill_level_3,TRUE
+8006,Q8006_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,War für diese Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,"","","","","","",
+8006,Q8006_1,1,answer_option,"","","",1,Ja,"",83132,3412,isco_skill_level_2,TRUE
+8006,Q8006_1,1,answer_option,"","","",2,Nein,"",83131,5321,isco_skill_level_1,TRUE
+8007,Q8007_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,War für diese Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,"","","","","","",
+8007,Q8007_1,1,answer_option,"","","",1,Ja,"",83132,3412,isco_skill_level_2,TRUE
+8007,Q8007_1,1,answer_option,"","","",2,Nein,"",83131,5322,isco_skill_level_1,TRUE
+8008,Q8008_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+8008,Q8008_1,1,answer_option,"","","",1,ja,"",83134,2352,isco_skill_level_4,TRUE
+8008,Q8008_1,1,answer_option,"","","",2,nein,"",83133,3412,isco_skill_level_3,TRUE
+8011,Q8011_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+8011,Q8011_1,1,answer_option,"","","",1,Ja,"",83154,2635,isco_skill_level_4,TRUE
+8011,Q8011_1,1,answer_option,"","","",2,Nein,"",83154,3412,isco_skill_level_3,TRUE
+8014,Q8014_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung im Bereich Hauswirtschaft erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung im Bereich Hauswirtschaft erforderlich?,"","","","","","",
+8014,Q8014_1,1,answer_option,"","","",1,Ja,"",83213,5152,isco_skill_level_3,TRUE
+8014,Q8014_1,1,answer_option,"","","",2,Nein,"",83212,5152,isco_skill_level_2,TRUE
+8019,Q8019_1,1,question,sonstige,"Gehört es zu Ihren Tätigkeiten, Aufgaben in der Sozial- und Bildungsarbeit wahrzunehmen?","Gehörte es zu Ihren Tätigkeiten, Aufgaben in der Sozial- und Bildungsarbeit wahrzunehmen?","","","","","","",
+8019,Q8019_1,1,answer_option,"","","",1,Ja,"",83323,3413,"",TRUE
+8019,Q8019_1,1,answer_option,"","","",2,Nein,"",83322,3413,"",TRUE
+8034,Q8034_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein mindestens 4-jähriges Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein mindestens 4-jähriges Masterstudium erforderlich?,"","","","","","",
+8034,Q8034_1,1,answer_option,"","","",1,Ja,"",84214,2320,isco_skill_level_4,TRUE
+8034,Q8034_1,1,answer_option,"","","",2,Nein,"",84213,2320,isco_skill_level_3,TRUE
+8035,Q8035_1,1,question,sonstige,Vermitteln Sie die Ausbildungsinhalte unmittelbar im Betrieb?,Haben Sie die Ausbildungsinhalte unmittelbar im Betrieb vermittelt?,"","","","","","",
+8035,Q8035_1,1,answer_option,"","","",1,Ja,"",84223,2320,"",TRUE
+8035,Q8035_1,1,answer_option,"","","",2,Nein,"",84224,2320,"",TRUE
+8041,Q8041_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+8041,Q8041_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",84412,2354,isco_skill_level_2,TRUE
+8041,Q8041_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",84413,2354,isco_skill_level_3,TRUE
+8041,Q8041_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",84413,2354,isco_skill_level_3,TRUE
+8041,Q8041_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium,"",84414,2354,isco_skill_level_4,TRUE
+8062,Q8062_1,1,question,anforderungsniveau,Wird für die Ausübung Ihrer Tätigkeit eine abgeschlossene Weiterbildung im Bereich der Hauswirtschaft vorausgesetzt?,War für die Ausübung Ihrer Tätigkeit eine abgeschlossene Weiterbildung im Bereich der Hauswirtschaft vorausgesetzt?,"","","","","","",
+8062,Q8062_1,1,answer_option,"","","",1,Ja,"",83213,5152,isco_skill_level_3,TRUE
+8062,Q8062_1,1,answer_option,"","","",2,Nein,"",83212,5151,isco_skill_level_2,TRUE
+8999,Q8999_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,"","","","","","",
+8999,Q8999_1,1,answer_option,"","","",1,Ja,"",28222,8153,isco_skill_level_2,TRUE
+8999,Q8999_1,1,answer_option,"","","",2,Nein,"",28221,8153,isco_skill_level_1,TRUE
+9005,Q9005_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9005,Q9005_1,1,answer_option,"","","",1,Ja,"",29194,1321,isco_manager,TRUE
+9005,Q9005_1,1,answer_option,"","","",2,Nein,"",29193,3122,isco_supervisor,TRUE
+9010,Q9010_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9010,Q9010_1,1,answer_option,"","","",1,Ja,"",28194,1321,isco_manager,TRUE
+9010,Q9010_1,1,answer_option,"","","",2,Nein,"",28193,3122,isco_supervisor,TRUE
+9013,Q9013_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9013,Q9013_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",28212,7532,isco_skill_level_2,TRUE
+9013,Q9013_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",28213,7532,isco_skill_level_3,TRUE
+9013,Q9013_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Modedesign oder eines vergleichbaren Fachs,"",28213,7532,isco_skill_level_3,TRUE
+9013,Q9013_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Modedesign oder eines vergleichbaren Fachs,"",28214,7532,isco_skill_level_4,TRUE
+9014,Q9014_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9014,Q9014_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",28212,2163,isco_skill_level_2,TRUE
+9014,Q9014_1,1,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",28213,2163,isco_skill_level_3,TRUE
+9014,Q9014_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium im Bereich Modedesign oder eines vergleichbaren Fachs,"",28213,2163,isco_skill_level_3,TRUE
+9014,Q9014_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Modedesign oder eines vergleichbaren Fachs,"",28214,2163,isco_skill_level_4,TRUE
+9016,Q9016_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+9016,Q9016_1,1,answer_option,"","","",1,Ja,"",29104,2145,isco_skill_level_4,TRUE
+9016,Q9016_1,1,answer_option,"","","",2,Nein,"",29103,3116,isco_skill_level_3,TRUE
+9019,Q9019_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+9019,Q9019_1,1,answer_option,"","","",1,Ja,"",29114,2145,isco_skill_level_4,TRUE
+9019,Q9019_1,1,answer_option,"","","",2,Nein,"",29113,3116,isco_skill_level_3,TRUE
+9024,Q9024_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
+9024,Q9024_1,1,answer_option,"","","",1,Ja,"",29134,2145,isco_skill_level_4,TRUE
+9024,Q9024_1,1,answer_option,"","","",2,Nein,"",29133,3116,isco_skill_level_3,TRUE
+9030,Q9030_1,1,question,spezialisierung,In welchem Bereich sind sie vorwiegend tätig?,In welchem Bereich waren sie vorwiegend tätig?,"","","","","","",
+9030,Q9030_1,1,answer_option,"","","",1,"Herstellung von Fäden, Garnen oder Zwirnen","",28132,8151,"",TRUE
+9030,Q9030_1,1,answer_option,"","","",2,"Herstellung von textilen Flächengebilden wie Gewebe, Gewirke oder Strickwaren","",28122,8152,"",TRUE
+9030,Q9030_1,1,answer_option,"","","",3,"Veredelung der Textilien durch Bleichen, Färben, Schrumpfen oder andere Behandlung","",28142,8154,"",TRUE
+9030,Q9030_1,1,answer_option,"","","",4,oder trifft mehr als eines zu?,"",28102,8152,"",TRUE
+9046,Q9046_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9046,Q9046_1,1,answer_option,"","","",1,Ja,"",28294,1321,isco_manager,TRUE
+9046,Q9046_1,1,answer_option,"","","",2,Nein,"",28293,3122,isco_supervisor,TRUE
+9053,Q9053_1,1,question,sonstige,Besteht Ihre Arbeit aus Fließbandarbeit an der Maschine?,Hat Ihre Arbeit aus Fließbandarbeit an der Maschine bestanden?,"","","","","","",
+9053,Q9053_1,1,answer_option,"","","",1,Ja,"",28342,8155,"",TRUE
+9053,Q9053_1,1,answer_option,"","","",2,Nein,"",28342,7535,"",TRUE
+9055,Q9055_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9055,Q9055_1,1,answer_option,"","","",1,Ja,"",28394,1321,isco_manager,TRUE
+9055,Q9055_1,1,answer_option,"","","",2,Nein,"",28393,3122,isco_supervisor,TRUE
+9061,Q9061_1,1,question,sonstige,Bedienen Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine?,Haben Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine bedient?,"","","","","","",
+9061,Q9061_1,1,answer_option,"","","",1,Ja,"",29222,8160,"",TRUE
+9061,Q9061_1,1,answer_option,"","","",2,Nein,"",29222,7512,"",TRUE
+9063,Q9063_1,1,question,sonstige,Bedienen Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine?,Haben Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine bedient?,"","","","","","",
+9063,Q9063_1,1,answer_option,"","","",1,Ja,"",29232,8160,"",TRUE
+9063,Q9063_1,1,answer_option,"","","",2,Nein,"",29232,7511,"",TRUE
+9065,Q9065_1,1,question,sonstige,Bedienen Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine?,Haben Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine bedient?,"","","","","","",
+9065,Q9065_1,1,answer_option,"","","",1,Ja,"",29242,8160,"",TRUE
+9065,Q9065_1,1,answer_option,"","","",2,Nein,"",29242,7511,"",TRUE
+9067,Q9067_1,1,question,sonstige,Bedienen Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine?,Haben Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine bedient?,"","","","","","",
+9067,Q9067_1,1,answer_option,"","","",1,Ja,"",29252,8160,"",TRUE
+9067,Q9067_1,1,answer_option,"","","",2,Nein,"",29252,7513,"",TRUE
+9071,Q9071_1,1,question,sonstige,Bedienen Sie bei dieser Tätigkeit hauptsächlich Maschinen?,Haben Sie bei dieser Tätigkeit hauptsächlich Maschinen bedient?,"","","","","","",
+9071,Q9071_1,1,answer_option,"","","",1,Ja,"",29272,8160,"",TRUE
+9071,Q9071_1,1,answer_option,"","","",2,Nein,"",29272,7516,"",TRUE
+9076,Q9076_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9076,Q9076_1,1,answer_option,"","","",1,Ja,"",29294,1321,isco_manager,TRUE
+9076,Q9076_1,1,answer_option,"","","",2,Nein,"",29293,3122,isco_supervisor,TRUE
+9077,Q9077_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9077,Q9077_1,1,answer_option,"","","",1,Ja,"",29294,1321,isco_manager,TRUE
+9077,Q9077_1,1,answer_option,"","","",2,Nein,"",29293,3122,isco_supervisor,TRUE
+9079,Q9079_1,1,question,sonstige,"Bereiten Sie nur bestimmte Speisen zu, nämlich ...","Haben Sie nur bestimmte Speisen zubereitet, nämlich ...","","","","","","",
+9079,Q9079_1,1,answer_option,"","","",1,nur einfache Speisen zum Sofortverkauf in Fast-Food-Restaurants,"",63312,9411,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",2,"nur Vorspeisen, kalten Speisen und Süßspeisen","",29312,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",3,nur Fischgerichte und Seafoodgerichte,"",29322,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",4,nur Fleischgerichte und Grillgerichte sowie gebratene und frittierte Speisen,"",29322,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",5,"nur Fonds, Soßen und Buttermischungen","",29382,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",6,nur warme Beilagen,"",29382,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",7,nur diätische Mahlzeiten,"",29322,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",8,oder trifft nichts davon auf Sie zu?,"",29302,5120,"",TRUE
+9088,Q9088_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9088,Q9088_1,1,answer_option,"","","",1,Ja,"",29394,1412,isco_manager,TRUE
+9088,Q9088_1,1,answer_option,"","","",2,Nein,"",29393,3434,isco_supervisor,TRUE
+9090,Q9090_1,1,question,sonstige,Bedienen Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine?,Haben Sie bei dieser Tätigkeit hauptsächlich eine einzelne Maschine bedient?,"","","","","","",
+9090,Q9090_1,1,answer_option,"","","",1,Ja,"",29252,8160,"",TRUE
+9090,Q9090_1,1,answer_option,"","","",2,Nein,"",29252,7513,"",TRUE
+9110,Q9110_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine vertiefende berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine vertiefende berufliche Weiterbildung erforderlich?,"","","","","","",
+9110,Q9110_1,1,answer_option,"","","",1,Ja,"",28313,7535,isco_skill_level_3,TRUE
+9110,Q9110_1,1,answer_option,"","","",2,Nein,"",28312,7535,isco_skill_level_2,TRUE
+9200,Q9200_1,1,question,sonstige,Haben Sie zusätzlich zur Arbeit auf dem Weinberg noch weitere Aufgaben?,Hatten Sie zusätzlich zur Arbeit auf dem Weinberg noch weitere Aufgaben?,"","","","","","",
+9200,Q9200_1,1,answer_option,"","","",1,Ja,"",11603,6112,"",TRUE
+9200,Q9200_1,1,answer_option,"","","",2,Nein,"",11602,6112,"",TRUE
+9201,Q9201_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Weinbau oder einem verwandten Fach erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium im Bereich Weinbau oder einem verwandten Fach erforderlich?,"","","","","","",
+9201,Q9201_1,1,answer_option,"","","",1,Ja,"",11604,2132,isco_skill_level_4,TRUE
+9201,Q9201_1,1,answer_option,"","","",2,Nein,"",11603,3142,isco_skill_level_3,TRUE
+9202,Q9202_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9202,Q9202_1,1,answer_option,"","","",1,Ja,"",11694,1311,isco_manager,TRUE
+9202,Q9202_1,1,answer_option,"","","",2,Nein,"",11693,6112,isco_supervisor,TRUE
+9203,Q9203_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9203,Q9203_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",11711,9215,isco_skill_level_1,TRUE
+9203,Q9203_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",11712,6210,isco_skill_level_2,TRUE
+9203,Q9203_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",11713,3143,isco_skill_level_3,TRUE
+9203,Q9203_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium im Bereich Forstwirtschaften,"",11713,3143,isco_skill_level_3,TRUE
+9203,Q9203_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium im Bereich Forstwirtschaften,"",11714,2132,isco_skill_level_4,TRUE
+9204,Q9204_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9204,Q9204_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",11711,9215,isco_skill_level_1,TRUE
+9204,Q9204_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",11722,6113,isco_skill_level_2,TRUE
+9204,Q9204_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",11723,3143,isco_skill_level_3,TRUE
+9204,Q9204_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium im Bereich Landschaftsökologie und Naturschutz,"",11723,3143,isco_skill_level_3,TRUE
+9204,Q9204_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium im Bereich Landschaftsökologie und Naturschutz,"",11724,2143,isco_skill_level_4,TRUE
+9205,Q9205_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
+9205,Q9205_1,1,answer_option,"","","",1,Ja,"",11793,5419,isco_supervisor,TRUE
+9205,Q9205_1,1,answer_option,"","","",2,Nein,"",11732,5419,isco_not_supervising,TRUE
+9207,Q9207_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9207,Q9207_1,1,answer_option,"","","",1,Ja,"",11794,1311,isco_manager,TRUE
+9207,Q9207_1,1,answer_option,"","","",2,Nein,"",11793,3143,isco_supervisor,TRUE
+9208,Q9208_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9208,Q9208_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21111,9311,isco_skill_level_1,TRUE
+9208,Q9208_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21112,8111,isco_skill_level_2,TRUE
+9208,Q9208_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21113,3117,isco_skill_level_3,TRUE
+9208,Q9208_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium im Bereich Rohstoffingenieurwesen,"",21113,3117,isco_skill_level_3,TRUE
+9208,Q9208_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium im Bereich Rohstoffingenieurwesen,"",21114,2146,isco_skill_level_4,TRUE
+9209,Q9209_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9209,Q9209_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21111,8113,isco_skill_level_1,TRUE
+9209,Q9209_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21112,8113,isco_skill_level_2,TRUE
+9209,Q9209_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21113,3117,isco_skill_level_3,TRUE
+9209,Q9209_1,1,answer_option,"","","",4,ein abgeschlossenes Masterstudium im Bereich Rohstoffingenieurwesen,"",21113,3117,isco_skill_level_3,TRUE
+9209,Q9209_1,1,answer_option,"","","",5,ein abgeschlossenes Masterstudium im Bereich Rohstoffingenieurwesen,"",21114,2146,isco_skill_level_4,TRUE
+9210,Q9210_1,1,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+9210,Q9210_1,1,answer_option,"","","",1,sprengberechtigte Fachkräfte unterstützen,"",21122,7542,"",TRUE
+9210,Q9210_1,1,answer_option,"","","",2,die Sicherheit von Sprengungen verantworten,"",21123,7542,"",TRUE
+9210,Q9210_1,1,answer_option,"","","",3,Sprengungen planen und besonders komplexe Sprengungen selber übernehmen,"",21124,2149,"",TRUE
+9211,Q9211_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9211,Q9211_1,1,answer_option,"","","",1,Ja,"",21194,1322,isco_manager,TRUE
+9211,Q9211_1,1,answer_option,"","","",2,Nein,"",21193,3121,isco_supervisor,TRUE
+9212,Q9212_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9212,Q9212_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21201,9329,isco_skill_level_1,TRUE
+9212,Q9212_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21212,8112,isco_skill_level_2,TRUE
+9212,Q9212_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21213,3117,isco_skill_level_3,TRUE
+9212,Q9212_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",21213,3117,isco_skill_level_3,TRUE
+9213,Q9213_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9213,Q9213_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21201,9329,isco_skill_level_1,TRUE
+9213,Q9213_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21212,8112,isco_skill_level_2,TRUE
+9213,Q9213_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21213,3117,isco_skill_level_3,TRUE
+9213,Q9213_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",21213,3117,isco_skill_level_3,TRUE
+9214,Q9214_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9214,Q9214_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21201,9329,isco_skill_level_1,TRUE
+9214,Q9214_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21222,8114,isco_skill_level_2,TRUE
+9216,Q9216_1,1,question,anforderungsniveau,Welche Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Ausbildung war für Ihre Tätigkeit in der Regel erforderlich?,"","","","","","",
+9216,Q9216_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21201,9329,isco_skill_level_1,TRUE
+9216,Q9216_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21232,7113,isco_skill_level_2,TRUE
+9216,Q9216_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21233,7113,isco_skill_level_3,TRUE
+9216,Q9216_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",21233,7113,isco_skill_level_3,TRUE
+9221,Q9221_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,"","","","","","",
+9221,Q9221_1,1,answer_option,"","","",1,Ja,"",21312,8181,isco_skill_level_2,TRUE
+9221,Q9221_1,1,answer_option,"","","",2,Nein,"",21311,9329,isco_skill_level_1,TRUE
+9223,Q9223_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+9223,Q9223_1,1,answer_option,"","","",1,Ja,"",21323,3119,isco_skill_level_3,TRUE
+9223,Q9223_1,1,answer_option,"","","",2,Nein,"",21322,7315,isco_skill_level_2,TRUE
+9224,Q9224_1,1,question,spezialisierung,Liegt Ihr Arbeitsschwerpunkt im Glasblasen oder in der Justierung der Messinstrumente?,Lag Ihr Arbeitsschwerpunkt im Glasblasen oder in der Justierung der Messinstrumente?,"","","","","","",
+9224,Q9224_1,1,answer_option,"","","",1,Glasblasen,"",21332,7315,"",TRUE
+9224,Q9224_1,1,answer_option,"","","",2,Justierung der Messinstrumente,"",21352,7311,"",TRUE
+9229,Q9229_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+9229,Q9229_1,1,answer_option,"","","",1,Ja,"",21363,7549,isco_skill_level_3,TRUE
+9229,Q9229_1,1,answer_option,"","","",2,Nein,"",21362,7549,isco_skill_level_2,TRUE
+9231,Q9231_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
+9231,Q9231_1,1,answer_option,"","","",1,eine kurze Anlernphase,"",21411,9329,isco_skill_level_1,TRUE
+9231,Q9231_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21412,8181,isco_skill_level_2,TRUE
+9231,Q9231_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21413,3119,isco_skill_level_3,TRUE
+9231,Q9231_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",21413,3119,isco_skill_level_3,TRUE
+9232,Q9232_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung erforderlich?,"","","","","","",
+9232,Q9232_1,1,answer_option,"","","",1,Ja,"",21423,3119,isco_skill_level_3,TRUE
+9232,Q9232_1,1,answer_option,"","","",2,Nein,"",21422,7314,isco_skill_level_2,TRUE
+9504,Q9504_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,"","","","","","",
+9504,Q9504_1,1,answer_option,"","","",1,Ja,"",28312,7535,isco_skill_level_2,TRUE
+9504,Q9504_1,1,answer_option,"","","",2,Nein,"",28301,8155,isco_skill_level_1,TRUE
+9900,Q9900_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung zum Fachwirt erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung zum Fachwirt erforderlich?,"","","","","","",
+9900,Q9900_1,1,answer_option,"","","",1,Ja,"",51643,"",isco_skill_level_3,FALSE
+9900,Q9900_1,1,answer_option,"","","",2,Nein,"",51642,"",isco_skill_level_2,FALSE
+9900,Q9900_2,2,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
+9900,Q9900_2,2,answer_option,"","","",1,für Fluggäste Beratungs- und Serviceleistungen erbringen,"","",4221,"",TRUE
+9900,Q9900_2,2,answer_option,"","","",2,mit anderen Unternehmen Geschäftsbeziehungen unterhalten,"","",3324,"",TRUE
+9900,Q9900_2,2,answer_option,"","","",3,Transportleistungen koordinieren,"","",4323,"",TRUE
+9999,Q9999_1,1,question,sonstige,Welchen Dienstgrad haben Sie?,Welchen Dienstgrad hatten Sie?,"","","","","","",
+9999,Q9999_1,1,answer_option,"","","",1,einen Mannschaftsdienstgrad,"",01402,0310,"",TRUE
+9999,Q9999_1,1,answer_option,"","","",2,"einen Unteroffiziersdienstgrad ohne Portepee (z.B. Unteroffizier, Stabsunteroffizier)","",01302,0210,"",TRUE
+9999,Q9999_1,1,answer_option,"","","",3,"einen Unteroffiziersdienstgrad mit Portepee (z.B. Feldwebel, Oberfeldwebel usw.)","",01203,0210,"",TRUE
+9999,Q9999_1,1,answer_option,"","","",4,"einen Offiziersdienstgrad bis einschließlich Hauptmann (z.B. Leutnant, Hauptmann)","",01104,0110,"",TRUE
+9999,Q9999_1,1,answer_option,"","","",5,einen Offiziersdienstgrad ab Major,"",01104,0110,"",TRUE

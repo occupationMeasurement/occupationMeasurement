@@ -1,0 +1,1450 @@
+isco_id,auxco_id,auxco_title,isco_title
+0310,9999,Soldat/in,"Armed forces occupations, other ranks"
+0210,9999,Soldat/in,Non-commissioned armed forces officers
+0110,9999,Soldat/in,Commissioned armed forces officers
+9211,1010,Acker- und Erntehelfer/in,Crop farm labourers
+9213,1011,Helfer/in - Tierwirtschaft und im Ackerbau,Mixed crop and livestock farm labourers
+6130,1012,Landwirt/in,Mixed crop and animal producers
+6111,1012,Landwirt/in,Field crop and vegetable growers
+6111,1013,Ackerwirt/in,Field crop and vegetable growers
+2132,1014,Landwirtschaftsberater/in,"Farming, forestry and fisheries advisers"
+2132,1015,Agraringenieur/in,"Farming, forestry and fisheries advisers"
+3142,1016,Agrotechniker/in / Mechanisator/in,Agriculultural technicians
+2132,1017,Agraringenieur/in - Mechanisierung der Landwirtschaft,"Farming, forestry and fisheries advisers"
+3315,1018,Landwirtschaftliche/r Gutachter/in,Valuers and loss assessors
+2132,1019,Beamter/ Beamtin - Agrarverwaltung,"Farming, forestry and fisheries advisers"
+2132,1020,höherer landwirtschaftlicher Beratungsdienst,"Farming, forestry and fisheries advisers"
+3142,1024,Landwirtschaftlicher Labortechniker/in,Agricultural technicians
+5164,1035,Pferdepfleger/in - Pferdehaltung und Service,Pet groomers and animal care workers
+6121,1036,Pferdewirtschaftsfacharbeiter/in,Livestock and dairy producers
+6121,1037,Pferdewirt/in - Zucht,Livestock and dairy producers
+5164,1038,Pferdewirt/in - Pferdereiten,Pet groommers and animal care workers
+3423,1038,Pferdewirt/in - Pferdereiten, Fitness and Recreation Instructors and Programme Leaders
+7221,1039,Hufschmied/in,"Blacksmiths, hammer smiths and forging press workers"
+9332,1040,Kutscher/in,Drivers of animal-drawn vehicles and machinery
+9212,1046,Tierpflegehelfer/in,Livestock farm labourers
+5164,1047,Tierpfleger/in,Pet groomers and animal care workers
+5164,1048,Hundefriseur/in,Pet groomers and animal care workers
+5164,1049,Tierpfleger/in - Forschung und Klinik,Pet groomers and animal care workers
+5164,1050,Tierlehrer/in oder Falkner/in,Pet groomers and animal care workers
+9214,1053,Gartenbauhelfer/in,Garden and horticultural labourers
+6113,1054,Gärtner/in,"Gardeners, horticultural and nursery growers"
+6112,1054,Gärtner/in,Tree and shrub crop growers
+6111,1054,Gärtner/in,Field crop and vegetable growers
+3142,1055,Gartenbautechniker/in,Agricultural technicians
+2132,1056,Gartenbauingenieur/in,"Farming, forestry and fisheries advisers"
+6113,1057,Friedhofsgärtner/in,"Gardeners, horticultural and nursery growers"
+6113,1058,Gartenbautechniker/in - Friedhofsgärtnerei,"Gardeners, horticultural and nursery growers"
+6111,1059,Gärtner/in - Gemüsebau,Field crop and vegetable growers
+6112,1060,Gärtner/in - Obstbau,Tree and shrub crop growers
+3142,1061,Fachberater/in - Obst- und Gemüseanbau,Agricultural technicians
+6113,1062,"Baumschul-, Stauden-, Zierpflanzengärtner/in","Gardeners, horticultural and nursery growers"
+3142,1063,Fachberater/in - Pflanzen und Saatgut,Agricultural technicians
+7549,1064,Florist/in,Craft and related workers not elsewhere classified
+7549,1065,Gestalter/in - Blumenkunst,Craft and related workers not elsewhere classified
+6113,1066,Landschaftsgärtner/in,"Gardeners, horticultural and nursery growers"
+2162,1067,Landschaftsarchitekt/in,Landscape architects
+3142,1074,Pflanzenschützer/in,Agricultural technicians
+6111,1075,Anbauer/in mit Spezialisierung,Field crop and vegetable growers
+2132,1076,Pflanzenarzt/-ärztin,"Farming, forestry and fisheries advisers"
+2132,1077,Entwicklungshelfer/in - Pflanzenbauwissenschaften,"farming, forestry and fisheries advisers"
+9212,1502,Helfer/in - Nutztierhaltung,Livestock farm labourers
+6121,1503,Tierwirt/in - Nutztierhaltung,Livestock and dairy producers
+3142,1504,Fachagrarwirt/in - Zucht- und Fleischleistungsprüfung,Agricultural technicians
+2132,1505,Ingenieur/in - Vieh- und Fleischwirtschaft,"Farming, forestry and fishery advisers"
+6122,1506,Tierwirt/in - Geflügelhaltung,Poultry producers
+6121,1507,Klauenpfleger/in,Livestock and dairy producers
+3142,1508,Fachberater/in – Geflügelzucht,Agricultural technicians
+6123,1509,Imker/in,Apiarists and sericulturists
+3142,1510,Bienenzuchtberater/in,Agricultural technicians
+6129,1511,Haustierzüchter/in,Animal producers not elsewhere classified
+6129,1512,Pelztierzüchter/in,Animal producers not elsewhere classified
+3142,1514,Futtermittelberater/in,Agricultural technicians
+9216,1517,Fischereihelfer/in,Fishery and aquaculture labourers
+6222,1518,Fischer/in,Inland and coastal waters fishery workers
+6223,1518,Fischer/in,Deep-sea fishery workers
+6221,1519,Fischwirt/in,Aquaculture workers
+1312,1519,Fischwirt/in,Aquaculture and fisheries production managers
+3141,1520,Fischereitechniker/in,Life science technicians (excluding medical)
+2132,1520,Fischereitechniker/in,"Farming, forestry and fisheries advisers"
+6129,1710,Tierwirtschaftsmeister/in,Animal producers not elsewhere classified
+1311,1710,Tierwirtschaftsmeister/in,Agricultural and forestry production managers
+6121,1710,Tierwirtschaftsmeister/in,Livestock and dairy producers
+6122,1710,Tierwirtschaftsmeister/in,Poultry producers
+6123,1710,Tierwirtschaftsmeister/in,Apiarists and sericulturists
+6121,1711,Pferdewirtschaftsmeister/in,Livestock and dairy producers
+1311,1711,Pferdewirtschaftsmeister/in,Agricultural and forestry production manager
+3142,1711,Pferdewirtschaftsmeister/in,Agricultural technicians
+5164,1711,Pferdewirtschaftsmeister/in,Pet groomers and animal care workers
+3423,1711,Pferdewirtschaftsmeister/in,Fitness and Recreation Instructors and Programm Leaders
+5164,1712,Tierpflegemeister/in,Pet groomers and animal care workers
+1439,1712,Tierpflegemeister/in,Service managers not elsewhere classified
+6113,1713,Gärtnermeister/in,"Gardeners, horticultural and nursery growers"
+1311,1713,Gärtnermeister/in,Agricultural and forestry production managers
+6112,1713,Gärtnermeister/in,Tree and shrub crop growers
+6111,1713,Gärtnermeister/in,Field crop and vegetable growers
+3122,1714,Floristikmeister/in,Manufacturing supervisors
+1321,1714,Floristikmeister/in,Manufacturing managers
+6223,1715,Fischwirtschaftsmeister/in,Deep-sea fishery workers
+1312,1715,Fischwirtschaftsmeister/in,Aquaculture and fisheries production managers
+6221,1715,Fischwirtschaftsmeister/in,Aquaculture workers
+6222,1715,Fischwirtschaftsmeister/in,Inland and coastal waters fishery workers
+6111,1851,Landwirtschaftliche/r Betriebsleiter/in,Field crop and vegetable growers
+1311,1851,Landwirtschaftliche/r Betriebsleiter/in,Agricultural and forestry production managers
+6130,1851,Landwirtschaftliche/r Betriebsleiter/in,Mixed crop and animal producers
+3142,1851,Landwirtschaftliche/r Betriebsleiter/in,Agricultural technicians
+5164,1852,Zuchtbuchführer/in,Pet groomers and animal care workers 
+6112,9200,Winzer/in,Tree and shrub crop growers
+3142,9201,Weinbauberater/in,Agricultural technicians
+2132,9201,Weinbauberater/in,"Farming, forestry and fisheries advisers"
+1311,9202,Weinbergsverwalter/in,Agricultural and forestry production managers
+6112,9202,Weinbergsverwalter/in,Tree and shrub crop growers
+6210,9203,Forstwirt/in,Forestry and related workers
+9215,9203,Forstwirt/in,Forestry labourers
+3143,9203,Forstwirt/in,Forestry technicians
+2132,9203,Forstwirt/in,"Agrar-, Forst- und Fischereiwissenschaftler und -berater"
+3143,9204,Natur- und Landschaftspfleger/in,Forestry technicians
+9215,9204,Natur- und Landschaftspfleger/in,Forestry labourers
+6113,9204,Natur- und Landschaftspfleger/in,"Gardeners, horticultural and nursery growers"
+2143,9204,Natur- und Landschaftspfleger/in,Environmental engineers
+5419,9205,Berufsjäger/in,Protective services workers not elsewhere classified 
+6210,9206,Pflanzensammler/in,Forestry and related workers
+3143,9207,Forstverwalter/in,Forestry technicians
+1311,9207,Forstverwalter/in,Agricultural and forestry production managers
+3122,1700,Buchbindermeister/in,Manufacturing supervisors
+3122,1701,Druckermeister/in,Manufacturing supervisors
+3122,1702,Büchsenmachermeister/in,Manufacturing supervisors
+3122,1703,Werkzeugmachermeister/in,Manufacturing supervisors
+3122,1704,Uhrmachermeister/in,Manufacturing supervisors
+3115,1705,Mühlenbautechniker/in,Mechanical engineering technicians
+2144,1705,Mühlenbautechniker/in,Mechanical engineers
+3115,1706,Umweltschutzverfahrenstechniker/in,Mechanical engineering technicians
+2144,1706,Umweltschutzverfahrenstechniker/in,Mechanical engineers
+2152,1707,Mikrotechnologe/-login,Electronics engineers 
+2149,1708,Kybernetikingenieur/in,Engineering professionals not elsewhere classified
+3119,1709,Wehrverwaltungsbeamter/in,Material and engineering professionals not elsewhere classified
+2149,1709,Wehrverwaltungsbeamter/in,Engineering professionals not elsewhere classified
+3116,1716,Techniker/in - Kunststoff- und Kautschuktechnik,Chemical engineering technicians
+2145,1716,Techniker/in - Kunststoff- und Kautschuktechnik,Chemical engineers
+3122,1717,Industriemeister/in - Holz- und Sägeindustrie,Manufacturing supervisors
+1321,1717,Industriemeister/in - Holz- und Sägeindustrie,Manufacturing Managers
+3119,1718,Techniker/in - Druck- und Medientechnik,Physical and engineering science technicians not elsewhere classified
+2149,1718,Techniker/in - Druck- und Medientechnik,Engineering professionals not elsewhere classified
+3135,1719,Steuerer von Verfahren in der Metallerzeugung,Metal production process controllers
+2146,1719,Steuerer von Verfahren in der Metallerzeugung,"Mining engineers, metallurgists and related professionals"
+3115,1720,Schweißtechniker/in,Mechanical engineering technicians
+2144,1720,Schweißtechniker/in,Mechanical engineers
+7311,1721,Uhrmacher/in,Precision-instrument makers and repairers
+2144,1722,Maschinenbauingenieur/in,Mechanical engineers
+3115,1722,Maschinenbauingenieur/in,Mechanical engineering technicians
+7412,1723,Wartungs- und Servicetechniker/in,Electrical mechanics and fitters
+3115,1723,Wartungs- und Servicetechniker/in,Mechanical engineering technicians
+2144,1723,Wartungs- und Servicetechniker/in,Mechanical engineers
+3115,1724,Hydraulik-Fachkraft,Mechanical engineering technicians
+2144,1724,Hydraulik-Fachkraft,Mechanical engineers
+3115,1725,Land- und Baumaschinentechniker/in,Mechanical engineering technicians
+2144,1725,Land- und Baumaschinentechniker/in,Mechanical engineers
+3115,1726,Luftfahrttechniker/in,Mechanical engineering technicians
+2144,1726,Luftfahrttechniker/in,Mechanical engineers
+3115,1727,Schiffbautechniker/in,Mechanical engineering technicians
+2144,1727,Schiffbautechniker/in,Mechanical engineers
+3115,1728,Zweiradtechniker/in,Mechanical engineering technicians
+2144,1728,Zweiradtechniker/in,Mechanical engineers
+3113,1729,Mechatroniktechniker/in,Electrical engineering technicians
+2151,1729,Mechatroniktechniker/in,Electrical engineers
+7421,1730,Elektrotechniker/in - Automatisierungstechnik,Electronics mechanics and servicers
+3113,1730,Elektrotechniker/in - Automatisierungstechnik,Electrical engineering technicians
+2152,1730,Elektrotechniker/in - Automatisierungstechnik,Electronics engineers
+3113,1731,Solar- und Windenergietechniker/in,Electrical engineering technicians
+2151,1731,Solar- und Windenergietechniker/in,Electrical engineers
+3113,1732,Kabeltechniker/in,Electrical engineering technicians
+2151,1732,Kabeltechniker/in,Electrical engineers
+3113,1733,Elektrotechniker/in,Electrical engineering technicians
+2151,1733,Elektrotechniker/in,Electrical engineers
+2152,1733,Elektrotechniker/in,Electronics engineers
+3114,1733,Elektrotechniker/in,Electronics engineering technicians
+3522,1734,Techniker/in - Informations- und Kommunikationselektronik,Telecommunications engineering technicians
+2153,1734,Techniker/in - Informations- und Kommunikationselektronik,Telecommunications engineers
+3521,1734,Techniker/in - Informations- und Kommunikationselektronik,Broadcasting and audio-visual technicians
+3114,1735,Mikrosystemtechniker/in,Electronics engineering technicians
+2152,1735,Mikrosystemtechniker/in,Electronics engineers
+3114,1736,Bordelektroniktechniker/in,Electronics engineering technicians
+2152,1736,Bordelektroniktechniker/in,Electronics engineers
+3119,1737,Konstruktionstechniker/in,Physical and engineering science technicians not elsewhere classified
+2149,1737,Konstruktionstechniker/in,Engineering professionals not elsewhere classified
+3119,1738,Qualitätssicherungstechniker/In,Physical and engineering science technicians not elsewhere classified
+2141,1738,Qualitätssicherungstechniker/In,Industrial and production engineers
+3115,1739,Textiltechniker/in,Mechanical engineering technicians
+2149,1739,Textiltechniker/in,Engineering professionals not elsewhere classified
+2163,1740,Textilmustergestalter/in,Product and garment designers
+7532,1740,Textilmustergestalter/in,Garment and related patternmakers and cutters
+3119,1741,Bekleidungstechniker/in,Physical and Engineering Science Technicians Not Elsewhere Classified
+2149,1741,Bekleidungstechniker/in,Engineering professionals not elsewhere classified
+3119,1742,Ledertechniker/in,Physical and engineering science technicians not elsewhere classified
+2141,1742,Ledertechniker/in,Industrial and production engineers
+9329,1751,"Helfer/in - Mineralgewinnung, -aufbereitung",Manufacturing labourers not elsewhere classified
+9329,1752,Helfer/in - Rohkohlenaufbereitung,Manufacturing labourers not elsewhere classified
+9329,1753,Helfer/in - Baustoffherstellung,Manufacturing labourers not elsewhere classified
+3135,1843,Metallumformungstechniker/in,Metal production process controllers
+2146,1843,Metallumformungstechniker/in,"Mining engineers, metallurgists and related professionals"
+3117,1844,Gießereitechniker/in,Mining and metallurgical technicians
+2146,1844,Gießereitechniker/in,"Mining engineers, metallurgists and related professionals"
+3116,1845,Galvanotechniker/in,Chemical engineering technicians
+2146,1845,Galvanotechniker/in,"Mining engineers, metallurgists and related professionals"
+3112,1846,Metallbautechniker/in,Civil engineering technicians
+2142,1846,Metallbautechniker/in,Civil engineers
+3115,1847,Werkzeugtechniker/in,Mechanical engineering technicians
+2144,1847,Werkzeugtechniker/in,Mechanical engineers
+3115,1848,Waffentechniker/in,Mechanical engineering technicians
+2144,1848,Waffentechniker/in,Mechanical engineers
+7223,1853,Maschineneinrichter/in (spanlose Metallbearbeitung),Metal working machine tool setters and operators
+7221,1853,Maschineneinrichter/in (spanlose Metallbearbeitung),"Blacksmiths, hammer smiths and forging press workers"
+9329,2001,Gießereihelfer/in,"Manufacturing labourers not elsewhere classified (für die Berufe: Helfer/in - Metallerzeugung, Gießerei)"
+8121,2002,Hüttentechnik - Fachkraft,Metal processing plant operators
+3117,2004,Bergbau- und Hüttentechniker,Mining and metallurgical technicians
+8121,2006,Walzer/in,Metal processing plant operators
+7221,2007,Grob-/Hammerschmied/in,"Blacksmiths, hammer smiths and forging press workers"
+8121,2010,Gießereimechaniker/in,Metal processing plant operators
+7211,2014,Gießereiformer/in,Metal molders and core makers
+3119,2018,Metallbearbeitungstechniker/in,Physical and engineering science technicians not elsewhere classified
+7224,2022,Metallschleifer/in,"Metal polishers, wheel grinders and tool sharpeners"
+7223,2023,Zerspanungsmechaniker/in,Metal working machine tool setters and operators
+3119,2024,CNC-Techniker/in,Physical and engineering science technicians not elsewhere classified
+7223,2025,Lasertechnische/r Assistent/in,Metal working machine tool setters and operators
+2149,2028,Ingenieur/in - Lasertechnik,Engineering professionals not elsewhere classified
+8122,2029,Oberflächenbeschichter/in,"Metal finishing, plating and coating machine operators"
+9329,2032,Metalloberflächenbearbeitungshelfer/in,Manufacturing labourers not elsewhere classified
+8122,2033,Emaillierer/in,"Metal finishing, plating and coating machine operators"
+7214,2034,Metallbauer/in,Baumetallverformer und Metallbauer
+9329,2040,Metallbauhelfer/in,Manufacturing labourers not elsewhere classified
+7212,2042,Schweißer/in,Welders and flame cutters
+7541,2045,Industrietaucher/in,Underwater divers
+3122,2047,Metallbaumeister/in,Manufacturing supervisors
+7222,2048,Feinmechaniker/in,Toolmakers and related workers
+7311,2049,Präzisionsinstrumentenmacher/in,Precision-instrument makers and repairers
+3115,2050,Feinwerktechniker/in,Mechanical engineering technicians
+2144,2051,Feinwerktechnikingenieur/in,Mechanical engineers
+9329,2052,Feinmechanikerhelfer/in,Manufacturing labourers not elsewhere classified
+7222,2053,Werkzeugmechaniker/in,Toolmakers and related workers
+3122,2058,Feinwerkmechanikermeister/in,Manufacturing supervisors
+7233,2059,Maschinenschlosser/in,Agricultural and industrial machinery mechanics and repairers
+7222,2062,Büchsenmacher/in,Toolmakers and related workers
+9329,2063,Montagehelfer/in,Manufacturing labourers not elsewhere classified
+8211,2064,Fertigungsmechaniker/in,Mechanical machinery assemblers
+8182,2066,Kesselwärter/in,Steam engine and boiler operators
+9623,2068,Zählerableser/in,Meter readers and vending-machine collectors
+7233,2072,Hydraulikschlosser/in,"Agricultural and industrial machinery mechanics and repairers (für die Berufe: Motorenmechaniker/in, Turbinenmechaniker/in)"
+9629,2075,Kraftfahrzeugmechanikerhelfer/in,Elementary workers not elsewhere classified
+7231,2076,Kraftfahrzeugmechatroniker/in,Motor vehicle mechanics and repairers
+3115,2077,Kraftfahrzeugtechniker/in,Mechanical engineering technicians
+2144,2078,Kraftfahrzeugingenieur/in,Mechanical engineers
+7233,2079,Land- und Baumaschinenmechaniker/in,Agricultural and industrial machinery mechanics and repairers
+7232,2082,Fluggerätemechaniker/in - Triebwerkstechnik,Aircraft engine mechanics and repairers
+8211,2083,Fluggerätemechaniker/in - Fertigungstechnik,Mechanical machinery assemblers
+7214,2086,Schiffbauer/in,Structural metal preparers and erectors
+7231,2089,Zweiradmechaniker/in - motorisierte Zweiräder,Motor vehicle mechanics and repairers
+7234,2090,Fahrradmechaniker/in,Bicycle and related repairers
+9329,2093,Metallbearbeitungshelfer/in,Manufacturing labourers not elsewhere classified
+7412,2094,Mechatroniker/in,Electrical mechanics and fitters
+7411,2100,Elektroinstallateur/in,Building and related electricians
+7412,2101,Elektromaschinenbauer/in,Electrical mechanics and fitters
+3113,2102,Elektromaschinenbauer/in - Optimierung,Electrical engineering technicians
+3131,2104,Kraftwerker/in,Power production plant operators
+8182,2104,Kraftwerker/in,Steam engine and boiler operators
+2151,2105,Kraftwerksingenieur/in,Electrical engineers
+7412,2106,Technische/r Assistent/in für regenerative Energietechnik,Electrical mechanics and fitters
+7412,2109,Betriebselektriker/in,Electrical mechanics and fitters
+3113,2109,Betriebselektriker/in,Electrical engineering technicians
+7413,2111,Kabelmonteur/in,Electrical line installers and repairers
+8212,2114,Elektrohelfer/in,Electrical and electronic equipment assemblers
+7412,2115,Elektromechaniker/in,Electrical mechanics and fitters
+7421,2115,Elektromechaniker/in,Electronics mechanics and servicers
+7422,2118,Informations- und Kommunikationselektroniker/in,Information and communications technology installers and servicers
+3122,2121,Metall- und Glockengießermeister/in,Manufacturing supervisors
+3122,2122,Leiter/in - Metallbearbeitung,Manufacturing supervisors
+3122,2123,Galvaniseurmeister/in,Manufacturing supervisors
+3122,2124,Instandhaltungsleiter/in,Manufacturing supervisors
+1321,2124,Instandhaltungsleiter/in,Manufacturing managers
+3122,2126,Leiter/in Fahrzeugtechnik,Manufacturing supervisors
+1321,2126,Leiter/in Fahrzeugtechnik,Manufacturing managers
+3122,2128,Mechatronikermeister/in,Manufacturing supervisors
+3122,2129,Leiter/in - Energietechnik,Manufacturing supervisors
+3122,2130,Leiter/in - Elektrotechnik,Manufacturing supervisors
+8189,2131,Mikrotechnologe/-technologin,Stationary plant and machine operators not elsewhere classified
+7421,2134,Bordelektroniker/in,Electronics mechanics and servicers
+2152,2139,Optoelektronikingenieur/in,Electronics engineers
+3119,2143,Wehrtechniker/in,Physical and engineering science technicians not elsewhere classified
+2149,2143,Wehrtechniker/in,Engineering professionals not elsewhere classified
+2149,2144,Patentingenieur/in,Engineering professionals not elsewhere classified
+1223,2145,Entwicklungsleiter/in,Research and development managers
+3118,2146,Technische/r Zeichner/in,Draughtspersons
+7222,2149,Modellbauer/in,Toolmakers and related workers
+7522,2149,Modellbauer/in,Cabinet-makers and related workers
+7522,2150,Sportgerätebauer/in,Cabinet-makers and related workers
+3119,2151,Normentechniker/in,Physical and engineering science technicians not elsewhere classified
+2149,2152,Sportingenieur/in,Engineering professionals not elsewhere classified
+1223,2154,"Leiter/in - Technische Zeichnung, Konstruktion und Modellbau",Research and development managers
+3122,2154,"Leiter/in - Technische Zeichnung, Konstruktion und Modellbau",Manufacturing supervisors
+3122,2155,Leiter/in - Technische Produktionssteuerung und Qualitätssicherung,Manufacturing supervisors
+1321,2155,Leiter/in - Technische Produktionssteuerung und Qualitätssicherung,Manufacturing managers
+3119,2157,Fertigungstechnische/r Assistent/in,Physical and engineering science technicians not elsewhere classified
+3119,2158,Fertigungstechniker/in,Physical and engineering science technicians not elsewhere classified
+2141,2159,Produktionsingenieur/in,Industrial and production engineers
+7543,2160,Qualitätskontrolleur/in,Product graders and testers (except foods and beverages)
+9329,5177,Produktionshelfer/in – Kunststoff und Kautschuk,Manufacturing labourers not elsewhere classified
+8142,5178,Verfahrensmechaniker/in - Kunststofftechnik,Plastic products machine operators
+8141,5179,Verfahrensmechaniker/in - Kautschuktechnik,Rubber products machine operators
+8141,5183,Mechaniker/in - Reifen und Vulkanisation,Rubber products machine operators
+3122,5184,Industriemeister/in - Kunststoff und Kautschuk,Manufacturing supervisors
+9329,5185,Lackiererhelfer/in,Manufacturing labourers not elsewhere classified
+7132,5186,Lackierer/in,Spray painters and varnishers
+3116,5187,Farb- und Lacktechniker/in,Chemical engineering technicians 
+2145,5188,Farb- und Lackingenieur/in,Chemical engineers
+7132,5189,Fahrzeuglackierer/in,Spray painters and varnishers
+3111,5190,Lacklaborant/in,Chemical and physical science technicians
+3122,5191,Lackierermeister/in,Manufacturing supervisors 
+9329,5192,Helfer/in - Holz und Flechtwaren,Manufacturing labourers not elsewhere classified
+7523,5193,Holzbearbeitungsmechaniker/in,Woodworking machine tool setters and operators
+3119,5194,Holztechniker/in,Physical and engineering science technicians not elsewhere
+2149,5195,Holzingenieur/in,Engineering professionals not elsewhere classified
+7521,5196,Holz- und Korktrockner/in und –imprägnierer/in,Wood treaters
+8172,5197,Sägewerker/in,Wood processing plant operators
+7523,5198,Holzmechaniker/in,Woodworking machine tool setters and operators
+3119,5199,Holztechniker/in – Automatisierungstechnik,Physical and engineering science technicians not elsewhere classified
+7522,5200,Tischler/in,Cabinet-makers and related workers
+7522,5201,Restaurator/in - Möbel und Holzobjekte,Cabinet-makers and related workers
+3119,5202,Techniker/in - Holz- und Möbelbau,Physical and engineering science technicians not elsewhere classified
+7317,5203,Bürsten- und Pinselmacher/in,"Handicraft workers in wood, basketry and related materials "
+7317,5204,Flechtwarenmacher/in,"Handicraft workers in wood, basketry and related materials "
+7522,5205,Wagner/in,Cabinet-makers and related workers 
+7522,5206,Böttcher/in,Cabinet-makers and related workers 
+3122,5208,Handwerksmeister/in - Holz,Manufacturing supervisors
+9329,5210,Papierverarbeitungshelfer/in,Manufacturing labourers not elsewhere classified
+8171,5211,Papiertechnologe/-technologin,Pulp and papermaking plant operators
+3116,5212,Techniker/in - Papiertechnik,Chemical engineering technicians
+2149,5213,Papieringenieur/in,Engineering professionals not elsewhere classified
+8143,5214,Packmitteltechnologe/-technologin,Paper products machine operators
+3115,5215,Lebensmittelverpackungstechniker/in,Mechanical engineering technicians
+3119,5216,Mustermacher/in - Verpackungsmittelherstellung,Physical and engineering science technicians not elsewhere classified
+2144,5217,Verpackungsingenieur/in,Mechanical engineers
+3122,5218,Industriemeister/in - Papiererzeugung,Manufacturing supervisors
+2166,5219,Grafikdesigner/in,Graphic and multimedia designers
+2166,5220,Video- und Game-Designer/in,Graphic and multimedia designers
+2513,5221,Informationsarchitekt/in,Web and multimedia developers
+7321,5222,Mediengestalter/in - Digital und Print,Pre-press technicians
+2166,5224,Art-Direktor/in,Graphic and multimedia designers
+1222,5224,Art-Direktor/in,Advertising and public relations managers
+8132,5229,Fotolaborant/in,Photographic products machine operators
+3119,5230,Foto- und Medientechniker/in,Physical and engineering science technicians not elsewhere classified
+2149,5231,Ingenieur - Foto und Medientechnik,Engineering professionals not elsewhere classified
+3431,5232,Fotografenmeister/in,Photographers
+3431,5233,Fotograf/in,Photographers
+9329,5234,Drucker/in,Manufacturing labourers not elsewhere classified
+7322,5234,Drucker/in,Printers
+7323,5237,Buchbinder/in,Print finishing and binding workers
+7323,5238,Buchrestaurator/in,Print finishing and binding workers
+2166,5240,Medien- und Kommunikationsdesigner/in,Graphic and multimedia designers
+7321,5241,Flexograf/in,Pre-press technicians
+8153,8999,Maschinenführer/in zur Fertigung von Kleidungsstücken,Sewing machine operators
+2163,9002,Schuhmodelleur/in,Product and garment designers
+3119,9003,Schuhtechniker/in,Physical and engineering science technicians not elsewhere classified
+3116,9004,Lebensmitteltechniker/in in der Frucht- und Gemüsesaftproduktion,Chemical engineering technicans 
+3122,9005,Getränkeproduktionsleiter/in,Manufacturing supervisors
+1321,9005,Getränkeproduktionsleiter/in,Manufacturing managers
+8160,9006,Fachkraft in der Saftherstellung,Food and related products machine operators
+7515,9007,Nahrungsmittelverkoster/in,Food and beverage tasters and graders
+8160,9008,Weinküfer/in,Food and related products machine operators
+3116,9009,Weinbautechniker/in,Chemical engineering technicians
+3122,9010,Textilproduktionsleiter/in,Manufacturing supervisors
+1321,9010,Textilproduktionsleiter/in,Manufacturing managers
+7532,9013,Schnittmustermacher/in für Kleidungsstücke,Garment and related patternmakers and cutters
+2163,9014,Modedesigner/in,Product and garment designers
+8160,9015,Getränkemaschinensteuerer/-steuerin,Food and related products machine operators
+3116,9016,Getränketechniker/in,Chemical engineering technicians
+2145,9016,Getränketechniker/in,Chemical engineers
+8160,9018,Brauereifacharbeiter/in,Food and related products machine operators
+3116,9019,Brautechniker/in,Chemical engineering technicians
+2145,9019,Brautechniker/in,Chemical engineers
+9329,9020,Textilverarbeitungshelfer/in,Manufacturing labourers not elsewhere classified
+7531,9021,Schneider/in,"Tailors, dressmakers, furriers and hatters"
+8160,9023,Brenner/in,Food and related products machine operators
+3116,9024,Brennereitechniker/in,Chemical engineering technicians
+2145,9024,Brennereitechniker/in,Chemical engineers
+7533,9026,Segelmacher/in,"Sewing, embroidery and related workers"
+9329,9029,Textilhilfsarbeiter/in,Manufacturing labourers not elsewhere classified
+8152,9030,Textilmaschinenführer/in,Weaving and knitting machine operators
+8151,9030,Textilmaschinenführer/in,"Fibre preparing, spinning and winding machine operators"
+8154,9030,Textilmaschinenführer/in,"Bleaching, dyeing and fabric cleaning machine operators"
+8151,9035,Seiler/in,"Fibre preparing, spinning and winding machine operators"
+7536,9039,Lederwarenhersteller/in,Shoemakers and related workers
+7514,9040,Tiefkühlkosthersteller/in,"Fruit, vegetable and related preservers"
+8160,9041,Helfer/in - Lebensmitteltechnik,Food and related products machine operators
+7534,9045,Polsterer/Polsterin,Upholsterers and related workers
+3122,9046,Leiter/in - Textilverarbeitung,Manufacturing supervisors
+1321,9046,Leiter/in - Textilverarbeitung,Manufacturing managers
+2145,9047,Lebensmittelingenieur/in für Spezialnahrung,Chemical engineers
+9329,9048,Lederverarbeitungshelfer/in,Manufacturing labourers not elsewhere classified
+3116,9049,"Lebensmitteltechniker/in - Feinkost, Fertiggerichte, Obstverwertung",Chemical engineering technicians
+7531,9051,Hut- und Mützenmacher/in,"Tailors, dressmakers, furriers and hatters"
+7536,9052,Schuhmacher/in,Shoemakers and related workers
+7535,9053,Pelzveredler/in,"Pelt dressers, tanners and fellmongers"
+8155,9053,Pelzveredler/in,Fur and leather preparing machine operators
+3119,9054,Pelztechniker/in,"Material- und ingenieurtechnische Fachkräfte, anderweitig nicht genannt"
+3122,9055,Leiter/in Leder- und Pelzbearbeitung,Manufacturing supervisors
+1321,9055,Leiter/in Leder- und Pelzbearbeitung,Manufacturing managers
+7512,9061,Bäcker/in,"Bakers, pastry-cooks and confectionery makers"
+8160,9061,Bäcker/in,Food and related products machine operators
+3116,9062,Bäckereitechniker/in,Chemical engineering technicians
+7511,9063,Fleischer/in,"Butchers, fishmongers and related food preparers"
+8160,9063,Fleischer/in,Food and related products machine operators
+3116,9064,Fleischereitechniker/in,Chemical engineering technicians
+8160,9065,Fischverarbeiter/in,Food and related products machine operators
+7511,9065,Fischverarbeiter/in,"Butchers, fishmongers and related food preparers"
+3116,9066,Lebensmitteltechniker/in - Fischerzeugnisse,Chemical engineering technicians
+7513,9067,Molkereifacharbeiter/in,Dairy products makers
+8160,9067,Molkereifacharbeiter/in,Food and related products machine operators
+3116,9068,Molkereitechniker/in,Chemical engineering technicians
+8160,9069,Süßwarenfacharbeiter/in, Food and related products machine operators
+3116,9070,Süßwarentechniker/in,Chemical engineering technicians
+8160,9071,Tabakwarenmacher/in,Food and related products machine operators
+7516,9071,Tabakwarenmacher/in,Tobacco preparers and tobacco products makers
+3116,9072,Tabakwarentechniker/in,Chemical engineering technicians
+3122,9076,Leiter/in - Lebensmittelindustrie,Manufacturing supervisors
+1321,9076,Leiter/in - Lebensmittelindustrie,Manufacturing managers
+3122,9077,Leiter/in - Tabakwarenindustrie,Manufacturing supervisors
+1321,9077,Leiter/in - Tabakwarenindustrie,Manufacturing managers
+9412,9078,Küchenhilfe,Kitchen helpers
+5120,9079,Koch/Köchin,Cooks
+9411,9079,Koch/Köchin,Fast food preparers
+7512,9086,Feinbäcker/in,"Bakers, pastry-cooks and confectionery makers"
+8160,9087,Bäckereimaschinenführer/in,Food and related products machine operators
+3434,9088,Küchenchef/in,Chefs
+1412,9088,Küchenchef/in,Restaurant managers
+7534,9089,Fahrzeuginnenausstatter/in,Upholsterers and related workers
+7513,9090,Speiseeishersteller/in,Dairy products makers
+8160,9090,Speiseeishersteller/in,Food and related products machine operators
+9329,9092,Pelzverarbeitungshelfer/in,Manufacturing labourers not elsewhere classified
+7533,9094,Technische/r Konfektionär/in,"Sewing, embroidery and related workers"
+8160,9096,Mühlenfacharbeiter/in,Food and related products machine operators
+3116,9097,Müllereitechniker/in,Chemical engineering technicians
+7535,9110,Gerber/in,"Pelt dressers, tanners and fellmongers"
+7514,9113,Speisefetthersteller/in,"Fruit, vegetable and related preservers"
+8111,9208,Bergmann/-frau,Miners and quarriers
+9311,9208,Bergmann/-frau,Mining and quarrying labourers
+3117,9208,Bergmann/-frau,Mining and metallurgical technicians
+2146,9208,Bergmann/-frau,"Mining engineers, metallurgists and related professionals"
+8113,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)",Well drillers and borers and related workers
+3117,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)",Mining and metallurgical technicians
+2146,9209,"Tiefbohrfacharbeiter/in (Erdöl-, Erdgasgewinnung)","Mining engineers, metallurgists and related professionals"
+7542,9210,Sprengbeauftragte/r,Shotfirers and blasters
+2149,9210,Sprengbeauftragte/r,Engineering professionals not elsewhere classified
+3121,9211,Leiter/in - Berg- und Tagebau,Mining supervisors
+1322,9211,Leiter/in - Berg- und Tagebau,Mining managers
+8112,9212,Kohleaufbereiter/in,Mineral and stone processing plant operators
+9329,9212,Kohleaufbereiter/in,Manufacturing labourers not elsewhere classified
+3117,9212,Kohleaufbereiter/in,Mining and metallurgical technicians
+8112,9213,Aufbereitungsmechaniker/in,Mineral and stone processing plant operators
+9329,9213,Aufbereitungsmechaniker/in,Manufacturing labourers not elsewhere classified
+3117,9213,Aufbereitungsmechaniker/in,Mining and metallurgical technicians
+8114,9214,Arbeiter/in bei Herstellung von Baustoffen,"Cement, stone and other mineral products machine operators"
+9329,9214,Arbeiter/in bei Herstellung von Baustoffen,Manufacturing labourers not elsewhere classified
+3112,9215,Baustofftechniker/in,Civil engineering technicians
+7113,9216,Steinmetz/in,"Stonemasons, stone cutters, splitters and carvers"
+9329,9216,Steinmetz/in,Manufacturing labourers not elsewhere classified
+3122,9217,Leiter/in - Baustoffherstellung,Manufacturing supervisors
+3122,9218,Steinmetzmeister/in,Manufacturing supervisors
+3122,9219,Leiter/in - Gestein- und Mineralienaufbereitung,Manufacturing supervisors
+7315,9220,Glasmacher/in,"Glass makers, cutters, grinders and finishers"
+8181,9221,Glasmaschinenführer/in,Glass and ceramics plant operators
+9329,9221,Glasmaschinenführer/in,Manufacturing labourers not elsewhere classified
+3119,9222,Glashüttentechniker/in,Physical and engineering science technicians not elsewhere classified
+7315,9223,Glasapparatebauer/in,"Glass makers, cutters, grinders and finishers"
+3119,9223,Glasapparatebauer/in,Physical and engineering science technicians not elsewhere classified
+7311,9224,Thermometermacher/in,Precision-instrument makers and repairers
+7315,9224,Thermometermacher/in,"Glass makers, cutters, grinders and finishers"
+7315,9225,Leuchtröhrenglasbläser/in,"Glass makers, cutters, grinders and finishers"
+7316,9226,Glasgraveur/in,"Sign writers, decorative painters, engravers and etchers"
+8181,9227,Flachglasmechaniker/in,Glass and ceramics plant operators
+7315,9228,Glasveredler/in,"Glass makers, cutters, grinders and finishers"
+7549,9229,Feinoptiker/in,Craft and related workers not elsewhere classified
+3122,9230,Leiter/in - Glasherstellung,Manufacturing supervisors
+8181,9231,Industriekeramiker/in,Glass and ceramics plant operators
+9329,9231,Industriekeramiker/in,Manufacturing labourers not elsewhere classified
+3119,9231,Industriekeramiker/in,Physical and engineering science technicians not elsewhere classified
+7314,9232,Keramikmodelleur/in,Potters and related workers
+3119,9232,Keramikmodelleur/in,Physical and engineering science technicians not elsewhere classified 
+3122,9233,Leiter/in - Keramikfabrik,Manufacturing supervisors
+8155,9504,Bediener/in von Lederzurichtungsmaschinen,Fur and leather preparing machine operators
+7535,9504,Bediener/in von Lederzurichtungsmaschinen,"Pelt dressers, tanners and fellmongers"
+8156,9505,Bediener/in von Maschinen zur Schuhfertigung,Shoemaking and related machine operators
+7531,9506,Kürschner/in,"Tailors, dressmakers, furriers and hatters"
+3112,1754,Tunnelbautechniker/in,Civil engineering technicians 
+9313,1755,Helfer/in - Bodenverlegung,Building construction labourers
+9313,1756,Helfer/in - Gebäudeausbau,Building construction labourers
+9313,1757,"Helfer/in - Klempnerei, Installation",Building construction labourers
+2143,1758,Ingenieur/in - Abfallwirtschaft,Environmental engineers
+3112,1775,Bautechniker/in,Civil engineering technicians
+3112,1776,Verkehrswegeplaner/in,Civil engineering technicians 
+2164,1776,Verkehrswegeplaner/in,Town and traffic planners
+3112,1777,Denkmalsanierungsplaner/in,Civil engineering technicians
+2161,1777,Denkmalsanierungsplaner/in,Building architects
+3112,1778,Hochbauingenieur/in,Civil engineering technicians
+2142,1778,Hochbauingenieur/in,Civil engineers
+3112,1779,Tiefbauingenieur/in,Civil engineering technicians
+2142,1779,Tiefbauingenieur/in,Civil engineers
+3112,1780,Straßenbautechniker/in,Civil engineering technicians
+2142,1780,Straßenbautechniker/in,Civil engineers
+3112,1781,Wasserbauingenieur/in,Civil engineering technicians
+2142,1781,Wasserbauingenieur/in,Civil engineers
+3112,1782,Gebäudetechniker/in,Civil engineering technicians
+2142,1782,Gebäudetechniker/in,Civil engineers
+3115,1783,Kälte-Klimatechniker/in,Mechanical engineering technicians
+3123,1783,Kälte-Klimatechniker/in,Construction supervisors
+2144,1783,Kälte-Klimatechniker/in,Mechanical Engineers
+7126,1784,Fernwärmetechniker/in,Plumbers and pipe fitters
+3115,1784,Fernwärmetechniker/in,Mechanical engineering technicians
+2144,1784,Fernwärmetechniker/in,Mechanical engineers
+2143,1785,Wasserwerksingenieur/in,Environmental engineers
+3115,1785,Wasserwerksingenieur/in,Mechanical engineering technicians
+2142,1786,Rohrnetzingenieur/in,Civil engineers
+3112,1786,Rohrnetzingenieur/in,Civil engineering technicians
+3132,1787,Organsiator/in - Abfallwirtschaft,Incinerator and water treatment plant operators
+9612,1787,Organsiator/in - Abfallwirtschaft,Refuse sorters
+2143,1787,Organsiator/in - Abfallwirtschaft,Environmental engineers
+9312,1854,Bauhelfer/in,Civil engineering labourers
+9313,1854,Bauhelfer/in,Building construction labourers
+7126,1856,Gasversorgungstechniker/in,Plumbers and pipe fitters
+3115,1856,Gasversorgungstechniker/in,Mechanical engineering technicians
+2144,1856,Gasversorgungstechniker/in,Mechanical engineers
+9313,3001,Maler- und Lackiererhelfer/in,Building construction labourers 
+8219,3010,Rollladen- und Sonnenschutzmechatroniker/in,Assemblers Not Elsewhere Classified
+3123,3010,Rollladen- und Sonnenschutzmechatroniker/in,Construction supervisors
+7124,3013,Isolierfacharbeiter/in,Insulation workers 
+3123,3013,Isolierfacharbeiter/in,Construction supervisors
+7125,3017,Glaser/in,Glaziers
+3123,3017,Glaser/in,Construction supervisors
+7131,3023,Maler/in und Lackierer/in,Painters and related workers 
+7121,3024,Bauwerksabdichter/in,Roofers
+2142,5246,Bauingenieur/in,Civil engineers
+2164,5246,Bauingenieur/in,Town and traffic planners
+2161,5252,Architekt/in,Building architects
+2142,5254,Bausachverständiger/in,Civil engineers
+2263,5255,Baubiologe/ -biologin,Environmental and occupational health and hygiene professionals
+3123,5257,Leiter/in - Bauplanung,Construction supervisors
+1323,5257,Leiter/in - Bauplanung,Führungskräfte in der Produktion im Bau
+3112,5260,Vermessungstechniker/in oder -ingeneur/in,Civil engineering technicians
+2165,5260,Vermessungstechniker/in oder -ingeneur/in,Cartographers and surveyors
+3118,5261,Kartograf/in,Draughtspersons
+2165,5261,Kartograf/in,Cartographers and surveyors
+7112,5262,Maurer/in,Bricklayers and related workers
+3123,5262,Maurer/in,Construction supervisors
+7112,5263,Restaurator/in - Maurerhandwerk,Bricklayers and related workers
+7112,5264,Feuerungs- und Schornsteinbauer/in,Bricklayers and related workers
+7111,5265,Fassadenmonteur/in,House builders
+8342,5268,Straßenbauer/in,Earthmoving and related plant operators
+8342,5271,Gleisbauer/in,Earthmoving and related plant operators
+3112,5272,Gleisbautechniker/in,Civil engineering technicians
+7122,5273,Restaurator/in - Parkettlegerhandwerk,Floor layers and tile setters
+3112,5274,Brunnenbautechniker/in,Civil engineering technicians
+8342,5275,Kanalbauer/in,Earthmoving and related plant operators
+8342,5276,Tunnelbauer/in,Earthmoving and related plant operators
+3112,5277,Kanalmeister/in,Civil engineering technicians
+8342,5278,Bodenkulturbauarbeiter/in,Earthmoving and related plant operators
+2164,5279,Ingenieur/in - Stadt- und Regionalplanung,Town and traffic planners
+3112,5280,Denkmaltechnische/r Assistent/in,Civil engineering technicians 
+3112,5281,Baukontrolleur/in,Civil engineering technicians
+7114,5282,Beton- und Stahlbetonbauer/in,"Concrete placers, concrete finishers and related workers"
+3112,5282,Beton- und Stahlbetonbauer/in,Civil engineering technicians 
+7121,5283,Dachdecker/in,Roofers 
+7119,5284,Bauwerksmechaniker/in - Abbruch und Betontrenntechnik,Building frame and related trades workers not elsewhere classified
+7112,5285,Pflasterer/ Pflasterin,Bricklayers and related workers 
+8113,5286,Brunnenbauer/in,Well drillers and borers and related workers
+7122,5287,"Fliesen-, Platten- und Mosaikleger/in",Floor layers and tile setters
+7114,5288,Estrich- und Terrazzoleger/in,"Concrete placers, concrete finishers and related workers"
+7122,5289,Parkettleger/in,Floor layers and tile setters
+7115,5292,Zimmerer/Zimmerin,Carpenters and joiners
+3123,5292,Zimmerer/Zimmerin,Construction supervisors
+7115,5293,Bautischler/in,Carpenters and joiners
+3123,5293,Bautischler/in,Construction supervisors
+7127,5294,Kälteanlagenbauer/in,Air conditioning and refrigeration mechanic
+3123,5294,Kälteanlagenbauer/in,Construction supervisors
+7126,5295,Rohrleitungsbauer/in,Plumbers and pipe fitters 
+7126,5297,Gas- und Wasserinstallateur/in,Plumbers and pipe fitters
+3123,5297,Gas- und Wasserinstallateur/in,Construction supervisors
+9313,5297,Gas- und Wasserinstallateur/in,Building construction labourers
+3112,5297,Gas- und Wasserinstallateur/in,Civil engineering technicians
+7122,5298,Bodenleger/in,Floor layers and tile setters
+9313,5298,Bodenleger/in,Building construction labourers
+3123,5301,Vorarbeiter/in- Tiefbau,Construction supervisors
+3123,5302,Bodenlegermeister/in,Construction supervisors
+7131,5303,Restaurator/in - Maler- und Lackiererhandwerk,Painters and related workers
+7123,5304,Stuckateur/in,Plasterers
+7123,5305,Restaurator/in - Stuckateurhandwerk,Plasterers
+3112,5311,Bauabdichtungstechniker/in,Civil engineering technicians
+7544,5312,Holz- und Bautenschützer/in,Fumigators and other pest and weed controllers
+3112,5313,Holz- und Bautenschutztechniker/in,Civil engineering technicians
+3123,5314,"Handwerksmeister/in - Maler-, Lackier- und Stuckateurarbeiten",Construction supervisors
+3123,5315,Meister/in - Holz- und Bautenschutzgewerbe bzw. Abdichtungsarbeiten,Construction supervisors
+7123,5316,Trockenbauer/in,Plasterers
+3123,5316,Trockenbauer/in,Construction supervisors
+9313,5316,Trockenbauer/in,Building construction labourers
+3112,5317,Ausbautechniker/in,Civil engineering technicians
+3123,5317,Ausbautechniker/in,Construction supervisors
+7115,5318,Restaurator/in - Zimmererhandwerk,Carpenters and joiners
+3123,5318,Restaurator/in - Zimmererhandwerk,Construction supervisors
+5153,5319,Hausmeister/in,Building caretakers
+5153,5322,Gerätewart/in,Building caretakers
+5153,5323,Gemeindearbeiter/in,Building caretakers
+5153,5324,Platzwart/in,Building caretakers
+5153,5325,Schulassistent/in,Building caretakers
+3112,5326,Industriemeister/in - Gebäudetechnik,Civil engineering technicians
+7126,5327,Klempner/in,Plumbers and pipe fitters
+3123,5327,Klempner/in,Construction supervisors
+9313,5327,Klempner/in,Building construction labourers
+3112,5328,Blechverarbeitungstechniker/in,Civil engineering technicians
+3123,5328,Blechverarbeitungstechniker/in,Construction supervisors
+3112,5329,"Anlagentechniker/in- Sanitär-, Heizungs- und Klimatechnik",Civil engineering technicians
+3123,5329,"Anlagentechniker/in- Sanitär-, Heizungs- und Klimatechnik",Construction supervisors
+2142,5330,Ingenieur/in – Klimasystemtechnik,Civil engineers
+3123,5330,Ingenieur/in – Klimasystemtechnik,Construction supervisors
+7112,5331,Ofen- und Luftheizungsbauer/in,Bricklayers and related workers
+3123,5331,Ofen- und Luftheizungsbauer/in,Construction supervisors
+9613,5332,Straßenreiniger/in,Sweepers and related labourers
+9611,5333,Müllmann/Müllfrau,Garbage and recycling collectors
+3132,5337,Ver- und Entsorger/in - Wasserversorgung,Incinerator and water treatment plant operators
+7213,5345,Anlagenmechaniker/in,Sheet metal workers
+3115,5346,Anlagenbautechniker/in,Mechanical engineering technicians
+2144,5346,Anlagenbautechniker/in,Mechanical engineers
+7111,5350,Hochbauarbeiter/in,House builders
+9313,5350,Hochbauarbeiter/in,Building construction labourers
+2142,5351,Statiker/in,Civil engineers
+3122,5355,Leiter/in - Anlagenbau,Manufacturing supervisors
+3123,5356,Leiter/in - Leitungsbau,Construction supervisors
+3132,5357,Leiter/in - Wasserversorgung und -entsorgung,Incinerator and water treatment plant operators
+3119,5358,Leiter/in - Abfallentsorgung und Städtereinigung,Physical and engineering science technicians not elsewhere classified 
+3123,5400,Polier/in im Hochbau,Construction supervisors
+7119,5401,Gerüstbauer/in,Building frame and related trades workers not elsewhere classified
+3112,5402,Baukalkulator/in,Civil engineering technicians
+2149,5402,Baukalkulator/in,Engineering Professionals Not Elsewhere Classified
+3112,5403,Bauplaner/in für wasserwirtschaftliche Anlagen,Civil engineering technicians
+2142,5403,Bauplaner/in für wasserwirtschaftliche Anlagen,Civil engineers
+7114,9401,Spezialtiefbauer/in,"Concrete placers, concrete finishers and related workers"
+2143,1759,Leiter/in - Umweltschutztechnik,Environmental engineers
+2514,1770,ERP-Anwendungsentwickler,Applications programmers
+2512,1770,ERP-Anwendungsentwickler,Software developers
+2529,1771,IT-Sicherheitstechniker/in,Database and network professionals not elsewhere classified
+3513,1772,IT-Netzwerktechniker/in,Computer network and systems technicians
+2523,1772,IT-Netzwerktechniker/in,Computer network professionals
+3257,1773,Strahlenschutzbeauftragte/r,Environmental and occupational health inspectors and associates
+2263,1773,Strahlenschutzbeauftragte/r,Environmental and occupational health and hygiene professionals
+3257,1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",Environmental and occupational health inspectors and associates
+2133,1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",Environmental protection professionals
+2120,1788,Mathematiker/in,"Mathematicians, actuaries and statisticians"
+3141,1789,Biologisch-Technische/r Laborleiter/in,Life science technicians (excluding medical)
+1349,1789,Biologisch-Technische/r Laborleiter/in,Professional services managers not elsewhere classified
+2113,1790,Chemiker/in,Chemists
+8131,1791,Chemikant/in / Pharmakant/in,Bediener von Anlagen und Maschinen für chemische Erzeugnisse
+3116,1791,Chemikant/in / Pharmakant/in,Chemical engineering technicians
+1349,1792,Laborleiter/in in der Chemie,Professional services managers not elsewhere classified
+3122,1792,Laborleiter/in in der Chemie,Manufacturing supervisors
+2111,1793,Physiker/in,Physicists and astronomers
+3111,1794,Werkstoffprüfer/in,Chemical and Physical Science Technicians
+3112,1795,Baustoffprüfer/in,Civil engineering technicians
+3122,1796,"Laborleiter/in - Physik, Werk- und Baustoffprüfung",Manufacturing supervisors
+1349,1796,"Laborleiter/in - Physik, Werk- und Baustoffprüfung",Professional services managers not elsewhere classified
+3111,1797,Geologielaborant/in,Chemical and physical science technicians
+3111,1798,Meteorologe/Meteorologin,Chemical and physical science technicians
+2112,1798,Meteorologe/Meteorologin,Meteorologists
+2143,1799,Umweltschutzingenieur/in,Environmental engineers
+3119,1799,Umweltschutzingenieur/in,Physical and engineering science technicians not elsewhere classified
+3122,1800,Produktionsleiter/in in der Chemie,Manufacturing supervisors
+1321,1800,Produktionsleiter/in in der Chemie,Manufacturing Managers
+3141,4001,Biologisch-Technische/r Assistent/in,Biotechniker (ohne medizinische Fachberufe)
+3141,4002,Biotechniker/in,Biotechniker (ohne medizinische Fachberufe)
+3212,4003,Fachkraft für medizinisch-biologische Präparation,Medizintechniker im Bereich Labor und Pathologie
+2131,4004,"Biologe/Biologin, Fachgebiet Ökologie","Biologen, Botaniker, Zoologen und verwandte Berufe"
+2131,4005,"Biologe/Biologin, Fachgebiet Botanik","Biologen, Botaniker, Zoologen und verwandte Berufe"
+2131,4006,"Biologe/Biologin, Fachgebiet Zoologie","Biologen, Botaniker, Zoologen und verwandte Berufe"
+2131,4007,Mikrobiologe/-biologin,"Biologen, Botaniker, Zoologen und verwandte Berufe"
+2131,4008,Humanbiologe/-biologin,"Biologen, Botaniker, Zoologen und verwandte Berufe"
+9329,4009,Hilfskraft in der Chemieindustrie,"Hilfsarbeiter bei der Herstellung von Waren, anderweitig nicht genannt"
+2145,4012,Ingenieur/in - Chemietechnik,Chemieingenieure
+3111,4013,Chemisch-Technische/r Assistent/in,Chemo- und Physikotechniker
+3111,4014,Chemische/r Laboratorium-Spezialist/in,Chemo- und Physikotechniker
+2145,4014,Chemische/r Laboratorium-Spezialist/in,Chemieingenieure
+3133,4015,Steuer(er/in) - chemische Verfahrensanlagen,Steuerer von chemischen Verfahrensanlagen
+3134,4016,Steuer(er/in) - Erdöl- und Erdgasraffinationsanlagen,Steuerer von Erdöl- und Erdgasraffinationsanlagen
+3111,4017,Physikalisch-Technische/r Assistent/in,Chemical and physical science technicians
+3111,4018,Physik-Techniker/in,Chemical and physical science technicians
+2149,4019,Physik-Ingenieur/in,Engineering professionals not elsewhere classified
+2149,4022,Werkstofftechnik-Ingenieur/in,Engineering professionals not elsewhere classified
+2142,4025,Baustoffingenieur/in,Civil engineers
+2142,4028,Geotechnikingenieur/in - Bau,Civil engineers
+2114,4029,Geologe/Geologin,Geologists and geophysicists
+2632,4030,Geograph/in,"Sociologists, anthropologists and related professionals"
+2511,4035,Betriebsinformatiker/in,Systems analysts
+2512,4035,Betriebsinformatiker/in,Software developers
+2513,4035,Betriebsinformatiker/in,Web and Multimedia Developers
+2514,4035,Betriebsinformatiker/in,Application Programmers
+2521,4035,Betriebsinformatiker/in,Database Designers and Administrators
+2522,4035,Betriebsinformatiker/in,Systems Administrators
+2523,4035,Betriebsinformatiker/in,Computer Network Professionals
+2511,4037,Technische/r Informatiker/in,Systems analysts
+2512,4037,Technische/r Informatiker/in,Software developers
+2152,4037,Technische/r Informatiker/in,Electronics engineers
+2514,4037,Technische/r Informatiker/in,Application Programmers
+3513,4037,Technische/r Informatiker/in,Computer network and systems technicians
+3511,4037,Technische/r Informatiker/in,Information and communications technology operations technicians
+2523,4037,Technische/r Informatiker/in,Computer Network Professionals
+2511,4038,Informatiker/in,Systems analysts
+3512,4038,Informatiker/in,Information and communications technology user support technicians
+3513,4038,Informatiker/in,Computer network and systems technicians
+3514,4038,Informatiker/in,Web technicians
+2512,4038,Informatiker/in,Software developers
+2514,4038,Informatiker/in,Application Programmers
+2521,4038,Informatiker/in,Database Designers and Administrators
+2522,4038,Informatiker/in,Systems Administrators
+2523,4038,Informatiker/in,Computer Network Professionals
+2512,4040,Bioinformatiker/in,Software developers
+2511,4040,Bioinformatiker/in,Systems analysts
+2512,4041,Medizininformatiker/in,Software developers
+2511,4041,Medizininformatiker/in,Systems analysts
+2521,4041,Medizininformatiker/in,Database Designers and Administrators
+2512,4042,Geoinformatiker/in,Software developers
+2511,4042,Geoinformatiker/in,Systems analysts
+2521,4042,Geoinformatiker/in,Database Designers and Administrators
+2513,4043,Medieninformatiker/in,Web and Multimedia Developers
+2512,4043,Medieninformatiker/in,Software developers
+2514,4043,Medieninformatiker/in,Application Programmers
+2521,4043,Medieninformatiker/in,Database Designers and Administrators
+3514,4043,Medieninformatiker/in,Web technicians
+2511,4046,IT-Systemanalytiker/in,Systems analysts
+3512,4047,Techniker/in im IT-Kundensupport,Information and communications technology user support technicians
+2511,4048,IT-Berater/in,Systems analysts
+3512,4048,IT-Berater/in,Information and communications technology user support technicians
+2434,4049,IT-System-Kaufmann/ -frau,Information and communications technology sales professionals
+2519,4052,IT-Qualitätssicherer/in,Software and applications developers and analysts not elsewhere classified
+3511,4053,EDV Operator/in,Information and communications technology operations technicians
+2522,4054,System-/ Netzwerkadministrator/in,Systems administrators
+2521,4055,Datenbankentwickler/in /-administrator/in,Database designers and administrators
+3514,4056,Webadministrator/in,Web technicians
+2512,4061,Softwareentwickler/in,Software developers
+2514,4062,Organisationsprogrammierer/in,Applications programmers
+2114,4100,Geotechnikingenieur/in - Erkundungs- und Rohstoffgeologie,Geologists and geophysicists
+2120,4202,Statistiker/in,"Mathematicians, actuaries and statisticians"
+2120,4203,Biomathematiker/in,"Mathematicians, actuaries and statisticians"
+2120,4204,Computer-/ Technomathematiker/in,"Mathematicians, actuaries and statisticians"
+2120,4205,Wirtschaftsmathematiker/in / Aktuar/in,"Mathematicians, actuaries and statisticians"
+1349,4206,Mathe- und Statistik Abteilungsleiter/in,Professional services managers not elsewhere classified
+2131,4210,Molekularbiologe/-biologin,"Biologists, botanists, zoologists and related professionals"
+2131,4212,Genetiker/in,"Biologists, botanists, zoologists and related professionals"
+2113,4213,Biochemiker/in,Chemists
+2149,4214,Bioniker/in,Engineering professionals not elsewhere classified
+2113,4219,Chemiker/in mit spezifischem Fachgebiet,Chemists
+3111,4224,Fachkraft für physikalische Messgeräte und Apparaturen,Chemical and physical science technicians
+3111,4225,Messtechniker/in - Strahlenbelastung und physikalische Größen,Chemical and physical science technicians
+2111,4226,Akustiker/in,Physicists and astronomers
+2111,4227,Astrophysiker/in,Physicists and astronomers
+2111,4228,Biophysiker/in,Physicists and astronomers
+2111,4229,Kernphysiker/in,Physicists and astronomers
+2111,4230,Medizinphysiker/in,Physicists and astronomers
+2111,4231,Wirtschaftsphysiker/in,Physicists and astronomers
+3119,4234,Umweltschutztechnische/r Assistent/in,Physical and engineering science technicians not elsewhere classified
+7133,4237,Schornsteinfeger/in,Building structure cleaners
+7133,4239,Schornsteinfegermeister/in,Fassadenreiniger und Schornsteinfeger/Rauchfangkehrer
+4110,4240,Betriebsassistent/in - Umweltschutz,General office clerks
+2133,4242,Umweltschutzbeauftragte/r,Environmental protection professionals
+2143,4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),Environmental engineers
+2263,4246,Störfallbeauftragte/r,Environmental and occupational health and hygiene professionals
+2263,4248,Dekontaminateur/in,Environmental and occupational health and hygiene professionals
+1349,4249,Leiter/in – Sachverständigenbüro für Umweltfragen,Professional services managers not elsewhere classified
+1330,4250,Leiter/in - Informatik und Informationsmanagement,Information and communications technology service managers
+1330,4251,Leiter/in - IT-Vertrieb und -Anwendungsberatung,Information and communications technology service managers
+1330,4252,IT-Projektleiter/in,Information and communications technology service managers
+1330,4253,Software-Projektleiter/in,Information and communications technology service managers
+3119,4254,Energieberater/in,Physical and engineering science technicians not elsewhere classified
+3119,4255,Abfall- und Umweltberater/in,Physical and engineering science technicians not elsewhere classified
+2421,4700,Klimaschutzmanager/in,Management and organization analysts
+3433,4999,Fachkraft für Präparation in naturkundlichen Museen,"Fachkräfte in Kunstgalerien, Museen und Bibliotheken"
+4221,1000,Schalterangestellte/r - Flughafen,Travel consultants and clerks
+5111,1001,Steward/Stewardess (Flugzeug),Travel attendants and travel stewards
+9621,1004,Postzusteller/in,"Messengers, package deliverers and luggage porters"
+4412,1004,Postzusteller/in,Mail carriers and sorting clerks
+4321,1005,Lagerleiter/in,Stock clerks
+1324,1005,Lagerleiter/in,"Supply, distribution and related managers"
+4323,1006,Verladeaufseher/in,Transport clerks
+8350,1743,Matrose/Matrosin,Ships' deck crews and related workers
+3151,1743,Matrose/Matrosin,Ships' engineers
+3155,1744,Flugsicherungstechniker/in,Air traffic safety electronics technicians
+2152,1744,Flugsicherungstechniker/in,Electronics engineers
+8343,1745,Wasserstraßenverkehrswart/in,"Crane, hoist and related plant operators"
+3112,1745,Wasserstraßenverkehrswart/in,Civil engineering technicians
+3119,1746,Betriebs- und Verkehrstechniker/in,Physical and engineering science technicians not elsewhere classified
+2164,1746,Betriebs- und Verkehrstechniker/in,Town and traffic planners
+4323,1760,Klarierungsagent/in,Transport clerks
+3411,1761,Detektiv/in (Einzelhandel),Legal and related associate professionals
+3354,1762,Fahrprüfer/in,Government licensing officials
+5419,1763,Aufsichtsleiter/in - Badeaufsicht,Protective services workers not elsewhere classified
+9112,1764,"Fahrzeugpfleger/in (Schiffe, Flugzeuge, Züge)","Cleaners and helpers in offices, hotels and other establishments"
+9122,1764,"Fahrzeugpfleger/in (Schiffe, Flugzeuge, Züge)",Vehicle cleaners
+9333,5001,Lagerarbeiter/in,Freight handlers
+4321,5001,Lagerarbeiter/in,Stock clerks
+4321,5002,Fachkraft - Lagerlogistik,Stock clerks
+4321,5005,Fachkraft - Hafenlogistik,Stock clerks
+4323,5010,Fahrbetriebsregler/in (Straßenverkehr),transport clerks
+1324,5010,Fahrbetriebsregler/in (Straßenverkehr),"Supply, distribution and related managers"
+8312,5011,Eisenbahnbetriebsregler/in,"Railway brake, signal and switch operators "
+1324,5011,Eisenbahnbetriebsregler/in,"Supply, distribution and related managers"
+9333,5012,Hafenarbeiter/in,Freight handlers
+8183,5013,Abpackmaschinenbediener/in,"Packing, bottling and labelling machine operators "
+4323,5014,Ramp-Agent,Transport clerks
+1324,5014,Ramp-Agent,"Supply, distribution and related managers"
+3154,5015,Fluglotse/in,Air traffic controllers
+1324,5015,Fluglotse/in,"Supply, distribution and related managers"
+2149,5016,Flugunfalluntersucher/in,Engineering professionals not elsewhere classified
+1324,5016,Flugunfalluntersucher/in,"Supply, distribution and related managers"
+3152,5017,Schiffslotse/-lotsin,Ships' deck officers and pilots
+1324,5017,Schiffslotse/-lotsin,"Supply, distribution and related managers"
+3119,5018,Gefahrgutbeauftragte/r,Physical and engineering science technicians not elsewhere classified
+1324,5018,Gefahrgutbeauftragte/r,"Supply, distribution and related managers"
+2433,5022,Verkehrsbetriebswirt/in,Technical and Medical Sales Professionals (excluding ICT)
+3322,5022,Verkehrsbetriebswirt/in,Commercial Sales Representatives
+4323,5023,Fachwirt/in - Personen- und Reiseverkehr,Transport clerks
+2421,5024,Betriebswirt/in im Verkehrsmanagement,Management and organization analysts
+4323,5025,Kaufmann/-frau für Spedition und Logistikdienstleistungen,Transport clerks
+3331,5025,Kaufmann/-frau für Spedition und Logistikdienstleistungen,Clearing and forwarding agents
+2421,5025,Kaufmann/-frau für Spedition und Logistikdienstleistungen,Management and organization analysts
+3331,5026,Sachbearbeiter/in für die Erstellung von Zollpapieren,Clearing and forwarding agents
+4321,5028,Kommissionierer/in,stock clerks
+9333,5028,Kommissionierer/in,Freight handlers
+2421,5029,Logistikmanager/in,Management and organization analysts
+4323,5030,Bahnbetriebskoordinator/in,Bürokräfte in der Transportwirtschaft und verwandte Berufe
+4323,5031,Disponent/in für Eisenbahn und Straßenverkehr,Transport clerks
+4323,5035,Schifffahrtskaufmann/-frau,Transport clerks
+3324,5036,Schiffsmakler/in,Trade brokers
+4211,5037,"Kaufmann/-frau - Kurier-, Express- u. Postdienstleistungen",Bank tellers and related clerks
+4323,5038,Postbeamt(er/in),Transport clerks
+1324,5039,Logistikleiter/in,"Supply, distribution and related managers"
+9312,5040,Straßenwärter/in,Civil engineering labourers
+8322,5041,Taxifahrer/in,"Car, taxi and van drivers"
+8332,5042,Kraftfahrer/in,Heavy truck and lorry drivers
+8311,5043,U-Bahnfahrer/in,Locomotive engine drivers
+8331,5044,Bus - bzw. Straßenbahnfahrer/in,Bus and tram drivers
+8322,5045,Lieferwagenfahrer/in,"Car, taxi and van drivers"
+8311,5046,Lokführer/in,Locomotive engine drivers
+3153,5047,Pilot/in,Aircraft pilots and related associate professionals
+3153,5049,"Luftfahrzeugführer/in - Hubschrauber, Heißluftballons, Luftschiffe",Aircraft pilots and related associate professionals
+3153,5050,Checkkapitän/in,Aircraft pilots and related associate professionals
+3152,5051,Nautische/r Schiffsoffizier/in,Ships' deck officers and pilots
+3152,5052,Kapitän/in,Ships' deck officers and pilots
+3152,5053,Binnenschiffsführer/in,Ships' deck officers and pilots
+8341,5054,Land- und forstwirtschaftliche/r Maschinenführer/in,Mobile farm and forestry plant operators
+8342,5055,Baumaschinenführer/in,Earthmoving and related plant operators
+8344,5056,Staplerfahrer/in,Lifting truck operators
+8343,5057,Kranfahrer/in,"Crane, hoist and related plant operators"
+3123,5058,Bauhofmeister/in,Construction supervisors
+9629,5059,Spielhallenaufsicht,Elementary workers not elsewhere classified 
+9623,5060,Geldzähler/in,Meter readers and vending-machine collectors
+5414,5061,Sicherheitsdienstmitarbeiter/in,Security guards
+5414,5062,Brandbekämpfungsbeauftragte/r und Ersthelfer/in,Security guards
+3257,5063,Sicherheitsbeauftragte/r- Arbeitsschutz,Environmental and occupational health inspectors and associates
+2149,5064,Arbeitsschutzingenieur/in,Engineering professionals not elsewhere classified
+5411,5065,Feuerwehrmann/-frau,Firefighters
+3112,5067,Brandschutzbeauftragte/r,Civil engineering technicians
+2149,5068,Brandschutzingenieur/in,Engineering professionals not elsewhere classified
+5419,5069,Badeaufseher/in,Protective services workers not elsewhere classified
+3411,5070,Detektiv/in,Legal and related associate professionals
+4214,5071,Inkassobeauftragte/r,Debt-collectors and related workers
+5419,5072,Verkehrsüberwacher/in / Politesse,Protective services workers not elsewhere classified
+5419,5073,Diensthundführer/in,Protective services workers not elsewhere classified
+3119,5074,Schließ- und Sicherungstechniker/in,Physical and engineering science technicians not elsewhere classified
+2421,5075,Sicherheitsmanager/in,Management and organization analysts
+3119,5076,Aufsichtsleiter/in – Sicherheitswesen,Physical and engineering science technicians not elsewhere classified
+5414,5076,Aufsichtsleiter/in – Sicherheitswesen,Security guards
+5419,5076,Aufsichtsleiter/in – Sicherheitswesen,Protective services workers not elsewhere classified
+1349,5077,Leiter/in - Rettungsstelle,Professional services managers not elsewhere classified
+5412,5078,Polizeivollzugsbeamter/-beamtin,Police officers
+1349,5078,Polizeivollzugsbeamter/-beamtin,Professional Services Managers Not Elsewhere Classified
+3355,5079,Kriminalbeamter/-beamtin,Police inspectors and detectives
+3411,5080,Vollziehungsbeamter/-beamtin,Legal and related associate professionals
+3352,5080,Vollziehungsbeamter/-beamtin,Government tax and excise officials
+3411,5081,Gerichtsvollzieher/in,Legal and related associate professionals
+5413,5082,Justizwachtmeister/in,Prison guards
+1349,5084,Gefängnisdirektor/in (höherer Dienst),Professional services managers not elsewhere classified
+3354,5085,Beamt(er/in) - Gewerbeaufsicht,Government licensing officials
+2263,5085,Beamt(er/in) - Gewerbeaufsicht,Environmental and occupational health and hygiene professionals
+3257,5086,Gesundheitsaufseher/in,Environmental and occupational health inspectors and associates
+3257,5087,Fachkrankenschwester/-pfleger für Hygiene,Environmental and occupational health inspectors and associates
+3257,5088,amtliche/r Lebensmittelkontrolleur/in,Environmental and occupational health inspectors and associates
+7544,5089,Schädlingsbekämpfer/in,Fumigators and other pest and weed controllers
+1349,5090,Abteilungsleiter/in - Gewerbeaufsicht,Professional services managers not elsewhere classified
+3119,5092,Reinigungs- und Hygienetechniker/in,Physical and engineering science technicians not elsewhere classified
+9123,5093,Glas- und Fensterreiniger/in,Window cleaners
+8157,5094,Wäschereifacharbeiter/in bzw. Bügler/in,Laundry machine operators
+9129,5095,Anlagenreiniger/in,Other cleaning workers
+9122,5096,Fahrzeugpfleger/in,Vehicle cleaners
+9129,5097,Spezialreiniger/in - Möbel und Teppiche,Other cleaning workers
+1349,5098,Objektleiter/in - Gebäudereinigung,Professional services managers not elsewhere classified
+8312,5099,Wagenuntersucher/in (Eisenbahn),"Railway brake, signal and switch operators"
+3115,5099,Wagenuntersucher/in (Eisenbahn),Mechanical engineering technicians
+3115,5100,Eisenbahn-Wagenmeister/in,Mechanical engineering technicians
+9333,5101,Flugzeugabfertiger/in,Freight handlers
+3115,5101,Flugzeugabfertiger/in,Mechanical engineering technicians
+3115,5102,Technische/r Flugzeugprüfer/in,Mechanical engineering technicians
+3521,5105,Funker/in,Broadcasting and audio-visual technicians
+9312,5107,Streckenwärter/in (Bahn),Civil engineering labourers
+3112,5108,Bahnbeamter/-beamtin (gehobener technischer Dienst),Civil engineering technicians
+2164,5109,Ingenieur/in - Bahnbetrieb und Infrastruktur,Town and traffic planners
+3123,5114,Straßenwärtermeister/in,Construction supervisors
+4221,5115,Kaufmann/-frau - Verkehrsservice,Travel consultants and clerks
+5112,5116,Schaffner/in,Transport conductors
+5111,5117,Schiffssteward/-stewardess,Travel attendants and travel stewards
+5111,5118,Leitender Fahrgastbetreuer im Reiseverkehr,Travel attendants and travel stewards
+9331,5171,Fahrradkurier/in bzw. Handwagenkurier/in,Hand and pedal vehicle drivers
+8321,5172,Kraftradkurier/in,Motorcycle drivers
+9629,5173,Parkplatz- und Parkhausaufsicht,Elementary workers not elsewhere classified 
+1349,5174,Leiter/in - Kriminalpolizeidienststellen,Professional services managers not elsewhere classified
+5413,5175,Justizvollzugsbeamter/-beamtin,Prison guards
+3359,5176,Eichbeamt(er/in),Government regulatory associate professionals not elsewhere classified
+7133,5223,Fassadenreiniger/in,Building structure cleaners
+9111,5225,Reinigungskraft in Privathaushalten,Domestic cleaners and helpers
+9112,5226,Gebäudeinnenreiniger/in,"Cleaners and helpers in offices, hotels and other establishments"
+9629,5227,Toilettenwärter/in,Elementary Workers Not Elsewhere Classified
+3359,8083,Justizvollzugsfachwirt/in (gehobener Justizvollzugsdienst),Government regulatory associate professionals not elsewhere classified
+4323,9900,Luftverkehrskaufmann/-frau,Bürokräfte in der Transportwirtschaft und verwandte Berufe
+4221,9900,Luftverkehrskaufmann/-frau,Travel consultants and clerks
+3324,9900,Luftverkehrskaufmann/-frau,Trade brokers
+3322,1747,Vertriebsspezialist/in,Vertriebsagenten
+2433,1747,Vertriebsspezialist/in,"Akademische und vergleichbare Fachkräfte im Bereich Vertrieb (Technik und Medizin, ohne Informations- und Kommunikationstechnologie)"
+3324,1748,Handelsagent/in,Trade Brokers
+2433,1748,Handelsagent/in,Technical and medical sales professionals (excluding ICT)
+3324,1749,internationale/r Handelsagent/in,Trade Brokers
+2433,1749,internationale/r Handelsagent/in,Technical and medical sales professionals (excluding ICT)
+5222,1750,Verkaufs- und Kassenaufsicht,Shop supervisors
+1420,1750,Verkaufs- und Kassenaufsicht,Retail and wholesale trade managers
+4221,1820,Tourismuskaufmann/ -frau,Travel consultants and clerks
+3343,1821,Hotelkaufmann/-frau,Administrative and executive secretaries
+5131,1822,Kellner/in,Waiters
+3334,1849,Immobilienmakler/in,Real estate agents and property managers
+3334,1850,Hausverwalter/in,Real estate agents and property managers
+4322,6001,Beschaffungsassistent/in,Production clerks
+3323,6002,Einkäufer/in,Einkäufer
+4311,6003,Vertriebsassistent/in,Bürkokräfte im Rechnungswesen und ihrer Buchhaltung
+9623,6006,Automatenfachmann/ -frau,"Zählerableser, Automatenbefüller und –kassierer"
+4213,6007,Pfandleiher/in,Pfandleiher und Geldverleiher
+5249,6008,Verleiher/in,"Verkaufskräfte, anderweitig nicht genannt"
+3339,6009,Auktionator/in,"Fachkräfte für unternehmensbezogene Dienstleistungen, anderweitig nicht genannt"
+3324,6010,Handelsmakler/in,Handelsmakler
+1324,6011,Einkaufsleiter/in,"Führungskräfte in der Beschaffung, Logistik und in verwandten Bereichen"
+1221,6012,Vertriebs- und Marketingmanager/in,Führungskräfte in Vertrieb und Marketing
+5223,6013,Einrichtungsfachverkäufer/in,Shop sales assistants
+5223,6015,"Fachverkäufer/in - Elektro-, Elektronik- und Haushaltswaren",Shop sales assistants
+1219,6017,Betriebswirt/in - Facility-Management,Business services and administration managers not elsewhere classified
+1420,6018,Exportleiter/in,Führungskräfte in Groß- und Einzelhandel
+3334,6019,Facilitymanager/in,Real estate agents and property managers
+1431,6020,Betriebsleiter/in – Fitness und Freizeit,"Sports, recreation and cultural centre managers"
+3341,6021,Empfangschef/in,Office supervisors
+4419,6022,Sachbearbeiter/in im Groß- und Außenhandel,Clerical Support Workers Not Elsewhere Classified
+5211,6029,Marktverkäufer/in,Stall and market salespersons
+5223,6030,Verkäufer/in - Einzelhandel,Shop sales assistants
+9334,6033,Aushilfskraft - Einzelhandel,Shelf fillers
+5246,6034,Kiosk-/Imbissverkäufer/in,Food service counter attendants
+5212,6034,Kiosk-/Imbissverkäufer/in,Street food salespersons
+5223,6035,Bäcker - und Konditoreifachverkäufer/in,Shop sales assistants
+5223,6037,Drogeriefachverkäufer/in,Shop sales assistants
+5223,6038,Fleischwarenfachverkäufer/in,Shop sales assistants
+5223,6039,Fachverkäufer/in - Sanitäts- und Medizinbedarf,Shop sales assistants
+5223,6040,Buchhändler/in,Verkäufer und Verkaufshilfskräfte in Handelsgeschäften
+5223,6041,"Einzelhandelsverkäufer/in - Sport-, Textil- und Lederwaren",Verkäufer und Verkaufshilfskräfte in Handelsgeschäften
+2431,6042,Buch- und Medienhandelsmanager/in,Akademische und vergleichbare Fachkräfte in Werbung und Marketing
+5223,6043,Kunst- und Antiquitätenhändler/in,Shop sales assistants
+5223,6044,Musikfachhändler/in,Shop sales assistants
+2431,6047,Touristikmanager/in,Advertising and marketing professionals
+3423,6048,Fitnessberater/in,Fitness and recreation instructors and program leaders
+3423,6049,Freizeit- und Reisebetreuer/in,Fitness and recreation instructors and program leaders
+5113,6050,Reiseleiter/in,Reiseleiter/Fremdenführer
+5113,6051,Fremdenführer/in,Travel guides
+5223,6052,Lebensmittelfachverkäufer/in,Shop sales assistants
+3422,6053,Sport- und Fitnesskaufmann/-frau,"Sports coaches, instructors and officials"
+1439,6054,Betriebsleiter/in - Tourismus,Services managers not elsewhere classified
+5152,6055,Pension- bzw. Herbergsleiter/in,Domestic housekeepers
+5151,6056,Hausdame/Housekeeper,"Cleaning and housekeeping supervisors in offices, hotels and other establishments"
+1411,6057,Hoteldirektor/in,Hotel managers
+5223,6058,"Fachverkäufer/in - Holz-, Stahl- oder im Strom- und Gashandel",Shop sales assistants
+5230,6060,Kassierer/in,Cashiers and ticket clerks
+5242,6061,Promoter/in,Sales demonstrators
+5223,6063,Schmuckfachverkäufer/in,Shop sales assistants
+5223,6064,Bürobedarfsverkäufer/in,Shop sales assistants
+5223,6065,Fachverkäufer/in - Garten- und Heimwerkerbedarf,Shop sales assistants
+5223,6066,Automobilkaufmann/-frau,Shop sales assistants
+1431,6067,Sport- und Fitnessökonom/in,"Sports, recreation and cultural centre managers"
+3343,6068,Sport- und Fitnessfachwirt/in,Administrative and executive secretaries
+4224,6070,Rezeptionist/in - Hotel,Hotel receptionists
+1412,6071,Betriebswirt/in - Systemgastronomie,Restaurant managers
+5132,6072,Barkeeper/in,Bartenders
+1412,6073,Restaurantmeister/in,Restaurant managers
+9411,6074,Fast-Food- und Imbisskoch/-köchin,Fast food preparers
+9412,6075,Küchenhelfer/in,Kitchen helpers
+9112,6077,Zimmermädchen/ Roomboy,"Cleaners and helpers in offices, hotels and other establishments"
+5243,6078,Haustürverkäufer/in,Door to door salespersons
+3322,6079,Kundendienstberater/in,Commercial sales representatives
+5223,6080,Geschenkartikelverkäufer/in,Shop sales assistants
+5223,6081,Spielwarenkäufer/in,Shop sales assistants
+5223,6082,Fachverkäufer/in – Zoo- und Heimtierbedarf,Shop sales assistants
+9621,6083,Hotelpage,"Messengers, package deliverers and luggage porters"
+5223,6085,Fachverkäufer/in - Reform- und Diätwaren,Shop sales assistants
+3322,6086,Vertriebsagent/in - Buchhandel,Vertriebsagenten
+5246,6090,Servicekraft - Systemgastronomie,Food service counter attendants
+5131,6092,Food-and-Beverage-Assistant,Waiters
+5131,6093,Bankettleiterassistent/in,Waiters
+5111,6094,Zugsteward/-stewardess,Travel attendants and travel stewards
+5131,6095,Büfettkraft,Waiters
+5131,6097,Sommelier/Sommelière,Waiters
+4226,6098,Eintrittskartenkontrolleur/in,Receptionists (general)
+9629,6099,Hilfskraft - Veranstaltungsservice,Elementary workers not elsewhere classified
+9629,6100,Garderobenwärter/in,Elementary workers not elsewhere classified
+5245,6101,Tankwart/in,Service station attendants
+3332,6102,Konferenz- und Veranstaltungsplaner,Conference and event planners
+4311,1823,Buchführungsfachkraft,Accounting and bookkeeping clerks
+3313,1823,Buchführungsfachkraft,Accounting associate professionals
+3313,1824,Kalkulator/in,Accounting associate professionals
+2411,1824,Kalkulator/in,Accountants
+3433,1825,Bibliotheksangestellte/r,"Gallery, museum and library technicians"
+2622,1825,Bibliotheksangestellte/r,Librarians and related information professionals
+1120,3201,Top-Manager/in,Managing directors and chief executives
+1111,3202,Politiker/in,Legislators
+1114,3203,Verbandsgeschäftsführer/in,Senior officials of special-interest organizations
+1114,3204,gewählte/r Arbeitnehmervertreter/in, Senior Officials of Special-interest Organizations
+4322,3205,Technisch-kaufmännische/r Betriebassistent/in,Production clerks
+4110,3206,Betriebswirtschaftliche/r Assistent/in,General office clerks
+3343,3206,Betriebswirtschaftliche/r Assistent/in,Administrative and executive secretaries
+2421,3208,Betriebsplaner/in,Management and organization analysts
+2421,3209,Unternehmensberater/in,Management and organization analysts
+1120,3210,Regionalleiter/in,Managing directors and chief executives
+1213,3211,Kaufmännische/r Betriebsleiter/in,Policy and planning managers
+3341,3211,Kaufmännische/r Betriebsleiter/in,Office supervisors
+2422,3212,Wirtschaftsförderer/-förderin,Policy administration professionals
+2421,3213,Liquidator/in,Management and organization analysts
+2643,3214,Dolmetscher/in und Übersetzer/in,"Translators, interpreters and other linguists"
+4131,3215,Steno- und Phonotypist/in,Typists and word processing operators
+3343,3215,Steno- und Phonotypist/in,Administrative and executive secretaries
+4413,3216,Korrektor/in,"Coding, proof-reading and related clerks"
+2643,3216,Korrektor/in,"Translators, Interpreters and Other Linguists"
+4413,3217,Kodierer/in,"Coding, proof-reading and related clerks"
+4225,3218,Auskunfterteiler/in,Enquiry clerks
+4419,3219,Fremdsprachenassistent/in,Clerical support workers not elsewhere classified
+4223,3220,Telefonist/in,Telephone switchboard operators
+4110,3221,Bürohilfskraft,General office clerks
+4132,3221,Bürohilfskraft,Data entry clerks
+4415,3221,Bürohilfskraft,Filing and Copying Clerks
+4413,3221,Bürohilfskraft,"Coding, proof-reading and related clerks"
+4110,3222,Sekretär/in,General office clerks
+3343,3222,Sekretär/in,Administrative and executive secretaries
+4419,3222,Sekretär/in,Clerical support workers not elsewhere classified
+4120,3222,Sekretär/in,Secretaries (general)
+3341,3223,Büroleiter/in ,Office supervisors
+3342,3529,Rechtsanwalts- und Notarfachangestellte/r,Legal secretaries
+3411,3530,Rechtliche/r Berater/in,Legal and related associate professionals
+2611,3530,Rechtliche/r Berater/in,Lawyers
+2619,3530,Rechtliche/r Berater/in,Legal professionals not elsewhere classified
+2619,3531,Notar/in,Legal professionals not elsewhere classified
+2611,3532,Staatsanwalt/-anwältin,Lawyers
+2612,3533,Richter/in,Judges
+3355,3534,Verfassungsschutzbeamt(er/in),Police inspectors and detectives
+2422,3534,Verfassungsschutzbeamt(er/in),Policy administration professionals
+1349,3537,Rechtsabteilungsleiter/in,Professional services managers not elsewhere classified
+2619,3537,Rechtsabteilungsleiter/in,Legal professionals not elsewhere classified
+3411,3539,Datenschutzbeauftragte/r,Legal and related associate professionals
+3342,3540,Sachbearbeiter/in in der öffentlichen Justizverwaltung,Legal secretaries
+3411,3541,Justizverwaltungsbeamter/-beamtin,Legal and related associate professionals
+2619,3541,Justizverwaltungsbeamter/-beamtin,Legal professionals not elsewhere classified 
+2422,3542,Sozialversicherungsbeamter/-beamtin (höh. Dienst),Policy administration professionals
+1112,3543,Behördenleiter/in,Senior government officials
+3353,3544,Sozialversicherungsangestellte/r,Government social benefits officials
+9629,3545,Verwaltungshelfer/in,Elementary workers not elsewhere classified
+2422,3546,Verwaltungswissenschaftler/in,Policy administration professionals 
+9629,3547,Steuerverwaltungsbeamter/-beamtin (einf. Dienst),Elementary workers not elsewhere classified 
+3354,3550,Verwaltungsangestellte/r im öffentlichen Dienst,Government licensing officials
+3352,3551,Steuerverwaltungsbeamt(er/in),Government tax and excise officials
+2411,3551,Steuerverwaltungsbeamt(er/in),Accountants
+3351,3552,Zolldienstbeamt(er/in),Customs and border inspectors
+4415,3553,Archivdienstbeamter/-beamtin,Filing and copying clerks
+2621,3553,Archivdienstbeamter/-beamtin,Archivists and curators
+4419,3555,Rechercheur/in oder Dokumentar/in,Clerical support workers not elsewhere classified
+3433,3555,Rechercheur/in oder Dokumentar/in,"Gallery, museum and library technicians"
+2622,3555,Rechercheur/in oder Dokumentar/in,Librarians and related information professionals
+3252,3556,Medizinische/r Dokumentar/in,Medical records and health information technicians
+1349,3557,Leiter/in Bibliothek/Archiv/Registratur,Professional services managers not elsewhere classified
+4411,3560,Bibliotheksassistent/in,Library clerks
+4211,3567,Bankkundenberater/in,Bank tellers and related clerks
+2413,3568,Finanzanalyst/in,Financial analysts
+1346,3569,Filialleiter/in einer Bank oder Versicherung,Financial and insurance services branch managers
+1211,3570,Leiter/in Rechnungswesen/ Revision/ Controlling,Finance managers
+3313,3573,Controller/in,Accounting associate professionals
+2411,3573,Controller/in,Accountants
+4312,3577,Geldanlageberater/in,"Statistical, finance and insurance clerks"
+2412,3577,Geldanlageberater/in,Financial and investment advisers
+3311,3577,Geldanlageberater/in,Securities and finance dealers and brokers 
+4312,3578,Versicherungssachbearbeiter/in,"Statistical, finance and insurance clerks"
+4313,3580,Lohn- und Gehaltsbuchhalter/in,Payroll clerks
+2411,3581,Wirtschaftsprüfer/in,Accountants
+3312,3582,Kreditsachbearbeiter/in,Credit and loans officers
+3321,3584,Versicherungsagent/in,Insurance representatives
+3321,3585,Versicherungsgutachter/in,Insurance representatives
+3315,3585,Versicherungsgutachter/in,Valuers and loss assessors
+2412,3586,Versicherungsberater/in,Financial and investment advisers
+4311,3587,Steuerfachmann/-frau,Accounting and bookkeeping clerks
+3313,3587,Steuerfachmann/-frau,Accounting associate professionals
+2411,3587,Steuerfachmann/-frau,Accountants
+4211,3590,Geldbearbeiter/in bei der deutschen Bundesbank,Bank tellers and related clerks
+3312,3591,Leasing-Berater/in,Credit and loans officers
+2422,3593,Zentralbankbeamter/-beamtin,Policy administration professionals
+4416,3594,Personalsachbearbeiter/in,Personnel clerks
+4416,3595,Personalfachkaufmann/-frau,Personnel clerks
+2424,3596,Personalentwickler/in,Training and staff development professionals
+3333,3597,Personalvermittler/in,Employment agents and contractors
+2423,3598,Berufsberater/in,Personnel and careers professionals
+1212,3599,Personalleiter/in,Human resource managers
+3344,7003,Arztsekretär/in,Medical secretaries
+3343,7005,Gesundheitsbetriebswirt/in,Administrative and executive secretaries
+2421,7005,Gesundheitsbetriebswirt/in,Management and organization analysts
+2212,1007,Facharzt/-ärztin - Gynäkologie oder Urologie,Specialist medical practitioners
+2212,1008,Facharzt/-ärztin - Haut- und Geschlechtskrankheiten,Specialist medical practitioners
+2212,1009,Facharzt/-ärztin - Hals-Nasen-Ohren- oder Augenheilkunde,Specialist medical practitioners
+2221,1807,Leiter/in - Rettungsdienst,Nursing professionals
+1324,1807,Leiter/in - Rettungsdienst,Health service managers
+3240,1826,Tierarzthelfer/in,Veterinary technicians and assistants
+2221,1827,Stationsleiter/in,Nursing professionals
+1342,1827,Stationsleiter/in,Health service managers
+3259,1828,Ernährungstrainer/in,Health associate professionals not elsewhere classified
+2265,1828,Ernährungstrainer/in,Dieticians and nutritionists
+3119,1829,Medizintechniker/in,Physical and engineering science technicians not elsewhere classified
+2149,1829,Medizintechniker/in,Engineering professionals not elsewhere classified
+3214,1830,Orthopädietechnikermeister/in,Medical and dental prosthetic technicians
+1321,1830,Orthopädietechnikermeister/in,Manufacturing managers
+3214,1831,Zahntechnikermeister/in,Medical and dental prosthetic technicians
+1321,1831,Zahntechnikermeister/in,Manufacturing managers
+3254,1832,Augenoptikermeister/in,Dispensing opticians
+1321,1832,Augenoptikermeister/in,Manufacturing managers
+3214,1833,Hörgerätemeister/in,Medical and dental prosthetic technicians
+1321,1833,Hörgerätemeister/in,Manufacturing managers
+5322,1834,Sozialassistent/in,Home-based personal care workers
+3256,7001,Arzthelfer/in,Medical assistents
+3251,7002,Zahnarzthelfer/in,Dental assistants and therpists
+3255,7004,medizinische/r Fußpfleger/in,Physiotherapy technicians and assistants
+3240,7008,Tierarztfachhelfer/in - Besamungswesen,Veterinary technicians and assistants
+3212,7009,Medizinisch-technische/r Laboratoriumsassistent/in (MTLA),Medical and pathology laboratory technicians
+2212,7010,Facharzt/-ärztin für Mikrobiologie,Specialist medical practitioners
+3256,7011,Medizinisch-technische/r Assistent/in (MTA),Medical assistants
+2149,7012,Ingenieur/in - Kardiotechnik,Engineering professionals not elsewhere classified
+3211,7013,Radiologieassistent/in,Medical imaging and therapeutic equipment technicians
+2212,7014,Radiologe/Radiologin,Specialist medical practitioners
+3240,7015,Veterinärmedizinische/r Laborant/in,Veterinary technicians and assistants
+1342,7016,Medizinisch-technische/r Laborleiter/in,Health service managers
+5322,7017,Ambulante/r Pflegediensthelfer/in,Home-based personal care workers
+5321,7018,Krankenpflegehelfer/in,Health care assistants
+3221,7020,Fachkinderkrankenschwester/ -pfleger,Nursing associate professionals
+3256,7021,Operationstechnische/r Assistent/in,Medical assistants
+3258,7022,Rettungsdiensthelfer/in,Ambulance workers
+8322,7022,Rettungsdiensthelfer/in,"Car, taxi and van drivers"
+2222,7023,Hebamme/ Entbindungspfleger,Midwifery professionals
+3222,7023,Hebamme/ Entbindungspfleger,Midwifery associate professionals
+5329,7024,Sterilisationsassistent/in,Personal care workers in health services not elsewhere classified
+3221,7025,Stomatherapeut/in,Nursing associate professionals
+2211,7028,Allgemeinarzt /-ärztin,Generalist medical practitioners
+2212,7028,Allgemeinarzt /-ärztin,Specialist medical practitioners
+2212,7029,Facharzt/-ärztin – Kinder- und Jugendmedizin,Specialist medical practitioners
+2212,7030,Internist/in,Specialist medical practitioners
+2212,7031,Chirurg/in,Specialist medical practitioners
+2212,7032,Anästhesist/in,Specialist medical practitioners
+2212,7033,Neurologe/ Neurologin,Specialist medical practitioners
+2261,7034,Zahnarzt/ -ärztin,Dentists
+1342,7035,Chefarzt/-ärztin,Health service managers
+2250,7036,Tierarzt/-ärztin,Veterinarians
+2250,7037,Tierheilpraktiker/in,Veterinarians
+2250,7038,Tierpsychologe/-psychologin,Veterinarians
+1349,7039,Tierärztliche/r Direktor/in,Professional services managers not elsewhere classified
+3259,7040,Psychologische/r Assistent/in,Health associate professionals not elsewhere classified
+2634,7041,Psychologe/Psychologin,Psychologists
+2634,7042,Psychotherapeut/in,Psychologists
+2264,7043,Physiotherapeut/in,Physiotherapists
+3255,7043,Physiotherapeut/in,Physiotherapy technicians and assistants
+3259,7045,Fachassistent/in Hirnleistungstraining,Health associate professionals not elsewhere classified
+2269,7047,Ergotherapeut/in,Health professionals not elsewhere classified
+2266,7048,Logopäde/Logopädin,Audiologists and speech therapists
+2269,7049,Musik- oder Kunsttherapeut/in,Health professionals not elsewhere classified
+2230,7050,Heilpraktiker/in,Traditional and complementary medicine professionals
+2265,7051,Diätassistent/in,Dieticians and nutritionists
+3434,7052,Verpflegungsmanager/in (Diätküchenleiter/in),Chefs
+3259,7053,Diabetesassistent/in ,Health associate professionals not elsewhere classified
+2269,7053,Diabetesassistent/in ,Health professionals not elsewhere classified
+1342,7056,therapeutische/r Einrichtungsleiter/in,Health service managers
+2262,7057,Apotheker/in,Pharmacists
+3213,7057,Apotheker/in,Pharmaceutical technician
+2131,7058,Pharmakologe/Pharmakologin,"Biologists, botanists, zoologists and related professionals"
+2212,7059,Arzt/Ärztin - Pharmakologie und Toxikologie,Specialist medical practitioners
+2433,7061,Pharmareferent/in,Technical and medical sales professionals (excluding ICT)
+2262,7063,Referent/in - klinische Studien (CRA),Pharmacists
+5321,7064,Altenpflegehelfer/in,Health care assistants
+3221,7065,Altenpfleger/in,Nursing associate professionals 
+3221,7066,Altenpfleger/in mit Spezialisierung,Nursing associate professionals
+3423,7067,Gesundheitstrainer/in,Fitness and recreation instructors and program leaders
+3253,7068,Gesundheitsberater/in,Community health workers
+2263,7070,Gesundheitsförderer/-förderin,Environmental and occupational health and hygiene professionals
+5142,7072,Fachkraft - Beauty und Wellness,Beauticians and related workers
+3423,7072,Fachkraft - Beauty und Wellness,Fitness and recreation instructors and program leaders
+3257,7076,Qualitätsmanagementbeauftragte/r im Gesundheits-/Sozialwesen,Environmental and occupational health inspectors and associates
+2265,7077,Ökotrophologe/Ökotrophologin,Dieticians and nutritionists
+5141,7078,Friseur/in,Hairdressers
+9629,7078,Friseur/in,Elementary workers not elsewhere classified
+5142,7080,Kosmetiker/in,Beauticians and related workers
+5142,7081,Maskenbildner/in,Beauticians and related workers
+2163,7081,Maskenbildner/in,Product and garment designers
+5163,7082,Bestatter/in,Undertakers and embalmers
+3435,7084,Tätowierer/in und Piercer/in,Artistic and cultural associate professionals not elsewhere classified
+5141,7085,Friseurmeister/in,Hairdressers
+5142,7086,Kosmetikmeister/in,Beauticians and related workers
+5142,7087,Chefmaskenbildner/in,Beauticians and related workers
+5163,7088,Bestattermeister/in,Undertakers and embalmers
+1439,7088,Bestattermeister/in,Services managers not elsewhere classified
+7421,7090,Assistent/in - medizinische Gerätetechnik,Electronics mechanics and servicers
+3214,7094,Orthopädietechnik-Mechaniker/In,Medical and dental prosthetic technicians
+2149,7096,Ingenieur/in - Orthopädie- und Rehatechnik,Engineering professionals not elsewhere classified
+3254,7097,Augenoptiker/in,Dispensing opticians
+2267,7098,Ingenieur/in - Augenoptik,Optometrists and ophthalmic opticians
+3214,7099,Hörgeräteakustiker/in,Medical and dental prosthetic technicians
+3221,7100,Werkpfleger/-schwester,Nursing associate professionals
+3256,7100,Werkpfleger/-schwester,Medical assistants
+3256,7101,Fachassistent/in - Herz-Kreislauf-Funktionsdiagnostik,Medical assistants
+3221,7104,Krankenschwester/-pfleger,Nursing associate professionals
+3258,7105,Notfallsanitäter/in,Ambulance workers
+3258,7106,Disponent/in in einer Rettungsleitstelle,Ambulance workers
+2149,7109,Ingenieur/in - Hörtechnik und Audiologie,Engineering professionals not elsewhere classified
+3214,7110,Zahntechniker/in,Medical and dental prosthetic technicians
+1342,7121,Apothekenleiter/in,Health service managers
+1343,7122,Leiter/in - Altenpflegeeinrichtung,Aged care service managers
+2267,8001,Augenarztgehilfe/-gehilfin (Orthoptist/in),Optometrists and ophthalmic opticians
+5311,8002,Kinderbetreuer/in,Child care workers
+2342,8003,Erzieher/in,Early childhood educators 
+2635,8004,Sozialpädagoge/- pädagogin,social work an counselling professionals
+3412,8004,Sozialpädagoge/- pädagogin,social work associate professionals
+3412,8005,Heimerzieher/in,Social work associate professionals 
+5321,8006,Heilerziehungspfleger/in in Privathaushalten,Health care assistants
+3412,8006,Heilerziehungspfleger/in in Privathaushalten,Social work associate professionals
+5321,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Health care assistants
+3412,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Social work associate professionals
+5322,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Home-based personal care workers
+3412,8008,Heilpädagoge/ -pädagogin,Social work associate professionals
+2352,8008,Heilpädagoge/ -pädagogin,Special needs teachers
+5152,8010,Familienpfleger/in für Notsituationen,Domestic housekeepers
+2635,8011,Sozialberater/in,Social work and counselling professionals
+3412,8011,Sozialberater/in,Welfare support worker
+1341,8012,Kindergartenleiter/in,Child care service managers
+9111,8013,Haushaltshilfe,Domestic cleaners and helpers
+5152,8014,Hauswirtschafter/in in Privathaushalten,Domestic housekeepers
+2635,8015,Verbraucherberater/in,Social work and counselling professionals
+5151,8016,Hauswirtschaftsleiter/in für Großbetriebe,"Cleaning and housekeeping supervisors in offices, hotels and other establishments"
+5152,8017,Hauswirtschaftsleiter/in für Privathaushalte,Domestic housekeepers
+2636,8018,Pfarrer/in,Religious professionals
+3413,8019,Gemeindereferent/in,Religious associate professionals
+3413,8020,Nonne/Mönch,Religious associate professionals
+2636,8021,Klostervorsteher/in,Religious professionals
+5153,8022,Küster/in,Building caretakers
+3412,8023,Trauerredner/in,Social work associate professionals
+3413,8024,Christliche/r Jugendbetreuer/in,Religious associate professionals
+2636,8025,Missionar/in,Religious professionals
+2636,8026,Bischof/Bischöfin,Religious professionals
+2341,8027,Grundschullehrer/in,Primary school teachers
+2330,8028,Lehrer/in Sekundarstufe,Secondary education teachers
+2352,8029,Sonderschullehrer/in,Special needs teachers
+2351,8030,Ausbildungslehrer/in,Education methods specialists
+5312,8031,Lernbetreuer/in,Teachers' aides
+2359,8032,Beratungslehrer/in,Teaching professionals not elsewhere classified 
+1345,8033,Schulleiter/in - allgemeinbildende Schulen,Education managers
+2320,8034,Berufsschullehrer/in,Vocational education teachers
+2320,8035,Lehrlingsausbilder/in,Vocational education teachers
+1345,8036,Schulleiter/in – berufliche Schulen,Education managers
+2310,8037,Dozent/in / Professor/in,University and higher education teachers
+1120,8038,Hochschulpräsident/in bzw. Hochschulrektor/in,Managing directors and chief executives
+2320,8039,Dozent/in - Erwachsenenbildung,Vocational education teachers
+2354,8041,Musiklehrer/in,Other Music Teachers
+2330,8043,Religionslehrer/in,Secondary education teachers 
+2636,8044,Gemeindepädagoge/-pädagogin,Religious professionals
+2355,8045,Kunstpädagoge/-pädagogin bzw.Theaterpädagoge/-pädagogin,Other arts teachers
+2356,8046,IT- Trainer/in,Information technology trainers
+2353,8047,Fremdsprachlehrer/in,Other language teachers 
+2355,8048,Eurythmielehrer/in,Other arts teachers
+3258,8049,Erstehilfelehrer/in,Ambulance workers
+2359,8050,Museumspädagoge/- pädagogin,Teaching professionals not elsewhere classified
+1345,8051,Leiter/in - außerschulische Bildungseinrichtungen,Education managers
+3422,8052,Trainer/in - Leistungssport,"Sports coaches, instructors and officials "
+3422,8053,Sportpädagoge/-pädagogin,"Sports coaches, instructors and officials"
+5165,8054,Fahrlehrer/in,Driving instructors
+3153,8055,Fluglehrer/in,Aircraft pilots and related associate professionals 
+2355,8056,Tanzlehrer/in,Other arts teachers
+3422,8057,Trainer/in - Ballsport,"Sports coaches, instructors and officials"
+3423,8058,Fitnesstrainer/in  bzw. Gymnastiklehrer/in,Fitness and recreation instructors and program leaders
+3422,8059,Freizeitsportlehrer/in,"Sports coaches, instructors and officials"
+1344,8061,Leiter/in einer sozialpädagogischen Einrichtung,Social welfare managers
+5151,8062,Hauswirtschafter/in in sozialen und gewerblichen Einrichtungen,"Cleaning and housekeeping supervisors in offices, hotels and other establishments"
+5152,8062,Hauswirtschafter/in in sozialen und gewerblichen Einrichtungen,Domestic housekeepers
+4222,1002,Callcenteragent/in (Inbound),Contact centre information clerks
+5244,1003,Verkäufer/in - Telemarketing,Contact centre salespersons
+2643,1100,Literaturwissenschaftler/in / Sprachwissenschaftler/in,"Translators, interpreters and other linguists"
+2633,1101,Philosoph/in / Religionswissenschaftler/in,"Philosophers, historians and political scientists"
+2633,1102,Historiker/in,"Philosophers, historians and political scientists"
+2632,1105,Kommunikationswissenschaftler/in,"Sociologists, anthropologists and related professionals"
+2632,1107,Regionalwissenschaftler/in,"Sociologists, anthropologists and related professionals"
+2632,1108,Anthropologe/in / Ethnologe/in,"Sociologists, anthropologists and related professionals"
+2633,1109,Politologe/in,"Philosophers, historians and political scientists"
+2632,1110,Soziologe/in,"Sociologists, anthropologists and related professionals"
+2120,1111,Demograf/in,"Mathematicians, actuaries and statisticians"
+2631,1112,Wirtschaftswissenschaftler/in,Economists
+4227,1117,Interviewer/in,Survey and market research interviewers
+7543,1118,Testkäufer/in,Product graders and testers (except foods and beverages)
+2632,1123,Experte/in für spezielle Gesellschafts- und Kulturwissenschaften,"Sociologists, anthropologists and related professionals"
+2652,1200,Musiker/in,"Musicians, singers and composers"
+2633,1201,Musikwissenschaftler/in,"Philosophers, historians and political scientists"
+2652,1202,Sänger/in,"Musicians, singers and composers"
+2652,1203,Dirigent/in / Chorleiter/in,"Musicians, singers and composers"
+2652,1204,Komponist/in,"Musicians, singers and composers"
+2652,1205,Musik- und Sounddesigner/in,"Musicians, singers and composers"
+2652,1206,Korrepetior/in - Gesang/Instrumentalisten/,"Musicians, singers and composers"
+2653,1206,Korrepetior/in - Gesang/Instrumentalisten/,Dancers and choreographers
+2652,1207,Korrepetitor/in - Ballett/Tanz,"Musicians, singers and composers"
+2655,1208,Schauspieler/in,Actors
+2653,1209,Tänzer/in / Choreograf/in,Dancers and choreographers
+5241,1210,Model,Fashion and other models
+3421,1211,Berufssportler/in,Athletes and sports players
+5169,1212,Striptease-Tänzer/in / Prostituierte/r,Personal services workers not elsewhere classified
+3435,1213,Kleindarsteller/in,Artistic and cultural associate professionals not elsewhere classified
+2659,1214,Artist/in / Akrobat/in,Creative and performing artists not elsewhere classified
+2659,1216,Illusionskünstler/in / Zauberer/ Zauberin,Creative and performing artists not elsewhere classified
+2659,1217,Komiker/in / Kabarettist/in,Creative and performing artists not elsewhere classified
+2656,1218,Hörfunk- und Fernsehmoderator/in,"Announcers on radio, televisionand other media"
+4212,1219,Croupier/Croupière / Glücksspielbetreiber/in,"Bookmakers, croupiers and related gaming workers"
+2659,1220,Entertainer/in,Creative and performing artists not elsewhere classified
+3435,1225,Produktionsassistent/in,Artistic and cultural associate professionals not elsewhere classified
+3435,1227,Film- und Fernsehwirt/in,Artistic and cultural associate professionals not elsewhere classified
+2654,1227,Film- und Fernsehwirt/in,"Film, stage and related directors and producers"
+3435,1228,Inspizient/in,Artistic and cultural associate professionals not elsewhere classified
+2654,1229,Regieassistent/in,"Film, stage and related directors and producers"
+2654,1230,Regisseur/in,"Film, stage and related directors and producers"
+7115,1231,Bühnenarbeiter/in,Carpenters and joiners
+3435,1232,Veranstaltungstechnik - Fachkraft,Artistic and cultural associate professionals not elsewhere classified
+3521,1233,Technische/r Assistent/in - Bühne/Film/Fernsehen,Broadcasting and audio-visual technicians
+3435,1234,Beleuchter/in,Artistic and cultural associate professionals not elsewhere classified
+2149,1235,Ingenieur/in – Veranstaltungstechnik,Engineering professionals not elsewhere classified
+3435,1237,Souffleur/Souffleuse,Artistic and cultural associate professionals not elsewhere classified
+3339,1238,Künstlervermittler/in,Business services agents not elsewhere classified
+2654,1239,Programmgestalter/in für Rundfunk und Fernsehen,"Film, stage and related directors and producers"
+2654,1240,"Führungskraft in der Theater-, Film- und Fernsehproduktion","Film, stage and related directors and producers"
+1431,1240,"Führungskraft in der Theater-, Film- und Fernsehproduktion","Sports, recreation and cultural centre managers"
+2654,1241,Dramaturg/in,"Film, stage and related directors and producers"
+3521,1242,Kamera-Assistent/in,Broadcasting and audio-visual technicians
+3521,1243,Kameramann/-frau,Broadcasting and audio-visual technicians
+3521,1246,Filmeditor/in,Broadcasting and audio-visual technicians
+3435,1247,Pyrotechniker/in,Artistic and cultural associate professionals not elsewhere classified
+3435,1248,Meister/in – Veranstaltungstechnik,Artistic and cultural associate professionals not elsewhere classified
+3435,1249,Bühnen- und Kostümbildner/in,Artistic and cultural associate professionals not elsewhere classified
+2621,1300,Kurator/in / Museologe/in,Archivists and curators
+3433,1301,Fachkraft - Präparator/in in Museen,"Gallery, museum and library technicians"
+3433,1302,Museums- / Ausstellungstechniker/in,"Gallery, museum and library technicians"
+2621,1303,Konservator/in,Archivists and curators
+2161,1304,Denkmalpfleger/in,Building architects
+3315,1305,Kunstsachverständige/r,Valuers and loss assessors
+3315,1306,Gemmologe/Gemmologin,Valuers and loss assessors
+1349,1307,Museumsleiter/in / Museumsdirektor/in,Professional services managers not elsewhere classified
+3435,1308,Ankleider/in,Artistic and cultural associate professionals not elsewhere classified
+3435,1309,Requisiteur/in,Artistic and cultural associate professionals not elsewhere classified
+3435,1310,Ausstattungsleiter/in - Bühne/Film/Fernsehen,Artistic and cultural associate professionals not elsewhere classified
+2351,1501,Erziehungswissenschaftler/in,Education methods specialist
+2659,1600,Diskjockey / Bauchredner/in / Travestiekünstler/in,Creative and performing artists not elsewhere classified
+5161,1601,Wahrsager/in / Astrolog/in,"Astrologers, fortune-tellers and related workers"
+2632,1765,Kriminologe/in,"Sociologists, anthropologists and related professionals"
+2632,1766,Arbeitswissenschaftler/in,"Sociologists, anthropologists and related professionals"
+3432,1768,Chefdekorateur/in,Interior designers and decorators
+2653,1769,Striptease-Tänzer/in,Dancers and choreographers
+3119,1835,Techniker/in - Grabungstechnik,Physical and engineering science technicians not elsewhere classified
+2632,1835,Techniker/in - Grabungstechnik,"Sociologists, anthropologists and related professionals"
+3314,1836,Fachangestellte/r - Markt- und Sozialforschung,"Statistical, mathematical and related associate professionals"
+2120,1836,Fachangestellte/r - Markt- und Sozialforschung,"Mathematicians, actuaries and statisticians"
+2632,1836,Fachangestellte/r - Markt- und Sozialforschung,"Sociologists, anthropologists and related professionals"
+2431,1837,Produktmanager/in,Advertising and marketing professionals
+2642,1838,Redakteur/in,Journalists
+2163,1839,Produkt- und Industriedesigner/in,Product and garment designers
+3432,1840,Innenarchitekt/in,Interior designers and decorators
+2161,1840,Innenarchitekt/in,Building architects
+7313,1841,Gold- und Silberschmied/in,Jewellery and precious metal workers
+2163,1841,Gold- und Silberschmied/in,Product and garment designers
+3521,1842,Tontechniker/in,Broadcasting and audio-visual technicians
+2654,1842,Tontechniker/in,"Film, stage and related directors and producers"
+2632,1858,Kulturwissenschaftler/in,"Sociologists, anthropologists and related professionals"
+4419,3501,Redaktionsassistent/in,Clerical support workers not elsewhere classified
+2641,3502,Verlagslektor/in,Authors and related writers
+4419,3503,Marketingassistent/in,Clerical support workers not elsewhere classified
+3341,3504,Teamleiter/in - Callcenter,Office supervisors
+3339,3505,Literaturagent/in,Business services agents not elsewhere classified
+3343,3506,Medienfachwirt/in,Administrative and executive secretaries
+4419,3507,Anzeigenverkäufer/in,Clerical support workers not elsewhere classified
+4419,3508,Assistent/in - Filmgeschäftsführung,Clerical support workers not elsewhere classified
+3339,3509,Art-Buyer,Business services agents not elsewhere classified
+2432,3510,Pressesprecher/in,Public relations professionals
+1222,3511,Leiter/in- Presse- und Öffentlichkeitsarbeit,Advertising and public relations managers
+1349,3512,Chefredakteur/in,Professional services managers not elsewhere classified
+2432,3513,Public-Relations-Manager/in,Public relations professionals
+2641,3514,Schriftsteller/in,Authors and related writers
+1222,3515,Werbeleiter/in,Advertising and public relations managers
+2431,3518,Account-Manager/in,Advertising and marketing professionals
+2434,3518,Account-Manager/in,Information and Communications Technology Sales Professionals
+4419,3519,Medienkaufmann/-frau - Digital und Print,Clerical support workers not elsewhere classified
+2431,3520,Medienmanager/in,Advertising and marketing professionals
+1349,3521,Verleger/in (Medien/Musik),Professional services managers not elsewhere classified
+2641,3524,Technische/r Redakteur/in,Authors and related writers
+2641,3525,Drehbuchautor/in,Authors and related writers
+3339,3526,Listbroker/in,Business services agents not elsewhere classified
+3514,3527,Community-Manager/in,Web technicians
+3432,5124,Ausstellungsgestalter/in,Interior designers and decorators
+3432,5125,Raumausstatter/in- Restaurierungsarbeiten,Interior designers and decorators
+3123,5126,Raumausstattermeister/in,Construction supervisors
+7319,5127,Kunsthandwerker/in,Handicraft workers not elsewhere classified
+2651,5128,bildende/r Künstler/in,Visual artists
+2651,5129,Bildhauer/in,Visual artists
+7317,5130,Holzbildhauer/in,"Handicraft workers in wood, basketry and related materials "
+7113,5131,Steinbildhauer/in,"Stonemasons, stone cutters, splitters and carvers"
+2651,5132,Skulpturenrestaurator/in,Visual artists
+2651,5133,Kunstmaler/in,Visual artists
+7317,5134,Drechsler/in,"Handicraft workers in wood, basketry and related materials"
+2163,5135,Spielzeugdesigner/in,Product and garment designers
+7319,5136,Vergolder/in,Handicraft workers not elsewhere classified
+2651,5137,Restaurator/in - Vergolderhandwerk,Visual artists
+7319,5138,Kerzenhersteller/in und Wachsbildner/in,Handicraft workers not elsewhere classified
+7319,5139,Textilschmuckmacher/in,Handicraft workers not elsewhere classified
+3122,5141,Kunsthandwerksmeister/in,Manufacturing supervisors
+7314,5142,Keramiker/in,Potters and related workers
+2163,5143,Keramikdesigner/in,Product and garment designers
+7316,5144,Glas- und Porzellanmaler/in,"Sign writers, decorative painters, engravers and etchers"
+7315,5145,Glasbläser/in,"Glass makers, cutters, grinders and finishers"
+2163,5146,Glasdesigner/in,Product and garment designers
+7319,5147,Metallbildner/in,Handicraft Workers Not Elsewhere Classified
+2163,5148,Metalldesigner/in,Product and garment designers
+7313,5150,Restaurator/in - Gold- und Silberschmiedehandwerk,Jewellery and precious metal workers
+7316,5152,Graveur/in,"Sign writers, decorative painters, engravers and etchers"
+7316,5153,Schilder- und Lichtreklamehersteller/in,"Sign writers, decorative painters, engravers and etchers"
+7312,5154,Musikinstrumentenbauer/in,Musical instrument makers and tuners
+7312,5155,Musikinstrumentenrestaurator/in,Musical instrument makers and tuners
+2149,5156,Ingenieur/in- Musikinstrumentenbau,Engineering professionals not elsewhere classified
+7312,5157,Streich- und Zupfinstrumentenmacher/in,Musical instrument makers and tuners
+7312,5158,Restaurator/in- Streich- und Zupfinstrumente,Musical instrument makers and tuners
+7312,5159,Holzblasinstrumentenmacher/in,Musical instrument makers and tuners
+7312,5160,Restaurator/in- Holzblasinstrumente,Musical instrument makers and tuners
+7312,5161,Metallblasinstrumentenmacher/in,Musical instrument makers and tuners
+7312,5162,Restaurator/in- Metallblasinstrumente,Musical instrument makers and tuners
+7312,5163,Klavier- und Cembalobauer/in,Musical instrument makers and tuners
+7312,5164,Restaurator/in - Klavier- und Cembalo,Musical instrument makers and tuners
+7312,5165,Orgel- und Harmoniumbauer/in,Musical instrument makers and tuners
+7312,5166,Restaurator/in – Orgel- und Harmonium,Musical instrument makers and tuners
+7312,5167,"Handzuginstrumentenmacher/in, Harmonikamacher/in oder Schlagzeugbauer/in",Musical instrument makers and tuners
+7312,5168,"Restaurator/in – Handzuginstrumente, Harmonika oder Schlaginstrumente",Musical instrument makers and tuners
+3122,5169,Meister/in- Musikinstrumentenbau,Manufacturing supervisors
+3432,5170,Raumausstatter/in,Interior designers and decorators

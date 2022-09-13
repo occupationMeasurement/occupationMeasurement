@@ -1,0 +1,17 @@
+^occupationmeasurement\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+_\.new\.png$
+^data-raw$
+^cache$
+^output$
+^support$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^doc$
+^Meta$
+^docker$
+^.vscode$
+^.lintr$
+^.Renviron.*$

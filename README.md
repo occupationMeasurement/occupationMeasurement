@@ -1,43 +1,87 @@
-# occupationMeasurement <img src="man/figures/logo.png" align="right" />
+# occupationMeasurement <img src="man/figures/logo.png" width="120" align="right" />
 
-R package providing an app and API for interactive coding of occupations.
+A package to help with the (interactive) coding and measurement of occupations.
 
-## Installing the Package
+## Installation
+
 ```r
-remotes::install_gitlab(
-  "000000000135A127/occupationmeasurement-telephone-demo",
-  host = "https://gitlab.lrz.de" # ,
-  # auth_token = "your_personal_auth_token"
-)
+remotes::install_github("occupationMeasurement/occupationMeasurement")
 ```
 
-Note: This requires the environment variable GITLAB_PAT or the auth_token parameter to be set to a GITLAB Access Token with at least the `read_api` scope enabled. Environment variables can be set in `.Renviron`.
+## Usage
 
-## Running the App
+There are multiple ways of using this package for interactive occupation coding. Most notable there are three distinct ways, with varying degrees of flexibility and convenience:
+
+1. A shiny app which provides all functionality to run your own survey out-of-the-box.
+2. A JSON API to connect your own survey or application for maximum flexibility.
+3. The R functions themselves to implement your own custom functionality.
+
+### Using the interactive Shiny App
+
+To start the interactive shiny app you can just run the `app` function.
+
 ```r
 library(occupationMeasurement)
 
-app() # Run in production mode
-
-demo_app() # Run with explanations
+# Run the interactive shiny app
+app()
 ```
 
-## Testing
+The app also supports custom questionnaires, so you can build your own or use one some of the questionnaires included in the package e.g. the `demo_questionnaire` will explain the functionality of the app using the code below.
+
+```r
+library(occupationMeasurement)
+
+# Run the app with additional explanations
+app(questionnaire = demo_questionnaire())
+```
+
+### Using the JSON API
+
+If you want to include this package in your custom survey-tool or app or if you just need higher flexibility, you can use the included `api`.
+
+The api server can be started by simply running the code below (the API will open a page with additional documentation when you start it):
+
+```r
+library(occupationMeasurement)
+
+# Start the API and open its documentation
+api()
+```
+
+### Using the Exported R Functions
+
+As this is an R package you can also use the functions within it directly. This way you can integrate into your codebase or extend its functionality.
+
+If you want to, for example, generate some suggestions for a certain text input you can do so by just running the code below:
+
+```r
+library(occupationMeasurement)
+
+# Generate some job suggestions
+get_job_suggestions("Koch", num_suggestions = 3)
+```
+
+There are of course many other functions available as well, to check them out, just take a look at the documentation.
+
+## Development
+
+### Testing
 
 Tests can be run with the following snippet:
 ```r
 devtools::test()
 ```
 
-## Formatting
+### Formatting
 
-After making changes to the code, it is advised to automatically format all code with the {styler} package. This can be done by running
+After making changes to the code, it is advised to automatically format all code with the {styler} package. This can be done by running.
 
 ```r
 styler::style_pkg()
 ```
 
-## Building the documentation website
+### Building the documentation website
 The documentation website is powered by {pkgdown}. It can be rebuilt by running 
 
 ```r

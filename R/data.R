@@ -80,7 +80,7 @@ load_auxco <- function(dir, add_explanations = TRUE) {
     )
   )
 
-  if(add_explanations) {
+  if (add_explanations) {
     # Add additional explanations for extra_instructions interviews
     # Was ist Ausführung von Hilfsarbeiten?
     auxco$categories[

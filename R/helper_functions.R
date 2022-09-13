@@ -99,8 +99,8 @@ create_app_settings_from_env <- function(verbose = FALSE) {
     !(
       # Remove parameters starting with "."
       startsWith(".", possible_params) |
-      # Remove empty parameters
-      possible_params == ""
+        # Remove empty parameters
+        possible_params == ""
     )
   ]
 

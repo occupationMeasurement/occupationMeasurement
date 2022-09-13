@@ -112,9 +112,11 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #'   (Defaults to the questionnaire returned by \link{default_questionnaire}().)
 #' @param app_settings The app_settings to use. Check the documentation for
 #'   create_app_settings to learn about the options.
+#' @param css_file Path to a CSS file to be included in the app.
 #' @param resource_dir From which directory to static files e.g. styles.
 #'   If you want to load additional resources from outside the package, you
-#'   can do so with shiny::addResourcePath.
+#'   should rather do so with [shiny::addResourcePath] rather than with this
+#'   parameter.
 #' @param ... Any additional parameters will be forwarded to shiny::shinyApp().
 #'
 #' @return A shiny app.
@@ -129,7 +131,11 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #'   )
 #' )
 #' }
-app <- function(questionnaire = default_questionnaire(), app_settings = create_app_settings(), resource_dir = system.file("www", package = "occupationMeasurement"), ...) {
+app <- function(questionnaire = default_questionnaire(),
+                app_settings = create_app_settings(),
+                css_file = NULL,
+                resource_dir = system.file("www", package = "occupationMeasurement"),
+                ...) {
   require_dependencies()
 
   validate_questionnaire(questionnaire, verbose = app_settings$verbose)
@@ -137,11 +143,18 @@ app <- function(questionnaire = default_questionnaire(), app_settings = create_a
   shiny::addResourcePath("www", resource_dir)
 
   ui <- shinyUI(fluidPage(
-    theme = "/www/telephoneinterview.css",
+    tags$head(
+      # Load the default / base styles
+      tags$link(rel = "stylesheet", type = "text/css", href = "/www/base-styles.css"),
 
-    # Show message when the user tries to leave the page
-    if (app_settings$warn_before_leaving) {
-      tags$head(
+      # Include additional user-provided CSS
+      # Note that we can't load this via a HTML tag, as we would have to add
+      # the resourcePath, includeCSS provides a nice workaround for this by
+      # just inlining the styles from a file
+      if (!is.null(css_file)) includeCSS(css_file),
+
+      # Show message when the user tries to leave the page
+      if (app_settings$warn_before_leaving) {
         tags$script(
           paste(
             "window.study_completed = false;",
@@ -154,8 +167,8 @@ app <- function(questionnaire = default_questionnaire(), app_settings = create_a
             sep = "\n"
           )
         )
-      )
-    },
+      },
+    ),
     titlePanel("", windowTitle = "Berufsmodul"),
     uiOutput("MainAction", style = "margin-top:40px;margin-left:auto;margin-right:auto;width:800px")
   ))

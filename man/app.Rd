@@ -7,6 +7,7 @@
 app(
   questionnaire = default_questionnaire(),
   app_settings = create_app_settings(),
+  css_file = NULL,
   resource_dir = system.file("www", package = "occupationMeasurement"),
   ...
 )
@@ -18,9 +19,12 @@ app(
 \item{app_settings}{The app_settings to use. Check the documentation for
 create_app_settings to learn about the options.}
 
+\item{css_file}{Path to a CSS file to be included in the app.}
+
 \item{resource_dir}{From which directory to static files e.g. styles.
 If you want to load additional resources from outside the package, you
-can do so with shiny::addResourcePath.}
+should rather do so with \link[shiny:resourcePaths]{shiny::addResourcePath} rather than with this
+parameter.}
 
 \item{...}{Any additional parameters will be forwarded to shiny::shinyApp().}
 }

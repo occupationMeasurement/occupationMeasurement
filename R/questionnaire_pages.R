@@ -16,7 +16,7 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
     render = function(...) {
       return(
         list(
-          p(strong(h5(title))),
+          p(strong(title)),
           h5(""),
           button_next(label = "Start"),
           # Move to the top when next or previous button is clicked (this works for all pages, after being called once)
@@ -183,9 +183,9 @@ page_select_suggestion <- function(...) {
             tags$div(
               tags$div(
                 p(tags$b(paste0(i, ". ", df_suggestions[i, suggestion_main_label_column, with = FALSE]))),
-                tagAppendAttributes(p(class = "beiBedarfVorlesen", df_suggestions[i, suggestion_dropdown_label_column, with = FALSE], icon("angle-double-down")), `data-click-toggle` = paste0("toggle-pos-", i))
+                tagAppendAttributes(p(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_label_column, with = FALSE], icon("angle-double-down")), `data-click-toggle` = paste0("toggle-pos-", i))
               ),
-              tags$div(id = paste0("toggle-pos-", i), style = "display: none", em(class = "beiBedarfVorlesen", df_suggestions[i, suggestion_dropdown_content_column, with = FALSE]))
+              tags$div(id = paste0("toggle-pos-", i), style = "display: none", em(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_content_column, with = FALSE]))
             )
           })
         }
@@ -234,12 +234,23 @@ page_select_suggestion <- function(...) {
       auxco_id <- NULL
 
       list(
-        div(p(class = "interviewer", "Vorschl\u00e4ge beruhen auf der Eingabe:")), # style="display:inline-block", als div-Attribut w\u00fcrde beides nebeneinander anzeigen (aber im IE11 auch leicht versetzt \u00fcbereinander)
-        div(style = "display:inline-block; width:600px", textInput("textChanged", label = NULL, value = session$userData$user_info$text_for_suggestion, width = "100%")),
-        h4(run_before_output$transition_text),
-        h4(page$get_question_data(session = session, key = "question_text")),
-        p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
-        p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Auslassen von v\u00f6llig unpassenden Vorschl\u00e4gen ist erlaubt."),
+        div(
+          class = "question",
+          div(p(class = "interviewer", "Vorschl\u00e4ge beruhen auf der Eingabe:")), # style="display:inline-block", als div-Attribut w\u00fcrde beides nebeneinander anzeigen (aber im IE11 auch leicht versetzt \u00fcbereinander)
+          div(
+            style = "display:inline-block; width:600px",
+            textInput(
+              "previous-input",
+              label = NULL,
+              value = session$userData$user_info$text_for_suggestion,
+              width = "100%"
+            )
+          ),
+          p(run_before_output$transition_text),
+          p(page$get_question_data(session = session, key = "question_text")),
+          p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
+          p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Auslassen von v\u00f6llig unpassenden Vorschl\u00e4gen ist erlaubt.")
+        ),
         radioButtons("question1", NULL,
           width = "100%",
           choiceNames = run_before_output$suggestions_html,
@@ -401,7 +412,7 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
       question <- session$userData$active_followup_question
       answer_options_html <- lapply(question$answers$answer_text, function(txt) {
         if (txt %in% c("Ja", "Nein")) {
-          tags$div(p(class = "beiBedarfVorlesen", tags$b(txt)))
+          tags$div(p(class = "read-on-demand", tags$b(txt)))
         } else {
           tags$div(p(tags$b(txt)))
         }

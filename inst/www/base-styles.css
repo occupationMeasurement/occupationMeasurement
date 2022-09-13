@@ -1,10 +1,34 @@
-.interviewer {color:#ba0000;}
-#textChanged {color:#ba0000;}
-.interviewer2 {color:#6b0000;}
-.beiBedarfVorlesen {color:#005f00;}
-.hervorheben{
-  text-decoration:underline;
-  color:blue;
+#previous-input {
+  color: #ba0000;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {line-height:1.5;}
 
+.interviewer {
+  color: #ba0000;
+}
+
+.read-on-demand {
+  color: #005f00;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+p {
+  font-size: 16px;
+}
+
+.question {
+  padding-bottom: 2rem;
+}

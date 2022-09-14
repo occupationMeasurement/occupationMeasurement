@@ -138,7 +138,6 @@ test_that("E2E: test case Koch", {
   # Back to suggestion selection
   debug_note("Back - 2")
   app$click(selector = "#previousButton")
-  print(app$get_logs())
   app$wait_for_js("document.querySelector('table')?.childNodes.length === 5")
   app$run_js("window.numberOfChanges = 0;") # reset counter
   # Back to free-text entry

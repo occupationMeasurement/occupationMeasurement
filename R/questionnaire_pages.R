@@ -5,13 +5,14 @@
 #' Providing an introduction and greeting participants.
 #'
 #' @param title The heading with which to greet participants.
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatischen Berufskodierung!",
                          ...) {
-  Page$new(
+  new_page(
     page_id = "welcome",
     render = function(...) {
       return(
@@ -32,9 +33,10 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #'
 #' Here, the description of the job can be entered in an open freetext field.
 #'
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_first_freetext <- function(...) {
   page_freetext(
@@ -55,7 +57,7 @@ page_first_freetext <- function(...) {
       )
     },
     run_after = function(session, page, input, ...) {
-      text <- page$get_question_data(session = session, key = "response_text")
+      text <- get_question_data(session = session, page_id = page$page_id, key = "response_text")
       automatic_suggestions <- get_job_suggestions(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
@@ -75,9 +77,10 @@ page_first_freetext <- function(...) {
 #'
 #' @param combine_input_with_first Should input be combined with the
 #'   previous question?
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_second_freetext <- function(combine_input_with_first = TRUE, ...) {
   page_freetext(
@@ -88,14 +91,15 @@ page_second_freetext <- function(combine_input_with_first = TRUE, ...) {
       nrow(stats::na.omit(session$userData$user_info$list_suggestions)) == 0
     },
     run_after = function(session, page, input, ...) {
-      text <- page$get_question_data(
-        session = session,
+      text <- get_question_data(
+        session =  session,
+        page_id = page$page_id,
         key = "response_text"
       )
       if (combine_input_with_first) {
         # Combine answer texts from first and second question
-        text_from_first_question <- page$get_question_data(
-          session = session,
+        text_from_first_question <- get_question_data(
+          session =  session,
           page_id = "freetext_1",
           key = "response_text",
           default = ""
@@ -117,12 +121,13 @@ page_second_freetext <- function(combine_input_with_first = TRUE, ...) {
 
 #' Display the generated suggestions for the user to pick one.
 #'
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_select_suggestion <- function(...) {
-  Page$new(
+  new_page(
     page_id = "select_suggestion",
     condition = function(session, page, ...) {
       return(
@@ -217,8 +222,9 @@ page_select_suggestion <- function(...) {
         suggestions_html[[length(suggestions_html) + 1]] <- tags$div(p(class = "interviewer", "*** Keine Angabe"))
       }
 
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         question_text = question_text
       )
 
@@ -247,7 +253,7 @@ page_select_suggestion <- function(...) {
             )
           ),
           p(run_before_output$transition_text),
-          p(page$get_question_data(session = session, key = "question_text")),
+          p(get_question_data(session = session, page_id = page$page_id, key = "question_text")),
           p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
           p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Auslassen von v\u00f6llig unpassenden Vorschl\u00e4gen ist erlaubt.")
         ),
@@ -255,7 +261,7 @@ page_select_suggestion <- function(...) {
           width = "100%",
           choiceNames = run_before_output$suggestions_html,
           choiceValues = as.list(c(run_before_output$df_suggestions[, auxco_id], "95", "99")),
-          selected = page$get_question_data(session = session, key = "response_id", default = character(0))
+          selected = get_question_data(session = session, page_id = page$page_id, key = "response_id", default = character(0))
         ),
         br(),
         button_previous(),
@@ -299,14 +305,16 @@ page_select_suggestion <- function(...) {
       if (is.null(input$question1)) {
         # Nothing has been selected
         # TODO: We might want to enforce a selection here?
-        page$set_question_data(
+        set_question_data(
           session = session,
+          page_id = page$page_id,
           response_id = "EMPTY"
         )
       } else {
         # At least some option has been selected
-        page$set_question_data(
+        set_question_data(
           session = session,
+          page_id = page$page_id,
           response_id = input$question1
         )
         if (input$question1 != "95" & input$question1 != "99") {
@@ -317,13 +325,13 @@ page_select_suggestion <- function(...) {
 
       # Check for potential clarifying followup questions and add them to the user_data if there are any
       session$userData$followup_questions <- get_followup_questions(
-        suggestion_id = page$get_question_data(session = session, key = "response_id"),
+        suggestion_id = get_question_data(session = session, page_id = page$page_id, key = "response_id"),
         tense = session$userData$session_settings$tense
       )
 
       # save list of suggestions
       shown_suggestions$session_id <- session$userData$user_info$session_id
-      shown_suggestions$start <- page$get_page_data(session = session, key = "start")
+      shown_suggestions$start <- get_page_data(session = session, page_id = page$page_id, key = "start")
       save_data("occupations_suggested", shown_suggestions, session = session)
     },
     ...
@@ -336,7 +344,7 @@ page_none_selected_freetext <- function() {
     question_text = "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau.",
     # Only show this page when none of the suggestions has been picked
     condition = function(session, page, ...) {
-      selected_suggestion_id <- page$get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
+      selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
       return(selected_suggestion_id %in% c(
         # Nothing ticked at all
         "EMPTY",
@@ -360,12 +368,13 @@ page_none_selected_freetext <- function() {
 #'   page_followup(index = 2).
 #'   For example [default_questionnaire()] uses
 #'   `..., page_followup(index = 1), page_followup(index = 2), ...`
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_followup <- function(index, ...) { # 1 based because R (sigh)
-  Page$new(
+  new_page(
     page_id = paste0("followup_", index),
     condition = function(session, page, ...) {
       # Column names used in data.table (for R CMD CHECK)
@@ -383,8 +392,8 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
         for (previous_index in (index - 1):1) {
           # Retrieve the selected previous answer
           previous_question <- session$userData$followup_questions[[previous_index]]
-          previous_answer_id <- page$get_question_data(
-            session = session,
+          previous_answer_id <- get_question_data(
+            session =  session,
             page_id = paste0("followup_", previous_index),
             key = "response_id"
           )
@@ -404,8 +413,9 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
       session$userData$active_followup_question <- session$userData$followup_questions[[index]]
       question <- session$userData$active_followup_question
 
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         question_text = paste0(question$question_text, " (", question$id, ")")
       )
 
@@ -458,8 +468,9 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
       selected <- if (is.null(input$question.follow.quest)) NA_integer_ else as.integer(input$question.follow.quest) # setze alles auf NA wenn nichts ausgew\u00e4hlt wurde
       selected_suggestion <- question$answers[selected, ]
 
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         response_id = selected,
         response_text = selected_suggestion$answer_text
       )
@@ -478,12 +489,13 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
 #' This page saves data in results_overview and marks the questionnaire as
 #' complete.
 #'
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_results <- function(...) {
-  Page$new(
+  new_page(
     page_id = "results",
     condition = function(session, page, ...) {
       !is.null(session$userData$user_info$query$show_results)
@@ -501,11 +513,11 @@ page_results <- function(...) {
       )
 
       # 1. Freitextantwort speichern
-      res$berufTaetigkeitText <- page$get_question_data(session = session, key = "response_text", page_id = "freetext_1")
-      res$dictionaryCodedTitle <- page$get_question_data(session = session, key = "dictionaryCodedTitle", page_id = "freetext_1")
+      res$berufTaetigkeitText <- get_question_data(session = session, page_id = "freetext_1", key = "response_text")
+      res$dictionaryCodedTitle <- get_question_data(session = session, page_id = "freetext_1", key = "dictionaryCodedTitle")
 
       # Save output from 2nd freetext question
-      res$berufTaetigkeitText2 <- page$get_question_data(session = session, key = "response_text", page_id = "freetext_2")
+      res$berufTaetigkeitText2 <- get_question_data(session = session, page_id = "freetext_2", key = "response_text")
 
       # Match answers IDs with data
       suggestions <- session$userData$user_info$list_suggestions
@@ -513,7 +525,7 @@ page_results <- function(...) {
       # Check whether ther are suggestions
       has_suggestions <- nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0
       if (has_suggestions) {
-        selected_suggestion_id <- page$get_question_data(session = session, key = "response_id", page_id = "select_suggestion")
+        selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
         selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
       }
 
@@ -525,14 +537,14 @@ page_results <- function(...) {
         res$auxco_id <- selected_suggestion$auxco_id
 
         # Get raw answers to follow up questions
-        res$followUp1Question <- page$get_question_data(session = session, key = "question_text", page_id = "followup_1", default = NA_character_)
-        res$followUp1Answer <- page$get_question_data(session = session, key = "response_text", page_id = "followup_1", default = NA_character_)
-        res$followUp2Question <- page$get_question_data(session = session, key = "question_text", page_id = "followup_2", default = NA_character_)
-        res$followUp2Answer <- page$get_question_data(session = session, key = "response_text", page_id = "followup_2", default = NA_character_)
+        res$followUp1Question <- get_question_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
+        res$followUp1Answer <- get_question_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
+        res$followUp2Question <- get_question_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
+        res$followUp2Answer <- get_question_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
 
         # Retrieve final kldb / isco codes
-        followup_1_id <- page$get_question_data(session = session, page_id = "followup_1", key = "response_id")
-        followup_2_id <- page$get_question_data(session = session, page_id = "followup_2", key = "response_id")
+        followup_1_id <- get_question_data(session = session, page_id = "followup_1", key = "response_id")
+        followup_2_id <- get_question_data(session = session, page_id = "followup_2", key = "response_id")
 
         # Create a named list of followup_answers
         followup_questions <- get_followup_questions(selected_suggestion$auxco_id)
@@ -645,12 +657,13 @@ page_results <- function(...) {
 #' This page saves data in results_overview and marks the questionnaire as
 #' complete.
 #'
-#' @param ... All additional parameters are passed to [Page$new()]
+#' @param ... All additional parameters are passed to [new_page()]
 #'
-#' @return A new \link{Page}
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 page_final <- function(...) {
-  Page$new(
+  new_page(
     page_id = "final",
     run_before = function(session, page, ...) {
       save_results_overview(session)

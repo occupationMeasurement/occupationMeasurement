@@ -7,10 +7,10 @@
 page_results(...)
 }
 \arguments{
-\item{...}{All additional parameters are passed to \code{\link[=Page$new]{Page$new()}}}
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
-A new \link{Page}
+A page object.
 }
 \description{
 This page is only shown if the query parameter \code{show_results} is present.
@@ -18,4 +18,7 @@ This page is only shown if the query parameter \code{show_results} is present.
 \details{
 This page saves data in results_overview and marks the questionnaire as
 complete.
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

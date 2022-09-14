@@ -12,11 +12,14 @@ page_welcome(
 \arguments{
 \item{title}{The heading with which to greet participants.}
 
-\item{...}{All additional parameters are passed to \code{\link[=Page$new]{Page$new()}}}
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
-A new \link{Page}
+A page object.
 }
 \description{
 Providing an introduction and greeting participants.
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

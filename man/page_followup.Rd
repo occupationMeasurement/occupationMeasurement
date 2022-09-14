@@ -14,12 +14,15 @@ page_followup(index = 2).
 For example \code{\link[=default_questionnaire]{default_questionnaire()}} uses
 \verb{..., page_followup(index = 1), page_followup(index = 2), ...}}
 
-\item{...}{All additional parameters are passed to \code{\link[=Page$new]{Page$new()}}}
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
-A new \link{Page}
+A page object.
 }
 \description{
 To disambiguate between similar occupations. Depending on the suggestion,
 multiple followup questions can be shown.
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

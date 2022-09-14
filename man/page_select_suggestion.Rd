@@ -7,11 +7,14 @@
 page_select_suggestion(...)
 }
 \arguments{
-\item{...}{All additional parameters are passed to \code{\link[=Page$new]{Page$new()}}}
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
-A new \link{Page}
+A page object.
 }
 \description{
 Display the generated suggestions for the user to pick one.
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

@@ -19,9 +19,10 @@ mark_questionnaire_complete <- function() {
 #'   the actually saved values.
 #'   e.g. with `list(One = 1, Two = 2, Three = 3)` people will see One, Two, ...
 #'   and numbers 1, 2, 3 will be saved under `response_id`.
-#' @param ... Other parametrs are passed on to `Page$new()`
+#' @param ... Other parametrs are passed on to `new_page()`
 #'
-#' @return A Page instance.
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 #'
 #' @examples
@@ -38,7 +39,7 @@ page_choose_one_option <- function(page_id,
                                    run_before = NULL,
                                    run_after = NULL,
                                    ...) {
-  Page$new(
+  new_page(
     page_id = page_id,
     run_before = function(session, page, ...) {
       if (is.function(question_text)) {
@@ -47,8 +48,9 @@ page_choose_one_option <- function(page_id,
       } else {
         actual_question_text <- question_text
       }
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         question_text = actual_question_text
       )
 
@@ -72,7 +74,7 @@ page_choose_one_option <- function(page_id,
         radioButtons("radioButtonQuestion", NULL,
           width = "100%",
           choices = list_of_options,
-          selected = page$get_question_data(session = session, key = "response_id")
+          selected = get_question_data(session = session, page_id=page$page_id, key = "response_id")
         ),
         if (previous_button) button_previous(),
         if (next_button) button_next()
@@ -80,8 +82,9 @@ page_choose_one_option <- function(page_id,
     },
     run_after = function(session, page, input, ...) {
       response_id <- input[["radioButtonQuestion"]]
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         response_id = response_id,
         response_text = names(list_of_options[list_of_options == response_id])
       )
@@ -111,13 +114,14 @@ page_choose_one_option <- function(page_id,
 #'   Only set this to FALSE, if you wish to change the rendering of the
 #'   question_text by e.g. using `render_before`.
 #'   Defaults to TRUE.
-#' @param run_before Similar to `run_before` in `Page$new()`, passed explicitly
+#' @param run_before Similar to `run_before` in `new_page()`, passed explicitly
 #'   here as this page adds some of its own code to `run_before`.
-#' @param run_after Similar to `run_after` in `Page$new()`, passed explicitly
+#' @param run_after Similar to `run_after` in `new_page()`, passed explicitly
 #'   here as this page adds some of its own code to `run_after`.
-#' @param ... Other parametrs are passed on to `Page$new()`
+#' @param ... Other parametrs are passed on to `new_page()`
 #'
-#' @return A Page instance.
+#' @return A page object.
+#' @seealso [new_page()]
 #' @export
 #'
 #' @examples
@@ -135,7 +139,7 @@ page_freetext <- function(page_id,
                           run_before = NULL,
                           run_after = NULL,
                           ...) {
-  Page$new(
+  new_page(
     page_id = page_id,
     run_before = function(session, page, ...) {
       if (is.function(question_text)) {
@@ -144,13 +148,15 @@ page_freetext <- function(page_id,
       } else {
         actual_question_text <- question_text
       }
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         question_text = actual_question_text
       )
       if (no_answer_checkbox) {
-        page$set_question_data(
+        set_question_data(
           session = session,
+          page_id = page$page_id,
           question_id = "no_answer",
           question_text = actual_question_text
         )
@@ -176,7 +182,7 @@ page_freetext <- function(page_id,
         textInput(
           paste0(page$page_id, "_text"),
           NULL,
-          value = page$get_question_data(session = session, key = "response_text"),
+          value = get_question_data(session = session, page_id=page$page_id, key = "response_text"),
           width = "80%"
         ),
         br(),
@@ -184,7 +190,7 @@ page_freetext <- function(page_id,
           checkboxInput(
             paste0(page$page_id, "_chk_no_answer"),
             label = p(class = "interviewer", "*** Keine Angabe"),
-            value = page$get_question_data(session = session, question_id = "no_answer", key = "response_id"),
+            value = get_question_data(session = session, page_id=page$page_id, question_id = "no_answer", key = "response_id"),
             width = "100%"
           )
         },
@@ -193,15 +199,17 @@ page_freetext <- function(page_id,
       )
     },
     run_after = function(session, page, input, ...) {
-      page$set_question_data(
+      set_question_data(
         session = session,
+        page_id = page$page_id,
         response_text = if (is.null(input[[paste0(page$page_id, "_text")]])) "" else input[[paste0(page$page_id, "_text")]]
       )
 
       # Also record no-answer checkbox
       if (no_answer_checkbox) {
-        page$set_question_data(
+        set_question_data(
           session = session,
+          page_id = page$page_id,
           question_id = "no_answer",
           response_id = if (is.null(input[[paste0(page$page_id, "_chk_no_answer")]])) FALSE else input[[paste0(page$page_id, "_chk_no_answer")]]
         )

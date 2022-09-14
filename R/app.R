@@ -249,8 +249,18 @@ app <- function(questionnaire = default_questionnaire(),
       # controlled via the expressions in questionnaire
 
       # run Code defined in questionnaire
-      run_before_output <- questionnaire[[session$userData$control$current_question]]$execute_run_before(session = session) # prev to output
-      return(questionnaire[[session$userData$control$current_question]]$execute_render(session = session, run_before_output = run_before_output)) # return output to show
+      page <- questionnaire[[session$userData$control$current_question]]
+      run_before_output <- execute_run_before(
+        page = page,
+        session = session
+      ) # prev to output
+      return(
+        execute_render(
+          page = page,
+          session = session,
+          run_before_output = run_before_output
+        )
+      ) # return output to show
     })
 
 
@@ -259,7 +269,11 @@ app <- function(questionnaire = default_questionnaire(),
     # Go to the next question
     observeEvent(input$nextButton, {
       # evaluate question Content after the question was answered
-      questionnaire[[session$userData$control$current_question]]$execute_run_after(session = session, input = input)
+      execute_run_after(
+        page = questionnaire[[session$userData$control$current_question]],
+        session = session,
+        input = input
+      )
 
       # Determine the next question
       next_question <- session$userData$control$current_question
@@ -268,7 +282,7 @@ app <- function(questionnaire = default_questionnaire(),
         # stop increasing after the last question
         if (next_question > length(questionnaire)) break
         # or if an condition evalutes to TRUE
-        if (questionnaire[[next_question]]$check_condition(session = session)) break
+        if (check_condition(questionnaire[[next_question]], session = session)) break
       })
       # Update current_question if we found the next question
       session$userData$control$current_question <- next_question

@@ -37,16 +37,16 @@ Only set this to FALSE, if you wish to change the rendering of the
 question_text by e.g. using \code{render_before}.
 Defaults to TRUE.}
 
-\item{run_before}{Similar to \code{run_before} in \code{Page$new()}, passed explicitly
+\item{run_before}{Similar to \code{run_before} in \code{new_page()}, passed explicitly
 here as this page adds some of its own code to \code{run_before}.}
 
-\item{run_after}{Similar to \code{run_after} in \code{Page$new()}, passed explicitly
+\item{run_after}{Similar to \code{run_after} in \code{new_page()}, passed explicitly
 here as this page adds some of its own code to \code{run_after}.}
 
-\item{...}{Other parametrs are passed on to \code{Page$new()}}
+\item{...}{Other parametrs are passed on to \code{new_page()}}
 }
 \value{
-A Page instance.
+A page object.
 }
 \description{
 Show a page with a text field where free text can be entered.
@@ -57,4 +57,7 @@ page_freetext(
   question_text = "Hello there! Please fill in your name below:",
   no_answer_checkbox = TRUE
 )
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

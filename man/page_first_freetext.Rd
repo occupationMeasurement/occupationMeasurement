@@ -7,11 +7,14 @@
 page_first_freetext(...)
 }
 \arguments{
-\item{...}{All additional parameters are passed to \code{\link[=Page$new]{Page$new()}}}
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
-A new \link{Page}
+A page object.
 }
 \description{
 Here, the description of the job can be entered in an open freetext field.
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

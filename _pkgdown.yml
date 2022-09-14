@@ -20,8 +20,10 @@ reference:
     Functions to create pages to either extend the existing questionnaires
     or build your own from scratch.
 - contents:
-  - Page
+  - new_page
   - starts_with("page")
+  - set_question_data
+  - get_question_data
 - title: Creating Suggestions
   desc: >
     Functions to create suggestions manually e.g. for generating suggestions
@@ -37,4 +39,4 @@ reference:
 - title: Datasets
 - contents:
   - has_keyword("datasets")
-  - load_kldb
+  - starts_with("load")

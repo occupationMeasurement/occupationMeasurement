@@ -35,16 +35,16 @@ Defaults to TRUE.}
 \item{previous_button}{Whether to show the button to navigate to the preivous page?
 Defaults to TRUE.}
 
-\item{run_before}{Similar to \code{run_before} in \code{Page$new()}, passed explicitly
+\item{run_before}{Similar to \code{run_before} in \code{new_page()}, passed explicitly
 here as this page adds some of its own code to \code{run_before}.}
 
-\item{run_after}{Similar to \code{run_after} in \code{Page$new()}, passed explicitly
+\item{run_after}{Similar to \code{run_after} in \code{new_page()}, passed explicitly
 here as this page adds some of its own code to \code{run_after}.}
 
-\item{...}{Other parametrs are passed on to \code{Page$new()}}
+\item{...}{Other parametrs are passed on to \code{new_page()}}
 }
 \value{
-A Page instance.
+A page object.
 }
 \description{
 Show a page with multiple radio button options where once can be picked.
@@ -55,4 +55,7 @@ page_choose_one_option(
   question_text = "Hello there! Please pick your favorite number from the options below:",
   list_of_options = list(One = 1, Two = 2, Three = 3)
 )
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

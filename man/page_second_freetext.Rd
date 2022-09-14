@@ -10,12 +10,15 @@ page_second_freetext(combine_input_with_first = TRUE, ...)
 \item{combine_input_with_first}{Should input be combined with the
 previous question?}
 
-\item{...}{All additional parameters are passed to \code{\link[=Page$new]{Page$new()}}}
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
-A new \link{Page}
+A page object.
 }
 \description{
 If the first freetext question didn't provide satisfactory results,
 ask for more details and try again.
+}
+\seealso{
+\code{\link[=new_page]{new_page()}}
 }

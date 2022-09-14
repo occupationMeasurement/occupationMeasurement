@@ -73,7 +73,6 @@ preprocess_string <- function(verbatim, lang = "de") {
 # first load, but will lead to faster generation of suggestions
 require_dependencies <- function(dependencies = c(
                                    "data.table",
-                                   "R6",
                                    "shiny",
                                    "stringdist",
                                    "stringr",

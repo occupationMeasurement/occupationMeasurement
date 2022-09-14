@@ -10,21 +10,19 @@ remotes::install_github("occupationMeasurement/occupationMeasurement")
 
 ## Usage
 
-There are multiple ways of using this package for interactive occupation coding. Most notable there are three distinct ways, with varying degrees of flexibility and convenience:
+There are three main ways of using this package, with varying degrees of flexibility and convenience:
 
-1. A shiny app which provides all functionality to run your own survey out-of-the-box.
-2. A JSON API to connect your own survey or application for maximum flexibility.
-3. The R functions themselves to implement your own custom functionality.
+1. Use the included shiny app which provides all functionality to run your own survey out-of-the-box.
+2. Use the included JSON API to connect your own survey or application for maximum flexibility.
+3. Use the R functions themselves to implement your own custom functionality.
 
-### Using the interactive Shiny App
+### 1. Using the interactive Shiny App
 
-To start the interactive shiny app you can just run the `app` function.
+To start the interactive shiny app just run the `app` function.
 
 ```r
-library(occupationMeasurement)
-
 # Run the interactive shiny app
-app()
+occupationMeasurement::app()
 ```
 
 The app also supports custom questionnaires, so you can build your own or use one some of the questionnaires included in the package e.g. the `demo_questionnaire` will explain the functionality of the app using the code below.
@@ -36,20 +34,18 @@ library(occupationMeasurement)
 app(questionnaire = demo_questionnaire())
 ```
 
-### Using the JSON API
+### 2. Using the JSON API
 
 If you want to include this package in your custom survey-tool or app or if you just need higher flexibility, you can use the included `api`.
 
 The api server can be started by simply running the code below (the API will open a page with additional documentation when you start it):
 
 ```r
-library(occupationMeasurement)
-
-# Start the API and open its documentation
-api()
+# Start the API (and open its documentation)
+occupationMeasurement::api()
 ```
 
-### Using the Exported R Functions
+### 3. Using the Exported R Functions
 
 As this is an R package you can also use the functions within it directly. This way you can integrate into your codebase or extend its functionality.
 

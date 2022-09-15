@@ -74,7 +74,7 @@ page_choose_one_option <- function(page_id,
         radioButtons("radioButtonQuestion", NULL,
           width = "100%",
           choices = list_of_options,
-          selected = get_question_data(session = session, page_id=page$page_id, key = "response_id")
+          selected = get_question_data(session = session, page_id = page$page_id, key = "response_id")
         ),
         if (previous_button) button_previous(),
         if (next_button) button_next()
@@ -104,6 +104,9 @@ page_choose_one_option <- function(page_id,
 #' @param question_text The question / text to display.
 #'   This can be either a string, which will simply be displayed or a function
 #'   to dynamically determine the question_text.
+#' @param is_interview Should the page show slightly different / additional
+#'  instructions and answer options for an interview that is conducted by
+#'  another person? Defaults to FALSE.
 #' @param no_answer_checkbox Whether to provide a checkbox to denote that no
 #'   answer has been provided.
 #' @param next_button Whether to show the button to navigate to the next page?
@@ -132,6 +135,7 @@ page_choose_one_option <- function(page_id,
 #' )
 page_freetext <- function(page_id,
                           question_text = "Please enter your answer in the box below",
+                          is_interview = FALSE,
                           no_answer_checkbox = TRUE,
                           next_button = TRUE,
                           previous_button = TRUE,
@@ -182,15 +186,19 @@ page_freetext <- function(page_id,
         textInput(
           paste0(page$page_id, "_text"),
           NULL,
-          value = get_question_data(session = session, page_id=page$page_id, key = "response_text"),
+          value = get_question_data(session = session, page_id = page$page_id, key = "response_text"),
           width = "80%"
         ),
         br(),
         if (no_answer_checkbox) {
           checkboxInput(
             paste0(page$page_id, "_chk_no_answer"),
-            label = p(class = "interviewer", "*** Keine Angabe"),
-            value = get_question_data(session = session, page_id=page$page_id, question_id = "no_answer", key = "response_id"),
+            label = if (is_interview) {
+              p(class = "interviewer", "*** Keine Angabe")
+            } else {
+              p("Keine Angabe")
+            },
+            value = get_question_data(session = session, page_id = page$page_id, question_id = "no_answer", key = "response_id"),
             width = "100%"
           )
         },

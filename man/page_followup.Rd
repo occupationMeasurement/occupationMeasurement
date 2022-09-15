@@ -4,15 +4,19 @@
 \alias{page_followup}
 \title{Show potential followup questions to the user.}
 \usage{
-page_followup(index, ...)
+page_followup(index, is_interview = FALSE, ...)
 }
 \arguments{
 \item{index}{The index of the followup question (1-based).
 To show the first followup question (if there are any) use
 page_followup(index = 1), to show a potential second followup question use
 page_followup(index = 2).
-For example \code{\link[=default_questionnaire]{default_questionnaire()}} uses
+For example \code{\link[=questionnaire_web_survey]{questionnaire_web_survey()}} uses
 \verb{..., page_followup(index = 1), page_followup(index = 2), ...}}
+
+\item{is_interview}{Should the page show slightly different / additional
+instructions and answer options for an interview that is conducted by
+another person? Defaults to FALSE.}
 
 \item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }

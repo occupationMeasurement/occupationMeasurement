@@ -33,14 +33,18 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #'
 #' Here, the description of the job can be entered in an open freetext field.
 #'
+#' @param is_interview Should the page show slightly different / additional
+#'  instructions and answer options for an interview that is conducted by
+#'  another person? Defaults to FALSE.
 #' @param ... All additional parameters are passed to [new_page()]
 #'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_first_freetext <- function(...) {
+page_first_freetext <- function(is_interview = FALSE, ...) {
   page_freetext(
     page_id = "freetext_1",
+    is_interview = is_interview,
     question_text = function(session, page, ...) {
       if (session$userData$session_settings$tense == "past") {
         return("Welche berufliche T\u00e4tigkeit haben Sie in Ihrem letzten Beruf haupts\u00e4chlich ausge\u00fcbt?")
@@ -53,7 +57,7 @@ page_first_freetext <- function(...) {
     render_before = function(session, page, run_before_output, ...) {
       list(
         p(run_before_output$question_text),
-        p(class = "interviewer", "INT: Angaben des Befragten vollst\u00e4ndig eintragen. Bitte auf Rechtschreibung achten und ggf. buchstabieren lassen.")
+        if (is_interview) p(class = "interviewer", "INT: Angaben des Befragten vollst\u00e4ndig eintragen. Bitte auf Rechtschreibung achten und ggf. buchstabieren lassen.")
       )
     },
     run_after = function(session, page, input, ...) {
@@ -77,14 +81,15 @@ page_first_freetext <- function(...) {
 #'
 #' @param combine_input_with_first Should input be combined with the
 #'   previous question?
-#' @param ... All additional parameters are passed to [new_page()]
+#' @inheritParams page_first_freetext
 #'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_second_freetext <- function(combine_input_with_first = TRUE, ...) {
+page_second_freetext <- function(combine_input_with_first = TRUE, is_interview = FALSE, ...) {
   page_freetext(
     page_id = "freetext_2",
+    is_interview = is_interview,
     question_text = "Bitte beschreiben Sie mir diese berufliche T\u00e4tigkeit genau.",
     condition = function(session, page, ...) {
       # Show when there are no suggestions yet
@@ -92,14 +97,14 @@ page_second_freetext <- function(combine_input_with_first = TRUE, ...) {
     },
     run_after = function(session, page, input, ...) {
       text <- get_question_data(
-        session =  session,
+        session = session,
         page_id = page$page_id,
         key = "response_text"
       )
       if (combine_input_with_first) {
         # Combine answer texts from first and second question
         text_from_first_question <- get_question_data(
-          session =  session,
+          session = session,
           page_id = "freetext_1",
           key = "response_text",
           default = ""
@@ -121,12 +126,12 @@ page_second_freetext <- function(combine_input_with_first = TRUE, ...) {
 
 #' Display the generated suggestions for the user to pick one.
 #'
-#' @param ... All additional parameters are passed to [new_page()]
+#' @inheritParams page_first_freetext
 #'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_select_suggestion <- function(...) {
+page_select_suggestion <- function(is_interview = FALSE, ...) {
   new_page(
     page_id = "select_suggestion",
     condition = function(session, page, ...) {
@@ -169,7 +174,7 @@ page_select_suggestion <- function(...) {
         # Generate the html of the choices themselves
         if (session$userData$session_settings$extra_instructions == "off") {
           # Don't include extra interviewer information
-          style_interviewer_instructions <- "display: none" # Interviewerhinweise ausblenden
+          style_is_interview <- "display: none" # Interviewerhinweise ausblenden
           platzhalter <- ""
 
           suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
@@ -181,7 +186,7 @@ page_select_suggestion <- function(...) {
           })
         } else {
           # Show extra information for the interviewer
-          style_interviewer_instructions <- ""
+          style_is_interview <- ""
           platzhalter <- "z.B. \u00fcbliche Aufgaben und T\u00e4tigkeiten, erforderliche Kenntnisse und Fertigkeiten"
 
           suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
@@ -200,7 +205,6 @@ page_select_suggestion <- function(...) {
         suggestions_html[[length(suggestions_html) + 1]] <- tags$div(
           p(tags$b(paste0("Oder, ", nrow(df_suggestions) + 1, "., ", question_text_other)))
         )
-        suggestions_html[[length(suggestions_html) + 1]] <- tags$div(p(class = "interviewer", "*** Keine Angabe"))
       }
 
       # TODO: Encode this somewhere else / don't handle this via suggestion_type
@@ -219,7 +223,13 @@ page_select_suggestion <- function(...) {
           textInput("text_none_selected", label = "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau.", placeholder = "z.B. \u00fcbliche Aufgaben und T\u00e4tigkeiten, erforderliche Kenntnisse und Fertigkeiten", width = "800px"),
           br()
         )
-        suggestions_html[[length(suggestions_html) + 1]] <- tags$div(p(class = "interviewer", "*** Keine Angabe"))
+      }
+
+      # Add no-answer option
+      suggestions_html[[length(suggestions_html) + 1]] <- if (is_interview) {
+        tags$div(p(class = "interviewer", "*** Keine Angabe"))
+      } else {
+        tags$div(p("Keine Angabe"))
       }
 
       set_question_data(
@@ -230,7 +240,7 @@ page_select_suggestion <- function(...) {
 
       return(list(
         transition_text = transition_text,
-        style_interviewer_instructions = style_interviewer_instructions,
+        style_is_interview = style_is_interview,
         suggestions_html = suggestions_html,
         df_suggestions = df_suggestions
       ))
@@ -242,20 +252,27 @@ page_select_suggestion <- function(...) {
       list(
         div(
           class = "question",
-          div(p(class = "interviewer", "Vorschl\u00e4ge beruhen auf der Eingabe:")), # style="display:inline-block", als div-Attribut w\u00fcrde beides nebeneinander anzeigen (aber im IE11 auch leicht versetzt \u00fcbereinander)
           div(
-            style = "display:inline-block; width:600px",
-            textInput(
-              "previous-input",
-              label = NULL,
-              value = session$userData$user_info$text_for_suggestion,
-              width = "100%"
+            class = if (is_interview) c("secondary", "interviewer") else "secondary",
+            div(p("Vorschl\u00e4ge beruhen auf der Eingabe:")),
+            div(
+              style = "display:inline-block; width:600px",
+              textInput(
+                "previous-input",
+                label = NULL,
+                value = session$userData$user_info$text_for_suggestion,
+                width = "100%"
+              )
             )
           ),
           p(run_before_output$transition_text),
           p(get_question_data(session = session, page_id = page$page_id, key = "question_text")),
-          p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
-          p(class = "interviewer", style = run_before_output$style_interviewer_instructions, "INT: Auslassen von v\u00f6llig unpassenden Vorschl\u00e4gen ist erlaubt.")
+          if (is_interview) {
+            list(
+              p(class = "interviewer", style = run_before_output$style_is_interview, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
+              p(class = "interviewer", style = run_before_output$style_is_interview, "INT: Auslassen von v\u00f6llig unpassenden Vorschl\u00e4gen ist erlaubt.")
+            )
+          }
         ),
         radioButtons("question1", NULL,
           width = "100%",
@@ -338,10 +355,21 @@ page_select_suggestion <- function(...) {
   )
 }
 
-page_none_selected_freetext <- function() {
+#' An additional freetext page to show when no suggestion has been selected.
+#'
+#' @inheritParams page_first_freetext
+#'
+#' @return A page object.
+#' @seealso [new_page()]
+#' @export
+page_none_selected_freetext <- function(is_interview = FALSE) {
   page_freetext(
     page_id = "none_selected_freetext",
-    question_text = "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau.",
+    question_text = if (is_interview) {
+      "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau."
+    } else {
+      "Bitte beschreiben Sie diese T\u00e4tigkeit genau."
+    },
     # Only show this page when none of the suggestions has been picked
     condition = function(session, page, ...) {
       selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
@@ -366,14 +394,14 @@ page_none_selected_freetext <- function() {
 #'   To show the first followup question (if there are any) use
 #'   page_followup(index = 1), to show a potential second followup question use
 #'   page_followup(index = 2).
-#'   For example [default_questionnaire()] uses
+#'   For example [questionnaire_web_survey()] uses
 #'   `..., page_followup(index = 1), page_followup(index = 2), ...`
-#' @param ... All additional parameters are passed to [new_page()]
+#' @inheritParams page_first_freetext
 #'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_followup <- function(index, ...) { # 1 based because R (sigh)
+page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because R (sigh)
   new_page(
     page_id = paste0("followup_", index),
     condition = function(session, page, ...) {
@@ -393,7 +421,7 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
           # Retrieve the selected previous answer
           previous_question <- session$userData$followup_questions[[previous_index]]
           previous_answer_id <- get_question_data(
-            session =  session,
+            session = session,
             page_id = paste0("followup_", previous_index),
             key = "response_id"
           )
@@ -429,12 +457,14 @@ page_followup <- function(index, ...) { # 1 based because R (sigh)
       })
       answer_options_values <- as.list(question$answers$answer_id)
 
-      answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Verweigert"))))
-      answer_options_values <- append(answer_options_values, "97")
-      answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Wei\u00df nicht"))))
-      answer_options_values <- append(answer_options_values, "98")
-      answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Nicht sinnvoll beantwortbar"))))
-      answer_options_values <- append(answer_options_values, "90")
+      if (is_interview) {
+        answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Verweigert"))))
+        answer_options_values <- append(answer_options_values, "97")
+        answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Wei\u00df nicht"))))
+        answer_options_values <- append(answer_options_values, "98")
+        answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Nicht sinnvoll beantwortbar"))))
+        answer_options_values <- append(answer_options_values, "90")
+      }
 
       return(list(
         question = question,

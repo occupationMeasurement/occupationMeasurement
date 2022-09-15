@@ -7,6 +7,7 @@
 page_freetext(
   page_id,
   question_text = "Please enter your answer in the box below",
+  is_interview = FALSE,
   no_answer_checkbox = TRUE,
   next_button = TRUE,
   previous_button = TRUE,
@@ -22,6 +23,10 @@ page_freetext(
 \item{question_text}{The question / text to display.
 This can be either a string, which will simply be displayed or a function
 to dynamically determine the question_text.}
+
+\item{is_interview}{Should the page show slightly different / additional
+instructions and answer options for an interview that is conducted by
+another person? Defaults to FALSE.}
 
 \item{no_answer_checkbox}{Whether to provide a checkbox to denote that no
 answer has been provided.}

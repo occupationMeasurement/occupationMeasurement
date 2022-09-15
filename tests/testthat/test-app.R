@@ -67,7 +67,7 @@ test_that("E2E: test case Koch", {
 
   app <- AppDriver$new(
     app_dir = app(
-      questionnaire = demo_questionnaire(),
+      questionnaire = questionnaire_demo(),
       app_settings = create_app_settings(
         require_id = TRUE,
         save_to_file = TRUE,
@@ -230,6 +230,7 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
         # Don't write data from test to disk
         save_to_file = FALSE
       ),
+      questionnaire = questionnaire_guided_interview(),
       resource_dir = file.path("..", "..", "inst", "www")
     ),
     name = "test_2_textiltechniker",

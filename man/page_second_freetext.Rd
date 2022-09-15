@@ -4,11 +4,19 @@
 \alias{page_second_freetext}
 \title{An optional, second free text question if the first didn't yield suggestions.}
 \usage{
-page_second_freetext(combine_input_with_first = TRUE, ...)
+page_second_freetext(
+  combine_input_with_first = TRUE,
+  is_interview = FALSE,
+  ...
+)
 }
 \arguments{
 \item{combine_input_with_first}{Should input be combined with the
 previous question?}
+
+\item{is_interview}{Should the page show slightly different / additional
+instructions and answer options for an interview that is conducted by
+another person? Defaults to FALSE.}
 
 \item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }

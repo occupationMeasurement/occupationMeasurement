@@ -5,7 +5,7 @@
 \title{Start the interactive shiny occupation coding app.}
 \usage{
 app(
-  questionnaire = default_questionnaire(),
+  questionnaire = questionnaire_web_survey(),
   app_settings = create_app_settings(),
   css_file = NULL,
   resource_dir = system.file("www", package = "occupationMeasurement"),
@@ -14,7 +14,7 @@ app(
 }
 \arguments{
 \item{questionnaire}{The questionnaire to load.
-(Defaults to the questionnaire returned by \link{default_questionnaire}().)}
+(Defaults to the questionnaire returned by \link{questionnaire_web_survey}().)}
 
 \item{app_settings}{The app_settings to use. Check the documentation for
 create_app_settings to learn about the options.}
@@ -44,5 +44,5 @@ app(
 }
 }
 \seealso{
-default_questionnaire
+questionnaire_web_survey
 }

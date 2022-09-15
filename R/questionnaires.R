@@ -1,25 +1,26 @@
-#' The basic default questionnaire
+#' A web survey which participants can navigate themselves.
 #'
-#' View the function's code itself to see the used pages.
+#' The basic default questionnaire. View the function's code to see the
+#' used pages.
 #'
-#' @return Default questionnaire.
+#' @return A questionnaire for [app()] i.e. a list of pages.
 #'
 #' @export
 #'
 #' @examples
 #' library(occupationMeasurement)
 #'
-#' # Inspect the code to create the default_questionnaire
-#' print(default_questionnaire)
+#' # Inspect the code to create the questionnaire_web_survey
+#' print(questionnaire_web_survey)
 #'
 #' \dontrun{
-#' # Run the app with the default_questionnaire
-#' app(questionnaire = default_questionnaire())
+#' # Run the app with the questionnaire_web_survey
+#' app(questionnaire = questionnaire_web_survey())
 #'
 #' # This is used by default within app
 #' app()
 #' }
-default_questionnaire <- function() {
+questionnaire_web_survey <- function() {
   list(
     page_welcome(),
     page_first_freetext(),
@@ -33,31 +34,62 @@ default_questionnaire <- function() {
   )
 }
 
-#' A demo questionnaire with additional explanations
+
+#' A guided interview where an interviewer asks questions to an interviewee.
 #'
-#' View the function's code itself to see the used pages.
-#' Note, that this function has more complex code to show
-#' the additional pages.
+#' View the function's code to see the used pages.
 #'
-#' @return Default questionnaire.
+#' @return A questionnaire for [app()] i.e. a list of pages.
 #'
 #' @export
 #'
 #' @examples
 #' library(occupationMeasurement)
 #'
-#' # Inspect the code to create the demo_questionnaire
-#' print(demo_questionnaire)
+#' # Inspect the code to create the questionnaire_guided_interview
+#' print(questionnaire_guided_interview)
 #'
 #' \dontrun{
-#' # Run the app with the demo_questionnaire
-#' app(questionnaire = demo_questionnaire())
+#' # Run the app with the questionnaire_guided_interview
+#' app(questionnaire = questionnaire_guided_interview())
+#' }
+questionnaire_guided_interview <- function() {
+  list(
+    page_welcome(),
+    page_first_freetext(is_interview = TRUE),
+    page_second_freetext(is_interview = TRUE),
+    page_select_suggestion(is_interview = TRUE),
+    page_none_selected_freetext(is_interview = TRUE),
+    page_followup(1, is_interview = TRUE),
+    page_followup(2, is_interview = TRUE),
+    page_results(),
+    page_final()
+  )
+}
+
+#' A demo questionnaire with additional explanations
 #'
-#' # This is used by default within demo_app
-#' demo_app()
+#' View the function's code itself to see the used pages.
+#'
+#' Note, that this function has more complex code to create
+#' the additional pages.
+#'
+#' @return A questionnaire for [app()] i.e. a list of pages.
+#'
+#' @export
+#'
+#' @examples
+#' library(occupationMeasurement)
+#'
+#' # Inspect the code to create the questionnaire_demo
+#' print(questionnaire_demo)
+#'
+#' \dontrun{
+#' # Run the app with the questionnaire_demo
+#' app(questionnaire = questionnaire_demo())
 #' }
 #'
-demo_questionnaire <- function() {
+questionnaire_demo <- function() {
   list(
     page_welcome(
       title = "Herzlich Willkommen zum Demo-Modul zur automatischen Berufskodierung!",

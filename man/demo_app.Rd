@@ -13,8 +13,8 @@ demo_app(...)
 A shiny app.
 }
 \description{
-This the same as \link{app}, using the \link{demo_questionnaire} instead
-of the \link{default_questionnaire}.
+This the same as \link{app}, using the \link{questionnaire_demo} instead
+of the \link{questionnaire_web_survey}.
 }
 \examples{
 \dontrun{
@@ -22,5 +22,5 @@ demo_app()
 }
 }
 \seealso{
-app, demo_questionnaire
+app, questionnaire_demo
 }

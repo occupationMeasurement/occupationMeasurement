@@ -1,13 +1,13 @@
-#previous-input {
-  color: #ba0000;
-}
-
 .interviewer {
   color: #ba0000;
 }
 
 .read-on-demand {
   color: #005f00;
+}
+
+.secondary {
+  opacity: 0.7;
 }
 
 .h1,

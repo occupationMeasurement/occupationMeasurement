@@ -14,7 +14,7 @@ reference:
     Pre-built questionnaires for use within the interactive app. These can be
     extended using pages.
 - contents:
-  - ends_with("questionnaire")
+  - starts_with("questionnaire")
 - subtitle: Page
   desc: >
     Functions to create pages to either extend the existing questionnaires

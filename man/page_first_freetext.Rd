@@ -4,9 +4,13 @@
 \alias{page_first_freetext}
 \title{The first freetext question to show.}
 \usage{
-page_first_freetext(...)
+page_first_freetext(is_interview = FALSE, ...)
 }
 \arguments{
+\item{is_interview}{Should the page show slightly different / additional
+instructions and answer options for an interview that is conducted by
+another person? Defaults to FALSE.}
+
 \item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{

@@ -109,7 +109,7 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #' Start the interactive shiny occupation coding app.
 #'
 #' @param questionnaire The questionnaire to load.
-#'   (Defaults to the questionnaire returned by \link{default_questionnaire}().)
+#'   (Defaults to the questionnaire returned by \link{questionnaire_web_survey}().)
 #' @param app_settings The app_settings to use. Check the documentation for
 #'   create_app_settings to learn about the options.
 #' @param css_file Path to a CSS file to be included in the app.
@@ -120,7 +120,7 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #' @param ... Any additional parameters will be forwarded to shiny::shinyApp().
 #'
 #' @return A shiny app.
-#' @seealso default_questionnaire
+#' @seealso questionnaire_web_survey
 #' @export
 #'
 #' @examples
@@ -131,7 +131,7 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #'   )
 #' )
 #' }
-app <- function(questionnaire = default_questionnaire(),
+app <- function(questionnaire = questionnaire_web_survey(),
                 app_settings = create_app_settings(),
                 css_file = NULL,
                 resource_dir = system.file("www", package = "occupationMeasurement"),
@@ -318,12 +318,12 @@ app <- function(questionnaire = default_questionnaire(),
 
 #' Run a demo version of the interactive app with additional explanations.
 #'
-#' This the same as \link{app}, using the \link{demo_questionnaire} instead
-#' of the \link{default_questionnaire}.
+#' This the same as \link{app}, using the \link{questionnaire_demo} instead
+#' of the \link{questionnaire_web_survey}.
 #'
 #' @param ... All paramaters will be passed on to \link{app}
 #'
-#' @seealso app, demo_questionnaire
+#' @seealso app, questionnaire_demo
 #' @return A shiny app.
 #' @export
 #'
@@ -332,5 +332,5 @@ app <- function(questionnaire = default_questionnaire(),
 #' demo_app()
 #' }
 demo_app <- function(...) {
-  app(questionnaire = demo_questionnaire(), ...)
+  app(questionnaire = questionnaire_demo(), ...)
 }

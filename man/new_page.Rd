@@ -74,7 +74,7 @@ one_page_questionnaire <- list(
   new_page(
     page_id = "example",
     render = function(session, run_before_output, ...) {
-     shiny::tags$h1("My test page")
+      shiny::tags$h1("My test page")
     }
   )
 )

@@ -6,7 +6,6 @@ reference:
 - contents:
   - app
   - create_app_settings
-  - demo_app
   - api
 - title: Questionnaires
 - subtitle: Pre-Built

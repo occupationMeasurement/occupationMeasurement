@@ -315,22 +315,3 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
   return(shiny_app)
 }
-
-#' Run a demo version of the interactive app with additional explanations.
-#'
-#' This the same as \link{app}, using the \link{questionnaire_demo} instead
-#' of the \link{questionnaire_web_survey}.
-#'
-#' @param ... All paramaters will be passed on to \link{app}
-#'
-#' @seealso app, questionnaire_demo
-#' @return A shiny app.
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' demo_app()
-#' }
-demo_app <- function(...) {
-  app(questionnaire = questionnaire_demo(), ...)
-}

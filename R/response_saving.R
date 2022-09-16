@@ -220,8 +220,16 @@ save_results_overview <- function(session) {
   save_data("results_overview", final_data, session)
 }
 
-# Convenience function to load all results_overviews
-get_data <- function(app_settings = create_app_settings()) {
+#' Convenience function to aggregate all saved results_overview files.
+#'
+#' Expects data to be saved as files.
+#'
+#' @param app_settings The app_settings configuration, should be the same as
+#'   used in [app()].
+#'
+#' @return A combined data.table of user data (based on results_overview).
+#' @export
+get_responses <- function(app_settings = create_app_settings()) {
   # Note: This has to match with the pattern of filenames specified in save_data_on_disk
   files_to_read <- list.files(app_settings$response_output_dir, pattern = "_results_overview\\..*\\.csv$", full.names = T)
 

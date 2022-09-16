@@ -419,7 +419,7 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, sugges
 # based on the excludes (orig. "Ausschluss") column from the KldB
 add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
-  score <- pred.code <- kldb_id <- title <- excludes <- NULL
+  score <- pred.code <- kldb_id <- title <- excludes <- level <- NULL
 
   kldb_10 <- get_data("kldb", user_provided_data = suggestion_type_options$datasets)
   kldb_10_lvl_3 <- kldb_10[level == 3]

@@ -18,7 +18,7 @@ train_similarity_based_reasoning(
 )
 }
 \arguments{
-\item{anonymized_data}{\code{\link{surveyCountsSubstringSimilarity}} or \code{\link{surveyCountsWordwiseSimilarity}}}
+\item{anonymized_data}{\code{surveyCountsSubstringSimilarity} or \code{surveyCountsWordwiseSimilarity}}
 
 \item{num_allowed_codes}{the number of allowed codes in the target classification. There are 1286 categories in the KldB 2010 plus 5 special codes in both anonymized training data sets, so the default value is 1291.}
 

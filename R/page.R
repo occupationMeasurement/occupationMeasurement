@@ -144,7 +144,10 @@ execute_run_after <- function(page, session, input, ...) {
   if (session$userData$app_settings$verbose) {
     cat(
       "Page data for", page$page_id, ":",
-      paste(capture.output(str(get_page_data(session = session, page_id = page$page_id))), collapse = "\n"),
+      get_page_data(session = session, page_id = page$page_id) |>
+        utils::str() |>
+        utils::capture.output() |>
+        paste(collapse = "\n"),
       "\n"
     )
   }

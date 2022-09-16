@@ -23,7 +23,7 @@ Replace some common characters / character sequences
 punctuation, empty spaces and the word "Diplom".
 }
 \details{
-\link{charToRaw} or \link{stringi::stri_escape_unicode} helps to find UTF-8 characters.
+\code{\link[=charToRaw]{charToRaw()}} or \code{\link[stringi:stri_escape_unicode]{stringi::stri_escape_unicode()}} helps to find UTF-8 characters.
 }
 \examples{
 preprocess_string(c(

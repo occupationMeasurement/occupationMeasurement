@@ -159,9 +159,15 @@ create_app_settings_from_env <- function(verbose = FALSE) {
   if (verbose) {
     paste(
       "Detected variables:",
-      app_settings_params_from_env |> print() |> capture.output() |> paste(collapse = "\n"),
+      app_settings_params_from_env |>
+        print() |>
+        utils::capture.output() |>
+        paste(collapse = "\n"),
       "List of supported environment variables:",
-      possible_params |> print() |> capture.output() |> paste(collapse = "\n"),
+      possible_params |>
+        print() |>
+        utils::capture.output() |>
+        paste(collapse = "\n"),
       "Check ?occupationMeasurement::create_app_settings for explanations.",
       sep = "\n"
     ) |>

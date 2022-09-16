@@ -2,7 +2,7 @@
 #'
 #' This function requires the mvtnorm package.
 #'
-#' @param anonymized_data \code{\link{surveyCountsSubstringSimilarity}} or \code{\link{surveyCountsWordwiseSimilarity}}
+#' @param anonymized_data \code{surveyCountsSubstringSimilarity} or \code{surveyCountsWordwiseSimilarity}
 #' @param num_allowed_codes the number of allowed codes in the target classification. There are 1286 categories in the KldB 2010 plus 5 special codes in both anonymized training data sets, so the default value is 1291.
 #' @param coding_index_w_codes a data.table with columns
 #' \describe{

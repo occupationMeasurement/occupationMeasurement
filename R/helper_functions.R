@@ -4,7 +4,7 @@
 #' (e.g., Ä, Ü, "DIPL.-ING.") with their uppercase equivalents and removes
 #' punctuation, empty spaces and the word "Diplom".
 #'
-#' \link{charToRaw} or \link{stringi::stri_escape_unicode} helps to find UTF-8 characters.
+#' [charToRaw()] or [stringi::stri_escape_unicode()] helps to find UTF-8 characters.
 #'
 #' @encoding UTF-8
 #'

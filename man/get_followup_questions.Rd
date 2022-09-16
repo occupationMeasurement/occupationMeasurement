@@ -8,7 +8,7 @@ get_followup_questions(
   suggestion_id,
   tense = "present",
   suggestion_type = "auxco",
-  auxco = occupationMeasurement::auxco
+  suggestion_type_options = list()
 )
 }
 \arguments{
@@ -20,8 +20,12 @@ this can be "present" or "past". Defaults to "present".}
 \item{suggestion_type}{Which suggestion type is being used.
 Only auxco-based suggestion_types are supported.}
 
-\item{auxco}{Auxliary Classification (AuxCo) dataset to be used,
-defaults to the one bundled with the package.}
+\item{suggestion_type_options}{A list with options for generating
+suggestions. Supported options:
+- \code{datasets}: Pass specific datasets to be used whenn adding information
+to predictions e.g. use a specific version of the kldb or auxco.
+Supported datasets are: "auxco", "kldb". By default the datasets
+bundled with this package are used.}
 }
 \value{
 List of followup questions and their answer options.

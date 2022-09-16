@@ -8,7 +8,8 @@ get_final_codes(
   suggestion_id,
   followup_answers,
   code_type = c("isco_08", "kldb_10"),
-  suggestion_type = "auxco"
+  suggestion_type = "auxco",
+  suggestion_type_options = list()
 )
 }
 \arguments{
@@ -25,6 +26,13 @@ Defaults to "isco_08" and "kldb_10".}
 
 \item{suggestion_type}{Which suggestion type is being used.
 Only auxco-based suggestion_types are supported.}
+
+\item{suggestion_type_options}{A list with options for generating
+suggestions. Supported options:
+- \code{datasets}: Pass specific datasets to be used whenn adding information
+to predictions e.g. use a specific version of the kldb or auxco.
+Supported datasets are: "auxco", "kldb". By default the datasets
+bundled with this package are used.}
 }
 \value{
 A named list corresponding to the code_type(s) specified.

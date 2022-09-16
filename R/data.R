@@ -302,5 +302,26 @@ load_kldb <- function() {
   return(kldb_data)
 }
 
-kldb_10 <- load_kldb()
-kldb_10_lvl_3 <- kldb_10[level == 3]
+#' Load a standard dataset, while supporting overriding by the user.
+#'
+#' @param dataset_name Name of the dataset. Currently supported values are
+#'   "auxco", "kldb", "isco"
+#' @param user_provided_data List of datasets provided by the user.
+#'
+#' @return The requested dataset.
+#' @keywords internal
+get_data <- function(dataset_name, user_provided_data = list()) {
+  # Allow the user to overwrite data
+  if (dataset_name %in% user_provided_data) {
+    return(user_provided_data[[dataset_name]])
+  }
+
+  # Provide default data elsewise
+  if (dataset_name == "auxco") {
+    return(occupationMeasurement::auxco)
+  } else if (dataset_name == "kldb") {
+    return(load_kldb())
+  } else if (dataset_name == "isco") {
+    return(isco_08_en)
+  }
+}

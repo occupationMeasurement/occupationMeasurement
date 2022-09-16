@@ -4,11 +4,22 @@
 \alias{get_suggestion_info}
 \title{Get additional information for a suggestion id.}
 \usage{
-get_suggestion_info(suggestion_ids, suggestion_type = "auxco")
+get_suggestion_info(
+  suggestion_ids,
+  suggestion_type = "auxco",
+  suggestion_type_options = list()
+)
 }
 \arguments{
 \item{suggestion_type}{Which suggestion type is being used.
 Only auxco-based suggestion_types are supported.}
+
+\item{suggestion_type_options}{A list with options for generating
+suggestions. Supported options:
+- \code{datasets}: Pass specific datasets to be used whenn adding information
+to predictions e.g. use a specific version of the kldb or auxco.
+Supported datasets are: "auxco", "kldb". By default the datasets
+bundled with this package are used.}
 
 \item{suggestion_id}{Suggestion id(s) to retrieve information for.
 This should typically be a character vector.}

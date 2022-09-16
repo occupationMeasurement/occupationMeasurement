@@ -355,22 +355,14 @@ convert_suggestions <- function(suggestions, from, to, suggestion_type_options =
   if (from == "kldb") {
     # Convert from kldb to kldb (i.e. just add some extra information to suggestions)
     if (to == "kldb") {
-      if (!is.null(suggestion_type_options$datasets$kldb)) {
-        kldb <- suggestion_type_options$datasets$kldb
-      } else {
-        kldb <- load_kldb()
-      }
+      kldb <- get_data("kldb", user_provided_data = suggestion_type_options$datasets)
 
       # Merge with kldb information
       joined_suggestions <- merge(kldb, suggestions, by.x = "kldb_id", by.y = "pred.code")
 
       return(joined_suggestions)
     } else if (to == "auxco") {
-      if (!is.null(suggestion_type_options$datasets$auxco)) {
-        auxco <- suggestion_type_options$datasets$auxco
-      } else {
-        auxco <- occupationMeasurement::auxco
-      }
+      auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
 
       # Merge with auxco information
       joined_suggestions <- merge(auxco$mapping_from_kldb, suggestions, by.x = "kldb_id", by.y = "pred.code")
@@ -388,9 +380,11 @@ convert_suggestions <- function(suggestions, from, to, suggestion_type_options =
 
 # Also show distinctions to highly similar categories,
 # based on the auxiliary classification
-add_distinctions_auxco <- function(previous_suggestions, num_suggestions, auxco = occupationMeasurement::auxco) {
+add_distinctions_auxco <- function(previous_suggestions, num_suggestions, suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   score <- order_indicator <- similarity <- auxco_id <- similar_auxco_id <- NULL
+
+  auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
 
   # if a category has high probability to be correct (> 0.6, value is made-up!) add all abgrenzungen (with similarity = high)
   # preliminary analysis with turtle data suggests that the exact value for the treshold (0.6) and the inserted probability (0.1) has basically no influence. Maybe a smaller threshold would be preferable? Set to 0.3 for testing (looks like a small threshold is most promising if we show many 7 answer options, larger thresholds around 0.7 seem better if we show at most four answer options)
@@ -423,9 +417,12 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, auxco 
 
 # Also show distinctions to highly similar categories,
 # based on the excludes (orig. "Ausschluss") column from the KldB
-add_distinctions_kldb <- function(previous_suggestions, num_suggestions) {
+add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   score <- pred.code <- kldb_id <- title <- excludes <- NULL
+
+  kldb_10 <- get_data("kldb", user_provided_data = suggestion_type_options$datasets)
+  kldb_10_lvl_3 <- kldb_10[level == 3]
 
   three_digit_codes <- previous_suggestions[, list(score = sum(score)), by = list(code = substr(pred.code, 1, 3))]
 
@@ -456,20 +453,22 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions) {
 #'   this can be "present" or "past". Defaults to "present".
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
-#' @param auxco Auxliary Classification (AuxCo) dataset to be used,
-#'   defaults to the one bundled with the package.
 #' @return List of followup questions and their answer options.
 #' @export
+#'
+#' @inheritParams get_job_suggestions
 #'
 #' @examples
 #' # Get followup questions for "Post- und Zustelldienste"
 #' get_followup_questions("1004")
-get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco", auxco = occupationMeasurement::auxco) {
+get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco", suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- question_id <- auxco_id <- NULL
 
   # Follow-up questions only work with auxco
   stopifnot(suggestion_type == "auxco")
+
+  auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
 
   all_question_entries <- auxco$followup_questions
 
@@ -535,16 +534,21 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' @keywords internal
 #' @export
 #'
+#' @inheritParams get_job_suggestions
+#'
 #' @examples
 #' get_suggestion_info("9079")
 get_suggestion_info <- function(suggestion_ids,
-                                suggestion_type = "auxco") {
+                                suggestion_type = "auxco",
+                                suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   auxco_id <- NULL
 
   if (suggestion_type == "auxco") {
-    # Add additional information
-    categories <- data.table::as.data.table(occupationMeasurement::auxco$categories)
+    auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+
+    # Return relevant category entries
+    categories <- data.table::as.data.table(auxco$categories)
     return(categories[auxco_id %in% suggestion_ids])
   } else if (suggestion_type == "kldb") {
     # TODO: Add some info from kldb_10
@@ -565,6 +569,8 @@ get_suggestion_info <- function(suggestion_ids,
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
 #'
+#' @inheritParams get_job_suggestions
+#'
 #' @return A named list corresponding to the code_type(s) specified.
 #' @export
 #'
@@ -577,12 +583,16 @@ get_suggestion_info <- function(suggestion_ids,
 #'     "Q9079_1" = 1
 #'   )
 #' )
-get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco") {
+get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco", suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- auxco_id <- NULL
 
+  stopifnot(suggestion_type == "auxco")
+
+  auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+
   followup_questions <- get_followup_questions(suggestion_id = suggestion_id, suggestion_type = suggestion_type)
-  aggregated_answer_encodings <- occupationMeasurement::auxco$followup_questions[
+  aggregated_answer_encodings <- auxco$followup_questions[
     entry_type == "aggregated_answer_encoding" & auxco_id == suggestion_id,
   ]
 
@@ -590,9 +600,6 @@ get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco
   if (length(followup_answers) > 0 && !is.character(names(followup_answers))) {
     stop("followup_answers need to be supplied as a named list, with question_ids as names")
   }
-
-  # TODO: Verify whether an early stop was actually justified here?
-  # TODO: Early stops need to be implemented in the first place
 
   if (nrow(aggregated_answer_encodings) > 0 && length(followup_answers) > 0) {
     # Parse the strings of ids and answers e.g. 1749_1=1&1749_2=1

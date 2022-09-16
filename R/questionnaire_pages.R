@@ -602,6 +602,7 @@ page_results <- function(...) {
     },
     render = function(session, page, run_before_output, ...) {
       res <- run_before_output$res
+      kldb_10 <- get_data("kldb")
 
       list(
         h2("Ergebnis\u00fcberblick"),

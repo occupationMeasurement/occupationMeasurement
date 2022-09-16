@@ -62,12 +62,23 @@ page_first_freetext <- function(is_interview = FALSE, ...) {
     },
     run_after = function(session, page, input, ...) {
       text <- get_question_data(session = session, page_id = page$page_id, key = "response_text")
-      automatic_suggestions <- get_job_suggestions(
+      session$userData$user_info$text_for_suggestion <- text
+
+      # Generate Job Suggestions
+      # (in a configurable fashion)
+      job_suggestion_parameters <- list(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
         num_suggestions = session$userData$session_settings$num_suggestions
       )
-      session$userData$user_info$text_for_suggestion <- text
+      # Merge with parameters from app_settings if provided
+      if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
+        utils::modifyList(
+          job_suggestion_parameters,
+          session$userData$session_settings$get_job_suggestion_params
+        )
+      }
+      automatic_suggestions <- do.call(get_job_suggestions, job_suggestion_parameters)
       session$userData$user_info$list_suggestions <- automatic_suggestions
     },
     ...
@@ -111,13 +122,23 @@ page_second_freetext <- function(combine_input_with_first = TRUE, is_interview =
         )
         text <- paste(text_from_first_question, text)
       }
+      session$userData$user_info$text_for_suggestion <- text
 
-      automatic_suggestions <- get_job_suggestions(
+      # Generate Job Suggestions
+      # (in a configurable fashion)
+      job_suggestion_parameters <- list(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
         num_suggestions = session$userData$session_settings$num_suggestions
       )
-      session$userData$user_info$text_for_suggestion <- text
+      # Merge with parameters from app_settings if provided
+      if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
+        utils::modifyList(
+          job_suggestion_parameters,
+          session$userData$session_settings$get_job_suggestion_params
+        )
+      }
+      automatic_suggestions <- do.call(get_job_suggestions, job_suggestion_parameters)
       session$userData$user_info$list_suggestions <- automatic_suggestions
     },
     ...

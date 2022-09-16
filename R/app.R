@@ -4,7 +4,6 @@ options(stringsAsFactors = FALSE) # dont use factors in data.frames
 #' @import data.table
 NULL
 
-# TODO: Double check these before release.
 #' Create app_settings.
 #'
 #' This is the primary and most convenient way of configuring the app.
@@ -15,15 +14,18 @@ NULL
 #'   be lost upon leaving the site? Defaults to FALSE.
 #' @param skip_followup_types A vector of strings corresponding to the
 #'   question_type of followup_question that should be skipped.
-#' @param handle_data Callback function to handle data from the app.
-#'   This setting takes a function that get's passed 3 parameters:
-#'   table_name (A reference name indicating which data to save),
-#'   data (A dataframe of data to save), session (the user's current session).
 #' @param save_to_file Should responses be saved as files in
 #'   response_output_dir? Defaults to use the SAVE_TO_FILE environment variable
 #'   or TRUE if it is not set.
 #' @param response_output_dir Path to the directory in which to store data
 #'   from the app. Defaults to `./output/responses/`.
+#' @param handle_data Callback function to handle data from the app.
+#'   This setting takes a function that get's passed 3 parameters:
+#'   table_name (A reference name indicating which data to save),
+#'   data (A dataframe of data to save), session (the user's current session).
+#' @param get_job_suggestion_params List of parameters to pass to
+#'   get_job_suggestion. Refer to [get_job_suggestions()] for a list of
+#'   supported parameters.
 #' @param verbose Should additional output be printed when running?
 #'   Defaults to TRUE.
 #' @param .validate Whether the created app_settings should be validated.
@@ -43,17 +45,19 @@ create_app_settings <- function(suggestion_type = "auxco",
                                 save_to_file = TRUE,
                                 response_output_dir = file.path("output", "responses"),
                                 handle_data = NULL,
+                                get_job_suggestion_params = NULL,
                                 verbose = TRUE,
                                 .validate = TRUE) {
   final_app_settings <- list(
     suggestion_type = suggestion_type,
     require_id = require_id,
-    verbose = verbose,
     warn_before_leaving = warn_before_leaving,
+    skip_followup_types = skip_followup_types,
+    save_to_file = save_to_file,
     response_output_dir = response_output_dir,
     handle_data = handle_data,
-    save_to_file = save_to_file,
-    skip_followup_types = skip_followup_types
+    get_job_suggestion_params = get_job_suggestion_params,
+    verbose = verbose
   )
 
   if (.validate) {
@@ -81,6 +85,12 @@ validate_app_settings <- function(app_settings) {
     sum(app_settings$skip_followup_types %in% possible_followup_types) ==
       length(app_settings$skip_followup_types)
   )
+
+  if (!is.null(app_settings$get_job_suggestion_params)) {
+    if (!is.null(app_settings$get_job_suggestion_params$suggestion_type)) {
+      warning("suggestion_type should be set on the app_settings level, not in app_settings$get_job_suggestion_params")
+    }
+  }
 
   # Add warnings for odd / dangerous settings
   if (!app_settings$require_id) {

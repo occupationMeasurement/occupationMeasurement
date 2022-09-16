@@ -3,23 +3,25 @@
 \docType{data}
 \name{isco_08_en}
 \alias{isco_08_en}
-\title{Prices of 50,000 round cut diamonds.}
+\title{Categories of the The International Standard Classification of Occupations - ISCO-08}
 \format{
-A data frame with 53940 rows and 10 variables:
+A data frame with 619 rows and 3 variables:
 \describe{
-\item{price}{price, in US dollars}
-\item{carat}{weight of the diamond, in carats}
-...
+\item{\code{code}}{character. Unique ISCO-08 identifier / code.}
+\item{\code{label}}{character. Short label / title for the category.}
+\item{\code{description}}{character. Detailed description of the category.}
 }
-}
-\source{
-\url{http://www.diamondse.info/}
 }
 \usage{
 isco_08_en
 }
 \description{
-A dataset containing the prices and other attributes of almost 54,000
-diamonds.
+Subset of the ISCO categories dataset bundled with the ESCO v1.1.
+}
+\details{
+Source: https://esco.ec.europa.eu
+More information on the ISCO-08: https://isco-ilo.netlify.app/en/isco-08/
+
+This service uses the ESCO classification of the European Commission.
 }
 \keyword{datasets}

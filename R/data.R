@@ -1,18 +1,47 @@
-# TODO: Document datasets
-
-#' Prices of 50,000 round cut diamonds.
+#' Categories of the The International Standard Classification of Occupations - ISCO-08
 #'
-#' A dataset containing the prices and other attributes of almost 54,000
-#' diamonds.
+#' Subset of the ISCO categories dataset bundled with the ESCO v1.1.
 #'
-#' @format A data frame with 53940 rows and 10 variables:
+#' Source: https://esco.ec.europa.eu
+#' More information on the ISCO-08: https://isco-ilo.netlify.app/en/isco-08/
+#'
+#' This service uses the ESCO classification of the European Commission.
+#'
+#' @format A data frame with 619 rows and 3 variables:
 #' \describe{
-#'   \item{price}{price, in US dollars}
-#'   \item{carat}{weight of the diamond, in carats}
-#'   ...
+#'   \item{\code{code}}{character. Unique ISCO-08 identifier / code.}
+#'   \item{\code{label}}{character. Short label / title for the category.}
+#'   \item{\code{description}}{character. Detailed description of the category.}
 #' }
-#' @source \url{http://www.diamondse.info/}
 "isco_08_en"
+
+#' Pretrained ML models to be used with the package.
+#'
+#' @seealso algo_similarity_based_reasoning
+#' @format A nested list with pretrained machine learning models:
+#' \describe{
+#'   \item{\code{similarity_based_reasoning}}{list. Contains pretrained models to be used with [algo_similarity_based_reasoning()].}
+#'   \item{\code{similarity_based_reasoning$wordwise}}{list. Contains the pretrained model to be used for providing suggestions using full wordwise matching.}
+#'   \item{\code{similarity_based_reasoning$substring}}{list. Contains the pretrained model to be used for providing suggestions using substring matching.}
+#' }
+"pretrained_models"
+
+#' German Auxiliary Classification of Occupations (AuxCO)
+#'
+#' Berufs-Hilfsklassifikation mit Tätigkeitsbeschreibungen.
+#'
+#' Schierholz, Malte; Brenner, Lorraine; Cohausz, Lea; Damminger, Lisa; Fast, Lisa; Hörig, Ann-Kathrin; Huber, Anna-Lena; Ludwig, Theresa; Petry, Annabell; Tschischka, Laura (2018): Vorstellung einer Hilfsklassifikation mit Tätigkeitsbeschreibungen für Zwecke der Berufskodierung. (IAB-Discussion Paper, 2018), Nürnberg, 45 S. https://www.iab.de/183/section.aspx/Publikation/k180509301
+#'
+#' @seealso algo_similarity_based_reasoning
+#' @format A list with data.tables:
+#' \describe{
+#'   \item{\code{categories}}{data.table. Main list of AuxCO categories including their descriptions etc.}
+#'   \item{\code{distinctions}}{data.table. List of highly similar AuxCO categories that one may want to present to disambiguate between them.}
+#'   \item{\code{followup_questions}}{data.table. Follow-up questions to specify final codings based on AuxCO categories. Includes the questions' answer options as well as information on how to encode more complex occupations which depend on multiple answers.}
+#'   \item{\code{mapping_from_isco}}{data.table. Mapping from ISCO-08 categories to AuxCO categories.}
+#'   \item{\code{mapping_from_kldb}}{data.table. Mapping from KldB 2010 categories to AuxCO categories.}
+#' }
+"auxco"
 
 #' Load AuxCO from a directory of CSV files
 #'
@@ -32,6 +61,9 @@
 #' @export
 #' @seealso auxco
 load_auxco <- function(dir, add_explanations = TRUE) {
+  # Column names used in data.table (for R CMD CHECK)
+  task <- task_description <- NULL
+
   # Small convenience function to not re-specify parameters
   read_auxco_csv <- function(filename, ...) {
     fread(
@@ -322,6 +354,6 @@ get_data <- function(dataset_name, user_provided_data = list()) {
   } else if (dataset_name == "kldb") {
     return(load_kldb())
   } else if (dataset_name == "isco") {
-    return(isco_08_en)
+    return(occupationMeasurement::isco_08_en)
   }
 }

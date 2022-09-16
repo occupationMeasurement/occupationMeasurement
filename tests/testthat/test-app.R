@@ -65,14 +65,16 @@ debug_note <- function(...) {
 test_that("E2E: test case Koch", {
   response_dir <- withr::local_tempdir()
 
+  app_settings <- create_app_settings(
+    require_id = TRUE,
+    save_to_file = TRUE,
+    response_output_dir = response_dir
+  )
+
   app <- AppDriver$new(
     app_dir = app(
       questionnaire = questionnaire_demo(),
-      app_settings = create_app_settings(
-        require_id = TRUE,
-        save_to_file = TRUE,
-        response_output_dir = response_dir
-      ),
+      app_settings = app_settings,
       resource_dir = file.path("..", "..", "inst", "www")
     ),
     name = "test_1_koch",
@@ -186,18 +188,7 @@ test_that("E2E: test case Koch", {
   # To Output Shiny Logs in the end
   # print(app$get_logs())
 
-  # Check final data
-  overview_csv <- list.files(
-    path = response_dir,
-    pattern = "_results_overview.*\\.csv$"
-  )
-  # There should only be one results_overview file
-  testthat::expect_equal(length(overview_csv), 1)
-
-  overview_data <- data.table::fread(
-    file.path(response_dir, overview_csv),
-    colClasses = "character"
-  )
+  overview_data <- get_responses(app_settings = app_settings)
 
   testthat::expect_equal(
     overview_data,

@@ -231,10 +231,10 @@ save_results_overview <- function(session) {
 #' @export
 get_responses <- function(app_settings = create_app_settings()) {
   # Note: This has to match with the pattern of filenames specified in save_data_on_disk
-  files_to_read <- list.files(app_settings$response_output_dir, pattern = "_results_overview\\..*\\.csv$", full.names = T)
+  files_to_read <- list.files(app_settings$response_output_dir, pattern = "_results_overview.*\\.csv$", full.names = T)
 
   # Load the different result overviews
-  list_of_result_overviews <- lapply(files_to_read, fread)
+  list_of_result_overviews <- lapply(files_to_read, fread, colClasses = "character")
 
   # And stitch them together into a single one
   combined_result_overviews <- do.call(function(...) rbind(..., fill = TRUE), list_of_result_overviews)

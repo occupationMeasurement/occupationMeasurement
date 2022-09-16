@@ -13,6 +13,7 @@ library(data.table)
 
 isco_raw <- fread(
   file.path("data-raw", "ESCO dataset - v1.1.0 - classification - en - csv", "ISCOGroups_en.csv"),
+  keepLeadingZeros = TRUE,
   encoding = "UTF-8"
 )
 isco_raw$level <- nchar(isco_raw$code)

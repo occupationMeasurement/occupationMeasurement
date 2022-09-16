@@ -94,14 +94,24 @@ create_app_settings_from_env <- function(verbose = FALSE) {
     as.list() |>
     names() |>
     toupper()
+
   possible_params <- possible_params[
     !(
       # Remove parameters starting with "."
-      startsWith(".", possible_params) |
+      startsWith(possible_params, ".") |
         # Remove empty parameters
         possible_params == ""
     )
   ]
+
+  # Parameters that should be evaluated as R code
+  # This should not really be an attack vector, as if you have access to the
+  # env vars you probably also have acccess to the container itself?
+  eval_params <- c(
+    "handle_data",
+    "get_job_suggestion_params"
+  ) |>
+    toupper()
 
   # Iterate over all possible parameters and extract them if present
   app_settings_params_from_env <- list()
@@ -114,7 +124,10 @@ create_app_settings_from_env <- function(verbose = FALSE) {
     # Set value if it exists
     if (value != "") {
       # Do a crude conversion from strings to different types
-      if (value == "TRUE") {
+      if (param %in% eval_params) {
+        # Evaluate parameter as R-Code
+        value <- eval(value)
+      } else if (value == "TRUE") {
         value <- TRUE
       } else if (value == "FALSE") {
         value <- FALSE

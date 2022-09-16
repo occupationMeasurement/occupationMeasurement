@@ -16,9 +16,11 @@ There are three main ways of using this package, with varying degrees of flexibi
 2. Use the included JSON API to connect your own survey or application for maximum flexibility.
 3. Use the R functions themselves to implement your own custom functionality.
 
+For a more detailed introduction refer to the `vignette("occupationMeasurement")`.
+
 ### 1. Using the interactive Shiny App
 
-To start the interactive shiny app just run the `app` function.
+To start the interactive shiny app just run the `app()` function.
 
 ```r
 # Run the interactive shiny app
@@ -36,7 +38,7 @@ app(questionnaire = demo_questionnaire())
 
 ### 2. Using the JSON API
 
-If you want to include this package in your custom survey-tool or app or if you just need higher flexibility, you can use the included `api`.
+If you want to include this package in your custom survey-tool or app or if you just need higher flexibility, you can use the included `api()`.
 
 The api server can be started by simply running the code below (the API will open a page with additional documentation when you start it):
 

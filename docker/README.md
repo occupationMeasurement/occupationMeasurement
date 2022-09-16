@@ -6,7 +6,6 @@ Docker images can be built by running `build.sh` from the project root directory
 
 > It's also possible to use `docker compose` or `docker` directly, but please note, that the Dockerfiles expect the built R package under `docker/occupationMeasurement.tar.gz` to install it within the containers.
 
-
 ## Starting images
 
 After the images have been built using the command above, they can be started via the following commands.
@@ -14,7 +13,7 @@ After the images have been built using the command above, they can be started vi
 ```bash
 # Start the interactive shiny app
 # it can be reached at http://localhost:3838
-docker run --rm -p 3838:3838 occupation_measurement/app
+docker run --rm -p 3838:3838 -v $(pwd)/output:/srv/shiny-server/output occupation_measurement/app
 
 # Start the api
 # it can be reached at http://localhost:8000

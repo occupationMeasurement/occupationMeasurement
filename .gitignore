@@ -17,3 +17,8 @@ inst/doc
 /doc/
 /Meta/
 .vscode/
+
+.Rprofile
+.R-version
+/renv/
+renv.lock

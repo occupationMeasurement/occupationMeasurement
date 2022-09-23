@@ -33,6 +33,6 @@ get_page_data(session = session, key = "user_answer")
 }
 }
 \seealso{
-get_question_data
+\code{\link[=get_question_data]{get_question_data()}}
 }
 \keyword{internal}

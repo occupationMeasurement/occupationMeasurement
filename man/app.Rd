@@ -44,5 +44,5 @@ app(
 }
 }
 \seealso{
-questionnaire_web_survey
+\code{\link[=questionnaire_web_survey]{questionnaire_web_survey()}}
 }

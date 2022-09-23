@@ -26,6 +26,6 @@ page$set_page_data(session = session, values = list(
 }
 }
 \seealso{
-set_question_data
+\code{\link[=set_question_data]{set_question_data()}}
 }
 \keyword{internal}

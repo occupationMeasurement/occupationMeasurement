@@ -163,7 +163,7 @@ execute_run_after <- function(page, session, input, ...) {
 #' @param values A named list of values to add / overwrite in the page data.
 #'   Values are added / overwritten based on the names provided in the list.
 #'
-#' @seealso set_question_data
+#' @seealso [set_question_data()]
 #' @keywords internal
 #'
 #' @examples
@@ -197,7 +197,7 @@ set_page_data <- function(session, page_id, values) {
 #' @return The page data value at the provided key or the whole page's data
 #'   if no key is provided.
 #'
-#' @seealso get_question_data
+#' @seealso [get_question_data()]
 #' @keywords internal
 #'
 #' @examples

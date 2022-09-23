@@ -12,3 +12,8 @@ A cleaned / slimmed version of the KldB 2010.
 \description{
 Use load_kldb_raw() to load the whole dataset.
 }
+\details{
+Source: https://www.klassifikationsserver.de/klassService/index.jsp?variant=kldb2010
+
+More information on the KldB 2010: https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/KldB2010-Fassung2020/KldB2010-Fassung2020-Nav.html The KldB 2010 has been revised in 2020. These changes have not been implemented here yet.
+}

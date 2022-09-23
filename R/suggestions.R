@@ -22,7 +22,7 @@ create_document_term_matrix <- function(input) {
 #' algorithm in get_job_suggestions.
 #'
 #' @references Schierholz, M. (2019). New Methods for Job and Occupation Classification (Ph.D. Thesis). University of Mannheim.
-#' @seealso get_job_suggestions
+#' @seealso [get_job_suggestions()]
 #'
 #' @param text_processed The processed user input.
 #'   Will be provided by get_job_suggestions.

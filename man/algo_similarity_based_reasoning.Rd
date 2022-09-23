@@ -74,5 +74,5 @@ get_job_suggestions(
 Schierholz, M. (2019). New Methods for Job and Occupation Classification (Ph.D. Thesis). University of Mannheim.
 }
 \seealso{
-get_job_suggestions
+\code{\link[=get_job_suggestions]{get_job_suggestions()}}
 }

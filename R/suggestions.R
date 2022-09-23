@@ -542,7 +542,7 @@ get_suggestion_info <- function(suggestion_ids,
                                 suggestion_type = "auxco",
                                 suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
-  auxco_id <- NULL
+  auxco_id <- has_followup_questions <- NULL
 
   if (suggestion_type == "auxco") {
     auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)

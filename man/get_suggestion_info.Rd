@@ -11,6 +11,9 @@ get_suggestion_info(
 )
 }
 \arguments{
+\item{suggestion_ids}{Suggestion id(s) to retrieve information for.
+This should typically be a character vector.}
+
 \item{suggestion_type}{Which suggestion type is being used.
 Only auxco-based suggestion_types are supported.}
 
@@ -20,9 +23,6 @@ suggestions. Supported options:
 to predictions e.g. use a specific version of the kldb or auxco.
 Supported datasets are: "auxco", "kldb". By default the datasets
 bundled with this package are used.}
-
-\item{suggestion_id}{Suggestion id(s) to retrieve information for.
-This should typically be a character vector.}
 }
 \value{
 Data table with information about the suggestion.

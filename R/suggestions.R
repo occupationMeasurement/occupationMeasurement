@@ -525,7 +525,7 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' To retrieve information regarding followup questions use
 #' \link{get_followup_questions}.
 #'
-#' @param suggestion_id Suggestion id(s) to retrieve information for.
+#' @param suggestion_ids Suggestion id(s) to retrieve information for.
 #'   This should typically be a character vector.
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
@@ -549,7 +549,17 @@ get_suggestion_info <- function(suggestion_ids,
 
     # Return relevant category entries
     categories <- data.table::as.data.table(auxco$categories)
-    return(categories[auxco_id %in% suggestion_ids])
+
+    # Filter matching rows by id
+    categories <- categories[auxco_id %in% suggestion_ids]
+
+    # Add information whether this category has followup questions
+    categories[
+      ,
+      has_followup_questions := auxco_id %in% auxco$followup_questions$auxco_id
+    ]
+
+    return(categories)
   } else if (suggestion_type == "kldb") {
     # TODO: Add some info from kldb_10
     stop("Not implemented yet")

@@ -10,7 +10,8 @@
         "task_description": "z.B. Kundentermine vereinbaren; Haare nach Anweisung waschen, shampoonieren und föhnen; Frisierplätze und Waschbecken reinigen; nach Kundenwünschen Maßtoupet oder Maßperücke aus Echt- oder Kunsthaar anfertigen; Arbeitsmaterialien reinigen und bereitstellen",
         "default_kldb_id": "82312",
         "default_isco_id": "5141",
-        "kldb_title_short": "Friseurgewerbe"
+        "kldb_title_short": "Friseurgewerbe",
+        "has_followup_questions": true
       },
       {
         "auxco_id": "7086",
@@ -21,7 +22,8 @@
         "task_description": "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. Kunden beraten; im Salon praktisch mitarbeiten; Mitarbeiter fachlich unterstützen; Studioaussattung festlegen; Personaleinsatz planen und bei Aus- und Weiterbildung mitwirken; Kundenkartei und Terminkalender führen; Werbemaßnahmen durchführen",
         "default_kldb_id": "82393",
         "default_isco_id": "5142",
-        "kldb_title_short": "Körperpflege (Führungskraft)"
+        "kldb_title_short": "Körperpflege (Führungskraft)",
+        "has_followup_questions": false
       },
       {
         "auxco_id": "7085",
@@ -32,7 +34,8 @@
         "task_description": "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. Kunden hinsichtlich Haarpflege, Trendfrisuren, Typveränderung und kosmetischer Produkte beraten; Haare schneiden und färben; Mitarbeiter fachlich unterstützen; Salonaussattung festlegen; Kundenkartei und Terminkalender führen; Personaleinsatz planen und bei Aus- und Weiterbildung mitwirken",
         "default_kldb_id": "82393",
         "default_isco_id": "5141",
-        "kldb_title_short": "Körperpflege (Führungskraft)"
+        "kldb_title_short": "Körperpflege (Führungskraft)",
+        "has_followup_questions": false
       },
       {
         "auxco_id": "7087",
@@ -43,7 +46,8 @@
         "task_description": "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. Kunden beraten; bei Aufträgen praktisch mitarbeiten; Mitarbeiter fachlich unterstützen; Maskenbildnerausstattung festlegen; Personaleinsatz planen und bei Aus- und Weiterbildung mitwirken",
         "default_kldb_id": "82393",
         "default_isco_id": "5142",
-        "kldb_title_short": "Körperpflege (Führungskraft)"
+        "kldb_title_short": "Körperpflege (Führungskraft)",
+        "has_followup_questions": false
       },
       {
         "auxco_id": "6102",
@@ -54,7 +58,8 @@
         "task_description": "z.B. Kunden zu geplanten Events beraten und Angebote erstellen; für Konferenzen und Messen bei potenziellen Teilnehmern werben; Anmeldungen entgegennehmen; Räumlichkeiten, Catering, Beschilderung und Transport organisieren; Künstler engagieren und ein Programm planen",
         "default_kldb_id": "63402",
         "default_isco_id": "3332",
-        "kldb_title_short": "Veranstaltungsservice und -management"
+        "kldb_title_short": "Veranstaltungsservice und -management",
+        "has_followup_questions": true
       }
     ]
 

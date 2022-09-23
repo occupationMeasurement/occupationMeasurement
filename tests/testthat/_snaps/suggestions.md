@@ -6,7 +6,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "default_kldb_id", "default_isco_id", "kldb_title_short"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "default_kldb_id", "default_isco_id", "kldb_title_short", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -64,6 +64,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Köche/Köchinnen", "Speisenzubereitung (Führungskraft)", "Köche/Köchinnen", "Fischverarbeitung", "Gastronomieservice (ohne Spezialisierung)"]
+        },
+        {
+          "type": "logical",
+          "attributes": {},
+          "value": [true, true, false, true, false]
         }
       ]
     }
@@ -186,7 +191,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "default_kldb_id", "default_isco_id", "kldb_title_short"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "default_kldb_id", "default_isco_id", "kldb_title_short", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -244,6 +249,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Angehörige der regulären Streitkräfte in sonstigen Rängen", "Öffentliche Verwaltung (ohne Spezialisierung)", "Öffentliche Verwaltung (ohne Spezialisierung)", "Ärzte/Ärztinnen (ohne Spezialisierung)", "Fachärzte/-ärztinnen in der Anästhesiologie"]
+        },
+        {
+          "type": "logical",
+          "attributes": {},
+          "value": [true, true, false, true, false]
         }
       ]
     }

@@ -172,6 +172,10 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'   only be returned if the sum of their scores is equal to or greater than
 #'   the specified threshold. With a threshold of 0 results will always be
 #'   returned.
+#' @param implausible_suggestion_thresh A threshold between 0 and 1 (usually
+#'   very small, default 0). Results from that step will only be returned if they
+#'   are greater than the specified threshold. Allows the removal of highly implausible
+#'   suggestions.
 #' @param distinctions Whether or not to add additional distinctions to
 #'   similar occupational categories to the source code.
 #'   Defaults to TRUE.
@@ -222,6 +226,7 @@ get_job_suggestions <- function(text,
                                   simbased_wordwise = 0.535,
                                   simbased_substring = 0.002
                                 ),
+                                implausible_suggestion_thresh = 0,
                                 distinctions = TRUE,
                                 steps = list(
                                   # try similarity "one word at most 1 letter different" first
@@ -294,6 +299,9 @@ get_job_suggestions <- function(text,
       # Pick top X suggestions
       result <- utils::head(result[order(score, decreasing = TRUE)], num_suggestions)
 
+      # Remove suggestions that are most likely incorrect
+      result <- result[score > implausible_suggestion_threshold]
+
       threshold <- score_thresholds[[step_name]]
       if (is.null(threshold) || sum(result$score) >= threshold) {
         # Stop running through algorithms if we get good enough results
@@ -301,6 +309,9 @@ get_job_suggestions <- function(text,
       }
     }
   }
+
+  # Catch possible errors
+  if (nrow(result) == 0) result <- NULL
 
   # Handle suggestions / results
   if (!is.null(result)) {
@@ -395,6 +406,9 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, sugges
 
   auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
 
+  # Make sure highly improbable suggestions are shown at the end (we may even want to remove them)
+  previous_suggestions <- previous_suggestions[score < 0.005, order_indicator := 0L]
+
   # if a category has high probability to be correct (> 0.6, value is made-up!) add all abgrenzungen (with similarity = high)
   # preliminary analysis with turtle data suggests that the exact value for the treshold (0.6) and the inserted probability (0.1) has basically no influence. Maybe a smaller threshold would be preferable? Set to 0.3 for testing (looks like a small threshold is most promising if we show many 7 answer options, larger thresholds around 0.7 seem better if we show at most four answer options)
   previous_suggestions[score > 0.5, order_indicator := 2L] # for later ordering, make sure that the most probable ID is on top and other IDs that have abgrenzung = "hoch" are next to it
@@ -411,7 +425,7 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, sugges
     fill = TRUE
   )
   very_similar_distinctions[is.na(score), score := 0.005]
-  very_similar_distinctions[is.na(order_indicator), order_indicator := 0] # for later ordering
+  very_similar_distinctions[is.na(order_indicator), order_indicator := 0L] # for later ordering
   very_similar_distinctions <- very_similar_distinctions[, list(score = sum(score), order_indicator = max(order_indicator)), by = auxco_id]
 
   # order by score, remove duplicated auxco_ids and probabilities < 0.005 (anekdotische Evidenze: derart kleiner Wert macht Sinn bei "Buchhalterin") and return only the top 7 auxiliary category ids having highest prob

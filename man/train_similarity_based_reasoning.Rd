@@ -75,3 +75,6 @@ This function requires the mvtnorm package.
 \references{
 Schierholz, Malte (2019): New methods for job and occupation classification. Dissertation, Mannheim. \url{https://madoc.bib.uni-mannheim.de/50617/}, pp. 206-208 and p. 268, pp. 308-320
 }
+\seealso{
+\link{pretrained_models}, which were created using this function.
+}

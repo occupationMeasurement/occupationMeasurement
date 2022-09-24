@@ -1,6 +1,6 @@
 create_document_term_matrix <- function(input) {
   # create vocabulary and document term matrix from coding_index$title
-  # Warnungen abfangen wenn input der leere String "" ist?
+  # TODO: Warnungen abfangen wenn input der leere String "" ist
   # prep_fun = toupper
   tok_fun <- text2vec::word_tokenizer
   it_train <- text2vec::itoken(input,

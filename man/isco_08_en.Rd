@@ -16,12 +16,12 @@ A data frame with 619 rows and 3 variables:
 isco_08_en
 }
 \description{
-Subset of the ISCO categories dataset bundled with the ESCO v1.1.
+Categories from the International Standard Classification of Occupations - ISCO-08. ISCO-08 is a hierarchical classification, consisting of 10 (1-digit) major groups, 43 (2-digit) sub-major groups, 130 (3-digit) minor groups, and 436 (4-digit) unit groups, all of them included in this data set.
 }
 \details{
 Source: https://esco.ec.europa.eu
-More information on the ISCO-08: https://isco-ilo.netlify.app/en/isco-08/
+This service uses the ESCO classification of the European Commission. The descriptions used here are taken from the ESCO classification (v1.1, Occupations pillar) of the European Commission, which is based on ISCO-08.
 
-This service uses the ESCO classification of the European Commission.
+More information on the ISCO-08: https://isco-ilo.netlify.app/en/isco-08/, https://www.ilo.org/public/english/bureau/stat/isco/isco08/
 }
 \keyword{datasets}

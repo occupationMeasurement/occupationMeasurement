@@ -11,6 +11,29 @@ A nested list with pretrained machine learning models:
 \item{\code{similarity_based_reasoning$wordwise}}{list. Contains the pretrained model to be used for providing suggestions using full wordwise matching.}
 \item{\code{similarity_based_reasoning$substring}}{list. Contains the pretrained model to be used for providing suggestions using substring matching.}
 }
+
+This training data always predicts a 5-digit KldB code, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.
+}
+\source{
+Data from the following surveys were pooled:
+
+Antoni, M., Drasch, K., Kleinert, C., Matthes, B., Ruland, M. and Trahms, A. (2010): Arbeiten und Lernen im Wandel * Teil 1: Überblick über die Studie, FDZ-Methodenreport 05/2010, Forschungsdatenzentrum der Bundesagentur für Arbeit im Institut für Arbeitsmarkt- und Berufsforschung, Nuremberg.
+
+Rohrbach-Schmidt, D., Hall, A. (2013): BIBB/BAuA Employment Survey 2012, BIBB-FDZ Data and Methodological Reports Nr. 1/2013. Version 4.1, Federal Institute for Vocational Education and Training (Research Data Centre), Bonn.
+
+Lange, C., Finger, J., Allen, J., Born, S., Hoebel, J., Kuhnert, R., Müters, S., Thelen, J., Schmich, P., Varga, M., von der Lippe, E., Wetzstein, M., Ziese, T. (2017): Implementation of the European Health Interview Survey (EHIS) into the German Health Update (GEDA), Archives of Public Health, 75, 1–14.
+
+Hoffmann, R., Lange, M., Butschalowsky, H., Houben, R., Schmich, P., Allen, J., Kuhnert, R., Schaffrath Rosario, A., Gößwald, A. (2018): KiGGS Wave 2 Cross-Sectional Study—Participant Acquisition, Response Rates and Representativeness, Journal of Health Monitoring, 3, 78–91. (only wave 2)
+
+Trappmann, M., Beste, J., Bethmann, A., Müller, G. (2013): The PASS Panel Survey after Six Waves, Journal for Labour Market Research, 46, 275–281. (only wave 10)
+
+Job titles were taken from the following publication:
+
+Bundesagentur für Arbeit (2019). Gesamtberufsliste der Bundesagentur für Arbeit. Stand: 03.01.2019. https://download-portal.arbeitsagentur.de/files/.
+
+Basically, leaving some data anonymization steps aside, we count for each job title from the Gesamtberufsliste (and some additional titles/texts) how many responses from all surveys are similar to this job title, separately for each coded category. Similarity is calculated in two ways, implying that we obtain two different counts: SubstringSimilarity refers to situations where the job title from the Gesamtberufsliste is a substring of the verbal answer; WordwiseSimilarity refers to situations where a word from the verbal answer is identical to a job title from the Gesamtberufsliste, except that one character from this word is allowed to change (Levenshtein distance). These counts are available as two separate files in the data-raw/training-data/ directory of this package. The algorithm to create these counts is available inside an R-package at https://github.com/malsch/occupationCoding, along with further documentation.
+
+\code{\link[=train_similarity_based_reasoning]{train_similarity_based_reasoning()}} is then used to train the ML models. See data-raw/pretrained_models.R for the raw counts and further details.
 }
 \usage{
 pretrained_models
@@ -19,6 +42,6 @@ pretrained_models
 Pretrained ML models to be used with the package.
 }
 \seealso{
-algo_similarity_based_reasoning
+\code{\link[=algo_similarity_based_reasoning]{algo_similarity_based_reasoning()}}, \code{\link[=train_similarity_based_reasoning]{train_similarity_based_reasoning()}}, https://github.com/malsch/occupationCoding
 }
 \keyword{datasets}

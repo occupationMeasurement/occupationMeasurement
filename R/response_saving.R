@@ -239,5 +239,11 @@ get_responses <- function(app_settings = create_app_settings()) {
   # And stitch them together into a single one
   combined_result_overviews <- do.call(function(...) rbind(..., fill = TRUE), list_of_result_overviews)
 
+  if (any(duplicated(combined_result_overviews$user_id))) {
+    warning("There were technical problems during data collection: Multiple records were saved from a single user_id! Further data cleaning is required.")
+  }
+
+  # TODO: provide functionality to clean duplicate user_ids automatically
+
   combined_result_overviews
 }

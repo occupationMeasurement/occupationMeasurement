@@ -20,10 +20,10 @@ auxco
 \description{
 Berufs-Hilfsklassifikation mit Tätigkeitsbeschreibungen.
 }
-\details{
+\references{
 Schierholz, Malte; Brenner, Lorraine; Cohausz, Lea; Damminger, Lisa; Fast, Lisa; Hörig, Ann-Kathrin; Huber, Anna-Lena; Ludwig, Theresa; Petry, Annabell; Tschischka, Laura (2018): Vorstellung einer Hilfsklassifikation mit Tätigkeitsbeschreibungen für Zwecke der Berufskodierung. (IAB-Discussion Paper, 2018), Nürnberg, 45 S. https://www.iab.de/183/section.aspx/Publikation/k180509301
 }
 \seealso{
-algo_similarity_based_reasoning
+https://github.com/occupationMeasurement/auxiliary-classification, \code{\link[=load_auxco]{load_auxco()}}
 }
 \keyword{datasets}

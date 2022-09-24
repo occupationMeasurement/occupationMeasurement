@@ -31,6 +31,8 @@
 #'   \item{n.draws}{Number of draws from the posterior distribution to determine posterior predictive probabilities. The larger, the more precise the results will be.}
 #'   \item{check_normality}{We would like that the hyperprior distribution is normal. Set check_normality to TRUE to do some diagnostics about this.}
 #' }
+#' 
+#' @seealso [pretrained_models], which were created using this function.
 #'
 #' @references
 #' Schierholz, Malte (2019): New methods for job and occupation classification. Dissertation, Mannheim. \url{https://madoc.bib.uni-mannheim.de/50617/}, pp. 206-208 and p. 268, pp. 308-320

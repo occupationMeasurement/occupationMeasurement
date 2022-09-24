@@ -46,7 +46,7 @@
 #' 
 #' Basically, leaving some data anonymization steps aside, we count for each job title from the Gesamtberufsliste (and some additional titles/texts) how many responses from all surveys are similar to this job title, separately for each coded category. Similarity is calculated in two ways, implying that we obtain two different counts: SubstringSimilarity refers to situations where the job title from the Gesamtberufsliste is a substring of the verbal answer; WordwiseSimilarity refers to situations where a word from the verbal answer is identical to a job title from the Gesamtberufsliste, except that one character from this word is allowed to change (Levenshtein distance). These counts are available as two separate files in the data-raw/training-data/ directory of this package. The algorithm to create these counts is available inside an R-package at https://github.com/malsch/occupationCoding, along with further documentation.
 #' 
-#' [train_similarity_based_reasoning()] is then used to train the ML models. See data-raw/pretrained_models.R for details.
+#' [train_similarity_based_reasoning()] is then used to train the ML models. See data-raw/pretrained_models.R for the raw counts and further details.
 "pretrained_models"
 
 #' German Auxiliary Classification of Occupations (AuxCO)

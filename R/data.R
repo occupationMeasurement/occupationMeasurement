@@ -25,7 +25,7 @@
 #'   \item{\code{similarity_based_reasoning$substring}}{list. Contains the pretrained model to be used for providing suggestions using substring matching.}
 #' }
 #' 
-#' This training data always predicts a 5-digit KldB code, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.
+#' This training data always predicts a 5-digit code from the 2010 German Classification of Occupations, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.
 #' 
 #' @source
 #' Data from the following surveys were pooled:

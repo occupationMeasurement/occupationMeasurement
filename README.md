@@ -87,3 +87,4 @@ pkgdown::build_site()
 ```
 
 To set up everything for hosting the documentation on github pages use `usethis::use_pkgdown_github_pages()`.
+During development, `roxygen2::roxygenise()` is useful to update .Rd-files.

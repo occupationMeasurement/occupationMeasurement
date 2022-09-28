@@ -25,7 +25,7 @@
 #'   \item{\code{similarity_based_reasoning$substring}}{list. Contains the pretrained model to be used for providing suggestions using substring matching.}
 #' }
 #'
-#' This training data always predicts a 5-digit KldB code, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.
+#' This training data always predicts a 5-digit code from the 2010 German Classification of Occupations, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.
 #'
 #' @source
 #' Data from the following surveys were pooled:
@@ -46,7 +46,7 @@
 #'
 #' Basically, leaving some data anonymization steps aside, we count for each job title from the Gesamtberufsliste (and some additional titles/texts) how many responses from all surveys are similar to this job title, separately for each coded category. Similarity is calculated in two ways, implying that we obtain two different counts: SubstringSimilarity refers to situations where the job title from the Gesamtberufsliste is a substring of the verbal answer; WordwiseSimilarity refers to situations where a word from the verbal answer is identical to a job title from the Gesamtberufsliste, except that one character from this word is allowed to change (Levenshtein distance). These counts are available as two separate files in the data-raw/training-data/ directory of this package. The algorithm to create these counts is available inside an R-package at https://github.com/malsch/occupationCoding, along with further documentation.
 #'
-#' [train_similarity_based_reasoning()] is then used to train the ML models. See data-raw/pretrained_models.R for details.
+#' [train_similarity_based_reasoning()] is then used to train the ML models. See data-raw/pretrained_models.R for the raw counts and further details.
 "pretrained_models"
 
 #' German Auxiliary Classification of Occupations (AuxCO)

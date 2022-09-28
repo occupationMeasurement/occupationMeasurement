@@ -19,7 +19,15 @@ Will be provided by get_job_suggestions.}
 Possible values are "wordwise" or "substring".}
 
 \item{probabilities}{Trained probabilities to be used,
-defaults to the one bundled with the package. See \link{pretrained_models}. This pretrained model always predicts a 5-digit code from the 2010 German Classification of Occupations, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.}
+defaults to the one bundled with the package. See \link{pretrained_models}.
+This pretrained model always predicts a 5-digit code from the 2010 German
+Classification of Occupations, with some exceptions: -0004 stands for
+'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012
+stands for 'Blue-collar workers', -0019 stands for
+'Volunteer/Social Service', and -0030 stands for 'Student assistant'.}
+
+\item{...}{Additional arguments may be passed from \code{\link[=get_job_suggestions]{get_job_suggestions()}},
+but will be ignored in this function.}
 }
 \value{
 A data.table with suggestions or NULL if no suggestions were found.
@@ -53,11 +61,14 @@ get_job_suggestions(
   )
 )
 
-## Compare algo_similarity_based_reasoning() with get_job_suggestions()
+# Comparison of algo_similarity_based_reasoning() with get_job_suggestions()
 
 # Example of using algo_similarity_based_reasoning() directly. Not recommended.
 \dontrun{
-algo_similarity_based_reasoning(preprocess_string("Arzt"), sim_name = "wordwise")[order(score, decreasing = TRUE)]
+algo_similarity_based_reasoning(
+  preprocess_string("Arzt"),
+  sim_name = "wordwise"
+)[order(score, decreasing = TRUE)]
 }
 
 # Same output as before, but the function is more adaptable.
@@ -67,13 +78,13 @@ get_job_suggestions(
  suggestion_type = "kldb",
  num_suggestions = 1500,
  steps = list(
-       simbased_default = list(
-         algorithm = algo_similarity_based_reasoning,
-         parameters = list(
-           sim_name = "wordwise"
-         )
-       )
-     ))[, list(kldb_id, score, sim_name, kldb_id_title = title)]
+   simbased_default = list(
+     algorithm = algo_similarity_based_reasoning,
+     parameters = list(
+       sim_name = "wordwise"
+     )
+   )
+ ))[, list(kldb_id, score, sim_name, kldb_id_title = title)]
 }
 }
 \references{

@@ -8,7 +8,8 @@ get_followup_questions(
   suggestion_id,
   tense = "present",
   suggestion_type = "auxco",
-  suggestion_type_options = list()
+  suggestion_type_options = list(),
+  include_answer_codes = FALSE
 )
 }
 \arguments{
@@ -26,6 +27,10 @@ suggestions. Supported options:
 to predictions e.g. use a specific version of the kldb or auxco.
 Supported datasets are: "auxco", "kldb". By default the datasets
 bundled with this package are used.}
+
+\item{include_answer_codes}{Whether answer options should contain
+information on the associated codes. Defaults to FALSE.
+(Only for internal use, use \code{\link[=get_final_codes]{get_final_codes()}} to get codes)}
 }
 \value{
 List of followup questions and their answer options.

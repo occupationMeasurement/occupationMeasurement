@@ -7,7 +7,8 @@
 get_suggestion_info(
   suggestion_ids,
   suggestion_type = "auxco",
-  suggestion_type_options = list()
+  suggestion_type_options = list(),
+  include_default_codes = FALSE
 )
 }
 \arguments{
@@ -23,6 +24,10 @@ suggestions. Supported options:
 to predictions e.g. use a specific version of the kldb or auxco.
 Supported datasets are: "auxco", "kldb". By default the datasets
 bundled with this package are used.}
+
+\item{include_default_codes}{Whether default id encodings should be returned
+with the rest of infromation e.g. KldB-IDs. Defaults to FALSE.
+(Only for internal use, use \code{\link[=get_final_codes]{get_final_codes()}} to get codes)}
 }
 \value{
 Data table with information about the suggestion.

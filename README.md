@@ -1,5 +1,9 @@
 # occupationMeasurement <img src="man/figures/logo.png" width="120" align="right" />
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 A package to help with the (interactive) coding and measurement of occupations.
 
 ## Installation

@@ -10,7 +10,7 @@ get_job_suggestions(
   num_suggestions = 5,
   suggestion_type_options = list(),
   score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.002),
-  implausible_suggestion_thresh = 0,
+  implausible_suggestion_threshold = 0,
   distinctions = TRUE,
   steps = list(simbased_wordwise = list(algorithm = algo_similarity_based_reasoning,
     parameters = list(sim_name = "wordwise")), simbased_substring = list(algorithm =
@@ -40,10 +40,10 @@ only be returned if the sum of their scores is equal to or greater than
 the specified threshold. With a threshold of 0 results will always be
 returned.}
 
-\item{implausible_suggestion_thresh}{A threshold between 0 and 1 (usually
-very small, default 0). Results from that step will only be returned if they
-are greater than the specified threshold. Allows the removal of highly implausible
-suggestions.}
+\item{implausible_suggestion_threshold}{A threshold between 0 and 1 (usually
+very small, default 0). Results from any step will only be returned if they
+are greater than the specified threshold. Allows the removal of highly
+implausible suggestions.}
 
 \item{distinctions}{Whether or not to add additional distinctions to
 similar occupational categories to the source code.

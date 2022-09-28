@@ -172,10 +172,10 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'   only be returned if the sum of their scores is equal to or greater than
 #'   the specified threshold. With a threshold of 0 results will always be
 #'   returned.
-#' @param implausible_suggestion_thresh A threshold between 0 and 1 (usually
-#'   very small, default 0). Results from that step will only be returned if they
-#'   are greater than the specified threshold. Allows the removal of highly implausible
-#'   suggestions.
+#' @param implausible_suggestion_threshold A threshold between 0 and 1 (usually
+#'   very small, default 0). Results from any step will only be returned if they
+#'   are greater than the specified threshold. Allows the removal of highly
+#'   implausible suggestions.
 #' @param distinctions Whether or not to add additional distinctions to
 #'   similar occupational categories to the source code.
 #'   Defaults to TRUE.
@@ -226,7 +226,7 @@ get_job_suggestions <- function(text,
                                   simbased_wordwise = 0.535,
                                   simbased_substring = 0.002
                                 ),
-                                implausible_suggestion_thresh = 0,
+                                implausible_suggestion_threshold = 0,
                                 distinctions = TRUE,
                                 steps = list(
                                   # try similarity "one word at most 1 letter different" first
@@ -311,7 +311,7 @@ get_job_suggestions <- function(text,
   }
 
   # Catch possible errors
-  if (nrow(result) == 0) result <- NULL
+  if (is.null(result) || nrow(result) == 0) result <- NULL
 
   # Handle suggestions / results
   if (!is.null(result)) {

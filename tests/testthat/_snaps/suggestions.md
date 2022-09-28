@@ -6,7 +6,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "default_kldb_id", "default_isco_id", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -49,16 +49,6 @@
           "type": "character",
           "attributes": {},
           "value": ["z.B. Lebensmittel einkaufen; Lebensmittellieferungen annehmen und prüfen; Waren fachgerecht einlagern und Lagerbestände kontrollieren; Speisekarten und Speisepläne erstellen; Gerichte kreieren; kalte und warme Speisen vorbereiten und zubereiten; Zutaten nach Rezept und persönlichem Urteilsvermögen verwenden; Temperatur von Öfen, Grills, Brätern und anderen Kochgeräten einstellen; Speisen anrichten, optisch ansprechend garnieren und in folgerichtiger Reihenfolge ausgeben; Arbeitsabläufe in der Küche planen; rechtzeitige Zubereitung der Speisen in der richtigen Reihenfolge organisieren; im Veranstaltungsservice Kundenwünsche ermitteln, Speisen zubereiten und an den Veranstaltungsort liefern", "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. neue Rezepte kreieren und dokumentieren; Speisepläne und Speisekarten erstellen; Frischprodukte einkaufen; Preise kalkulieren und Ausgabevolumen überwachen; Betriebsabläufe in der Küche planen, koordinieren und steuern; Anweisungen und Aufgaben verteilen; Einhaltung von Kostenplänen und Terminen kontrollieren; Qualitätskontrollen durchführen und Abläufe optimieren; Schulungs- und Weiterbildungsmaßnahmen für Mitarbeiter organisieren und den betrieblichen Teil der Ausbildung organisieren und durchführen; Personalentscheidungen treffen; betriebliche Vorschriften über Hygiene und Lebensmittelsicherheit erklären und durchsetzen; Gesichtspunkte des Natur- und Umweltschutzes beachten und z.B. regionale Produkte verwenden; im Veranstaltungsservice Kundenwünsche ermitteln, Angebote ausarbeiten, Speisen zubereiten und an den Veranstaltungsort liefern", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Gemüse, Salat und Früchte waschen und schneiden; Köche unterstützen und z.B. Zutaten abmessen und mischen; einfache Speisen nach Vorgabe vorbereiten, erwärmen, toasten und anrichten; beim Zubereiten von Marinaden, Soßen und Dressings mithelfen; Küchenmaschinen und -geräte bedienen; Lebensmittel aus Vorrats-, Kühlräumen holen und bereitstellen; verderbliche Waren in Kühlräumen lagern und kontrollieren; beim Aussortieren und Entsorgen verfallener Ware mitarbeiten; Aufräum-, Spül- und Reinigungsarbeiten übernehmen", "z.B. Fische in Verarbeitungsanlagen sortieren, reinigen, ausnehmen und häuten; Fische filetieren und durch z.B. Würzen, Braten oder Räuchern weiterverarbeiten; Produkte konservieren oder tiefkühlen, portionieren und verpacken; Produkte während des Prozesses auf Geschmack, Konsistenz und Geruch prüfen; Produktionsanlagen Anlagen zur Fischverarbeitung reinigen, warten und pflegen; die Einhaltung von Qualitätsstandards sicherstellen; Konsumenten über Herkunft, Qualität und Zubereitung der Fischereiwaren beraten", "z.B. in der Küche beim Vor- und Zubereiten einfacher Speisen, wie Sandwiches, Hamburger, Pizzas, Pommes und Salaten mithelfen; Nahrungsmittel waschen, schneiden und abwiegen; große Einfachkochgeräte, wie Grills, Friteusen oder Backblechen, bedienen; fertige Speisen aufwärmen; Kochflächen und Küchenutensilien reinigen; Aufnahme von Bestelllungen; Hygiene am Arbeitsplatz einhalten"]
-        },
-        {
-          "type": "character",
-          "attributes": {},
-          "value": ["29302", "29393", "29301", "29242", "63301"]
-        },
-        {
-          "type": "character",
-          "attributes": {},
-          "value": ["5120", "3434", "9412", "8160", "9411"]
         },
         {
           "type": "character",
@@ -191,7 +181,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "default_kldb_id", "default_isco_id", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -234,16 +224,6 @@
           "type": "character",
           "attributes": {},
           "value": ["Es gilt die militärische Disziplin und die Pflicht zum militärischen Gehorsam gegenüber Vorgesetzten.", "z.B. organisatorische und verwaltungstechnische Abläufe koordinieren; Bürger beraten sowie Anträge entgegennehmen und bearbeiten; Sachverhalte ermitteln und prüfen; bei der Erstellung von Gesetzes- und Verordnungsvorlagen und Weisungen an nachgeordnete Dienststellen mitwirken; Sitzungen vorbereiten und an der Umsetzung der gefassten Beschlüsse mitwirken", "z.B. soziale und wirtschaftliche Trends sowie Kundenerwartungen erforschen; Auswirkungen, finanzielle Implikationen und administrative Umsetzbarkeit von Verwaltungsprozessen analysieren und bewerten; Informationsunterlagen erstellen, Richtlinienoptionen formulieren und abgeben; Verordnungsvorlagen, Weisungen und sonstige Vorschriften vorbereiten und für ihre Umsetzung sorgen", "z.B. Krankheitsbild ermitteln; Diagnose stellen; Röntgenuntersuchungen und andere Diagnoseverfahren veranlassen; Medikamente und Physiotherapie verschreiben; Patienten über Therapiemöglichkeiten informieren; ärztliche Gutachten anfertigen", "z.B. Schmerzanalyse durchführen; Katheter und Sonden legen; Narkose und künstliche Beatmung durchführen; lebenswichtige Körperfunktionen kontrollieren; akute Notfälle erkennen und behandeln; lebensrettende Wiederbelebungsmaßnahmen durchführen; palliativmedizinisch zu versorgende Patienten betreuen"]
-        },
-        {
-          "type": "character",
-          "attributes": {},
-          "value": ["01402", "73202", "73204", "81404", "81454"]
-        },
-        {
-          "type": "character",
-          "attributes": {},
-          "value": ["0310", "3354", "2422", "2211", "2212"]
         },
         {
           "type": "character",

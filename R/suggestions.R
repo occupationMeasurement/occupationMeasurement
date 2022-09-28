@@ -453,6 +453,9 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 #'   this can be "present" or "past". Defaults to "present".
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
+#' @param include_answer_codes Whether answer options should contain
+#'   information on the associated codes. Defaults to FALSE.
+#'   (Only for internal use, use [get_final_codes()] to get codes)
 #' @return List of followup questions and their answer options.
 #' @export
 #'
@@ -461,7 +464,7 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 #' @examples
 #' # Get followup questions for "Post- und Zustelldienste"
 #' get_followup_questions("1004")
-get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco", suggestion_type_options = list()) {
+get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco", suggestion_type_options = list(), include_answer_codes = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- question_id <- auxco_id <- NULL
 
@@ -487,6 +490,13 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
     "answer_id_combination",
     "corresponding_answer_level"
   )
+  if (!include_answer_codes) {
+    columns_to_remove <- c(
+      columns_to_remove,
+      "answer_kldb_id",
+      "answer_isco_id"
+    )
+  }
   columns <- columns[!columns %in% columns_to_remove]
   answer_columns <- c(
     "question_id",
@@ -529,6 +539,9 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #'   This should typically be a character vector.
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
+#' @param include_default_codes Whether default id encodings should be returned
+#'   with the rest of infromation e.g. KldB-IDs. Defaults to FALSE.
+#'   (Only for internal use, use [get_final_codes()] to get codes)
 #'
 #' @return Data table with information about the suggestion.
 #' @keywords internal
@@ -540,7 +553,8 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' get_suggestion_info("9079")
 get_suggestion_info <- function(suggestion_ids,
                                 suggestion_type = "auxco",
-                                suggestion_type_options = list()) {
+                                suggestion_type_options = list(),
+                                include_default_codes = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   auxco_id <- has_followup_questions <- NULL
 
@@ -558,6 +572,11 @@ get_suggestion_info <- function(suggestion_ids,
       ,
       has_followup_questions := auxco_id %in% auxco$followup_questions$auxco_id
     ]
+
+    # Remove default id encodings if they are not enabled
+    if (!include_default_codes) {
+      categories <- categories[, -c("default_kldb_id", "default_isco_id"), with = FALSE]
+    }
 
     return(categories)
   } else if (suggestion_type == "kldb") {
@@ -601,7 +620,11 @@ get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco
 
   auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
 
-  followup_questions <- get_followup_questions(suggestion_id = suggestion_id, suggestion_type = suggestion_type)
+  followup_questions <- get_followup_questions(
+    suggestion_id = suggestion_id,
+    suggestion_type = suggestion_type,
+    include_answer_codes = TRUE
+  )
   aggregated_answer_encodings <- auxco$followup_questions[
     entry_type == "aggregated_answer_encoding" & auxco_id == suggestion_id,
   ]
@@ -692,8 +715,10 @@ get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco
   # Fall back to use the default codes from the suggestion
   selected_suggestion_info <- get_suggestion_info(
     suggestion_ids = suggestion_id,
-    suggestion_type = suggestion_type
+    suggestion_type = suggestion_type,
+    include_default_codes = TRUE
   )
+
   if (!is.null(selected_suggestion_info)) {
     # Retrieve answer codes from selected suggestion
     result <- list()

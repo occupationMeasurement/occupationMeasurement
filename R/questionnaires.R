@@ -142,13 +142,25 @@ questionnaire_demo <- function() {
           p("- Unten sehen Sie die technischen Details dieser Berechnungen:"),
           renderTable(
             {
+              default_suggestion_codes <- get_suggestion_info(
+                session$userData$user_info$list_suggestions$auxco_id,
+                include_default_codes = TRUE
+              )[
+                ,
+                c("auxco_id", "default_kldb_id", "default_isco_id"),
+                with = FALSE
+              ]
+
+              suggestions <- session$userData$user_info$list_suggestions |>
+                merge(default_suggestion_codes, sort = FALSE, by = "auxco_id")
+
               tabprobabilities <- data.frame(
-                "Beruf ID" = session$userData$user_info$list_suggestions$auxco_id,
-                "Wahrscheinlichkeit" = round(session$userData$user_info$list_suggestions$score, digits = 2),
-                "Berufsuntergruppe" = session$userData$user_info$list_suggestions$title,
-                "Taetigkeit" = session$userData$user_info$list_suggestions$task,
-                "Assoziierter Kldb-Code" = session$userData$user_info$list_suggestions$default_kldb_id,
-                "Assoziierter ISCO-Code" = session$userData$user_info$list_suggestions$default_isco_id
+                "Beruf ID" = suggestions$auxco_id,
+                "Wahrscheinlichkeit" = round(suggestions$score, digits = 2),
+                "Berufsuntergruppe" = suggestions$title,
+                "Taetigkeit" = suggestions$task,
+                "Assoziierter Kldb-Code" = suggestions$default_kldb_id,
+                "Assoziierter ISCO-Code" = suggestions$default_isco_id
               )
               tabprobabilities
             },

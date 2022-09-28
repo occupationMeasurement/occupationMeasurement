@@ -230,17 +230,23 @@ load_kldb <- function() {
   kldb_data <- load_kldb_raw()
 
   kldb_new_names <- c(
-    # old name => new name
-    "Schl\u00fcssel KldB 2010" = "kldb_id",
-    "Ebene" = "level",
-    "Titel" = "title",
-    "Allgemeine Bemerkungen" = "description",
-    "Ausschl\u00fcsse" = "excludes"
+    "kldb_id",
+    "level",
+    "title",
+    "description",
+    "excludes"
   )
-
   setnames(
     kldb_data,
-    old = names(kldb_new_names),
+    # Using two separate vectors here, because Windows cannot handle
+    # special characters in names
+    old = c(
+      "Schl\u00fcssel KldB 2010",
+      "Ebene",
+      "Titel",
+      "Allgemeine Bemerkungen",
+      "Ausschl\u00fcsse"
+    ),
     new = kldb_new_names
   )
 

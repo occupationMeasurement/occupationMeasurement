@@ -1,5 +1,9 @@
 # Load our custom api
-pr <- occupationMeasurement::api(start = FALSE)
+pr <- occupationMeasurement::api(
+  start = FALSE,
+  # Read ALLOW_ORIGIN from ENV variable
+  allow_origin = Sys.getenv("ALLOW_ORIGIN")
+)
 
 # Adapted from the original docker image
 # https://github.com/rstudio/plumber/blob/main/Dockerfile

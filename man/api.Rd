@@ -6,7 +6,8 @@
 \usage{
 api(
   start = TRUE,
-  file = system.file("plumber", "api", "plumber.R", package = "occupationMeasurement")
+  file = system.file("plumber", "api", "plumber.R", package = "occupationMeasurement"),
+  allow_origin = NULL
 )
 }
 \arguments{
@@ -15,6 +16,14 @@ api(
 \item{file}{Path to the \code{plumber.R} file describing the API.
 Defaults to \code{plumber/api/plumber.R} within the installed package.
 Refer to this file to understand how the API is implemented.}
+
+\item{allow_origin}{Domain from which to allow cross origin requests (CORS).
+If the API is running on a different domain / server than the application
+using it, the website's root has to be provided here e.g.
+"https://occupationMeasurement.github.io". For more information see the
+\href{https://www.rplumber.io/articles/security.html#cross-origin-resource-sharing-cors}{plumber security page},
+and \href{https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin}{MDN}.
+Defaults to NULL to not set any header at all.}
 }
 \value{
 A Plumber router

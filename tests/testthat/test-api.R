@@ -4,7 +4,10 @@ port <- 8000
 
 api_process <- callr::r_bg(
   function() {
-    occupationMeasurement::api(start = FALSE) |>
+    occupationMeasurement::api(
+      start = FALSE,
+      allow_origin = "https://occupationMeasurement.github.io"
+    ) |>
       plumber::pr_run(port = port)
   },
   # Pass environment
@@ -49,6 +52,8 @@ test_that("endpoint '/v1/suggestions' works (with suggestions)", {
   # Check response
   expect_equal(r$status_code, 200)
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+  # Check CORS header
+  expect_equal(r$headers$`access-control-allow-origin`, "https://occupationMeasurement.github.io")
 })
 
 test_that("endpoint '/v1/suggestions' works (w/o suggestions)", {

@@ -142,7 +142,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
           # We don't always want to ask for the current job.
           # If a different, past job is needed the question texts need to change
           tense = query_value(name_in_query = "tense", default = "present", validate = c("present", "past")),
-          # Is conventional interviewing turned on?
+          # Is conversational interviewing turned on?
           # Only in this case are the job titles and the task descriptions shown.
           # (default: on)
           extra_instructions = query_value(name_in_query = "extra_instructions", default = "on", validate = c("on", "off")),

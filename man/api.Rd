@@ -10,6 +10,7 @@ api(
   log_to_console = TRUE,
   log_to_file = TRUE,
   log_filepath = file.path("output", "log_api.csv"),
+  require_identifier = FALSE,
   allow_origin = NULL
 )
 }
@@ -29,6 +30,10 @@ Note: The file format used here is a CSV file for easier analysis.}
 
 \item{log_filepath}{The path to a CSV file in which to save the structured
 logs.}
+
+\item{require_identifier}{Whether an identifier has to be added to api
+requests in order to match / identify requests afterwards.
+Defaults to FALSE.}
 
 \item{allow_origin}{Domain from which to allow cross origin requests (CORS).
 If the API is running on a different domain / server than the application

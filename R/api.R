@@ -11,6 +11,9 @@
 #'   Note: The file format used here is a CSV file for easier analysis.
 #' @param log_filepath The path to a CSV file in which to save the structured
 #'   logs.
+#' @param require_identifier Whether an identifier has to be added to api
+#'   requests in order to match / identify requests afterwards.
+#'   Defaults to FALSE.
 #' @param allow_origin Domain from which to allow cross origin requests (CORS).
 #'   If the API is running on a different domain / server than the application
 #'   using it, the website's root has to be provided here e.g.
@@ -34,6 +37,7 @@ api <- function(start = TRUE,
                 log_to_console = TRUE,
                 log_to_file = TRUE,
                 log_filepath = file.path("output", "log_api.csv"),
+                require_identifier = FALSE,
                 allow_origin = NULL) {
   if (!requireNamespace("plumber", quietly = TRUE)) {
     stop("Starting the API server requires the R package 'plumber', please install it via install.packages(\"plumber\").")
@@ -116,6 +120,53 @@ api <- function(start = TRUE,
         return(value)
       }
     ))
+
+  if (require_identifier) {
+    matching_prefix <- "/v1/"
+
+    router |>
+      # Check for the presence of an "identifier" parameter
+      plumber::pr_filter("require_identifier", function(req, res) {
+        identifier <- req$argsQuery$identifier
+
+        # Return an error if no identifier has been provided
+        if (
+          startsWith(req$PATH_INFO, matching_prefix) &&
+          (is.null(identifier) || is.na(identifier) || identifier == "")
+        ) {
+          res$status <- 400 # Bad Request
+          return(list(error = "Missing query argument: identifier"))
+        } else {
+          plumber::forward()
+        }
+      }) |>
+      # Update Open API spec to include "identifier" as a parameter
+      plumber::pr_set_api_spec(function(spec) {
+        for (pathname in names(spec$paths)) {
+          path <- spec$paths[[pathname]]
+
+          if (startsWith(pathname, matching_prefix) && !is.null(path$get)) {
+            # Add new parameter "identifier" to spec
+            spec$paths[[pathname]]$get$parameters <- path$get$parameters |>
+              # Double nested list to append a list itself and not just add
+              # its entries
+              append(list(list(
+                name = "identifier",
+                description = "An identifier, typically tied to a responend, to allow matching different API requests with each other.",
+                `in` = "query",
+                required = TRUE,
+                schema = list(
+                  type = "string",
+                  format = NULL,
+                  default = NA
+                )
+              )))
+          }
+        }
+
+        return(spec)
+      })
+  }
 
   # Set CORS headers by adding a filter
   # Comparing with NULL and "" here to ignore default function and ENV values

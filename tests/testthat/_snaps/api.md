@@ -112,3 +112,9 @@
       ]
     }
 
+# API logging is working
+
+    c("ts_preroute", "ts_postserialize", "execution_time", "req_request_method", 
+    "req_path_info", "req_query_string", "req_http_user_agent", "req_remote_addr", 
+    "res_status")
+

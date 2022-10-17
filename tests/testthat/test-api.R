@@ -2,10 +2,13 @@
 api_root <- "http://localhost"
 port <- 8000
 
+log_file <- withr::local_tempfile()
+
 api_process <- callr::r_bg(
   function() {
     occupationMeasurement::api(
       start = FALSE,
+      log_filepath = log_file,
       allow_origin = "https://occupationMeasurement.github.io"
     ) |>
       plumber::pr_run(port = port)
@@ -122,4 +125,15 @@ test_that("endpoint '/v1/final_codes' works (with followup answers)", {
   # Check response
   expect_equal(r$status_code, 200)
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
+test_that("API logging is working", {
+  # Check whether the log file exists
+  expect_true(file.exists(log_file))
+
+  log <- log_file |>
+    read.csv()
+
+  # Check whether CSV fields are unchanged
+  expect_snapshot_value(log |> colnames(), style = "deparse")
 })

@@ -173,6 +173,280 @@
       ]
     }
 
+# followup questions are correctly returned
+
+    {
+      "type": "list",
+      "attributes": {},
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["question_id", "question_text", "type", "answers"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Q1710_1"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["aufsicht"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "row.names": {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2]
+                },
+                "class": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data.frame"]
+                },
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                }
+              },
+              "value": [
+                {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Ja", "Nein"]
+                },
+                {
+                  "type": "logical",
+                  "attributes": {},
+                  "value": [true, false]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["question_id", "question_text", "type", "answers"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Q1710_2"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Über die Zucht welcher Tiere führen Sie Aufsicht?"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["sonstige"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "row.names": {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2, 3, 4]
+                },
+                "class": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data.frame"]
+                },
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                }
+              },
+              "value": [
+                {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2, 3, 4]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Über die Zucht von Nutztieren", "Über die Zucht von Geflügeltieren", "Über die Zucht von Bienen", "Über die Zucht anderer Tiere"]
+                },
+                {
+                  "type": "logical",
+                  "attributes": {},
+                  "value": [true, true, true, true]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+---
+
+    {
+      "type": "list",
+      "attributes": {},
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["question_id", "question_text", "type", "answers"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Q1733_1"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Liegt der Schwerpunkt Ihrer Arbeit im Bereich Elektrotechnik oder im Bereich Elektronik?"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["spezialisierung"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "row.names": {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2]
+                },
+                "class": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data.frame"]
+                },
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                }
+              },
+              "value": [
+                {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Elektrotechnik", "Elektronik"]
+                },
+                {
+                  "type": "logical",
+                  "attributes": {},
+                  "value": [false, false]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["question_id", "question_text", "type", "answers"]
+            }
+          },
+          "value": [
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Q1733_2"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["anforderungsniveau"]
+            },
+            {
+              "type": "list",
+              "attributes": {
+                "row.names": {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2]
+                },
+                "class": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["data.frame"]
+                },
+                "names": {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                }
+              },
+              "value": [
+                {
+                  "type": "integer",
+                  "attributes": {},
+                  "value": [1, 2]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["Ja", "Nein"]
+                },
+                {
+                  "type": "logical",
+                  "attributes": {},
+                  "value": [true, true]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
 # suggestions and final codes are correctly generated for 'Soldat' (leading 0 in ISCO)
 
     {

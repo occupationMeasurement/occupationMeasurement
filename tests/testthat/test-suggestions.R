@@ -10,6 +10,28 @@ test_that("similarity based reasoning works as expected", {
   expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(algo_similarity_based_reasoning("KOCH", suggestion_type = "auxco")))
 })
 
+test_that("followup questions are correctly returned", {
+  prep_followup_questions <- function(followup_questions) {
+    # Convert the questions' answers to data.frame (from data.table)
+    # to make testthat serialization work
+    followup_questions <- lapply(followup_questions, function(question) {
+      question$answers <- question$answers |>
+        as.data.frame()
+      return(question)
+    })
+
+    return(followup_questions)
+  }
+
+  get_followup_questions("1710") |>
+    prep_followup_questions() |>
+    expect_snapshot_value(style = "json2")
+
+  get_followup_questions("1733") |>
+    prep_followup_questions() |>
+    expect_snapshot_value(style = "json2")
+})
+
 test_that("suggestions and final codes are correctly generated for 'Soldat' (leading 0 in ISCO)", {
   # Check suggestions
   expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(get_job_suggestions("Soldat")))

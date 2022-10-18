@@ -13,6 +13,8 @@
 #* @apiTag "other" Other endpoints of the API.
 
 #* Generate occupation coding suggestions based on a users free text input.
+#* We recommend displaying the "task" and optionally the "task_description" to
+#* respondents.
 #* @param text:character The raw text input from the user.
 #* @tag "occupationMeasurement"
 #* @get /v1/suggestions

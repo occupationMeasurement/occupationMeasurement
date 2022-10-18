@@ -7,7 +7,7 @@
 #*   [followup questions](#/occupationMeasurement/get_followup_questions).
 #*   Using the suggestion's id and the followup_questions's answer id, the
 #*   [final codes](#/occupationMeasurement/get_final_codes) can be queried.
-#* @apiVersion 0.0.2-beta
+#* @apiVersion 0.0.3-beta
 #* @apiTag "occupationMeasurement" Endpoints related to the coding of occupations.
 #* @apiTag "experimental" API endpoints where major changes are likely.
 #* @apiTag "other" Other endpoints of the API.

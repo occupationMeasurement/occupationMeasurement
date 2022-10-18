@@ -79,7 +79,7 @@ function(res, suggestion_id, followup_question_id = "", followup_answer_id = "")
     answered_followup_question <- all_followup_questions[[answered_question_index]]
 
     # Determine whether the answer already finished coding
-    if (answered_followup_question$answers$last_question[[as.numeric(followup_answer_id)]]) {
+    if (answered_followup_question$answers$coding_is_finished[[as.numeric(followup_answer_id)]]) {
       return(response_finished)
     } else {
       # Else return the next followup question

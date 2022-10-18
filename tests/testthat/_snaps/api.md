@@ -72,12 +72,12 @@
         {
           "answer_id": 1,
           "answer_text": "Nein",
-          "last_question": true
+          "coding_is_finished": true
         },
         {
           "answer_id": 2,
           "answer_text": "Ja",
-          "last_question": true
+          "coding_is_finished": true
         }
       ]
     }
@@ -98,17 +98,17 @@
         {
           "answer_id": 1,
           "answer_text": "im mittleren Dienst oder vergleichbar",
-          "last_question": true
+          "coding_is_finished": true
         },
         {
           "answer_id": 2,
           "answer_text": "im gehobenen Dienst oder vergleichbar",
-          "last_question": true
+          "coding_is_finished": true
         },
         {
           "answer_id": 3,
           "answer_text": "im höheren Dienst oder vergleichbar",
-          "last_question": false
+          "coding_is_finished": false
         }
       ]
     }
@@ -129,12 +129,12 @@
         {
           "answer_id": 1,
           "answer_text": "ja",
-          "last_question": true
+          "coding_is_finished": true
         },
         {
           "answer_id": 2,
           "answer_text": "Nein",
-          "last_question": true
+          "coding_is_finished": true
         }
       ]
     }

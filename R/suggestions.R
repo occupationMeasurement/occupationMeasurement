@@ -550,6 +550,8 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
     # Remove auxco / question_id from answer options
     the_answer_options[, auxco_id := NULL]
     the_answer_options[, question_id := NULL]
+    # Rename last_question column for consistency with the api
+    setnames(the_answer_options, old = "last_question", new = "coding_is_finished")
 
     questions <- append(questions, list(list(
       question_id = q_id,

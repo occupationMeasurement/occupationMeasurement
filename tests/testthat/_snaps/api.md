@@ -62,33 +62,88 @@
       }
     ]
 
-# endpoint '/v1/followup_questions' works
+# endpoint '/v1/next_followup_question' works
 
-    [
-      {
-        "question_id": [
-          "Q7078_1"
-        ],
-        "question_text": [
-          "Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Friseur/in erforderlich?"
-        ],
-        "type": [
-          "anforderungsniveau"
-        ],
-        "answers": [
-          {
-            "answer_id": 1,
-            "answer_text": "Nein",
-            "last_question": true
-          },
-          {
-            "answer_id": 2,
-            "answer_text": "Ja",
-            "last_question": true
-          }
-        ]
-      }
-    ]
+    {
+      "question_id": "Q7078_1",
+      "question_text": "Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung als Friseur/in erforderlich?",
+      "type": "anforderungsniveau",
+      "answers": [
+        {
+          "answer_id": 1,
+          "answer_text": "Nein",
+          "last_question": true
+        },
+        {
+          "answer_id": 2,
+          "answer_text": "Ja",
+          "last_question": true
+        }
+      ]
+    }
+
+# endpoint '/v1/next_followup_question' works (when coding is finished)
+
+    {
+      "coding_is_finished": true
+    }
+
+# endpoint '/v1/next_followup_question' works with multiple followup questions (incl. early end)
+
+    {
+      "question_id": "Q5078_1",
+      "question_text": "Sind Sie Beamte/r im mittleren, gehobenen oder höheren Dienst?",
+      "type": "anforderungsniveau",
+      "answers": [
+        {
+          "answer_id": 1,
+          "answer_text": "im mittleren Dienst oder vergleichbar",
+          "last_question": true
+        },
+        {
+          "answer_id": 2,
+          "answer_text": "im gehobenen Dienst oder vergleichbar",
+          "last_question": true
+        },
+        {
+          "answer_id": 3,
+          "answer_text": "im höheren Dienst oder vergleichbar",
+          "last_question": false
+        }
+      ]
+    }
+
+---
+
+    {
+      "coding_is_finished": true
+    }
+
+---
+
+    {
+      "question_id": "Q5078_2",
+      "question_text": "Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?",
+      "type": "aufsicht",
+      "answers": [
+        {
+          "answer_id": 1,
+          "answer_text": "ja",
+          "last_question": true
+        },
+        {
+          "answer_id": 2,
+          "answer_text": "Nein",
+          "last_question": true
+        }
+      ]
+    }
+
+---
+
+    {
+      "coding_is_finished": true
+    }
 
 # endpoint '/v1/final_codes' works (without followup answers)
 

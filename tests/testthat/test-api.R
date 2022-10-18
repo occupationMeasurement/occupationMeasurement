@@ -75,12 +75,12 @@ test_that("endpoint '/v1/suggestions' works (w/o suggestions)", {
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
 })
 
-test_that("endpoint '/v1/followup_questions' works", {
+test_that("endpoint '/v1/next_followup_question' works", {
   # Send API request
   r <- httr::GET(
     api_root,
     port = port,
-    path = "/v1/followup_questions",
+    path = "/v1/next_followup_question",
     query = list(
       suggestion_id = "7078"
     )
@@ -89,6 +89,86 @@ test_that("endpoint '/v1/followup_questions' works", {
   # Check response
   expect_equal(r$status_code, 200)
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
+test_that("endpoint '/v1/next_followup_question' works (when coding is finished)", {
+  # Send API request
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/next_followup_question",
+    query = list(
+      suggestion_id = "7078",
+      followup_question_id = "Q7078_1",
+      followup_answer_id = "1"
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
+test_that("endpoint '/v1/next_followup_question' works with multiple followup questions (incl. early end)", {
+  # Get first followup question
+  first <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/next_followup_question",
+    query = list(
+      suggestion_id = "5078"
+    )
+  )
+  # Check response
+  expect_equal(first$status_code, 200)
+  expect_snapshot_value(httr::content(first, encoding = "UTF-8"))
+
+  # Send the answer to the first followup question *with* early end
+  second_early_end <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/next_followup_question",
+    query = list(
+      suggestion_id = "5078",
+      followup_question_id = "Q5078_1",
+      followup_answer_id = "1"
+    )
+  )
+  # Check response
+  expect_equal(second_early_end$status_code, 200)
+  second_early_end_content <- httr::content(second_early_end, encoding = "UTF-8")
+  expect_snapshot_value(second_early_end_content)
+  expect_true(second_early_end_content$coding_is_finished)
+
+  # Send the answer to the first followup question without early end
+  second <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/next_followup_question",
+    query = list(
+      suggestion_id = "5078",
+      followup_question_id = "Q5078_1",
+      followup_answer_id = "3"
+    )
+  )
+  # Check response
+  expect_equal(second$status_code, 200)
+  expect_snapshot_value(httr::content(second, encoding = "UTF-8"))
+
+  # Send third and final API request when coding is finished (optional)
+  third <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/next_followup_question",
+    query = list(
+      suggestion_id = "5078",
+      followup_question_id = "Q5078_2",
+      followup_answer_id = "2"
+    )
+  )
+  # Check response
+  expect_equal(third$status_code, 200)
+  expect_snapshot_value(httr::content(third, encoding = "UTF-8"))
 })
 
 test_that("endpoint '/v1/final_codes' works (without followup answers)", {

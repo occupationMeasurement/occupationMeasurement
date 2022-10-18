@@ -24,16 +24,82 @@ function(text) {
   return(suggestions)
 }
 
-#* Get a list of followup questions to ask, based on a selected suggestion id
+#* Get the next followup question to show after a suggestion has been selected
+#* or a previous followup question has just been answered.
 #* @param suggestion_id:character The id of the selected suggestion.
+#* @param followup_question_id:character The `question_id` of the followup question that has just been answered.
+#* @param followup_answer_id:integer The answer_id of the chosen answer to the followup question that has just been answered.
 #* @tag "occupationMeasurement"
-#* @get /v1/followup_questions
-function(suggestion_id) {
-  followup_questions <- occupationMeasurement::get_followup_questions(
+#* @get /v1/next_followup_question
+#* @serializer unboxedJSON
+function(res, suggestion_id, followup_question_id = "", followup_answer_id = "") {
+  # Sanitize input
+  if (suggestion_id == "" || is.null(suggestion_id)) {
+    suggestion_id <- NA
+  }
+  if (followup_question_id == "" || is.null(followup_question_id)) {
+    followup_question_id <- NA
+  }
+  if (is.null(followup_answer_id)) {
+    followup_answer_id <- NA
+  } else {
+    followup_answer_id <- as.integer(followup_answer_id)
+  }
+
+  # Validate input
+  if (is.na(suggestion_id)) {
+    res$status <- 400
+    return(list(error = "It is mandatory to provide a suggestion_id"))
+  }
+  if (xor(is.na(followup_question_id), is.na(followup_answer_id))) {
+    res$status <- 400
+    return(list(error = "Specifying only one of followup_answer_id or followup_question_id is not supported"))
+  }
+
+  all_followup_questions <- occupationMeasurement::get_followup_questions(
     suggestion_id = suggestion_id
   )
+  next_followup_question <- NULL
 
-  return(followup_questions)
+  response_finished <- list(
+    coding_is_finished = TRUE
+  )
+
+  if (is.na(followup_question_id)) {
+    # No follow_question_id provided -> return the first followup question
+    next_followup_question <- all_followup_questions[[1]]
+  } else {
+    # A followup_question_id has been provided, find the question that has been answered
+    all_question_ids <- sapply(all_followup_questions, function(x) x$question_id)
+    answered_question_index <- seq_along(all_question_ids)[all_question_ids == followup_question_id]
+    if (length(answered_question_index) == 0) {
+      res$status <- 400
+      return(list(error = paste("Can't find question_id", followup_question_id," in followup questions for suggestion", suggestion_id)))
+    }
+    answered_followup_question <- all_followup_questions[[answered_question_index]]
+
+    # Determine whether the answer already finished coding
+    if (answered_followup_question$answers$last_question[[as.numeric(followup_answer_id)]]) {
+      return(response_finished)
+    } else {
+      # Else return the next followup question
+      next_followup_question <- all_followup_questions[[answered_question_index + 1]]
+    }
+  }
+
+  # When there are no followup_questions coding is finished
+  if (length(all_followup_questions) == 0) {
+    return(response_finished)
+  }
+
+  # Return the found followup question
+  if (!is.null(next_followup_question)) {
+    return(next_followup_question)
+  } else {
+    # Return an error upon unexpected behaviour
+    res$status <- 500
+    return(list(error = "Unexpected error when trying to find the next followup question."))
+  }
 }
 
 #* Get the final occupation codes

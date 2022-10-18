@@ -18,7 +18,7 @@ docker run --rm -p 3838:3838 -v $(pwd)/output:/srv/shiny-server/output occupatio
 # Start the api
 # it can be reached at http://localhost:8000
 # Swagger documentation can be viewed at http://localhost:8000/__docs__/
-docker run --rm -p 8000:8000 occupation_measurement/api
+docker run --rm -p 8000:8000 -v $(pwd)/output:/output -e ALLOW_ORIGIN="*" -e REQUIRE_IDENTIFIER=TRUE occupation_measurement/api
 ```
 
 > The provided URLs assume that you are executing commands on your own machine. When running the containers in the web, IP addresses will be different.

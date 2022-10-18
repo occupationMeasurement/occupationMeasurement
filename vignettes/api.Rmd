@@ -1,0 +1,68 @@
+---
+title: "Using the API"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the API}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Interactive Documentation 
+
+The easiest way of understanding how the API works, is by starting it locally via `api()` and exploring the included Swagger documentation that will open automatically. Using the UI one can interactively explore different API endpoints, what input they expect and what output they return.
+
+The api also comes with an [openapi specification](https://spec.openapis.org/oas/v3.0.3) at the endpoint `/openapi.json`.
+
+## Flow
+
+Since the API has multiple endpoints to be called, it expects a certain flow of how requests follow onto each other in order to properly function.
+
+The diagram below demonstrates a minimal version of this flow, with different API endpoints highlighted in **bold**. More complex scenarios are possible if you e.g. implement multiple tries of generating job suggestions for cases where user input was ambiguous.
+
+```{r api_flow, echo=FALSE}
+DiagrammeR::grViz('
+digraph G {
+  suggestions [
+    label = <Get a list of job suggestions to show from <b>/v1/suggestions</b>>;
+    shape = rect;
+  ];
+  check_followup_questions [
+    label = "Is suggestion.has_followup_questions == true?";
+    shape = diamond;
+  ];
+  next_followup_question [
+    label = <Get the next followup question to show from <b>/v1/next_followup_question</b>>;
+    shape = rect;
+  ];
+  check_finished_post_followup [
+    label = "Is answer.is_coding_finished == true?";
+    shape = diamond;
+  ];
+  final_codes [
+    label = <Get the final codes from <b>/v1/final_codes</b>>;
+    shape = rect;
+  ];
+  coding_finished [
+    label = "Coding is finished";
+    shape = oval;
+  ];
+
+  suggestions -> check_followup_questions [ label = "Respondent chose\na suggestion"];
+  check_followup_questions -> next_followup_question [ label = "Yes"; style="dashed" ];
+  check_followup_questions -> final_codes [ label = "No"; style="dashed" ]; 
+  next_followup_question -> check_finished_post_followup [ label = "Respondend chose\nan answer"];
+  check_finished_post_followup:w -> next_followup_question:w [ label = "No"; style="dashed" ];
+  check_finished_post_followup -> final_codes [ label = "Yes"; style="dashed" ];
+  final_codes -> coding_finished;
+}
+')
+```
+
+For inspiration on how to implement the *user-facing* flow of an application using the api, refer to the interactive `app()` included in this package.

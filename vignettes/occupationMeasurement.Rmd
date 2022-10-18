@@ -59,7 +59,7 @@ If you want to deploy the shiny app to an actual server for use in a production 
 
 # JSON-API
 
-If you're looking to integrate the package into your existing setup or tool the JSON-API that comes with the package might suit you better than the shiny app, due to it's increased flexibility.
+If you're looking to integrate the package into your existing setup or tool the JSON-API that comes with the package might suit you better than the shiny app, due to it's increased flexibility. For more information on the api you can read `vignette("api")`.
 
 ## Starting the API
 

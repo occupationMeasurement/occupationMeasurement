@@ -234,7 +234,7 @@ get_job_suggestions <- function(text,
                                 suggestion_type_options = list(),
                                 score_thresholds = list(
                                   simbased_wordwise = 0.535,
-                                  simbased_substring = 0.618
+                                  simbased_substring = 0.002
                                 ),
                                 implausible_suggestion_threshold = 0,
                                 distinctions = TRUE,

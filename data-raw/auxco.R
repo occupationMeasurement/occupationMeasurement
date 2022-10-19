@@ -7,7 +7,7 @@ library(data.table)
 source("R/data.R")
 
 auxco_directory <- file.path("data-raw", "auxco")
-load_auxco(
+auxco <- load_auxco(
   dir = auxco_directory,
   add_explanations = TRUE
 )

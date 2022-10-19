@@ -285,6 +285,7 @@ get_job_suggestions <- function(text,
   )
 
   # Run the different steps to generate suggestions / results
+  result <- NULL
   for (i in seq_along(steps)) {
     # Get info about the step itself
     step_with_name <- steps[i]
@@ -299,22 +300,23 @@ get_job_suggestions <- function(text,
     )
 
     # Call the algorithm with the provided list of parameters
-    result <- do.call(step[["algorithm"]], parameters)
+    temp_result <- do.call(step[["algorithm"]], parameters)
 
-    if (!is.null(result)) {
+    if (!is.null(temp_result)) {
       # Convert suggestions into the correct suggestion_type
       # Note: At the moment all algorithms output "kldb" by default, this may change in the future
-      result <- convert_suggestions(result, from = "kldb", to = suggestion_type, suggestion_type_options = suggestion_type_options)
+      temp_result <- convert_suggestions(temp_result, from = "kldb", to = suggestion_type, suggestion_type_options = suggestion_type_options)
 
       # Pick top X suggestions
-      result <- utils::head(result[order(score, decreasing = TRUE)], num_suggestions)
+      temp_result <- utils::head(temp_result[order(score, decreasing = TRUE)], num_suggestions)
 
       # Remove suggestions that are most likely incorrect
-      result <- result[score > implausible_suggestion_threshold]
+      temp_result <- temp_result[score > implausible_suggestion_threshold]
 
       threshold <- score_thresholds[[step_name]]
-      if (is.null(threshold) || sum(result$score) >= threshold) {
+      if (is.null(threshold) || sum(temp_result$score) >= threshold) {
         # Stop running through algorithms if we get good enough results
+        result <- temp_result
         break
       }
     }

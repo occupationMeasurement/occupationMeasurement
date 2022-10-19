@@ -181,34 +181,59 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["id", "input_text", "score"]
-        },
-        "row.names": {
-          "type": "integer",
-          "attributes": {},
-          "value": [1]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
         },
         "class": {
           "type": "character",
           "attributes": {},
           "value": ["data.frame"]
+        },
+        "row.names": {
+          "type": "integer",
+          "attributes": {},
+          "value": [1, 2, 3, 4, 5]
         }
       },
       "value": [
         {
           "type": "character",
           "attributes": {},
-          "value": [null]
+          "value": ["3222", "8037", "8004", "3205", "3206"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Arbeiter"]
+          "value": ["Arbeiter", "Arbeiter", "Arbeiter", "Arbeiter", "Arbeiter"]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [0]
+          "value": [0.06826171, 0.03354299, 0.02982826, 0.02523728, 0.02523728]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Sekretär/in", "Dozent/in / Professor/in", "Sozialpädagoge/- pädagogin", "Technisch-kaufmännische/r Betriebassistent/in", "Betriebswirtschaftliche/r Assistent/in"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation", "Lehren und Forschen an Universitäten und Hochschulen", "Sozialpädagogische Beratung und Betreuung von Personen, die sich in sozialen Problemsituationen befinden", "Kaufmännische Koordination von betrieblichen Produktionsabläufen", "Unterstützung von Führungskräften bei der Verwaltung, Koordination und Organisation des Unternehmens ohne weitere Spezialisierung"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen", "z.B. Vorlesungen, Seminare oder Übungen durchführen; Forschungsergebnisse in Fachzeitschriften und -büchern veröffentlichen; Lehrmaterialien konzipieren; Klausuren vorbereiten; Studierende beraten und betreuen; empirische Untersuchungen organisieren", "z.B. Lebenssituation des Klienten analysieren; Förderpläne und Integrationsstrategien entwickeln; Hilfe bei Arbeits- und Wohnungssuche; Informationsaustausch mit anderen sozialen Behörden", "z.B. produzierende Unternehmenseinheiten bei der Materialwirtschaft und Produktionsplanung unterstützen; Produktion auf der Basis von Kundenbestellungen und Produktionskapazitäten planen; Materialbedarf feststellen, Lagerbestände überprüfen und Lieferungen organisieren; Waren annehmen und deren Lagerung veranlassen; Schriftverkehr mit Geschäftspartnern und Behörden abwickeln", "z.B. bei kaufmännisch-betriebswirtschaftlichen Aufgaben in den Bereichen Einkauf, Materialwirtschaft, Vertrieb und Marketing, Personalwesen und Buchhaltung unterstützen; Schriftverkehr mit Geschäftspartnern und Behörden abwickeln; Telefonanrufe und elektronische Anfragen beantworten; Besprechungen planen und organisieren; bei der Erstellung des Budgets unterstützen und Kosten überwachen; Verträge und Beschaffungsaufträge entwerfen"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Hochschullehre und -forschung", "Sozialarbeit und Sozialpädagogik", "Kaufmännische und technische Betriebswirtschaft (ohne Spezialisierung)", "Kaufmännische und technische Betriebswirtschaft (ohne Spezialisierung)"]
+        },
+        {
+          "type": "logical",
+          "attributes": {},
+          "value": [true, false, true, true, true]
         }
       ]
     }
@@ -221,34 +246,59 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["id", "input_text", "score"]
-        },
-        "row.names": {
-          "type": "integer",
-          "attributes": {},
-          "value": [1]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
         },
         "class": {
           "type": "character",
           "attributes": {},
           "value": ["data.frame"]
+        },
+        "row.names": {
+          "type": "integer",
+          "attributes": {},
+          "value": [1, 2, 3, 4, 5]
         }
       },
       "value": [
         {
           "type": "character",
           "attributes": {},
-          "value": [null]
+          "value": ["3222", "3220", "3221", "3501", "9078"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["studentische Hilfskraft"]
+          "value": ["studentische Hilfskraft", "studentische Hilfskraft", "studentische Hilfskraft", "studentische Hilfskraft", "studentische Hilfskraft"]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [0]
+          "value": [0.03978574, 0.02902939, 0.02902939, 0.00654641, 0.00510887]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Sekretär/in", "Telefonist/in", "Bürohilfskraft", "Redaktionsassistent/in", "Küchenhilfe"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation", "Entgegennahme und Weiterleitung von Telefonanrufen", "Ausführung von Hilfsarbeiten in der Büroarbeit ohne Kundenkontakt", "Unterstützung von Journalisten und Redakteuren bei redaktionellen und organisatorischen Aufgaben", "Ausführung von Hilfsarbeiten in einer Hotel-, Restaurant- oder Großküche"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen", "z.B. Bestellungen entgegennehmen, Nachrichten aufzeichnen und zur Bearbeitung weitergeben; Anrufe weiterleiten; telefonische Verbindungen herstellen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Formulare, Belege und andere Dokumente sortieren; Formulare und andere Aufzeichnungen im Computer eintragen und die Richtigkeit überprüfen; Dokumente kopieren und abheften; Rundschreiben und Kuverts adressieren", "z.B. Hintergrundinformationen zu aktuellen Themen, Drehorten und Interviewpartnern recherchieren; Filmmaterial und Interviews nachbearbeiten; Sekretariatsarbeiten erledigen, wie Termine koordinieren, Geschäftsreisen organisieren, Messestände und -auftritte vorbereiten und Kostenvoranschläge einholen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Gemüse, Salat und Früchte waschen und schneiden; Köche unterstützen und z.B. Zutaten abmessen und mischen; einfache Speisen nach Vorgabe vorbereiten, erwärmen, toasten und anrichten; beim Zubereiten von Marinaden, Soßen und Dressings mithelfen; Küchenmaschinen und -geräte bedienen; Lebensmittel aus Vorrats-, Kühlräumen holen und bereitstellen; verderbliche Waren in Kühlräumen lagern und kontrollieren; beim Aussortieren und Entsorgen verfallener Ware mitarbeiten; Aufräum-, Spül- und Reinigungsarbeiten übernehmen"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Büro- und Sekretariatskräfte", "Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Redakteure/Redakteurinnen und Journalisten/Journalistinnen", "Köche/Köchinnen"]
+        },
+        {
+          "type": "logical",
+          "attributes": {},
+          "value": [true, false, true, false, false]
         }
       ]
     }

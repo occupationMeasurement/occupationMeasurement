@@ -85,7 +85,7 @@
 #'
 #' @return A list with multiple data.tables.
 #' @export
-#' @seealso [auxco]
+#' @seealso https://github.com/occupationMeasurement/auxiliary-classification, [auxco]
 load_auxco <- function(dir, add_explanations = TRUE) {
   # Column names used in data.table (for R CMD CHECK)
   task <- task_description <- NULL

@@ -26,5 +26,5 @@ This package also includes an already loaded version of the \link{auxco}, which
 can be used straight away \emph{without} calling this function.
 }
 \seealso{
-\link{auxco}
+https://github.com/occupationMeasurement/auxiliary-classification, \link{auxco}
 }

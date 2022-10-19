@@ -32,9 +32,6 @@ set.seed(4666) # random.org 1 - 10000
 #' @param path_to_file path to downloaded file
 #' @param count.categories (default: \code{FALSE}). The default sets the column \code{count_categories} to 0, avoiding lengthy computations. With \code{count.categories = TRUE} an indicator of job title ambiguity is calculated. See below.
 #'
-#' @seealso
-#' \code{\link{coding_index_excerpt}}, \code{\link{predictWithCodingIndex}}, \code{\link{trainSimilarityBasedReasoning}}
-#'
 #' @return a data.table with columns Berufsbenennungen, bezMale, and bezFemale, Code, and count_categories.
 #' @import data.table
 #' @export

@@ -25,7 +25,7 @@ occupationMeasurement::app()
 
 ## Different Questionnaires
 
-You're of course also not limited to using the app only with its default questionnaire. Indeed you can use any one of the ready-built questionnaires that come with the app, such as `questionnaire_web_survey()` (the default),`questionnaire_demo()` (to learn about the workings of the tool) or `questionnaire_guided_interview()` (for guided interviews with a professional interviewer).
+You're of course also not limited to using the app only with its default questionnaire. Indeed you can use any one of the ready-built questionnaires that come with the app, such as `questionnaire_web_survey()` (the default),`questionnaire_demo()` (to learn about the workings of the tool) or `questionnaire_interviewer_administerd()` (for guided interviews with a professional interviewer).
 
 ```{r eval=FALSE}
 library(occupationMeasurement)
@@ -47,7 +47,7 @@ library(occupationMeasurement)
 
 app(
   # Use the questionnaire for guided interviews
-  questionnaire = questionnaire_guided_interview(),
+  questionnaire = questionnaire_interviewer_administerd(),
   app_settings = create_app_settings(
     # ... specify your custom settings here
     require_id = TRUE

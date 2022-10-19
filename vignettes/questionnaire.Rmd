@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 # Questionnaires
 
-When using the interactive shiny app you can use one of the different available questionnaires to e.g. conduct a web survey (`questionnaire_web_survey()`) or collect data from guided (phone) interviews (`questionnaire_guided_interview()`).
+When using the interactive shiny app you can use one of the different available questionnaires to e.g. conduct a web survey (`questionnaire_web_survey()`) or collect data from guided (phone) interviews (`questionnaire_interviewer_administerd()`).
 
 To be as flexible as possible, you can also modify these existing questionnaires or just build your own one from scratch.
 

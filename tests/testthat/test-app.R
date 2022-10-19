@@ -221,7 +221,7 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
         # Don't write data from test to disk
         save_to_file = FALSE
       ),
-      questionnaire = questionnaire_guided_interview(),
+      questionnaire = questionnaire_interviewer_administerd(),
       resource_dir = file.path("..", "..", "inst", "www")
     ),
     name = "test_2_textiltechniker",

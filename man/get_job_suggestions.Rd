@@ -9,7 +9,7 @@ get_job_suggestions(
   suggestion_type = "auxco",
   num_suggestions = 5,
   suggestion_type_options = list(),
-  score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.002),
+  score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.618),
   implausible_suggestion_threshold = 0,
   distinctions = TRUE,
   steps = list(simbased_wordwise = list(algorithm = algo_similarity_based_reasoning,

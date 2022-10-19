@@ -72,11 +72,13 @@
         {
           "answer_id": 1,
           "answer_text": "Nein",
+          "corresponding_answer_level": "isco_skill_level_1",
           "coding_is_finished": true
         },
         {
           "answer_id": 2,
           "answer_text": "Ja",
+          "corresponding_answer_level": "isco_skill_level_2",
           "coding_is_finished": true
         }
       ]
@@ -98,16 +100,19 @@
         {
           "answer_id": 1,
           "answer_text": "im mittleren Dienst oder vergleichbar",
+          "corresponding_answer_level": "isco_skill_level_2",
           "coding_is_finished": true
         },
         {
           "answer_id": 2,
           "answer_text": "im gehobenen Dienst oder vergleichbar",
+          "corresponding_answer_level": "isco_skill_level_3",
           "coding_is_finished": true
         },
         {
           "answer_id": 3,
           "answer_text": "im höheren Dienst oder vergleichbar",
+          "corresponding_answer_level": "isco_skill_level_4",
           "coding_is_finished": false
         }
       ]
@@ -129,11 +134,13 @@
         {
           "answer_id": 1,
           "answer_text": "ja",
+          "corresponding_answer_level": "isco_manager",
           "coding_is_finished": true
         },
         {
           "answer_id": 2,
           "answer_text": "Nein",
+          "corresponding_answer_level": "isco_not_supervising",
           "coding_is_finished": true
         }
       ]

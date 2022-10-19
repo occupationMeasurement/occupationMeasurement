@@ -220,7 +220,7 @@
                 "names": {
                   "type": "character",
                   "attributes": {},
-                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                  "value": ["answer_id", "answer_text", "corresponding_answer_level", "coding_is_finished"]
                 }
               },
               "value": [
@@ -233,6 +233,11 @@
                   "type": "character",
                   "attributes": {},
                   "value": ["Ja", "Nein"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["isco_manager", "isco_supervisor"]
                 },
                 {
                   "type": "logical",
@@ -284,7 +289,7 @@
                 "names": {
                   "type": "character",
                   "attributes": {},
-                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                  "value": ["answer_id", "answer_text", "corresponding_answer_level", "coding_is_finished"]
                 }
               },
               "value": [
@@ -297,6 +302,11 @@
                   "type": "character",
                   "attributes": {},
                   "value": ["Über die Zucht von Nutztieren", "Über die Zucht von Geflügeltieren", "Über die Zucht von Bienen", "Über die Zucht anderer Tiere"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["", "", "", ""]
                 },
                 {
                   "type": "logical",
@@ -357,7 +367,7 @@
                 "names": {
                   "type": "character",
                   "attributes": {},
-                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                  "value": ["answer_id", "answer_text", "corresponding_answer_level", "coding_is_finished"]
                 }
               },
               "value": [
@@ -370,6 +380,11 @@
                   "type": "character",
                   "attributes": {},
                   "value": ["Elektrotechnik", "Elektronik"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["", ""]
                 },
                 {
                   "type": "logical",
@@ -421,7 +436,7 @@
                 "names": {
                   "type": "character",
                   "attributes": {},
-                  "value": ["answer_id", "answer_text", "coding_is_finished"]
+                  "value": ["answer_id", "answer_text", "corresponding_answer_level", "coding_is_finished"]
                 }
               },
               "value": [
@@ -434,6 +449,11 @@
                   "type": "character",
                   "attributes": {},
                   "value": ["Ja", "Nein"]
+                },
+                {
+                  "type": "character",
+                  "attributes": {},
+                  "value": ["isco_skill_level_4", "isco_skill_level_3"]
                 },
                 {
                   "type": "logical",

@@ -10,6 +10,16 @@ test_that("similarity based reasoning works as expected", {
   expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(algo_similarity_based_reasoning("KOCH", suggestion_type = "auxco")))
 })
 
+test_that("Special cases in the default training data don't lead to errors", {
+  # In the default german training data there are negative KldB codes for the special categories
+  # "Zeitarbeit", "studentische Hilfskraft", "FSJ" and "Arbeiter".
+  # With this test case we just want to check that these don't lead to weird behaviour / errors.
+  # Predictions are expected to be bad for these cases.
+  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(get_job_suggestions("Arbeiter")))
+
+  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(get_job_suggestions("studentische Hilfskraft")))
+})
+
 test_that("followup questions are correctly returned", {
   prep_followup_questions <- function(followup_questions) {
     # Convert the questions' answers to data.frame (from data.table)

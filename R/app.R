@@ -86,10 +86,9 @@ app <- function(questionnaire = questionnaire_web_survey(),
   ))
 
   server <- shinyServer(function(input, output, session) {
-    session$userData$control <- reactiveValues(current_question = 1, history = 1, log = 1)
     # current_question : position of the current question
     # history : complete history to implement the previous-button, starts with current_question and is updated when current_question changes
-    # log : log-file which contains the actual sequence how question have been asked
+    session$userData$control <- reactiveValues(current_question = 1, history = 1)
 
     output$MainAction <- renderUI({
       if (is.null(session$userData$user_info$session_id)) {

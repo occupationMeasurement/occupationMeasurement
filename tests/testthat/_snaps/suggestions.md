@@ -712,3 +712,10 @@
       ]
     }
 
+# final_codes are properly generated for special cases depending on auxco >= v1.2.1
+
+    {
+      "isco_08": "3512",
+      "kldb_10": "43102"
+    }
+

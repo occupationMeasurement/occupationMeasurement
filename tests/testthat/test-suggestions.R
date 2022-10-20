@@ -115,6 +115,15 @@ test_that("final codes are irrespective of the question order", {
   )
 })
 
+test_that("final_codes are properly generated for special cases depending on auxco >= v1.2.1", {
+  # Electronics engineering technicians
+  get_final_codes(
+    "4038",
+    followup_answers = list("Q4038_1" = 2, "Q4038_2" = 1)
+  ) |>
+    expect_snapshot_value()
+})
+
 test_that("final_codes throws an error when used improperly", {
   # Electronics engineering technicians
   expect_error(

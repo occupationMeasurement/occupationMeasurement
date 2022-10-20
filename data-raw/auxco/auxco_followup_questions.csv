@@ -672,46 +672,138 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 4014,Q4014_1,1,answer_option,"","","",1,nein,"",41323,3111,isco_skill_level_3,TRUE
 4014,Q4014_1,1,answer_option,"","","",2,ja,"",41324,2145,isco_skill_level_4,TRUE
 4035,Q4035_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
-4035,Q4035_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","",2511,"",FALSE
-4035,Q4035_1,1,answer_option,"","","",2,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
-4035,Q4035_1,1,answer_option,"","","",3,Entwicklung und Entwurf von Webseiten und Online-shops/ E-Commerce,"","",2513,"",FALSE
-4035,Q4035_1,1,answer_option,"","","",4,Entwicklung und Wartung von Code,"","",2514,"",FALSE
-4035,Q4035_1,1,answer_option,"","","",5,"Entwicklung, Kontrolle und Wartung von Datenbanken","","",2521,"",FALSE
-4035,Q4035_1,1,answer_option,"","","",6,Wartung und Verwaltung von informationstechnischen Systemen,"","",2522,"",FALSE
-4035,Q4035_1,1,answer_option,"","","",7,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","",2523,"",FALSE
+4035,Q4035_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","","","",FALSE
+4035,Q4035_1,1,answer_option,"","","",2,Entwurf und Entwicklung von Computersoftware,"","","","",FALSE
+4035,Q4035_1,1,answer_option,"","","",3,Entwicklung und Entwurf von Webseiten und Online-shops/ E-Commerce,"","","","",FALSE
+4035,Q4035_1,1,answer_option,"","","",4,Entwicklung und Wartung von Code,"","","","",FALSE
+4035,Q4035_1,1,answer_option,"","","",5,"Entwicklung, Kontrolle und Wartung von Datenbanken","","","","",FALSE
+4035,Q4035_1,1,answer_option,"","","",6,Wartung und Verwaltung von informationstechnischen Systemen,"","","","",FALSE
+4035,Q4035_1,1,answer_option,"","","",7,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","","","",FALSE
 4035,Q4035_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
-4035,Q4035_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43112,"",isco_skill_level_2,TRUE
-4035,Q4035_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43113,"",isco_skill_level_3,TRUE
-4035,Q4035_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43113,"",isco_skill_level_3,TRUE
-4035,Q4035_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43114,"",isco_skill_level_4,TRUE
+4035,Q4035_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"","","",isco_skill_level_2,TRUE
+4035,Q4035_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"","","",isco_skill_level_3,TRUE
+4035,Q4035_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","","","",isco_skill_level_3,TRUE
+4035,Q4035_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","","","",isco_skill_level_4,TRUE
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=1&Q4035_2=1,43112,2511,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=2&Q4035_2=1,43112,2512,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=3&Q4035_2=1,43112,2513,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=4&Q4035_2=1,43112,2514,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=5&Q4035_2=1,43112,2521,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=6&Q4035_2=1,43112,2522,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=7&Q4035_2=1,43112,2523,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=1&Q4035_2=2,43113,2511,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=2&Q4035_2=2,43113,2512,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=3&Q4035_2=2,43113,2513,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=4&Q4035_2=2,43113,2514,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=5&Q4035_2=2,43113,2521,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=6&Q4035_2=2,43113,2522,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=7&Q4035_2=2,43113,2523,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=1&Q4035_2=3,43113,2511,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=2&Q4035_2=3,43113,2512,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=3&Q4035_2=3,43113,2513,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=4&Q4035_2=3,43113,2514,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=5&Q4035_2=3,43113,2521,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=6&Q4035_2=3,43113,2522,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=7&Q4035_2=3,43113,2523,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=1&Q4035_2=4,43114,2511,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=2&Q4035_2=4,43114,2512,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=3&Q4035_2=4,43114,2513,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=4&Q4035_2=4,43114,2514,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=5&Q4035_2=4,43114,2521,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=6&Q4035_2=4,43114,2522,"",
+4035,,,aggregated_answer_encoding,"","","","","",Q4035_1=7&Q4035_2=4,43114,2523,"",
 4037,Q4037_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
-4037,Q4037_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","",2511,"",FALSE
-4037,Q4037_1,1,answer_option,"","","",2,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
-4037,Q4037_1,1,answer_option,"","","",3,Entwicklung von Steuerprogrammen für elektrotechnische Geräte und Maschinen,"","",2152,"",FALSE
-4037,Q4037_1,1,answer_option,"","","",4,Entwicklung und Wartung von Code,"","",2514,"",FALSE
-4037,Q4037_1,1,answer_option,"","","",5,Verwaltung von Netzwerkdaten und Computernetzwerken,"","",3513,"",FALSE
-4037,Q4037_1,1,answer_option,"","","",6,"Überwachung von Hardware, Software und Computerzubehör; um optimale Leistung zu garantieren","","",3511,"",FALSE
-4037,Q4037_1,1,answer_option,"","","",7,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","",2523,"",FALSE
+4037,Q4037_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","","","",FALSE
+4037,Q4037_1,1,answer_option,"","","",2,Entwurf und Entwicklung von Computersoftware,"","","","",FALSE
+4037,Q4037_1,1,answer_option,"","","",3,Entwicklung von Steuerprogrammen für elektrotechnische Geräte und Maschinen,"","","","",FALSE
+4037,Q4037_1,1,answer_option,"","","",4,Entwicklung und Wartung von Code,"","","","",FALSE
+4037,Q4037_1,1,answer_option,"","","",5,Verwaltung von Netzwerkdaten und Computernetzwerken,"","","","",FALSE
+4037,Q4037_1,1,answer_option,"","","",6,"Überwachung von Hardware, Software und Computerzubehör; um optimale Leistung zu garantieren","","","","",FALSE
+4037,Q4037_1,1,answer_option,"","","",7,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","","","",FALSE
 4037,Q4037_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
-4037,Q4037_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43122,"",isco_skill_level_2,TRUE
-4037,Q4037_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43123,"",isco_skill_level_3,TRUE
-4037,Q4037_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43123,"",isco_skill_level_3,TRUE
-4037,Q4037_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","",43124,"",isco_skill_level_4,TRUE
+4037,Q4037_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"","","",isco_skill_level_2,TRUE
+4037,Q4037_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"","","",isco_skill_level_3,TRUE
+4037,Q4037_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","","","",isco_skill_level_3,TRUE
+4037,Q4037_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Wirtschafsinformatik oder ein vergleichbares Studium","","","",isco_skill_level_4,TRUE
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=1&Q4037_2=1,43122,2511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=2&Q4037_2=1,43122,2512,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=3&Q4037_2=1,43122,2152,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=4&Q4037_2=1,43122,2514,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=5&Q4037_2=1,43122,3513,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=6&Q4037_2=1,43122,3511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=7&Q4037_2=1,43122,2523,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=1&Q4037_2=2,43123,2511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=2&Q4037_2=2,43123,2512,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=3&Q4037_2=2,43123,2152,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=4&Q4037_2=2,43123,2514,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=5&Q4037_2=2,43123,3513,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=6&Q4037_2=2,43123,3511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=7&Q4037_2=2,43123,2523,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=1&Q4037_2=3,43123,2511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=2&Q4037_2=3,43123,2512,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=3&Q4037_2=3,43123,2152,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=4&Q4037_2=3,43123,2514,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=5&Q4037_2=3,43123,3513,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=6&Q4037_2=3,43123,3511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=7&Q4037_2=3,43123,2523,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=1&Q4037_2=4,43124,2511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=2&Q4037_2=4,43124,2512,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=3&Q4037_2=4,43124,2152,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=4&Q4037_2=4,43124,2514,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=5&Q4037_2=4,43124,3513,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=6&Q4037_2=4,43124,3511,"",
+4037,,,aggregated_answer_encoding,"","","","","",Q4037_1=7&Q4037_2=4,43124,2523,"",
 4038,Q4038_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
-4038,Q4038_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","",2511,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",2,Technischer Support für Problemdiagnosen und Fehlerbehebungen,"","",3512,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",3,Errichtung und Verwaltung von Computernetzwerken,"","",3513,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",4,Wartung und Administration von Webseiten,"","",3514,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",5,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",6,Schreiben und Wartung von Programmcode,"","",2514,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",7,"Entwicklung, Kontrolle und Wartung von Datenbanken","","",2521,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",8,Wartung und Verwaltung von informationstechnischen Systemen,"","",2522,"",FALSE
-4038,Q4038_1,1,answer_option,"","","",9,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","",2523,"",FALSE
+4038,Q4038_1,1,answer_option,"","","",1,Konzeption von speziellen IT-Systemen für verschiedene Aufgaben und Anwenderbedürfnisse,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",2,Technischer Support für Problemdiagnosen und Fehlerbehebungen,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",3,Errichtung und Verwaltung von Computernetzwerken,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",4,Wartung und Administration von Webseiten,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",5,Entwurf und Entwicklung von Computersoftware,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",6,Schreiben und Wartung von Programmcode,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",7,"Entwicklung, Kontrolle und Wartung von Datenbanken","","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",8,Wartung und Verwaltung von informationstechnischen Systemen,"","","","",FALSE
+4038,Q4038_1,1,answer_option,"","","",9,Erforschung und Weiterentwicklung von Netzwerkarchitekturen zur Leistungsoptimierung,"","","","",FALSE
 4038,Q4038_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
-4038,Q4038_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43102,"",isco_skill_level_2,TRUE
-4038,Q4038_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43103,"",isco_skill_level_3,TRUE
-4038,Q4038_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43103,"",isco_skill_level_3,TRUE
-4038,Q4038_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43104,"",isco_skill_level_4,TRUE
+4038,Q4038_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"","","",isco_skill_level_2,TRUE
+4038,Q4038_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"","","",isco_skill_level_3,TRUE
+4038,Q4038_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","","","",isco_skill_level_3,TRUE
+4038,Q4038_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","","","",isco_skill_level_4,TRUE
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=1&Q4038_2=1,43102,2511,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=2&Q4038_2=1,43102,3512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=3&Q4038_2=1,43102,3513,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=4&Q4038_2=1,43102,3514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=5&Q4038_2=1,43102,2512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=6&Q4038_2=1,43102,2514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=7&Q4038_2=1,43102,2521,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=8&Q4038_2=1,43102,2522,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=9&Q4038_2=1,43102,2523,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=1&Q4038_2=2,43103,2511,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=2&Q4038_2=2,43103,3512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=3&Q4038_2=2,43103,3513,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=4&Q4038_2=2,43103,3514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=5&Q4038_2=2,43103,2512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=6&Q4038_2=2,43103,2514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=7&Q4038_2=2,43103,2521,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=8&Q4038_2=2,43103,2522,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=9&Q4038_2=2,43103,2523,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=1&Q4038_2=3,43103,2511,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=2&Q4038_2=3,43103,3512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=3&Q4038_2=3,43103,3513,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=4&Q4038_2=3,43103,3514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=5&Q4038_2=3,43103,2512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=6&Q4038_2=3,43103,2514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=7&Q4038_2=3,43103,2521,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=8&Q4038_2=3,43103,2522,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=9&Q4038_2=3,43103,2523,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=1&Q4038_2=4,43104,2511,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=2&Q4038_2=4,43104,3512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=3&Q4038_2=4,43104,3513,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=4&Q4038_2=4,43104,3514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=5&Q4038_2=4,43104,2512,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=6&Q4038_2=4,43104,2514,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=7&Q4038_2=4,43104,2521,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=8&Q4038_2=4,43104,2522,"",
+4038,,,aggregated_answer_encoding,"","","","","",Q4038_1=9&Q4038_2=4,43104,2523,"",
 4040,Q4040_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
 4040,Q4040_1,1,answer_option,"","","",1,Entwicklung von Computersoftware,"",43134,2512,"",TRUE
 4040,Q4040_1,1,answer_option,"","","",2,Konzeption und Entwicklung von IT-Systemen für spezielle Anforderungen,"",43134,2511,"",TRUE
@@ -724,16 +816,36 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 4042,Q4042_1,1,answer_option,"","","",2,Konzeption und Entwicklung von IT-Systemen für spezielle Anforderungen,"",43144,2511,"",TRUE
 4042,Q4042_1,1,answer_option,"","","",3,"Entwicklung, Kontrolle und Wartung von Datenbanken","",43144,2521,"",TRUE
 4043,Q4043_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
-4043,Q4043_1,1,answer_option,"","","",1,Entwurf und Entwicklung von Computersoftware,"","",2512,"",FALSE
-4043,Q4043_1,1,answer_option,"","","",2,"Entwicklung und Entwurf von Webseiten, Grafiken, Videos und Animationen","","",2513,"",FALSE
-4043,Q4043_1,1,answer_option,"","","",3,Entwicklung und Wartung von Code,"","",2514,"",FALSE
-4043,Q4043_1,1,answer_option,"","","",4,"Entwicklung, Kontrolle und Wartung von Datenbanken","","",2521,"",FALSE
-4043,Q4043_1,1,answer_option,"","","",5,Wartung und Administration von Webseiten,"","",3514,"",FALSE
+4043,Q4043_1,1,answer_option,"","","",1,Entwurf und Entwicklung von Computersoftware,"","","","",FALSE
+4043,Q4043_1,1,answer_option,"","","",2,"Entwicklung und Entwurf von Webseiten, Grafiken, Videos und Animationen","","","","",FALSE
+4043,Q4043_1,1,answer_option,"","","",3,Entwicklung und Wartung von Code,"","","","",FALSE
+4043,Q4043_1,1,answer_option,"","","",4,"Entwicklung, Kontrolle und Wartung von Datenbanken","","","","",FALSE
+4043,Q4043_1,1,answer_option,"","","",5,Wartung und Administration von Webseiten,"","","","",FALSE
 4043,Q4043_2,2,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
-4043,Q4043_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",43152,"",isco_skill_level_2,TRUE
-4043,Q4043_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"",43153,"",isco_skill_level_3,TRUE
-4043,Q4043_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43153,"",isco_skill_level_3,TRUE
-4043,Q4043_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","",43154,"",isco_skill_level_4,TRUE
+4043,Q4043_2,2,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"","","",isco_skill_level_2,TRUE
+4043,Q4043_2,2,answer_option,"","","",2,eine vertiefende berufliche Weiterbildung mit Mindestdauer von 18 Monaten,"","","",isco_skill_level_3,TRUE
+4043,Q4043_2,2,answer_option,"","","",3,"ein abgeschlossenes Bachelorstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","","","",isco_skill_level_3,TRUE
+4043,Q4043_2,2,answer_option,"","","",4,"ein abgeschlossenes Masterstudium in Informatik, Medieninformatik oder ein vergleichbares Studium","","","",isco_skill_level_4,TRUE
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=1&Q4043_2=1,43152,2512,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=2&Q4043_2=1,43152,2513,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=3&Q4043_2=1,43152,2514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=4&Q4043_2=1,43152,2521,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=5&Q4043_2=1,43152,3514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=1&Q4043_2=2,43153,2512,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=2&Q4043_2=2,43153,2513,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=3&Q4043_2=2,43153,2514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=4&Q4043_2=2,43153,2521,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=5&Q4043_2=2,43153,3514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=1&Q4043_2=3,43153,2512,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=2&Q4043_2=3,43153,2513,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=3&Q4043_2=3,43153,2514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=4&Q4043_2=3,43153,2521,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=5&Q4043_2=3,43153,3514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=1&Q4043_2=4,43154,2512,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=2&Q4043_2=4,43154,2513,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=3&Q4043_2=4,43154,2514,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=4&Q4043_2=4,43154,2521,"",
+4043,,,aggregated_answer_encoding,"","","","","",Q4043_1=5&Q4043_2=4,43154,3514,"",
 4048,Q4048_1,1,question,spezialisierung,In welchem Bereich sind Sie vorwiegend tätig?,In welchem Bereich waren Sie vorwiegend tätig?,"","","","","","",
 4048,Q4048_1,1,answer_option,"","","",1,Konzeption und Bewertung von IT-Systemen für verschiedene Anwenderbedürfnisse,"",43224,2511,"",TRUE
 4048,Q4048_1,1,answer_option,"","","",2,Kundensupport und Überprüfung von IT-Systemen und Software,"",43224,3512,"",TRUE
@@ -1285,12 +1397,18 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 9504,Q9504_1,1,answer_option,"","","",1,Ja,"",28312,7535,isco_skill_level_2,TRUE
 9504,Q9504_1,1,answer_option,"","","",2,Nein,"",28301,8155,isco_skill_level_1,TRUE
 9900,Q9900_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine berufliche Weiterbildung zum Fachwirt erforderlich?,War für diese Tätigkeit in der Regel eine berufliche Weiterbildung zum Fachwirt erforderlich?,"","","","","","",
-9900,Q9900_1,1,answer_option,"","","",1,Ja,"",51643,"",isco_skill_level_3,FALSE
-9900,Q9900_1,1,answer_option,"","","",2,Nein,"",51642,"",isco_skill_level_2,FALSE
+9900,Q9900_1,1,answer_option,"","","",1,Ja,"","","",isco_skill_level_3,FALSE
+9900,Q9900_1,1,answer_option,"","","",2,Nein,"","","",isco_skill_level_2,FALSE
 9900,Q9900_2,2,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
-9900,Q9900_2,2,answer_option,"","","",1,für Fluggäste Beratungs- und Serviceleistungen erbringen,"","",4221,"",TRUE
-9900,Q9900_2,2,answer_option,"","","",2,mit anderen Unternehmen Geschäftsbeziehungen unterhalten,"","",3324,"",TRUE
-9900,Q9900_2,2,answer_option,"","","",3,Transportleistungen koordinieren,"","",4323,"",TRUE
+9900,Q9900_2,2,answer_option,"","","",1,für Fluggäste Beratungs- und Serviceleistungen erbringen,"","","","",TRUE
+9900,Q9900_2,2,answer_option,"","","",2,mit anderen Unternehmen Geschäftsbeziehungen unterhalten,"","","","",TRUE
+9900,Q9900_2,2,answer_option,"","","",3,Transportleistungen koordinieren,"","","","",TRUE
+9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=1&Q9900_2=1,51643,4221,"",
+9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=2&Q9900_2=1,51642,4221,"",
+9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=1&Q9900_2=2,51643,3324,"",
+9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=2&Q9900_2=2,51642,3324,"",
+9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=1&Q9900_2=3,51643,4323,"",
+9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=2&Q9900_2=3,51642,4323,"",
 9999,Q9999_1,1,question,sonstige,Welchen Dienstgrad haben Sie?,Welchen Dienstgrad hatten Sie?,"","","","","","",
 9999,Q9999_1,1,answer_option,"","","",1,einen Mannschaftsdienstgrad,"",01402,0310,"",TRUE
 9999,Q9999_1,1,answer_option,"","","",2,"einen Unteroffiziersdienstgrad ohne Portepee (z.B. Unteroffizier, Stabsunteroffizier)","",01302,0210,"",TRUE

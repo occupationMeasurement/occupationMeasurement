@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Interactive Documentation 
+## Interactive Documentation
 
 The easiest way of understanding how the API works, is by starting it locally via `api()` and exploring the included Swagger documentation that will open automatically. Using the UI one can interactively explore different API endpoints, what input they expect and what output they return.
 
@@ -26,7 +26,11 @@ Since the API has multiple endpoints to be called, it expects a certain flow of 
 
 The diagram below demonstrates a minimal version of this flow, with different API endpoints highlighted in **bold**. More complex scenarios are possible if you e.g. implement multiple tries of generating job suggestions for cases where user input was ambiguous.
 
-```{r api_flow, echo=FALSE}
+```{r api_flow, eval=FALSE, include=FALSE}
+# Since Graphviz is rendering the diagram via JS, it actually includes the
+# whole JS library in the resulting document. It is therefore much more efficient to just
+# render the document once and then copy-paste the resulting svg as a figure.
+# This code is still included in-case the diagram needs to be updated.
 DiagrammeR::grViz('
 digraph G {
   suggestions [
@@ -64,5 +68,7 @@ digraph G {
 }
 ')
 ```
+
+![A diagram showing the flow of different API requests onto each other](../man/figures/api_flow.svg)
 
 For inspiration on how to implement the *user-facing* flow of an application using the api, refer to the interactive `app()` included in this package.

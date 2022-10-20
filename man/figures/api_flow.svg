@@ -1,0 +1,95 @@
+<svg viewBox="0.00 0.00 661.88 505.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 100%; height: 100%;">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 501.8)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-501.8 657.8845,-501.8 657.8845,4 -4,4"></polygon>
+<!-- suggestions -->
+<g id="node1" class="node">
+<title>suggestions</title>
+<polygon fill="none" stroke="#000000" points="551.077,-497.8 210.7007,-497.8 210.7007,-461.8 551.077,-461.8 551.077,-497.8"></polygon>
+<text text-anchor="start" x="218.5449" y="-476.6" font-family="Times,serif" font-size="14.00" fill="#000000">Get a list of job suggestions to show from </text>
+<text text-anchor="start" x="456.1221" y="-476.6" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="#000000">/v1/suggestions</text>
+</g>
+<!-- check_followup_questions -->
+<g id="node2" class="node">
+<title>check_followup_questions</title>
+<polygon fill="none" stroke="#000000" points="380.8889,-392.2 107.8975,-374.2 380.8889,-356.2 653.8802,-374.2 380.8889,-392.2"></polygon>
+<text text-anchor="middle" x="380.8889" y="-370" font-family="Times,serif" font-size="14.00" fill="#000000">Is suggestion.has_followup_questions == true?</text>
+</g>
+<!-- suggestions&#45;&gt;check_followup_questions -->
+<g id="edge1" class="edge">
+<title>suggestions-&gt;check_followup_questions</title>
+<path fill="none" stroke="#000000" d="M380.8889,-461.4059C380.8889,-445.1279 380.8889,-421.1223 380.8889,-402.4163"></path>
+<polygon fill="#000000" stroke="#000000" points="384.389,-402.3833 380.8889,-392.3833 377.389,-402.3834 384.389,-402.3833"></polygon>
+<text text-anchor="middle" x="431.6263" y="-431.2" font-family="Times,serif" font-size="14.00" fill="#000000">Respondent chose</text>
+<text text-anchor="middle" x="431.6263" y="-414.4" font-family="Times,serif" font-size="14.00" fill="#000000">a suggestion</text>
+</g>
+<!-- next_followup_question -->
+<g id="node3" class="node">
+<title>next_followup_question</title>
+<polygon fill="none" stroke="#000000" points="469.3287,-303.4 40.449,-303.4 40.449,-267.4 469.3287,-267.4 469.3287,-303.4"></polygon>
+<text text-anchor="start" x="48.419" y="-282.2" font-family="Times,serif" font-size="14.00" fill="#000000">Get the next followup question to show from </text>
+<text text-anchor="start" x="303.4836" y="-282.2" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="#000000">/v1/next_followup_question</text>
+</g>
+<!-- check_followup_questions&#45;&gt;next_followup_question -->
+<g id="edge2" class="edge">
+<title>check_followup_questions-&gt;next_followup_question</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M357.4845,-357.7055C338.259,-344.1561 310.7603,-324.776 289.0705,-309.4899"></path>
+<polygon fill="#000000" stroke="#000000" points="290.9633,-306.542 280.773,-303.6422 286.9308,-312.2639 290.9633,-306.542"></polygon>
+<text text-anchor="middle" x="339.7718" y="-325.6" font-family="Times,serif" font-size="14.00" fill="#000000">Yes</text>
+</g>
+<!-- final_codes -->
+<g id="node5" class="node">
+<title>final_codes</title>
+<polygon fill="none" stroke="#000000" points="501.7593,-109 260.0184,-109 260.0184,-73 501.7593,-73 501.7593,-109"></polygon>
+<text text-anchor="start" x="267.9537" y="-87.8" font-family="Times,serif" font-size="14.00" fill="#000000">Get the final codes from </text>
+<text text-anchor="start" x="407.5127" y="-87.8" font-family="Times,serif" font-weight="bold" font-size="14.00" fill="#000000">/v1/final_codes</text>
+</g>
+<!-- check_followup_questions&#45;&gt;final_codes -->
+<g id="edge3" class="edge">
+<title>check_followup_questions-&gt;final_codes</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M415.6038,-358.3592C437.3657,-346.4853 463.8652,-328.0439 477.8889,-303.4 501.2049,-262.4262 485.6642,-244.8908 487.8889,-197.8 488.6439,-181.8178 495.463,-175.8937 487.8889,-161.8 476.6369,-140.8627 456.1742,-125.0787 436.1344,-113.7896"></path>
+<polygon fill="#000000" stroke="#000000" points="437.7667,-110.6935 427.2968,-109.0711 434.4697,-116.8685 437.7667,-110.6935"></polygon>
+<text text-anchor="middle" x="498.4422" y="-228.4" font-family="Times,serif" font-size="14.00" fill="#000000">No</text>
+</g>
+<!-- check_finished_post_followup -->
+<g id="node4" class="node">
+<title>check_finished_post_followup</title>
+<polygon fill="none" stroke="#000000" points="254.8889,-197.8 30.5478,-179.8 254.8889,-161.8 479.2299,-179.8 254.8889,-197.8"></polygon>
+<text text-anchor="middle" x="254.8889" y="-175.6" font-family="Times,serif" font-size="14.00" fill="#000000">Is answer.is_coding_finished == true?</text>
+</g>
+<!-- next_followup_question&#45;&gt;check_finished_post_followup -->
+<g id="edge4" class="edge">
+<title>next_followup_question-&gt;check_finished_post_followup</title>
+<path fill="none" stroke="#000000" d="M254.8889,-267.0059C254.8889,-250.7279 254.8889,-226.7223 254.8889,-208.0163"></path>
+<polygon fill="#000000" stroke="#000000" points="258.389,-207.9833 254.8889,-197.9833 251.389,-207.9834 258.389,-207.9833"></polygon>
+<text text-anchor="middle" x="307.181" y="-236.8" font-family="Times,serif" font-size="14.00" fill="#000000">Respondend chose</text>
+<text text-anchor="middle" x="307.181" y="-220" font-family="Times,serif" font-size="14.00" fill="#000000">an answer</text>
+</g>
+<!-- check_finished_post_followup&#45;&gt;next_followup_question -->
+<g id="edge5" class="edge">
+<title>check_finished_post_followup:w-&gt;next_followup_question:w</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M30.8889,-179.8C-12.7555,-179.8 -7.4241,-270.3067 31.0141,-283.7413"></path>
+<polygon fill="#000000" stroke="#000000" points="30.4472,-287.195 40.8889,-285.4 31.6068,-280.2917 30.4472,-287.195"></polygon>
+<text text-anchor="middle" x="12.4422" y="-228.4" font-family="Times,serif" font-size="14.00" fill="#000000">No</text>
+</g>
+<!-- check_finished_post_followup&#45;&gt;final_codes -->
+<g id="edge6" class="edge">
+<title>check_finished_post_followup-&gt;final_codes</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M277.9992,-163.5127C297.3168,-149.8984 325.1347,-130.2934 346.9763,-114.9003"></path>
+<polygon fill="#000000" stroke="#000000" points="349.1667,-117.6385 355.3245,-109.0168 345.1342,-111.9167 349.1667,-117.6385"></polygon>
+<text text-anchor="middle" x="339.7718" y="-131.2" font-family="Times,serif" font-size="14.00" fill="#000000">Yes</text>
+</g>
+<!-- coding_finished -->
+<g id="node6" class="node">
+<title>coding_finished</title>
+<ellipse fill="none" stroke="#000000" cx="380.8889" cy="-18" rx="81.704" ry="18"></ellipse>
+<text text-anchor="middle" x="380.8889" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Coding is finished</text>
+</g>
+<!-- final_codes&#45;&gt;coding_finished -->
+<g id="edge7" class="edge">
+<title>final_codes-&gt;coding_finished</title>
+<path fill="none" stroke="#000000" d="M380.8889,-72.9551C380.8889,-64.8828 380.8889,-55.1764 380.8889,-46.1817"></path>
+<polygon fill="#000000" stroke="#000000" points="384.389,-46.0903 380.8889,-36.0904 377.389,-46.0904 384.389,-46.0903"></polygon>
+</g>
+</g>
+</svg>

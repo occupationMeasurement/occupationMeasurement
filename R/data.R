@@ -67,7 +67,7 @@
 #'   \item{\code{mapping_from_isco}}{data.table. Mapping from ISCO-08 categories to AuxCO categories.}
 #'   \item{\code{mapping_from_kldb}}{data.table. Mapping from KldB 2010 categories to AuxCO categories.}
 #' }
-"auxco-1.2.x"
+"auxco"
 
 #' Load AuxCO from a directory of CSV files
 #'

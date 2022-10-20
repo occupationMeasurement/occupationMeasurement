@@ -8,7 +8,7 @@ get_final_codes(
   suggestion_id,
   followup_answers,
   code_type = c("isco_08", "kldb_10"),
-  suggestion_type = "auxco",
+  suggestion_type = "auxco-1.2.x",
   suggestion_type_options = list()
 )
 }
@@ -31,7 +31,7 @@ Only auxco-based suggestion_types are supported.}
 suggestions. Supported options:
 - \code{datasets}: Pass specific datasets to be used whenn adding information
 to predictions e.g. use a specific version of the kldb or auxco.
-Supported datasets are: "auxco", "kldb-2010". By default the datasets
+Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 bundled with this package are used.}
 }
 \value{

@@ -67,7 +67,7 @@
 #'   \item{\code{mapping_from_isco}}{data.table. Mapping from ISCO-08 categories to AuxCO categories.}
 #'   \item{\code{mapping_from_kldb}}{data.table. Mapping from KldB 2010 categories to AuxCO categories.}
 #' }
-"auxco"
+"auxco-1.2.x"
 
 #' Load AuxCO from a directory of CSV files
 #'
@@ -373,7 +373,7 @@ load_kldb <- function() {
 #' Load a standard dataset, while supporting overriding by the user.
 #'
 #' @param dataset_name Name of the dataset. Currently supported values are
-#'   "auxco", "kldb-2010", "isco-08"
+#'   "auxco-1.2.x", "kldb-2010", "isco-08"
 #' @param user_provided_data List of datasets provided by the user.
 #'
 #' @return The requested dataset.
@@ -385,7 +385,7 @@ get_data <- function(dataset_name, user_provided_data = list()) {
   }
 
   # Provide default data elsewise
-  if (dataset_name == "auxco") {
+  if (dataset_name == "auxco-1.2.x") {
     return(occupationMeasurement::auxco)
   } else if (dataset_name == "kldb-2010") {
     return(load_kldb())

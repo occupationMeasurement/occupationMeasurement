@@ -32,7 +32,7 @@
 #'
 #' @examples
 #' app_settings <- create_app_settings(require_id = TRUE)
-create_app_settings <- function(suggestion_type = "auxco",
+create_app_settings <- function(suggestion_type = "auxco-1.2.x",
                                 require_id = FALSE,
                                 warn_before_leaving = FALSE,
                                 skip_followup_types = c(),
@@ -64,7 +64,7 @@ create_app_settings <- function(suggestion_type = "auxco",
 validate_app_settings <- function(app_settings) {
   # Validate sugestion_type
   possible_suggestion_types <- c(
-    "auxco", "kldb-2010"
+    "auxco-1.2.x", "kldb-2010"
   )
   stopifnot(app_settings$suggestion_type %in% possible_suggestion_types)
 

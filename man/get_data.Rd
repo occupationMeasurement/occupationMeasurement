@@ -8,7 +8,7 @@ get_data(dataset_name, user_provided_data = list())
 }
 \arguments{
 \item{dataset_name}{Name of the dataset. Currently supported values are
-"auxco", "kldb-2010", "isco-08"}
+"auxco-1.2.x", "kldb-2010", "isco-08"}
 
 \item{user_provided_data}{List of datasets provided by the user.}
 }

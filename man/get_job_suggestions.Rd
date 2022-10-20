@@ -6,7 +6,7 @@
 \usage{
 get_job_suggestions(
   text,
-  suggestion_type = "auxco",
+  suggestion_type = "auxco-1.2.x",
   num_suggestions = 5,
   suggestion_type_options = list(),
   score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.002),
@@ -21,7 +21,7 @@ get_job_suggestions(
 \item{text}{The raw text input from the user.}
 
 \item{suggestion_type}{Which type of suggestion to use / provide.
-Possible options are "auxco" and "kldb-2010".}
+Possible options are "auxco-1.2.x" and "kldb-2010".}
 
 \item{num_suggestions}{The maximum number of suggestions to show.
 This is an upper bound and less suggestions may be returned.
@@ -31,7 +31,7 @@ Defaults to 5.}
 suggestions. Supported options:
 - \code{datasets}: Pass specific datasets to be used whenn adding information
 to predictions e.g. use a specific version of the kldb or auxco.
-Supported datasets are: "auxco", "kldb-2010". By default the datasets
+Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 bundled with this package are used.}
 
 \item{score_thresholds}{A named list of thresholds between 0 and 1. Each

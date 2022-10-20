@@ -7,7 +7,7 @@ test_that("suggestions are generated correctly for 'Koch' in kldb format", {
 })
 
 test_that("similarity based reasoning works as expected", {
-  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(algo_similarity_based_reasoning("KOCH", suggestion_type = "auxco")))
+  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(algo_similarity_based_reasoning("KOCH", suggestion_type = "auxco-1.2.x")))
 })
 
 test_that("Special cases in the default training data don't lead to errors", {

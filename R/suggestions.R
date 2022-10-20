@@ -167,7 +167,7 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'
 #' @param text The raw text input from the user.
 #' @param suggestion_type Which type of suggestion to use / provide.
-#'   Possible options are "auxco" and "kldb-2010".
+#'   Possible options are "auxco-1.2.x" and "kldb-2010".
 #' @param num_suggestions The maximum number of suggestions to show.
 #'   This is an upper bound and less suggestions may be returned.
 #'   Defaults to 5.
@@ -175,7 +175,7 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'   suggestions. Supported options:
 #'     - `datasets`: Pass specific datasets to be used whenn adding information
 #'          to predictions e.g. use a specific version of the kldb or auxco.
-#'          Supported datasets are: "auxco", "kldb-2010". By default the datasets
+#'          Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 #'          bundled with this package are used.
 #' @param score_thresholds A named list of thresholds between 0 and 1. Each
 #'   entry should correspond to one of the `steps`. Results from that step will
@@ -229,7 +229,7 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'
 #' get_job_suggestions("Schlosser")
 get_job_suggestions <- function(text,
-                                suggestion_type = "auxco", # or "kldb-2010"
+                                suggestion_type = "auxco-1.2.x", # or "kldb-2010"
                                 num_suggestions = 5,
                                 suggestion_type_options = list(),
                                 score_thresholds = list(
@@ -329,7 +329,7 @@ get_job_suggestions <- function(text,
   if (!is.null(result)) {
     # Add distinctions to highly similar, but different categories
     if (distinctions) {
-      if (suggestion_type == "auxco") {
+      if (suggestion_type == "auxco-1.2.x") {
         result <- add_distinctions_auxco(previous_suggestions = result, num_suggestions = num_suggestions)
       } else if (suggestion_type == "kldb-2010") {
         # TODO: Fix this to run properly or remove it. This is currently only intended to work for kldb level 3
@@ -346,7 +346,7 @@ get_job_suggestions <- function(text,
     )
 
     # Add additional information to suggestions i.e. job labels, description, etc.
-    if (suggestion_type == "auxco") {
+    if (suggestion_type == "auxco-1.2.x") {
       # Add additional information
       result <- merge(result, get_suggestion_info(suggestion_ids = result$auxco_id, suggestion_type = suggestion_type), by = "auxco_id", sort = FALSE)
     } else if (suggestion_type == "kldb-2010") {
@@ -393,8 +393,8 @@ convert_suggestions <- function(suggestions, from, to, suggestion_type_options =
       joined_suggestions <- merge(kldb, suggestions, by.x = "kldb_id", by.y = "pred.code")
 
       return(joined_suggestions)
-    } else if (to == "auxco") {
-      auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+    } else if (to == "auxco-1.2.x") {
+      auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 
       # Merge with auxco information
       joined_suggestions <- merge(auxco$mapping_from_kldb, suggestions, by.x = "kldb_id", by.y = "pred.code")
@@ -416,7 +416,7 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, sugges
   # Column names used in data.table (for R CMD CHECK)
   score <- order_indicator <- similarity <- auxco_id <- similar_auxco_id <- NULL
 
-  auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+  auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 
   # Make sure highly improbable suggestions are shown at the end (we may even want to remove them)
   previous_suggestions <- previous_suggestions[score < 0.005, order_indicator := 0L]
@@ -499,14 +499,14 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 #' @examples
 #' # Get followup questions for "Post- und Zustelldienste"
 #' get_followup_questions("1004")
-get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco", suggestion_type_options = list(), include_answer_codes = FALSE) {
+get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco-1.2.x", suggestion_type_options = list(), include_answer_codes = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- question_id <- auxco_id <- NULL
 
   # Follow-up questions only work with auxco
-  stopifnot(suggestion_type == "auxco")
+  stopifnot(suggestion_type == "auxco-1.2.x")
 
-  auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+  auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 
   all_question_entries <- auxco$followup_questions
 
@@ -588,14 +588,14 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' @examples
 #' get_suggestion_info("9079")
 get_suggestion_info <- function(suggestion_ids,
-                                suggestion_type = "auxco",
+                                suggestion_type = "auxco-1.2.x",
                                 suggestion_type_options = list(),
                                 include_default_codes = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   auxco_id <- has_followup_questions <- NULL
 
-  if (suggestion_type == "auxco") {
-    auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+  if (suggestion_type == "auxco-1.2.x") {
+    auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 
     # Return relevant category entries
     categories <- data.table::as.data.table(auxco$categories)
@@ -648,13 +648,13 @@ get_suggestion_info <- function(suggestion_ids,
 #'     "Q9079_1" = 1
 #'   )
 #' )
-get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco", suggestion_type_options = list()) {
+get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco-1.2.x", suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- auxco_id <- NULL
 
-  stopifnot(suggestion_type == "auxco")
+  stopifnot(suggestion_type == "auxco-1.2.x")
 
-  auxco <- get_data("auxco", user_provided_data = suggestion_type_options$datasets)
+  auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 
   followup_questions <- get_followup_questions(
     suggestion_id = suggestion_id,

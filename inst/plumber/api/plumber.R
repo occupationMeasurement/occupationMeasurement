@@ -120,7 +120,7 @@ function(res, suggestion_id, followup_question_id = "", followup_answer_id = "")
 function(suggestion_id,
          followup_answers = numeric(),
          code_type = c("isco_08", "kldb_10"),
-         suggestion_type = "auxco") {
+         suggestion_type = "auxco-1.2.x") {
   question_ids <- occupationMeasurement::get_followup_questions(
     suggestion_id = suggestion_id
   ) |>

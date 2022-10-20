@@ -5,7 +5,7 @@
 \title{Create app_settings.}
 \usage{
 create_app_settings(
-  suggestion_type = "auxco",
+  suggestion_type = "auxco-1.2.x",
   require_id = FALSE,
   warn_before_leaving = FALSE,
   skip_followup_types = c(),
@@ -19,7 +19,7 @@ create_app_settings(
 }
 \arguments{
 \item{suggestion_type}{Which type of suggestion to use / provide.
-Possible options are "auxco" and "kldb-2010".}
+Possible options are "auxco-1.2.x" and "kldb-2010".}
 
 \item{require_id}{Are user_ids required?
 Defaults to FALSE}

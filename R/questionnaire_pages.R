@@ -159,7 +159,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
       return(
         nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0 &
           # TODO: Support kldb here as well
-          session$userData$app_settings$suggestion_type == "auxco"
+          session$userData$app_settings$suggestion_type == "auxco-1.2.x"
       )
     },
     run_before = function(session, page, ...) {
@@ -184,7 +184,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
       }
 
       # default: suggest categories descriptions from auxiliary classification
-      if (session$userData$app_settings$suggestion_type == "auxco") {
+      if (session$userData$app_settings$suggestion_type == "auxco-1.2.x") {
         df_suggestions <- session$userData$user_info$list_suggestions
 
         suggestion_main_label_column <- "task"

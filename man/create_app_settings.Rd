@@ -19,7 +19,7 @@ create_app_settings(
 }
 \arguments{
 \item{suggestion_type}{Which type of suggestion to use / provide.
-Possible options are "auxco" and "kldb".}
+Possible options are "auxco" and "kldb-2010".}
 
 \item{require_id}{Are user_ids required?
 Defaults to FALSE}

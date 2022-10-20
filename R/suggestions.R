@@ -77,7 +77,7 @@ create_document_term_matrix <- function(input) {
 #' \dontrun{
 #' get_job_suggestions(
 #'  "Arzt",
-#'  suggestion_type = "kldb",
+#'  suggestion_type = "kldb-2010",
 #'  num_suggestions = 1500,
 #'  steps = list(
 #'    simbased_default = list(
@@ -167,7 +167,7 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'
 #' @param text The raw text input from the user.
 #' @param suggestion_type Which type of suggestion to use / provide.
-#'   Possible options are "auxco" and "kldb".
+#'   Possible options are "auxco" and "kldb-2010".
 #' @param num_suggestions The maximum number of suggestions to show.
 #'   This is an upper bound and less suggestions may be returned.
 #'   Defaults to 5.
@@ -175,7 +175,7 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'   suggestions. Supported options:
 #'     - `datasets`: Pass specific datasets to be used whenn adding information
 #'          to predictions e.g. use a specific version of the kldb or auxco.
-#'          Supported datasets are: "auxco", "kldb". By default the datasets
+#'          Supported datasets are: "auxco", "kldb-2010". By default the datasets
 #'          bundled with this package are used.
 #' @param score_thresholds A named list of thresholds between 0 and 1. Each
 #'   entry should correspond to one of the `steps`. Results from that step will
@@ -229,7 +229,7 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'
 #' get_job_suggestions("Schlosser")
 get_job_suggestions <- function(text,
-                                suggestion_type = "auxco", # or "kldb"
+                                suggestion_type = "auxco", # or "kldb-2010"
                                 num_suggestions = 5,
                                 suggestion_type_options = list(),
                                 score_thresholds = list(
@@ -304,8 +304,8 @@ get_job_suggestions <- function(text,
 
     if (!is.null(temp_result)) {
       # Convert suggestions into the correct suggestion_type
-      # Note: At the moment all algorithms output "kldb" by default, this may change in the future
-      temp_result <- convert_suggestions(temp_result, from = "kldb", to = suggestion_type, suggestion_type_options = suggestion_type_options)
+      # Note: At the moment all algorithms output "kldb-2010" by default, this may change in the future
+      temp_result <- convert_suggestions(temp_result, from = "kldb-2010", to = suggestion_type, suggestion_type_options = suggestion_type_options)
 
       # Pick top X suggestions
       temp_result <- utils::head(temp_result[order(score, decreasing = TRUE)], num_suggestions)
@@ -331,7 +331,7 @@ get_job_suggestions <- function(text,
     if (distinctions) {
       if (suggestion_type == "auxco") {
         result <- add_distinctions_auxco(previous_suggestions = result, num_suggestions = num_suggestions)
-      } else if (suggestion_type == "kldb") {
+      } else if (suggestion_type == "kldb-2010") {
         # TODO: Fix this to run properly or remove it. This is currently only intended to work for kldb level 3
         # result <- add_distinctions_kldb(previous_suggestions = result, num_suggestions = num_suggestions)
       } else {
@@ -349,7 +349,7 @@ get_job_suggestions <- function(text,
     if (suggestion_type == "auxco") {
       # Add additional information
       result <- merge(result, get_suggestion_info(suggestion_ids = result$auxco_id, suggestion_type = suggestion_type), by = "auxco_id", sort = FALSE)
-    } else if (suggestion_type == "kldb") {
+    } else if (suggestion_type == "kldb-2010") {
       # Do nothing, maybe add some info from kldb_10 in the future
     }
 
@@ -384,10 +384,10 @@ convert_suggestions <- function(suggestions, from, to, suggestion_type_options =
 
   # TODO: Maybe use get_suggestion_info here in the future to get the information for merging
   # Convert suggestions from kldb format
-  if (from == "kldb") {
+  if (from == "kldb-2010") {
     # Convert from kldb to kldb (i.e. just add some extra information to suggestions)
-    if (to == "kldb") {
-      kldb <- get_data("kldb", user_provided_data = suggestion_type_options$datasets)
+    if (to == "kldb-2010") {
+      kldb <- get_data("kldb-2010", user_provided_data = suggestion_type_options$datasets)
 
       # Merge with kldb information
       joined_suggestions <- merge(kldb, suggestions, by.x = "kldb_id", by.y = "pred.code")
@@ -456,7 +456,7 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
   # Column names used in data.table (for R CMD CHECK)
   score <- pred.code <- kldb_id <- title <- excludes <- level <- NULL
 
-  kldb_10 <- get_data("kldb", user_provided_data = suggestion_type_options$datasets)
+  kldb_10 <- get_data("kldb-2010", user_provided_data = suggestion_type_options$datasets)
   kldb_10_lvl_3 <- kldb_10[level == 3]
 
   three_digit_codes <- previous_suggestions[, list(score = sum(score)), by = list(code = substr(pred.code, 1, 3))]
@@ -615,7 +615,7 @@ get_suggestion_info <- function(suggestion_ids,
     }
 
     return(categories)
-  } else if (suggestion_type == "kldb") {
+  } else if (suggestion_type == "kldb-2010") {
     # TODO: Add some info from kldb_10
     stop("Not implemented yet")
   }

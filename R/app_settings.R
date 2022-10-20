@@ -64,7 +64,7 @@ create_app_settings <- function(suggestion_type = "auxco",
 validate_app_settings <- function(app_settings) {
   # Validate sugestion_type
   possible_suggestion_types <- c(
-    "auxco", "kldb"
+    "auxco", "kldb-2010"
   )
   stopifnot(app_settings$suggestion_type %in% possible_suggestion_types)
 

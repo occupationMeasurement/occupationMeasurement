@@ -2,7 +2,7 @@
 testthat::test_that("app_settings are generated from env vars", {
   withr::local_envvar(
     # Check strings
-    SUGGESTION_TYPE = "kldb",
+    SUGGESTION_TYPE = "kldb-2010",
     # And booleans (re conversion)
     REQUIRE_ID = TRUE
   )
@@ -10,7 +10,7 @@ testthat::test_that("app_settings are generated from env vars", {
   expect_equal(
     occupationMeasurement:::create_app_settings_from_env(verbose = FALSE),
     create_app_settings(
-      suggestion_type = "kldb",
+      suggestion_type = "kldb-2010",
       require_id = TRUE
     )
   )

@@ -75,7 +75,7 @@ algo_similarity_based_reasoning(
 \dontrun{
 get_job_suggestions(
  "Arzt",
- suggestion_type = "kldb",
+ suggestion_type = "kldb-2010",
  num_suggestions = 1500,
  steps = list(
    simbased_default = list(

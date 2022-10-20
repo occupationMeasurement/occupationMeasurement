@@ -3,7 +3,7 @@ test_that("suggestions are generated correctly for 'Koch' in default format (aux
 })
 
 test_that("suggestions are generated correctly for 'Koch' in kldb format", {
-  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(get_job_suggestions("Koch", suggestion_type = "kldb")))
+  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(get_job_suggestions("Koch", suggestion_type = "kldb-2010")))
 })
 
 test_that("similarity based reasoning works as expected", {

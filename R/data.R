@@ -373,7 +373,7 @@ load_kldb <- function() {
 #' Load a standard dataset, while supporting overriding by the user.
 #'
 #' @param dataset_name Name of the dataset. Currently supported values are
-#'   "auxco", "kldb-2010", "isco"
+#'   "auxco", "kldb-2010", "isco-08"
 #' @param user_provided_data List of datasets provided by the user.
 #'
 #' @return The requested dataset.
@@ -389,7 +389,7 @@ get_data <- function(dataset_name, user_provided_data = list()) {
     return(occupationMeasurement::auxco)
   } else if (dataset_name == "kldb-2010") {
     return(load_kldb())
-  } else if (dataset_name == "isco") {
+  } else if (dataset_name == "isco-08") {
     return(occupationMeasurement::isco_08_en)
   }
 }

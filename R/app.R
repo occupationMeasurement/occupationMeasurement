@@ -163,7 +163,9 @@ app <- function(questionnaire = questionnaire_web_survey(),
       page <- questionnaire[[session$userData$control$current_question]]
       run_before_output <- execute_run_before(
         page = page,
-        session = session
+        session = session,
+        input = input,
+        output = output
       ) # prev to output
       return(
         execute_render(
@@ -183,7 +185,8 @@ app <- function(questionnaire = questionnaire_web_survey(),
       execute_run_after(
         page = questionnaire[[session$userData$control$current_question]],
         session = session,
-        input = input
+        input = input,
+        output = output
       )
 
       # Determine the next question
@@ -208,22 +211,6 @@ app <- function(questionnaire = questionnaire_web_survey(),
         session$userData$control$history <- session$userData$control$history[-length(session$userData$control$history)]
         session$userData$control$current_question <- session$userData$control$history[length(session$userData$control$history)]
       }
-    })
-
-    # Register when someone expands the description text
-    observeEvent(input$toggleLongDesc, {
-      # some logging if people click on the job titles to toggle the descriptions
-      # user_id: user_id
-      # session_id: session id
-      # toggle_message: an action send via javaScipt input$toggleLongDesc actions
-      # time: timestamp when action was saved
-      data_to_save <- data.frame(
-        user_id = session$userData$user_info$id,
-        session_id = session$userData$user_info$session_id,
-        toggle_message = input$toggleLongDesc,
-        time = as.character(Sys.time())
-      )
-      save_data("toggle_submitted", data_to_save, session)
     })
   })
 

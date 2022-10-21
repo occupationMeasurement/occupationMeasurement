@@ -162,7 +162,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
           session$userData$app_settings$suggestion_type == "auxco-1.2.x"
       )
     },
-    run_before = function(session, page, ...) {
+    run_before = function(session, page, input, ...) {
       # Prepare texts to be shown
       if (session$userData$session_settings$tense == "past") {
         if (nrow(session$userData$user_info$list_suggestions) == 1) {
@@ -258,6 +258,22 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         page_id = page$page_id,
         question_text = question_text
       )
+
+      # Register when someone expands the description text
+      observeEvent(input$toggleLongDesc, {
+        # some logging if people click on the job titles to toggle the descriptions
+        # user_id: user_id
+        # session_id: session id
+        # toggle_message: an action send via javaScipt input$toggleLongDesc actions
+        # time: timestamp when action was saved
+        data_to_save <- data.frame(
+          user_id = session$userData$user_info$id,
+          session_id = session$userData$user_info$session_id,
+          toggle_message = input$toggleLongDesc,
+          time = as.character(Sys.time())
+        )
+        save_data("toggle_submitted", data_to_save, session)
+      })
 
       return(list(
         transition_text = transition_text,

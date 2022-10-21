@@ -95,7 +95,7 @@ check_condition <- function(page, session, ...) {
 #' @param session The shiny session
 #' @param ... All additional arguments are passed along
 #' @keywords internal
-execute_run_before <- function(page, session, ...) {
+execute_run_before <- function(page, session, input, output, ...) {
   if (session$userData$app_settings$verbose) {
     cat("Page:", page$page_id, "\n")
   }
@@ -103,7 +103,7 @@ execute_run_before <- function(page, session, ...) {
   # Initialize trial data e.g. set first timestamp, set ids etc.
   init_page_data(session = session, page_id = page$page_id)
   if (!is.null(page$run_before)) {
-    return(page$run_before(session = session, page = page, ...))
+    return(page$run_before(session = session, page = page, input = input, output = output, ...))
   }
 }
 
@@ -129,12 +129,12 @@ execute_render <- function(page, session, run_before_output, ...) {
 #' @param input The shiny input
 #' @param ... All additional arguments are passed along
 #' @keywords internal
-execute_run_after <- function(page, session, input, ...) {
+execute_run_after <- function(page, session, input, output, ...) {
   # Finalize the trial data e.g. set the final timestamp
   finalize_data(session = session, page_id = page$page_id)
 
   if (!is.null(page$run_after)) {
-    page$run_after(session = session, page = page, input = input, ...)
+    page$run_after(session = session, page = page, input = input, output = output, ...)
   }
 
   ## Save the page's data

@@ -648,7 +648,7 @@ get_suggestion_info <- function(suggestion_ids,
 #'     "Q9079_1" = 1
 #'   )
 #' )
-get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco-1.2.x", suggestion_type_options = list()) {
+get_final_codes <- function(suggestion_id, followup_answers = list(), standardized_answer_levels = NULL, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco-1.2.x", suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- auxco_id <- NULL
 
@@ -665,9 +665,34 @@ get_final_codes <- function(suggestion_id, followup_answers, code_type = c("isco
     entry_type == "aggregated_answer_encoding" & auxco_id == suggestion_id,
   ]
 
-  # Check whhether names are set on follow_answers
+  # Check whhether names are set on followup_answers
   if (length(followup_answers) > 0 && !is.character(names(followup_answers))) {
     stop("followup_answers need to be supplied as a named list, with question_ids as names")
+  }
+  # Check whhether names are set on standardized_answer_levels
+  if (length(standardized_answer_levels) > 0 && !is.character(names(standardized_answer_levels))) {
+    stop("standardized_answer_levels need to be supplied as a named list, with question_types as names")
+  }
+
+  # Possibly fill in followup answers based on standardized response levels
+  if (length(standardized_answer_levels) > 0) {
+    for (followup_question in followup_questions) {
+      question_id <- followup_question$question_id
+      question_type <- followup_question$type
+
+      # Only fill in the followup answer if there is no answer yet,
+      # but there is a matching standardized level
+      if (
+        !(question_id %in% names(followup_answers)) &&
+        question_type %in% names(standardized_answer_levels)
+      ) {
+        # Fill in the followup answer based on the matching standardized level
+        followup_answers[question_id] <- followup_question$answers[
+          corresponding_answer_level == standardized_answer_levels[question_type],
+          answer_id
+        ]
+      }
+    }
   }
 
   if (nrow(aggregated_answer_encodings) > 0 && length(followup_answers) > 0) {

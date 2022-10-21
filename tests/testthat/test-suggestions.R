@@ -115,6 +115,54 @@ test_that("final codes are irrespective of the question order", {
   )
 })
 
+test_that("final_codes are properly generated when using standardized_answer_levels", {
+  # Replace the answer to one followup question with a standardized answer level
+  expect_equal(
+    get_final_codes(
+      "1733",
+      followup_answers = list(
+        Q1733_1 = 1
+      ),
+      standardized_answer_levels = list(
+        anforderungsniveau = "isco_skill_level_3"
+      )
+    ),
+    list(
+      isco_08 = "3113",
+      kldb_10 = "26303"
+    )
+  )
+
+  # Use only a standardized answer level (dropping followup_answers)
+  expect_equal(
+    get_final_codes(
+      "3553",
+      standardized_answer_levels = list(
+        anforderungsniveau = "isco_skill_level_2"
+      )
+    ),
+    list(
+      isco_08 = "4415",
+      kldb_10 = "73312"
+    )
+  )
+
+  # Ignore irrelevant standardized answer levels
+  expect_equal(
+    get_final_codes(
+      "1005",
+      standardized_answer_levels = list(
+        anforderungsniveau = "isco_skill_level_2",
+        aufsicht = "isco_manager"
+      )
+    ),
+    list(
+      isco_08 = "1324",
+      kldb_10 = "51394"
+    )
+  )
+})
+
 test_that("final_codes are properly generated for special cases depending on auxco >= v1.2.1", {
   # Electronics engineering technicians
   get_final_codes(

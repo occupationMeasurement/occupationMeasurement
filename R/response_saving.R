@@ -28,6 +28,12 @@ append_tables <- list(
     "question_text",
     "response_id",
     "response_text"
+  ),
+  "toggle_submitted" = c(
+    "user_id",
+    "session_id",
+    "toggle_message",
+    "time"
   )
 )
 prepare_data_for_saving <- function(table_name, data) {

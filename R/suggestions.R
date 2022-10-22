@@ -627,6 +627,15 @@ get_suggestion_info <- function(suggestion_ids,
 #' @param followup_answers A named list of the question_ids with their
 #'   respective answers to the followup_questions.
 #'   Question ids correspond to list names, answers correspond to list values.
+#' @param standardized_answer_levels A named list of standardized isco
+#'   answer levels. Names in the list correspond to the followup question type,
+#'   while values correspond to standard answer levels.
+#'   These can be used instead of some followup questions if
+#'   the information is available already from a different source.
+#'   Please note that standardized answer levels are *not* available for all
+#'   question types. For a list of options please take a look at the
+#'   followup questions included in the auxco for example via
+#'   `occupationMeasurement::auxco$followup_questions`.
 #' @param code_type Which type of codes should be returned.
 #'   Multiple codes can be returned at the same time.
 #'   Supported types of codes are "isco_08" and "kldb_10".
@@ -641,16 +650,26 @@ get_suggestion_info <- function(suggestion_ids,
 #'
 #' @examples
 #' get_final_codes(
-#'   # First option for "Koch"
-#'   "9079",
+#'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
+#'   "9076",
 #'   followup_answers = list(
-#'     # The first answer option in the followup questions
-#'     "Q9079_1" = 1
+#'     # The first answer option in the first followup question
+#'     "Q9076_1" = 1
+#'   )
+#' )
+#'
+#' # The same, but using standardized answer levels
+#' get_final_codes(
+#'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
+#'   "9076",
+#'   standardized_answer_levels = list(
+#'     # A response corresponding to the standard ISCO Level "manager"
+#'     "aufsicht" = "isco_manager"
 #'   )
 #' )
 get_final_codes <- function(suggestion_id, followup_answers = list(), standardized_answer_levels = NULL, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco-1.2.x", suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
-  entry_type <- auxco_id <- NULL
+  entry_type <- auxco_id <- corresponding_answer_level <- answer_id <- NULL
 
   stopifnot(suggestion_type == "auxco-1.2.x")
 

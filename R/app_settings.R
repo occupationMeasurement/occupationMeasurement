@@ -2,6 +2,9 @@
 #'
 #' This is the primary and most convenient way of configuring the app.
 #'
+#' @param default_num_suggestions The number of suggestions to generate and
+#'   display to users. Accepts all positive integers.
+#'   Defaults to 5.
 #' @param require_id Are user_ids required?
 #'   Defaults to FALSE
 #' @param warn_before_leaving Should users be warned that their progress will
@@ -20,6 +23,17 @@
 #' @param get_job_suggestion_params List of parameters to pass to
 #'   get_job_suggestion. Refer to [get_job_suggestions()] for a list of
 #'   supported parameters.
+#' @param default_tense We may not always want to ask for the current
+#'   occupation, but maybe also for the previous occupation in case of
+#'   pensioners etc. with a value of "past".
+#'   Possible values are "present" (default), "past".
+#'   This setting can be overwritten on a session-by-session basis with the
+#'   URL-Query parameter "tense".
+#' @param default_extra_instructions Display additional instructions for e.g.
+#'   an interviewer conducting an interview.
+#'   Possible values are "on" (default), "off".
+#'   This setting can be overwritten on a session-by-session basis with the
+#'   URL-Query parameter "extra_instructions".
 #' @param verbose Should additional output be printed when running?
 #'   Defaults to TRUE.
 #' @param .validate Whether the created app_settings should be validated.
@@ -33,6 +47,7 @@
 #' @examples
 #' app_settings <- create_app_settings(require_id = TRUE)
 create_app_settings <- function(suggestion_type = "auxco-1.2.x",
+                                default_num_suggestions = 5,
                                 require_id = FALSE,
                                 warn_before_leaving = FALSE,
                                 skip_followup_types = c(),
@@ -40,10 +55,13 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
                                 response_output_dir = file.path("output", "responses"),
                                 handle_data = NULL,
                                 get_job_suggestion_params = NULL,
+                                default_tense = "present",
+                                default_extra_instructions = "on",
                                 verbose = TRUE,
                                 .validate = TRUE) {
   final_app_settings <- list(
     suggestion_type = suggestion_type,
+    default_num_suggestions = default_num_suggestions,
     require_id = require_id,
     warn_before_leaving = warn_before_leaving,
     skip_followup_types = skip_followup_types,
@@ -51,6 +69,8 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
     response_output_dir = response_output_dir,
     handle_data = handle_data,
     get_job_suggestion_params = get_job_suggestion_params,
+    default_tense = default_tense,
+    default_extra_instructions = default_extra_instructions,
     verbose = verbose
   )
 

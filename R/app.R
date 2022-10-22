@@ -137,16 +137,29 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
         # Save settings on the app level and settings on the session level
         session$userData$app_settings <- app_settings
+        # Initialize session settings based on query parameters
+        # Defaults are set via app_settings
         session$userData$session_settings <- list(
           # We don't always want to ask for the current job.
           # If a different, past job is needed the question texts need to change
-          tense = query_value(name_in_query = "tense", default = "present", validate = c("present", "past")),
+          tense = query_value(
+            name_in_query = "tense",
+            default = app_settings$default_tense,
+            validate = c("present", "past")
+          ),
           # Is conversational interviewing turned on?
           # Only in this case are the job titles and the task descriptions shown.
-          # (default: on)
-          extra_instructions = query_value(name_in_query = "extra_instructions", default = "on", validate = c("on", "off")),
-          # Number of response options to be shown (default: 5)
-          num_suggestions = as.integer(query_value(name_in_query = "num_suggestions", default = 5, validate = function(val) !is.na(as.integer(val))))
+          extra_instructions = query_value(
+            name_in_query = "extra_instructions",
+            default = app_settings$default_extra_instructions,
+            validate = c("on", "off")
+          ),
+          # Number of response options to be shown
+          num_suggestions = as.integer(query_value(
+            name_in_query = "num_suggestions",
+            default = app_settings$default_num_suggestions,
+            validate = function(val) !is.na(as.integer(val)))
+          )
         )
       }
 

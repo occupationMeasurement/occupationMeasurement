@@ -6,7 +6,8 @@
 \usage{
 get_final_codes(
   suggestion_id,
-  followup_answers,
+  followup_answers = list(),
+  standardized_answer_levels = NULL,
   code_type = c("isco_08", "kldb_10"),
   suggestion_type = "auxco-1.2.x",
   suggestion_type_options = list()

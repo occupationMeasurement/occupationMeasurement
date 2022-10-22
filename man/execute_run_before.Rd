@@ -4,7 +4,7 @@
 \alias{execute_run_before}
 \title{Called internally by the shiny server.}
 \usage{
-execute_run_before(page, session, ...)
+execute_run_before(page, session, input, output, ...)
 }
 \arguments{
 \item{session}{The shiny session}

@@ -4,7 +4,7 @@
 \alias{execute_run_after}
 \title{Called internally by the shiny server.}
 \usage{
-execute_run_after(page, session, input, ...)
+execute_run_after(page, session, input, output, ...)
 }
 \arguments{
 \item{session}{The shiny session}

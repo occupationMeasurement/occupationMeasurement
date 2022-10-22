@@ -6,6 +6,7 @@
 \usage{
 create_app_settings(
   suggestion_type = "auxco-1.2.x",
+  default_num_suggestions = 5,
   require_id = FALSE,
   warn_before_leaving = FALSE,
   skip_followup_types = c(),
@@ -13,6 +14,8 @@ create_app_settings(
   response_output_dir = file.path("output", "responses"),
   handle_data = NULL,
   get_job_suggestion_params = NULL,
+  default_tense = "present",
+  default_extra_instructions = "on",
   verbose = TRUE,
   .validate = TRUE
 )
@@ -20,6 +23,10 @@ create_app_settings(
 \arguments{
 \item{suggestion_type}{Which type of suggestion to use / provide.
 Possible options are "auxco-1.2.x" and "kldb-2010".}
+
+\item{default_num_suggestions}{The number of suggestions to generate and
+display to users. Accepts all positive integers.
+Defaults to 5.}
 
 \item{require_id}{Are user_ids required?
 Defaults to FALSE}
@@ -45,6 +52,19 @@ data (A dataframe of data to save), session (the user's current session).}
 \item{get_job_suggestion_params}{List of parameters to pass to
 get_job_suggestion. Refer to \code{\link[=get_job_suggestions]{get_job_suggestions()}} for a list of
 supported parameters.}
+
+\item{default_tense}{We may not always want to ask for the current
+occupation, but maybe also for the previous occupation in case of
+pensioners etc. with a value of "past".
+Possible values are "present" (default), "past".
+This setting can be overwritten on a session-by-session basis with the
+URL-Query parameter "tense".}
+
+\item{default_extra_instructions}{Display additional instructions for e.g.
+an interviewer conducting an interview.
+Possible values are "on" (default), "off".
+This setting can be overwritten on a session-by-session basis with the
+URL-Query parameter "extra_instructions".}
 
 \item{verbose}{Should additional output be printed when running?
 Defaults to TRUE.}

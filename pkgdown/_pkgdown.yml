@@ -1,6 +1,16 @@
 url: ~
 template:
   bootstrap: 5
+articles:
+- title: Using the Package
+  navbar: ~
+  contents:
+  - occupationMeasurement
+  - app
+  - app-questionnaire
+  - app-database
+  - api
+  - deployment
 reference:
 - title: Using the App / Api
 - contents:

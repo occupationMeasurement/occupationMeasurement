@@ -1,8 +1,8 @@
 ---
-title: "Saving Results in a Database"
+title: "Saving App Data in a Database"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Saving Results in a Database}
+  %\VignetteIndexEntry{Saving App Data in a Database}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,13 +16,17 @@ knitr::opts_chunk$set(
 
 Results from interactive occupation coding with the package via `app()` can easily be saved in a database by following this guide.
 
-The key feature to do this is by using `handle_data` in `create_app_settings()`. This function will be called whenever there is data to be saved by the package. Whenever it is called, it's called with the following arguments, with the function be called like this: `handle_data(table_name, data, session)`.
+The key feature to do this is by using `handle_data` in `create_app_settings()`. This function will be called whenever there is data to be saved by the package. Whenever it is called, it's called with the following arguments, with the function to be called like this: `handle_data(table_name, data, session)`.
 
-Currently there are 3 different forms of `data` that are being handled. These are differentiated by different `table_name`(s).
+Currently there are 4 different forms of `data` that are being handled. These are differentiated by different `table_name`(s).
 
 1. `table_name == "answers"`: The user's answers themselves, with one row per question. These are saved, whenever a page gets submitted and therefore multiple times per participation.
 2. `table_name == "results_overview"`: A combined version of the user's answers and information about the user themselves. These are saved at the end of the questionnaire and therefore only once per participation.
 3. `table_name == "occupations_suggested"`: The list of suggestions shown to the user. These are saved at the moment when suggestions are generated and therefore *typically* once per participation, but not necessarily.
+4. `table_name == "toggle_submitted"`: Information on when and which suggestions were clicked to be expanded (or closed) by a participant.
+5. Any additional tables you might choose to save yourself if you e.g. created a custom questionnaire.
+
+For a more detailed explanation of what data is being saved, check out the section "Data" in `vignette("app")`. The data you find in the `csv` files saved by the app corresponds to the `data` argument in `handle_data()`. It has to be noted, however, that for some tables e.g. `answers`, `handle_data()` will be called whenever a page is submitted to also capture partial data.
 
 The `session` being passed holds information on the current [shiny session](https://shiny.rstudio.com/reference/shiny/latest/session.html) and can usually be ignored when it comes to saving data.
 

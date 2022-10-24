@@ -15,12 +15,12 @@ Values are added / overwritten based on the names provided in the list.}
 \description{
 Data is automatically linked to a page's page_id.
 Note that page data is \emph{not} automatically saved and you probably want
-to use page$set_question_data instead.
+to use set_question_data instead.
 }
 \examples{
 \dontrun{
 # This code is expected to be run in e.g. run_before
-page$set_page_data(session = session, values = list(
+set_page_data(session = session, page_id = "example", values = list(
   user_answer = "Some User Answer"
 ))
 }

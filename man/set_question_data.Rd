@@ -37,13 +37,18 @@ There can be multiple questions on any given page.
 \examples{
 \dontrun{
 # This code is expected to be run in e.g. run_before
-page$set_question_data(
+set_question_data(
   session = session,
+  page_id = "example",
   question_text = "How are you?"
 )
-page$set_question_data(
+set_question_data(
   session = session,
+  page_id = "example",
   response_text = "I'm doing great!"
 )
 }
+}
+\seealso{
+\code{\link[=get_question_data]{get_question_data()}}
 }

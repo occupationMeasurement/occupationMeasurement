@@ -71,4 +71,8 @@ digraph G {
 
 ![A diagram showing the flow of different API requests onto each other](../man/figures/api_flow.svg)
 
-For inspiration on how to implement the *user-facing* flow of an application using the api, refer to the interactive `app()` included in this package.
+For inspiration on how to implement the *user-facing* flow of an application using the api, take a look at `vignette("app")` and refer to the interactive `app()` included in this package.
+
+# Deployment
+
+If you want to deploy the API to an actual server for use in a production environment you can find detailed instructions in `vignette("deployment")`.

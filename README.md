@@ -4,7 +4,7 @@
 [![R-CMD-check](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-A package to help with the (interactive) coding and measurement of occupations.
+A toolbox to help with all tasks around the interactive coding and measurement of occupations.
 
 ## Installation
 
@@ -16,15 +16,16 @@ remotes::install_github("occupationMeasurement/occupationMeasurement")
 
 There are three main ways of using this package, with varying degrees of flexibility and convenience:
 
-1. Use the included shiny app which provides all functionality to run your own survey out-of-the-box.
-2. Use the included JSON API to connect your own survey or application for maximum flexibility.
-3. Use the R functions themselves to implement your own custom functionality.
+1. Use the included shiny `app()` which provides all functionality to run your own survey out-of-the-box.
+2. Use the included JSON `api()` to use the package with your own survey-tool or application for maximum flexibility.
+3. Use the R functions directly to implement your own custom functionality or package.
 
-For a more detailed introduction refer to the `vignette("occupationMeasurement")`.
+For a more detailed overview of the package refer to `vignette("occupationMeasurement")`.
 
-### 1. Using the interactive Shiny App
+### Using the interactive App
 
-To start the interactive shiny app just run the `app()` function.
+The interactive app can be started with the function `app()` function. 
+More information about the interactive app can be found in `vignette("app")` and the help page `?app`.
 
 ```r
 # Run the interactive shiny app
@@ -40,20 +41,22 @@ library(occupationMeasurement)
 app(questionnaire = demo_questionnaire())
 ```
 
-### 2. Using the JSON API
+### Using the JSON API
 
 If you want to include this package in your custom survey-tool or app or if you just need higher flexibility, you can use the included `api()`.
 
-The api server can be started by simply running the code below (the API will open a page with additional documentation when you start it):
+The api server can be started by simply running the code below, opening its included documentation by default.
+
+More information about the API can be found in `vignette("api")` and the help page `?api`.
 
 ```r
 # Start the API (and open its documentation)
 occupationMeasurement::api()
 ```
 
-### 3. Using the Exported R Functions
+### Using the Exported R Functions
 
-As this is an R package you can also use the functions within it directly. This way you can integrate into your codebase or extend its functionality.
+As this is an R package you can also use the functions within it directly. This way you can integrate it into your codebase, extend its functionality or even use it in your own R package.
 
 If you want to, for example, generate some suggestions for a certain text input you can do so by just running the code below:
 
@@ -64,33 +67,42 @@ library(occupationMeasurement)
 get_job_suggestions("Koch", num_suggestions = 3)
 ```
 
-There are of course many other functions available as well, to check them out, just take a look at the documentation.
+There are of course many other functions available as well, to check them out, just take a look at the function reference section in the documentation.
 
 ## Development
 
 ### Testing
 
-Tests can be run with the following snippet:
+The included tests can be run with the following snippet.
+
 ```r
 devtools::test()
 ```
 
+It is recommended to also run a more detailed check via the following snippet.
+
+```r
+devtools::check()
+```
+
 ### Formatting
 
-After making changes to the code, it is advised to automatically format all code with the {styler} package. This can be done by running.
+After making changes to the code, it is advised to automatically format all code with the {styler} package. This can be done with the following snippet.
 
 ```r
 styler::style_pkg()
 ```
 
-### Building the documentation website
-The documentation website is powered by {pkgdown}. It can be rebuilt by running 
+### Documentation
+
+The documentation website is powered by {pkgdown}. It can be rebuilt with the following snippet. 
 
 ```r
 pkgdown::build_site()
 ```
 
 To set up everything for hosting the documentation on github pages use `usethis::use_pkgdown_github_pages()`.
+
 During development, `roxygen2::roxygenise()` is useful to update .Rd-files.
 
 ## Acknowledgments

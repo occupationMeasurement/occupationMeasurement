@@ -14,9 +14,19 @@ knitr::opts_chunk$set(
 )
 ```
 
+This package implements a toolbox of functionality to help with the (interactive) coding of occupations.
+
+This includes (among other things) functionality to generate a list of suggestions for occupation categories based on free text input, to conduct a flexible interactive survey, to automatically save survey data in different forms and to make data and suggestions available via an API.
+
+Occupation coding is currently mainly implemented by using the [German Auxiliary Classification of Occupations (AuxCO)](https://github.com/occupationMeasurement/auxiliary-classification) as it was specifically developed for interview settings. Final occupation codings are available for the International Standard Classification of Occupations 2008 (ISCO-08) and the German Klassifikation der Berufe 2010 (KldB-2010).
+
+Due to limitations in available training data the tool is currently only implemented in German. Support for other languages, especially English, is planned, but pending on additional data. 
+
 # Interactive App
 
-The classical way of using this package is by using the interactive shiny app that comes packaged with it. This app comes with "batteries-included" to run right out-of-the box and allow you to collect data immediately.
+The classical way of using this package is by using the interactive application that comes packaged with it. This app comes with "batteries-included" to run right out-of-the box and allow you to collect data immediately.
+
+Detailed information on using the app, can be found in `vignette("app")` and the help page `?app`.
 
 ```{r eval=FALSE}
 # Run the interactive shiny app
@@ -36,30 +46,11 @@ app(
 )
 ```
 
-Moreover, you're also able to modify these questionnaires or just build your own, read more about this in `vignette("questionnaire")`.
-
-## App Settings
-
-There are also multiple settings available to the app to change how it behaves, where data is saved and much more. You can read about all options in `create_app_settings()`. If you're specifically looking to save data into a database, you can find a detailed explanation in `vignette("database")`.
-
-```{r eval=FALSE}
-library(occupationMeasurement)
-
-app(
-  # Use the questionnaire for guided interviews
-  questionnaire = questionnaire_interviewer_administerd(),
-  app_settings = create_app_settings(
-    # ... specify your custom settings here
-    require_id = TRUE
-  )
-)
-```
-
-If you want to deploy the shiny app to an actual server for use in a production environment you can find the instructions in `vignette("deployment")`.
+Moreover, you're also able to modify questionnaires or just build your own from sratch. You can read more about this functionality in `vignette("app-questionnaire")`.
 
 # JSON-API
 
-If you're looking to integrate the package into your existing setup or tool the JSON-API that comes with the package might suit you better than the shiny app, due to it's increased flexibility. For more information on the api you can read `vignette("api")`.
+If you're looking to integrate the package into your existing setup or tool the JSON-API that comes with the package might suit you better than the shiny app, due to it's increased flexibility. For more information on the api you can read `vignette("api")` and the help page `?api`.
 
 ## Starting the API
 
@@ -79,7 +70,7 @@ The typical workflow for using the API is as follows:
 1. Obtain a freetext response from the participant describing their occupation and its tasks.
 2. Send this freetext response to `/v1/suggestions` to get a list of suggested categories.
 3. Present this list to the participant for them choose an option. (There should always be the option of indicating that none of the suggested categories fit.)
-4. Use the id of the chosen category to retrieve a list of possible followup questions `/v1/followup_questions` and present these to the user.
+4. If the suggested category has followup questions, retrieve the next followup question from `/v1/next_followup_question` and present it to the user.
 5. Use the code from the picked suggested category alongside the responses to the followup questions to get the final occupation category codes from `/v1/final_codes`.
 
 Each of the API endpoints comes with a set of options / parameters which are described in the API's documentation. The API documentation is automatically available when starting the API, comes with the option to test out endpoints and provides example code on how to query the API.

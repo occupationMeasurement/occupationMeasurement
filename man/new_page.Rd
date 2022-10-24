@@ -59,21 +59,31 @@ after another. The order in which they are called is as follows:
 \item \code{condition} (\code{session})
 Only if this evaluated to \code{TRUE}, continue.
 \item \code{run_before} (\code{session})
-\item \code{render_before} (\code{session}, \code{run_before_output})
-\item \code{render} (\code{session}, \code{run_before_output})
-\item \code{render_after} (\code{session}, \code{run_before_output})
+\item \code{render_before} (\code{session}, \code{run_before_output}, \code{input}, \code{output})
+\item \code{render} (\code{session}, \code{run_before_output}, \code{input}, \code{output})
+\item \code{render_after} (\code{session}, \code{run_before_output}, \code{input}, \code{output})
 The outputs from \code{render_before}, \code{render} & \code{render_after} are
 stitched together to produce the final HTML output of the page.
-\item \code{run_after} (\code{session}, \code{input})
+\item \code{run_after} (\code{session}, \code{input}, \code{output})
 Run when the user leaves the page. Any user input has to be
 handled here.
 }
+
+Each of the life-cycle functions above is annotated with the
+paramaters it has access to. \code{session}, \code{input} and \code{output} are
+passed directly from shiny and correspond to the objects made available by
+\code{\link[shiny:shinyServer]{shiny::shinyServer()}}, \code{run_before_output} is available for convenience and
+corresponds to whatever is returned by \code{run_before}.
+
+Use of \code{render_before}, \code{render_after} is discouraged if not necessary,
+as these two life-cycle functions have only been added to allow for easier
+modification and extension of existing pages.
 }
 \examples{
 one_page_questionnaire <- list(
   new_page(
     page_id = "example",
-    render = function(session, run_before_output, ...) {
+    render = function(session, run_before_output, input, output, ...) {
       shiny::tags$h1("My test page")
     }
   )

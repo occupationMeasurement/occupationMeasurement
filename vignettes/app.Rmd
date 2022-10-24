@@ -1,0 +1,142 @@
+---
+title: "Using the Interactive App"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the Interactive App}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  eval = FALSE,
+  comment = "#>"
+)
+```
+
+The package comes with an interactive application to quickly and easily collect your own occupation data and possibly conduct your own survey.
+
+This application can be started by just calling the function `app()`.
+
+```{r setup}
+library(occupationMeasurement)
+
+# Start the interactive application with default settings
+app()
+```
+
+# Configuration
+
+There are multiple ways of changing the behaviour and contents of the app. These are split into two main sections: You can change the information / contents of the app and what is shown, by using a different `questionnaire` or you can adjust general settings of the app, such as data saving options by modifying the `app_settings`.
+
+## Different Questionnaires
+
+The toolbox comes with different ready-made questionnaires, such as the default `questionnaire_web_survey()` for self-administered online surveys, `questionnaire_interviewer_administerd()` for interviews conducted by an interviewer or `questionnaire_demo()` for a version of the app that includes explanations for how the app works behind the scenes.
+
+If you need more flexibility, you can also modify existing questionnaires or create your own ones from scratch. To do this refer to the more detailed explanations available in `vignette("app-questionnaire")`.
+
+## Settings
+
+There are multiple settings available to the app to change how it behaves, where data is saved and much more. These settings need to be passed to the app under the parameter `app_settings` and are created using `create_app_settings()`. You can read about all options in the function's helpfile `?create_app_settings()`. If you're specifically looking to save data into a database, you can find a detailed explanation in `vignette("app-database")`.
+
+Some settings can also be varied between individual sessions / interviews e.g. if they were to depend on a previous question or input from an external questionnaire. To modify these "session"-settings you pass them as [query parameters](https://en.wikipedia.org/wiki/Query_string) e.g. `tense=past` in the example URL `https://{url-to-my-interactive-app}/?tense=past`. These settings are also described in the help page `?create_app_settings`, as their defaults are set in the `app_settings`.
+
+```{r eval=FALSE}
+library(occupationMeasurement)
+
+app(
+  # Use the questionnaire for guided interviews
+  questionnaire = questionnaire_interviewer_administerd(),
+  app_settings = create_app_settings(
+    # ... specify your custom settings here
+    require_id = TRUE
+  )
+)
+```
+
+# Data
+
+The app will keep track of data for you and will, by default, automatically save data in multiple CSV files. These are saved to the `response_output_dir` (if `save_to_file` is `TRUE`), which can be configured in the `app_settings` (ses the section above for more information). To quickly read the most important data from CSV files, the convenience function `get_responses()` is available.
+
+Currently there are 4 different forms of `data` that are being saved. These are differentiated by different `table_name`s. You can see these `table_name`s in the filenames of the data files, although the filenames typically also have some extra information besides the `table_name` to e.g. differentiate files by different users.
+
+If you plan to save data into a database, you can find a detailed explanation of how to do this in `vignette("app-database")`.
+
+## Identifying Users
+
+If you want to match your data with an external source or embed the interactive app within another survey, you will probably want to pass a unique user identifier, a `user_id`.
+
+This can be done adding a [query parameter](https://en.wikipedia.org/wiki/Query_string) named `user_id` to the URL e.g. `https://{url-to-my-interactive-app}/?user_id=my_unique_user_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_user_id corresponding to the unique user_id).
+
+If you want to make sure that a user_id is always supplied, you can enforce this by setting `require_id = TRUE` in the `app_settings`.
+
+## Tables
+
+The four different kinds of data i.e. "tables" that are being saved right now are outlined below.
+
+### answers
+
+The user's answers themselves, with one row per question. These are saved, whenever a page gets submitted and therefore multiple times per participant.
+
+#### Columns
+
+- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
+- **page_id**: An id / name, identifying the page this answer is coming from. Multiple answers per page are possible.
+- **start**: The timestamp when the user was shown this page.
+- **end**: The timestamp when the user submitted the page. Response time is the difference between **start** and **end**.
+- **question_id**: An id / name, identifying the question that is being answered, as there can sometimes be multiple questions on a single page. 
+- **question_text**: The text that was shown to and responded to by the participant.
+- **response_id**: The id of the chosen response option by the respondent, typcially used for questions with distinct answering options. This can also be the case if a user ticks e.g. a "I don't want to respond" option.
+- **response_text**: Either the raw text from a free text response or the corresponding label for distinct answering options. When the question is not a free text question, it is recommended to use response ids over texts if possible.
+
+### results_overview
+
+A combined version of the user's answers and information about the user themselves. These are saved at the end of the questionnaire and therefore only once per participation.
+
+#### Columns
+
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
+- **url_search**: The [search / query part](https://en.wikipedia.org/wiki/Query_string) of the URL.
+- **isco_08**: The [International Standard Classification of Occupations 2008](https://www.ilo.org/wcmsp5/groups/public/@dgreports/@dcomm/@publ/documents/publication/wcms_172572.pdf) (ISCO-08) code for this respondent.
+- **kldb_10**: The [German Klassifikation der Berufe 2010 - erste Fassung](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html) (KldB-2010) code for this respondent.
+- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **P_{page_id}_Q_{question_id}_R_{id/text}**: *Two* columns for every question answered by the respondent. These columns correspond to the naming convention ***P_{page_id}_Q_{question_id}_R_id*** for response ids and ***P_{page_id}_Q_{question_id}_R_text*** for response texts (see the documentation for answers for additional information).
+
+### occupations_suggested
+
+The list of suggestions shown to the user. These are saved at the moment when suggestions are generated and therefore *typically* once per participation, but not necessarily.
+
+This list also includes "other" response options, such as "No response" or "Other".
+
+At the moment these are only saved when the `suggestion_type` is `auxco-1.2.x`.
+
+#### Columns
+
+- **auxco_id**: The unique identifier of the suggestion, matching the suggestion_type.
+- **input_text**: The free text response that was used to generate the suggestions.
+- **score**: The assigned score to the suggestion. These scores roughly correspond to the probability of being picked.
+- **title**: The occupation title of the suggestion.
+- **task**: The task of the suggestion. This is the main field 
+- **task_description**: A more detailed description of the task associated with the suggestion.
+- **kldb_title_short**: A shortend version of the suggestion's title.
+- **has_followup_questions**: Whether this suggestion has any followup questions.
+- **id**: The `response_id` corresponding with this option. Use to also identify "other" response options than suggested occupations.
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey. 
+- **start**: The timestamp when the user was shown the page with these suggestions.
+
+### toggle_submitted
+
+Information on when and which suggestions were clicked to be expanded (or closed) by a participant.
+
+#### Columns
+
+- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
+- **toggle_message**: A brief identifier, showing whether an option was opened or closed and which option it was.
+- **time**: A timestamp identifying when it was opened / closed.
+
+# Deployment
+
+If you want to deploy the interactive app to an actual server for use in a production environment you can find detailed instructions in `vignette("deployment")`.

@@ -37,10 +37,14 @@ Each page in the questionnaire can have multiple questions on it.
 \examples{
 \dontrun{
 # This code is expected to be run in e.g. run_before
-page$get_question_data(
+get_question_data(
   session = session,
+  page_id = "example",
   key = "response_text",
   default = "alright"
 )
 }
+}
+\seealso{
+\code{\link[=set_question_data]{set_question_data()}}
 }

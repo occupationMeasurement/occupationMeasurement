@@ -8,14 +8,24 @@
 #'   1. `condition` (`session`)
 #'        Only if this evaluated to `TRUE`, continue.
 #'   2. `run_before` (`session`)
-#'   3. `render_before` (`session`, `run_before_output`)
-#'   4. `render` (`session`, `run_before_output`)
-#'   5. `render_after` (`session`, `run_before_output`)
-#'        The outputs from `render_before`, `render` & `render_after` are
-#'        stitched together to produce the final HTML output of the page.
-#'   6. `run_after` (`session`, `input`)
-#'        Run when the user leaves the page. Any user input has to be
-#'        handled here.
+#'   3. `render_before` (`session`, `run_before_output`, `input`, `output`)
+#'   4. `render` (`session`, `run_before_output`, `input`, `output`)
+#'   5. `render_after` (`session`, `run_before_output`, `input`, `output`)
+#'       The outputs from `render_before`, `render` & `render_after` are
+#'       stitched together to produce the final HTML output of the page.
+#'   6. `run_after` (`session`, `input`, `output`)
+#'       Run when the user leaves the page. Any user input has to be
+#'       handled here.
+#'
+#' Each of the life-cycle functions above is annotated with the
+#' paramaters it has access to. `session`, `input` and `output` are
+#' passed directly from shiny and correspond to the objects made available by
+#' [shiny::shinyServer()], `run_before_output` is available for convenience and
+#' corresponds to whatever is returned by `run_before`.
+#'
+#' Use of `render_before`, `render_after` is discouraged if not necessary,
+#' as these two life-cycle functions have only been added to allow for easier
+#' modification and extension of existing pages.
 #'
 #' @param page_id A unique string identifiying this page. (Required)
 #'   This will be used to store data.
@@ -49,7 +59,7 @@
 #' one_page_questionnaire <- list(
 #'   new_page(
 #'     page_id = "example",
-#'     render = function(session, run_before_output, ...) {
+#'     render = function(session, run_before_output, input, output, ...) {
 #'       shiny::tags$h1("My test page")
 #'     }
 #'   )
@@ -157,7 +167,7 @@ execute_run_after <- function(page, session, input, output, ...) {
 #'
 #' Data is automatically linked to a page's page_id.
 #' Note that page data is *not* automatically saved and you probably want
-#' to use page$set_question_data instead.
+#' to use set_question_data instead.
 #'
 #' @param session The shiny session
 #' @param values A named list of values to add / overwrite in the page data.
@@ -169,7 +179,7 @@ execute_run_after <- function(page, session, input, output, ...) {
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' page$set_page_data(session = session, values = list(
+#' set_page_data(session = session, page_id = "example", values = list(
 #'   user_answer = "Some User Answer"
 #' ))
 #' }
@@ -241,16 +251,19 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #'   (optional)
 #'
 #' @export
+#' @seealso [get_question_data()]
 #'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' page$set_question_data(
+#' set_question_data(
 #'   session = session,
+#'   page_id = "example",
 #'   question_text = "How are you?"
 #' )
-#' page$set_question_data(
+#' set_question_data(
 #'   session = session,
+#'   page_id = "example",
 #'   response_text = "I'm doing great!"
 #' )
 #' }
@@ -306,12 +319,14 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
 #'
 #' @return The question's data.
 #' @export
+#' @seealso [set_question_data()]
 #'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' page$get_question_data(
+#' get_question_data(
 #'   session = session,
+#'   page_id = "example",
 #'   key = "response_text",
 #'   default = "alright"
 #' )

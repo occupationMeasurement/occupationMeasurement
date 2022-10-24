@@ -24,6 +24,7 @@
 #'
 #' @return A Plumber router
 #' @export
+#' @seealso `vignette("api")`
 #'
 #' @examples
 #' \dontrun{

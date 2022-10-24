@@ -20,7 +20,7 @@ There are three main ways of using this package, with varying degrees of flexibi
 2. Use the included JSON `api()` to use the package with your own survey-tool or application for maximum flexibility.
 3. Use the R functions directly to implement your own custom functionality or package.
 
-For a more detailed overview of the package refer to `vignette("occupationMeasurement")`.
+For a more detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package.
 
 ### Using the interactive App
 

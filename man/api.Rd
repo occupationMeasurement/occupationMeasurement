@@ -57,3 +57,6 @@ router <- api(start = FALSE)
 plumber::pr_run(router)
 }
 }
+\seealso{
+\link{vignette("api")}
+}

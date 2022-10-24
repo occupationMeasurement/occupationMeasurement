@@ -44,5 +44,5 @@ app(
 }
 }
 \seealso{
-\code{\link[=questionnaire_web_survey]{questionnaire_web_survey()}}
+\link{vignette("app")}, \code{\link[=questionnaire_web_survey]{questionnaire_web_survey()}}
 }

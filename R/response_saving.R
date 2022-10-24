@@ -21,7 +21,6 @@ append_tables <- list(
     "user_id",
     "session_id",
     "page_id",
-    "status",
     "start",
     "end",
     "question_id",
@@ -110,7 +109,6 @@ extract_questions_df <- function(page_data) {
   df$page_id <- page_data$page_id
   df$user_id <- page_data$user_id
   df$session_id <- page_data$session_id
-  df$status <- page_data[["status"]]
   df$start <- page_data[["start"]]
   # The "end" value might not exist yet when a question is not completed
   if (!is.null(page_data[["end"]])) {

@@ -1,11 +1,28 @@
 Package: occupationMeasurement
-Title: A package to help with the (interactive) coding and measurement of occupations
-Version: 0.0.0.9000
-Authors@R:
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Title: A toolbox to help with all tasks around the interactive coding and measurement of occupations
+Version: 0.1.0.9000
+Authors@R: c(
+        person(
+            "Jan", "Simson", ,
+            "jan.simson@lmu.de",
+            role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0002-9406-7761")
+        ),
+        person(
+            "Olga", "Kononykhina", ,
+            "olga.kononykhina@stat.uni-muenchen.de",
+            role = c("aut")
+        ),
+        person(
+            "Malte", "Schierholz", ,
+            "malte.schierholz@stat.uni-muenchen.de",
+            role = c("aut")
+        )
+    )
+Description: This package provides a set of functions for interactive occupation coding in interviews. It contains the functionality to generate suggestions for occupational categories based on free text input. Pre-trained machine learning models in German and a ready-to-use shiny application is provided for quick and easy data collection.
 License: MIT + file LICENSE
+URL: https://occupationMeasurement.github.io/occupationMeasurement/, https://github.com/occupationMeasurement/occupationMeasurement
+BugReports: https://github.com/occupationMeasurement/occupationMeasurement/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1

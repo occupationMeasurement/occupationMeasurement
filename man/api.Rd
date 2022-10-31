@@ -58,5 +58,5 @@ plumber::pr_run(router)
 }
 }
 \seealso{
-\link{vignette("api")}
+\code{vignette("api")}
 }

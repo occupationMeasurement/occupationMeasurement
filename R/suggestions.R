@@ -748,6 +748,9 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
                 ]
             }
           }
+          if (length(answer_id_match) != 1) {
+            stop("Invalid value provided in standardized_answer_levels.")
+          }
           followup_answers[question_id] <- answer_id_match
         }
       }

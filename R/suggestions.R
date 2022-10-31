@@ -650,7 +650,7 @@ get_suggestion_info <- function(suggestion_ids,
 #'
 #' @inheritParams get_job_suggestions
 #'
-#' @return A named list corresponding to the code_type(s) specified.
+#' @return A named list corresponding to the code_type(s) specified. Includes a message if approximate_standardized_answer_levels = FALSE and no exact matching fails.
 #' @export
 #'
 #' @examples
@@ -720,15 +720,18 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
         if (length(answer_id_match) == 1) {
           followup_answers[question_id] <- answer_id_match
         }
-        if (length(answer_id_match) == 0) {
+        if (length(answer_id_match) == 0 && !approximate_standardized_answer_levels) {
+          no_matching_success <- TRUE
+        }
+        if (length(answer_id_match) == 0 && approximate_standardized_answer_levels) {
           # when there are no exact matches, maybe use approximate matching
-          if (approximate_standardized_answer_levels && question_type == "anforderungsniveau") {
+          if (question_type == "anforderungsniveau") {
             st_ans_lvl <- substr(x = standardized_answer_levels[question_type], start = 18, stop = 18)
-            co_ans_lvl <- substr(x=followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
+            co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
             index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
             answer_id_match <- followup_question$answers[index, answer_id]
           }
-          if (approximate_standardized_answer_levels && question_type == "aufsicht") {
+          if (question_type == "aufsicht") {
             if (standardized_answer_levels[question_type] == "isco_not_supervising") {
               answer_id_match <- followup_question$answers[
                 corresponding_answer_level == "isco_supervisor", answer_id
@@ -736,7 +739,7 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
             }
             if (standardized_answer_levels[question_type] == "isco_supervisor") {
               answer_id_match <- followup_question$answers[
-                corresponding_answer_level == "isco_not_supervising",answer_id
+                corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
             }
             if (standardized_answer_levels[question_type] == "isco_manager") {
@@ -844,6 +847,9 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
     }
     if ("kldb_10" %in% code_type) {
       result$kldb_10 <- selected_suggestion_info$default_kldb_id
+    }
+    if (exists("no_matching_success") && no_matching_success) {
+      result$message <- "The standardized_answer_level provided has no exact match. Returning default values."
     }
     return(result)
   } else {

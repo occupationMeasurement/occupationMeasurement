@@ -8,6 +8,7 @@ get_final_codes(
   suggestion_id,
   followup_answers = list(),
   standardized_answer_levels = NULL,
+  approximate_standardized_answer_levels = TRUE,
   code_type = c("isco_08", "kldb_10"),
   suggestion_type = "auxco-1.2.x",
   suggestion_type_options = list()
@@ -30,6 +31,12 @@ question types. For a list of options please take a look at the
 followup questions included in the auxco for example via
 \code{occupationMeasurement::auxco$followup_questions}.}
 
+\item{approximate_standardized_answer_levels}{(default TRUE) Follow up
+questions were designed to provide answer options that are not in conflict with suggestion_id.
+standardized_answer_levels can be in conflict with suggestion_id, and then no exact matches
+exist. With approximation, the answer option that is closest to the
+standardized_answer_levels provided, will be used.}
+
 \item{code_type}{Which type of codes should be returned.
 Multiple codes can be returned at the same time.
 Supported types of codes are "isco_08" and "kldb_10".
@@ -46,7 +53,7 @@ Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 bundled with this package are used.}
 }
 \value{
-A named list corresponding to the code_type(s) specified.
+A named list corresponding to the code_type(s) specified. Includes a message if approximate_standardized_answer_levels = FALSE and no exact matching fails.
 }
 \description{
 Get the final occupation codes

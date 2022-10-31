@@ -706,10 +706,15 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
         question_type %in% names(standardized_answer_levels)
       ) {
         # Fill in the followup answer based on the matching standardized level
-        followup_answers[question_id] <- followup_question$answers[
+        answer_id_match <- followup_question$answers[
           corresponding_answer_level == standardized_answer_levels[question_type],
           answer_id
         ]
+        # when there are more than one matches, it doesn't matter which one we use
+        if (length(answer_id_match) > 1) answer_id_match <- answer_id_match[1]
+        if (length(answer_id_match) == 1) {
+          followup_answers[question_id] <- answer_id_match
+        }
       }
     }
   }

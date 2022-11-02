@@ -712,6 +712,96 @@
       ]
     }
 
+# suggestions and final codes are correctly generated for 'Student Research Assistant' (not in KldB)
+
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
+        },
+        "class": {
+          "type": "character",
+          "attributes": {},
+          "value": ["data.frame"]
+        },
+        "row.names": {
+          "type": "integer",
+          "attributes": {},
+          "value": [1, 2, 3, 4, 5]
+        }
+      },
+      "value": [
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["9910", "2114", "4038", "4048", "3222"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Hiwi", "Hiwi", "Hiwi", "Hiwi", "Hiwi"]
+        },
+        {
+          "type": "double",
+          "attributes": {},
+          "value": [0.25343017, 0.02337068, 0.02337068, 0.02337068, 0.02337068]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Studentische Hilfskraft", "Elektrohelfer/in", "Informatiker/in", "IT-Berater/in", "Sekretär/in"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Tätigkeit als studentische Hilfskraft an einer wissenschaftlichen Einrichtung", "Ausführung von Hilfsarbeiten in der Elektrotechnik", "Branchenübergreifende Entwicklung, Programmierung und Modifizierung von Hardware, Software und kompletten IT-Systemen", "Beratung von Unternehmen hinsichtlich des Einsatzes von Computerhardware und Software", "Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["z.B. unterstützende Aufgaben in der Forschung wahrnehmen; Tutorien abhalten; in der Hochschulverwaltung oder in Bibliotheken administrative Aufgaben übernehmen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. am Fließband in der Leiterplattenproduktion oder der Montage von Elektrogeräten arbeiten; bei der Herstellung von Wicklungen für Transformatoren oder Elektromotoren unterstützen; bei der Installation von Datendosen oder beim Kabelziehen mithelfen; Fachkräfte bei der Wartung und Montage von elektrischen Geräten unterstützen", "z.B. Programmiersprache einsetzen; Entwicklung neuer informationstechnischer Konzepte und Systeme; Beratung von Anwendern; Betriebs- und Informationssysteme installieren; Computer- und Softwaresysteme erweitern und modifizieren; anwendungsgerechte und ergonomische Bedienoberflächen entwickeln; Problemanalysen durchführen", "z.B. Geschäftsprozesse analysieren und angemessene Unternehmensanwendungen konzipieren; Anforderungskataloge in Zusammenarbeit mit den Fachabteilungen erstellen und verantworten; Durchführbarkeitsstudien erstellen; Kunden-, Mitbewerber- und eigene IT-Systeme unter technischen und wirtschaftlichen Gesichtspunkten bewerten", "z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["", "Elektrotechnik (ohne Spezialisierung)", "Informatik (ohne Spezialisierung)", "IT-Anwendungsberatung", "Büro- und Sekretariatskräfte (ohne Spezialisierung)"]
+        },
+        {
+          "type": "logical",
+          "attributes": {},
+          "value": [false, false, true, true, true]
+        }
+      ]
+    }
+
+---
+
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["isco_08", "kldb_10"]
+        }
+      },
+      "value": [
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["-030"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["-0030"]
+        }
+      ]
+    }
+
 # final_codes are properly generated for special cases depending on auxco >= v1.2.1
 
     {

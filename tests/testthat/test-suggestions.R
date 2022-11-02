@@ -52,6 +52,14 @@ test_that("suggestions and final codes are correctly generated for 'Soldat' (lea
   expect_snapshot_value(style = "json2", tolerance = .001, get_final_codes("9999", followup_answers = list(Q9999_1 = 3)))
 })
 
+test_that("suggestions and final codes are correctly generated for 'Student Research Assistant' (not in KldB)", {
+  # Check suggestions
+  expect_snapshot_value(style = "json2", tolerance = .001, as.data.frame(get_job_suggestions("Hiwi")))
+
+  # Check final codes for default case
+  expect_snapshot_value(style = "json2", tolerance = .001, get_final_codes("9910"))
+})
+
 test_that("final codes are correctly generated answers which depend on multiple followup questions", {
   # Electronics engineers
   expect_equal(
@@ -164,7 +172,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
 })
 
 test_that("final_codes are properly generated for special cases depending on auxco >= v1.2.1", {
-  # Electronics engineering technicians
+  # Electronics engineering technicians (v1.2.1)
   get_final_codes(
     "4038",
     followup_answers = list("Q4038_1" = 2, "Q4038_2" = 1)

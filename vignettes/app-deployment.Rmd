@@ -14,11 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Deploying the Interactive Shiny App
-
 As the interactive app has been built using [shiny](https://shiny.rstudio.com), there are several ways of deploying it. Two of the most common ways are explained in this document and additional information on deploying a shiny application can be found [here](https://shiny.rstudio.com/deploy/).
 
-## Using shiny-server ✨
+# Using shiny-server ✨
 
 [Shiny-server](https://www.rstudio.com/products/shiny/shiny-server/) is an application to easily run shiny apps on a server.
 
@@ -32,34 +30,14 @@ app()
 
 You can of course carry over all the settings / your custom questionnaire passed to `app()` for a more complex configuration.
 
-## Using docker 🐳
+# Using docker 🐳
 
-For easy deployment of the api, the package comes with a pre-built docker image called `occupation_measurement/api`.
+For easy deployment of the api, the package comes with a pre-built docker image called `occupation_measurement/app`.
 
 To test this image on your local machine you can run the following command in your command line (this assumses you have Docker installed):
 
 ```bash
 docker run --rm -p 3838:3838 -v $(pwd)/output:/srv/shiny-server/output occupation_measurement/app
-```
-
-For more detailed information on the docker images if you e.g. want to build your own refer to the [docker directory](https://github.com/occupationMeasurement/occupationMeasurement/tree/main/docker) in the repository.
-
-# Deploying the API
-
-The API comes with a pre-built Docker image for easy deployment on a server, your own computer or the cloud. If you wish to deploy the API without using docker, information on how to deploy a [plumber](https://www.rplumber.io) API can be found [here](https://www.rplumber.io/articles/hosting.html).
-
-> Note that the `api()` function, will by default immediately start the API instead of returning a plumber instance. If you want to have access to the plumber instance for additional control during deployment, you can get it by calling the API via `api(start = FALSE)`.
-
-## Using Docker 🐳
-
-For easy deployment of the app, the package comes with a pre-built docker image called `occupation_measurement/app`.
-
-To test this image on your local machine you can run the following command in your command line (this assumses you have Docker installed):
-
-```bash
-# Start the api
-# it can be reached at http://localhost:8000
-# Swagger documentation can be viewed at http://localhost:8000/__docs__/
 ```
 
 For more detailed information on the docker images if you e.g. want to build your own refer to the [docker directory](https://github.com/occupationMeasurement/occupationMeasurement/tree/main/docker) in the repository.

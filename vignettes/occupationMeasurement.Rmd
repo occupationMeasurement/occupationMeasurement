@@ -48,34 +48,13 @@ app(
 
 Moreover, you're also able to modify questionnaires or just build your own from sratch. You can read more about this functionality in `vignette("app-questionnaire")`.
 
-# JSON-API
+# Alternative Usage
+
+## JSON-API
 
 If you're looking to integrate the package into your existing setup or tool the JSON-API that comes with the package might suit you better than the shiny app, due to it's increased flexibility. For more information on the api you can read `vignette("api")` and the help page `?api`.
 
-## Starting the API
-
-Starting the API is simple, as you will only need to call the `api()` method. This will immediately start a local plumber server and will open a window with the API's documentation.
-
-```{r eval=FALSE}
-# Start the API (and open its documentation)
-occupationMeasurement::api()
-```
-
-## Usage
-
-The API is designed to allow for similar usage as the interactive application, but implementing the UI and its logic has to be done manually. It is recommended to use the same text prompts as the shiny application for consistency.
-
-The typical workflow for using the API is as follows:
-
-1. Obtain a freetext response from the participant describing their occupation and its tasks.
-2. Send this freetext response to `/v1/suggestions` to get a list of suggested categories.
-3. Present this list to the participant for them choose an option. (There should always be the option of indicating that none of the suggested categories fit.)
-4. If the suggested category has followup questions, retrieve the next followup question from `/v1/next_followup_question` and present it to the user.
-5. Use the code from the picked suggested category alongside the responses to the followup questions to get the final occupation category codes from `/v1/final_codes`.
-
-Each of the API endpoints comes with a set of options / parameters which are described in the API's documentation. The API documentation is automatically available when starting the API, comes with the option to test out endpoints and provides example code on how to query the API.
-
-# Included R-Functions
+## Included R-Functions
 
 The package also exports some high-level functions to allow you to generate your own suggestions and work with them.
 

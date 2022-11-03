@@ -139,4 +139,4 @@ Information on when and which suggestions were clicked to be expanded (or closed
 
 # Deployment
 
-If you want to deploy the interactive app to an actual server for use in a production environment you can find detailed instructions in `vignette("deployment")`.
+If you want to deploy the interactive app to an actual server for use in a production environment you can find detailed instructions in `vignette("app-deployment")`.

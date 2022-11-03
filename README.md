@@ -12,17 +12,9 @@ A toolbox to help with all tasks around the interactive coding and measurement o
 remotes::install_github("occupationMeasurement/occupationMeasurement")
 ```
 
-## Usage
+For a detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package.
 
-There are three main ways of using this package, with varying degrees of flexibility and convenience:
-
-1. Use the included shiny `app()` which provides all functionality to run your own survey out-of-the-box.
-2. Use the included JSON `api()` to use the package with your own survey-tool or application for maximum flexibility.
-3. Use the R functions directly to implement your own custom functionality or package.
-
-For a more detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package.
-
-### Using the interactive App
+## Using the interactive App
 
 The interactive app can be started with the function `app()` function. 
 More information about the interactive app can be found in `vignette("app")` and the help page `?app`.
@@ -41,33 +33,14 @@ library(occupationMeasurement)
 app(questionnaire = demo_questionnaire())
 ```
 
-### Using the JSON API
+## Alternative Usage
 
-If you want to include this package in your custom survey-tool or app or if you just need higher flexibility, you can use the included `api()`.
+Besides the interactive app, there are also two alternative ways of using this package, with varying degrees of flexibility and convenience:
 
-The api server can be started by simply running the code below, opening its included documentation by default.
+1. Use the included JSON `api()` to use the package with your own survey-tool or application for maximum flexibility.
+2. Use the R functions directly to implement your own custom functionality or package via e.g. `get_job_suggestions()`.
 
-More information about the API can be found in `vignette("api")` and the help page `?api`.
-
-```r
-# Start the API (and open its documentation)
-occupationMeasurement::api()
-```
-
-### Using the Exported R Functions
-
-As this is an R package you can also use the functions within it directly. This way you can integrate it into your codebase, extend its functionality or even use it in your own R package.
-
-If you want to, for example, generate some suggestions for a certain text input you can do so by just running the code below:
-
-```r
-library(occupationMeasurement)
-
-# Generate some job suggestions
-get_job_suggestions("Koch", num_suggestions = 3)
-```
-
-There are of course many other functions available as well, to check them out, just take a look at the function reference section in the documentation.
+You can find more information on how to use these functionalities in `vignette("occupationMeasurement")`.
 
 ## Development
 

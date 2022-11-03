@@ -9,8 +9,8 @@ articles:
   - app
   - app-questionnaire
   - app-database
+  - app-deployment
   - api
-  - deployment
 reference:
 - title: Using the App / Api
 - contents:

@@ -76,17 +76,18 @@ create_document_term_matrix <- function(input) {
 #' # Same output as before, but the function is more adaptable.
 #' \dontrun{
 #' get_job_suggestions(
-#'  "Arzt",
-#'  suggestion_type = "kldb-2010",
-#'  num_suggestions = 1500,
-#'  steps = list(
-#'    simbased_default = list(
-#'      algorithm = algo_similarity_based_reasoning,
-#'      parameters = list(
-#'        sim_name = "wordwise"
-#'      )
-#'    )
-#'  ))[, list(kldb_id, score, sim_name, kldb_id_title = title)]
+#'   "Arzt",
+#'   suggestion_type = "kldb-2010",
+#'   num_suggestions = 1500,
+#'   steps = list(
+#'     simbased_default = list(
+#'       algorithm = algo_similarity_based_reasoning,
+#'       parameters = list(
+#'         sim_name = "wordwise"
+#'       )
+#'     )
+#'   )
+#' )[, list(kldb_id, score, sim_name, kldb_id_title = title)]
 #' }
 algo_similarity_based_reasoning <- function(text_processed,
                                             sim_name = "wordwise",
@@ -639,7 +640,7 @@ get_suggestion_info <- function(suggestion_ids,
 #' @param approximate_standardized_answer_levels (default TRUE) Follow up
 #'   questions were designed to provide answer options that are not in conflict with suggestion_id.
 #'   standardized_answer_levels can be in conflict with suggestion_id, and then no exact matches
-#'   exist. With approximation, the answer option that is closest to the 
+#'   exist. With approximation, the answer option that is closest to the
 #'   standardized_answer_levels provided, will be used.
 #' @param code_type Which type of codes should be returned.
 #'   Multiple codes can be returned at the same time.
@@ -708,50 +709,54 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
       # but there is a matching standardized level
       if (
         !(question_id %in% names(followup_answers)) &&
-        question_type %in% names(standardized_answer_levels)
+          question_type %in% names(standardized_answer_levels)
       ) {
         # Fill in the followup answer based on the matching standardized level
         answer_id_match <- followup_question$answers[
           corresponding_answer_level == standardized_answer_levels[question_type],
           answer_id
         ]
-        # when there is more than one match, it doesn't matter which one we use
-        if (length(answer_id_match) > 1) answer_id_match <- answer_id_match[1]
-        if (length(answer_id_match) == 1) {
+        num_answer_id_matches <- length(answer_id_match)
+
+        if (num_answer_id_matches > 1) {
+          # When there is more than one match, it doesn't matter which one we use
+          answer_id_match <- answer_id_match[1]
+        } else if (num_answer_id_matches == 1) {
+          # When there is exactly one match use that
           followup_answers[question_id] <- answer_id_match
-        }
-        if (length(answer_id_match) == 0 && !approximate_standardized_answer_levels) {
-          no_matching_success <- TRUE
-        }
-        if (length(answer_id_match) == 0 && approximate_standardized_answer_levels) {
-          # when there are no exact matches, maybe use approximate matching
-          if (question_type == "anforderungsniveau") {
-            st_ans_lvl <- substr(x = standardized_answer_levels[question_type], start = 18, stop = 18)
-            co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
-            index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
-            answer_id_match <- followup_question$answers[index, answer_id]
-          }
-          if (question_type == "aufsicht") {
-            if (standardized_answer_levels[question_type] == "isco_not_supervising") {
-              answer_id_match <- followup_question$answers[
-                corresponding_answer_level == "isco_supervisor", answer_id
-                ]
+        } else if (num_answer_id_matches == 0) {
+          if (!approximate_standardized_answer_levels) {
+            no_matching_success <- TRUE
+          } else {
+            # when there are no exact matches, maybe use approximate matching
+            if (question_type == "anforderungsniveau") {
+              st_ans_lvl <- substr(x = standardized_answer_levels[question_type], start = 18, stop = 18)
+              co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
+              index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
+              answer_id_match <- followup_question$answers[index, answer_id]
             }
-            if (standardized_answer_levels[question_type] == "isco_supervisor") {
-              answer_id_match <- followup_question$answers[
-                corresponding_answer_level == "isco_not_supervising", answer_id
+            if (question_type == "aufsicht") {
+              if (standardized_answer_levels[question_type] == "isco_not_supervising") {
+                answer_id_match <- followup_question$answers[
+                  corresponding_answer_level == "isco_supervisor", answer_id
                 ]
-            }
-            if (standardized_answer_levels[question_type] == "isco_manager") {
-              answer_id_match <- followup_question$answers[
-                corresponding_answer_level == "isco_supervisor", answer_id
+              }
+              if (standardized_answer_levels[question_type] == "isco_supervisor") {
+                answer_id_match <- followup_question$answers[
+                  corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
+              }
+              if (standardized_answer_levels[question_type] == "isco_manager") {
+                answer_id_match <- followup_question$answers[
+                  corresponding_answer_level == "isco_supervisor", answer_id
+                ]
+              }
             }
+            if (length(answer_id_match) != 1) {
+              stop("Invalid value provided in standardized_answer_levels.")
+            }
+            followup_answers[question_id] <- answer_id_match
           }
-          if (length(answer_id_match) != 1) {
-            stop("Invalid value provided in standardized_answer_levels.")
-          }
-          followup_answers[question_id] <- answer_id_match
         }
       }
     }

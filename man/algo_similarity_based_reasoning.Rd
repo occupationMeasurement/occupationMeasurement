@@ -74,17 +74,18 @@ algo_similarity_based_reasoning(
 # Same output as before, but the function is more adaptable.
 \dontrun{
 get_job_suggestions(
- "Arzt",
- suggestion_type = "kldb-2010",
- num_suggestions = 1500,
- steps = list(
-   simbased_default = list(
-     algorithm = algo_similarity_based_reasoning,
-     parameters = list(
-       sim_name = "wordwise"
-     )
-   )
- ))[, list(kldb_id, score, sim_name, kldb_id_title = title)]
+  "Arzt",
+  suggestion_type = "kldb-2010",
+  num_suggestions = 1500,
+  steps = list(
+    simbased_default = list(
+      algorithm = algo_similarity_based_reasoning,
+      parameters = list(
+        sim_name = "wordwise"
+      )
+    )
+  )
+)[, list(kldb_id, score, sim_name, kldb_id_title = title)]
 }
 }
 \references{

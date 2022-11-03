@@ -169,6 +169,64 @@ test_that("final_codes are properly generated when using standardized_answer_lev
       kldb_10 = "51394"
     )
   )
+
+  # duplicates in corresponding_answer level
+  expect_equal(
+    get_final_codes(
+      "1709",
+      standardized_answer_levels = list(
+        anforderungsniveau = "isco_skill_level_2"
+      )
+    ),
+    list(
+      isco_08 = "3119",
+      kldb_10 = "27182"
+    )
+  )
+
+    # approximate matching: skill level
+  expect_equal(
+    get_final_codes(
+      "1706",
+      standardized_answer_levels = list(
+        anforderungsniveau = "isco_skill_level_1"
+      )
+    ),
+    list(
+      isco_08 = "3115",
+      kldb_10 = "25183"
+    )
+  )
+
+  # approximate matching: isco_manager
+  expect_equal(
+    get_final_codes(
+      "1783",
+      standardized_answer_levels = list(
+        aufsicht = "isco_manager"
+      )
+    ),
+    list(
+      isco_08 = "3123",
+      kldb_10 = "34293"
+    )
+  )
+
+  # no approximate matching: isco_manager
+  expect_equal(
+    get_final_codes(
+      "1783",
+      standardized_answer_levels = list(
+        aufsicht = "isco_manager"
+      ),
+      approximate_standardized_answer_levels = FALSE
+    ),
+    list(
+      isco_08 = "3115",
+      kldb_10 = "34233",
+      message = "The standardized_answer_level provided has no exact match. Returning default values."
+    )
+  )
 })
 
 test_that("final_codes are properly generated for special cases depending on auxco >= v1.2.1", {

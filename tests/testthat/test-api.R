@@ -4,9 +4,41 @@ port <- 8000
 
 log_file <- withr::local_tempfile()
 
+# Determine how the package was installed, because devtools::test()
+# and R CMD CHECK use slightly different ways of installation
+# This is necessary, because we manually need to load the package to make it
+# available in the background process of callr
+package_info <- sessioninfo::package_info("occupationMeasurement")
+package_info <- package_info[package_info$package == "occupationMeasurement", ]
+
+# We need to manually check for R CMD CHECK, because loadedpath
+# will correspond to different things based on how the package was loaded.
+# For R CMD CHECK it will correspond to the built package which just needs
+# to be laoded, for devtools::test it will correspond to the package source
+installed_via_check <- package_info$path != "" && package_info$source != "load_all()"
+
+if (installed_via_check) {
+  # Re-use the installation from R CMD CHECK and directly load
+  # via library()
+  temporary_library_path <- package_info$loadedpath |>
+    dirname()
+} else {
+  # Locally install the package again from source, when running
+  # via devtools::test()
+  local_package(
+    pkg = package_info$loadedpath
+  )
+}
+
 api_process <- callr::r_bg(
   function() {
-    occupationMeasurement::api(
+    if (installed_via_check) {
+      library(occupationMeasurement, lib.loc = temporary_library_path)
+    } else {
+      library(occupationMeasurement)
+    }
+
+    api(
       start = FALSE,
       log_filepath = log_file,
       allow_origin = "https://occupationMeasurement.github.io"

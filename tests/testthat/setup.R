@@ -4,8 +4,5 @@
 library(data.table)
 library(shiny)
 
-# Use a locally installed occupationMeasurement package for all tests
-local_package(.local_envir = teardown_env())
-
 # Load application support files into testing environment
 suppressWarnings(shinytest2::load_app_env())

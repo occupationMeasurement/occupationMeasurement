@@ -22,8 +22,10 @@ respective answers to the followup_questions.
 Question ids correspond to list names, answers correspond to list values.}
 
 \item{standardized_answer_levels}{A named list of standardized isco
-answer levels. Names in the list correspond to the followup question type,
-while values correspond to standard answer levels.
+answer levels. Names in the list correspond to the type of isco standard,
+values correspond to the level itself.
+Possible standardized answer types are: "isco_skill_level" and
+"isco_supervisor_manager".
 These can be used instead of some followup questions if
 the information is available already from a different source.
 Please note that standardized answer levels are \emph{not} available for all
@@ -74,7 +76,7 @@ get_final_codes(
   "9076",
   standardized_answer_levels = list(
     # A response corresponding to the standard ISCO Level "manager"
-    "aufsicht" = "isco_manager"
+    "isco_supervisor_manager" = "isco_manager"
   )
 )
 }

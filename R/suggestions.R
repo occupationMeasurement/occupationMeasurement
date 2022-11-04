@@ -629,8 +629,10 @@ get_suggestion_info <- function(suggestion_ids,
 #'   respective answers to the followup_questions.
 #'   Question ids correspond to list names, answers correspond to list values.
 #' @param standardized_answer_levels A named list of standardized isco
-#'   answer levels. Names in the list correspond to the followup question type,
-#'   while values correspond to standard answer levels.
+#'   answer levels. Names in the list correspond to the type of isco standard,
+#'   values correspond to the level itself.
+#'   Possible standardized answer types are: "isco_skill_level" and
+#'   "isco_supervisor_manager".
 #'   These can be used instead of some followup questions if
 #'   the information is available already from a different source.
 #'   Please note that standardized answer levels are *not* available for all
@@ -670,10 +672,16 @@ get_suggestion_info <- function(suggestion_ids,
 #'   "9076",
 #'   standardized_answer_levels = list(
 #'     # A response corresponding to the standard ISCO Level "manager"
-#'     "aufsicht" = "isco_manager"
+#'     "isco_supervisor_manager" = "isco_manager"
 #'   )
 #' )
-get_final_codes <- function(suggestion_id, followup_answers = list(), standardized_answer_levels = NULL, approximate_standardized_answer_levels = TRUE, code_type = c("isco_08", "kldb_10"), suggestion_type = "auxco-1.2.x", suggestion_type_options = list()) {
+get_final_codes <- function(suggestion_id,
+  followup_answers = list(),
+  standardized_answer_levels = NULL,
+  approximate_standardized_answer_levels = TRUE,
+  code_type = c("isco_08", "kldb_10"),
+  suggestion_type = "auxco-1.2.x",
+  suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- auxco_id <- corresponding_answer_level <- answer_id <- NULL
 
@@ -696,11 +704,32 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
   }
   # Check whhether names are set on standardized_answer_levels
   if (length(standardized_answer_levels) > 0 && !is.character(names(standardized_answer_levels))) {
-    stop("standardized_answer_levels need to be supplied as a named list, with question_types as names")
+    stop("standardized_answer_levels need to be supplied as a named list, with the type of level as names")
   }
 
   # Possibly fill in followup answers based on standardized response levels
   if (length(standardized_answer_levels) > 0) {
+    # Map standardized (ISCO) levels to the question types
+    standardized_levels_mapping <- c(
+      "isco_skill_level" = "anforderungsniveau",
+      "isco_supervisor_manager" = "aufsicht"
+    )
+    # Check whether there are any names without a mapping
+    unsupported_level_names <- names(standardized_answer_levels)[
+      !(names(standardized_answer_levels) %in% names(standardized_levels_mapping))
+    ]
+    if (length(unsupported_level_names) > 0) {
+      stop(paste0(
+        "Unsupported names of standardized_answer_levels: ",
+        paste(unsupported_level_names, collapse = ",")
+      ))
+    }
+    # Rename standardized_answer_levels to use the question_type as name
+    remapped_answer_levels <- standardized_answer_levels
+    names(remapped_answer_levels) <- standardized_levels_mapping[
+      names(standardized_answer_levels)
+    ]
+
     for (followup_question in followup_questions) {
       question_id <- followup_question$question_id
       question_type <- followup_question$type
@@ -709,55 +738,58 @@ get_final_codes <- function(suggestion_id, followup_answers = list(), standardiz
       # but there is a matching standardized level
       if (
         !(question_id %in% names(followup_answers)) &&
-          question_type %in% names(standardized_answer_levels)
+          question_type %in% names(remapped_answer_levels)
       ) {
         # Fill in the followup answer based on the matching standardized level
-        answer_id_match <- followup_question$answers[
-          corresponding_answer_level == standardized_answer_levels[question_type],
+        answer_id_matches <- followup_question$answers[
+          corresponding_answer_level == remapped_answer_levels[question_type],
           answer_id
         ]
-        num_answer_id_matches <- length(answer_id_match)
+        num_answer_id_matches <- length(answer_id_matches)
+
+        final_answer_id_match <- NULL
 
         if (num_answer_id_matches > 1) {
           # When there is more than one match, it doesn't matter which one we use
-          answer_id_match <- answer_id_match[1]
+          final_answer_id_match <- answer_id_matches[1]
         } else if (num_answer_id_matches == 1) {
           # When there is exactly one match use that
-          followup_answers[question_id] <- answer_id_match
+          final_answer_id_match <- answer_id_matches
         } else if (num_answer_id_matches == 0) {
           if (!approximate_standardized_answer_levels) {
             no_matching_success <- TRUE
           } else {
             # when there are no exact matches, maybe use approximate matching
             if (question_type == "anforderungsniveau") {
-              st_ans_lvl <- substr(x = standardized_answer_levels[question_type], start = 18, stop = 18)
+              st_ans_lvl <- substr(x = remapped_answer_levels[question_type], start = 18, stop = 18)
               co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
               index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
-              answer_id_match <- followup_question$answers[index, answer_id]
+              final_answer_id_match <- followup_question$answers[index, answer_id]
             }
             if (question_type == "aufsicht") {
-              if (standardized_answer_levels[question_type] == "isco_not_supervising") {
-                answer_id_match <- followup_question$answers[
+              if (remapped_answer_levels[question_type] == "isco_not_supervising") {
+                final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
               }
-              if (standardized_answer_levels[question_type] == "isco_supervisor") {
-                answer_id_match <- followup_question$answers[
+              if (remapped_answer_levels[question_type] == "isco_supervisor") {
+                final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
               }
-              if (standardized_answer_levels[question_type] == "isco_manager") {
-                answer_id_match <- followup_question$answers[
+              if (remapped_answer_levels[question_type] == "isco_manager") {
+                final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
               }
             }
-            if (length(answer_id_match) != 1) {
-              stop("Invalid value provided in standardized_answer_levels.")
-            }
-            followup_answers[question_id] <- answer_id_match
           }
         }
+
+        if (!is.null(final_answer_id_match) && length(final_answer_id_match) != 1) {
+          stop("Invalid value provided in standardized_answer_levels.")
+        }
+        followup_answers[question_id] <- final_answer_id_match
       }
     }
   }

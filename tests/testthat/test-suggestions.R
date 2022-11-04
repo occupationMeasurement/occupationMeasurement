@@ -132,7 +132,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
         Q1733_1 = 1
       ),
       standardized_answer_levels = list(
-        anforderungsniveau = "isco_skill_level_3"
+        isco_skill_level = "isco_skill_level_3"
       )
     ),
     list(
@@ -146,7 +146,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     get_final_codes(
       "3553",
       standardized_answer_levels = list(
-        anforderungsniveau = "isco_skill_level_2"
+        isco_skill_level = "isco_skill_level_2"
       )
     ),
     list(
@@ -160,8 +160,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     get_final_codes(
       "1005",
       standardized_answer_levels = list(
-        anforderungsniveau = "isco_skill_level_2",
-        aufsicht = "isco_manager"
+        isco_skill_level = "isco_skill_level_2",
+        isco_supervisor_manager = "isco_manager"
       )
     ),
     list(
@@ -175,7 +175,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     get_final_codes(
       "1709",
       standardized_answer_levels = list(
-        anforderungsniveau = "isco_skill_level_2"
+        isco_skill_level = "isco_skill_level_2"
       )
     ),
     list(
@@ -189,7 +189,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     get_final_codes(
       "1706",
       standardized_answer_levels = list(
-        anforderungsniveau = "isco_skill_level_1"
+        isco_skill_level = "isco_skill_level_1"
       )
     ),
     list(
@@ -203,7 +203,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     get_final_codes(
       "1783",
       standardized_answer_levels = list(
-        aufsicht = "isco_manager"
+        isco_supervisor_manager = "isco_manager"
       )
     ),
     list(
@@ -217,7 +217,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     get_final_codes(
       "1783",
       standardized_answer_levels = list(
-        aufsicht = "isco_manager"
+        isco_supervisor_manager = "isco_manager"
       ),
       approximate_standardized_answer_levels = FALSE
     ),

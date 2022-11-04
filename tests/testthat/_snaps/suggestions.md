@@ -263,7 +263,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["3222", "3220", "3221", "3501", "9078"]
+          "value": ["9910", "8037", "3222", "3220", "3221"]
         },
         {
           "type": "character",
@@ -273,32 +273,32 @@
         {
           "type": "double",
           "attributes": {},
-          "value": [0.03978574, 0.02902939, 0.02902939, 0.00654641, 0.00510887]
+          "value": [0.54751504, 0.03888479, 0.02707553, 0.0270465, 0.0270465]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Sekretär/in", "Telefonist/in", "Bürohilfskraft", "Redaktionsassistent/in", "Küchenhilfe"]
+          "value": ["Studentische Hilfskraft", "Dozent/in / Professor/in", "Sekretär/in", "Telefonist/in", "Bürohilfskraft"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation", "Entgegennahme und Weiterleitung von Telefonanrufen", "Ausführung von Hilfsarbeiten in der Büroarbeit ohne Kundenkontakt", "Unterstützung von Journalisten und Redakteuren bei redaktionellen und organisatorischen Aufgaben", "Ausführung von Hilfsarbeiten in einer Hotel-, Restaurant- oder Großküche"]
+          "value": ["Tätigkeit als studentische Hilfskraft an einer wissenschaftlichen Einrichtung", "Lehren und Forschen an Universitäten und Hochschulen", "Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation", "Entgegennahme und Weiterleitung von Telefonanrufen", "Ausführung von Hilfsarbeiten in der Büroarbeit ohne Kundenkontakt"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen", "z.B. Bestellungen entgegennehmen, Nachrichten aufzeichnen und zur Bearbeitung weitergeben; Anrufe weiterleiten; telefonische Verbindungen herstellen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Formulare, Belege und andere Dokumente sortieren; Formulare und andere Aufzeichnungen im Computer eintragen und die Richtigkeit überprüfen; Dokumente kopieren und abheften; Rundschreiben und Kuverts adressieren", "z.B. Hintergrundinformationen zu aktuellen Themen, Drehorten und Interviewpartnern recherchieren; Filmmaterial und Interviews nachbearbeiten; Sekretariatsarbeiten erledigen, wie Termine koordinieren, Geschäftsreisen organisieren, Messestände und -auftritte vorbereiten und Kostenvoranschläge einholen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Gemüse, Salat und Früchte waschen und schneiden; Köche unterstützen und z.B. Zutaten abmessen und mischen; einfache Speisen nach Vorgabe vorbereiten, erwärmen, toasten und anrichten; beim Zubereiten von Marinaden, Soßen und Dressings mithelfen; Küchenmaschinen und -geräte bedienen; Lebensmittel aus Vorrats-, Kühlräumen holen und bereitstellen; verderbliche Waren in Kühlräumen lagern und kontrollieren; beim Aussortieren und Entsorgen verfallener Ware mitarbeiten; Aufräum-, Spül- und Reinigungsarbeiten übernehmen"]
+          "value": ["z.B. unterstützende Aufgaben in der Forschung wahrnehmen; Tutorien abhalten; in der Hochschulverwaltung oder in Bibliotheken administrative Aufgaben übernehmen", "z.B. Vorlesungen, Seminare oder Übungen durchführen; Forschungsergebnisse in Fachzeitschriften und -büchern veröffentlichen; Lehrmaterialien konzipieren; Klausuren vorbereiten; Studierende beraten und betreuen; empirische Untersuchungen organisieren", "z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen", "z.B. Bestellungen entgegennehmen, Nachrichten aufzeichnen und zur Bearbeitung weitergeben; Anrufe weiterleiten; telefonische Verbindungen herstellen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Formulare, Belege und andere Dokumente sortieren; Formulare und andere Aufzeichnungen im Computer eintragen und die Richtigkeit überprüfen; Dokumente kopieren und abheften; Rundschreiben und Kuverts adressieren"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Büro- und Sekretariatskräfte", "Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Redakteure/Redakteurinnen und Journalisten/Journalistinnen", "Köche/Köchinnen"]
+          "value": ["Studentische Hilfskraft", "Hochschullehre und -forschung", "Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Büro- und Sekretariatskräfte", "Büro- und Sekretariatskräfte (ohne Spezialisierung)"]
         },
         {
           "type": "logical",
           "attributes": {},
-          "value": [true, false, true, false, false]
+          "value": [false, false, true, false, true]
         }
       ]
     }
@@ -767,7 +767,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["", "Elektrotechnik (ohne Spezialisierung)", "Informatik (ohne Spezialisierung)", "IT-Anwendungsberatung", "Büro- und Sekretariatskräfte (ohne Spezialisierung)"]
+          "value": ["Studentische Hilfskraft", "Elektrotechnik (ohne Spezialisierung)", "Informatik (ohne Spezialisierung)", "IT-Anwendungsberatung", "Büro- und Sekretariatskräfte (ohne Spezialisierung)"]
         },
         {
           "type": "logical",

@@ -51,7 +51,7 @@ setup_wait_for_change <- function(app) {
   ")
 }
 
-debug_test_case <- FALSE
+debug_test_case <- TRUE
 debug_note <- function(...) {
   if (debug_test_case) {
     paste(
@@ -84,7 +84,7 @@ test_that("E2E: test case Koch", {
   wait_time <- 1
 
   # To Debug in Chrome
-  if (debug_test_case) {
+  if (debug_test_case && !as.logical(Sys.getenv("CI"))) {
     app$view()
   }
 

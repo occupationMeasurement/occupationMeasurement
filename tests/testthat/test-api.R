@@ -53,10 +53,7 @@ withr::defer({
   api_process$kill()
 })
 
-# Give plumber time to start the API
-Sys.sleep(2)
-
-test_that("API started successfully", {
+test_that("API process started successfully", {
   if (!api_process$is_alive()) {
     # Get output if the API crashed
     print(api_process$get_result())
@@ -65,11 +62,21 @@ test_that("API started successfully", {
   expect_true(api_process$is_alive())
 })
 
-test_that("endpoint '/' works", {
-  # Send API request
-  r <- httr::GET(api_root, port = port, path = "/")
+# Give plumber time to start the API
+test_that("API is running and endpoint '/' works", {
+  # Send request and ensure the API is fully initialized and listening. At most
+  # wait 15 seconds for the API to initialize
+  max_s <- 15
+  for (i in 1:max_s) {
+    try({
+      r <- httr::GET(url = api_root, port = port, path = "/")
+      break()
+    }, silent = TRUE)
+    Sys.sleep(1)
+  }
 
-  # Check response
+  # Check response status code
+  # Note that we ignore the content here
   expect_equal(r$status_code, 200)
 })
 

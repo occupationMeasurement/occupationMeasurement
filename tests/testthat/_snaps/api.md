@@ -174,6 +174,28 @@
       ]
     }
 
+# endpoint '/v1/final_codes' works (with standardized followup answers)
+
+    {
+      "isco_08": [
+        "3115"
+      ],
+      "kldb_10": [
+        "25183"
+      ]
+    }
+
+---
+
+    {
+      "isco_08": [
+        "3123"
+      ],
+      "kldb_10": [
+        "34293"
+      ]
+    }
+
 # API logging is working
 
     c("ts_preroute", "ts_postserialize", "execution_time", "req_request_method", 

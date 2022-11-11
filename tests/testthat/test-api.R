@@ -239,6 +239,38 @@ test_that("endpoint '/v1/final_codes' works (with followup answers)", {
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
 })
 
+test_that("endpoint '/v1/final_codes' works (with standardized followup answers)", {
+  # approximate matching: skill level
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/final_codes",
+    query = list(
+      suggestion_id = "1706",
+      isco_skill_level = "isco_skill_level_1"
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+
+  # approximate matching: isco_manager
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/final_codes",
+    query = list(
+      suggestion_id = "1783",
+      isco_supervisor_manager = "isco_manager"
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
 test_that("API logging is working", {
   # Check whether the log file exists
   expect_true(file.exists(log_file))

@@ -109,6 +109,10 @@ function(res, suggestion_id, followup_question_id = "", followup_answer_id = "")
 #* @param suggestion_id:character The id of the selected suggestion
 #* @param followup_answers:[numeric] An Array / a list of integers
 #*   corresponding to answers to followup questions in exact order.
+#* @param isco_skill_level:character Standardized level of skill the respondent
+#*  indicated (corresponding to ISCO-08 manual).
+#* @param isco_supervisor_manager:character Standardized level of management /
+#*  supervision the respondent indicated (corresponding to ISCO-08 manual).
 #* @param:[character] code_type Which type of codes should be returned.
 #*   Multiple codes can be returned at the same time.
 #*   Supported types of codes are "isco_08" and "kldb_10".
@@ -119,21 +123,35 @@ function(res, suggestion_id, followup_question_id = "", followup_answer_id = "")
 #* @get /v1/final_codes
 function(suggestion_id,
          followup_answers = numeric(),
+         isco_skill_level = NA_character_,
+         isco_supervisor_manager = NA_character_,
          code_type = c("isco_08", "kldb_10"),
          suggestion_type = "auxco-1.2.x") {
+  # Generate named list of followup answers
   question_ids <- occupationMeasurement::get_followup_questions(
     suggestion_id = suggestion_id
   ) |>
     sapply(function(x) x$question_id)
+  followup_answers <- as.list(followup_answers)
   if (!is.null(followup_answers) && length(followup_answers) > 0) {
     length(question_ids) <- length(followup_answers)
     names(followup_answers) <- question_ids
+  }
+
+  # Generate list of standardized_answer_levels
+  standardized_answer_levels <- list()
+  if (isco_skill_level != "" && !is.na(isco_skill_level)) {
+    standardized_answer_levels$isco_skill_level <- isco_skill_level
+  }
+  if (isco_supervisor_manager != "" && !is.na(isco_supervisor_manager)) {
+    standardized_answer_levels$isco_supervisor_manager <- isco_supervisor_manager
   }
 
   final_codes <- occupationMeasurement::get_final_codes(
     suggestion_id = suggestion_id,
     # Converting to numeric here, to match the format used in the auxco
     followup_answers = followup_answers,
+    standardized_answer_levels = standardized_answer_levels,
     code_type = code_type,
     suggestion_type = suggestion_type
   )

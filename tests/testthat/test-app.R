@@ -64,6 +64,8 @@ debug_note <- function(...) {
 is_ci <- !is.na(as.logical(Sys.getenv("CI"))) && !as.logical(Sys.getenv("CI"))
 
 test_that("E2E: test case Koch", {
+  skip_on_ci()
+
   response_dir <- withr::local_tempdir()
 
   app_settings <- create_app_settings(
@@ -215,6 +217,8 @@ test_that("E2E: test case Koch", {
 })
 
 test_that("Followup questions are correctly skipped: ESE test case Textiltechniker)", {
+  skip_on_ci()
+
   app <- AppDriver$new(
     app_dir = app(
       app_settings = create_app_settings(

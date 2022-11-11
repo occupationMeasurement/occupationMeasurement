@@ -1,6 +1,6 @@
 # Setup by starting APIs
 api_root <- "http://localhost"
-port <- 8000
+port <- 14700
 
 log_file <- withr::local_tempfile()
 

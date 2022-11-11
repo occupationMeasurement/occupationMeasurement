@@ -184,7 +184,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     )
   )
 
-    # approximate matching: skill level
+  # approximate matching: skill level
   expect_equal(
     get_final_codes(
       "1706",

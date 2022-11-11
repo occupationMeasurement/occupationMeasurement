@@ -61,6 +61,7 @@ debug_note <- function(...) {
       cat()
   }
 }
+is_ci <- !is.na(as.logical(Sys.getenv("CI"))) && !as.logical(Sys.getenv("CI"))
 
 test_that("E2E: test case Koch", {
   response_dir <- withr::local_tempdir()
@@ -84,7 +85,7 @@ test_that("E2E: test case Koch", {
   wait_time <- 1
 
   # To Debug in Chrome
-  if (debug_test_case && !as.logical(Sys.getenv("CI"))) {
+  if (debug_test_case && is_ci) {
     app$view()
   }
 

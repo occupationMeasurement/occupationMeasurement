@@ -239,6 +239,27 @@ test_that("endpoint '/v1/final_codes' works (with followup answers)", {
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
 })
 
+
+test_that("endpoint '/v1/final_codes' works (with partial followup answers)", {
+  # Send API request
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/final_codes",
+    query = list(
+      suggestion_id = "1836",
+      followup_answers = list(
+        4
+      )
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
+
 test_that("endpoint '/v1/final_codes' works (with standardized followup answers)", {
   # approximate matching: skill level
   r <- httr::GET(

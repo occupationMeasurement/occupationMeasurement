@@ -174,6 +174,17 @@
       ]
     }
 
+# endpoint '/v1/final_codes' works (with partial followup answers)
+
+    {
+      "isco_08": [
+        "2120"
+      ],
+      "kldb_10": [
+        "91344"
+      ]
+    }
+
 # endpoint '/v1/final_codes' works (with standardized followup answers)
 
     {

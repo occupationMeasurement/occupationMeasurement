@@ -756,8 +756,8 @@ get_final_codes <- function(suggestion_id,
         (question_id %in% names(followup_answers)) &&
           question_type %in% names(remapped_answer_levels)
       ) {
-        message[length(message) + 1] <- paste("standardized_answer_levels is 
-          not used: No need to replace", question_id, "in followup_answers.")
+        message[length(message) + 1] <- paste("standardized_answer_levels is",
+          "not used: No need to replace", question_id, "in followup_answers.")
       }
 
       if (
@@ -781,8 +781,8 @@ get_final_codes <- function(suggestion_id,
           final_answer_id_match <- answer_id_matches
         } else if (num_answer_id_matches == 0) {
           if (!approximate_standardized_answer_levels) {
-            message[length(message) + 1] <- paste0("Failed to find an exact match
-              for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+            message[length(message) + 1] <- paste0("Failed to find an exact match",
+              " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
           } else {
             # when there are no exact matches, maybe use approximate matching
             if (question_type == "anforderungsniveau") {
@@ -790,27 +790,27 @@ get_final_codes <- function(suggestion_id,
               co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
               index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
               final_answer_id_match <- followup_question$answers[index, answer_id]
-              message[length(message) + 1] <- paste0("No exact match: Approximate matching used
-                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+              message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
+                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
             }
             if (question_type == "aufsicht") {
               if (remapped_answer_levels[question_type] == "isco_not_supervising") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
-                message[length(message) + 1] <- paste0("No exact match: Approximate matching used
-                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+                message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
+                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
               }
               if (remapped_answer_levels[question_type] == "isco_supervisor") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
-                message[length(message) + 1] <- paste0("No exact match: Approximate matching used
-                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+                message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
+                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
               }
               if (remapped_answer_levels[question_type] == "isco_manager") {
-                message[length(message) + 1] <- paste0("No exact match: Approximate matching used
-                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+                message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
+                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
@@ -887,8 +887,8 @@ get_final_codes <- function(suggestion_id,
         as.numeric()
 
       if (is.null(followup_answer_id) || length(followup_answer_id) != 1 || is.na(followup_answer_id)) {
-        message[length(message) + 1] <- paste0("Entry missing
-          for ", followup_question$question_id, " in followup_answers.")
+        message[length(message) + 1] <- paste0("Entry missing",
+          " for ", followup_question$question_id, " in followup_answers.")
         break
       }
 
@@ -929,8 +929,8 @@ get_final_codes <- function(suggestion_id,
   if (!is.null(selected_suggestion_info)) {
 
     if (length(followup_questions) > 0) {
-      message[length(message) + 1] <- paste0("Returning default code: Improve 
-        followup_answers (or standardized_answer_levels) to obtain more exact codings.")
+      message[length(message) + 1] <- paste("Returning default code: Improve",
+        "followup_answers (or standardized_answer_levels) to obtain more exact codings.")
     }
 
     # Retrieve answer codes from selected suggestion

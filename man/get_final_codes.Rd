@@ -10,6 +10,7 @@ get_final_codes(
   standardized_answer_levels = NULL,
   approximate_standardized_answer_levels = TRUE,
   code_type = c("isco_08", "kldb_10"),
+  verbose = TRUE,
   suggestion_type = "auxco-1.2.x",
   suggestion_type_options = list()
 )
@@ -44,6 +45,8 @@ Multiple codes can be returned at the same time.
 Supported types of codes are "isco_08" and "kldb_10".
 Defaults to "isco_08" and "kldb_10".}
 
+\item{verbose}{(default TRUE) whether to return a \code{message} or not, detailing potential issues with the input provided.}
+
 \item{suggestion_type}{Which suggestion type is being used.
 Only auxco-based suggestion_types are supported.}
 
@@ -55,10 +58,20 @@ Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 bundled with this package are used.}
 }
 \value{
-A named list corresponding to the code_type(s) specified. Includes a message if approximate_standardized_answer_levels = FALSE and no exact matching fails.
+A named list corresponding to the code_type(s) specified. Includes a \code{message} if \code{verbose = TRUE}
 }
 \description{
-Get the final occupation codes
+The final occupation code will depend on the \code{suggestion_id} and,
+possibly, on \code{followup_answers}, depending on the \code{suggestion_id} provided. See
+\code{occupationMeasurement::auxco$followup_questions} for a list of suggestion_ids (=auxco_id)
+and their respective recommended follow-up questions.
+}
+\details{
+The interview situation may not allow to ask these follow-up questions. Some default, but
+suboptimal occupation code is returned if \code{followup_answers} is missing.
+
+If \code{followup_answers} is missing or incomplete, one may wish to insert/infer the missing information
+by using \code{standardized_answer_levels}.
 }
 \examples{
 get_final_codes(

@@ -72,7 +72,8 @@ test_that("final codes are correctly generated answers which depend on multiple 
     ),
     list(
       isco_08 = "3113",
-      kldb_10 = "26303"
+      kldb_10 = "26303",
+      message = ""
     )
   )
 
@@ -87,7 +88,8 @@ test_that("final codes are correctly generated answers which depend on multiple 
     ),
     list(
       isco_08 = "3114",
-      kldb_10 = "26303"
+      kldb_10 = "26303",
+      message = ""
     )
   )
 })
@@ -103,7 +105,8 @@ test_that("final codes are irrespective of the question order", {
     ),
     list(
       isco_08 = "6123",
-      kldb_10 = "11293"
+      kldb_10 = "11293",
+      message = ""
     )
   )
 
@@ -118,7 +121,40 @@ test_that("final codes are irrespective of the question order", {
     ),
     list(
       isco_08 = "3113",
-      kldb_10 = "26303"
+      kldb_10 = "26303",
+      message = ""
+    )
+  )
+})
+
+test_that("final codes are properly generated when they depend only on the first question", {
+  expect_equal(
+    get_final_codes(
+      "1710",
+      followup_answers = list(
+        Q1710_1 = 1
+      )
+    ),
+    list(
+      isco_08 = "1311",
+      kldb_10 = "11294",
+      message = ""
+    )
+  )
+})
+
+test_that("Default codes are returned when first answer is missing", {
+  expect_equal(
+    get_final_codes(
+      "1710",
+      followup_answers = list(
+        Q1710_2 = 3
+      )
+    ),
+    list(
+      isco_08 = "6129",
+      kldb_10 = "11293",
+      message = "Entry missing for Q1710_1 in followup_answers. |&| Returning default code: Improve followup_answers (or standardized_answer_levels) to obtain more exact codings."
     )
   )
 })
@@ -137,7 +173,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     ),
     list(
       isco_08 = "3113",
-      kldb_10 = "26303"
+      kldb_10 = "26303",
+      message = ""
     )
   )
 
@@ -151,7 +188,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     ),
     list(
       isco_08 = "4415",
-      kldb_10 = "73312"
+      kldb_10 = "73312",
+      message = ""
     )
   )
 
@@ -166,7 +204,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     ),
     list(
       isco_08 = "1324",
-      kldb_10 = "51394"
+      kldb_10 = "51394",
+      message = ""
     )
   )
 
@@ -180,7 +219,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     ),
     list(
       isco_08 = "3119",
-      kldb_10 = "27182"
+      kldb_10 = "27182",
+      message = ""
     )
   )
 
@@ -194,7 +234,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     ),
     list(
       isco_08 = "3115",
-      kldb_10 = "25183"
+      kldb_10 = "25183",
+      message = "No exact match: Approximate matching used for standardized_answer_levels=isco_skill_level_1."
     )
   )
 
@@ -208,7 +249,8 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     ),
     list(
       isco_08 = "3123",
-      kldb_10 = "34293"
+      kldb_10 = "34293",
+      message = "No exact match: Approximate matching used for standardized_answer_levels=isco_manager."
     )
   )
 
@@ -224,7 +266,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "3115",
       kldb_10 = "34233",
-      message = "The standardized_answer_level provided has no exact match. Returning default values."
+      message = "Failed to find an exact match for standardized_answer_levels=isco_manager. |&| Returning default code: Improve followup_answers (or standardized_answer_levels) to obtain more exact codings."
     )
   )
 })

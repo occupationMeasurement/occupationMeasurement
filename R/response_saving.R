@@ -221,7 +221,18 @@ extract_results_overview <- function(session) {
 save_results_overview <- function(session) {
   final_data <- extract_results_overview(session = session)
 
-  save_data("results_overview", final_data, session)
+  hash <- digest::digest(final_data)
+
+  # Check whether response_overview has already been saved
+  if (
+    is.null(session$userData$results_overview_saved_hash) ||
+    hash != session$userData$results_overview_saved_hash
+  ) {
+    save_data("results_overview", final_data, session)
+
+    # Remember hash
+    session$userData$results_overview_saved_hash <- hash
+  }
 }
 
 #' Convenience function to aggregate all saved results_overview files.

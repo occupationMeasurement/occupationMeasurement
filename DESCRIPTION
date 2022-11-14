@@ -29,6 +29,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Imports:
     data.table (>= 1.14.2),
+    digest,
     shiny (>= 1.7.1),
     stringdist (>= 0.9.8),
     stringr (>= 1.4.0),
@@ -36,7 +37,6 @@ Imports:
     tm (>= 0.7.8)
 Suggests:
     plumber,
-    digest,
     devtools,
     testthat,
     shinytest2,

@@ -624,6 +624,17 @@ get_suggestion_info <- function(suggestion_ids,
 
 #' Get the final occupation codes
 #'
+#' The final occupation code will depend on the `suggestion_id` and,
+#' possibly, on `followup_answers`, depending on the `suggestion_id` provided. See
+#' `occupationMeasurement::auxco$followup_questions` for a list of suggestion_ids (=auxco_id)
+#' and their respective recommended follow-up questions.
+#'
+#' The interview situation may not allow to ask these follow-up questions. Some default, but
+#' suboptimal occupation code is returned if `followup_answers` is missing.
+#'
+#' If `followup_answers` is missing or incomplete, one may wish to insert/infer the missing information
+#' by using `standardized_answer_levels`.
+#'
 #' @param suggestion_id Id of the suggestion
 #' @param followup_answers A named list of the question_ids with their
 #'   respective answers to the followup_questions.
@@ -648,12 +659,13 @@ get_suggestion_info <- function(suggestion_ids,
 #'   Multiple codes can be returned at the same time.
 #'   Supported types of codes are "isco_08" and "kldb_10".
 #'   Defaults to "isco_08" and "kldb_10".
+#' @param verbose (default TRUE) whether to return a `message` or not, detailing potential issues with the input provided.
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
 #'
 #' @inheritParams get_job_suggestions
 #'
-#' @return A named list corresponding to the code_type(s) specified. Includes a message if approximate_standardized_answer_levels = FALSE and no exact matching fails.
+#' @return A named list corresponding to the code_type(s) specified. Includes a `message` if `verbose = TRUE`
 #' @export
 #'
 #' @examples
@@ -680,6 +692,7 @@ get_final_codes <- function(suggestion_id,
   standardized_answer_levels = NULL,
   approximate_standardized_answer_levels = TRUE,
   code_type = c("isco_08", "kldb_10"),
+  verbose = TRUE,
   suggestion_type = "auxco-1.2.x",
   suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
@@ -689,6 +702,8 @@ get_final_codes <- function(suggestion_id,
   stopifnot(is.list(followup_answers))
 
   auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
+
+  message <- character(0)
 
   followup_questions <- get_followup_questions(
     suggestion_id = suggestion_id,
@@ -738,6 +753,14 @@ get_final_codes <- function(suggestion_id,
       # Only fill in the followup answer if there is no answer yet,
       # but there is a matching standardized level
       if (
+        (question_id %in% names(followup_answers)) &&
+          question_type %in% names(remapped_answer_levels)
+      ) {
+        message[length(message) + 1] <- paste("standardized_answer_levels is 
+          not used: No need to replace", question_id, "in followup_answers.")
+      }
+
+      if (
         !(question_id %in% names(followup_answers)) &&
           question_type %in% names(remapped_answer_levels)
       ) {
@@ -758,7 +781,8 @@ get_final_codes <- function(suggestion_id,
           final_answer_id_match <- answer_id_matches
         } else if (num_answer_id_matches == 0) {
           if (!approximate_standardized_answer_levels) {
-            no_matching_success <- TRUE
+            message[length(message) + 1] <- paste0("Failed to find an exact match
+              for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
           } else {
             # when there are no exact matches, maybe use approximate matching
             if (question_type == "anforderungsniveau") {
@@ -766,19 +790,27 @@ get_final_codes <- function(suggestion_id,
               co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
               index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
               final_answer_id_match <- followup_question$answers[index, answer_id]
+              message[length(message) + 1] <- paste0("No exact match: Approximate matching used
+                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
             }
             if (question_type == "aufsicht") {
               if (remapped_answer_levels[question_type] == "isco_not_supervising") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
+                message[length(message) + 1] <- paste0("No exact match: Approximate matching used
+                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
               }
               if (remapped_answer_levels[question_type] == "isco_supervisor") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
+                message[length(message) + 1] <- paste0("No exact match: Approximate matching used
+                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
               }
               if (remapped_answer_levels[question_type] == "isco_manager") {
+                message[length(message) + 1] <- paste0("No exact match: Approximate matching used
+                for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
@@ -814,7 +846,7 @@ get_final_codes <- function(suggestion_id,
     ]
 
     # Check whether all questions in answer_id_combination have been answered
-    if (setequal(union(question_ids, names(followup_answers)), question_ids)) {
+    if (length(setdiff(question_ids, names(followup_answers))) == 0) {
       # Compare question answers and check whether there are any matches where all questions match
       all_matching <- apply(
         aggregated_answer_encodings[, question_ids, with = FALSE] == followup_answers[question_ids],
@@ -834,17 +866,19 @@ get_final_codes <- function(suggestion_id,
         if ("kldb_10" %in% code_type) {
           result$kldb_10 <- matched_answer_encoding$answer_kldb_id
         }
+        if (verbose) {
+          result$message <- paste(message, collapse = " |&| ")
+        }
         return(result)
       }
     }
   }
 
-  # Check normal followup questions (i.e. only look at the last one)
+  # Check normal followup questions
   if (length(followup_questions) > 0 && length(followup_answers) > 0) {
     answer <- NULL
-    # Iterate over followup_questions in reverse order
-    # (i.e. look at the last one first)
-    for (i in rev(seq_along(followup_questions))) {
+    # Iterate over followup_questions
+    for (i in seq_along(followup_questions)) {
       followup_question <- followup_questions[[i]]
 
       # Convert answer to numeric (as sometimes strings are passed)
@@ -852,11 +886,20 @@ get_final_codes <- function(suggestion_id,
       followup_answer_id <- followup_answers[[followup_question$question_id]] |>
         as.numeric()
 
+      if (is.null(followup_answer_id) || length(followup_answer_id) != 1 || is.na(followup_answer_id)) {
+        message[length(message) + 1] <- paste0("Entry missing
+          for ", followup_question$question_id, " in followup_answers.")
+        break
+      }
+
       # When converting NULL to numeric a vector of length 0 is intorduced so we also check for that
       if (length(followup_answer_id) > 0 && !is.null(followup_answer_id) && !is.na(followup_answer_id)) {
         question <- followup_questions[[i]]
         answer <- question$answers[followup_answer_id, ]
-        break
+        if (answer$coding_is_finished == TRUE) {
+          # need to check that coding is not finished with the first follow-up question
+          break
+        }
       }
     }
 
@@ -868,6 +911,9 @@ get_final_codes <- function(suggestion_id,
       }
       if ("kldb_10" %in% code_type) {
         result$kldb_10 <- answer$answer_kldb_id
+      }
+      if (verbose) {
+        result$message <- paste(message, collapse = " |&| ")
       }
       return(result)
     }
@@ -881,6 +927,12 @@ get_final_codes <- function(suggestion_id,
   )
 
   if (!is.null(selected_suggestion_info)) {
+
+    if (length(followup_questions) > 0) {
+      message[length(message) + 1] <- paste0("Returning default code: Improve 
+        followup_answers (or standardized_answer_levels) to obtain more exact codings.")
+    }
+
     # Retrieve answer codes from selected suggestion
     result <- list()
     if ("isco_08" %in% code_type) {
@@ -889,8 +941,8 @@ get_final_codes <- function(suggestion_id,
     if ("kldb_10" %in% code_type) {
       result$kldb_10 <- selected_suggestion_info$default_kldb_id
     }
-    if (exists("no_matching_success") && no_matching_success) {
-      result$message <- "The standardized_answer_level provided has no exact match. Returning default values."
+    if (verbose) {
+      result$message <- paste(message, collapse = " |&| ")
     }
     return(result)
   } else {

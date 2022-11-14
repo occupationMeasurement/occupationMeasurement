@@ -118,6 +118,38 @@ test_that("endpoint '/v1/suggestions' works (w/o suggestions)", {
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
 })
 
+test_that("endpoint '/v1/suggestions' works (for KldB)", {
+  # With suggestions
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/suggestions",
+    query = list(
+      text = "Friseur",
+      suggestion_type = "kldb-2010"
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+
+  # Without suggestions
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/suggestions",
+    query = list(
+      text = "A piece of text that does not tell you anything",
+      suggestion_type = "kldb-2010"
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
 test_that("endpoint '/v1/next_followup_question' works", {
   # Send API request
   r <- httr::GET(

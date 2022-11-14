@@ -49,6 +49,8 @@ Since the API has multiple endpoints to be called, it expects a certain flow of 
 
 The diagram below demonstrates a minimal version of this flow, with different API endpoints highlighted in **bold**. More complex scenarios are possible if you e.g. implement multiple tries of generating job suggestions for cases where user input was ambiguous.
 
+> Note: This flow assumes that an "auxco"-based suggestion-type is used (the default), which also adds followup questions to be asked to respondents. When using a different suggestion type, such as "kldb-2010" only the "/get_suggestions" endpoint is necessary, but final encodings might be of worse quality.
+
 ```{r api_flow, eval=FALSE, include=FALSE}
 # Since Graphviz is rendering the diagram via JS, it actually includes the
 # whole JS library in the resulting document. It is therefore much more efficient to just

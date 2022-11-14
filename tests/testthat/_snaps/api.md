@@ -62,6 +62,70 @@
       }
     ]
 
+# endpoint '/v1/suggestions' works (for KldB)
+
+    [
+      {
+        "input_text": "Friseur",
+        "kldb_id": "82312",
+        "level": 5,
+        "description": "Inhalt: Diese Systematikposition umfasst alle Berufe im Friseurgewerbe, deren Tätigkeiten fundierte fachliche Kenntnisse und Fertigkeiten erfordern. Angehörige dieser Berufe schneiden, färben und frisieren Haare.",
+        "excludes": "Nicht einzubeziehende Berufe: Kosmetiker/in (82322) Fachkraft – Beauty und Wellness (82222) Maskenbildner/in (82342)",
+        "title": "Berufe im Friseurgewerbe - fachlich ausgerichtete Tätigkeiten",
+        "score": 0.8353,
+        "sim_name": "wordwise"
+      },
+      {
+        "input_text": "Friseur",
+        "kldb_id": "82393",
+        "level": 5,
+        "description": "Inhalt: Angehörige dieser Berufe übernehmen Aufsichtsaufgaben im Bereich der Körperpflege, die Spezialkenntnisse und -fertigkeiten erfordern. Sie arbeiten in der Regel praktisch im Betrieb mit, führen Dienstleistungen in der Körperpflege durch und beaufsichtigen die Arbeit ihrer Mitarbeiter/innen.",
+        "excludes": "Nicht einzubeziehende Berufe: Wellnessmanager/in (82223) Maskenbildner/in (Hochschule) (82343)",
+        "title": "Aufsichtskräfte - Körperpflege",
+        "score": 0.0901,
+        "sim_name": "wordwise"
+      },
+      {
+        "input_text": "Friseur",
+        "kldb_id": "62182",
+        "level": 5,
+        "description": "Inhalt: Diese Systematikposition umfasst alle Berufe im Verkauf (ohne Produktspezialisierung), deren Tätigkeiten fundierte fachliche Kenntnisse und Fertigkeiten erfordern und die in der übergeordneten Systematikposition „621 Verkauf (ohne Produktspezialisier-ung)“ nicht anderweitig erfasst sind. Angehörige dieser Berufe präsentieren und verkaufen Waren und Dienstleistungen, gehen dabei ggf. von Tür zu Tür und führen Waren in Handelseinrichtungen, Messen und privaten Haushalten vor.",
+        "excludes": "Nicht einzubeziehende Berufe: Verkaufsberater/in (62102) Sales- und Servicefachkraft (61122) Telefonverkäufer/in (92122)",
+        "title": "Berufe im Verkauf (ohne Produktspezialisierung) (sonstige spezifische Tätigkeitsangabe) - fachlich ausgerichtete Tätigkeiten",
+        "score": 0.009,
+        "sim_name": "wordwise"
+      },
+      {
+        "input_text": "Friseur",
+        "kldb_id": "63194",
+        "level": 5,
+        "description": "Inhalt: Angehörige dieser Berufe übernehmen Führungsaufgaben im Bereich Tourismus und Sport, welche einen hohen Komplexitätsgrad aufweisen und ein entsprechend hohes Kenntnis- und Fertigkeitsniveau erfordern. Angehörige dieser Berufe leiten z.B. ein Reisebüro bzw. -unternehmen, ein Fremdenverkehrsamt oder ein Sportzentrum.",
+        "excludes": "Nicht einzubeziehende Berufe: Touristikmanager/in (63114) Sportmanager/in (63124) Wellnessmanager/in (82223) Eventmanager/in (63403) Hoteldirektor/in (63294)",
+        "title": "Führungskräfte - Tourismus und Sport",
+        "score": 0.009,
+        "sim_name": "wordwise"
+      },
+      {
+        "input_text": "Friseur",
+        "kldb_id": "63402",
+        "level": 5,
+        "description": "Inhalt: Diese Systematikposition umfasst alle Berufe im Veranstaltungsservice und -management, deren Tätigkeiten fundierte fachliche Kenntnisse und Fertigkeiten erfordern. Angehörige dieser Berufe unterstützen Veranstaltungsmanager/innen bei ihrer Arbeit und führen meist Assistenztätigkeiten im Bereich der Veranstaltungsorganisation aus.",
+        "excludes": "Nicht einzubeziehende Berufe: Kaufmann/-frau – Tourismus und Freizeit (63112) Kaufmännische/r Assistent/in, Wirtschaftsassistent/in – Sportverwaltung und -organisation (63122) Bühnenarbeiter/in (94512)",
+        "title": "Berufe im Veranstaltungsservice und -management - fachlich ausgerichtete Tätigkeiten",
+        "score": 0.009,
+        "sim_name": "wordwise"
+      }
+    ]
+
+---
+
+    [
+      {
+        "input_text": "A piece of text that does not tell you anything",
+        "score": 0
+      }
+    ]
+
 # endpoint '/v1/next_followup_question' works
 
     {

@@ -1,33 +1,38 @@
 #* @apiTitle occupationMeasurement API
-#* @apiDescription An API to allow the interactive coding of occupations based
-#*   on free text job descriptions. The flow of coding is to first get a list
-#*   of [suggestions](#/occupationMeasurement/get_suggestions) based on a free
-#*   form text answer. Once one of these suggestions has been picked, its id
-#*   can be used to retrieve potential
-#*   [followup questions](#/occupationMeasurement/get_followup_questions).
-#*   Using the suggestion's id and the followup_questions's answer id, the
-#*   [final codes](#/occupationMeasurement/get_final_codes) can be queried.
-#* @apiVersion 0.0.3-beta
+#* @apiDescription An API to allow the interactive coding of occupations based on free text job descriptions. The flow of coding is to first get a list of [suggestions](#/occupationMeasurement/get_suggestions) based on a free form text answer. Once one of these suggestions has been picked, its id can be used to retrieve potential [followup questions](#/occupationMeasurement/get_followup_questions). Using the suggestion's id and the followup_questions's answer id, the [final codes](#/occupationMeasurement/get_final_codes) can be queried. Please also refer to the official package documentation for a more detailed description of the API coding flow.
+#* @apiVersion 0.0.4-beta
 #* @apiTag "occupationMeasurement" Endpoints related to the coding of occupations.
 #* @apiTag "experimental" API endpoints where major changes are likely.
 #* @apiTag "other" Other endpoints of the API.
 
+# Note: Plumber annotations are always on one line per type
+# (irrespective of number of characters), as it seems that plumber has some
+# issues with parsing multi-line annotations.
+
 #* Generate occupation coding suggestions based on a users free text input.
+#*
 #* We recommend displaying the "task" and optionally the "task_description" to
 #* respondents.
+#*
 #* @param text:character The raw text input from the user.
+#* @param suggestion_type:character Which type of suggestion to use / provide. Possible options are "auxco-1.2.x" and "kldb-2010".
+#* @param num_suggestions:integer The maximum number of suggestions to show. This is an upper bound and less suggestions may be returned.
 #* @tag "occupationMeasurement"
 #* @get /v1/suggestions
-function(text) {
+function(text, suggestion_type = "auxco-1.2.x", num_suggestions = 5) {
   suggestions <- occupationMeasurement::get_job_suggestions(
-    text = text
+    text = text,
+    suggestion_type = suggestion_type,
+    num_suggestions = num_suggestions
   )
 
   return(suggestions)
 }
 
 #* Get the next followup question to show after a suggestion has been selected
-#* or a previous followup question has just been answered.
+#*
+#* Or a previous followup question has just been answered.
+#*
 #* @param suggestion_id:character The id of the selected suggestion.
 #* @param followup_question_id:character The `question_id` of the followup question that has just been answered.
 #* @param followup_answer_id:integer The answer_id of the chosen answer to the followup question that has just been answered.
@@ -105,28 +110,21 @@ function(res, suggestion_id, followup_question_id = "", followup_answer_id = "")
 }
 
 #* Get the final occupation codes
-#* Note: This function is likely to change drastically.
+#*
+#* This is only needed when using auxco based suggestions, to get the final responses based on answers to followup questions.
+#*
 #* @param suggestion_id:character The id of the selected suggestion
-#* @param followup_answers:[numeric] An Array / a list of integers
-#*   corresponding to answers to followup questions in exact order.
-#* @param isco_skill_level:character Standardized level of skill the respondent
-#*  indicated (corresponding to ISCO-08 manual).
-#* @param isco_supervisor_manager:character Standardized level of management /
-#*  supervision the respondent indicated (corresponding to ISCO-08 manual).
-#* @param:[character] code_type Which type of codes should be returned.
-#*   Multiple codes can be returned at the same time.
-#*   Supported types of codes are "isco_08" and "kldb_10".
-#*   Defaults to "isco_08" and "kldb_10".
-#* @param suggestion_type:character Which suggestion type is being used.
-#*   Only auxco-based suggestion_types are supported.
-#* @tag "experimental"
+#* @param followup_answers:[numeric] An Array / a list of integers corresponding to answers to followup questions in exact order.
+#* @param isco_skill_level:character Standardized level of skill the respondent indicated (corresponding to ISCO-08 manual).
+#* @param isco_supervisor_manager:character Standardized level of management / supervision the respondent indicated (corresponding to ISCO-08 manual).
+#* @param:[character] code_type Which type of codes should be returned. Multiple codes can be returned at the same time. Supported types of codes are "isco_08" and "kldb_10". Defaults to "isco_08" and "kldb_10".
+#* @tag "occupationMeasurement"
 #* @get /v1/final_codes
 function(suggestion_id,
          followup_answers = numeric(),
          isco_skill_level = NA_character_,
          isco_supervisor_manager = NA_character_,
-         code_type = c("isco_08", "kldb_10"),
-         suggestion_type = "auxco-1.2.x") {
+         code_type = c("isco_08", "kldb_10")) {
   # Generate named list of followup answers
   question_ids <- occupationMeasurement::get_followup_questions(
     suggestion_id = suggestion_id
@@ -152,8 +150,7 @@ function(suggestion_id,
     # Converting to numeric here, to match the format used in the auxco
     followup_answers = followup_answers,
     standardized_answer_levels = standardized_answer_levels,
-    code_type = code_type,
-    suggestion_type = suggestion_type
+    code_type = code_type
   )
 
   return(final_codes)

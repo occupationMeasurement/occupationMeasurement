@@ -73,7 +73,7 @@ If you want to make sure that a user_id is always supplied, you can enforce this
 
 ## Tables
 
-The four different kinds of data i.e. "tables" that are being saved right now are outlined below.
+The five different kinds of data i.e. "tables" that are being saved right now are outlined below.
 
 ### answers
 
@@ -136,6 +136,18 @@ Information on when and which suggestions were clicked to be expanded (or closed
 - **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
 - **toggle_message**: A brief identifier, showing whether an option was opened or closed and which option it was.
 - **time**: A timestamp identifying when it was opened / closed.
+
+### session_info
+
+Information on all sessions, saved whenever a session is ended (after a timeout, upon leaving the app or when stopping the server).
+
+This is mainly useful for understanding whether some users may start multiple sessions in the app.
+
+#### Columns
+
+- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
+- **url_search**: The [search / query part](https://en.wikipedia.org/wiki/Query_string) of the URL.
 
 # Deployment
 

@@ -225,6 +225,19 @@ app <- function(questionnaire = questionnaire_web_survey(),
         session$userData$control$current_question <- session$userData$control$history[length(session$userData$control$history)]
       }
     })
+
+    # On Stop will be called when the shiny app is stopped or when each
+    # individual user session ends.
+    onSessionEnded(function() {
+      # Save session data (to detect multiple sessions if there are issues)
+      session_data <- list(
+        session_id = session$userData$user_info$session_id,
+        url_search = session$userData$user_info$url_search,
+        user_id = session$userData$user_info$id
+      )
+
+      save_data("session_info", session_data, session = session)
+    })
   })
 
   shiny_app <- shinyApp(ui = ui, server = server, ...)

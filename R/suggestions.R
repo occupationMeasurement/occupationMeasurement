@@ -719,7 +719,7 @@ get_final_codes <- function(suggestion_id,
     stop("followup_answers need to be supplied as a named list, with question_ids as names")
   }
   # Check whhether names are set on standardized_answer_levels
-  if (length(standardized_answer_levels) > 0 && !is.character(names(standardized_answer_levels))) {
+  if (length(standardized_answer_levels) > 0 && !is.list(standardized_answer_levels) && !is.character(names(standardized_answer_levels))) {
     stop("standardized_answer_levels need to be supplied as a named list, with the type of level as names")
   }
 
@@ -766,7 +766,7 @@ get_final_codes <- function(suggestion_id,
       ) {
         # Fill in the followup answer based on the matching standardized level
         answer_id_matches <- followup_question$answers[
-          corresponding_answer_level == remapped_answer_levels[question_type],
+          corresponding_answer_level == remapped_answer_levels[[question_type]],
           answer_id
         ]
         num_answer_id_matches <- length(answer_id_matches)
@@ -776,44 +776,56 @@ get_final_codes <- function(suggestion_id,
         if (num_answer_id_matches > 1) {
           # When there is more than one match, it doesn't matter which one we use
           final_answer_id_match <- answer_id_matches[1]
+          message[length(message) + 1] <- paste0("Exact match: ",
+              remapped_answer_levels[[question_type]], " -> ", question_id, "=", final_answer_id_match)
         } else if (num_answer_id_matches == 1) {
           # When there is exactly one match use that
           final_answer_id_match <- answer_id_matches
+          message[length(message) + 1] <- paste0("Exact match: ",
+              remapped_answer_levels[[question_type]], " -> ", question_id, "=", final_answer_id_match)
         } else if (num_answer_id_matches == 0) {
           if (!approximate_standardized_answer_levels) {
             message[length(message) + 1] <- paste0("Failed to find an exact match",
-              " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+              " for standardized_answer_levels=", remapped_answer_levels[[question_type]], ".")
           } else {
             # when there are no exact matches, maybe use approximate matching
             if (question_type == "anforderungsniveau") {
-              st_ans_lvl <- substr(x = remapped_answer_levels[question_type], start = 18, stop = 18)
+              st_ans_lvl <- substr(x = remapped_answer_levels[[question_type]], start = 18, stop = 18)
               co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
               index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
               final_answer_id_match <- followup_question$answers[index, answer_id]
-              message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
-                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+              message[length(message) + 1] <- paste0("Approximate match: ",
+                remapped_answer_levels[[question_type]], " -> ",
+                followup_question$answers[index, corresponding_answer_level], " -> ",
+                question_id, "=", final_answer_id_match)
             }
             if (question_type == "aufsicht") {
-              if (remapped_answer_levels[question_type] == "isco_not_supervising") {
+              if (remapped_answer_levels[[question_type]] == "isco_not_supervising") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
-                message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
-                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+                message[length(message) + 1] <- paste0("Approximate match: ",
+                  remapped_answer_levels[[question_type]], " -> ",
+                  "isco_supervisor", " -> ",
+                  question_id, "=", final_answer_id_match)
               }
-              if (remapped_answer_levels[question_type] == "isco_supervisor") {
+              if (remapped_answer_levels[[question_type]] == "isco_supervisor") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
-                message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
-                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+                message[length(message) + 1] <- paste0("Approximate match: ",
+                  remapped_answer_levels[[question_type]], " -> ",
+                  "isco_not_supervising", " -> ",
+                  question_id, "=", final_answer_id_match)
               }
-              if (remapped_answer_levels[question_type] == "isco_manager") {
-                message[length(message) + 1] <- paste0("No exact match: Approximate matching used",
-                " for standardized_answer_levels=", remapped_answer_levels[question_type], ".")
+              if (remapped_answer_levels[[question_type]] == "isco_manager") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
+                message[length(message) + 1] <- paste0("Approximate match: ",
+                  remapped_answer_levels[[question_type]], " -> ",
+                  "isco_supervisor", " -> ",
+                  question_id, "=", final_answer_id_match)
               }
             }
           }

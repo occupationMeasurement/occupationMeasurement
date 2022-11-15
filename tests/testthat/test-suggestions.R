@@ -190,7 +190,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "3113",
       kldb_10 = "26303",
-      message = ""
+      message = "Exact match: isco_skill_level_3 -> Q1733_2=2"
     )
   )
 
@@ -205,7 +205,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "4415",
       kldb_10 = "73312",
-      message = ""
+      message = "Exact match: isco_skill_level_2 -> Q3553_1=1"
     )
   )
 
@@ -221,7 +221,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "1324",
       kldb_10 = "51394",
-      message = ""
+      message = "Exact match: isco_manager -> Q1005_1=1"
     )
   )
 
@@ -251,7 +251,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "3115",
       kldb_10 = "25183",
-      message = "No exact match: Approximate matching used for standardized_answer_levels=isco_skill_level_1."
+      message = "Approximate match: isco_skill_level_1 -> isco_skill_level_3 -> Q1706_1=2"
     )
   )
 
@@ -266,7 +266,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "3123",
       kldb_10 = "34293",
-      message = "No exact match: Approximate matching used for standardized_answer_levels=isco_manager."
+      message = "Approximate match: isco_manager -> isco_supervisor -> Q1783_1=1"
     )
   )
 
@@ -289,11 +289,17 @@ test_that("final_codes are properly generated when using standardized_answer_lev
 
 test_that("final_codes are properly generated for special cases depending on auxco >= v1.2.1", {
   # Electronics engineering technicians (v1.2.1)
-  get_final_codes(
-    "4038",
-    followup_answers = list("Q4038_1" = 2, "Q4038_2" = 1)
-  ) |>
-    expect_snapshot_value()
+  expect_equal(
+    get_final_codes(
+      "4038",
+      followup_answers = list("Q4038_1" = 2, "Q4038_2" = 1)
+    ),
+    list(
+      isco_08 = "3512",
+      kldb_10 = "43102",
+      message = ""
+    )
+  )
 })
 
 test_that("final_codes throws an error when used improperly", {

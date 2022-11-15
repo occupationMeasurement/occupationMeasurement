@@ -20,11 +20,13 @@ The interactive app can be started with the function `app()` function.
 More information about the interactive app can be found in `vignette("app")` and the help page `?app`.
 
 ```r
+library(occupationMeasurement)
+
 # Run the interactive shiny app
 occupationMeasurement::app()
 ```
 
-The app also supports custom questionnaires, so you can build your own or use one some of the questionnaires included in the package e.g. the `demo_questionnaire` will explain the functionality of the app using the code below.
+The app also supports custom questionnaires, so you can build your own or use one of the questionnaires included in the package. E.g., the `demo_questionnaire` will explain the functionality of the app using the code below.
 
 ```r
 library(occupationMeasurement)

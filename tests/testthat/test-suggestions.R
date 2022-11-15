@@ -92,6 +92,22 @@ test_that("final codes are correctly generated answers which depend on multiple 
       message = ""
     )
   )
+
+  # Electronics engineering technicians with wrong input (Q1733_3 does not exist).
+  expect_equal(
+    get_final_codes(
+      "1733",
+      followup_answers = list(
+        Q1733_1 = 2,
+        Q1733_3 = 2
+      )
+    ),
+    list(
+      isco_08 = "3113",
+      kldb_10 = "26303",
+      message = "Required question_ids (Q1733_1,Q1733_2) and provided question_ids (Q1733_1,Q1733_3) do not match. |&| Entry missing for Q1733_2 in followup_answers. |&| answer_kldb_id and answer_isco_id of selected answer from occupationMeasurement::auxco$followup_questions are empty. |&| Returning default code: Improve followup_answers (or standardized_answer_levels) to obtain more exact codings."
+    )
+  )
 })
 
 test_that("final codes are irrespective of the question order", {

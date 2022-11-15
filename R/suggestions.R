@@ -871,6 +871,9 @@ get_final_codes <- function(suggestion_id,
         }
         return(result)
       }
+    } else {
+      message[length(message) + 1] <- paste0("Required question_ids (", paste0(question_ids, collapse = ","),
+      ") and provided question_ids (", paste0(names(followup_answers), collapse = ","), ") do not match.")
     }
   }
 
@@ -896,14 +899,14 @@ get_final_codes <- function(suggestion_id,
       if (length(followup_answer_id) > 0 && !is.null(followup_answer_id) && !is.na(followup_answer_id)) {
         question <- followup_questions[[i]]
         answer <- question$answers[followup_answer_id, ]
-        if (answer$coding_is_finished == TRUE) {
+        if (!is.null(answer) && answer$coding_is_finished == TRUE) {
           # need to check that coding is not finished with the first follow-up question
           break
         }
       }
     }
 
-    if (!is.null(answer)) {
+    if (!is.null(answer) && (answer$answer_kldb_id != "" | answer$answer_isco_id != "")) {
       # Retrieve answer codes from followup
       result <- list()
       if ("isco_08" %in% code_type) {
@@ -916,6 +919,10 @@ get_final_codes <- function(suggestion_id,
         result$message <- paste(message, collapse = " |&| ")
       }
       return(result)
+    }
+    if (!is.null(answer) && (answer$answer_kldb_id == "" & answer$answer_isco_id == "")) {
+      message[length(message) + 1] <- paste("answer_kldb_id and answer_isco_id of selected answer",
+        "from occupationMeasurement::auxco$followup_questions are empty.")
     }
   }
 

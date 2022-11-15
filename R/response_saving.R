@@ -33,6 +33,12 @@ append_tables <- list(
     "session_id",
     "toggle_message",
     "time"
+  ),
+  "session_info" = c(
+    "session_id",
+    "url_search",
+    "user_id",
+    "time_session_ended"
   )
 )
 prepare_data_for_saving <- function(table_name, data) {

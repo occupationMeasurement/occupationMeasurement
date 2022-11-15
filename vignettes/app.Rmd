@@ -82,7 +82,7 @@ The user's answers themselves, with one row per question. These are saved, whene
 #### Columns
 
 - **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
-- **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey. (Format: `user_id`_`time stamp`_`random digit`)
 - **page_id**: An id / name, identifying the page this answer is coming from. Multiple answers per page are possible.
 - **start**: The timestamp when the user was shown this page.
 - **end**: The timestamp when the user submitted the page. Response time is the difference between **start** and **end**.
@@ -148,6 +148,7 @@ This is mainly useful for understanding whether some users may start multiple se
 - **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
 - **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
 - **url_search**: The [search / query part](https://en.wikipedia.org/wiki/Query_string) of the URL.
+- **time_session_ended**: Timestamp when this `session_info`-record got saved.
 
 # Deployment
 

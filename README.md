@@ -26,13 +26,13 @@ library(occupationMeasurement)
 occupationMeasurement::app()
 ```
 
-The app also supports custom questionnaires, so you can build your own or use one of the questionnaires included in the package. E.g., the `demo_questionnaire` will explain the functionality of the app using the code below.
+The app also supports custom questionnaires, so you can build your own or use one of the questionnaires included in the package. E.g., the `questionnaire_demo` will explain the functionality of the app using the code below.
 
 ```r
 library(occupationMeasurement)
 
 # Run the app with additional explanations
-app(questionnaire = demo_questionnaire())
+app(questionnaire = questionnaire_demo())
 ```
 
 ## Alternative Usage

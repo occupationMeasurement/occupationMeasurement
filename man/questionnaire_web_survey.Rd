@@ -2,16 +2,16 @@
 % Please edit documentation in R/questionnaires.R
 \name{questionnaire_web_survey}
 \alias{questionnaire_web_survey}
-\title{A web survey which participants can navigate themselves.}
+\title{A Web survey which participants can navigate themselves.}
 \usage{
 questionnaire_web_survey()
 }
 \value{
-A questionnaire for \code{\link[=app]{app()}} i.e. a list of pages.
+A questionnaire for \code{\link[=app]{app()}}, i.e. a list of pages.
 }
 \description{
 The basic default questionnaire. View the function's code to see the
-used pages.
+used pages. This function is meant as a template that can be changed to meet your requirements.
 }
 \examples{
 library(occupationMeasurement)

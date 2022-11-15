@@ -2,7 +2,7 @@
 % Please edit documentation in R/questionnaires.R
 \name{questionnaire_interviewer_administered}
 \alias{questionnaire_interviewer_administered}
-\title{A guided interview where an interviewer asks questions to an interviewee.}
+\title{A questionnaire for interviewer-administered surveys}
 \usage{
 questionnaire_interviewer_administered()
 }
@@ -10,7 +10,10 @@ questionnaire_interviewer_administered()
 A questionnaire for \code{\link[=app]{app()}} i.e. a list of pages.
 }
 \description{
-View the function's code to see the used pages.
+A questionnaire for Computer-assisted Interviewing (CAI), i.e. telephone interviewing or personal interviewing. In both modes, interviewer asks questions to an interviewee.
+}
+\details{
+View the function's code to see the used pages. This function is meant as a template that can be changed to meet your requirements.
 }
 \examples{
 library(occupationMeasurement)

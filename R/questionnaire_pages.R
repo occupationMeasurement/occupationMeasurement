@@ -214,7 +214,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
             tags$div(
               tags$div(
                 p(tags$b(paste0(i, ". ", df_suggestions[i, suggestion_main_label_column, with = FALSE]))),
-                tagAppendAttributes(p(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_label_column, with = FALSE], icon("angle-double-down")), `data-click-toggle` = paste0("toggle-pos-", i))
+                tagAppendAttributes(p(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_label_column, with = FALSE], icon("question-circle", class = "read-on-demand-icon fa-sm")), `data-click-toggle` = paste0("toggle-pos-", i))
               ),
               tags$div(id = paste0("toggle-pos-", i), style = "display: none", em(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_content_column, with = FALSE]))
             )

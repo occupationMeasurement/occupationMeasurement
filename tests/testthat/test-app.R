@@ -225,7 +225,7 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
         # Don't write data from test to disk
         save_to_file = FALSE
       ),
-      questionnaire = questionnaire_interviewer_administerd()
+      questionnaire = questionnaire_interviewer_administered()
     ),
     name = "test_2_textiltechniker",
     height = 741,

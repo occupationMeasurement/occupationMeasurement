@@ -32,7 +32,7 @@ There are multiple ways of changing the behaviour and contents of the app. These
 
 ## Different Questionnaires
 
-The toolbox comes with different ready-made questionnaires, such as the default `questionnaire_web_survey()` for self-administered online surveys, `questionnaire_interviewer_administerd()` for interviews conducted by an interviewer or `questionnaire_demo()` for a version of the app that includes explanations for how the app works behind the scenes.
+The toolbox comes with different ready-made questionnaires, such as the default `questionnaire_web_survey()` for self-administered online surveys, `questionnaire_interviewer_administered()` for interviews conducted by an interviewer or `questionnaire_demo()` for a version of the app that includes explanations for how the app works behind the scenes.
 
 If you need more flexibility, you can also modify existing questionnaires or create your own ones from scratch. To do this refer to the more detailed explanations available in `vignette("app-questionnaire")`.
 
@@ -47,7 +47,7 @@ library(occupationMeasurement)
 
 app(
   # Use the questionnaire for guided interviews
-  questionnaire = questionnaire_interviewer_administerd(),
+  questionnaire = questionnaire_interviewer_administered(),
   app_settings = create_app_settings(
     # ... specify your custom settings here
     require_id = TRUE

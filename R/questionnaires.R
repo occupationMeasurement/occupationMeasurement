@@ -46,14 +46,14 @@ questionnaire_web_survey <- function() {
 #' @examples
 #' library(occupationMeasurement)
 #'
-#' # Inspect the code to create the questionnaire_interviewer_administerd
-#' print(questionnaire_interviewer_administerd)
+#' # Inspect the code to create the questionnaire_interviewer_administered
+#' print(questionnaire_interviewer_administered)
 #'
 #' \dontrun{
-#' # Run the app with the questionnaire_interviewer_administerd
-#' app(questionnaire = questionnaire_interviewer_administerd())
+#' # Run the app with the questionnaire_interviewer_administered
+#' app(questionnaire = questionnaire_interviewer_administered())
 #' }
-questionnaire_interviewer_administerd <- function() {
+questionnaire_interviewer_administered <- function() {
   list(
     page_welcome(),
     page_first_freetext(is_interview = TRUE),

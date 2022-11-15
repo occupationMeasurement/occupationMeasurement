@@ -674,7 +674,7 @@ get_suggestion_info <- function(suggestion_ids,
 #'   "9076",
 #'   followup_answers = list(
 #'     # The first answer option in the first followup question
-#'     "Q9076_1" = 1
+#'     "Q9076_1" = 2
 #'   )
 #' )
 #'
@@ -683,8 +683,20 @@ get_suggestion_info <- function(suggestion_ids,
 #'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
 #'   "9076",
 #'   standardized_answer_levels = list(
-#'     # A response corresponding to the standard ISCO Level "manager"
-#'     "isco_supervisor_manager" = "isco_manager"
+#'     # A response corresponding to the standard ISCO Level "supervisor"
+#'     "isco_supervisor_manager" = "isco_supervisor"
+#'   )
+#' )
+#'
+#' # Same example with approximate matching, due to conflicting information: External data suggest the person is not a supervisor,
+#' # but the person still says she does supervisory tasks (Führungsaufgaben, as encoded in "9076"). If approximate_standardized_answer_levels = TRUE (the default),
+#' # the selected answer "9076" trumps the external data and we will code this person as a supervisor.
+#' get_final_codes(
+#' # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
+#' "9076",
+#'   standardized_answer_levels = list(
+#'     # A response corresponding to the standard ISCO Level "not manager nor supervisor"
+#'     "isco_supervisor_manager" = "isco_not_supervising"
 #'   )
 #' )
 get_final_codes <- function(suggestion_id,

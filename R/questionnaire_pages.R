@@ -551,10 +551,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 
 #' Page showing the user's results
 #'
-#' This page is only shown if the query parameter `show_results` is present.
-#'
-#' This page saves data in results_overview and marks the questionnaire as
-#' complete.
+#' This page is only meant for demonstration purposes. Users can see what they entered and which code was being saved. The page is only included in the [demo_questionnaire()], but not in the other questionnaire templates.
 #'
 #' @param ... All additional parameters are passed to [new_page()]
 #'
@@ -564,14 +561,9 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 page_results <- function(...) {
   new_page(
     page_id = "results",
-    condition = function(session, page, ...) {
-      !is.null(session$userData$user_info$query$show_results)
-    },
     run_before = function(session, page, ...) {
       # Column names used in data.table (for R CMD CHECK)
       auxco_id <- NULL
-
-      save_results_overview(session)
 
       res <- data.frame(
         user_id = session$userData$user_info$id,
@@ -711,9 +703,8 @@ page_results <- function(...) {
         ),
         button_previous(),
         button_next(),
-        mark_questionnaire_complete(),
         ## here
-        h4(tags$a("Neustart", href = paste0("/telephone-demo/?followup_types=aufsicht;spezialisierung;sonstige&tense=present&extra_instructions=on&id=0&study_id=Test&show_results")))
+        h4(tags$a("Neustart", href = paste0("/telephone-demo/?followup_types=aufsicht;spezialisierung;sonstige&tense=present&extra_instructions=on&id=0&study_id=Test")))
       )
     },
     ...

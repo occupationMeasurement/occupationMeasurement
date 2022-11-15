@@ -92,7 +92,7 @@ test_that("E2E: test case Koch", {
   }
 
   # Go to example URL
-  app$run_js("window.location.href = '/?id=test123&tense=present&extra_instructions=on&id=0&study_id=Test&show_results'")
+  app$run_js("window.location.href = '/?id=test123&tense=present&extra_instructions=on&id=0&study_id=Test'")
   Sys.sleep(wait_time)
 
   setup_wait_for_change(app)
@@ -196,7 +196,7 @@ test_that("E2E: test case Koch", {
     overview_data,
     data.table::data.table(
       session_id = overview_data$session_id,
-      url_search = "?id=test123&tense=present&extra_instructions=on&id=0&study_id=Test&show_results",
+      url_search = "?id=test123&tense=present&extra_instructions=on&id=0&study_id=Test",
       isco_08 = "9411",
       kldb_10 = "63312",
       user_id = "test123",

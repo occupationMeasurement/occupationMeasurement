@@ -13,7 +13,9 @@ page_results(...)
 A page object.
 }
 \description{
-This page is only meant for demonstration purposes. Users can see what they entered and which code was being saved. The page is only included in the \code{\link[=demo_questionnaire]{demo_questionnaire()}}, but not in the other questionnaire templates.
+This page is only meant for demonstration purposes. Users can see what they
+entered and which code was being saved. The page is only included in the
+\code{\link[=questionnaire_demo]{questionnaire_demo()}}, but not in the other questionnaire templates.
 }
 \seealso{
 \code{\link[=new_page]{new_page()}}

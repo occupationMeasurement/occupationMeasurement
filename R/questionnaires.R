@@ -131,9 +131,9 @@ questionnaire_demo <- function() {
           br(),
           p(list("- Die Liste aller berufsbezogenenen Beschreibungen besteht aus \u00fcber 1100 m\u00f6glichen Antworten und wurde vom
             LMU-Team auf der Grundlage der offiziellen KldB-Klassifikation und unter Nutzung der ISCO-Klassifikation entwickelt.
-            Die vollständige Liste der Antworten (und evtl. weitere Nachfragen) sind",
+            Die vollst\u00e4ndige Liste der Antworten (und evtl. weitere Nachfragen) sind",
           tags$a(href="https://github.com/occupationMeasurement/auxiliary-classification", "in der Berufs-Hilfsklassifikation
-            mit Tätigkeitsbeschreibungen auf Github", target="_blank"),
+            mit T\u00e4tigkeitsbeschreibungen auf Github", target="_blank"),
             "ersichtlich. Als Sie Ihre berufliche T\u00e4tigkeit auf der vorherigen Seite eingegeben haben, hat der
             Algorithmus auf der Grundlage Ihrer vorherigen Antwort die Wahrscheinlichkeiten
             aller 1100+ Jobbeschreibungen aus unserer Liste berechnet und zeigt Ihnen die 5 wahrscheinlichsten an.")),

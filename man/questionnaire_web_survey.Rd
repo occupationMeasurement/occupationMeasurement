@@ -2,7 +2,7 @@
 % Please edit documentation in R/questionnaires.R
 \name{questionnaire_web_survey}
 \alias{questionnaire_web_survey}
-\title{A Web survey which participants can navigate themselves.}
+\title{A web survey which participants can navigate themselves.}
 \usage{
 questionnaire_web_survey()
 }

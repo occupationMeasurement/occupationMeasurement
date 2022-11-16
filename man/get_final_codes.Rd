@@ -93,9 +93,12 @@ get_final_codes(
   )
 )
 
-# Same example with approximate matching, due to conflicting information: External data suggest the person is not a supervisor,
-# but the person still says she does supervisory tasks (Führungsaufgaben, as encoded in "9076"). If approximate_standardized_answer_levels = TRUE (the default),
-# the selected answer "9076" trumps the external data and we will code this person as a supervisor.
+# Same example with approximate matching, due to conflicting information:
+# External data suggest the person is not a supervisor, but the person still
+# says she does supervisory tasks (Führungsaufgaben, as encoded in "9076").
+# If approximate_standardized_answer_levels = TRUE (the default), the
+# selected answer "9076" trumps the external data and we will code this
+# person as a supervisor.
 get_final_codes(
 # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
 "9076",

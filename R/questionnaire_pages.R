@@ -551,7 +551,9 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 
 #' Page showing the user's results
 #'
-#' This page is only meant for demonstration purposes. Users can see what they entered and which code was being saved. The page is only included in the [demo_questionnaire()], but not in the other questionnaire templates.
+#' This page is only meant for demonstration purposes. Users can see what they
+#' entered and which code was being saved. The page is only included in the
+#' [questionnaire_demo()], but not in the other questionnaire templates.
 #'
 #' @param ... All additional parameters are passed to [new_page()]
 #'

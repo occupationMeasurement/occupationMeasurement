@@ -254,6 +254,11 @@ get_responses <- function(app_settings = create_app_settings()) {
   # Note: This has to match with the pattern of filenames specified in save_data_on_disk
   files_to_read <- list.files(app_settings$response_output_dir, pattern = "_results_overview.*\\.csv$", full.names = T)
 
+  if (length(files_to_read) == 0) {
+    warning("There are no results_overview files to be read, returning NULL.")
+    return(NULL)
+  }
+
   # Load the different result overviews
   list_of_result_overviews <- lapply(files_to_read, fread, colClasses = "character")
 

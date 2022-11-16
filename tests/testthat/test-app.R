@@ -240,10 +240,6 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
 
   setup_wait_for_change(app)
 
-  # Navigate beyond welcome page
-  app$click(selector = "#nextButton")
-  app$wait_for_js("checkForChange()")
-
   # Answer the freetext question
   app$run_js("document.querySelector('input').value = 'Textiltechniker'")
   app$run_js("

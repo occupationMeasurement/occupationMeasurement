@@ -1,6 +1,6 @@
 # The default questionnaire pages
 
-#' Welcome Page
+#' Welcome Page (optional)
 #'
 #' Providing an introduction and greeting participants.
 #'
@@ -19,9 +19,7 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
         list(
           p(strong(title)),
           h5(""),
-          button_next(label = "Start"),
-          # Move to the top when next or previous button is clicked (this works for all pages, after being called once)
-          tags$script('$("body").on("click", "#nextButton, #previousButton", function() {$(window).scrollTop(0) });')
+          button_next(label = "Start")
         )
       )
     },
@@ -56,6 +54,9 @@ page_first_freetext <- function(is_interview = FALSE, ...) {
     render_question_text = FALSE,
     render_before = function(session, page, run_before_output, ...) {
       list(
+        # Move to the top when next or previous button is clicked (this works for all pages, after being called once)
+        tags$script('$("body").on("click", "#nextButton, #previousButton", function() {$(window).scrollTop(0) });'),
+
         p(run_before_output$question_text),
         if (is_interview) p(class = "interviewer", "INT: Angaben des Befragten vollst\u00e4ndig eintragen. Bitte auf Rechtschreibung achten und ggf. buchstabieren lassen.")
       )

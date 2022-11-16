@@ -22,7 +22,6 @@
 #' }
 questionnaire_web_survey <- function() {
   list(
-    page_welcome(), # Welcomes respondents
     page_first_freetext(),
     page_second_freetext(),
     page_select_suggestion(),
@@ -56,7 +55,6 @@ questionnaire_web_survey <- function() {
 #' }
 questionnaire_interviewer_administered <- function() {
   list(
-    page_welcome(), # Welcomes interviewers and is typically not shown in a survey
     page_first_freetext(is_interview = TRUE),
     page_second_freetext(is_interview = TRUE),
     page_select_suggestion(is_interview = TRUE),

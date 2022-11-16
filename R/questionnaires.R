@@ -1,4 +1,4 @@
-#' A Web survey which participants can navigate themselves.
+#' A web survey which participants can navigate themselves.
 #'
 #' The basic default questionnaire. View the function's code to see the
 #' used pages. This function is meant as a template that can be changed to meet your requirements.
@@ -22,14 +22,13 @@
 #' }
 questionnaire_web_survey <- function() {
   list(
-    page_welcome(), # welcomes respondents and is typically not shown in a survey
+    page_welcome(), # Welcomes respondents
     page_first_freetext(),
     page_second_freetext(),
     page_select_suggestion(),
     page_none_selected_freetext(),
     page_followup(1),
     page_followup(2),
-    # page_results(), # summarizes results and is typically not shown in a survey
     page_final()
   )
 }
@@ -57,14 +56,13 @@ questionnaire_web_survey <- function() {
 #' }
 questionnaire_interviewer_administered <- function() {
   list(
-    page_welcome(), # welcomes interviewers and is typically not shown in a survey
+    page_welcome(), # Welcomes interviewers and is typically not shown in a survey
     page_first_freetext(is_interview = TRUE),
     page_second_freetext(is_interview = TRUE),
     page_select_suggestion(is_interview = TRUE),
     page_none_selected_freetext(is_interview = TRUE),
     page_followup(1, is_interview = TRUE),
     page_followup(2, is_interview = TRUE),
-    # page_results(), # summarizes results and is typically not shown in a survey
     page_final()
   )
 }
@@ -108,11 +106,8 @@ questionnaire_demo <- function() {
           br(),
           br(),
           p(strong("Zur Funktionsweise:")),
-          p("TODO: Das folgende Diagramm und die nachfolgende Beschreibung muss angepasst werden. Der Abgleich mit dem Kodier-Index wird nicht mehr unterstützt und der Fragebogen hier ist allgemein ein wenig anders."),
           p("Nach Eingabe eines Textes k\u00f6nnen die folgenden Aktionen erfolgen:"),
-          tags$img(src = "/www/Flowchart.jpg", height = "100%", width = "100%"),
           tags$ol(
-            tags$li("Automatische Kodierung mit Kodier-Index (auf KldB-4-Steller-Ebene). Betrifft sch\u00e4tzungsweise ca. 20-30% der Befragten, ist jedoch nicht aktiviert (nur experimentell verf\u00fcgbar)."),
             tags$li("Vorschlagen von m\u00f6glichen Berufskategorien mittels statistischer Methoden. Es wird eine halboffene Frage gestellt, aus der der Befragte eine T\u00e4tigkeit ausw\u00e4hlen kann. Als Ergebnis erhalten wir 5-stellige KldBs und 4-stellige ISCO Codes. Betrifft sch\u00e4tzungsweise ca. 50-60% der Befragten die automatische Kodierung mit Kodier-Index aktiv ist oder 70-90% sonst (default)."),
             tags$li("Keine automatische Kodierung m\u00f6glich. Eine weitere Freitextfrage ist zur manuellen Kodierung erforderlich. Betrifft sch\u00e4tzungsweise ca. 20% der Befragten.")
           ),

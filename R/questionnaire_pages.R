@@ -189,7 +189,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 
         suggestion_main_label_column <- "task"
         # Note: dropdown infromation is currently only shown for interviewers
-        suggestion_dropdown_label_column <- "title"
+        suggestion_dropdown_label_column <- "kldb_title_short"
         suggestion_dropdown_content_column <- "task_description"
 
         # Generate the html of the choices themselves

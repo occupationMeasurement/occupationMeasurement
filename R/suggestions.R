@@ -715,6 +715,7 @@ get_final_codes <- function(suggestion_id,
 
   stopifnot(suggestion_type == "auxco-1.2.x")
   stopifnot(is.list(followup_answers))
+  stopifnot(!is.null(suggestion_id))
 
   auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 

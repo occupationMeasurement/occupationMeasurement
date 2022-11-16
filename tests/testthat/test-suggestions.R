@@ -236,7 +236,7 @@ test_that("final_codes are properly generated when using standardized_answer_lev
     list(
       isco_08 = "3119",
       kldb_10 = "27182",
-      message = ""
+      message = "Exact match: isco_skill_level_2 -> Q1709_1=1"
     )
   )
 

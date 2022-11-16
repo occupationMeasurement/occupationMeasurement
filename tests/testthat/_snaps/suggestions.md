@@ -670,7 +670,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["isco_08", "kldb_10"]
+          "value": ["isco_08", "kldb_10", "message"]
         }
       },
       "value": [
@@ -683,6 +683,11 @@
           "type": "character",
           "attributes": {},
           "value": ["01402"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Returning default code: Improve followup_answers (or standardized_answer_levels) to obtain more exact codings."]
         }
       ]
     }
@@ -695,7 +700,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["isco_08", "kldb_10"]
+          "value": ["isco_08", "kldb_10", "message"]
         }
       },
       "value": [
@@ -708,6 +713,11 @@
           "type": "character",
           "attributes": {},
           "value": ["01203"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": [""]
         }
       ]
     }
@@ -785,7 +795,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["isco_08", "kldb_10"]
+          "value": ["isco_08", "kldb_10", "message"]
         }
       },
       "value": [
@@ -798,14 +808,12 @@
           "type": "character",
           "attributes": {},
           "value": ["-0030"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": [""]
         }
       ]
-    }
-
-# final_codes are properly generated for special cases depending on auxco >= v1.2.1
-
-    {
-      "isco_08": "3512",
-      "kldb_10": "43102"
     }
 

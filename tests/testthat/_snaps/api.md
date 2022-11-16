@@ -224,6 +224,9 @@
       ],
       "kldb_10": [
         "82312"
+      ],
+      "message": [
+        "Returning default code: Improve followup_answers (or standardized_answer_levels) to obtain more exact codings."
       ]
     }
 
@@ -235,6 +238,9 @@
       ],
       "kldb_10": [
         "82311"
+      ],
+      "message": [
+        ""
       ]
     }
 
@@ -246,6 +252,9 @@
       ],
       "kldb_10": [
         "91344"
+      ],
+      "message": [
+        "Entry missing for Q1836_2 in followup_answers."
       ]
     }
 
@@ -257,6 +266,9 @@
       ],
       "kldb_10": [
         "25183"
+      ],
+      "message": [
+        "Approximate match: isco_skill_level_1 -> isco_skill_level_3 -> Q1706_1=2"
       ]
     }
 
@@ -268,6 +280,9 @@
       ],
       "kldb_10": [
         "34293"
+      ],
+      "message": [
+        "Approximate match: isco_manager -> isco_supervisor -> Q1783_1=1"
       ]
     }
 

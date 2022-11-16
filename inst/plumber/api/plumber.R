@@ -120,6 +120,7 @@ function(res, suggestion_id, followup_question_id = "", followup_answer_id = "")
 #* @param:[character] code_type Which type of codes should be returned. Multiple codes can be returned at the same time. Supported types of codes are "isco_08" and "kldb_10". Defaults to "isco_08" and "kldb_10".
 #* @tag "occupationMeasurement"
 #* @get /v1/final_codes
+#* @serializer unboxedJSON
 function(suggestion_id,
          followup_answers = numeric(),
          isco_skill_level = NA_character_,

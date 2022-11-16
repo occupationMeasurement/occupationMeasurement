@@ -565,6 +565,8 @@ page_results <- function(...) {
       # Column names used in data.table (for R CMD CHECK)
       auxco_id <- NULL
 
+      save_results_overview(session)
+
       res <- data.frame(
         user_id = session$userData$user_info$id,
         session_id = session$userData$user_info$session_id,

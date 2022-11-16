@@ -230,7 +230,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
     # individual user session ends.
     onSessionEnded(function() {
       # Save the final, cleaned-up data (commented out for now: not really needed, and it throws errors if one leaves the site early)
-      # save_results_overview(session)
+      save_results_overview(session)
 
       # Save session data (to detect multiple sessions if there are issues)
       session_data <- list(

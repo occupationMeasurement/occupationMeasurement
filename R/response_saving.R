@@ -191,28 +191,28 @@ extract_results_overview <- function(session) {
   )
 
   # TODO: Maybe make this code more flexible to support multiple numbers of follow_up questions in the future
-  # TODO: Save follow up question ids in long format?
+  if (!is.null(question_answers_wide$P_select_suggestion_Q_default_R_id)) {
+    # Generate named list of followup_answers
+    question_ids <- get_followup_questions(
+      suggestion_id = question_answers_wide$P_select_suggestion_Q_default_R_id
+    ) |>
+      sapply(function(x) x$question_id)
+    followup_answers <- list(
+      question_answers_wide$P_followup_1_Q_default_R_id,
+      question_answers_wide$P_followup_2_Q_default_R_id
+    )
+    length(question_ids) <- length(followup_answers)
+    names(followup_answers) <- question_ids
 
-  # Generate named list of followup_answers
-  question_ids <- get_followup_questions(
-    suggestion_id = question_answers_wide$P_select_suggestion_Q_default_R_id
-  ) |>
-    sapply(function(x) x$question_id)
-  followup_answers <- list(
-    question_answers_wide$P_followup_1_Q_default_R_id,
-    question_answers_wide$P_followup_2_Q_default_R_id
-  )
-  length(question_ids) <- length(followup_answers)
-  names(followup_answers) <- question_ids
-
-  # Retrieve the final codes
-  final_codes <- get_final_codes(
-    suggestion_id = question_answers_wide$P_select_suggestion_Q_default_R_id,
-    followup_answers = followup_answers,
-    code_type = c("isco_08", "kldb_10")
-  )
-  user_data$isco_08 <- final_codes$isco_08
-  user_data$kldb_10 <- final_codes$kldb_10
+    # Retrieve the final codes
+    final_codes <- get_final_codes(
+      suggestion_id = question_answers_wide$P_select_suggestion_Q_default_R_id,
+      followup_answers = followup_answers,
+      code_type = c("isco_08", "kldb_10")
+    )
+    user_data$isco_08 <- final_codes$isco_08
+    user_data$kldb_10 <- final_codes$kldb_10
+  }
 
   final_data <- merge(
     user_data,

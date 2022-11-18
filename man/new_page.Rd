@@ -65,8 +65,10 @@ Only if this evaluated to \code{TRUE}, continue.
 The outputs from \code{render_before}, \code{render} & \code{render_after} are
 stitched together to produce the final HTML output of the page.
 \item \code{run_after} (\code{session}, \code{input}, \code{output})
-Run when the user leaves the page. Any user input has to be
-handled here.
+Run when the user leaves the page (=clicks the next button). Any
+user input has to be handled here. For each question asked, one will
+typically call \code{\link[=set_question_data]{set_question_data()}} to save the collected data
+internally.
 }
 
 Each of the life-cycle functions above is annotated with the
@@ -74,6 +76,17 @@ paramaters it has access to. \code{session}, \code{input} and \code{output} are
 passed directly from shiny and correspond to the objects made available by
 \code{\link[shiny:shinyServer]{shiny::shinyServer()}}, \code{run_before_output} is available for convenience and
 corresponds to whatever is returned by \code{run_before}.
+
+Some side-effects occur:
+\itemize{
+\item \code{occupationMeasurement:::init_page_data} is called before 1. \code{run_before}.
+It sets up an internal representation of the page data to be saved.
+\item \code{occupationMeasurement:::finalize_data} is called before 6. \code{run_before}.
+\item \code{occupationMeasurement:::save_page_data} is called after 6. \code{run_before}.
+It saves the responses on a hard drive, i.e. it appends the responses
+from this page to \code{table_name == "answers"}. See the vignette
+and \code{\link[=create_app_settings]{create_app_settings()}} for details.
+}
 
 Use of \code{render_before}, \code{render_after} is discouraged if not necessary,
 as these two life-cycle functions have only been added to allow for easier
@@ -88,4 +101,7 @@ one_page_questionnaire <- list(
     }
   )
 )
+
+# TODO: Include an example of a simple page that contains two questions
+# and thus two calls to set_question_data()?
 }

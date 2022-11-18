@@ -14,14 +14,25 @@
 #'       The outputs from `render_before`, `render` & `render_after` are
 #'       stitched together to produce the final HTML output of the page.
 #'   6. `run_after` (`session`, `input`, `output`)
-#'       Run when the user leaves the page. Any user input has to be
-#'       handled here.
+#'       Run when the user leaves the page (=clicks the next button). Any
+#'       user input has to be handled here. For each question asked, one will
+#'       typically call [set_question_data()] to save the collected data
+#'       internally.
 #'
 #' Each of the life-cycle functions above is annotated with the
 #' paramaters it has access to. `session`, `input` and `output` are
 #' passed directly from shiny and correspond to the objects made available by
 #' [shiny::shinyServer()], `run_before_output` is available for convenience and
 #' corresponds to whatever is returned by `run_before`.
+#'
+#' Some side-effects occur:
+#' - `occupationMeasurement:::init_page_data` is called before 1. `run_before`.
+#'   It sets up an internal representation of the page data to be saved.
+#' - `occupationMeasurement:::finalize_data` is called before 6. `run_before`.
+#' - `occupationMeasurement:::save_page_data` is called after 6. `run_before`.
+#'   It saves the responses on a hard drive, i.e. it appends the responses
+#'   from this page to `table_name == "answers"`. See the vignette
+#'   and [create_app_settings()] for details.
 #'
 #' Use of `render_before`, `render_after` is discouraged if not necessary,
 #' as these two life-cycle functions have only been added to allow for easier
@@ -64,6 +75,9 @@
 #'     }
 #'   )
 #' )
+#'
+#' # TODO: Include an example of a simple page that contains two questions
+#' # and thus two calls to set_question_data()?
 new_page <- function(page_id, render, condition = NULL, run_before = NULL, render_before = NULL, render_after = NULL, run_after = NULL) {
   page <- list(
     # A unique string identifiying this page. Used to store data.

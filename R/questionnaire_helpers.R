@@ -26,11 +26,15 @@ mark_questionnaire_complete <- function() {
 #' @export
 #'
 #' @examples
-#' page_choose_one_option(
-#'   "test_page_radio",
-#'   question_text = "Hello there! Please pick your favorite number from the options below:",
-#'   list_of_options = list(One = 1, Two = 2, Three = 3)
+#' one_page_questionnaire <- list(
+#'  page_choose_one_option(
+#'    "test_page_radio",
+#'    question_text = "Hello there! Please pick your favorite number from the options below:",
+#'    list_of_options = list(One = 1, Two = 2, Three = 3)
+#'  ),
+#'  page_final()
 #' )
+#' app(questionnaire = one_page_questionnaire)
 page_choose_one_option <- function(page_id,
                                    question_text = "Please pick one of the following options",
                                    list_of_options = list(One = 1, Two = 2, Three = 3),
@@ -74,7 +78,7 @@ page_choose_one_option <- function(page_id,
         radioButtons("radioButtonQuestion", NULL,
           width = "100%",
           choices = list_of_options,
-          selected = get_item_data(session = session, page_id = page$page_id, key = "response_id")
+          selected = get_item_data(session = session, page_id = page$page_id, key = "response_id", default = character())
         ),
         if (previous_button) button_previous(),
         if (next_button) button_next()

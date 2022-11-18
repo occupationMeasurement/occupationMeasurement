@@ -34,7 +34,10 @@ mark_questionnaire_complete <- function() {
 #'  ),
 #'  page_final()
 #' )
-#' app(questionnaire = one_page_questionnaire)
+#' \dontrun{
+#'  app(questionnaire = one_page_questionnaire)
+#' }
+#' 
 page_choose_one_option <- function(page_id,
                                    question_text = "Please pick one of the following options",
                                    list_of_options = list(One = 1, Two = 2, Three = 3),
@@ -117,6 +120,8 @@ page_choose_one_option <- function(page_id,
 #'   Defaults to TRUE.
 #' @param previous_button Whether to show the button to navigate to the preivous page?
 #'   Defaults to TRUE.
+#' @param trigger_next_on_enter Whether the next button is triggered 
+#'   when one presses enter. Defaults to TRUE. There are known issues with IE11.
 #' @param render_question_text Whether the question text should be displayed?
 #'   Only set this to FALSE, if you wish to change the rendering of the
 #'   question_text by e.g. using `render_before`.
@@ -143,6 +148,7 @@ page_freetext <- function(page_id,
                           no_answer_checkbox = TRUE,
                           next_button = TRUE,
                           previous_button = TRUE,
+                          trigger_next_on_enter = TRUE,
                           render_question_text = TRUE,
                           run_before = NULL,
                           run_after = NULL,
@@ -187,6 +193,18 @@ page_freetext <- function(page_id,
     render = function(session, page, run_before_output, ...) {
       list(
         if (render_question_text) p(run_before_output$question_text),
+
+        if (trigger_next_on_enter) {
+          # Known issue with IE11: If one types fast and presses enter,
+          # not the complete text gets used/is saved.
+          tags$script(paste0('var $nextButton = $("#nextButton");
+                      $("#', page$page_id, '_text").on("keyup", function(e) {
+                        if(e.keyCode == 13){
+                          $nextButton.click();
+                        }
+                      });'))
+        },
+
         textInput(
           paste0(page$page_id, "_text"),
           NULL,

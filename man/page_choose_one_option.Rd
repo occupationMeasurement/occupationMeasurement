@@ -58,7 +58,10 @@ one_page_questionnaire <- list(
  ),
  page_final()
 )
-app(questionnaire = one_page_questionnaire)
+\dontrun{
+ app(questionnaire = one_page_questionnaire)
+}
+
 }
 \seealso{
 \code{\link[=new_page]{new_page()}}

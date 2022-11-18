@@ -48,7 +48,7 @@ page_choose_one_option <- function(page_id,
       } else {
         actual_question_text <- question_text
       }
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = actual_question_text
@@ -74,7 +74,7 @@ page_choose_one_option <- function(page_id,
         radioButtons("radioButtonQuestion", NULL,
           width = "100%",
           choices = list_of_options,
-          selected = get_question_data(session = session, page_id = page$page_id, key = "response_id")
+          selected = get_item_data(session = session, page_id = page$page_id, key = "response_id")
         ),
         if (previous_button) button_previous(),
         if (next_button) button_next()
@@ -82,7 +82,7 @@ page_choose_one_option <- function(page_id,
     },
     run_after = function(session, page, input, ...) {
       response_id <- input[["radioButtonQuestion"]]
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         response_id = response_id,
@@ -152,16 +152,16 @@ page_freetext <- function(page_id,
       } else {
         actual_question_text <- question_text
       }
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = actual_question_text
       )
       if (no_answer_checkbox) {
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
-          question_id = "no_answer",
+          item_id = "no_answer",
           question_text = actual_question_text
         )
       }
@@ -186,7 +186,7 @@ page_freetext <- function(page_id,
         textInput(
           paste0(page$page_id, "_text"),
           NULL,
-          value = get_question_data(session = session, page_id = page$page_id, key = "response_text"),
+          value = get_item_data(session = session, page_id = page$page_id, key = "response_text"),
           width = "80%"
         ),
         br(),
@@ -198,7 +198,7 @@ page_freetext <- function(page_id,
             } else {
               p("Keine Angabe")
             },
-            value = get_question_data(session = session, page_id = page$page_id, question_id = "no_answer", key = "response_id"),
+            value = get_item_data(session = session, page_id = page$page_id, item_id = "no_answer", key = "response_id"),
             width = "100%"
           )
         },
@@ -207,7 +207,7 @@ page_freetext <- function(page_id,
       )
     },
     run_after = function(session, page, input, ...) {
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         response_text = if (is.null(input[[paste0(page$page_id, "_text")]])) "" else input[[paste0(page$page_id, "_text")]]
@@ -215,10 +215,10 @@ page_freetext <- function(page_id,
 
       # Also record no-answer checkbox
       if (no_answer_checkbox) {
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
-          question_id = "no_answer",
+          item_id = "no_answer",
           response_id = if (is.null(input[[paste0(page$page_id, "_chk_no_answer")]])) FALSE else input[[paste0(page$page_id, "_chk_no_answer")]]
         )
       }

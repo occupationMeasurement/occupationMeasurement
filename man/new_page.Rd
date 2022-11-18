@@ -67,7 +67,7 @@ stitched together to produce the final HTML output of the page.
 \item \code{run_after} (\code{session}, \code{input}, \code{output})
 Run when the user leaves the page (=clicks the next button). Any
 user input has to be handled here. For each question asked, one will
-typically call \code{\link[=set_question_data]{set_question_data()}} to save the collected data
+typically call \code{\link[=set_item_data]{set_item_data()}} to save the collected data
 internally.
 }
 
@@ -103,5 +103,5 @@ one_page_questionnaire <- list(
 )
 
 # TODO: Include an example of a simple page that contains two questions
-# and thus two calls to set_question_data()?
+# and thus two calls to set_item_data()?
 }

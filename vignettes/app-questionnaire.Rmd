@@ -38,7 +38,7 @@ To find some useful pre-built pages or helper functions to easily generate commo
 
 All existing pages (e.g. `page_first_freetext()`, `page_select_suggestion()`) and page helpers (e.g.` page_choose_one_option()`, `page_freetext()`) will automatically save user input (as long as it is not explicitly disabled in the `app_settings`).
 
-When building your own pages from scratch, however, you will have to make sure to specify which data should be saved in the app. This can be done by using `set_question_data()`. If data is saved using this function it will automatically be saved with the other data, yet we always recommend verifying that questionnaire data is saved as expected before starting proper data collection.
+When building your own pages from scratch, however, you will have to make sure to specify which data should be saved in the app. This can be done by using `set_item_data()`. If data is saved using this function it will automatically be saved with the other data, yet we always recommend verifying that questionnaire data is saved as expected before starting proper data collection.
 
 For a detailed description of what data is saved by default and in which format, examine the section "data" in `vignette("app")`.
 

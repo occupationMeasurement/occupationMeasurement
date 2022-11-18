@@ -62,7 +62,7 @@ page_first_freetext <- function(is_interview = FALSE, ...) {
       )
     },
     run_after = function(session, page, input, ...) {
-      text <- get_question_data(session = session, page_id = page$page_id, key = "response_text")
+      text <- get_item_data(session = session, page_id = page$page_id, key = "response_text")
       session$userData$user_info$text_for_suggestion <- text
 
       # Generate Job Suggestions
@@ -108,14 +108,14 @@ page_second_freetext <- function(combine_input_with_first = TRUE, is_interview =
       nrow(stats::na.omit(session$userData$user_info$list_suggestions)) == 0
     },
     run_after = function(session, page, input, ...) {
-      text <- get_question_data(
+      text <- get_item_data(
         session = session,
         page_id = page$page_id,
         key = "response_text"
       )
       if (combine_input_with_first) {
         # Combine answer texts from first and second question
-        text_from_first_question <- get_question_data(
+        text_from_first_question <- get_item_data(
           session = session,
           page_id = "freetext_1",
           key = "response_text",
@@ -254,7 +254,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         tags$div(p("Keine Angabe"))
       }
 
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = question_text
@@ -304,7 +304,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
             )
           ),
           p(run_before_output$transition_text),
-          p(get_question_data(session = session, page_id = page$page_id, key = "question_text")),
+          p(get_item_data(session = session, page_id = page$page_id, key = "question_text")),
           if (is_interview) {
             list(
               p(class = "interviewer", style = run_before_output$style_is_interview, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
@@ -316,7 +316,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
           width = "100%",
           choiceNames = run_before_output$suggestions_html,
           choiceValues = as.list(c(run_before_output$df_suggestions[, auxco_id], "95", "99")),
-          selected = get_question_data(session = session, page_id = page$page_id, key = "response_id", default = character(0))
+          selected = get_item_data(session = session, page_id = page$page_id, key = "response_id", default = character(0))
         ),
         br(),
         button_previous(),
@@ -360,14 +360,14 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
       if (is.null(input$question1)) {
         # Nothing has been selected
         # TODO: We might want to enforce a selection here?
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
           response_id = "EMPTY"
         )
       } else {
         # At least some option has been selected
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
           response_id = input$question1
@@ -380,7 +380,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 
       # Check for potential clarifying followup questions and add them to the user_data if there are any
       session$userData$followup_questions <- get_followup_questions(
-        suggestion_id = get_question_data(session = session, page_id = page$page_id, key = "response_id"),
+        suggestion_id = get_item_data(session = session, page_id = page$page_id, key = "response_id"),
         tense = session$userData$session_settings$tense
       )
 
@@ -410,7 +410,7 @@ page_none_selected_freetext <- function(is_interview = FALSE) {
     },
     # Only show this page when none of the suggestions has been picked
     condition = function(session, page, ...) {
-      selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
+      selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
       return(selected_suggestion_id %in% c(
         # Nothing ticked at all
         "EMPTY",
@@ -458,7 +458,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
         for (previous_index in (index - 1):1) {
           # Retrieve the selected previous answer
           previous_question <- session$userData$followup_questions[[previous_index]]
-          previous_answer_id <- get_question_data(
+          previous_answer_id <- get_item_data(
             session = session,
             page_id = paste0("followup_", previous_index),
             key = "response_id"
@@ -479,7 +479,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
       session$userData$active_followup_question <- session$userData$followup_questions[[index]]
       question <- session$userData$active_followup_question
 
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = paste0(question$question_text, " (", question$id, ")")
@@ -536,7 +536,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
       selected <- if (is.null(input$question.follow.quest)) NA_integer_ else as.integer(input$question.follow.quest) # setze alles auf NA wenn nichts ausgew\u00e4hlt wurde
       selected_suggestion <- question$answers[selected, ]
 
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         response_id = selected,
@@ -577,10 +577,10 @@ page_results <- function(...) {
       )
 
       # 1. Freitextantwort speichern
-      res$berufTaetigkeitText <- get_question_data(session = session, page_id = "freetext_1", key = "response_text")
+      res$berufTaetigkeitText <- get_item_data(session = session, page_id = "freetext_1", key = "response_text")
 
       # Save output from 2nd freetext question
-      res$berufTaetigkeitText2 <- get_question_data(session = session, page_id = "freetext_2", key = "response_text")
+      res$berufTaetigkeitText2 <- get_item_data(session = session, page_id = "freetext_2", key = "response_text")
 
       # Match answers IDs with data
       suggestions <- session$userData$user_info$list_suggestions
@@ -588,7 +588,7 @@ page_results <- function(...) {
       # Check whether ther are suggestions
       has_suggestions <- nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0
       if (has_suggestions) {
-        selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
+        selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
         selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
       }
 
@@ -600,14 +600,14 @@ page_results <- function(...) {
         res$auxco_id <- selected_suggestion$auxco_id
 
         # Get raw answers to follow up questions
-        res$followUp1Question <- get_question_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
-        res$followUp1Answer <- get_question_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
-        res$followUp2Question <- get_question_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
-        res$followUp2Answer <- get_question_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
+        res$followUp1Question <- get_item_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
+        res$followUp1Answer <- get_item_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
+        res$followUp2Question <- get_item_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
+        res$followUp2Answer <- get_item_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
 
         # Retrieve final kldb / isco codes
-        followup_1_id <- get_question_data(session = session, page_id = "followup_1", key = "response_id")
-        followup_2_id <- get_question_data(session = session, page_id = "followup_2", key = "response_id")
+        followup_1_id <- get_item_data(session = session, page_id = "followup_1", key = "response_id")
+        followup_2_id <- get_item_data(session = session, page_id = "followup_2", key = "response_id")
 
         # Create a named list of followup_answers
         followup_questions <- get_followup_questions(selected_suggestion$auxco_id)

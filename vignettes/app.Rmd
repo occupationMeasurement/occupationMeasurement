@@ -166,7 +166,7 @@ The user's answers themselves, with one row per question. These are saved, whene
 - **page_id**: An id / name, identifying the page this answer is coming from. Multiple answers per page are possible.
 - **start**: The timestamp when the user was shown this page.
 - **end**: The timestamp when the user submitted the page. Response time is the difference between **start** and **end**.
-- **question_id**: An id / name, identifying the question that is being answered, as there can sometimes be multiple questions on a single page. 
+- **item_id**: An id / name, identifying the item that is being answered, as there can sometimes be multiple items in a single question and multiple questions on a single page. 
 - **question_text**: The text that was shown to and responded to by the participant.
 - **response_id**: The id of the chosen response option by the respondent, typcially used for questions with distinct answering options. This can also be the case if a user ticks e.g. a "I don't want to respond" option.
 - **response_text**: Either the raw text from a free text response or the corresponding label for distinct answering options. When the question is not a free text question, it is recommended to use response ids over texts if possible.
@@ -182,7 +182,7 @@ A combined version of the user's answers and information about the user themselv
 - **isco_08**: The [International Standard Classification of Occupations 2008](https://www.ilo.org/wcmsp5/groups/public/@dgreports/@dcomm/@publ/documents/publication/wcms_172572.pdf) (ISCO-08) code for this respondent.
 - **kldb_10**: The [German Klassifikation der Berufe 2010 - erste Fassung](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html) (KldB-2010) code for this respondent.
 - **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
-- **P_{page_id}_Q_{question_id}_R_{id/text}**: *Two* columns for every question answered by the respondent. These columns correspond to the naming convention ***P_{page_id}_Q_{question_id}_R_id*** for response ids and ***P_{page_id}_Q_{question_id}_R_text*** for response texts (see the documentation for answers for additional information).
+- **P_{page_id}_Q_{item_id}_R_{id/text}**: *Two* columns for every question answered by the respondent. These columns correspond to the naming convention ***P_{page_id}_Q_{item_id}_R_id*** for response ids and ***P_{page_id}_Q_{item_id}_R_text*** for response texts (see the documentation for answers for additional information).
 
 ### occupations_suggested
 

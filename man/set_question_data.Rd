@@ -16,12 +16,11 @@ set_question_data(
 \arguments{
 \item{session}{The shiny session}
 
-\item{page_id}{The page for which to retrieve data.
-Defaults to the page where data the function is being called from.}
+\item{page_id}{The page for which to retrieve data.}
 
 \item{question_id}{The question for which to retrieve data.
 This \emph{has} to be different for different questions on the same page.
-Defaults to the page_id.}
+Since most pages contain only a single question, \code{question_id} is set to "default" if missing.}
 
 \item{question_text}{The question's text. (optional)}
 
@@ -31,8 +30,9 @@ Defaults to the page_id.}
 (optional)}
 }
 \description{
-Question data is automatically saved.
-There can be multiple questions on any given page.
+There can be multiple questions on any given page. The \code{question_text} is typically
+saved in \code{run_before} and the reply (\code{response_text} and/or \code{response_id}) is
+typically saved in \code{run_after}.
 }
 \examples{
 \dontrun{
@@ -42,9 +42,12 @@ set_question_data(
   page_id = "example",
   question_text = "How are you?"
 )
+
+# This code is expected to be run in e.g. run_after
 set_question_data(
   session = session,
   page_id = "example",
+  response_id = 3,
   response_text = "I'm doing great!"
 )
 }

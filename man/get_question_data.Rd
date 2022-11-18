@@ -8,7 +8,7 @@ get_question_data(
   session,
   page_id,
   question_id = NULL,
-  key = NULL,
+  key = c("all", "question_text", "response_text", "response_id"),
   default = NULL
 )
 }
@@ -20,10 +20,10 @@ Defaults to the page where data the function is being called from.}
 
 \item{question_id}{The question for which to retrieve data.
 This \emph{has} to be different for different questions on the same page.
-Defaults to the page_id.}
+Since most pages contain only a single question, \code{question_id} is set to "default" if missing.}
 
 \item{key}{The key for which to retrieve a value. (Optional)
-If no key is provided, the page's whole data will be returned.}
+If no key is provided, the question's whole data will be returned.}
 
 \item{default}{A default value to return if the key or page is not
 present in the questionnaire data.}

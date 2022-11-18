@@ -250,15 +250,15 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 
 #' Set / save data for a question.
 #'
-#' Question data is automatically saved.
-#' There can be multiple questions on any given page.
+#' There can be multiple questions on any given page. The `question_text` is typically
+#' saved in `run_before` and the reply (`response_text` and/or `response_id`) is
+#' typically saved in `run_after`.
 #'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
-#'   Defaults to the page where data the function is being called from.
 #' @param question_id The question for which to retrieve data.
 #'   This *has* to be different for different questions on the same page.
-#'   Defaults to the page_id.
+#'   Since most pages contain only a single question, `question_id` is set to "default" if missing.
 #' @param question_text The question's text. (optional)
 #' @param response_text The user's response in text form. (optional)
 #' @param response_id The user's response as an id from a set of choices.
@@ -275,9 +275,12 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #'   page_id = "example",
 #'   question_text = "How are you?"
 #' )
+#'
+#' # This code is expected to be run in e.g. run_after
 #' set_question_data(
 #'   session = session,
 #'   page_id = "example",
+#'   response_id = 3,
 #'   response_text = "I'm doing great!"
 #' )
 #' }
@@ -325,9 +328,9 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
 #'   Defaults to the page where data the function is being called from.
 #' @param question_id The question for which to retrieve data.
 #'   This *has* to be different for different questions on the same page.
-#'   Defaults to the page_id.
+#'   Since most pages contain only a single question, `question_id` is set to "default" if missing.
 #' @param key The key for which to retrieve a value. (Optional)
-#'   If no key is provided, the page's whole data will be returned.
+#'   If no key is provided, the question's whole data will be returned.
 #' @param default A default value to return if the key or page is not
 #'   present in the questionnaire data.
 #'
@@ -345,10 +348,12 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
 #'   default = "alright"
 #' )
 #' }
-get_question_data <- function(session, page_id, question_id = NULL, key = NULL, default = NULL) {
+get_question_data <- function(session, page_id, question_id = NULL, key = c("all", "question_text", "response_text", "response_id"), default = NULL) {
   if (is.null(question_id)) {
     question_id <- "default"
   }
+  key <- match.arg(key)
+
   questions <- get_page_data(
     session = session,
     page_id = page_id,
@@ -357,7 +362,7 @@ get_question_data <- function(session, page_id, question_id = NULL, key = NULL, 
   )
   question <- questions[[question_id]]
   if (!is.null(question)) {
-    if (!is.null(key)) {
+    if (!is.null(key) && key != "all") {
       if (!is.null(question[[key]])) {
         return(question[[key]])
       } else {

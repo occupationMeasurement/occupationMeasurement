@@ -578,7 +578,6 @@ page_results <- function(...) {
 
       # 1. Freitextantwort speichern
       res$berufTaetigkeitText <- get_question_data(session = session, page_id = "freetext_1", key = "response_text")
-      res$dictionaryCodedTitle <- get_question_data(session = session, page_id = "freetext_1", key = "dictionaryCodedTitle")
 
       # Save output from 2nd freetext question
       res$berufTaetigkeitText2 <- get_question_data(session = session, page_id = "freetext_2", key = "response_text")

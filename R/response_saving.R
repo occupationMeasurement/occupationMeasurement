@@ -38,6 +38,7 @@ append_tables <- list(
     "session_id",
     "url_search",
     "user_id",
+    "history",
     "time_session_ended"
   )
 )

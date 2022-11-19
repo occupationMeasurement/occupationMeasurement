@@ -35,7 +35,8 @@ Defaults to FALSE}
 be lost upon leaving the site? Defaults to FALSE.}
 
 \item{skip_followup_types}{A vector of strings corresponding to the
-question_type of followup_question that should be skipped.}
+question_type of followup_question that should be skipped. Allowed `
+values: c("anforderungsniveau", "aufsicht", "spezialisierung", "sonstige")}
 
 \item{save_to_file}{Should responses be saved as files in
 response_output_dir? Defaults to use the SAVE_TO_FILE environment variable

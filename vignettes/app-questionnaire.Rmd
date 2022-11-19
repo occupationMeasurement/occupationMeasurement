@@ -14,21 +14,26 @@ knitr::opts_chunk$set(
 )
 ```
 
-When using the interactive shiny app you can use one of the different available questionnaires to e.g. conduct a web survey (`questionnaire_web_survey()`) or collect data from guided (phone) interviews (`questionnaire_interviewer_administered()`).
+When using the interactive shiny app you can use one of the different available questionnaires to e.g. conduct a web survey (`questionnaire_web_survey()`) or collect data from interviewer-administered (phone) interviews (`questionnaire_interviewer_administered()`).
 
 To be as flexible as possible, you can also modify these existing questionnaires or just build your own one from scratch.
 
 # Pages 📃
 
-All questionnaires are built on top of pages. New pages can be created using the function `new_page()` or some of the other, more convenient page helper functions.
+All questionnaires are built on top of pages. New pages can be created using the function `new_page()`, the documentation of which is essential reading for those who want to design their own pages.
+
+There exist some helper functions that make it simple to create specific types of question pages:
+
+- `page_choose_one_option()`
+- `page_freetext()`
 
 In general each page has a unique `page_id` to identify itself and follows a general principle of lifecycle functions. First, its `condition` will be run to check whether the page should be displayed at all. If this function returns `FALSE` the page will be skipped.
 
 If the condition is `TRUE`, the page will be shown. To do this the function `run_before` will be run to prepare everything for the page, followed by `render` to generate the page's actual outputs. Data returned from `run_before` is available in `render` under the name `run_before_output`.
 
-When the user navigates aways from a page the function `run_after` will be called e.g. save the users input and save data. Then, the next page's `condition` will be checked and so on.
+When the user navigates away from a page and to the next page, the function `run_after` will be called which can be used to capture user input and save data. Then, the next page's `condition` will be checked and so on.
 
-For a more detailed description of the page parameters and lifecycle you can also check out the documentation entry for `new_page()`.
+If the user wants to go back to the previous page, `run_after` will not be called and the `condition` of the page that the user visited before will be checked again. This condition should return `TRUE`, so that the user can correct the responses.
 
 > Tip: When implementing your own pages, we recommend to use `...` as the last parameter in all of them to allow for potentially new parameters to be added.
 
@@ -38,7 +43,7 @@ To find some useful pre-built pages or helper functions to easily generate commo
 
 All existing pages (e.g. `page_first_freetext()`, `page_select_suggestion()`) and page helpers (e.g.` page_choose_one_option()`, `page_freetext()`) will automatically save user input (as long as it is not explicitly disabled in the `app_settings`).
 
-When building your own pages from scratch, however, you will have to make sure to specify which data should be saved in the app. This can be done by using `set_item_data()`. If data is saved using this function it will automatically be saved with the other data, yet we always recommend verifying that questionnaire data is saved as expected before starting proper data collection.
+When building your own pages from scratch, however, you will have to make sure to specify which data should be saved in the app. This can be done by using `set_item_data()`. If data is saved using this function, it will automatically be saved with the other data, yet we always recommend verifying that questionnaire data is saved as expected before starting proper data collection.
 
 For a detailed description of what data is saved by default and in which format, examine the section "data" in `vignette("app")`.
 

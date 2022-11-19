@@ -197,7 +197,6 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         if (session$userData$session_settings$extra_instructions == "off") {
           # Don't include extra interviewer information
           style_is_interview <- "display: none" # Interviewerhinweise ausblenden
-          platzhalter <- ""
 
           suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
             tags$div(
@@ -209,7 +208,6 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         } else {
           # Show extra information for the interviewer
           style_is_interview <- ""
-          platzhalter <- "z.B. \u00fcbliche Aufgaben und T\u00e4tigkeiten, erforderliche Kenntnisse und Fertigkeiten"
 
           suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
             tags$div(
@@ -229,7 +227,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         )
       }
 
-      # TODO: Encode this somewhere else / don't handle this via suggestion_type
+      # TODO: Encode this somewhere else / don't handle this via suggestion_type / or maybe just remove it
       # alternative: suggest *job titles* from auxiliary classification
       if (session$userData$app_settings$suggestion_type == "aux.labels") {
         df_suggestions <- session$userData$user_info$list_suggestions
@@ -321,13 +319,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         br(),
         button_previous(),
         button_next(),
-        # # JavaScript Code to immitate button clicking (id = 'nextButton') if a user presses enter in text field (id = 'text_none_selected'), adapted from https://github.com/daattali/advanced-shiny/blob/master/proxy-click/app.R
-        # tags$script('var $proxy = $("#nextButton");
-        #             $("#text_none_selected").on("keyup", function(e) {
-        #             if(e.keyCode == 13){
-        #             $proxy.click();
-        #             }}); ')
-        #
+
         # JavaScript code to toggle long descriptons ($el refers to the job titles to click on, $proxy to the job descriptions)
         tags$script(
           paste(
@@ -359,7 +351,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 
       if (is.null(input$question1)) {
         # Nothing has been selected
-        # TODO: We might want to enforce a selection here?
+        # TODO: We might want to enforce a selection here? No. Answering is voluntary in survey settings.
         set_item_data(
           session = session,
           page_id = page$page_id,
@@ -375,6 +367,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         if (input$question1 != "95" & input$question1 != "99") {
           # A proper suggestion has been selected
           # TODO: check whether we want to handle this
+          # Remove? This is handled in page_none_selected_freetext, isnt it?
         }
       }
 
@@ -403,10 +396,11 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 page_none_selected_freetext <- function(is_interview = FALSE) {
   page_freetext(
     page_id = "none_selected_freetext",
+    is_interview = is_interview,
     question_text = if (is_interview) {
-      "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau."
+      "Bitte beschreiben Sie mir diese berufliche T\u00e4tigkeit genau."
     } else {
-      "Bitte beschreiben Sie diese T\u00e4tigkeit genau."
+      "Bitte beschreiben Sie diese berufliche T\u00e4tigkeit genau."
     },
     # Only show this page when none of the suggestions has been picked
     condition = function(session, page, ...) {
@@ -485,9 +479,8 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
         question_text = paste0(question$question_text, " (", question$id, ")")
       )
 
-      question <- session$userData$active_followup_question
       answer_options_html <- lapply(question$answers$answer_text, function(txt) {
-        if (txt %in% c("Ja", "Nein")) {
+        if (is_interview && txt %in% c("Ja", "Nein")) {
           tags$div(p(class = "read-on-demand", tags$b(txt)))
         } else {
           tags$div(p(tags$b(txt)))
@@ -522,17 +515,12 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
         ),
         button_previous(),
         button_next()
-        # # JavaScript Code to immitate button clicking (id = 'nextButton') if a user presses enter in text field (id = 'text_none_selected'), adapted from https://github.com/daattali/advanced-shiny/blob/master/proxy-click/app.R
-        # tags$script('var $proxy = $("#nextButton");
-        #           $("#text_none_selected").on("keyup", function(e) {
-        #           if(e.keyCode == 13){
-        #           $proxy.click();
-        #           }});')
       )
     },
     run_after = function(session, page, input, ...) {
       question <- session$userData$active_followup_question
 
+      # TODO: sollte dies besser auf EMPTY gesetzt werden? Dann wäre es einheitlich mit "page_select_suggestion" - und NA ist ja etwas anderes als "nicht beantwortet"
       selected <- if (is.null(input$question.follow.quest)) NA_integer_ else as.integer(input$question.follow.quest) # setze alles auf NA wenn nichts ausgew\u00e4hlt wurde
       selected_suggestion <- question$answers[selected, ]
 
@@ -651,13 +639,13 @@ page_results <- function(...) {
         h4("Ergebnis zweite Folgefrage:"),
         p(res$followUp2Answer),
         br(),
-        h4("Ergebnis Auswahl KldB"),
+        h4("Ergebnis Auswahl KldB 2010"),
         renderTable(
           {
             validate(
               need(
                 !is.na(res$kldb) | res$kldb == "EMPTY",
-                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit Kldb abgleichen"
+                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit KldB 2010 abgleichen."
               ),
               need(
                 res$auxco_id != "EMPTY" |
@@ -678,13 +666,13 @@ page_results <- function(...) {
           align = "l",
           colnames = TRUE
         ),
-        h4("Ergebnis Auswahl ISCO"),
+        h4("Ergebnis Auswahl ISCO-08"),
         renderTable(
           {
             validate(
               need(
                 !is.na(res$kldb) | res$kldb == "EMPTY",
-                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit ISCO abgleichen"
+                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit ISCO-08 abgleichen"
               ),
               need(
                 res$auxco_id != "EMPTY" |
@@ -707,8 +695,8 @@ page_results <- function(...) {
         ),
         button_previous(),
         button_next(),
-        ## here
-        h4(tags$a("Neustart", href = paste0("/telephone-demo/?followup_types=aufsicht;spezialisierung;sonstige&tense=present&extra_instructions=on&id=0&study_id=Test")))
+
+        h4(tags$a("Neustart", href = paste0("/", session$userData$user_info$url_search)))
       )
     },
     ...

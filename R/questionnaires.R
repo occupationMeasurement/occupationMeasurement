@@ -101,7 +101,7 @@ questionnaire_demo <- function() {
           p("Der im folgenden dargestellte Fragebogen entspricht dem questionnaire_interviewer_administered, der für interviewergestützte Befragungen entwickelt wurde (z.B. Telefonbefragungen). Dabei wird Text in drei Farb-Codes verwendet:"),
           tags$ul(
             tags$li("Schwarzer Text: Muss zwingend vom Interviewer vorgelesen werden."),
-            tags$li("Roter Text: Enthält Intervieweranweisungen. Soll auf keinen Fall vom Interviewer vorgelesen werden.")
+            tags$li("Roter Text: Enthält Intervieweranweisungen. Soll auf keinen Fall vom Interviewer vorgelesen werden."),
             tags$li("Grüner Text: Optional. Darf vorgelesen werden, falls dies zur Unterstützung des Befragten hilfreich ist.")
           ),
           p("Weitere Erläuterungen stehen zu Demonstrationszwecken unterhalb der Buttons."),
@@ -114,7 +114,7 @@ questionnaire_demo <- function() {
           p(strong("Zur Funktionsweise:")),
           p("Nach Eingabe eines Textes k\u00f6nnen die folgenden Aktionen erfolgen:"),
           tags$ol(
-            tags$li("Die Suche nach möglichen Berufskategorien bleibt erfolglos. Der Befragte wird in einere weiteren Frage nach zusätzlichen Details seines Berufs gefragt und die Suche startet erneut.")
+            tags$li("Die Suche nach möglichen Berufskategorien bleibt erfolglos. Der Befragte wird in einere weiteren Frage nach zusätzlichen Details seines Berufs gefragt und die Suche startet erneut."),
             tags$li("Vorschlagen von m\u00f6glichen Berufskategorien mittels statistischer Methoden. Es wird eine halboffene Frage gestellt, aus der der Befragte eine T\u00e4tigkeit ausw\u00e4hlen kann. Als Ergebnis erhalten wir 5-stellige Codes aus der KldB 2010 und 4-stellige ISCO-08 Codes. Ca. 65-85% der Befragten wählen bisherigen Erfahrungen zufolge eine Tätigkeit aus und können somit im Interview kodiert werden."),
             tags$li("Keine automatische Kodierung m\u00f6glich. Eine weitere Freitextfrage ist zur manuellen Kodierung erforderlich.")
           ),

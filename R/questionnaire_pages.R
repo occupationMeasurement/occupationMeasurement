@@ -498,6 +498,9 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
         answer_options_values <- append(answer_options_values, "98")
         answer_options_html <- append(answer_options_html, list(tags$div(p(class = "interviewer", "*** Nicht sinnvoll beantwortbar"))))
         answer_options_values <- append(answer_options_values, "90")
+      } else {
+        answer_options_html <- append(answer_options_html, list(tags$div(p("Keine Angabe"))))
+        answer_options_values <- append(answer_options_values, "99")
       }
 
       return(list(

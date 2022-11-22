@@ -10,7 +10,8 @@
 #' @param warn_before_leaving Should users be warned that their progress will
 #'   be lost upon leaving the site? Defaults to FALSE.
 #' @param skip_followup_types A vector of strings corresponding to the
-#'   question_type of followup_question that should be skipped.
+#'   question_type of followup_question that should be skipped. Allowed `
+#'   values: c("anforderungsniveau", "aufsicht", "spezialisierung", "sonstige")
 #' @param save_to_file Should responses be saved as files in
 #'   response_output_dir? Defaults to use the SAVE_TO_FILE environment variable
 #'   or TRUE if it is not set.

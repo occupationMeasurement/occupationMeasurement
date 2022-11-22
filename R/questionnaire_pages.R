@@ -62,7 +62,7 @@ page_first_freetext <- function(is_interview = FALSE, ...) {
       )
     },
     run_after = function(session, page, input, ...) {
-      text <- get_question_data(session = session, page_id = page$page_id, key = "response_text")
+      text <- get_item_data(session = session, page_id = page$page_id, key = "response_text")
       session$userData$user_info$text_for_suggestion <- text
 
       # Generate Job Suggestions
@@ -108,14 +108,14 @@ page_second_freetext <- function(combine_input_with_first = TRUE, is_interview =
       nrow(stats::na.omit(session$userData$user_info$list_suggestions)) == 0
     },
     run_after = function(session, page, input, ...) {
-      text <- get_question_data(
+      text <- get_item_data(
         session = session,
         page_id = page$page_id,
         key = "response_text"
       )
       if (combine_input_with_first) {
         # Combine answer texts from first and second question
-        text_from_first_question <- get_question_data(
+        text_from_first_question <- get_item_data(
           session = session,
           page_id = "freetext_1",
           key = "response_text",
@@ -197,7 +197,6 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         if (session$userData$session_settings$extra_instructions == "off") {
           # Don't include extra interviewer information
           style_is_interview <- "display: none" # Interviewerhinweise ausblenden
-          platzhalter <- ""
 
           suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
             tags$div(
@@ -209,7 +208,6 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         } else {
           # Show extra information for the interviewer
           style_is_interview <- ""
-          platzhalter <- "z.B. \u00fcbliche Aufgaben und T\u00e4tigkeiten, erforderliche Kenntnisse und Fertigkeiten"
 
           suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
             tags$div(
@@ -229,7 +227,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         )
       }
 
-      # TODO: Encode this somewhere else / don't handle this via suggestion_type
+      # TODO: Encode this somewhere else / don't handle this via suggestion_type / or maybe just remove it
       # alternative: suggest *job titles* from auxiliary classification
       if (session$userData$app_settings$suggestion_type == "aux.labels") {
         df_suggestions <- session$userData$user_info$list_suggestions
@@ -254,7 +252,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         tags$div(p("Keine Angabe"))
       }
 
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = question_text
@@ -304,7 +302,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
             )
           ),
           p(run_before_output$transition_text),
-          p(get_question_data(session = session, page_id = page$page_id, key = "question_text")),
+          p(get_item_data(session = session, page_id = page$page_id, key = "question_text")),
           if (is_interview) {
             list(
               p(class = "interviewer", style = run_before_output$style_is_interview, "INT: Gefragt ist diejenige T\u00e4tigkeit, die am meisten Arbeitszeit beansprucht."),
@@ -316,18 +314,12 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
           width = "100%",
           choiceNames = run_before_output$suggestions_html,
           choiceValues = as.list(c(run_before_output$df_suggestions[, auxco_id], "95", "99")),
-          selected = get_question_data(session = session, page_id = page$page_id, key = "response_id", default = character(0))
+          selected = get_item_data(session = session, page_id = page$page_id, key = "response_id", default = character(0))
         ),
         br(),
         button_previous(),
         button_next(),
-        # # JavaScript Code to immitate button clicking (id = 'nextButton') if a user presses enter in text field (id = 'text_none_selected'), adapted from https://github.com/daattali/advanced-shiny/blob/master/proxy-click/app.R
-        # tags$script('var $proxy = $("#nextButton");
-        #             $("#text_none_selected").on("keyup", function(e) {
-        #             if(e.keyCode == 13){
-        #             $proxy.click();
-        #             }}); ')
-        #
+
         # JavaScript code to toggle long descriptons ($el refers to the job titles to click on, $proxy to the job descriptions)
         tags$script(
           paste(
@@ -359,15 +351,15 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 
       if (is.null(input$question1)) {
         # Nothing has been selected
-        # TODO: We might want to enforce a selection here?
-        set_question_data(
+        # TODO: We might want to enforce a selection here? No. Answering is voluntary in survey settings.
+        set_item_data(
           session = session,
           page_id = page$page_id,
           response_id = "EMPTY"
         )
       } else {
         # At least some option has been selected
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
           response_id = input$question1
@@ -375,12 +367,13 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         if (input$question1 != "95" & input$question1 != "99") {
           # A proper suggestion has been selected
           # TODO: check whether we want to handle this
+          # Remove? This is handled in page_none_selected_freetext, isnt it?
         }
       }
 
       # Check for potential clarifying followup questions and add them to the user_data if there are any
       session$userData$followup_questions <- get_followup_questions(
-        suggestion_id = get_question_data(session = session, page_id = page$page_id, key = "response_id"),
+        suggestion_id = get_item_data(session = session, page_id = page$page_id, key = "response_id"),
         tense = session$userData$session_settings$tense
       )
 
@@ -403,14 +396,15 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 page_none_selected_freetext <- function(is_interview = FALSE) {
   page_freetext(
     page_id = "none_selected_freetext",
+    is_interview = is_interview,
     question_text = if (is_interview) {
-      "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau."
+      "Bitte beschreiben Sie mir diese berufliche T\u00e4tigkeit genau."
     } else {
-      "Bitte beschreiben Sie diese T\u00e4tigkeit genau."
+      "Bitte beschreiben Sie diese berufliche T\u00e4tigkeit genau."
     },
     # Only show this page when none of the suggestions has been picked
     condition = function(session, page, ...) {
-      selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
+      selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
       return(selected_suggestion_id %in% c(
         # Nothing ticked at all
         "EMPTY",
@@ -458,7 +452,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
         for (previous_index in (index - 1):1) {
           # Retrieve the selected previous answer
           previous_question <- session$userData$followup_questions[[previous_index]]
-          previous_answer_id <- get_question_data(
+          previous_answer_id <- get_item_data(
             session = session,
             page_id = paste0("followup_", previous_index),
             key = "response_id"
@@ -479,15 +473,14 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
       session$userData$active_followup_question <- session$userData$followup_questions[[index]]
       question <- session$userData$active_followup_question
 
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = paste0(question$question_text, " (", question$id, ")")
       )
 
-      question <- session$userData$active_followup_question
       answer_options_html <- lapply(question$answers$answer_text, function(txt) {
-        if (txt %in% c("Ja", "Nein")) {
+        if (is_interview && txt %in% c("Ja", "Nein")) {
           tags$div(p(class = "read-on-demand", tags$b(txt)))
         } else {
           tags$div(p(tags$b(txt)))
@@ -522,21 +515,16 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
         ),
         button_previous(),
         button_next()
-        # # JavaScript Code to immitate button clicking (id = 'nextButton') if a user presses enter in text field (id = 'text_none_selected'), adapted from https://github.com/daattali/advanced-shiny/blob/master/proxy-click/app.R
-        # tags$script('var $proxy = $("#nextButton");
-        #           $("#text_none_selected").on("keyup", function(e) {
-        #           if(e.keyCode == 13){
-        #           $proxy.click();
-        #           }});')
       )
     },
     run_after = function(session, page, input, ...) {
       question <- session$userData$active_followup_question
 
+      # TODO: sollte dies besser auf EMPTY gesetzt werden? Dann wäre es einheitlich mit "page_select_suggestion" - und NA ist ja etwas anderes als "nicht beantwortet"
       selected <- if (is.null(input$question.follow.quest)) NA_integer_ else as.integer(input$question.follow.quest) # setze alles auf NA wenn nichts ausgew\u00e4hlt wurde
       selected_suggestion <- question$answers[selected, ]
 
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         response_id = selected,
@@ -577,11 +565,10 @@ page_results <- function(...) {
       )
 
       # 1. Freitextantwort speichern
-      res$berufTaetigkeitText <- get_question_data(session = session, page_id = "freetext_1", key = "response_text")
-      res$dictionaryCodedTitle <- get_question_data(session = session, page_id = "freetext_1", key = "dictionaryCodedTitle")
+      res$berufTaetigkeitText <- get_item_data(session = session, page_id = "freetext_1", key = "response_text")
 
       # Save output from 2nd freetext question
-      res$berufTaetigkeitText2 <- get_question_data(session = session, page_id = "freetext_2", key = "response_text")
+      res$berufTaetigkeitText2 <- get_item_data(session = session, page_id = "freetext_2", key = "response_text")
 
       # Match answers IDs with data
       suggestions <- session$userData$user_info$list_suggestions
@@ -589,7 +576,7 @@ page_results <- function(...) {
       # Check whether ther are suggestions
       has_suggestions <- nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0
       if (has_suggestions) {
-        selected_suggestion_id <- get_question_data(session = session, page_id = "select_suggestion", key = "response_id")
+        selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
         selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
       }
 
@@ -601,14 +588,14 @@ page_results <- function(...) {
         res$auxco_id <- selected_suggestion$auxco_id
 
         # Get raw answers to follow up questions
-        res$followUp1Question <- get_question_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
-        res$followUp1Answer <- get_question_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
-        res$followUp2Question <- get_question_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
-        res$followUp2Answer <- get_question_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
+        res$followUp1Question <- get_item_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
+        res$followUp1Answer <- get_item_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
+        res$followUp2Question <- get_item_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
+        res$followUp2Answer <- get_item_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
 
         # Retrieve final kldb / isco codes
-        followup_1_id <- get_question_data(session = session, page_id = "followup_1", key = "response_id")
-        followup_2_id <- get_question_data(session = session, page_id = "followup_2", key = "response_id")
+        followup_1_id <- get_item_data(session = session, page_id = "followup_1", key = "response_id")
+        followup_2_id <- get_item_data(session = session, page_id = "followup_2", key = "response_id")
 
         # Create a named list of followup_answers
         followup_questions <- get_followup_questions(selected_suggestion$auxco_id)
@@ -652,13 +639,13 @@ page_results <- function(...) {
         h4("Ergebnis zweite Folgefrage:"),
         p(res$followUp2Answer),
         br(),
-        h4("Ergebnis Auswahl KldB"),
+        h4("Ergebnis Auswahl KldB 2010"),
         renderTable(
           {
             validate(
               need(
                 !is.na(res$kldb) | res$kldb == "EMPTY",
-                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit Kldb abgleichen"
+                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit KldB 2010 abgleichen."
               ),
               need(
                 res$auxco_id != "EMPTY" |
@@ -679,13 +666,13 @@ page_results <- function(...) {
           align = "l",
           colnames = TRUE
         ),
-        h4("Ergebnis Auswahl ISCO"),
+        h4("Ergebnis Auswahl ISCO-08"),
         renderTable(
           {
             validate(
               need(
                 !is.na(res$kldb) | res$kldb == "EMPTY",
-                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit ISCO abgleichen"
+                "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit ISCO-08 abgleichen"
               ),
               need(
                 res$auxco_id != "EMPTY" |
@@ -708,8 +695,8 @@ page_results <- function(...) {
         ),
         button_previous(),
         button_next(),
-        ## here
-        h4(tags$a("Neustart", href = paste0("/telephone-demo/?followup_types=aufsicht;spezialisierung;sonstige&tense=present&extra_instructions=on&id=0&study_id=Test")))
+
+        h4(tags$a("Neustart", href = paste0("/", session$userData$user_info$url_search)))
       )
     },
     ...

@@ -23,7 +23,7 @@ append_tables <- list(
     "page_id",
     "start",
     "end",
-    "question_id",
+    "item_id",
     "question_text",
     "response_id",
     "response_text"
@@ -38,6 +38,7 @@ append_tables <- list(
     "session_id",
     "url_search",
     "user_id",
+    "history",
     "time_session_ended"
   )
 )
@@ -106,7 +107,7 @@ extract_questions_df <- function(page_data) {
   if (length(page_data$questions) > 0) {
     question_dfs <- lapply(page_data$questions, as.data.table)
     df <- do.call(function(...) rbind(..., fill = TRUE), question_dfs)
-    df$question_id <- names(page_data$questions)
+    df$item_id <- names(page_data$questions)
   } else {
     df <- data.table()
   }
@@ -150,7 +151,7 @@ extract_questions_wide <- function(questionnaire_data) {
   # Construct the new column names
   all_responses_long$column_name <- paste(
     "P", all_responses_long$page_id,
-    "Q", all_responses_long$question_id,
+    "Q", all_responses_long$item_id,
     "R", all_responses_long$response_type,
     sep = "_"
   )

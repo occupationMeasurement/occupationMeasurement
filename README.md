@@ -8,6 +8,11 @@ A toolbox to help with all tasks around the interactive coding and measurement o
 
 ## Installation
 
+Prerequisites:
+
+- the [R Statistical Software](https://www.r-project.org/)
+- `install.packages("remotes")`
+
 ```r
 remotes::install_github("occupationMeasurement/occupationMeasurement")
 ```
@@ -23,16 +28,19 @@ More information about the interactive app can be found in `vignette("app")` and
 library(occupationMeasurement)
 
 # Run the interactive shiny app
-occupationMeasurement::app()
+occupationMeasurement::app(questionnaire = questionnaire_web_survey())
 ```
 
-The app also supports custom questionnaires, so you can build your own or use one of the questionnaires included in the package. E.g., the `questionnaire_demo` will explain the functionality of the app using the code below.
+The app also supports custom questionnaires, so you can build your own or use and adapt one of the questionnaires included in the package. E.g., the `questionnaire_demo` will explain the functionality of the app, and `questionnaire_interviewer_administered` is designed to be read by interviewers for CATI and CAPI surveys.
 
 ```r
 library(occupationMeasurement)
 
 # Run the app with additional explanations
 app(questionnaire = questionnaire_demo())
+
+# Run the app in interviewer-administered surveys
+app(questionnaire = questionnaire_interviewer_administered())
 ```
 
 ## Alternative Usage
@@ -44,7 +52,7 @@ Besides the interactive app, there are also two alternative ways of using this p
 
 You can find more information on how to use these functionalities in `vignette("occupationMeasurement")`.
 
-## Development
+## Package Development
 
 ### Testing
 

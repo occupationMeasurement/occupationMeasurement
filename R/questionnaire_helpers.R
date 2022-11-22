@@ -26,11 +26,18 @@ mark_questionnaire_complete <- function() {
 #' @export
 #'
 #' @examples
-#' page_choose_one_option(
-#'   "test_page_radio",
-#'   question_text = "Hello there! Please pick your favorite number from the options below:",
-#'   list_of_options = list(One = 1, Two = 2, Three = 3)
+#' one_page_questionnaire <- list(
+#'  page_choose_one_option(
+#'    "test_page_radio",
+#'    question_text = "Hello there! Please pick your favorite number from the options below:",
+#'    list_of_options = list(One = 1, Two = 2, Three = 3)
+#'  ),
+#'  page_final()
 #' )
+#' \dontrun{
+#'  app(questionnaire = one_page_questionnaire)
+#' }
+#' 
 page_choose_one_option <- function(page_id,
                                    question_text = "Please pick one of the following options",
                                    list_of_options = list(One = 1, Two = 2, Three = 3),
@@ -48,7 +55,7 @@ page_choose_one_option <- function(page_id,
       } else {
         actual_question_text <- question_text
       }
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = actual_question_text
@@ -74,7 +81,7 @@ page_choose_one_option <- function(page_id,
         radioButtons("radioButtonQuestion", NULL,
           width = "100%",
           choices = list_of_options,
-          selected = get_question_data(session = session, page_id = page$page_id, key = "response_id")
+          selected = get_item_data(session = session, page_id = page$page_id, key = "response_id", default = character())
         ),
         if (previous_button) button_previous(),
         if (next_button) button_next()
@@ -82,7 +89,7 @@ page_choose_one_option <- function(page_id,
     },
     run_after = function(session, page, input, ...) {
       response_id <- input[["radioButtonQuestion"]]
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         response_id = response_id,
@@ -113,6 +120,8 @@ page_choose_one_option <- function(page_id,
 #'   Defaults to TRUE.
 #' @param previous_button Whether to show the button to navigate to the preivous page?
 #'   Defaults to TRUE.
+#' @param trigger_next_on_enter Whether the next button is triggered 
+#'   when one presses enter. Defaults to TRUE. There are known issues with IE11.
 #' @param render_question_text Whether the question text should be displayed?
 #'   Only set this to FALSE, if you wish to change the rendering of the
 #'   question_text by e.g. using `render_before`.
@@ -139,6 +148,7 @@ page_freetext <- function(page_id,
                           no_answer_checkbox = TRUE,
                           next_button = TRUE,
                           previous_button = TRUE,
+                          trigger_next_on_enter = TRUE,
                           render_question_text = TRUE,
                           run_before = NULL,
                           run_after = NULL,
@@ -152,16 +162,16 @@ page_freetext <- function(page_id,
       } else {
         actual_question_text <- question_text
       }
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         question_text = actual_question_text
       )
       if (no_answer_checkbox) {
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
-          question_id = "no_answer",
+          item_id = "no_answer",
           question_text = actual_question_text
         )
       }
@@ -183,10 +193,22 @@ page_freetext <- function(page_id,
     render = function(session, page, run_before_output, ...) {
       list(
         if (render_question_text) p(run_before_output$question_text),
+
+        if (trigger_next_on_enter) {
+          # Known issue with IE11: If one types fast and presses enter,
+          # not the complete text gets used/is saved.
+          tags$script(paste0('var $nextButton = $("#nextButton");
+                      $("#', page$page_id, '_text").on("keyup", function(e) {
+                        if(e.keyCode == 13){
+                          $nextButton.click();
+                        }
+                      });'))
+        },
+
         textInput(
           paste0(page$page_id, "_text"),
           NULL,
-          value = get_question_data(session = session, page_id = page$page_id, key = "response_text"),
+          value = get_item_data(session = session, page_id = page$page_id, key = "response_text"),
           width = "80%"
         ),
         br(),
@@ -198,7 +220,7 @@ page_freetext <- function(page_id,
             } else {
               p("Keine Angabe")
             },
-            value = get_question_data(session = session, page_id = page$page_id, question_id = "no_answer", key = "response_id"),
+            value = get_item_data(session = session, page_id = page$page_id, item_id = "no_answer", key = "response_id"),
             width = "100%"
           )
         },
@@ -207,7 +229,7 @@ page_freetext <- function(page_id,
       )
     },
     run_after = function(session, page, input, ...) {
-      set_question_data(
+      set_item_data(
         session = session,
         page_id = page$page_id,
         response_text = if (is.null(input[[paste0(page$page_id, "_text")]])) "" else input[[paste0(page$page_id, "_text")]]
@@ -215,10 +237,10 @@ page_freetext <- function(page_id,
 
       # Also record no-answer checkbox
       if (no_answer_checkbox) {
-        set_question_data(
+        set_item_data(
           session = session,
           page_id = page$page_id,
-          question_id = "no_answer",
+          item_id = "no_answer",
           response_id = if (is.null(input[[paste0(page$page_id, "_chk_no_answer")]])) FALSE else input[[paste0(page$page_id, "_chk_no_answer")]]
         )
       }

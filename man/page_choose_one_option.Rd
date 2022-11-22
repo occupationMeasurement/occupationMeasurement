@@ -50,11 +50,18 @@ A page object.
 Show a page with multiple radio button options where once can be picked.
 }
 \examples{
-page_choose_one_option(
-  "test_page_radio",
-  question_text = "Hello there! Please pick your favorite number from the options below:",
-  list_of_options = list(One = 1, Two = 2, Three = 3)
+one_page_questionnaire <- list(
+ page_choose_one_option(
+   "test_page_radio",
+   question_text = "Hello there! Please pick your favorite number from the options below:",
+   list_of_options = list(One = 1, Two = 2, Three = 3)
+ ),
+ page_final()
 )
+\dontrun{
+ app(questionnaire = one_page_questionnaire)
+}
+
 }
 \seealso{
 \code{\link[=new_page]{new_page()}}

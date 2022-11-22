@@ -237,6 +237,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
         session_id = session$userData$user_info$session_id,
         url_search = session$userData$user_info$url_search,
         user_id = session$userData$user_info$id,
+        history = paste0(isolate(session$userData$control$history), collapse = "-"),
         time_session_ended = as.integer(Sys.time())
       )
 

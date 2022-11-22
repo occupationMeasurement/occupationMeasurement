@@ -14,14 +14,25 @@
 #'       The outputs from `render_before`, `render` & `render_after` are
 #'       stitched together to produce the final HTML output of the page.
 #'   6. `run_after` (`session`, `input`, `output`)
-#'       Run when the user leaves the page. Any user input has to be
-#'       handled here.
+#'       Run when the user leaves the page (=clicks the next button). Any
+#'       user input has to be handled here. For each question asked, one will
+#'       typically call [set_item_data()] to save the collected data
+#'       internally.
 #'
 #' Each of the life-cycle functions above is annotated with the
 #' paramaters it has access to. `session`, `input` and `output` are
 #' passed directly from shiny and correspond to the objects made available by
 #' [shiny::shinyServer()], `run_before_output` is available for convenience and
 #' corresponds to whatever is returned by `run_before`.
+#'
+#' Some side-effects occur:
+#' - `occupationMeasurement:::init_page_data` is called before 1. `run_before`.
+#'   It sets up an internal representation of the page data to be saved.
+#' - `occupationMeasurement:::finalize_data` is called before 6. `run_before`.
+#' - `occupationMeasurement:::save_page_data` is called after 6. `run_before`.
+#'   It saves the responses on a hard drive, i.e. it appends the responses
+#'   from this page to `table_name == "answers"`. See the vignette
+#'   and [create_app_settings()] for details.
 #'
 #' Use of `render_before`, `render_after` is discouraged if not necessary,
 #' as these two life-cycle functions have only been added to allow for easier
@@ -64,6 +75,9 @@
 #'     }
 #'   )
 #' )
+#'
+#' # TODO: Include an example of a simple page that contains two questions
+#' # and thus two calls to set_item_data()?
 new_page <- function(page_id, render, condition = NULL, run_before = NULL, render_before = NULL, render_after = NULL, run_after = NULL) {
   page <- list(
     # A unique string identifiying this page. Used to store data.
@@ -171,13 +185,13 @@ execute_run_after <- function(page, session, input, output, ...) {
 #'
 #' Data is automatically linked to a page's page_id.
 #' Note that page data is *not* automatically saved and you probably want
-#' to use set_question_data instead.
+#' to use set_item_data instead.
 #'
 #' @param session The shiny session
 #' @param values A named list of values to add / overwrite in the page data.
 #'   Values are added / overwritten based on the names provided in the list.
 #'
-#' @seealso [set_question_data()]
+#' @seealso [set_item_data()]
 #' @keywords internal
 #'
 #' @examples
@@ -198,7 +212,7 @@ set_page_data <- function(session, page_id, values) {
 #' Get questionnaire / page data.
 #'
 #' Note that page data is *not* automatically saved and you probably want
-#' to use page$get_question_data instead.
+#' to use page$get_item_data instead.
 #'
 #' @param session The shiny session
 #' @param key The key for which to retrieve a value. (Optional)
@@ -211,7 +225,7 @@ set_page_data <- function(session, page_id, values) {
 #' @return The page data value at the provided key or the whole page's data
 #'   if no key is provided.
 #'
-#' @seealso [get_question_data()]
+#' @seealso [get_item_data()]
 #' @keywords internal
 #'
 #' @examples
@@ -238,42 +252,47 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
   }
 }
 
-#' Set / save data for a question.
+#' Set / save data for an item.
 #'
-#' Question data is automatically saved.
-#' There can be multiple questions on any given page.
+#' There can be multiple items on any given page. Items can be different
+#' questions, or multiple variables that need to be saved from a single
+#' question. The `question_text` is typically
+#' saved in `run_before` and the reply (`response_text` and/or `response_id`) is
+#' typically saved in `run_after`.
 #'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
-#'   Defaults to the page where data the function is being called from.
-#' @param question_id The question for which to retrieve data.
-#'   This *has* to be different for different questions on the same page.
-#'   Defaults to the page_id.
+#' @param item_id The item for which to set/update data.
+#'   This *has* to be different for different items on the same page.
+#'   Since most pages contain only a single question/item, `item_id` is set to "default" if missing.
 #' @param question_text The question's text. (optional)
 #' @param response_text The user's response in text form. (optional)
 #' @param response_id The user's response as an id from a set of choices.
 #'   (optional)
 #'
 #' @export
-#' @seealso [get_question_data()]
+#' @seealso [get_item_data()]
 #'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' set_question_data(
+#' set_item_data(
 #'   session = session,
 #'   page_id = "example",
 #'   question_text = "How are you?"
 #' )
-#' set_question_data(
+#'
+#' # This code is expected to be run in e.g. run_after
+#' set_item_data(
 #'   session = session,
 #'   page_id = "example",
-#'   response_text = "I'm doing great!"
+#'   response_id = 3,
+#'   response_text = "I'm doing great! (response_id = 3)"
 #' )
 #' }
-set_question_data <- function(session, page_id, question_id = NULL, question_text = NULL, response_text = NULL, response_id = NULL) {
-  if (is.null(question_id)) {
-    question_id <- "default"
+set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL, response_text = NULL, response_id = NULL) {
+  if (is.null(item_id)) {
+    item_id <- "default"
   }
   # TODO: Maybe find a more elegant solution
 
@@ -285,7 +304,7 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
     key = "questions",
     default = list()
   )
-  question <- if (!is.null(questions[[question_id]])) questions[[question_id]] else list()
+  question <- if (!is.null(questions[[item_id]])) questions[[item_id]] else list()
 
   # Update supported fields on the question if they are not NULL
   supported_fields <- c("question_text", "response_text", "response_id")
@@ -296,7 +315,7 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
     }
   }
 
-  questions[[question_id]] <- question
+  questions[[item_id]] <- question
 
   # Set the questions data on the page again
   set_page_data(
@@ -306,48 +325,49 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
   )
 }
 
-#' Retrieve data for a question.
+#' Retrieve data for an item.
 #'
-#' Each page in the questionnaire can have multiple questions on it.
+#' Each page in the questionnaire can have multiple items on it.
 #'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
-#'   Defaults to the page where data the function is being called from.
-#' @param question_id The question for which to retrieve data.
-#'   This *has* to be different for different questions on the same page.
-#'   Defaults to the page_id.
+#' @param item_id The item for which to retrieve data.
+#'   This *has* to be different for different items on the same page.
+#'   Since most pages contain only a single question/item, `item_id` is set to "default" if missing.
 #' @param key The key for which to retrieve a value. (Optional)
-#'   If no key is provided, the page's whole data will be returned.
+#'   If no key is provided, the items's whole data will be returned.
 #' @param default A default value to return if the key or page is not
 #'   present in the questionnaire data.
 #'
-#' @return The question's data.
+#' @return The items's data.
 #' @export
-#' @seealso [set_question_data()]
+#' @seealso [set_item_data()]
 #'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' get_question_data(
+#' get_item_data(
 #'   session = session,
 #'   page_id = "example",
 #'   key = "response_text",
 #'   default = "alright"
 #' )
 #' }
-get_question_data <- function(session, page_id, question_id = NULL, key = NULL, default = NULL) {
-  if (is.null(question_id)) {
-    question_id <- "default"
+get_item_data <- function(session, page_id, item_id = NULL, key = c("all", "question_text", "response_text", "response_id"), default = NULL) {
+  if (is.null(item_id)) {
+    item_id <- "default"
   }
+  key <- match.arg(key)
+
   questions <- get_page_data(
     session = session,
     page_id = page_id,
     key = "questions",
     default = list()
   )
-  question <- questions[[question_id]]
+  question <- questions[[item_id]]
   if (!is.null(question)) {
-    if (!is.null(key)) {
+    if (!is.null(key) && key != "all") {
       if (!is.null(question[[key]])) {
         return(question[[key]])
       } else {

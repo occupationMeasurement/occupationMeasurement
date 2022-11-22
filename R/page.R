@@ -93,6 +93,10 @@ new_page <- function(page_id, render, condition = NULL, run_before = NULL, rende
 #' @param ... All additional arguments are passed along
 #' @keywords internal
 check_condition <- function(page, session, ...) {
+  if (session$userData$app_settings$verbose) {
+    cat("Check Condition:", page$page_id, "\n")
+  }
+
   if (!is.null(page$condition)) {
     return(page$condition(session = session, page = page, ...))
   } else {
@@ -107,7 +111,7 @@ check_condition <- function(page, session, ...) {
 #' @keywords internal
 execute_run_before <- function(page, session, input, output, ...) {
   if (session$userData$app_settings$verbose) {
-    cat("Page:", page$page_id, "\n")
+    cat("Show Page:", page$page_id, "\n")
   }
 
   # Initialize trial data e.g. set first timestamp, set ids etc.

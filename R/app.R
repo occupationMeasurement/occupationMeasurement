@@ -92,6 +92,9 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
     output$MainAction <- renderUI({
       if (is.null(session$userData$user_info$session_id)) {
+        # Save settings on the app level and settings on the session level
+        session$userData$app_settings <- app_settings
+
         # run subsequent code only if no session id exists yet, i.e. on the first page (we could run it again on later pages, but this might take a few milliseconds)
         session$userData$user_info$query <- parseQueryString(session$clientData$url_search)
         session$userData$user_info$url_search <- session$clientData$url_search # this will be used to save url_query in the database
@@ -135,8 +138,6 @@ app <- function(questionnaire = questionnaire_web_survey(),
         # Create list that will hold questionnaire data
         session$userData$questionnaire_data <- list()
 
-        # Save settings on the app level and settings on the session level
-        session$userData$app_settings <- app_settings
         # Initialize session settings based on query parameters
         # Defaults are set via app_settings
         session$userData$session_settings <- list(
@@ -229,6 +230,11 @@ app <- function(questionnaire = questionnaire_web_survey(),
     # On Stop will be called when the shiny app is stopped or when each
     # individual user session ends.
     onSessionEnded(function() {
+      # Skip if no session has been initialized
+      if (is.null(session$userData$user_info$session_id)) {
+        return()
+      }
+
       # Save the final, cleaned-up data (commented out for now: not really needed, and it throws errors if one leaves the site early)
       save_results_overview(session)
 

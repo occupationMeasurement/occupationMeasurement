@@ -133,6 +133,14 @@ extract_questions_wide <- function(questionnaire_data) {
   # Column names used in data.table (for R CMD CHECK)
   questionnaire_order <- NULL
 
+  # Return empty data.table if no / empty data has been passed
+  if (
+    is.null(questionnaire_data) ||
+    length(questionnaire_data) == 0
+  ) {
+    return(data.table())
+  }
+
   # Call extract_questions_df for every page in the questionnaire and
   # combine the results with rbind
   all_questions <- do.call(rbind, lapply(questionnaire_data, extract_questions_df))
@@ -146,6 +154,8 @@ extract_questions_wide <- function(questionnaire_data) {
     variable.name = "response_type",
     value.name = "value"
   )
+  # Always convert value to character (for consistency)
+  all_responses_long$value <- as.character(all_responses_long$value)
   # Remove "response_" prefix
   all_responses_long$response_type <- stringr::str_remove(all_responses_long$response_type, "response_")
   # Construct the new column names
@@ -184,12 +194,17 @@ extract_questions_wide <- function(questionnaire_data) {
 # Extract the final results_overview data, combining user and questionnaire data
 # in wide format
 extract_results_overview <- function(session) {
-  question_answers_wide <- extract_questions_wide(session$userData$questionnaire_data)
+  # Session was never initialized (e.g. due to missing id)
+  if (is.null(session$userData$user_info$session_id)) {
+    return(NULL)
+  }
 
   user_data <- data.table(
     session_id = session$userData$user_info$session_id,
     url_search = session$userData$user_info$url_search
   )
+
+  question_answers_wide <- extract_questions_wide(session$userData$questionnaire_data)
 
   # TODO: Maybe make this code more flexible to support multiple numbers of follow_up questions in the future
   if (!is.null(question_answers_wide$P_select_suggestion_Q_default_R_id)) {
@@ -215,11 +230,16 @@ extract_results_overview <- function(session) {
     user_data$kldb_10 <- final_codes$kldb_10
   }
 
-  final_data <- merge(
-    user_data,
-    question_answers_wide,
-    by = "session_id"
-  )
+  # Merge user and answer data (if necessary)
+  if (nrow(question_answers_wide) == 0) {
+    final_data <- user_data
+  } else {
+    final_data <- merge(
+      user_data,
+      question_answers_wide,
+      by = "session_id"
+    )
+  }
 
   return(final_data)
 }
@@ -227,6 +247,11 @@ extract_results_overview <- function(session) {
 # Save the final results_overview
 save_results_overview <- function(session) {
   final_data <- extract_results_overview(session = session)
+
+  # Skip if there is no data to save (i.e. no session has been started)
+  if (is.null(final_data)) {
+    return()
+  }
 
   hash <- digest::digest(final_data)
 

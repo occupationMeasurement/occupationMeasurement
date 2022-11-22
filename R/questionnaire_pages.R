@@ -457,11 +457,14 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
             page_id = paste0("followup_", previous_index),
             key = "response_id"
           )
-          previous_answer <- previous_question$answers[answer_id == previous_answer_id]
+          # Only check answers if the question wasn't skipped
+          if (!is.null(previous_answer_id)) {
+            previous_answer <- previous_question$answers[answer_id == previous_answer_id]
 
-          # Skip further answers if the previous answer is marked as finished
-          if (!is.null(previous_answer) && previous_answer$coding_is_finished) {
-            return(FALSE)
+            # Skip further answers if the previous answer is marked as finished
+            if (!is.null(previous_answer) && previous_answer$coding_is_finished) {
+              return(FALSE)
+            }
           }
         }
       }

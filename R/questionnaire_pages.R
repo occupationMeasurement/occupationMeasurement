@@ -103,6 +103,13 @@ page_second_freetext <- function(combine_input_with_first = TRUE, is_interview =
     page_id = "freetext_2",
     is_interview = is_interview,
     question_text = "Bitte beschreiben Sie mir diese berufliche T\u00e4tigkeit genau.",
+    render_question_text = FALSE,
+    render_before = function(session, page, run_before_output, ...) {
+      list(
+        p(run_before_output$question_text),
+        if (is_interview) p(class = "interviewer", "INT: Angaben des Befragten vollst\u00e4ndig eintragen. Bitte auf Rechtschreibung achten und ggf. buchstabieren lassen.")
+      )
+    },
     condition = function(session, page, ...) {
       # Show when there are no suggestions yet
       nrow(stats::na.omit(session$userData$user_info$list_suggestions)) == 0

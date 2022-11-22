@@ -112,7 +112,14 @@ check_condition <- function(page, session, ...) {
   }
 
   if (!is.null(page$condition)) {
-    return(page$condition(session = session, page = page, ...))
+    condition_result <- page$condition(session = session, page = page, ...) |>
+      as.logical()
+    return(
+      # Treat empty vector (i.e. of length 0) as FALSE
+      length(condition_result) > 0 &&
+      # Use the result itself
+      condition_result
+    )
   } else {
     return(TRUE)
   }

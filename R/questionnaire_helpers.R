@@ -1,8 +1,20 @@
 # Small helper functions to be used when creating questionnaire pages
 
+#' Go to the next page
+#'
+#' Buttons to navigate between pages.
+#'
+#' @param label What label the button should have.
+#'
+#' @return shiny Action Button
+#' @export
+#'
+#' @seealso [new_page()]
 button_next <- function(label = "Weiter") {
   actionButton("nextButton", label)
 }
+#' @describeIn button_next Go to the previous page
+#' @export
 button_previous <- function(label = "Zur\u00fcck") {
   actionButton("previousButton", label)
 }
@@ -37,7 +49,7 @@ mark_questionnaire_complete <- function() {
 #' \dontrun{
 #'  app(questionnaire = one_page_questionnaire)
 #' }
-#' 
+#'
 page_choose_one_option <- function(page_id,
                                    question_text = "Please pick one of the following options",
                                    list_of_options = list(One = 1, Two = 2, Three = 3),
@@ -120,7 +132,7 @@ page_choose_one_option <- function(page_id,
 #'   Defaults to TRUE.
 #' @param previous_button Whether to show the button to navigate to the preivous page?
 #'   Defaults to TRUE.
-#' @param trigger_next_on_enter Whether the next button is triggered 
+#' @param trigger_next_on_enter Whether the next button is triggered
 #'   when one presses enter. Defaults to TRUE. There are known issues with IE11.
 #' @param render_question_text Whether the question text should be displayed?
 #'   Only set this to FALSE, if you wish to change the rendering of the

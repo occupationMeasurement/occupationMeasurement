@@ -93,15 +93,74 @@ as these two life-cycle functions have only been added to allow for easier
 modification and extension of existing pages.
 }
 \examples{
-one_page_questionnaire <- list(
-  new_page(
-    page_id = "example",
-    render = function(session, run_before_output, input, output, ...) {
-      shiny::tags$h1("My test page")
-    }
-  )
+very_simple_page <- new_page(
+  page_id = "example",
+  render = function(session, run_before_output, input, output, ...) {
+    list(
+      shiny::tags$h1("My test page"),
+      button_previous(),
+      button_next()
+    )
+  }
 )
 
-# TODO: Include an example of a simple page that contains two questions
-# and thus two calls to set_item_data()?
+# Example where we also save some data
+page_that_saves_two_items <- new_page(
+  page_id = "questions_1_and_2",
+  render = function(session, run_before_output, page, input, output, ...) {
+    list(
+      shiny::tags$h1("Questions"),
+      shiny::textAreaInput(
+        inputId = "day_freetext",
+        label = "How was your day? Please give a detailed answer.",
+        value = get_item_data(
+          session = session, page_id = page$page_id,
+          item_id = "day_freetext",
+          key = "response_text"
+        )
+      ),
+      shiny::tags$p("How would you rate your day? On a scale of 1 - 4"),
+      radioButtons(
+        inputId = "day_radio",
+        label = NULL,
+        width = "100\%",
+        choices = list(One = 1, Two = 2, Three = 3, Four = 4),
+        selected = get_item_data(
+          session = session,
+          page_id = page$page_id,
+          item_id = "day_radio",
+          key = "response_id",
+          default = character(0)
+        )
+      ),
+      button_previous(),
+      button_next()
+    )
+  },
+  run_after = function(session, page, input, ...) {
+    set_item_data(
+      session = session,
+      page_id = page$page_id,
+      item_id = "day_freetext",
+      response_text = input$day_freetext
+    )
+    set_item_data(
+      session = session,
+      page_id = page$page_id,
+      item_id = "day_radio",
+      response_id = input$day_radio
+    )
+  }
+)
+
+questionnaire_that_saves_two_items <- list(
+  page_that_saves_two_items,
+  # So we have a next page to go to
+  very_simple_page
+)
+
+\dontrun{
+  app(questionnaire = questionnaire_that_saves_two_items)
+}
+
 }

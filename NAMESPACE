@@ -3,6 +3,8 @@
 export(algo_similarity_based_reasoning)
 export(api)
 export(app)
+export(button_next)
+export(button_previous)
 export(create_app_settings)
 export(get_final_codes)
 export(get_followup_questions)

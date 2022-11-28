@@ -123,7 +123,10 @@ questionnaire_demo <- function() {
       }
     ),
     page_first_freetext(is_interview = TRUE),
-    page_second_freetext(is_interview = TRUE),
+    # Use a higher aggregate_score_threshold here, since time is more
+    # expensive in telephone surveys and reading options alound much slower
+    # than reading them yourself in a web-survey
+    page_second_freetext(is_interview = TRUE, aggregate_score_threshold = 0.4),
     page_select_suggestion(is_interview = TRUE,
       render_after = function(session, ...) {
         list(

@@ -29,17 +29,24 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 
 #' The first freetext question to show.
 #'
-#' Here, the description of the job can be entered in an open freetext field.
+#' Here, the description of the job can be entered in an open freetext field
+#' and suggestions will be generated based on the input.
 #'
 #' @param is_interview Should the page show slightly different / additional
 #'  instructions and answer options for an interview that is conducted by
 #'  another person? Defaults to FALSE.
+#' @param aggregate_score_threshold The total sum of the scores of the
+#'   suggestions has to be higher than this threshold for suggestions to be
+#'   shown. The parameter is passed on to [get_job_suggestions()].
 #' @param ... All additional parameters are passed to [new_page()]
 #'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_first_freetext <- function(is_interview = FALSE, ...) {
+page_first_freetext <- function(is_interview = FALSE,
+  aggregate_score_threshold = 0.535,
+  ...
+  ) {
   page_freetext(
     page_id = "freetext_1",
     is_interview = is_interview,
@@ -79,6 +86,13 @@ page_first_freetext <- function(is_interview = FALSE, ...) {
           session$userData$session_settings$get_job_suggestion_params
         )
       }
+      # Always use the aggregate score thrshold from the page
+      utils::modifyList(
+        job_suggestion_parameters,
+        list(
+          aggregate_score_threshold = aggregate_score_threshold
+        )
+      )
       automatic_suggestions <- do.call(get_job_suggestions, job_suggestion_parameters)
       session$userData$user_info$list_suggestions <- automatic_suggestions
     },
@@ -98,7 +112,9 @@ page_first_freetext <- function(is_interview = FALSE, ...) {
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_second_freetext <- function(combine_input_with_first = TRUE, is_interview = FALSE, ...) {
+page_second_freetext <- function(combine_input_with_first = TRUE,
+  is_interview = FALSE, aggregate_score_threshold = 0.02, ...) {
+  # TODO: Maybe abstract aways all the duplicated code between page_first_freetext and page_second_freetext
   page_freetext(
     page_id = "freetext_2",
     is_interview = is_interview,
@@ -146,6 +162,13 @@ page_second_freetext <- function(combine_input_with_first = TRUE, is_interview =
           session$userData$session_settings$get_job_suggestion_params
         )
       }
+      # Always use the aggregate score thrshold from the page
+      utils::modifyList(
+        job_suggestion_parameters,
+        list(
+          aggregate_score_threshold = aggregate_score_threshold
+        )
+      )
       automatic_suggestions <- do.call(get_job_suggestions, job_suggestion_parameters)
       session$userData$user_info$list_suggestions <- automatic_suggestions
     },

@@ -198,7 +198,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["3222", "8037", "8004", "3205", "3206"]
+          "value": ["2001", "2075", "9041", "1854", "5177"]
         },
         {
           "type": "character",
@@ -208,32 +208,32 @@
         {
           "type": "double",
           "attributes": {},
-          "value": [0.06826171, 0.03354299, 0.02982826, 0.02523728, 0.02523728]
+          "value": [0.02619431, 0.02206086, 0.02206086, 0.0179353, 0.01792741]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Sekretär/in", "Dozent/in / Professor/in", "Sozialpädagoge/- pädagogin", "Technisch-kaufmännische/r Betriebassistent/in", "Betriebswirtschaftliche/r Assistent/in"]
+          "value": ["Gießereihelfer/in", "Kraftfahrzeugmechanikerhelfer/in", "Helfer/in - Lebensmitteltechnik", "Bauhelfer/in", "Produktionshelfer/in – Kunststoff und Kautschuk"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation", "Lehren und Forschen an Universitäten und Hochschulen", "Sozialpädagogische Beratung und Betreuung von Personen, die sich in sozialen Problemsituationen befinden", "Kaufmännische Koordination von betrieblichen Produktionsabläufen", "Unterstützung von Führungskräften bei der Verwaltung, Koordination und Organisation des Unternehmens ohne weitere Spezialisierung"]
+          "value": ["Ausführung von Hilfsarbeiten bei der Herstellung von Metall", "Ausführung von Hilfsarbeiten bei der Montage oder bei der Reparatur von Kraftfahrzeugen", "Ausführung von Hilfsarbeiten bei der Herstellung von Lebensmitteln", "Ausführung von Hilfsarbeiten im Hochbau oder im Tiefbau", "Ausführung von Hilfsarbeiten bei der Herstellung und Verarbeitung von Kunststoff und Kautschuk"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen", "z.B. Vorlesungen, Seminare oder Übungen durchführen; Forschungsergebnisse in Fachzeitschriften und -büchern veröffentlichen; Lehrmaterialien konzipieren; Klausuren vorbereiten; Studierende beraten und betreuen; empirische Untersuchungen organisieren", "z.B. Lebenssituation des Klienten analysieren; Förderpläne und Integrationsstrategien entwickeln; Hilfe bei Arbeits- und Wohnungssuche; Informationsaustausch mit anderen sozialen Behörden", "z.B. produzierende Unternehmenseinheiten bei der Materialwirtschaft und Produktionsplanung unterstützen; Produktion auf der Basis von Kundenbestellungen und Produktionskapazitäten planen; Materialbedarf feststellen, Lagerbestände überprüfen und Lieferungen organisieren; Waren annehmen und deren Lagerung veranlassen; Schriftverkehr mit Geschäftspartnern und Behörden abwickeln", "z.B. bei kaufmännisch-betriebswirtschaftlichen Aufgaben in den Bereichen Einkauf, Materialwirtschaft, Vertrieb und Marketing, Personalwesen und Buchhaltung unterstützen; Schriftverkehr mit Geschäftspartnern und Behörden abwickeln; Telefonanrufe und elektronische Anfragen beantworten; Besprechungen planen und organisieren; bei der Erstellung des Budgets unterstützen und Kosten überwachen; Verträge und Beschaffungsaufträge entwerfen"]
+          "value": ["Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. beim Gießen von Formen in der Einzel- oder Kleinserienfertigung unterstützen; beim Entgraten, Säubern, Schleifen und Sortieren der Gussteile helfen; beim Metallziehen bzw. Walzen automatische Anlagen mit Ausgangsmaterial beliefern; Reinigungsarbeiten durchführen; beim Umrüsten und Warten von Maschinen unterstützen; fertige Werkstücke abtransportieren und verpacken", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Bauteile und fertige Werkstücke transportieren; nach Anweisung kleine Lackreparaturen durchführen; Motor- und Getriebeöl nachfüllen oder wechseln; Zündkerzen erneuern; Reifendruck prüfen; Scheibenwischflüssigkeit nachfüllen; Metallplatten, Bleche und Rohre nach Vorgabe in die gewünschte Form bringen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Rohstoffe, Halbfertig- und Fertigprodukte annehmen und lagern; Zutaten für die Produktion bereitstellen; Fachkräfte beim Einrichten, Bedienen und Beschicken sowie beim Reinigen und Pflegen von Maschinen und Abfüllanlagen unterstützen; Filter-, Misch- und Umpumpanlagen der Getränketechnik nach Vorgabe bedienen; den Maschinenlauf überwachen und bei Störungen Fachkräfte informieren; Sortier- und Reinigungsaufgaben übernehmen; fertige Waren lagern; Maschinen zum Abfüllen, Verschließen und Etikettieren von Verpackungen bedienen und überwachen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Fachkräfte bei den Bauarbeiten unterstützen; Baumaterial und Ausrüstung mittels Schub- und Handkarren transportieren; Oberflächen aus Stein, Beton und Bitumen mit Presslufthämmern schneiden; Aufräumarbeiten durchführen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. Maschinen und Anlagen nach Anweisung beschicken; beim Stanzen, Prägen, Entgraten, Reinigen und Montieren von Kunststoffteilen mitarbeiten; beim Bereitstellen von Materialien und Betriebsstoffen wie Kunststoffgranulat, Farben und Lösungsmittel mitwirken; fertige Erzeugnisse auf sichtbare Fehler kontrollieren, sortieren und verpacken"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Hochschullehre und -forschung", "Sozialarbeit und Sozialpädagogik", "Kaufmännische und technische Betriebswirtschaft (ohne Spezialisierung)", "Kaufmännische und technische Betriebswirtschaft (ohne Spezialisierung)"]
+          "value": ["Metallerzeugung (ohne Spezialisierung)", "Fahrzeugtechnik", "Lebensmittelherstellung (ohne Spezialisierung)", "Hochbau, Tiefbau (ohne Spezialisierung)", "Kunststoff- und Kautschukherstellung"]
         },
         {
           "type": "logical",
           "attributes": {},
-          "value": [true, false, true, true, true]
+          "value": [false, false, false, true, false]
         }
       ]
     }
@@ -747,7 +747,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["9910", "2114", "4038", "4048", "3222"]
+          "value": ["9910", "1853", "2114", "2118", "4038"]
         },
         {
           "type": "character",
@@ -757,32 +757,32 @@
         {
           "type": "double",
           "attributes": {},
-          "value": [0.25343017, 0.02337068, 0.02337068, 0.02337068, 0.02337068]
+          "value": [0.31139634, 0.02420655, 0.02420655, 0.02420655, 0.02420655]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Studentische Hilfskraft", "Elektrohelfer/in", "Informatiker/in", "IT-Berater/in", "Sekretär/in"]
+          "value": ["Studentische Hilfskraft", "Maschineneinrichter/in (spanlose Metallbearbeitung)", "Elektrohelfer/in", "Informations- und Kommunikationselektroniker/in", "Informatiker/in"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Tätigkeit als studentische Hilfskraft an einer wissenschaftlichen Einrichtung", "Ausführung von Hilfsarbeiten in der Elektrotechnik", "Branchenübergreifende Entwicklung, Programmierung und Modifizierung von Hardware, Software und kompletten IT-Systemen", "Beratung von Unternehmen hinsichtlich des Einsatzes von Computerhardware und Software", "Durchführung von Sekretariatstätigkeiten wie Korrespondenz, Terminplanung, Finanzen und Büroorganisation"]
+          "value": ["Tätigkeit als studentische Hilfskraft an einer wissenschaftlichen Einrichtung", "Einrichtung und Bedienung von Maschinen zur spanlosen Metallbearbeitung", "Ausführung von Hilfsarbeiten in der Elektrotechnik", "Installation und Reparatur von Telekommunikationsanlagen, Datenübertragungsanlagen, Kabeln, Antennen und anderer kommunikationstechnischer Systeme", "Branchenübergreifende Entwicklung, Programmierung und Modifizierung von Hardware, Software und kompletten IT-Systemen"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["z.B. unterstützende Aufgaben in der Forschung wahrnehmen; Tutorien abhalten; in der Hochschulverwaltung oder in Bibliotheken administrative Aufgaben übernehmen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. am Fließband in der Leiterplattenproduktion oder der Montage von Elektrogeräten arbeiten; bei der Herstellung von Wicklungen für Transformatoren oder Elektromotoren unterstützen; bei der Installation von Datendosen oder beim Kabelziehen mithelfen; Fachkräfte bei der Wartung und Montage von elektrischen Geräten unterstützen", "z.B. Programmiersprache einsetzen; Entwicklung neuer informationstechnischer Konzepte und Systeme; Beratung von Anwendern; Betriebs- und Informationssysteme installieren; Computer- und Softwaresysteme erweitern und modifizieren; anwendungsgerechte und ergonomische Bedienoberflächen entwickeln; Problemanalysen durchführen", "z.B. Geschäftsprozesse analysieren und angemessene Unternehmensanwendungen konzipieren; Anforderungskataloge in Zusammenarbeit mit den Fachabteilungen erstellen und verantworten; Durchführbarkeitsstudien erstellen; Kunden-, Mitbewerber- und eigene IT-Systeme unter technischen und wirtschaftlichen Gesichtspunkten bewerten", "z.B. Korrespondenz auf eigene Initiative bearbeiten; Dokumente und Protokolle schreiben, überprüfen und formatieren; Besprechungsräume vorbereiten und Unterlagen auslegen; Terminplanung koordinieren und überwachen; bei der Buchhaltung und der finanziellen Planung unterstützen"]
+          "value": ["z.B. unterstützende Aufgaben in der Forschung wahrnehmen; Tutorien abhalten; in der Hochschulverwaltung oder in Bibliotheken administrative Aufgaben übernehmen", "z.B. Maschinen für die spanlose Metallbearbeitung vorbereiten und überwachen; Bleche formen, Metalle stanzen, Drahtgewebe, Metallseile, Federn und Nietverbindungen mithilfe von Maschinen herstellen; Kabel mit Metallgeweben umhüllen und umwickeln; Fertigungsabläufe planen und Produktgüte überprüfen", "Hilfsarbeiten sind einfache Aufgaben, für die keine abgeschlossene Berufsausbildung erforderlich ist, z.B. am Fließband in der Leiterplattenproduktion oder der Montage von Elektrogeräten arbeiten; bei der Herstellung von Wicklungen für Transformatoren oder Elektromotoren unterstützen; bei der Installation von Datendosen oder beim Kabelziehen mithelfen; Fachkräfte bei der Wartung und Montage von elektrischen Geräten unterstützen", "z.B. Telekommunikationsnetzwerke und -anlagen planen, einrichten und instand halten; Übertragungstechnik für Radio und Fernsehen einrichten und instand halten; Antennen installieren und instand halten; Mikrowellen-, Telemetrie-, Multiplexing-, Satelliten- und sonstige auf Funktechnik basierende Anlagen einrichten und instand halten", "z.B. Programmiersprache einsetzen; Entwicklung neuer informationstechnischer Konzepte und Systeme; Beratung von Anwendern; Betriebs- und Informationssysteme installieren; Computer- und Softwaresysteme erweitern und modifizieren; anwendungsgerechte und ergonomische Bedienoberflächen entwickeln; Problemanalysen durchführen"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Studentische Hilfskraft", "Elektrotechnik (ohne Spezialisierung)", "Informatik (ohne Spezialisierung)", "IT-Anwendungsberatung", "Büro- und Sekretariatskräfte (ohne Spezialisierung)"]
+          "value": ["Studentische Hilfskraft", "Spanlose Metallbearbeitung", "Elektrotechnik (ohne Spezialisierung)", "Informations- und Telekommunikationstechnik", "Informatik (ohne Spezialisierung)"]
         },
         {
           "type": "logical",
           "attributes": {},
-          "value": [false, false, true, true, true]
+          "value": [false, true, false, false, true]
         }
       ]
     }

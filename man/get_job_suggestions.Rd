@@ -9,8 +9,8 @@ get_job_suggestions(
   suggestion_type = "auxco-1.2.x",
   num_suggestions = 5,
   suggestion_type_options = list(),
-  score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.002),
-  implausible_suggestion_threshold = 0,
+  aggregate_score_threshold = 0.002,
+  item_score_threshold = 0,
   distinctions = TRUE,
   steps = list(simbased_wordwise = list(algorithm = algo_similarity_based_reasoning,
     parameters = list(sim_name = "wordwise")), simbased_substring = list(algorithm =
@@ -34,13 +34,15 @@ to predictions e.g. use a specific version of the kldb or auxco.
 Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 bundled with this package are used.}
 
-\item{score_thresholds}{A named list of thresholds between 0 and 1. Each
-entry should correspond to one of the \code{steps}. Results from that step will
-only be returned if the sum of their scores is equal to or greater than
-the specified threshold. With a threshold of 0 results will always be
-returned.}
+\item{aggregate_score_threshold}{A single value or named list of thresholds
+between 0 and 1. If it is a list, each entry should correspond to one of
+the \code{steps}. If it is a single value, it will apply to all steps.
+Results from that step will only be returned if the sum of
+their scores is equal to or greater than the specified threshold. With a
+aggregate_score_threshold of 0 results will always be returned
+(if there are any).}
 
-\item{implausible_suggestion_threshold}{A threshold between 0 and 1 (usually
+\item{item_score_threshold}{A threshold between 0 and 1 (usually
 very small, default 0). Results from any step will only be returned if they
 are greater than the specified threshold. Allows the removal of highly
 implausible suggestions.}

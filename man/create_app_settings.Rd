@@ -52,7 +52,8 @@ data (A dataframe of data to save), session (the user's current session).}
 
 \item{get_job_suggestion_params}{List of parameters to pass to
 get_job_suggestion. Refer to \code{\link[=get_job_suggestions]{get_job_suggestions()}} for a list of
-supported parameters.}
+supported parameters. Note that the parameter aggregate_score_threshold
+needs to be set on \code{\link[=page_first_freetext]{page_first_freetext()}} or \code{\link[=page_second_freetext]{page_second_freetext()}}.}
 
 \item{default_tense}{We may not always want to ask for the current
 occupation, but maybe also for the previous occupation in case of

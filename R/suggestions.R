@@ -178,12 +178,14 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'          to predictions e.g. use a specific version of the kldb or auxco.
 #'          Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 #'          bundled with this package are used.
-#' @param score_thresholds A named list of thresholds between 0 and 1. Each
-#'   entry should correspond to one of the `steps`. Results from that step will
-#'   only be returned if the sum of their scores is equal to or greater than
-#'   the specified threshold. With a threshold of 0 results will always be
-#'   returned.
-#' @param implausible_suggestion_threshold A threshold between 0 and 1 (usually
+#' @param aggregate_score_threshold A single value or named list of thresholds
+#'   between 0 and 1. If it is a list, each entry should correspond to one of
+#'   the `steps`. If it is a single value, it will apply to all steps.
+#'   Results from that step will only be returned if the sum of
+#'   their scores is equal to or greater than the specified threshold. With a
+#'   aggregate_score_threshold of 0 results will always be returned
+#'   (if there are any).
+#' @param item_score_threshold A threshold between 0 and 1 (usually
 #'   very small, default 0). Results from any step will only be returned if they
 #'   are greater than the specified threshold. Allows the removal of highly
 #'   implausible suggestions.
@@ -233,11 +235,8 @@ get_job_suggestions <- function(text,
                                 suggestion_type = "auxco-1.2.x", # or "kldb-2010"
                                 num_suggestions = 5,
                                 suggestion_type_options = list(),
-                                score_thresholds = list(
-                                  simbased_wordwise = 0.535,
-                                  simbased_substring = 0.002
-                                ),
-                                implausible_suggestion_threshold = 0,
+                                aggregate_score_threshold = 0.02,
+                                item_score_threshold = 0,
                                 distinctions = TRUE,
                                 steps = list(
                                   # try similarity "one word at most 1 letter different" first
@@ -312,9 +311,14 @@ get_job_suggestions <- function(text,
       temp_result <- utils::head(temp_result[order(score, decreasing = TRUE)], num_suggestions)
 
       # Remove suggestions that are most likely incorrect
-      temp_result <- temp_result[score > implausible_suggestion_threshold]
+      temp_result <- temp_result[score > item_score_threshold]
 
-      threshold <- score_thresholds[[step_name]]
+      if (is.list(aggregate_score_threshold)) {
+        threshold <- aggregate_score_threshold[[step_name]]
+      } else {
+        threshold <- aggregate_score_threshold
+      }
+
       if (is.null(threshold) || sum(temp_result$score) >= threshold) {
         # Stop running through algorithms if we get good enough results
         result <- temp_result

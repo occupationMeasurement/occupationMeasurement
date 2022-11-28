@@ -23,7 +23,8 @@
 #'   data (A dataframe of data to save), session (the user's current session).
 #' @param get_job_suggestion_params List of parameters to pass to
 #'   get_job_suggestion. Refer to [get_job_suggestions()] for a list of
-#'   supported parameters.
+#'   supported parameters. Note that the parameter aggregate_score_threshold
+#'   needs to be set on [page_first_freetext()] or [page_second_freetext()].
 #' @param default_tense We may not always want to ask for the current
 #'   occupation, but maybe also for the previous occupation in case of
 #'   pensioners etc. with a value of "past".

@@ -221,7 +221,16 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
     # Go to the previous question
     observeEvent(input$previousButton, {
-      if (session$userData$control$current_question > 1) { # There is no page previous to one.
+      # There is no page previous to one.
+      if (session$userData$control$current_question > 1) {
+        # Collect timestamp / finalize data, also when navigating backwards
+        leaving_page_backwards(
+          page = questionnaire[[session$userData$control$current_question]],
+          session = session,
+          input = input,
+          output = output
+        )
+
         session$userData$control$history <- session$userData$control$history[-length(session$userData$control$history)]
         session$userData$control$current_question <- session$userData$control$history[length(session$userData$control$history)]
       }

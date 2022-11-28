@@ -2,7 +2,7 @@
 % Please edit documentation in R/page.R
 \name{execute_run_after}
 \alias{execute_run_after}
-\title{Called internally by the shiny server.}
+\title{Called internally by the shiny server when navigating to the next page.}
 \usage{
 execute_run_after(page, session, input, output, ...)
 }
@@ -14,6 +14,6 @@ execute_run_after(page, session, input, output, ...)
 \item{...}{All additional arguments are passed along}
 }
 \description{
-Called internally by the shiny server.
+Called internally by the shiny server when navigating to the next page.
 }
 \keyword{internal}

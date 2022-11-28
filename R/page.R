@@ -221,7 +221,7 @@ execute_render <- function(page, session, run_before_output, ...) {
   )
 }
 
-#' Called internally by the shiny server.
+#' Called internally by the shiny server when navigating to the next page.
 #'
 #' @param session The shiny session
 #' @param input The shiny input
@@ -229,7 +229,7 @@ execute_render <- function(page, session, run_before_output, ...) {
 #' @keywords internal
 execute_run_after <- function(page, session, input, output, ...) {
   # Finalize the trial data e.g. set the final timestamp
-  finalize_data(session = session, page_id = page$page_id)
+  finalize_data(session = session, page_id = page$page_id, forward = TRUE)
 
   if (!is.null(page$run_after)) {
     page$run_after(session = session, page = page, input = input, output = output, ...)
@@ -249,6 +249,17 @@ execute_run_after <- function(page, session, input, output, ...) {
       "\n"
     )
   }
+}
+
+#' Called internally by the shiny server when navigating to the previous page.
+#'
+#' @param session The shiny session
+#' @param input The shiny input
+#' @param ... All additional arguments are passed along
+#' @keywords internal
+leaving_page_backwards <- function(page, session, input, output, ...) {
+  # Finalize the trial data, but don't mark data as new
+  finalize_data(session = session, page_id = page$page_id, forward = FALSE)
 }
 
 #' Set some values in the page/questionnaire data in the current session.
@@ -474,9 +485,15 @@ init_page_data <- function(session, page_id) {
   )
 }
 
-finalize_data <- function(session, page_id) {
+# Finalize a page's data e.g. setting the timestamp, marking it as "new"
+# forward corresponds to whether the participant navigated to the next (TRUE)
+# or a previous page (FALSE)
+finalize_data <- function(session, page_id, forward) {
   session$userData$questionnaire_data[[page_id]]$end <- as.character(Sys.time())
-  session$userData$questionnaire_data[[page_id]]$status <- "new"
+
+  if (forward) {
+    session$userData$questionnaire_data[[page_id]]$status <- "new"
+  }
 }
 
 save_page_data <- function(session, page_id) {

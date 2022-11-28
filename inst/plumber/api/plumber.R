@@ -17,13 +17,15 @@
 #* @param text:character The raw text input from the user.
 #* @param suggestion_type:character Which type of suggestion to use / provide. Possible options are "auxco-1.2.x" and "kldb-2010".
 #* @param num_suggestions:integer The maximum number of suggestions to show. This is an upper bound and less suggestions may be returned.
+#* @param aggregate_score_threshold:float The total sum of the scores of the suggestions has to be higher than this threshold for suggestions to be returned.
 #* @tag "occupationMeasurement"
 #* @get /v1/suggestions
-function(text, suggestion_type = "auxco-1.2.x", num_suggestions = 5) {
+function(text, suggestion_type = "auxco-1.2.x", num_suggestions = 5, aggregate_score_threshold = 0.02) {
   suggestions <- occupationMeasurement::get_job_suggestions(
     text = text,
     suggestion_type = suggestion_type,
-    num_suggestions = num_suggestions
+    num_suggestions = num_suggestions,
+    aggregate_score_threshold = aggregate_score_threshold
   )
 
   return(suggestions)

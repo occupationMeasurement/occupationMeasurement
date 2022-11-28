@@ -62,6 +62,15 @@
       }
     ]
 
+# endpoint '/v1/suggestions' works (w/o suggestions due to high threshold)
+
+    [
+      {
+        "input_text": "Friseur",
+        "score": 0
+      }
+    ]
+
 # endpoint '/v1/suggestions' works (for KldB)
 
     [

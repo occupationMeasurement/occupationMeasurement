@@ -36,3 +36,10 @@ p {
 .question {
   padding-bottom: 2rem;
 }
+
+.page-id {
+  opacity: 0.3;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  text-align: right;
+}

@@ -210,6 +210,10 @@ execute_run_before <- function(page, session, input, output, ...) {
 execute_render <- function(page, session, run_before_output, ...) {
   return(
     list(
+      # If specified, add the page_id
+      if (session$userData$app_settings$display_page_ids) shiny::tags$div(class = "page-id", page$page_id),
+
+      # Combine output from page rendering functions
       if (!is.null(page$render_before)) page$render_before(session = session, page = page, run_before_output = run_before_output, ...),
       page$render(session = session, page = page, run_before_output = run_before_output, ...),
       if (!is.null(page$render_after)) page$render_after(session = session, page = page, run_before_output = run_before_output, ...)

@@ -25,6 +25,8 @@
 #'   get_job_suggestion. Refer to [get_job_suggestions()] for a list of
 #'   supported parameters. Note that the parameter aggregate_score_threshold
 #'   needs to be set on [page_first_freetext()] or [page_second_freetext()].
+#' @param display_page_ids Whether `page_ids` should be displayed within the
+#'   questionnaires.
 #' @param default_tense We may not always want to ask for the current
 #'   occupation, but maybe also for the previous occupation in case of
 #'   pensioners etc. with a value of "past".
@@ -57,6 +59,7 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
                                 response_output_dir = file.path("output", "responses"),
                                 handle_data = NULL,
                                 get_job_suggestion_params = NULL,
+                                display_page_ids = FALSE,
                                 default_tense = "present",
                                 default_extra_instructions = "on",
                                 verbose = TRUE,
@@ -71,6 +74,7 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
     response_output_dir = response_output_dir,
     handle_data = handle_data,
     get_job_suggestion_params = get_job_suggestion_params,
+    display_page_ids = display_page_ids,
     default_tense = default_tense,
     default_extra_instructions = default_extra_instructions,
     verbose = verbose

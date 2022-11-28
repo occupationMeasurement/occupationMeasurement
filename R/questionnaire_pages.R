@@ -434,6 +434,17 @@ page_none_selected_freetext <- function(is_interview = FALSE) {
     },
     # Only show this page when none of the suggestions has been picked
     condition = function(session, page, ...) {
+      # Skip this question, if the second freetext question has been answered
+      text_from_second_question <- get_item_data(
+        session = session,
+        page_id = "freetext_2",
+        key = "response_text",
+        default = FALSE
+      )
+      if (text_from_second_question != FALSE) {
+        return(FALSE)
+      }
+
       selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
       return(selected_suggestion_id %in% c(
         # Nothing ticked at all

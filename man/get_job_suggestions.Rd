@@ -9,7 +9,7 @@ get_job_suggestions(
   suggestion_type = "auxco-1.2.x",
   num_suggestions = 5,
   suggestion_type_options = list(),
-  aggregate_score_threshold = 0.002,
+  aggregate_score_threshold = 0.02,
   item_score_threshold = 0,
   distinctions = TRUE,
   steps = list(simbased_wordwise = list(algorithm = algo_similarity_based_reasoning,

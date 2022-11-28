@@ -296,7 +296,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         # toggle_message: an action send via javaScipt input$toggleLongDesc actions
         # time: timestamp when action was saved
         data_to_save <- data.frame(
-          user_id = session$userData$user_info$id,
+          user_id = session$userData$user_info$user_id,
           session_id = session$userData$user_info$session_id,
           toggle_message = input$toggleLongDesc,
           time = as.character(Sys.time())
@@ -595,7 +595,7 @@ page_results <- function(...) {
       save_results_overview(session)
 
       res <- data.frame(
-        user_id = session$userData$user_info$id,
+        user_id = session$userData$user_info$user_id,
         session_id = session$userData$user_info$session_id,
         url_query = session$userData$user_info$url_search
       )

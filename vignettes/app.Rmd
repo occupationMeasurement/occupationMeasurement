@@ -161,7 +161,7 @@ Some settings can also be varied between individual sessions / interviews, e.g.,
 https://{url-to-my-interactive-app}/?tense=past
 
 # Use full range of supported session parameters
-https://{url-to-my-interactive-app}/?id=<my_unique_interview_id>&tense=past&extra_instructions=off&num_suggestions=10
+https://{url-to-my-interactive-app}/?user_id=<my_unique_interview_id>&tense=past&extra_instructions=off&num_suggestions=10
 ``` 
 
 TODO: Describe all query parameters here.
@@ -172,7 +172,7 @@ These settings are also described in the help page `?create_app_settings`, as th
 
 If you want to match your data with an external source or embed the interactive app within another survey, you will probably want to pass a unique interview or user identifier, a `id`, also called `user_id`.
 
-This can be done adding a query parameter named `id` to the URL, i.e., `https://{url-to-my-interactive-app}/?id=my_unique_interview_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_interview_id corresponding to the unique id).
+This can be done adding a query parameter named `id` to the URL, i.e., `https://{url-to-my-interactive-app}/?user_id=my_unique_interview_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_interview_id corresponding to the unique id).
 
 If you want to make sure that a `id` is always supplied, you can enforce this by setting `require_id = TRUE` in the `app_settings`.
 

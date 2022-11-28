@@ -18,7 +18,7 @@ save_data <- function(table_name, data, session) {
 
 append_tables <- list(
   "answers" = c(
-    "user_id",
+    "respondent_id",
     "session_id",
     "page_id",
     "start",
@@ -29,7 +29,7 @@ append_tables <- list(
     "response_text"
   ),
   "toggle_submitted" = c(
-    "user_id",
+    "respondent_id",
     "session_id",
     "toggle_message",
     "time"
@@ -37,7 +37,7 @@ append_tables <- list(
   "session_info" = c(
     "session_id",
     "url_search",
-    "user_id",
+    "respondent_id",
     "history",
     "time_session_ended"
   )
@@ -114,7 +114,7 @@ extract_questions_df <- function(page_data) {
 
   # Add page-level data to the dataframe
   df$page_id <- page_data$page_id
-  df$user_id <- page_data$user_id
+  df$respondent_id <- page_data$respondent_id
   df$session_id <- page_data$session_id
   df$start <- page_data[["start"]]
   # The "end" value might not exist yet when a question is not completed
@@ -174,7 +174,7 @@ extract_questions_wide <- function(questionnaire_data) {
   # Transform the question responses into a wide format
   question_answers_wide <- dcast(
     all_responses_long,
-    user_id + session_id ~ column_name,
+    respondent_id + session_id ~ column_name,
     value.var = "value",
     fun.aggregate = last,
     fill = NA
@@ -291,11 +291,11 @@ get_responses <- function(app_settings = create_app_settings()) {
   # And stitch them together into a single one
   combined_result_overviews <- do.call(function(...) rbind(..., fill = TRUE), list_of_result_overviews)
 
-  if (any(duplicated(combined_result_overviews$user_id))) {
-    warning("There were technical problems during data collection: Multiple records were saved from a single user_id! Further data cleaning is required.")
+  if (any(duplicated(combined_result_overviews$respondent_id))) {
+    warning("There were technical problems during data collection: Multiple records were saved from a single respondent_id! Further data cleaning is required.")
   }
 
-  # TODO: provide functionality to clean duplicate user_ids automatically
+  # TODO: provide functionality to clean duplicate respondent_ids automatically
 
   combined_result_overviews
 }

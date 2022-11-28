@@ -100,18 +100,18 @@ app <- function(questionnaire = questionnaire_web_survey(),
         session$userData$user_info$url_search <- session$clientData$url_search # this will be used to save url_query in the database
 
         # STOP if no respondent ID available
-        if (is.null(session$userData$user_info$query$user_id)) {
+        if (is.null(session$userData$user_info$query$respondent_id)) {
           if (app_settings$require_id) {
             return(list(p(strong(h5("Error: No ID has been supplied. IDs are required for linking data.")))))
           } else {
-            session$userData$user_info$user_id <- NA
+            session$userData$user_info$respondent_id <- NA
           }
         } else {
-          session$userData$user_info$user_id <- session$userData$user_info$query$user_id
+          session$userData$user_info$respondent_id <- session$userData$user_info$query$respondent_id
         }
 
         # create a unique session_id
-        session$userData$user_info$session_id <- sprintf("%s_%s_%s", session$userData$user_info$user_id, as.integer(Sys.time()), sample(0L:9L, 1))
+        session$userData$user_info$session_id <- sprintf("%s_%s_%s", session$userData$user_info$respondent_id, as.integer(Sys.time()), sample(0L:9L, 1))
 
         query_value <- function(name_in_query, default, validate = NULL) {
           value_in_query <- session$userData$user_info$query[[name_in_query]]
@@ -242,7 +242,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
       session_data <- list(
         session_id = session$userData$user_info$session_id,
         url_search = session$userData$user_info$url_search,
-        user_id = session$userData$user_info$user_id,
+        respondent_id = session$userData$user_info$respondent_id,
         history = paste0(isolate(session$userData$control$history), collapse = "-"),
         time_session_ended = as.integer(Sys.time())
       )

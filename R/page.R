@@ -453,7 +453,7 @@ init_page_data <- function(session, page_id) {
     # Initialize page info
     session$userData$questionnaire_data[[page_id]] <- list(
       page_id = page_id,
-      user_id = session$userData$user_info$user_id,
+      respondent_id = session$userData$user_info$respondent_id,
       session_id = session$userData$user_info$session_id
     )
   }

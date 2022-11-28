@@ -5,7 +5,7 @@
 #' @param default_num_suggestions The number of suggestions to generate and
 #'   display to users. Accepts all positive integers.
 #'   Defaults to 5.
-#' @param require_id Are user_ids required?
+#' @param require_id Are respondent_ids required?
 #'   Defaults to FALSE
 #' @param warn_before_leaving Should users be warned that their progress will
 #'   be lost upon leaving the site? Defaults to FALSE.

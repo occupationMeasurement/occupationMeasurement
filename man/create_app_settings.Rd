@@ -28,7 +28,7 @@ Possible options are "auxco-1.2.x" and "kldb-2010".}
 display to users. Accepts all positive integers.
 Defaults to 5.}
 
-\item{require_id}{Are user_ids required?
+\item{require_id}{Are respondent_ids required?
 Defaults to FALSE}
 
 \item{warn_before_leaving}{Should users be warned that their progress will

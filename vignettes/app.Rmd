@@ -161,7 +161,7 @@ Some settings can also be varied between individual sessions / interviews, e.g.,
 https://{url-to-my-interactive-app}/?tense=past
 
 # Use full range of supported session parameters
-https://{url-to-my-interactive-app}/?user_id=<my_unique_interview_id>&tense=past&extra_instructions=off&num_suggestions=10
+https://{url-to-my-interactive-app}/?respondent_id=<my_unique_interview_id>&tense=past&extra_instructions=off&num_suggestions=10
 ``` 
 
 TODO: Describe all query parameters here.
@@ -170,9 +170,9 @@ These settings are also described in the help page `?create_app_settings`, as th
 
 ## Identifying Users
 
-If you want to match your data with an external source or embed the interactive app within another survey, you will probably want to pass a unique interview or user identifier, a `id`, also called `user_id`.
+If you want to match your data with an external source or embed the interactive app within another survey, you will probably want to pass a unique interview or user identifier, a `id`, also called `respondent_id`.
 
-This can be done adding a query parameter named `id` to the URL, i.e., `https://{url-to-my-interactive-app}/?user_id=my_unique_interview_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_interview_id corresponding to the unique id).
+This can be done adding a query parameter named `id` to the URL, i.e., `https://{url-to-my-interactive-app}/?respondent_id=my_unique_interview_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_interview_id corresponding to the unique id).
 
 If you want to make sure that a `id` is always supplied, you can enforce this by setting `require_id = TRUE` in the `app_settings`.
 
@@ -194,8 +194,8 @@ The user's answers themselves, with one row per question/item. These are saved, 
 
 #### Columns
 
-- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
-- **session_id**: A unique session id, identifying this exact session / completion of the survey. (Format: `user_id_Time stamp_Random digit)
+- **respondent_id**: An external respondent_id to match data with another source of information. Only present if it is passed via the URL.
+- **session_id**: A unique session id, identifying this exact session / completion of the survey. (Format: `respondent_id_Time stamp_Random digit)
 - **page_id**: An id / name, identifying the page this answer is coming from. Multiple answers per page are possible.
 - **start**: The timestamp when the user was shown this page.
 - **end**: The timestamp when the user submitted the page. Response time is the difference between **start** and **end**.
@@ -206,15 +206,15 @@ The user's answers themselves, with one row per question/item. These are saved, 
 
 ### results_overview
 
-A combined version of the user's answers and information about the user themselves. These are saved at the end of the questionnaire and therefore only once per participation. `session_id` is the unique key here. Note that `user_id` is not necessarily unique (although it should be) because the same `user_id` can be passed multiple times via the URL.
+A combined version of the user's answers and information about the user themselves. These are saved at the end of the questionnaire and therefore only once per participation. `session_id` is the unique key here. Note that `respondent_id` is not necessarily unique (although it should be) because the same `respondent_id` can be passed multiple times via the URL.
 
 #### Columns
 
-- **session_id**: A unique session id, identifying this exaxct session / completion of the survey. (Format: `user_id_Time stamp_Random digit)
+- **session_id**: A unique session id, identifying this exaxct session / completion of the survey. (Format: `respondent_id_Time stamp_Random digit)
 - **url_search**: The [search / query part](https://en.wikipedia.org/wiki/Query_string) of the URL.
 - **isco_08**: The [International Standard Classification of Occupations 2008](https://www.ilo.org/wcmsp5/groups/public/@dgreports/@dcomm/@publ/documents/publication/wcms_172572.pdf) (ISCO-08) code for this respondent.
 - **kldb_10**: The [German Klassifikation der Berufe 2010 - erste Fassung](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html) (KldB-2010) code for this respondent.
-- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **respondent_id**: An external respondent_id to match data with another source of information. Only present if it is passed via the URL.
 - **P_{page_id}_Q_{item_id}_R_{id/text}**: *Two* columns for every question/item answered by the respondent. These columns correspond to the naming convention ***P_{page_id}_Q_{item_id}_R_id*** for response ids and ***P_{page_id}_Q_{item_id}_R_text*** for response texts (see the documentation for answers for additional information).
 
 ### occupations_suggested
@@ -245,7 +245,7 @@ Information on when and which suggestions were clicked to be expanded (or closed
 
 #### Columns
 
-- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **respondent_id**: An external respondent_id to match data with another source of information. Only present if it is passed via the URL.
 - **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
 - **toggle_message**: A brief identifier, showing whether an option was opened or closed and which option it was.
 - **time**: A timestamp identifying when it was opened / closed.
@@ -258,7 +258,7 @@ This is mainly useful for understanding whether some users may start multiple se
 
 #### Columns
 
-- **user_id**: An external user_id to match data with another source of information. Only present if it is passed via the URL.
+- **respondent_id**: An external respondent_id to match data with another source of information. Only present if it is passed via the URL.
 - **session_id**: A unique session id, identifying this exaxct session / completion of the survey.
 - **url_search**: The [search / query part](https://en.wikipedia.org/wiki/Query_string) of the URL.
 - **history**: String with each questionnaire page visited. For example, `1-` indicates that the session was ended on or before the first page was shown. `1-3-7` indicates that three pages were shown and the session ended on page 7. When the `previous` button is pressed, this page is not saved here.

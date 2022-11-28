@@ -291,12 +291,12 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
       # Register when someone expands the description text
       observeEvent(input$toggleLongDesc, {
         # some logging if people click on the job titles to toggle the descriptions
-        # user_id: user_id
+        # respondent_id: respondent_id
         # session_id: session id
         # toggle_message: an action send via javaScipt input$toggleLongDesc actions
         # time: timestamp when action was saved
         data_to_save <- data.frame(
-          user_id = session$userData$user_info$user_id,
+          respondent_id = session$userData$user_info$respondent_id,
           session_id = session$userData$user_info$session_id,
           toggle_message = input$toggleLongDesc,
           time = as.character(Sys.time())
@@ -595,7 +595,7 @@ page_results <- function(...) {
       save_results_overview(session)
 
       res <- data.frame(
-        user_id = session$userData$user_info$user_id,
+        respondent_id = session$userData$user_info$respondent_id,
         session_id = session$userData$user_info$session_id,
         url_query = session$userData$user_info$url_search
       )

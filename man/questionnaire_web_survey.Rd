@@ -4,7 +4,11 @@
 \alias{questionnaire_web_survey}
 \title{A web survey which participants can navigate themselves.}
 \usage{
-questionnaire_web_survey()
+questionnaire_web_survey(show_feedback_page = TRUE)
+}
+\arguments{
+\item{show_feedback_page}{Show the \code{\link[=page_feedback]{page_feedback()}} to evaluate the fit of
+the chosen suggestion.}
 }
 \value{
 A questionnaire for \code{\link[=app]{app()}}, i.e. a list of pages.

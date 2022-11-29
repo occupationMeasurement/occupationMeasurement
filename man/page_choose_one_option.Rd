@@ -7,7 +7,8 @@
 page_choose_one_option(
   page_id,
   question_text = "Please pick one of the following options",
-  list_of_options = list(One = 1, Two = 2, Three = 3),
+  list_of_choices = list(One = 1, Two = 2, Three = 3),
+  choice_labels = NULL,
   next_button = TRUE,
   previous_button = TRUE,
   run_before = NULL,
@@ -22,12 +23,17 @@ page_choose_one_option(
 This can be either a string, which will simply be displayed or a function
 to dynamically determine the question_text.}
 
-\item{list_of_options}{A list of answering options.
+\item{list_of_choices}{A list of answering options.
 This can either be just a simple list of values or a named list with the
 names corresponding to what the user sees and the values corresponding to
 the actually saved values.
 e.g. with \code{list(One = 1, Two = 2, Three = 3)} people will see One, Two, ...
-and numbers 1, 2, 3 will be saved under \code{response_id}.}
+and numbers 1, 2, ... will be saved under \code{response_id}.
+If you want to use more complex choice names than jsut strings (i.e. HTML),
+you can also use the choice_labels option for that.}
+
+\item{choice_labels}{List or vector of only the choice names to be shown.
+This has to be matched by an equal-length vector in list_of_choices.}
 
 \item{next_button}{Whether to show the button to navigate to the next page?
 Defaults to TRUE.}
@@ -54,7 +60,7 @@ one_page_questionnaire <- list(
  page_choose_one_option(
    "test_page_radio",
    question_text = "Hello there! Please pick your favorite number from the options below:",
-   list_of_options = list(One = 1, Two = 2, Three = 3)
+   list_of_choices = list(One = 1, Two = 2, Three = 3)
  ),
  page_final()
 )

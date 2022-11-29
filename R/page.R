@@ -391,6 +391,10 @@ set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL
   supported_fields <- c("question_text", "response_text", "response_id")
   for (field in supported_fields) {
     value <- get(field)
+    # Convert lists to character (e.g. lists may be passed from shiny HTML)
+    if (is.list(value)) {
+      value <- as.character(value)
+    }
     if (!is.null(value)) {
       question[[field]] <- value
     }

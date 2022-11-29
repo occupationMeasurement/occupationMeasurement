@@ -11,6 +11,9 @@ page_feedback(is_interview = FALSE)
 instructions and answer options for an interview that is conducted by
 another person? Defaults to FALSE.}
 }
+\value{
+A page object.
+}
 \description{
 Page to receive feedback on how well the chosen suggestion fits
 }

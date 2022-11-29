@@ -43,3 +43,11 @@ body {
   margin-bottom: 2rem;
   text-align: right;
 }
+
+.demo-text::before {
+  display: block;
+  content: ' ';
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  border-top: 1px solid lightgray;
+}

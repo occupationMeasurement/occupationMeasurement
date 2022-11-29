@@ -4,6 +4,13 @@ options(stringsAsFactors = FALSE) # dont use factors in data.frames
 #' @import data.table
 NULL
 
+#' Validate (and sanitize the questionnaire)
+#'
+#' @param questionnaire The questionnaire passed to [app()]
+#' @param verbose Should information about the questionnaire be printed?
+#'
+#' @return Sanitized questionnaire
+#' @keywords internal
 validate_questionnaire <- function(questionnaire, verbose) {
   page_ids <- lapply(questionnaire, function(page) page$page_id)
   has_duplicates <- sum(duplicated(page_ids)) > 0
@@ -15,6 +22,12 @@ validate_questionnaire <- function(questionnaire, verbose) {
   if (has_duplicates) {
     stop("Duplicated page_ids detected.")
   }
+
+  # Remove any NULLs from the questionnaire
+  # These might be introduced from e.g. "if" statements
+  questionnaire <- questionnaire[!sapply(questionnaire, is.null)]
+
+  return(questionnaire)
 }
 
 
@@ -50,7 +63,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
                 ...) {
   require_dependencies()
 
-  validate_questionnaire(questionnaire, verbose = app_settings$verbose)
+  questionnaire <- validate_questionnaire(questionnaire, verbose = app_settings$verbose)
 
   shiny::addResourcePath("www", resource_dir)
 

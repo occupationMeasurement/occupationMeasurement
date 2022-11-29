@@ -3,6 +3,8 @@
 #' The basic default questionnaire. View the function's code to see the
 #' used pages. This function is meant as a template that can be changed to meet your requirements.
 #'
+#' @param show_feedback_page Show the [page_feedback()] to evaluate the fit of
+#'   the chosen suggestion.
 #' @return A questionnaire for [app()], i.e. a list of pages.
 #'
 #' @export
@@ -20,7 +22,7 @@
 #' # This is used by default within app
 #' app()
 #' }
-questionnaire_web_survey <- function() {
+questionnaire_web_survey <- function(show_feedback_page = TRUE) {
   list(
     page_first_freetext(),
     page_second_freetext(),
@@ -28,6 +30,7 @@ questionnaire_web_survey <- function() {
     page_none_selected_freetext(),
     page_followup(1),
     page_followup(2),
+    if (show_feedback_page) page_feedback(),
     page_final()
   )
 }
@@ -39,6 +42,7 @@ questionnaire_web_survey <- function() {
 #'
 #' View the function's code to see the used pages. This function is meant as a template that can be changed to meet your requirements.
 #'
+#' @inheritParams questionnaire_web_survey
 #' @return A questionnaire for [app()] i.e. a list of pages.
 #'
 #' @export
@@ -53,7 +57,7 @@ questionnaire_web_survey <- function() {
 #' # Run the app with the questionnaire_interviewer_administered
 #' app(questionnaire = questionnaire_interviewer_administered())
 #' }
-questionnaire_interviewer_administered <- function() {
+questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
   list(
     page_first_freetext(is_interview = TRUE),
     page_second_freetext(is_interview = TRUE),
@@ -61,6 +65,7 @@ questionnaire_interviewer_administered <- function() {
     page_none_selected_freetext(is_interview = TRUE),
     page_followup(1, is_interview = TRUE),
     page_followup(2, is_interview = TRUE),
+    if (show_feedback_page) page_feedback(is_interview = TRUE),
     page_final()
   )
 }
@@ -72,6 +77,7 @@ questionnaire_interviewer_administered <- function() {
 #' Note, that this function has more complex code to create
 #' the additional pages.
 #'
+#' @inheritParams questionnaire_web_survey
 #' @return A questionnaire for [app()] i.e. a list of pages.
 #'
 #' @export
@@ -87,7 +93,7 @@ questionnaire_interviewer_administered <- function() {
 #' app(questionnaire = questionnaire_demo())
 #' }
 #'
-questionnaire_demo <- function() {
+questionnaire_demo <- function(show_feedback_page = TRUE) {
   list(
     page_welcome(
       title = "Herzlich Willkommen zum Demo-Modul zur automatischen Berufskodierung!",
@@ -190,6 +196,7 @@ questionnaire_demo <- function() {
     page_none_selected_freetext(is_interview = TRUE),
     page_followup(1, is_interview = TRUE),
     page_followup(2, is_interview = TRUE),
+    if (show_feedback_page) page_feedback(),
     page_results(),
     page_final()
   )

@@ -930,31 +930,32 @@ get_final_codes <- function(suggestion_id,
       # When converting NULL to numeric a vector of length 0 is intorduced so we also check for that
       if (length(followup_answer_id) > 0 && !is.null(followup_answer_id) && !is.na(followup_answer_id)) {
         question <- followup_questions[[i]]
-        answer <- question$answers[followup_answer_id, ]
-        if (!is.null(answer) && answer$coding_is_finished == TRUE) {
+        answer <- question$answers[answer_id == followup_answer_id, ]
+        if (!is.null(answer) && nrow(answer) > 0 && answer$coding_is_finished == TRUE) {
           # need to check that coding is not finished with the first follow-up question
           break
         }
       }
     }
 
-    if (!is.null(answer) && (answer$answer_kldb_id != "" | answer$answer_isco_id != "")) {
-      # Retrieve answer codes from followup
-      result <- list()
-      if ("isco_08" %in% code_type) {
-        result$isco_08 <- answer$answer_isco_id
+    if (!is.null(answer) && nrow(answer) > 0) {
+      if (answer$answer_kldb_id != "" || answer$answer_isco_id != "") {
+        # Retrieve answer codes from followup
+        result <- list()
+        if ("isco_08" %in% code_type) {
+          result$isco_08 <- answer$answer_isco_id
+        }
+        if ("kldb_10" %in% code_type) {
+          result$kldb_10 <- answer$answer_kldb_id
+        }
+        if (verbose) {
+          result$message <- paste(message, collapse = " |&| ")
+        }
+        return(result)
+      } else {
+        message[length(message) + 1] <- paste("answer_kldb_id and answer_isco_id of selected answer",
+          "from occupationMeasurement::auxco$followup_questions are empty.")
       }
-      if ("kldb_10" %in% code_type) {
-        result$kldb_10 <- answer$answer_kldb_id
-      }
-      if (verbose) {
-        result$message <- paste(message, collapse = " |&| ")
-      }
-      return(result)
-    }
-    if (!is.null(answer) && (answer$answer_kldb_id == "" & answer$answer_isco_id == "")) {
-      message[length(message) + 1] <- paste("answer_kldb_id and answer_isco_id of selected answer",
-        "from occupationMeasurement::auxco$followup_questions are empty.")
     }
   }
 

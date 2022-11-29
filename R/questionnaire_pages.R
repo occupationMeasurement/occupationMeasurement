@@ -567,7 +567,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
     run_after = function(session, page, input, ...) {
       question <- session$userData$active_followup_question
 
-      # TODO: sollte dies besser auf EMPTY gesetzt werden? Dann wäre es einheitlich mit "page_select_suggestion" - und NA ist ja etwas anderes als "nicht beantwortet"
+      # TODO: sollte dies besser auf EMPTY gesetzt werden? Dann w\u00e4re es einheitlich mit "page_select_suggestion" - und NA ist ja etwas anderes als "nicht beantwortet"
       selected <- if (is.null(input$question.follow.quest)) NA_integer_ else as.integer(input$question.follow.quest) # setze alles auf NA wenn nichts ausgew\u00e4hlt wurde
       selected_suggestion <- question$answers[selected, ]
 
@@ -747,6 +747,74 @@ page_results <- function(...) {
       )
     },
     ...
+  )
+}
+
+#' Page to receive feedback on how well the chosen suggestion fits
+#'
+#' @inheritParams page_first_freetext
+#' @return A page object.
+#' @export
+page_feedback <- function(is_interview = FALSE) {
+  # Column names used in data.table (for R CMD CHECK)
+  auxco_id <- NULL
+
+  # Generate list of choices
+  choice_labels <- list(
+    "geringe \u00dcbereinstimmung",
+    "mittlere \u00dcbereinstimmung",
+    "gro\u00dfe \u00dcbereinstimmung",
+    "sehr gro\u00dfe \u00dcbereinstimmung"
+  )
+  list_of_choices <- list(1, 2, 3, 4)
+
+  if (is_interview) {
+    choice_labels <- append(choice_labels, list(p(class = "interviewer", tags$b("*** Keine Angabe"))))
+  } else {
+    choice_labels <- append(choice_labels, list("Keine Angabe"))
+  }
+  list_of_choices <- append(list_of_choices, 95)
+
+  page_choose_one_option(
+    "feedback",
+    condition = function(session, ...) {
+      suggestions <- session$userData$user_info$list_suggestions
+      has_suggestions <- nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0
+
+      # Were there any suggestions?
+      if (has_suggestions) {
+        selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
+        selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
+
+        # Was one of the suggestions picked?
+        return(nrow(selected_suggestion) > 0)
+      } else {
+        return(FALSE)
+      }
+    },
+    question_text = function(session, ...) {
+      # No need to check whether there were sugestions or whether they were picked, since we do this in the condition
+      suggestions <- session$userData$user_info$list_suggestions
+      selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
+      selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
+      selected_task <- selected_suggestion$task
+
+      shiny::tags$div(
+        shiny::tags$p(
+          "Zuvor haben Sie die folgende berufliche T\u00e4tigkeit ausgew\u00e4hlt:"
+        ),
+        shiny::tags$p(
+          shiny::tags$i(selected_task)
+        ),
+        shiny::tags$p(paste(
+          "In welchem Ma\u00dfe stimmt diese T\u00e4tigkeit mit Ihren tats\u00e4chlichen",
+          "T\u00e4tigkeiten im Beruf \u00fcberein? Ist die \u00dcbereinstimmung gering, mittel,",
+          "gro\u00df oder sehr gro\u00df?"
+        ))
+      )
+    },
+    choice_labels = choice_labels,
+    list_of_choices = list_of_choices
   )
 }
 

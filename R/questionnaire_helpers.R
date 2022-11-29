@@ -25,12 +25,16 @@ mark_questionnaire_complete <- function() {
 #' Show a page with multiple radio button options where once can be picked.
 #'
 #' @inheritParams page_freetext
-#' @param list_of_options A list of answering options.
+#' @param list_of_choices A list of answering options.
 #'   This can either be just a simple list of values or a named list with the
 #'   names corresponding to what the user sees and the values corresponding to
 #'   the actually saved values.
 #'   e.g. with `list(One = 1, Two = 2, Three = 3)` people will see One, Two, ...
-#'   and numbers 1, 2, 3 will be saved under `response_id`.
+#'   and numbers 1, 2, ... will be saved under `response_id`.
+#'   If you want to use more complex choice names than jsut strings (i.e. HTML),
+#'    you can also use the choice_labels option for that.
+#' @param choice_labels List or vector of only the choice names to be shown.
+#'   This has to be matched by an equal-length vector in list_of_choices.
 #' @param ... Other parametrs are passed on to `new_page()`
 #'
 #' @return A page object.
@@ -42,7 +46,7 @@ mark_questionnaire_complete <- function() {
 #'  page_choose_one_option(
 #'    "test_page_radio",
 #'    question_text = "Hello there! Please pick your favorite number from the options below:",
-#'    list_of_options = list(One = 1, Two = 2, Three = 3)
+#'    list_of_choices = list(One = 1, Two = 2, Three = 3)
 #'  ),
 #'  page_final()
 #' )
@@ -52,12 +56,25 @@ mark_questionnaire_complete <- function() {
 #'
 page_choose_one_option <- function(page_id,
                                    question_text = "Please pick one of the following options",
-                                   list_of_options = list(One = 1, Two = 2, Three = 3),
+                                   list_of_choices = list(One = 1, Two = 2, Three = 3),
+                                   choice_labels = NULL,
                                    next_button = TRUE,
                                    previous_button = TRUE,
                                    run_before = NULL,
                                    run_after = NULL,
                                    ...) {
+  # Potentially generate choice_labels from list_of_choices
+  choice_values <- unlist(list_of_choices)
+  names(choice_values) <- NULL
+
+  if (is.null(choice_labels)) {
+    if (!is.null(names(list_of_choices))) {
+      choice_labels <- names(list_of_choices)
+    } else {
+      choice_labels <- choice_values
+    }
+  }
+
   new_page(
     page_id = page_id,
     run_before = function(session, page, ...) {
@@ -89,10 +106,11 @@ page_choose_one_option <- function(page_id,
     },
     render = function(session, page, run_before_output, ...) {
       list(
-        p(run_before_output$question_text),
+        shiny::tags$div(class = "question", run_before_output$question_text),
         radioButtons("radioButtonQuestion", NULL,
           width = "100%",
-          choices = list_of_options,
+          choiceNames = choice_labels,
+          choiceValues = choice_values,
           selected = get_item_data(session = session, page_id = page$page_id, key = "response_id", default = character())
         ),
         if (previous_button) button_previous(),
@@ -105,7 +123,7 @@ page_choose_one_option <- function(page_id,
         session = session,
         page_id = page$page_id,
         response_id = response_id,
-        response_text = names(list_of_options[list_of_options == response_id])
+        response_text = choice_labels[choice_values == response_id]
       )
 
       # Support a custom run_after

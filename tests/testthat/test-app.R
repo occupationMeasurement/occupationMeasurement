@@ -76,7 +76,9 @@ test_that("E2E: test case Koch", {
 
   app <- AppDriver$new(
     app_dir = app(
-      questionnaire = questionnaire_demo(),
+      questionnaire = questionnaire_demo(
+        show_feedback_page = FALSE
+      ),
       app_settings = app_settings
     ),
     name = "test_1_koch",
@@ -225,7 +227,9 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
         # Don't write data from test to disk
         save_to_file = FALSE
       ),
-      questionnaire = questionnaire_interviewer_administered()
+      questionnaire = questionnaire_interviewer_administered(
+        show_feedback_page = FALSE
+      )
     ),
     name = "test_2_textiltechniker",
     height = 741,

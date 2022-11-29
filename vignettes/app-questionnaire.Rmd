@@ -75,7 +75,7 @@ my_simple_questionnaire <- list(
   page_choose_one_option(
     page_id = "favourite_meal",
     question_text = "Please pick your favorite kind of meal.",
-    list_of_options = list(
+    list_of_choices = list(
       1 = "Breakfast",
       2 = "Lunch",
       3 = "Dinner"

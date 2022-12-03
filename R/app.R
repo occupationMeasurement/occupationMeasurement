@@ -162,7 +162,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
             validate = c("present", "past")
           ),
           # Is conversational interviewing turned on?
-          # Only in this case are the job titles and the task descriptions shown.
+          # Then some additional instructions for the interviwer will be shown.
           extra_instructions = query_value(
             name_in_query = "extra_instructions",
             default = app_settings$default_extra_instructions,

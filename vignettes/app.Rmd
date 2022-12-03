@@ -164,9 +164,14 @@ https://{url-to-my-interactive-app}/?tense=past
 https://{url-to-my-interactive-app}/?respondent_id=<my_unique_interview_id>&tense=past&extra_instructions=off&num_suggestions=10
 ``` 
 
-TODO: Describe all query parameters here.
+Here is a list of all supported query parameters:
 
-These settings are also described in the help page `?create_app_settings`, as their defaults are set in the `app_settings`.
+- `respondent_id`: Identify users (see the section below for more details)
+- `tense`: We may not always want to ask for the current job (e.g. if someone is retired). You can switch between asking for a current or prior job, by switching this between `present` and `past`.
+- `extra_instructions`: Is conversational interviewing turned on? Then some additional instructions for the interviwer will be shown. Can be `on` or `off`.
+- `num_suggestions`: How many suggestions (maximally) to show to participants. Can be any full number / integer. A common default is `5`.
+
+Most of these settings are also described in the help page `?create_app_settings`, as their defaults are set in the `app_settings`.
 
 ## Identifying Users
 

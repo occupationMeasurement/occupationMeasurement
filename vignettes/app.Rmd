@@ -135,7 +135,7 @@ app(
 
     # Collect an interview_id, so that you can merge data from your questionnaire
     # and from the app after data collection
-    require_id = TRUE,
+    require_respondent_id = TRUE,
 
     # Skip follow-up questions related to ISCO skill level
     # or ISCO supervisory/managment occupations
@@ -174,7 +174,7 @@ If you want to match your data with an external source or embed the interactive 
 
 This can be done adding a query parameter named `id` to the URL, i.e., `https://{url-to-my-interactive-app}/?respondent_id=my_unique_interview_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_interview_id corresponding to the unique id).
 
-If you want to make sure that a `id` is always supplied, you can enforce this by setting `require_id = TRUE` in the `app_settings`.
+If you want to make sure that a `id` is always supplied, you can enforce this by setting `require_respondent_id = TRUE` in the `app_settings`.
 
 # Data
 

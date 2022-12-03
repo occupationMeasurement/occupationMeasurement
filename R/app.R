@@ -114,7 +114,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
         # STOP if no respondent ID available
         if (is.null(session$userData$user_info$query$respondent_id)) {
-          if (app_settings$require_id) {
+          if (app_settings$require_respondent_id) {
             return(list(p(strong(h5("Error: No ID has been supplied. IDs are required for linking data.")))))
           } else {
             session$userData$user_info$respondent_id <- NA

@@ -144,7 +144,7 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
           key = "response_text",
           default = ""
         )
-        text <- paste(text_from_first_question, text)
+        text <- paste(text_from_first_question, text, sep = "; ")
       }
       session$userData$user_info$text_for_suggestion <- text
 

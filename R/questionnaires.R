@@ -128,17 +128,17 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
-          shiny::tags$p("Es gibt mehrere m\u00f6gliche Abl\u00eufe / Flows durch das Tool, je nach Antwort des Befragten."),
-          shiny::tags$p("Mit der Liste an Beispielantworten unten, k\u00f6nnen Sie die unterschiedlichen Abl\u00eufe testen:"),
+          shiny::tags$p("Es gibt mehrere m\u00f6gliche Abl\u00e4ufe / Flows durch das Tool, je nach Antwort des Befragten."),
+          shiny::tags$p("Mit der Liste an Beispielantworten unten, k\u00f6nnen Sie die unterschiedlichen Abl\u00e4ufe testen:"),
           shiny::tags$ol(
             shiny::tags$li('Standardbeispiel: "Koch"'),
             shiny::tags$ul(
-              shiny::tags$li("Verschiedene Folgefragen werden gestellt, wenn die Antworten 1, 2 oder 4 ausgew\u00ehlt werden. Auf die Antwort 2 folgt eine Folgefrage zur Aufsichtst\u00etigkeit (strategische Entscheidungsbefugnis: Ja/Nein?, eine \u00fcberaus typische Folgefrage)"),
-              shiny::tags$li('Wenn die Antwort "etwas anderes" gew\u00ehlt wird, wird um eine Pr\u00ezisierung der T\u00etigkeit gebeten f\u00fcr eine sp\u00etere manuelle Kodierung.'),
+              shiny::tags$li("Verschiedene Folgefragen werden gestellt, wenn die Antworten 1, 2 oder 4 ausgew\u00e4hlt werden. Auf die Antwort 2 folgt eine Folgefrage zur Aufsichtst\u00e4tigkeit (strategische Entscheidungsbefugnis: Ja/Nein?, eine \u00fcberaus typische Folgefrage)"),
+              shiny::tags$li('Wenn die Antwort "etwas anderes" gew\u00e4hlt wird, wird um eine Pr\u00e4zisierung der T\u00e4tigkeit gebeten f\u00fcr eine sp\u00e4tere manuelle Kodierung.'),
             ),
             shiny::tags$li('Beispiel: "Elektrotechniker"'),
             shiny::tags$ul(
-              shiny::tags$li("Wenn Antwort 1 ausgew\u00ehlt wird, werden zwei Folgefragen ben\u00f6tigt (ein seltener Fall). Auf die Antworten 1 und 4 folgen Fragen nach dem Anforderungsniveau (Abgeschlossenes Masterstudium: Ja/Nein?, eine weitere \u00fcberaus typische Folgefrage)."),
+              shiny::tags$li("Wenn Antwort 1 ausgew\u00e4hlt wird, werden zwei Folgefragen ben\u00f6tigt (ein seltener Fall). Auf die Antworten 1 und 4 folgen Fragen nach dem Anforderungsniveau (Abgeschlossenes Masterstudium: Ja/Nein?, eine weitere \u00fcberaus typische Folgefrage)."),
             ),
             shiny::tags$li('Beispiel: "Deponiearbeiter"'),
             shiny::tags$ul(
@@ -146,19 +146,19 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
             ),
             shiny::tags$li('Beispiel: "Schiffslotsin"'),
             shiny::tags$ul(
-              shiny::tags$li("Antwort 1 ist ein gutes Beispiel daf\u00fcr, welche Antworten bei einer Folgefrage zur Aufsichtst\u00etigkeit m\u00f6glich sind."),
+              shiny::tags$li("Antwort 1 ist ein gutes Beispiel daf\u00fcr, welche Antworten bei einer Folgefrage zur Aufsichtst\u00e4tigkeit m\u00f6glich sind."),
             ),
-            shiny::tags$li('Beispiel: "Briefmarkensammler" (Algorithmus findet keine Vorschl\u00ege)'),
+            shiny::tags$li('Beispiel: "Briefmarkensammler" (Algorithmus findet keine Vorschl\u00e4ge)'),
             shiny::tags$ul(
               shiny::tags$li('Antwort auf erste und zweite Freitext-Frage jeweils "Briefmarkensammler"'),
-              shiny::tags$li("Der Algorithmus findet keine Vorschl\u00ege und manuelle Kodierung ist n\u00f6tig."),
+              shiny::tags$li("Der Algorithmus findet keine Vorschl\u00e4ge und manuelle Kodierung ist n\u00f6tig."),
             ),
-            shiny::tags$li('Beispiel: "Backwaren" (Algorithmus findet Vorschl\u00ege erst nach Pr\u00ezisierung)'),
+            shiny::tags$li('Beispiel: "Backwaren" (Algorithmus findet Vorschl\u00e4ge erst nach Pr\u00e4zisierung)'),
             shiny::tags$ul(
-              shiny::tags$li('Anwort auf erste Frage: "Backwaren", Antwort auf zweite Frage: "In der B\u00eckerei backen"'),
+              shiny::tags$li('Anwort auf erste Frage: "Backwaren", Antwort auf zweite Frage: "In der B\u00e4ckerei backen"'),
               shiny::tags$li('Da hier bereits zwei Freitextfragen gestellt wurden, wird bei der Auswahl von "etwas anderes" keine dritte Freitextfrage gestellt.'),
             ),
-            shiny::tags$li('Beispiel: "Kr\u00eutersammler" (Algorithmus findet nur einen einzigen Vorschlag)'),
+            shiny::tags$li('Beispiel: "Kr\u00e4utersammler" (Algorithmus findet nur einen einzigen Vorschlag)'),
             shiny::tags$ul(
               shiny::tags$li("Die Frage ist etwas anders formuliert als sonst.")
             )
@@ -214,7 +214,7 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
                 "AuxCo_Id" = suggestions$auxco_id,
                 "Wahrscheinlichkeit" = round(suggestions$score, digits = 2),
                 "Berufsuntergruppe" = suggestions$title,
-                "T\u00etigkeit" = suggestions$task,
+                "T\u00e4tigkeit" = suggestions$task,
                 "Standard_KldB_Code" = suggestions$default_kldb_id,
                 "Standard_ISCO_Code" = suggestions$default_isco_id
               )

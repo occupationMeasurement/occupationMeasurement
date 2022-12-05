@@ -176,22 +176,22 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
         shiny::tags$div(
           class = "demo-text",
           shiny::tags$ul(
-            shiny::tags$li("- Auf dieser Seite wurde maschinelles Lernen angewandt um die wahrscheinlichsten Antwortoptionen zu finden,
+            shiny::tags$li("Auf dieser Seite wurde maschinelles Lernen angewandt um die wahrscheinlichsten Antwortoptionen zu finden,
             damit wir Ihren Job in die Klassifikation der Berufe 2010 (KldB 2010) und in die International Standard Classification of Occupations (ISCO-08) einordnen k\u00f6nnen."),
-            shiny::tags$li("- Die f\u00fcnf oben gezeigten Antworten sind die f\u00fcnf wahrscheinlichsten berufsbezogenen Beschreibungen,
+            shiny::tags$li("Die f\u00fcnf oben gezeigten Antworten sind die f\u00fcnf wahrscheinlichsten berufsbezogenen Beschreibungen,
             von denen der Machine-Learning-Algorithmus vorhersagt, dass sie Ihren Job passend beschreiben
             und bei der Zuweisung von KldB- und ISCO-Codes helfen w\u00fcrden."),
             shiny::tags$li(
               "Die Liste aller berufsbezogenenen Beschreibungen besteht aus \u00fcber 1100 m\u00f6glichen Antworten und wurde vom
             LMU-Team auf der Grundlage der offiziellen KldB-Klassifikation und unter Nutzung der ISCO-Klassifikation entwickelt.
-            Die vollst\u00e4ndige Liste der Antworten (und evtl. weitere Nachfragen) sind",
+            Die vollst\u00e4ndige Liste der Antworten (und evtl. weitere Folgefragen) sind",
               tags$a(href = "https://github.com/occupationMeasurement/auxiliary-classification", "in der Berufs-Hilfsklassifikation
             mit T\u00e4tigkeitsbeschreibungen auf Github", target = "_blank"),
               "ersichtlich. Als Sie Ihre berufliche T\u00e4tigkeit auf der vorherigen Seite eingegeben haben, hat der
             Algorithmus auf der Grundlage Ihrer vorherigen Antwort die Wahrscheinlichkeiten
             aller 1100+ Jobbeschreibungen aus unserer Liste berechnet und zeigt Ihnen die 5 wahrscheinlichsten an."
             ),
-            shiny::tags$li("- Die Standard-KldB- und ISCO-Codes sind Codes, die vom LMU-Team jeder Antwortoption zugeordnet wurden, weil sie
+            shiny::tags$li("Die Standard-KldB- und ISCO-Codes sind Codes, die vom LMU-Team jeder Antwortoption zugeordnet wurden, weil sie
             besonders plausibel sind. Allerdings sind manchmal weitere Nachfragen n\u00f6tig um die korrekte Kategorien genau zu
             erfassen. Wenn Nachfragen gestellt werden, sind die hier abgebildeten KldB-/ISCO-Codes daher nicht final."),
           ),
@@ -230,11 +230,54 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
         )
       }
     ),
-    page_none_selected_freetext(is_interview = TRUE),
-    page_followup(1, is_interview = TRUE),
+    page_none_selected_freetext(
+      is_interview = TRUE,
+      render_after = function(...) {
+        shiny::tags$div(
+          class = "demo-text",
+          shiny::tags$p("Falls der Befragte sich keiner der zuvor angezeigten Beschreibungen zuordnen konnte, ist
+            eine manuelle Kodierung nötig, wozu hier weitere Details erfasst werden. Die Seite wird übersprungen,
+            wenn eine Beschreibung ausgewählt wurde oder wenn bereits zwei Freitextfragen beantwortet wurden.")
+          )
+      }
+    ),
+    page_followup(1,
+      is_interview = TRUE,
+      render_after = function(...) {
+        shiny::tags$div(
+          class = "demo-text",
+          shiny::tags$p("Die zuvor ausgewählte Beschreibung erlaubt keine präzise Zuordnung in ISCO-08 und in
+          die KldB 2010 auf der höchsten Detailstufe."),
+          shiny::tags$p("Abhängig von der ausgewählten Beschreibung werden daher maximal zwei Folgefragen gestellt
+          um eine genauere Zuordnung vorzunehmen. Vier Arten von möglichen Folgefragen können unterschieden werden:"),
+          shiny::tags$ul(
+            shiny::tags$li("Messung von Führungs- und Aufsichtstätigkeiten (ISCO: managerial and supervisory occupations)"),
+            shiny::tags$li("Anforderungsniveau (ISCO: skill level)"),
+            shiny::tags$li("Berufsspezifische Spezialisierungen"),
+            shiny::tags$li("Sonstige")
+          ),
+          shiny::tags$p("Die beiden erstgenannten Arten werden in vielen Befragungen bereits an anderer Stelle
+            erhoben, wobei aber sowohl das Vorliegen einer Führungs-/Aufsichtstätigkeit als auch das Anforderungsniveau auf
+            unterschiedliche Weise operationalisiert werden kann. In einem solchen Fall ist zu prüfen, ob man
+            die entsprechende Information hier erneut erheben möchte oder die Folgefragen des bereits vorliegenden
+            Typs bei der Befragung auslässt.")
+        )
+      }
+    ),
     page_followup(2, is_interview = TRUE),
-    if (show_feedback_page) page_feedback(),
     page_results(),
+    if (show_feedback_page) page_feedback(
+      is_interview = TRUE,
+      render_after = function(...) {
+        shiny::tags$div(
+          class = "demo-text",
+          shiny::tags$p("Es ist schwierig, geeignete Antworten für die Berufs-Hilfsklassifikation zu formulieren. Im klassischen Pretest
+            können diese auch nicht getestet werden, da viele Berufe extrem selten sind und im Pretest nie vorkommen."),
+          shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tatsächlich ausgeübte Tätigkeit nur unzureichend beschreiben.
+            Wenn bei bestimmten Antworten Probleme festgestellt werden, kann eine Überarbeitung der Berufs-Hilfsklassifikation erforderlich sein.")
+        )
+      }
+    ),
     page_final()
   )
 }

@@ -423,7 +423,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-page_none_selected_freetext <- function(is_interview = FALSE) {
+page_none_selected_freetext <- function(is_interview = FALSE, ...) {
   page_freetext(
     page_id = "none_selected_freetext",
     is_interview = is_interview,
@@ -454,7 +454,8 @@ page_none_selected_freetext <- function(is_interview = FALSE) {
         # Picked "no response"
         "99"
       ))
-    }
+    },
+    ...
   )
 }
 
@@ -752,10 +753,13 @@ page_results <- function(...) {
 
 #' Page to receive feedback on how well the chosen suggestion fits
 #'
+#' @param ... All additional parameters are passed first passed on to
+#'   [page_choose_one_option()] and then [new_page()].
+#'
 #' @inheritParams page_first_freetext
 #' @return A page object.
 #' @export
-page_feedback <- function(is_interview = FALSE) {
+page_feedback <- function(is_interview = FALSE, ...) {
   # Column names used in data.table (for R CMD CHECK)
   auxco_id <- NULL
 
@@ -814,7 +818,8 @@ page_feedback <- function(is_interview = FALSE) {
       )
     },
     choice_labels = choice_labels,
-    list_of_choices = list_of_choices
+    list_of_choices = list_of_choices,
+    ...
   )
 }
 

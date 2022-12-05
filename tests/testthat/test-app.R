@@ -69,7 +69,7 @@ test_that("E2E: test case Koch", {
   response_dir <- withr::local_tempdir()
 
   app_settings <- create_app_settings(
-    require_id = TRUE,
+    require_respondent_id = TRUE,
     save_to_file = TRUE,
     response_output_dir = response_dir
   )

@@ -7,7 +7,7 @@
 create_app_settings(
   suggestion_type = "auxco-1.2.x",
   default_num_suggestions = 5,
-  require_id = FALSE,
+  require_respondent_id = FALSE,
   warn_before_leaving = FALSE,
   skip_followup_types = c(),
   save_to_file = TRUE,
@@ -29,7 +29,7 @@ Possible options are "auxco-1.2.x" and "kldb-2010".}
 display to users. Accepts all positive integers.
 Defaults to 5.}
 
-\item{require_id}{Are respondent_ids required?
+\item{require_respondent_id}{Are respondent_ids required?
 Defaults to FALSE}
 
 \item{warn_before_leaving}{Should users be warned that their progress will
@@ -85,5 +85,5 @@ A list of app_settings.
 This is the primary and most convenient way of configuring the app.
 }
 \examples{
-app_settings <- create_app_settings(require_id = TRUE)
+app_settings <- create_app_settings(require_respondent_id = TRUE)
 }

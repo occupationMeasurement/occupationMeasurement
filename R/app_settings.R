@@ -5,7 +5,7 @@
 #' @param default_num_suggestions The number of suggestions to generate and
 #'   display to users. Accepts all positive integers.
 #'   Defaults to 5.
-#' @param require_id Are respondent_ids required?
+#' @param require_respondent_id Are respondent_ids required?
 #'   Defaults to FALSE
 #' @param warn_before_leaving Should users be warned that their progress will
 #'   be lost upon leaving the site? Defaults to FALSE.
@@ -49,10 +49,10 @@
 #' @export
 #'
 #' @examples
-#' app_settings <- create_app_settings(require_id = TRUE)
+#' app_settings <- create_app_settings(require_respondent_id = TRUE)
 create_app_settings <- function(suggestion_type = "auxco-1.2.x",
                                 default_num_suggestions = 5,
-                                require_id = FALSE,
+                                require_respondent_id = FALSE,
                                 warn_before_leaving = FALSE,
                                 skip_followup_types = c(),
                                 save_to_file = TRUE,
@@ -67,7 +67,7 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
   final_app_settings <- list(
     suggestion_type = suggestion_type,
     default_num_suggestions = default_num_suggestions,
-    require_id = require_id,
+    require_respondent_id = require_respondent_id,
     warn_before_leaving = warn_before_leaving,
     skip_followup_types = skip_followup_types,
     save_to_file = save_to_file,
@@ -113,7 +113,7 @@ validate_app_settings <- function(app_settings) {
   }
 
   # Add warnings for odd / dangerous settings
-  if (!app_settings$require_id) {
+  if (!app_settings$require_respondent_id) {
     warning("User Ids are currently not required, this could lead to unmatchable data.")
   }
 

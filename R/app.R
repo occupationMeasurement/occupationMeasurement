@@ -114,7 +114,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
         # STOP if no respondent ID available
         if (is.null(session$userData$user_info$query$respondent_id)) {
-          if (app_settings$require_id) {
+          if (app_settings$require_respondent_id) {
             return(list(p(strong(h5("Error: No ID has been supplied. IDs are required for linking data.")))))
           } else {
             session$userData$user_info$respondent_id <- NA
@@ -162,7 +162,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
             validate = c("present", "past")
           ),
           # Is conversational interviewing turned on?
-          # Only in this case are the job titles and the task descriptions shown.
+          # Then some additional instructions for the interviwer will be shown.
           extra_instructions = query_value(
             name_in_query = "extra_instructions",
             default = app_settings$default_extra_instructions,

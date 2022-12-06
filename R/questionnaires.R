@@ -163,7 +163,7 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
-          shiny::tags$p("Wenn bei der ersten Freitextfrage eine sehr allgemeine Antwort gegeben wird oder der eingegebene Begriff nicht hinterlegt ist, k\u00f6nnen keine
+          shiny::tags$p("Wenn bei der ersten Freitextfrage eine sehr allgemeine Antwort gegeben wird (z.B. Angestellter, Arbeiterin, Projektleiter, Managerin) oder der eingegebene Begriff nicht hinterlegt ist, k\u00f6nnen keine
             spezifischen Antworten vorgeschlagen werden. Es muss zun\u00e4chst nach n\u00e4heren Details gefragt werden."),
             shiny::tags$p('Die verlangte G\u00fcte der Vorschl\u00e4ge kann mithilfe des Parameters "aggregate_score_threshold" kontrolliert
               und auf die Umst\u00e4nde der jeweiligen Befragung angepasst werden. Es gilt eine Abw\u00e4gung zu treffen: Mit einem sehr kleinen threshold
@@ -194,7 +194,7 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
             Algorithmus auf der Grundlage Ihrer vorherigen Antwort die Wahrscheinlichkeiten
             aller 1100+ Jobbeschreibungen aus unserer Liste berechnet und zeigt Ihnen die 5 wahrscheinlichsten an."
             ),
-            shiny::tags$li("Die Standard-KldB- und ISCO-Codes sind Codes, die vom LMU-Team jeder Antwortoption zugeordnet wurden, weil sie
+            shiny::tags$li("Die Standard-KldB- und -ISCO-Codes sind Codes, die vom LMU-Team jeder Antwortoption zugeordnet wurden, weil sie
             besonders plausibel sind. Allerdings sind manchmal weitere Nachfragen n\u00f6tig um die korrekte Kategorien genau zu
             erfassen. Wenn Nachfragen gestellt werden, sind die hier abgebildeten KldB-/ISCO-Codes daher nicht final."),
           ),

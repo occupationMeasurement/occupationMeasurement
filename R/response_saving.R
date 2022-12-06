@@ -146,11 +146,15 @@ extract_questions_wide <- function(questionnaire_data) {
   all_questions <- do.call(rbind, lapply(questionnaire_data, extract_questions_df))
   all_questions$questionnaire_order <- seq.int(nrow(all_questions))
 
+  # Convert all measure_vars to character (for consistency and to get rid of a warning from before)
+  measure_vars <- c("response_id", "response_text")
+  all_questions[, (measure_vars) := lapply(.SD, as.character), .SDcols = measure_vars]
+
   # Reshape the data into an ever longer format where each row corresponds to
   # exactly one response-type per question per page
   all_responses_long <- melt(
     all_questions,
-    measure.vars = c("response_id", "response_text"),
+    measure.vars = measure_vars,
     variable.name = "response_type",
     value.name = "value"
   )

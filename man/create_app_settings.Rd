@@ -14,7 +14,7 @@ create_app_settings(
   response_output_dir = file.path("output", "responses"),
   handle_data = NULL,
   get_job_suggestion_params = NULL,
-  display_page_ids = FALSE,
+  display_page_ids = TRUE,
   default_tense = "present",
   default_extra_instructions = "on",
   verbose = TRUE,

@@ -140,11 +140,11 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
             shiny::tags$ul(
               shiny::tags$li("Antwort 1 ist ein gutes Beispiel daf\u00fcr, welche Antworten bei einer Folgefrage zur Aufsichtst\u00e4tigkeit m\u00f6glich sind."),
             ),
-            shiny::tags$li('Beispiel: "Briefmarkensammler" und in der anschließenden Freitextfrage erneut "Briefmarkensammler" (Algorithmus findet keine Vorschl\u00e4ge)'),
+            shiny::tags$li('Beispiel: "Briefmarkensammler" und in der anschlie\u00dfenden Freitextfrage erneut "Briefmarkensammler" (Algorithmus findet keine Vorschl\u00e4ge)'),
             shiny::tags$ul(
               shiny::tags$li("Der Algorithmus findet keine Vorschl\u00e4ge und manuelle Kodierung ist n\u00f6tig."),
             ),
-            shiny::tags$li('Beispiel: "Backwaren"  und in der anschließenden zweiten Freitextfrage "In der B\u00e4ckerei backen" (Algorithmus findet Vorschl\u00e4ge erst nach Pr\u00e4zisierung)'),
+            shiny::tags$li('Beispiel: "Backwaren"  und in der anschlie\u00dfenden zweiten Freitextfrage "In der B\u00e4ckerei backen" (Algorithmus findet Vorschl\u00e4ge erst nach Pr\u00e4zisierung)'),
             shiny::tags$ul(
               shiny::tags$li('Da hier bereits zwei Freitextfragen gestellt wurden, wird bei der Auswahl von "etwas anderes" keine dritte Freitextfrage gestellt.'),
             ),
@@ -163,13 +163,13 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
-          shiny::tags$p("Wenn bei der ersten Freitextfrage eine sehr allgemeine Antwort gegeben wird oder der eingegebene Begriff nicht hinterlegt ist, können keine 
-            spezifischen Antworten vorgeschlagen werden. Es muss zunächst nach näheren Details gefragt werden."),
-            shiny::tags$p('Die verlangte Güte der Vorschläge kann mithilfe des Parameters "aggregate_score_threshold" kontrolliert
-              und auf die Umstände der jeweiligen Befragung angepasst werden. Es gilt eine Abwägung zu treffen: Mit einem sehr kleinen threshold
-              erhalten fast alle Befragten Vorschläge, aber einige dieser Vorschläge sind sehr schlecht und die Befragten wählen evtl. keine Antwort aus.
-              Es wird empfohlen bei der ersten Freitextfrage einen höheren Threshold zu wählen (default: 0.535) und ggf. bei der zweiten Freitextfrage
-              einen niedrigen Wert zu wählen (hier: 0.4, aber auch Werte nahe 0 können sinnvoll sein.).')
+          shiny::tags$p("Wenn bei der ersten Freitextfrage eine sehr allgemeine Antwort gegeben wird oder der eingegebene Begriff nicht hinterlegt ist, k\u00f6nnen keine
+            spezifischen Antworten vorgeschlagen werden. Es muss zun\u00e4chst nach n\u00e4heren Details gefragt werden."),
+            shiny::tags$p('Die verlangte G\u00fcte der Vorschl\u00e4ge kann mithilfe des Parameters "aggregate_score_threshold" kontrolliert
+              und auf die Umst\u00e4nde der jeweiligen Befragung angepasst werden. Es gilt eine Abw\u00e4gung zu treffen: Mit einem sehr kleinen threshold
+              erhalten fast alle Befragten Vorschl\u00e4ge, aber einige dieser Vorschl\u00e4ge sind sehr schlecht und die Befragten w\u00e4hlen evtl. keine Antwort aus.
+              Es wird empfohlen bei der ersten Freitextfrage einen h\u00f6heren Threshold zu w\u00e4hlen (default: 0.535) und ggf. bei der zweiten Freitextfrage
+              einen niedrigen Wert zu w\u00e4hlen (hier: 0.4, aber auch Werte nahe 0 k\u00f6nnen sinnvoll sein.).')
           )
       }),
     page_select_suggestion(
@@ -183,7 +183,7 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
             shiny::tags$li("Die f\u00fcnf oben gezeigten Antworten sind die f\u00fcnf wahrscheinlichsten berufsbezogenen Beschreibungen,
             von denen der Machine-Learning-Algorithmus vorhersagt, dass sie Ihren Job passend beschreiben
             und bei der Zuweisung von KldB- und ISCO-Codes helfen w\u00fcrden."),
-            shiny::tags$li("Ca. 65-85% der Befragten w\u00e4hlen bisherigen Erfahrungen zufolge eine Beschreibung aus und k\u00f6nnen somit bereits während der Befragung kodiert werden."),
+            shiny::tags$li("Ca. 65-85% der Befragten w\u00e4hlen bisherigen Erfahrungen zufolge eine Beschreibung aus und k\u00f6nnen somit bereits w\u00e4hrend der Befragung kodiert werden."),
             shiny::tags$li(
               "Die Liste aller berufsbezogenenen Beschreibungen besteht aus \u00fcber 1100 m\u00f6glichen Antworten und wurde vom
             LMU-Team auf der Grundlage der offiziellen KldB-Klassifikation und unter Nutzung der ISCO-Klassifikation entwickelt.
@@ -238,9 +238,9 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
-          shiny::tags$p("Falls der Befragte sich für keine der zuvor angezeigten Beschreibungen entscheiden konnte, ist
-            eine manuelle Kodierung nötig. Hierfür werden hier weitere Details erfasst. Die Seite wird übersprungen,
-            wenn eine Beschreibung ausgewählt wurde oder wenn bereits zwei Freitextfragen beantwortet wurden.")
+          shiny::tags$p("Falls der Befragte sich f\u00fcr keine der zuvor angezeigten Beschreibungen entscheiden konnte, ist
+            eine manuelle Kodierung n\u00f6tig. Hierf\u00fcr werden hier weitere Details erfasst. Die Seite wird \u00fcbersprungen,
+            wenn eine Beschreibung ausgew\u00e4hlt wurde oder wenn bereits zwei Freitextfragen beantwortet wurden.")
           )
       }
     ),
@@ -249,21 +249,21 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
-          shiny::tags$p("Die zuvor ausgewählte Beschreibung erlaubt keine präzise Zuordnung in die ISCO-08 bzw. in
-          die KldB 2010 auf der höchsten Detailstufe."),
-          shiny::tags$p("Abhängig von der ausgewählten Beschreibung werden daher maximal zwei Folgefragen gestellt
-          um eine genauere Zuordnung vorzunehmen. Vier Arten von möglichen Folgefragen können unterschieden werden:"),
+          shiny::tags$p("Die zuvor ausgew\u00e4hlte Beschreibung erlaubt keine pr\u00e4zise Zuordnung in die ISCO-08 bzw. in
+          die KldB 2010 auf der h\u00f6chsten Detailstufe."),
+          shiny::tags$p("Abh\u00e4ngig von der ausgew\u00e4hlten Beschreibung werden daher maximal zwei Folgefragen gestellt
+          um eine genauere Zuordnung vorzunehmen. Vier Arten von m\u00f6glichen Folgefragen k\u00f6nnen unterschieden werden:"),
           shiny::tags$ul(
-            shiny::tags$li("Führungs- und Aufsichtstätigkeiten (ISCO: managerial and supervisory occupations)"),
+            shiny::tags$li("F\u00fchrungs- und Aufsichtst\u00e4tigkeiten (ISCO: managerial and supervisory occupations)"),
             shiny::tags$li("Anforderungsniveau (ISCO: skill level)"),
             shiny::tags$li("Berufsspezifische Spezialisierungen"),
             shiny::tags$li("Sonstige")
           ),
-          shiny::tags$p("Die beiden erstgenannten Arten (Führungs-/Aufsichtstätigkeit bzw. Anforderungsniveau) 
+          shiny::tags$p("Die beiden erstgenannten Arten (F\u00fchrungs-/Aufsichtst\u00e4tigkeit bzw. Anforderungsniveau)
             werden von vielen Befragungen bereits an anderer Stelle erhoben. Beides kann dabei auf jeweils unterschiedliche Weise
-            operationalisiert werden. Wenn solche Informationen bereits anderweitig erfasst werden, ist zu prüfen, ob man
-            die entsprechende Information hier erneut erheben oder Befragungszeit einsparen möchte und die entsprechenden
-            Folgefragen bei der Befragung auslässt.")
+            operationalisiert werden. Wenn solche Informationen bereits anderweitig erfasst werden, ist zu pr\u00fcfen, ob man
+            die entsprechende Information hier erneut erheben oder Befragungszeit einsparen m\u00f6chte und die entsprechenden
+            Folgefragen bei der Befragung ausl\u00e4sst.")
         )
       }
     ),
@@ -274,10 +274,10 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
-          shiny::tags$p("Es ist schwierig, geeignete Antworten für die Berufs-Hilfsklassifikation zu formulieren. Mithilfe eines klassischen Pretests
-            können die Antworten auch nicht getestet werden, da viele Berufe extrem selten sind und im Pretest nie vorkommen."),
-          shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tatsächlich ausgeübte Tätigkeit nur unzureichend beschreiben.
-            Wenn bei bestimmten Antworten Probleme festgestellt werden, kann eine Überarbeitung der Berufs-Hilfsklassifikation erforderlich sein.")
+          shiny::tags$p("Es ist schwierig, geeignete Antworten f\u00fcr die Berufs-Hilfsklassifikation zu formulieren. Mithilfe eines klassischen Pretests
+            k\u00f6nnen die Antworten auch nicht getestet werden, da viele Berufe extrem selten sind und im Pretest nie vorkommen."),
+          shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tats\u00e4chlich ausge\u00fcbte T\u00e4tigkeit nur unzureichend beschreiben.
+            Wenn bei bestimmten Antworten Probleme festgestellt werden, kann eine \u00dcberarbeitung der Berufs-Hilfsklassifikation erforderlich sein.")
         )
       }
     ),

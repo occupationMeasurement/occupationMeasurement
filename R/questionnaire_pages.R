@@ -626,10 +626,12 @@ page_results <- function(...) {
       if (has_suggestions) {
         selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
         selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
+      } else {
+        selected_suggestion <- NULL
       }
 
       # And whether one has been picked
-      if (nrow(selected_suggestion) > 0) {
+      if (!is.null(selected_suggestion) && nrow(selected_suggestion) > 0) {
         # Auswahl aus Hilfsklassifikation speichern, falls Folgefragen beantwortet wurden, werden KldB und ISCO nachfolgend geupdated
         res$auswahlHilfsklassifikation <- selected_suggestion$auxco_id
         res$auswahlHilfsklassifikationText <- selected_suggestion$task

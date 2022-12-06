@@ -81,13 +81,13 @@ page_first_freetext <- function(is_interview = FALSE,
       )
       # Merge with parameters from app_settings if provided
       if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
-        utils::modifyList(
+        job_suggestion_parameters <- utils::modifyList(
           job_suggestion_parameters,
           session$userData$session_settings$get_job_suggestion_params
         )
       }
       # Always use the aggregate score thrshold from the page
-      utils::modifyList(
+      job_suggestion_parameters <- utils::modifyList(
         job_suggestion_parameters,
         list(
           aggregate_score_threshold = aggregate_score_threshold
@@ -157,13 +157,13 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
       )
       # Merge with parameters from app_settings if provided
       if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
-        utils::modifyList(
+        job_suggestion_parameters <- utils::modifyList(
           job_suggestion_parameters,
           session$userData$session_settings$get_job_suggestion_params
         )
       }
       # Always use the aggregate score thrshold from the page
-      utils::modifyList(
+      job_suggestion_parameters <- utils::modifyList(
         job_suggestion_parameters,
         list(
           aggregate_score_threshold = aggregate_score_threshold

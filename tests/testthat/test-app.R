@@ -260,6 +260,22 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
   app$click(selector = "#nextButton")
   app$wait_for_js("checkForChange()") # Waiting for two changes here due to renderTable
 
+  app$run_js("document.querySelector('input').value = 'Arbeit mit Textilien'")
+  app$run_js("
+    var element = document.querySelector('input');
+    if ('createEvent' in document) {
+      var evt = document.createEvent('HTMLEvents');
+      evt.initEvent('change', false, true);
+      element.dispatchEvent(evt);
+    } else {
+      element.fireEvent('onchange');
+    }
+  ")
+  Sys.sleep(0.5)
+  app$click(selector = "#nextButton")
+
+  app$wait_for_js("checkForChange()") # Waiting for two changes here due to renderTable
+
   # Check suggestions
   app$expect_text("body")
 

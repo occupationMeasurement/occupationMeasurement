@@ -217,7 +217,7 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
                 "AuxCo_Id" = suggestions$auxco_id,
                 "Wahrscheinlichkeit" = round(suggestions$score, digits = 2),
                 "Berufsbezeichnung" = suggestions$title,
-                "T\u00e4tigkeit" = suggestions$task,
+                "Taetigkeit" = suggestions$task,
                 "Standard_KldB_Code" = suggestions$default_kldb_id,
                 "Standard_ISCO_Code" = suggestions$default_isco_id
               )

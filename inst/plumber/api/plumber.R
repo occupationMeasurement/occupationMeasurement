@@ -21,6 +21,14 @@
 #* @tag "occupationMeasurement"
 #* @get /v1/suggestions
 function(text, suggestion_type = "auxco-1.2.x", num_suggestions = 5, aggregate_score_threshold = 0.02) {
+  # Properly convert arguments types (since they are always passed as string)
+  if (!is.null(num_suggestions)) {
+    num_suggestions <- as.integer(num_suggestions)
+  }
+  if (!is.null(aggregate_score_threshold)) {
+    aggregate_score_threshold <- as.numeric(aggregate_score_threshold)
+  }
+
   suggestions <- occupationMeasurement::get_job_suggestions(
     text = text,
     suggestion_type = suggestion_type,

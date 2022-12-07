@@ -504,7 +504,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
             previous_answer <- previous_question$answers[answer_id == previous_answer_id]
 
             # Skip further answers if the previous answer is marked as finished
-            if (!is.null(previous_answer) && previous_answer$coding_is_finished) {
+            if (!is.null(previous_answer) && nrow(previous_answer) > 0 && previous_answer$coding_is_finished) {
               return(FALSE)
             }
           }

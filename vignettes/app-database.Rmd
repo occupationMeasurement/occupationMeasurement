@@ -24,7 +24,8 @@ Currently there are 4 different forms of `data` that are being handled. These ar
 2. `table_name == "results_overview"`: A combined version of the user's answers and information about the user themselves. These are saved at the end of the questionnaire and therefore only once per participation.
 3. `table_name == "occupations_suggested"`: The list of suggestions shown to the user. These are saved at the moment when suggestions are generated and therefore *typically* once per participation, but not necessarily.
 4. `table_name == "toggle_submitted"`: Information on when and which suggestions were clicked to be expanded (or closed) by a participant.
-5. Any additional tables you might choose to save yourself if you e.g. created a custom questionnaire.
+5. `table_name == "session_info"`: Useful for understanding whether some users may start multiple sessions in the app.
+6. Any additional tables you might choose to save yourself if you e.g. created a custom questionnaire.
 
 For a more detailed explanation of what data is being saved, check out the section "Data" in `vignette("app")`. The data you find in the `csv` files saved by the app corresponds to the `data` argument in `handle_data()`. It has to be noted, however, that for some tables e.g. `answers`, `handle_data()` will be called whenever a page is submitted to also capture partial data.
 

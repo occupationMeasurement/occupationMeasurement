@@ -46,7 +46,9 @@ app(
 )
 ```
 
-Moreover, you're also able to modify questionnaires or just build your own from sratch. You can read more about this functionality in `vignette("app-questionnaire")`.
+Moreover, you're also able to modify questionnaires or just build your own from scratch. You can read more about this functionality in `vignette("app-questionnaire")`.
+
+Before you dive deeper into this technical software documentation, however, we strongly recommend you try the app with the `questionnaire_demo()` first.
 
 # Alternative Usage
 

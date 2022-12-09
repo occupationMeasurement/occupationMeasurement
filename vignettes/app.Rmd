@@ -142,13 +142,6 @@ app(
     # (in case similar questions are already included in your questionnaire)
     skip_followup_types = c("anforderungsniveau", "aufsicht"),
 
-    # Find optimal balance: Should occupational descriptions be suggested
-    # for as many respondents as possible, even if
-    # the suggested occupational descriptions are likely to be incorrect?
-    get_job_suggestion_params = list(
-      score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.2)
-    )
-
     # ...
   )
 )
@@ -161,7 +154,7 @@ Some settings can also be varied between individual sessions / interviews, e.g.,
 https://{url-to-my-interactive-app}/?tense=past
 
 # Use full range of supported session parameters
-https://{url-to-my-interactive-app}/?respondent_id=<my_unique_interview_id>&tense=past&extra_instructions=off&num_suggestions=10
+https://{url-to-my-interactive-app}/?respondent_id=<your_unique_id>&tense=past&extra_instructions=off&num_suggestions=10
 ``` 
 
 Here is a list of all supported query parameters:
@@ -175,11 +168,11 @@ Most of these settings are also described in the help page `?create_app_settings
 
 ## Identifying Users
 
-If you want to match your data with an external source or embed the interactive app within another survey, you will probably want to pass a unique interview or user identifier, a `id`, also called `respondent_id`.
+If you want to match your data with an external source or embed the interactive app within another survey, you will probably want to pass a unique interview or user identifier, called the `respondent_id`.
 
-This can be done adding a query parameter named `id` to the URL, i.e., `https://{url-to-my-interactive-app}/?respondent_id=my_unique_interview_id` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and my_unique_interview_id corresponding to the unique id).
+This can be done adding a query parameter named `respondent_id` to the URL, i.e., `https://{url-to-my-interactive-app}/?respondent_id=<your_unique_id>` (with {url-to-my-interactive-app} corresponding to the URL your application is running at and <your_unique_id> corresponding to the unique id).
 
-If you want to make sure that a `id` is always supplied, you can enforce this by setting `require_respondent_id = TRUE` in the `app_settings`.
+If you want to make sure that a `respondent_id` is always supplied, you can enforce this by setting `require_respondent_id = TRUE` in the `app_settings`.
 
 # Data
 
@@ -191,7 +184,7 @@ If you plan to save data into a database, you can find a detailed explanation of
 
 ## Tables
 
-The five different kinds of data i.e. "tables" that are being saved right now are outlined below.
+The five different kinds of data, i.e. "tables", that are being saved right now are outlined below.
 
 ### answers
 
@@ -220,7 +213,7 @@ A combined version of the user's answers and information about the user themselv
 - **isco_08**: The [International Standard Classification of Occupations 2008](https://www.ilo.org/wcmsp5/groups/public/@dgreports/@dcomm/@publ/documents/publication/wcms_172572.pdf) (ISCO-08) code for this respondent.
 - **kldb_10**: The [German Klassifikation der Berufe 2010 - erste Fassung](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html) (KldB-2010) code for this respondent.
 - **respondent_id**: An external respondent_id to match data with another source of information. Only present if it is passed via the URL.
-- **P_{page_id}_Q_{item_id}_R_{id/text}**: *Two* columns for every question/item answered by the respondent. These columns correspond to the naming convention ***P_{page_id}_Q_{item_id}_R_id*** for response ids and ***P_{page_id}_Q_{item_id}_R_text*** for response texts (see the documentation for answers for additional information).
+- **P_{page_id}_Q_{item_id}_R_{id/text}**: *Two* columns for every question/item answered by the respondent. These columns correspond to the naming convention **P_{page_id}_Q_{item_id}_R_id** for response ids and **P_{page_id}_Q_{item_id}_R_text** for response texts (see the documentation for `answers` for additional information).
 
 ### occupations_suggested
 

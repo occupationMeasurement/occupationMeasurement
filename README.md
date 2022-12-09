@@ -21,7 +21,7 @@ For a detailed overview of the package refer to `vignette("occupationMeasurement
 
 ## Using the interactive App
 
-The interactive app can be started with the function `app()` function. 
+The interactive app can be started with the `app()`-function. 
 More information about the interactive app can be found in `vignette("app")` and the help page `?app`.
 
 ```r
@@ -31,12 +31,12 @@ library(occupationMeasurement)
 occupationMeasurement::app(questionnaire = questionnaire_web_survey())
 ```
 
-The app also supports custom questionnaires, so you can build your own or use and adapt one of the questionnaires included in the package. E.g., the `questionnaire_demo` will explain the functionality of the app, and `questionnaire_interviewer_administered` is designed to be read by interviewers for CATI and CAPI surveys.
+The app also supports custom questionnaires, so you can build your own or use and adapt one of the questionnaires included in the package. E.g., the `questionnaire_demo` will explain the functionality of the app, and `questionnaire_interviewer_administered` is designed to be read by interviewers in CATI and CAPI surveys.
 
 ```r
 library(occupationMeasurement)
 
-# Run the app with additional explanations
+# Run the app with additional explanations. The best way to get started.
 app(questionnaire = questionnaire_demo())
 
 # Run the app in interviewer-administered surveys

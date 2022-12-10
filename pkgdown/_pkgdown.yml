@@ -33,6 +33,7 @@ reference:
   - starts_with("page")
   - set_item_data
   - get_item_data
+  - button_next
 - title: Creating Suggestions
   desc: >
     Functions to create suggestions manually e.g. for generating suggestions

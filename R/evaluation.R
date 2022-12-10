@@ -72,6 +72,9 @@ evaluate_performance <- function(
   app_settings = create_app_settings(.validate = FALSE),
   suggestion_type_options = NULL
 ) {
+  # Column names used in data.table (for R CMD CHECK)
+  auxco_id <- ..answer_code_colname <- ..default_code_colname <- ..id_colname  <- NULL
+
   stopifnot(!is.null(test_data) && !is.null(freetext_colname) && !is.null(code_colname))
 
   # Merge

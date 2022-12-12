@@ -122,7 +122,7 @@ page_choose_one_option <- function(page_id,
       set_item_data(
         session = session,
         page_id = page$page_id,
-        response_id = response_id,
+        response_id = as.character(response_id),
         response_text = choice_labels[choice_values == response_id]
       )
 

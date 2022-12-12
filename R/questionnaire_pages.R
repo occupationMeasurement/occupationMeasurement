@@ -521,7 +521,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
       set_item_data(
         session = session,
         page_id = page$page_id,
-        question_text = paste0(question$question_text, " (", question$id, ")")
+        question_text = paste0(question$question_text, " (", question$question_id, ")")
       )
 
       answer_options_html <- lapply(question$answers$answer_text, function(txt) {

@@ -43,6 +43,9 @@ append_tables <- list(
   )
 )
 prepare_data_for_saving <- function(table_name, data) {
+  # Column names used in data.table (for R CMD CHECK)
+  question_text <- NULL
+
   # Ensure we're using data.table here.
   # Note: When using data.frames instead, once has to ensure that there are
   # no NULLs in data before conversion as converting from a list to a data.frame
@@ -54,6 +57,13 @@ prepare_data_for_saving <- function(table_name, data) {
   if (is_append_table) {
     standard_columns <- append_tables[[table_name]]
     data <- ensure_columns(data, columns = standard_columns, warn_on_extra_columns = TRUE)
+  }
+
+  # Since the column question_text typically contains HTML, we can simply all
+  # whitespace characters as they wouldn't be visible to participants either.
+  # This way the CSV is both more readable and more concise.
+  if (table_name == "answers") {
+    data[, question_text := stringr::str_squish(question_text)]
   }
 
   return(data)

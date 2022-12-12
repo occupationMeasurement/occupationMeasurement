@@ -32,7 +32,8 @@ Defaults to "kldb-2010".}
 answers to followup questions be included? See the function description for
 a detailed explanation. Setting this to \code{TRUE} most likely leads to a
 \emph{slight overestimation} of performance, setting this to \code{FALSE} most likely
-leads to a \emph{severe underestimation} of performance.}
+leads to a \emph{severe underestimation} of performance.
+This only applies if app_settings$suggestion_type is \code{TRUE}.}
 
 \item{app_settings}{The app_settings you plan to use with \code{\link[=app]{app()}}. Check the
 documentation for create_app_settings to learn about the options.

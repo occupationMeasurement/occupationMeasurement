@@ -32,6 +32,7 @@
 #'   a detailed explanation. Setting this to `TRUE` most likely leads to a
 #'   *slight overestimation* of performance, setting this to `FALSE` most likely
 #'   leads to a *severe underestimation* of performance.
+#'   This only applies if app_settings$suggestion_type is `TRUE`.
 #' @param app_settings The app_settings you plan to use with [app()]. Check the
 #'   documentation for create_app_settings to learn about the options.
 #'   Especially options related to the generation of suggestions are relevant.
@@ -73,7 +74,7 @@ evaluate_performance <- function(
   suggestion_type_options = NULL
 ) {
   # Column names used in data.table (for R CMD CHECK)
-  auxco_id <- ..answer_code_colname <- ..default_code_colname <- ..id_colname  <- NULL
+  auxco_id <- NULL
 
   stopifnot(!is.null(test_data) && !is.null(freetext_colname) && !is.null(code_colname))
 
@@ -98,6 +99,8 @@ evaluate_performance <- function(
   if (suggestion_parameters$suggestion_type == "auxco-1.2.x") {
     auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
     id_colname <- "auxco_id"
+  } else if (suggestion_parameters$suggestion_type == "kldb-2010") {
+    id_colname <- "kldb_id"
   }
 
   evaluate_single_row <- function (row) {
@@ -114,7 +117,8 @@ evaluate_performance <- function(
       default_code_colname <- paste0("default_", final_code_name)
       suggestion_codes <- auxco$categories[
         auxco_id %in% suggestions$auxco_id,
-        ..default_code_colname
+        default_code_colname,
+        with = FALSE
       ][[1]] # convert to vector
 
       # Get codes associated via followup questions
@@ -122,7 +126,8 @@ evaluate_performance <- function(
         answer_code_colname <- paste0("answer_", final_code_name)
         followup_question_codes <- auxco$followup_questions[
           auxco_id %in% suggestions$auxco_id,
-          ..answer_code_colname
+          answer_code_colname,
+          with = FALSE
         ][[1]] # convert to vector
         # Drop NAs e.g. when it's not a question answer, but just the question itself
         followup_question_codes <- followup_question_codes[
@@ -136,7 +141,8 @@ evaluate_performance <- function(
 
       # Drop duplicate codes
       suggestion_codes <- unique(suggestion_codes)
-
+    } else if (suggestion_parameters$suggestion_type == "kldb-2010") {
+      suggestion_codes <- suggestions[, id_colname, with = FALSE][[1]]
     } else {
       stop("Unsupported suggestion_type")
     }
@@ -146,7 +152,7 @@ evaluate_performance <- function(
       # Whether or not the final code is included in the suggestion
       suggestions_include_final_code = row[code_colname] %in% suggestion_codes,
       # A list of all the suggestions' codes, ordered by probability
-      suggestions_ordered = suggestions[, ..id_colname][[1]] |>
+      suggestions_ordered = suggestions[, id_colname, with = FALSE][[1]] |>
         paste(collapse = ";"),
       # How many suggestions were generated
       n_suggestions = nrow(suggestions),

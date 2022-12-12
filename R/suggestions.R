@@ -165,9 +165,9 @@ algo_similarity_based_reasoning <- function(text_processed,
 }
 
 #' Make coding suggestions based on a user's open-ended text input.
-#' 
+#'
 #' Given a `text` input, find up to `num_suggestions` possible occupation categories.
-#' 
+#'
 #' The procedure implemented here is, roughly speaking, as follows:
 #'   1. Predict categories from KldB 2010, including their scores. The first algorithm mentioned in `steps` is used (default: [algo_similarity_based_reasoning()]).
 #'   2. Convert the predicted KldB 2010 categories to `suggestion_type` (default: `auxco-1.2.x`, an n:m mapping, scores are mapped accordingly.). See internal function `convert_suggestions()` for details.
@@ -232,6 +232,10 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'     )
 #'   )
 #'   ```
+#' @param include_general_id Whether a general column, called "id" should always
+#'   be returned. This will automatically contain the appropriate id for
+#'   different suggestion_types i.e. for "auxco-1-2.x" it will contain the same
+#'   data as the column "auxco_id".
 #'
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
@@ -262,7 +266,8 @@ get_job_suggestions <- function(text,
                                       sim_name = "substring"
                                     )
                                   )
-                                )) {
+                                ),
+                                include_general_id = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   score <- NULL
 
@@ -365,6 +370,19 @@ get_job_suggestions <- function(text,
       result <- merge(result, get_suggestion_info(suggestion_ids = result$auxco_id, suggestion_type = suggestion_type), by = "auxco_id", sort = FALSE)
     } else if (suggestion_type == "kldb-2010") {
       # Do nothing, maybe add some info from kldb_10 in the future
+    }
+
+    # Always provide a column "id" with the appropriate suggested id
+    # irrespective of suggestion_type
+    if (include_general_id) {
+      if (suggestion_type == "auxco-1.2.x") {
+        id_colname <- "auxco_id"
+      } else if (suggestion_type == "kldb-2010") {
+        id_colname <- "kldb_id"
+      }
+      id_column <- result[, id_colname, with = FALSE]
+      colnames(id_column) <- "id"
+      result <- cbind(id_column, result)
     }
 
     return(result)

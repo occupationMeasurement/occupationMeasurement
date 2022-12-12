@@ -250,7 +250,14 @@ page_freetext <- function(page_id,
             } else {
               p("Keine Angabe")
             },
-            value = get_item_data(session = session, page_id = page$page_id, item_id = "no_answer", key = "response_id"),
+            # Check whether it matches our recoded value of "no_answer_checked"
+            value = get_item_data(
+              session = session,
+              page_id = page$page_id,
+              item_id = "no_answer",
+              key = "response_id",
+              default = FALSE
+            ) == "no_answer_checked",
             width = "100%"
           )
         },
@@ -267,11 +274,14 @@ page_freetext <- function(page_id,
 
       # Also record no-answer checkbox
       if (no_answer_checkbox) {
+        no_answer_checked <- if (is.null(input[[paste0(page$page_id, "_chk_no_answer")]])) FALSE else input[[paste0(page$page_id, "_chk_no_answer")]]
+
         set_item_data(
           session = session,
           page_id = page$page_id,
           item_id = "no_answer",
-          response_id = if (is.null(input[[paste0(page$page_id, "_chk_no_answer")]])) FALSE else input[[paste0(page$page_id, "_chk_no_answer")]]
+          response_id = if (no_answer_checked) "no_answer_checked" else "no_answer_unchecked",
+          response_text = if (no_answer_checked) "Keine Angabe" else ""
         )
       }
 

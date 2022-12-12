@@ -14,7 +14,8 @@ get_job_suggestions(
   distinctions = TRUE,
   steps = list(simbased_wordwise = list(algorithm = algo_similarity_based_reasoning,
     parameters = list(sim_name = "wordwise")), simbased_substring = list(algorithm =
-    algo_similarity_based_reasoning, parameters = list(sim_name = "substring")))
+    algo_similarity_based_reasoning, parameters = list(sim_name = "substring"))),
+  include_general_id = FALSE
 )
 }
 \arguments{
@@ -84,6 +85,11 @@ Defaults to:
   )
 )
 }\if{html}{\out{</div>}}}
+
+\item{include_general_id}{Whether a general column, called "id" should always
+be returned. This will automatically contain the appropriate id for
+different suggestion_types i.e. for "auxco-1-2.x" it will contain the same
+data as the column "auxco_id".}
 }
 \value{
 A data.table with suggestions or NULL if no suggestions were found.

@@ -77,7 +77,8 @@ page_first_freetext <- function(is_interview = FALSE,
       job_suggestion_parameters <- list(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
-        num_suggestions = session$userData$session_settings$num_suggestions
+        num_suggestions = session$userData$session_settings$num_suggestions,
+        include_general_id = TRUE
       )
       # Merge with parameters from app_settings if provided
       if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
@@ -153,7 +154,8 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
       job_suggestion_parameters <- list(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
-        num_suggestions = session$userData$session_settings$num_suggestions
+        num_suggestions = session$userData$session_settings$num_suggestions,
+        include_general_id = TRUE
       )
       # Merge with parameters from app_settings if provided
       if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
@@ -304,6 +306,9 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         save_data("toggle_submitted", data_to_save, session)
       })
 
+      # For saving the data later on
+      session$userData$user_info$suggestion_main_label_column <- suggestion_main_label_column
+
       return(list(
         transition_text = transition_text,
         style_is_interview = style_is_interview,
@@ -373,6 +378,9 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
       )
     },
     run_after = function(session, page, input, ...) {
+      # Column names used in data.table (for R CMD CHECK)
+      id <- NULL
+
       shown_suggestions <- rbind(session$userData$user_info$list_suggestions,
         data.frame(id = 95, score = 0, task = paste0("Oder etwas anderes?"), stringsAsFactors = FALSE),
         data.frame(id = 99, score = 0, task = paste0("*** Keine Angabe"), stringsAsFactors = FALSE),
@@ -385,14 +393,16 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         set_item_data(
           session = session,
           page_id = page$page_id,
-          response_id = "EMPTY"
+          response_id = "EMPTY",
+          response_text = ""
         )
       } else {
         # At least some option has been selected
         set_item_data(
           session = session,
           page_id = page$page_id,
-          response_id = input$question1
+          response_id = input$question1,
+          response_text = shown_suggestions[id == input$question1, session$userData$user_info$suggestion_main_label_column, with = FALSE]
         )
         if (input$question1 != "95" & input$question1 != "99") {
           # A proper suggestion has been selected

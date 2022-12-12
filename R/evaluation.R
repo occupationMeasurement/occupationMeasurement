@@ -81,6 +81,33 @@ evaluate_performance <- function(
   # Convert to data table for easier modification later on
   test_data <- test_data |>
       as.data.table()
+
+  if (!is.character(test_data[, code_colname, with = FALSE][[1]])) {
+    warning(paste(
+      "The column containing occupational classification codes should",
+      "be in character format. Please make sure you load occupation codes",
+      "as characters from the beginning, as leading zeroes might else be lost."
+    ))
+  }
+
+  # Detect any missing or empty values
+  valid_rows <- stats::complete.cases(
+    test_data[, freetext_colname, with = FALSE],
+    test_data[, code_colname, with = FALSE]
+  ) & (
+    test_data[, freetext_colname, with = FALSE][[1]] != "" &
+    test_data[, code_colname, with = FALSE][[1]] != ""
+  )
+  # Remove any invalid rows
+  if (sum(!valid_rows) > 0) {
+    test_data <- test_data[valid_rows, ]
+
+    paste(
+      "Removing N =", sum(!valid_rows), "rows due to missing / empty values."
+    ) |>
+      message()
+  }
+
   # Merge
   suggestion_parameters <- list(
     suggestion_type = app_settings$suggestion_type,

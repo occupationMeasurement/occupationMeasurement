@@ -74,10 +74,13 @@ evaluate_performance <- function(
   suggestion_type_options = NULL
 ) {
   # Column names used in data.table (for R CMD CHECK)
-  auxco_id <- NULL
+  auxco_id <- score <- NULL
 
   stopifnot(!is.null(test_data) && !is.null(freetext_colname) && !is.null(code_colname))
 
+  # Convert to data table for easier modification later on
+  test_data <- test_data |>
+      as.data.table()
   # Merge
   suggestion_parameters <- list(
     suggestion_type = app_settings$suggestion_type,
@@ -154,6 +157,11 @@ evaluate_performance <- function(
       # A list of all the suggestions' codes, ordered by probability
       suggestions_ordered = suggestions[, id_colname, with = FALSE][[1]] |>
         paste(collapse = ";"),
+      # An ordered list of the suggestions' scores / probabilities
+      suggestions_scores_ordered = suggestions[, score] |>
+        paste(collapse = ";"),
+      # The sum of the suggestions' scores for this prompt
+      suggestions_scores_sum = suggestions[, score] |> sum(),
       # How many suggestions were generated
       n_suggestions = nrow(suggestions),
       # A list of all the associated final codes matching the code_format
@@ -170,8 +178,7 @@ evaluate_performance <- function(
 
   # Generate suggestions and summarise their information into one row
   evaluation_list <- apply(
-    X = test_data |>
-      as.data.table(),
+    X = test_data,
     MARGIN = 1,
     FUN = evaluate_single_row
   )

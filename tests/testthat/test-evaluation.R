@@ -21,7 +21,7 @@ test_that("Performance evaluation works as expected", {
 
   # Check whether both parts of the evaluation result are unchanged
   expect_snapshot_value(evaluation_result$scores, tolerance = 0.001)
-  expect_snapshot_value(evaluation_result$data, style = "json2")
+  expect_snapshot_value(evaluation_result$data |> as.data.frame(), style = "json2")
   # Note: We could also test against a snapshot of the message,
   # but it seems overkill since we capture all the underlying metrics
 })
@@ -53,7 +53,7 @@ test_that("Performance evaluation works with KldB-2010 Suggestions", {
 
   # Check whether both parts of the evaluation result are unchanged
   expect_snapshot_value(evaluation_result$scores, tolerance = 0.001)
-  expect_snapshot_value(evaluation_result$data, style = "json2")
+  expect_snapshot_value(evaluation_result$data |> as.data.frame(), style = "json2")
   # Note: We could also test against a snapshot of the message,
   # but it seems overkill since we capture all the underlying metrics
 })

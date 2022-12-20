@@ -103,7 +103,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": [null, null, null, null, null]
+          "value": ["Köche/Köchinnen (ohne Spezialisierung)", "Speisenzubereitung (Führungskraft)", "Speisenzubereitung (Führungskraft)", "Köche/Köchinnen (ohne Spezialisierung)", "Hochbau (ohne Spezialisierung)"]
         },
         {
           "type": "character",

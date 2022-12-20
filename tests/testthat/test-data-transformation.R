@@ -2,7 +2,7 @@ testthat::test_that("data is transformed correctly", {
   questionnaire_data <- list(
     welcome = list(
       page_id = "welcome",
-      user_id = NA,
+      respondent_id = NA,
       session_id = "NA_1660052665_9",
       status = "new",
       start = "2022-08-09 15:44:25",
@@ -11,7 +11,7 @@ testthat::test_that("data is transformed correctly", {
     ),
     freetext_1 = list(
       page_id = "freetext_1",
-      user_id = NA,
+      respondent_id = NA,
       session_id = "NA_1660052665_9",
       status = "new",
       start = "2022-08-09 15:44:26",
@@ -29,7 +29,7 @@ testthat::test_that("data is transformed correctly", {
     ),
     select_suggestion = list(
       page_id = "select_suggestion",
-      user_id = NA,
+      respondent_id = NA,
       session_id = "NA_1660052665_9",
       status = "new",
       start = "2022-08-09 15:44:28",
@@ -46,18 +46,32 @@ testthat::test_that("data is transformed correctly", {
       ),
       end = "2022-08-09 15:44:30"
     ),
-    final = list(
-      page_id = "final",
-      user_id = NA,
+    example = list(
+      page_id = "example",
+      respondent_id = NA,
       session_id = "NA_1660052665_9",
       status = "old",
+      start = "2022-08-09 15:44:30",
+      questions = list(
+        default = list(
+          question_text = "Some question text",
+          response_text = "koch",
+          response_id = "1234"
+        )
+      )
+    ),
+    final = list(
+      page_id = "final",
+      respondent_id = NA,
+      session_id = "NA_1660052665_9",
+      status = "new",
       start = "2022-08-09 15:44:30",
       questions = list()
     )
   )
 
   expected_output <- data.table(
-    user_id = NA,
+    respondent_id = NA,
     session_id = "NA_1660052665_9",
     P_welcome_Q_NA_R_id = NA_character_,
     P_welcome_Q_NA_R_text = NA_character_,
@@ -71,7 +85,7 @@ testthat::test_that("data is transformed correctly", {
     P_select_suggestion_Q_text_none_selected_R_text = NA_character_,
     P_final_Q_NA_R_id = NA_character_,
     P_final_Q_NA_R_text = NA_character_,
-    key = c("user_id", "session_id")
+    key = c("respondent_id", "session_id")
   )
 
   testthat::expect_equal(
@@ -79,5 +93,40 @@ testthat::test_that("data is transformed correctly", {
       questionnaire_data = questionnaire_data
     ),
     expected_output
+  )
+})
+
+testthat::test_that("extract_questions_wide is robust", {
+  testthat::expect_equal(
+    extract_questions_wide(questionnaire_data = NULL),
+    data.table()
+  )
+
+  testthat::expect_equal(
+    extract_questions_wide(questionnaire_data = list()),
+    data.table()
+  )
+
+  testthat::expect_equal(
+    extract_questions_wide(
+      questionnaire_data =  list(
+        welcome = list(
+          page_id = "test",
+          respondent_id = "test_123",
+          session_id = "NA_1660052665_9",
+          status = "new",
+          start = "2022-08-09 15:44:25",
+          questions = list(),
+          end = "2022-08-09 15:44:26"
+        )
+      )
+    ),
+    data.table(
+      respondent_id = "test_123",
+      session_id = "NA_1660052665_9",
+      P_test_Q_NA_R_id = NA_character_,
+      P_test_Q_NA_R_text = NA_character_,
+      key = c("respondent_id", "session_id")
+    )
   )
 })

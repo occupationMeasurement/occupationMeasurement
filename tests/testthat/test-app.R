@@ -69,14 +69,16 @@ test_that("E2E: test case Koch", {
   response_dir <- withr::local_tempdir()
 
   app_settings <- create_app_settings(
-    require_id = TRUE,
+    require_respondent_id = TRUE,
     save_to_file = TRUE,
     response_output_dir = response_dir
   )
 
   app <- AppDriver$new(
     app_dir = app(
-      questionnaire = questionnaire_demo(),
+      questionnaire = questionnaire_demo(
+        show_feedback_page = FALSE
+      ),
       app_settings = app_settings
     ),
     name = "test_1_koch",
@@ -92,7 +94,7 @@ test_that("E2E: test case Koch", {
   }
 
   # Go to example URL
-  app$run_js("window.location.href = '/?id=test123&tense=present&extra_instructions=on&id=0&study_id=Test&show_results'")
+  app$run_js("window.location.href = '/?respondent_id=test123&tense=present&extra_instructions=on&study_id=Test'")
   Sys.sleep(wait_time)
 
   setup_wait_for_change(app)
@@ -196,22 +198,20 @@ test_that("E2E: test case Koch", {
     overview_data,
     data.table::data.table(
       session_id = overview_data$session_id,
-      url_search = "?id=test123&tense=present&extra_instructions=on&id=0&study_id=Test&show_results",
+      url_search = "?respondent_id=test123&tense=present&extra_instructions=on&study_id=Test",
       isco_08 = "9411",
       kldb_10 = "63312",
-      user_id = "test123",
+      respondent_id = "test123",
       P_welcome_Q_NA_R_id = "",
       P_welcome_Q_NA_R_text = "",
       P_freetext_1_Q_default_R_id = "",
       P_freetext_1_Q_default_R_text = "Koch",
-      P_freetext_1_Q_no_answer_R_id = "FALSE",
+      P_freetext_1_Q_no_answer_R_id = "no_answer_unchecked",
       P_freetext_1_Q_no_answer_R_text = "",
       P_select_suggestion_Q_default_R_id = "9079",
-      P_select_suggestion_Q_default_R_text = "",
+      P_select_suggestion_Q_default_R_text = "Zubereitung von Speisen in Restaurants, Hotels und sonstigen gastronomischen Einrichtungen",
       P_followup_1_Q_default_R_id = "1",
-      P_followup_1_Q_default_R_text = "nur einfache Speisen zum Sofortverkauf in Fast-Food-Restaurants",
-      P_results_Q_NA_R_id = "",
-      P_results_Q_NA_R_text = ""
+      P_followup_1_Q_default_R_text = "nur einfache Speisen zum Sofortverkauf in Fast-Food-Restaurants"
     )
   )
 })
@@ -225,7 +225,9 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
         # Don't write data from test to disk
         save_to_file = FALSE
       ),
-      questionnaire = questionnaire_interviewer_administerd()
+      questionnaire = questionnaire_interviewer_administered(
+        show_feedback_page = FALSE
+      )
     ),
     name = "test_2_textiltechniker",
     height = 741,
@@ -239,10 +241,6 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
   # app$view()
 
   setup_wait_for_change(app)
-
-  # Navigate beyond welcome page
-  app$click(selector = "#nextButton")
-  app$wait_for_js("checkForChange()")
 
   # Answer the freetext question
   app$run_js("document.querySelector('input').value = 'Textiltechniker'")
@@ -258,6 +256,22 @@ test_that("Followup questions are correctly skipped: ESE test case Textiltechnik
   ")
   Sys.sleep(0.5)
   app$click(selector = "#nextButton")
+  app$wait_for_js("checkForChange()") # Waiting for two changes here due to renderTable
+
+  app$run_js("document.querySelector('input').value = 'Arbeit mit Textilien'")
+  app$run_js("
+    var element = document.querySelector('input');
+    if ('createEvent' in document) {
+      var evt = document.createEvent('HTMLEvents');
+      evt.initEvent('change', false, true);
+      element.dispatchEvent(evt);
+    } else {
+      element.fireEvent('onchange');
+    }
+  ")
+  Sys.sleep(0.5)
+  app$click(selector = "#nextButton")
+
   app$wait_for_js("checkForChange()") # Waiting for two changes here due to renderTable
 
   # Check suggestions

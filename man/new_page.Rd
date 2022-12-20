@@ -65,8 +65,10 @@ Only if this evaluated to \code{TRUE}, continue.
 The outputs from \code{render_before}, \code{render} & \code{render_after} are
 stitched together to produce the final HTML output of the page.
 \item \code{run_after} (\code{session}, \code{input}, \code{output})
-Run when the user leaves the page. Any user input has to be
-handled here.
+Run when the user leaves the page (=clicks the next button). Any
+user input has to be handled here. For each question asked, one will
+typically call \code{\link[=set_item_data]{set_item_data()}} to save the collected data
+internally.
 }
 
 Each of the life-cycle functions above is annotated with the
@@ -75,17 +77,90 @@ passed directly from shiny and correspond to the objects made available by
 \code{\link[shiny:shinyServer]{shiny::shinyServer()}}, \code{run_before_output} is available for convenience and
 corresponds to whatever is returned by \code{run_before}.
 
+Some side-effects occur:
+\itemize{
+\item \code{occupationMeasurement:::init_page_data} is called before 1. \code{run_before}.
+It sets up an internal representation of the page data to be saved.
+\item \code{occupationMeasurement:::finalize_data} is called before 6. \code{run_before}.
+\item \code{occupationMeasurement:::save_page_data} is called after 6. \code{run_before}.
+It saves the responses on a hard drive, i.e. it appends the responses
+from this page to \code{table_name == "answers"}. See the vignette
+and \code{\link[=create_app_settings]{create_app_settings()}} for details.
+}
+
 Use of \code{render_before}, \code{render_after} is discouraged if not necessary,
 as these two life-cycle functions have only been added to allow for easier
 modification and extension of existing pages.
 }
 \examples{
-one_page_questionnaire <- list(
-  new_page(
-    page_id = "example",
-    render = function(session, run_before_output, input, output, ...) {
-      shiny::tags$h1("My test page")
-    }
-  )
+very_simple_page <- new_page(
+  page_id = "example",
+  render = function(session, run_before_output, input, output, ...) {
+    list(
+      shiny::tags$h1("My test page"),
+      button_previous(),
+      button_next()
+    )
+  }
 )
+
+# Example where we also save some data
+page_that_saves_two_items <- new_page(
+  page_id = "questions_1_and_2",
+  render = function(session, run_before_output, page, input, output, ...) {
+    list(
+      shiny::tags$h1("Questions"),
+      shiny::textAreaInput(
+        inputId = "day_freetext",
+        label = "How was your day? Please give a detailed answer.",
+        value = get_item_data(
+          session = session, page_id = page$page_id,
+          item_id = "day_freetext",
+          key = "response_text"
+        )
+      ),
+      shiny::tags$p("How would you rate your day? On a scale of 1 - 4"),
+      radioButtons(
+        inputId = "day_radio",
+        label = NULL,
+        width = "100\%",
+        choices = list(One = 1, Two = 2, Three = 3, Four = 4),
+        selected = get_item_data(
+          session = session,
+          page_id = page$page_id,
+          item_id = "day_radio",
+          key = "response_id",
+          default = character(0)
+        )
+      ),
+      button_previous(),
+      button_next()
+    )
+  },
+  run_after = function(session, page, input, ...) {
+    set_item_data(
+      session = session,
+      page_id = page$page_id,
+      item_id = "day_freetext",
+      response_text = input$day_freetext
+    )
+    set_item_data(
+      session = session,
+      page_id = page$page_id,
+      item_id = "day_radio",
+      response_id = input$day_radio
+    )
+  }
+)
+
+questionnaire_that_saves_two_items <- list(
+  page_that_saves_two_items,
+  # So we have a next page to go to
+  very_simple_page
+)
+
+\dontrun{
+  app(questionnaire = questionnaire_that_saves_two_items)
+}
+
 }

@@ -24,7 +24,7 @@ if no key is provided.
 }
 \description{
 Note that page data is \emph{not} automatically saved and you probably want
-to use page$get_question_data instead.
+to use page$get_item_data instead.
 }
 \examples{
 \dontrun{
@@ -33,6 +33,6 @@ get_page_data(session = session, key = "user_answer")
 }
 }
 \seealso{
-\code{\link[=get_question_data]{get_question_data()}}
+\code{\link[=get_item_data]{get_item_data()}}
 }
 \keyword{internal}

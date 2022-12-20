@@ -4,12 +4,20 @@
 \alias{page_first_freetext}
 \title{The first freetext question to show.}
 \usage{
-page_first_freetext(is_interview = FALSE, ...)
+page_first_freetext(
+  is_interview = FALSE,
+  aggregate_score_threshold = 0.535,
+  ...
+)
 }
 \arguments{
 \item{is_interview}{Should the page show slightly different / additional
 instructions and answer options for an interview that is conducted by
 another person? Defaults to FALSE.}
+
+\item{aggregate_score_threshold}{The total sum of the scores of the
+suggestions has to be higher than this threshold for suggestions to be
+shown. The parameter is passed on to \code{\link[=get_job_suggestions]{get_job_suggestions()}}.}
 
 \item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
@@ -17,7 +25,8 @@ another person? Defaults to FALSE.}
 A page object.
 }
 \description{
-Here, the description of the job can be entered in an open freetext field.
+Here, the description of the job can be entered in an open freetext field
+and suggestions will be generated based on the input.
 }
 \seealso{
 \code{\link[=new_page]{new_page()}}

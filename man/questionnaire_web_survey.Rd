@@ -4,14 +4,18 @@
 \alias{questionnaire_web_survey}
 \title{A web survey which participants can navigate themselves.}
 \usage{
-questionnaire_web_survey()
+questionnaire_web_survey(show_feedback_page = TRUE)
+}
+\arguments{
+\item{show_feedback_page}{Show the \code{\link[=page_feedback]{page_feedback()}} to evaluate the fit of
+the chosen suggestion.}
 }
 \value{
-A questionnaire for \code{\link[=app]{app()}} i.e. a list of pages.
+A questionnaire for \code{\link[=app]{app()}}, i.e. a list of pages.
 }
 \description{
 The basic default questionnaire. View the function's code to see the
-used pages.
+used pages. This function is meant as a template that can be changed to meet your requirements.
 }
 \examples{
 library(occupationMeasurement)

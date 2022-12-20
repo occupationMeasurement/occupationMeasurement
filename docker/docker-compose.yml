@@ -1,14 +1,14 @@
 version: '3.3'
 services:
   api:
-    image: occupation_measurement/api
+    image: occupationmeasurement/api
     build:
       context: ./
       dockerfile: ./api/Dockerfile
     ports:
       - "8000:8000"
   app:
-    image: occupation_measurement/app
+    image: occupationmeasurement/app
     build:
       context: ./
       dockerfile: ./app/Dockerfile

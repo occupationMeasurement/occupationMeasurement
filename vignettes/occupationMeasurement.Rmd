@@ -35,7 +35,7 @@ occupationMeasurement::app()
 
 ## Different Questionnaires
 
-You're of course also not limited to using the app only with its default questionnaire. Indeed you can use any one of the ready-built questionnaires that come with the app, such as `questionnaire_web_survey()` (the default),`questionnaire_demo()` (to learn about the workings of the tool) or `questionnaire_interviewer_administerd()` (for guided interviews with a professional interviewer).
+You're of course also not limited to using the app only with its default questionnaire. Indeed you can use any one of the ready-built questionnaires that come with the app, such as `questionnaire_web_survey()` (the default),`questionnaire_demo()` (to learn about the workings of the tool) or `questionnaire_interviewer_administered()` (for guided interviews with a professional interviewer).
 
 ```{r eval=FALSE}
 library(occupationMeasurement)
@@ -46,7 +46,9 @@ app(
 )
 ```
 
-Moreover, you're also able to modify questionnaires or just build your own from sratch. You can read more about this functionality in `vignette("app-questionnaire")`.
+Moreover, you're also able to modify questionnaires or just build your own from scratch. You can read more about this functionality in `vignette("app-questionnaire")`.
+
+Before you dive deeper into this technical software documentation, however, we strongly recommend you try the app with the `questionnaire_demo()` first.
 
 # Alternative Usage
 

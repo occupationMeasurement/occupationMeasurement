@@ -6,6 +6,10 @@
   color: #005f00;
 }
 
+.read-on-demand-icon {
+  color:#0d1382;
+}
+
 .secondary {
   opacity: 0.7;
 }
@@ -25,10 +29,25 @@ h6 {
   line-height: 1.5;
 }
 
-p {
+body {
   font-size: 16px;
 }
 
 .question {
   padding-bottom: 2rem;
+}
+
+.page-id {
+  opacity: 0.3;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.demo-text::before {
+  display: block;
+  content: ' ';
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  border-top: 1px solid lightgray;
 }

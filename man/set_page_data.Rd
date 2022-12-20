@@ -15,7 +15,7 @@ Values are added / overwritten based on the names provided in the list.}
 \description{
 Data is automatically linked to a page's page_id.
 Note that page data is \emph{not} automatically saved and you probably want
-to use set_question_data instead.
+to use set_item_data instead.
 }
 \examples{
 \dontrun{
@@ -26,6 +26,6 @@ set_page_data(session = session, page_id = "example", values = list(
 }
 }
 \seealso{
-\code{\link[=set_question_data]{set_question_data()}}
+\code{\link[=set_item_data]{set_item_data()}}
 }
 \keyword{internal}

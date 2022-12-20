@@ -27,13 +27,15 @@ occupationMeasurement::api()
 
 The API is designed to allow for similar usage as the interactive application, but implementing the UI and its logic has to be done manually. It is recommended to use the same text prompts as the shiny application (`app()`) for consistency.
 
-The typical workflow for using the API is as follows:
+A typical workflow for using the API is as follows:
 
 1. Obtain a freetext response from the participant describing their occupation and its tasks.
 2. Send this freetext response to `/v1/suggestions` to get a list of suggested categories.
 3. Present this list to the participant for them choose an option. (There should always be the option of indicating that none of the suggested categories fit.)
-4. If the suggested category has followup questions, retrieve the next followup question from `/v1/next_followup_question` and present it to the user.
+4. If the suggested category has followup questions, retrieve the next followup question from `/v1/next_followup_question` and present it to the user. (It is technically possible to skip this step, but the quality of the final codings would diminish.)
 5. Use the code from the picked suggested category alongside the responses to the followup questions to get the final occupation category codes from `/v1/final_codes`.
+
+This is the simplest workflow possible; explore the app for our recommended, more respondent-oriented workflows.
 
 Each of the API endpoints comes with a set of options / parameters which are described in the API's documentation. The API documentation is automatically available when starting the API, comes with the option to test out endpoints and provides example code on how to query the API.
 
@@ -102,11 +104,11 @@ For inspiration on how to implement the *user-facing* flow of an application usi
 
 The API comes with a pre-built Docker image for easy deployment on a server, your own computer or the cloud. If you wish to deploy the API without using docker, information on how to deploy a [plumber](https://www.rplumber.io) API can be found [here](https://www.rplumber.io/articles/hosting.html).
 
-> Note that the `api()` function, will by default immediately start the API instead of returning a plumber instance. If you want to have access to the plumber instance for additional control during deployment, you can get it by calling the API via `api(start = FALSE)`.
+> Note that the `api()` function will, by default, immediately start the API instead of returning a plumber instance. If you want to have access to the plumber instance for additional control during deployment, you can get it by calling the API via `api(start = FALSE)`.
 
 ### Using Docker 🐳
 
-For easy deployment of the app, the package comes with a pre-built docker image called `occupation_measurement/api`.
+For easy deployment of the app, the package comes with a pre-built docker image called [`ghcr.io/occupationmeasurement/api`](https://github.com/orgs/occupationMeasurement/packages/container/package/api).
 
 To test this image on your local machine you can run the following command in your command line (this assumses you have Docker installed):
 
@@ -114,6 +116,7 @@ To test this image on your local machine you can run the following command in yo
 # Start the api
 # it can be reached at http://localhost:8000
 # Swagger documentation can be viewed at http://localhost:8000/__docs__/
+docker run --rm -p 8000:8000 -v $(pwd)/output:/output -e ALLOW_ORIGIN="*" -e REQUIRE_IDENTIFIER=TRUE ghcr.io/occupationmeasurement/api:latest
 ```
 
 For more detailed information on the docker images if you e.g. want to build your own refer to the [docker directory](https://github.com/occupationMeasurement/occupationMeasurement/tree/main/docker) in the repository.

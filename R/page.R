@@ -14,14 +14,25 @@
 #'       The outputs from `render_before`, `render` & `render_after` are
 #'       stitched together to produce the final HTML output of the page.
 #'   6. `run_after` (`session`, `input`, `output`)
-#'       Run when the user leaves the page. Any user input has to be
-#'       handled here.
+#'       Run when the user leaves the page (=clicks the next button). Any
+#'       user input has to be handled here. For each question asked, one will
+#'       typically call [set_item_data()] to save the collected data
+#'       internally.
 #'
 #' Each of the life-cycle functions above is annotated with the
 #' paramaters it has access to. `session`, `input` and `output` are
 #' passed directly from shiny and correspond to the objects made available by
 #' [shiny::shinyServer()], `run_before_output` is available for convenience and
 #' corresponds to whatever is returned by `run_before`.
+#'
+#' Some side-effects occur:
+#' - `occupationMeasurement:::init_page_data` is called before 1. `run_before`.
+#'   It sets up an internal representation of the page data to be saved.
+#' - `occupationMeasurement:::finalize_data` is called before 6. `run_before`.
+#' - `occupationMeasurement:::save_page_data` is called after 6. `run_before`.
+#'   It saves the responses on a hard drive, i.e. it appends the responses
+#'   from this page to `table_name == "answers"`. See the vignette
+#'   and [create_app_settings()] for details.
 #'
 #' Use of `render_before`, `render_after` is discouraged if not necessary,
 #' as these two life-cycle functions have only been added to allow for easier
@@ -56,14 +67,76 @@
 #' @export
 #'
 #' @examples
-#' one_page_questionnaire <- list(
-#'   new_page(
-#'     page_id = "example",
-#'     render = function(session, run_before_output, input, output, ...) {
-#'       shiny::tags$h1("My test page")
-#'     }
-#'   )
+#' very_simple_page <- new_page(
+#'   page_id = "example",
+#'   render = function(session, run_before_output, input, output, ...) {
+#'     list(
+#'       shiny::tags$h1("My test page"),
+#'       button_previous(),
+#'       button_next()
+#'     )
+#'   }
 #' )
+#'
+#' # Example where we also save some data
+#' page_that_saves_two_items <- new_page(
+#'   page_id = "questions_1_and_2",
+#'   render = function(session, run_before_output, page, input, output, ...) {
+#'     list(
+#'       shiny::tags$h1("Questions"),
+#'       shiny::textAreaInput(
+#'         inputId = "day_freetext",
+#'         label = "How was your day? Please give a detailed answer.",
+#'         value = get_item_data(
+#'           session = session, page_id = page$page_id,
+#'           item_id = "day_freetext",
+#'           key = "response_text"
+#'         )
+#'       ),
+#'       shiny::tags$p("How would you rate your day? On a scale of 1 - 4"),
+#'       radioButtons(
+#'         inputId = "day_radio",
+#'         label = NULL,
+#'         width = "100%",
+#'         choices = list(One = 1, Two = 2, Three = 3, Four = 4),
+#'         selected = get_item_data(
+#'           session = session,
+#'           page_id = page$page_id,
+#'           item_id = "day_radio",
+#'           key = "response_id",
+#'           default = character(0)
+#'         )
+#'       ),
+#'       button_previous(),
+#'       button_next()
+#'     )
+#'   },
+#'   run_after = function(session, page, input, ...) {
+#'     set_item_data(
+#'       session = session,
+#'       page_id = page$page_id,
+#'       item_id = "day_freetext",
+#'       response_text = input$day_freetext
+#'     )
+#'     set_item_data(
+#'       session = session,
+#'       page_id = page$page_id,
+#'       item_id = "day_radio",
+#'       response_id = input$day_radio
+#'     )
+#'   }
+#' )
+#'
+#' questionnaire_that_saves_two_items <- list(
+#'   page_that_saves_two_items,
+#'   # So we have a next page to go to
+#'   very_simple_page
+#' )
+#'
+#' \dontrun{
+#'   app(questionnaire = questionnaire_that_saves_two_items)
+#' }
+#'
 new_page <- function(page_id, render, condition = NULL, run_before = NULL, render_before = NULL, render_after = NULL, run_after = NULL) {
   page <- list(
     # A unique string identifiying this page. Used to store data.
@@ -93,8 +166,19 @@ new_page <- function(page_id, render, condition = NULL, run_before = NULL, rende
 #' @param ... All additional arguments are passed along
 #' @keywords internal
 check_condition <- function(page, session, ...) {
+  if (session$userData$app_settings$verbose) {
+    cat("Check Condition:", page$page_id, "\n")
+  }
+
   if (!is.null(page$condition)) {
-    return(page$condition(session = session, page = page, ...))
+    condition_result <- page$condition(session = session, page = page, ...) |>
+      as.logical()
+    return(
+      # Treat empty vector (i.e. of length 0) as FALSE
+      length(condition_result) > 0 &&
+      # Use the result itself
+      condition_result
+    )
   } else {
     return(TRUE)
   }
@@ -107,7 +191,7 @@ check_condition <- function(page, session, ...) {
 #' @keywords internal
 execute_run_before <- function(page, session, input, output, ...) {
   if (session$userData$app_settings$verbose) {
-    cat("Page:", page$page_id, "\n")
+    cat("Show Page:", page$page_id, "\n")
   }
 
   # Initialize trial data e.g. set first timestamp, set ids etc.
@@ -126,6 +210,10 @@ execute_run_before <- function(page, session, input, output, ...) {
 execute_render <- function(page, session, run_before_output, ...) {
   return(
     list(
+      # If specified, add the page_id
+      if (session$userData$app_settings$display_page_ids) shiny::tags$div(class = "page-id", page$page_id),
+
+      # Combine output from page rendering functions
       if (!is.null(page$render_before)) page$render_before(session = session, page = page, run_before_output = run_before_output, ...),
       page$render(session = session, page = page, run_before_output = run_before_output, ...),
       if (!is.null(page$render_after)) page$render_after(session = session, page = page, run_before_output = run_before_output, ...)
@@ -133,7 +221,7 @@ execute_render <- function(page, session, run_before_output, ...) {
   )
 }
 
-#' Called internally by the shiny server.
+#' Called internally by the shiny server when navigating to the next page.
 #'
 #' @param session The shiny session
 #' @param input The shiny input
@@ -141,7 +229,7 @@ execute_render <- function(page, session, run_before_output, ...) {
 #' @keywords internal
 execute_run_after <- function(page, session, input, output, ...) {
   # Finalize the trial data e.g. set the final timestamp
-  finalize_data(session = session, page_id = page$page_id)
+  finalize_data(session = session, page_id = page$page_id, forward = TRUE)
 
   if (!is.null(page$run_after)) {
     page$run_after(session = session, page = page, input = input, output = output, ...)
@@ -163,17 +251,28 @@ execute_run_after <- function(page, session, input, output, ...) {
   }
 }
 
+#' Called internally by the shiny server when navigating to the previous page.
+#'
+#' @param session The shiny session
+#' @param input The shiny input
+#' @param ... All additional arguments are passed along
+#' @keywords internal
+leaving_page_backwards <- function(page, session, input, output, ...) {
+  # Finalize the trial data, but don't mark data as new
+  finalize_data(session = session, page_id = page$page_id, forward = FALSE)
+}
+
 #' Set some values in the page/questionnaire data in the current session.
 #'
 #' Data is automatically linked to a page's page_id.
 #' Note that page data is *not* automatically saved and you probably want
-#' to use set_question_data instead.
+#' to use set_item_data instead.
 #'
 #' @param session The shiny session
 #' @param values A named list of values to add / overwrite in the page data.
 #'   Values are added / overwritten based on the names provided in the list.
 #'
-#' @seealso [set_question_data()]
+#' @seealso [set_item_data()]
 #' @keywords internal
 #'
 #' @examples
@@ -194,7 +293,7 @@ set_page_data <- function(session, page_id, values) {
 #' Get questionnaire / page data.
 #'
 #' Note that page data is *not* automatically saved and you probably want
-#' to use page$get_question_data instead.
+#' to use page$get_item_data instead.
 #'
 #' @param session The shiny session
 #' @param key The key for which to retrieve a value. (Optional)
@@ -207,7 +306,7 @@ set_page_data <- function(session, page_id, values) {
 #' @return The page data value at the provided key or the whole page's data
 #'   if no key is provided.
 #'
-#' @seealso [get_question_data()]
+#' @seealso [get_item_data()]
 #' @keywords internal
 #'
 #' @examples
@@ -234,42 +333,47 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
   }
 }
 
-#' Set / save data for a question.
+#' Set / save data for an item.
 #'
-#' Question data is automatically saved.
-#' There can be multiple questions on any given page.
+#' There can be multiple items on any given page. Items can be different
+#' questions, or multiple variables that need to be saved from a single
+#' question. The `question_text` is typically
+#' saved in `run_before` and the reply (`response_text` and/or `response_id`) is
+#' typically saved in `run_after`.
 #'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
-#'   Defaults to the page where data the function is being called from.
-#' @param question_id The question for which to retrieve data.
-#'   This *has* to be different for different questions on the same page.
-#'   Defaults to the page_id.
+#' @param item_id The item for which to set/update data.
+#'   This *has* to be different for different items on the same page.
+#'   Since most pages contain only a single question/item, `item_id` is set to "default" if missing.
 #' @param question_text The question's text. (optional)
 #' @param response_text The user's response in text form. (optional)
 #' @param response_id The user's response as an id from a set of choices.
 #'   (optional)
 #'
 #' @export
-#' @seealso [get_question_data()]
+#' @seealso [get_item_data()]
 #'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' set_question_data(
+#' set_item_data(
 #'   session = session,
 #'   page_id = "example",
 #'   question_text = "How are you?"
 #' )
-#' set_question_data(
+#'
+#' # This code is expected to be run in e.g. run_after
+#' set_item_data(
 #'   session = session,
 #'   page_id = "example",
-#'   response_text = "I'm doing great!"
+#'   response_id = 3,
+#'   response_text = "I'm doing great! (response_id = 3)"
 #' )
 #' }
-set_question_data <- function(session, page_id, question_id = NULL, question_text = NULL, response_text = NULL, response_id = NULL) {
-  if (is.null(question_id)) {
-    question_id <- "default"
+set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL, response_text = NULL, response_id = NULL) {
+  if (is.null(item_id)) {
+    item_id <- "default"
   }
   # TODO: Maybe find a more elegant solution
 
@@ -281,18 +385,22 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
     key = "questions",
     default = list()
   )
-  question <- if (!is.null(questions[[question_id]])) questions[[question_id]] else list()
+  question <- if (!is.null(questions[[item_id]])) questions[[item_id]] else list()
 
   # Update supported fields on the question if they are not NULL
   supported_fields <- c("question_text", "response_text", "response_id")
   for (field in supported_fields) {
     value <- get(field)
+    # Convert lists to character (e.g. lists may be passed from shiny HTML)
+    if (is.list(value)) {
+      value <- as.character(value)
+    }
     if (!is.null(value)) {
       question[[field]] <- value
     }
   }
 
-  questions[[question_id]] <- question
+  questions[[item_id]] <- question
 
   # Set the questions data on the page again
   set_page_data(
@@ -302,48 +410,64 @@ set_question_data <- function(session, page_id, question_id = NULL, question_tex
   )
 }
 
-#' Retrieve data for a question.
+#' Retrieve data for an item.
 #'
-#' Each page in the questionnaire can have multiple questions on it.
+#' Each page in the questionnaire can have multiple items on it.
 #'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
-#'   Defaults to the page where data the function is being called from.
-#' @param question_id The question for which to retrieve data.
-#'   This *has* to be different for different questions on the same page.
-#'   Defaults to the page_id.
+#' @param item_id The item for which to retrieve data.
+#'   This *has* to be different for different items on the same page.
+#'   Since most pages contain only a single question/item, `item_id` is set to "default" if missing.
 #' @param key The key for which to retrieve a value. (Optional)
-#'   If no key is provided, the page's whole data will be returned.
+#'   If no key is provided, the items's whole data will be returned.
 #' @param default A default value to return if the key or page is not
 #'   present in the questionnaire data.
 #'
-#' @return The question's data.
+#' @return The items's data.
 #' @export
-#' @seealso [set_question_data()]
+#' @seealso [set_item_data()]
 #'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' get_question_data(
+#' get_item_data(
 #'   session = session,
 #'   page_id = "example",
 #'   key = "response_text",
 #'   default = "alright"
 #' )
 #' }
-get_question_data <- function(session, page_id, question_id = NULL, key = NULL, default = NULL) {
-  if (is.null(question_id)) {
-    question_id <- "default"
+get_item_data <- function(session, page_id, item_id = NULL, key = c("all", "question_text", "response_text", "response_id"), default = NULL) {
+  if (is.null(item_id)) {
+    item_id <- "default"
   }
+  key <- match.arg(key)
+
+  # When retrieving data for a different page, we have to check whether the data
+  # is still fresh i.e. not marked as "old" from going back, else we return the
+  # default value.
+  if (page_id != session$userData$current_page_id) {
+    status <- get_page_data(
+      session = session,
+      page_id = page_id,
+      key = "status",
+      default = "new"
+    )
+    if (status == "old") {
+      return(default)
+    }
+  }
+
   questions <- get_page_data(
     session = session,
     page_id = page_id,
     key = "questions",
     default = list()
   )
-  question <- questions[[question_id]]
+  question <- questions[[item_id]]
   if (!is.null(question)) {
-    if (!is.null(key)) {
+    if (!is.null(key) && key != "all") {
       if (!is.null(question[[key]])) {
         return(question[[key]])
       } else {
@@ -359,30 +483,40 @@ get_question_data <- function(session, page_id, question_id = NULL, key = NULL, 
 
 # Data Handling Functions
 init_page_data <- function(session, page_id) {
+  # Overwrite certain values when navigation back to a page
+  values_to_overwrite <- list(
+    start = as.character(Sys.time()),
+    questions = list()
+  )
+
   if (is.null(session$userData$questionnaire_data[[page_id]])) {
     # Initialize page info
     session$userData$questionnaire_data[[page_id]] <- list(
       page_id = page_id,
-      user_id = session$userData$user_info$id,
-      session_id = session$userData$user_info$session_id
+      respondent_id = session$userData$user_info$respondent_id,
+      session_id = session$userData$user_info$session_id,
+      status = "new"
     )
+  } else {
+    # Page data exists already (so we're navigating backwards)
+    values_to_overwrite[["status"]] <- "old"
   }
 
-  # Overwrite certain values when navigation back to a page
-  values_to_overwrite <- list(
-    status = "old",
-    start = as.character(Sys.time()),
-    questions = list()
-  )
   session$userData$questionnaire_data[[page_id]] <- utils::modifyList(
     session$userData$questionnaire_data[[page_id]],
     values_to_overwrite
   )
 }
 
-finalize_data <- function(session, page_id) {
+# Finalize a page's data e.g. setting the timestamp, marking it as "new"
+# forward corresponds to whether the participant navigated to the next (TRUE)
+# or a previous page (FALSE)
+finalize_data <- function(session, page_id, forward) {
   session$userData$questionnaire_data[[page_id]]$end <- as.character(Sys.time())
-  session$userData$questionnaire_data[[page_id]]$status <- "new"
+
+  if (forward) {
+    session$userData$questionnaire_data[[page_id]]$status <- "new"
+  }
 }
 
 save_page_data <- function(session, page_id) {

@@ -40,6 +40,19 @@ append_tables <- list(
     "respondent_id",
     "history",
     "time_session_ended"
+  ),
+  "occupations_suggested" = c(
+    "id",
+    "auxco_id",
+    "input_text",
+    "score",
+    "title",
+    "task",
+    "task_description",
+    "kldb_title_short",
+    "has_followup_questions",
+    "session_id",
+    "start"
   )
 )
 prepare_data_for_saving <- function(table_name, data) {

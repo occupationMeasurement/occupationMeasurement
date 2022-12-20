@@ -17,7 +17,7 @@ Prerequisites:
 remotes::install_github("occupationMeasurement/occupationMeasurement")
 ```
 
-For a detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package.
+For a detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package. All vignettes are also [available online](https://occupationmeasurement.github.io/occupationMeasurement/index.html).
 
 ## Using the interactive App
 

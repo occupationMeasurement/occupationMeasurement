@@ -140,7 +140,7 @@ app(
     # Skip follow-up questions related to ISCO skill level
     # or ISCO supervisory/managment occupations
     # (in case similar questions are already included in your questionnaire)
-    skip_followup_types = c("anforderungsniveau", "aufsicht"),
+    skip_followup_types = c("anforderungsniveau", "aufsicht")
 
     # ...
   )

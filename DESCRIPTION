@@ -22,7 +22,8 @@ Authors@R: c(
     )
 Description: This package provides a set of functions for interactive occupation coding in interviews. It contains the functionality to generate suggestions for occupational categories based on free text input. Pre-trained machine learning models in German and a ready-to-use shiny application is provided for quick and easy data collection.
 License: MIT + file LICENSE
-URL: https://occupationMeasurement.github.io/occupationMeasurement/, https://github.com/occupationMeasurement/occupationMeasurement
+URL: https://occupationMeasurement.github.io/occupationMeasurement/,
+    https://github.com/occupationMeasurement/occupationMeasurement
 BugReports: https://github.com/occupationMeasurement/occupationMeasurement/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

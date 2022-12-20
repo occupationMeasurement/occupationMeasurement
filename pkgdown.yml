@@ -1,0 +1,15 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  api: api.html
+  app-database: app-database.html
+  app-deployment: app-deployment.html
+  app-questionnaire: app-questionnaire.html
+  app: app.html
+  occupationMeasurement: occupationMeasurement.html
+last_built: 2022-12-20T10:09Z
+urls:
+  reference: https://occupationmeasurement.github.io/occupationMeasurement/reference
+  article: https://occupationmeasurement.github.io/occupationMeasurement/articles
+

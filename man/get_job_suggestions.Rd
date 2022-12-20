@@ -2,19 +2,20 @@
 % Please edit documentation in R/suggestions.R
 \name{get_job_suggestions}
 \alias{get_job_suggestions}
-\title{Make coding suggestions based on a users free text input.}
+\title{Make coding suggestions based on a user's open-ended text input.}
 \usage{
 get_job_suggestions(
   text,
   suggestion_type = "auxco-1.2.x",
   num_suggestions = 5,
   suggestion_type_options = list(),
-  score_thresholds = list(simbased_wordwise = 0.535, simbased_substring = 0.002),
-  implausible_suggestion_threshold = 0,
+  aggregate_score_threshold = 0.02,
+  item_score_threshold = 0,
   distinctions = TRUE,
   steps = list(simbased_wordwise = list(algorithm = algo_similarity_based_reasoning,
     parameters = list(sim_name = "wordwise")), simbased_substring = list(algorithm =
-    algo_similarity_based_reasoning, parameters = list(sim_name = "substring")))
+    algo_similarity_based_reasoning, parameters = list(sim_name = "substring"))),
+  include_general_id = FALSE
 )
 }
 \arguments{
@@ -34,13 +35,15 @@ to predictions e.g. use a specific version of the kldb or auxco.
 Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 bundled with this package are used.}
 
-\item{score_thresholds}{A named list of thresholds between 0 and 1. Each
-entry should correspond to one of the \code{steps}. Results from that step will
-only be returned if the sum of their scores is equal to or greater than
-the specified threshold. With a threshold of 0 results will always be
-returned.}
+\item{aggregate_score_threshold}{A single value or named list of thresholds
+between 0 and 1. If it is a list, each entry should correspond to one of
+the \code{steps}. If it is a single value, it will apply to all steps.
+Results from that step will only be returned if the sum of
+their scores is equal to or greater than the specified threshold. With a
+aggregate_score_threshold of 0 results will always be returned
+(if there are any).}
 
-\item{implausible_suggestion_threshold}{A threshold between 0 and 1 (usually
+\item{item_score_threshold}{A threshold between 0 and 1 (usually
 very small, default 0). Results from any step will only be returned if they
 are greater than the specified threshold. Allows the removal of highly
 implausible suggestions.}
@@ -82,12 +85,27 @@ Defaults to:
   )
 )
 }\if{html}{\out{</div>}}}
+
+\item{include_general_id}{Whether a general column, called "id" should always
+be returned. This will automatically contain the appropriate id for
+different suggestion_types i.e. for "auxco-1-2.x" it will contain the same
+data as the column "auxco_id".}
 }
 \value{
 A data.table with suggestions or NULL if no suggestions were found.
 }
 \description{
-Make coding suggestions based on a users free text input.
+Given a \code{text} input, find up to \code{num_suggestions} possible occupation categories.
+}
+\details{
+The procedure implemented here is, roughly speaking, as follows:
+\enumerate{
+\item Predict categories from KldB 2010, including their scores. The first algorithm mentioned in \code{steps} is used (default: \code{\link[=algo_similarity_based_reasoning]{algo_similarity_based_reasoning()}}).
+\item Convert the predicted KldB 2010 categories to \code{suggestion_type} (default: \verb{auxco-1.2.x}, an n:m mapping, scores are mapped accordingly.). See internal function \code{convert_suggestions()} for details.
+\item Remove predicted categories if their score is below \code{item_score_threshold} and only keep the \code{num_suggestions} top-ranked suggestions.
+\item Start anew, trying the next algorithm in \code{steps}, if the the top-ranked suggestions have a low chance to be correct. (Technically, this happens if the summed score of the \code{num_suggestions} top-ranked suggestions is below \code{aggregate_score_threshold}.)
+\item If \code{suggestion_type == "auxco-1.2.x"} and \code{distinctions == TRUE}, insert additional and (highly) similar categories or replace existing ones. See internal function \code{add_distinctions_auxco()}. Reorder and keep only the \code{num_suggestions} top-ranked suggestions. Auxco categories which were added during this step can be identified by their scores: It equals 0.05 for categories with high similarity and 0.005 for categories with medium similarity.
+}
 }
 \examples{
 get_job_suggestions("Koch")

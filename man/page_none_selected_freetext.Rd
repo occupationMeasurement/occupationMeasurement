@@ -4,12 +4,14 @@
 \alias{page_none_selected_freetext}
 \title{An additional freetext page to show when no suggestion has been selected.}
 \usage{
-page_none_selected_freetext(is_interview = FALSE)
+page_none_selected_freetext(is_interview = FALSE, ...)
 }
 \arguments{
 \item{is_interview}{Should the page show slightly different / additional
 instructions and answer options for an interview that is conducted by
 another person? Defaults to FALSE.}
+
+\item{...}{All additional parameters are passed to \code{\link[=new_page]{new_page()}}}
 }
 \value{
 A page object.

@@ -32,12 +32,12 @@ You can of course carry over all the settings / your custom questionnaire passed
 
 # Using docker 🐳
 
-For easy deployment of the api, the package comes with a pre-built docker image called `occupation_measurement/app`.
+For easy deployment of the api, the package comes with a pre-built [docker](https://www.docker.com/) image called [`ghcr.io/occupationmeasurement/app:latest `](https://github.com/orgs/occupationMeasurement/packages/container/package/app).
 
 To test this image on your local machine you can run the following command in your command line (this assumses you have Docker installed):
 
 ```bash
-docker run --rm -p 3838:3838 -v $(pwd)/output:/srv/shiny-server/output occupation_measurement/app
+docker run --rm -p 3838:3838 -v $(pwd)/output:/srv/shiny-server/output ghcr.io/occupationmeasurement/app:latest
 ```
 
 For more detailed information on the docker images if you e.g. want to build your own refer to the [docker directory](https://github.com/occupationMeasurement/occupationMeasurement/tree/main/docker) in the repository.

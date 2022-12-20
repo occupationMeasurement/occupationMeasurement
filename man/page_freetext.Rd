@@ -11,6 +11,7 @@ page_freetext(
   no_answer_checkbox = TRUE,
   next_button = TRUE,
   previous_button = TRUE,
+  trigger_next_on_enter = TRUE,
   render_question_text = TRUE,
   run_before = NULL,
   run_after = NULL,
@@ -36,6 +37,9 @@ Defaults to TRUE.}
 
 \item{previous_button}{Whether to show the button to navigate to the preivous page?
 Defaults to TRUE.}
+
+\item{trigger_next_on_enter}{Whether the next button is triggered
+when one presses enter. Defaults to TRUE. There are known issues with IE11.}
 
 \item{render_question_text}{Whether the question text should be displayed?
 Only set this to FALSE, if you wish to change the rendering of the

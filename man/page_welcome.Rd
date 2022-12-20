@@ -2,7 +2,7 @@
 % Please edit documentation in R/questionnaire_pages.R
 \name{page_welcome}
 \alias{page_welcome}
-\title{Welcome Page}
+\title{Welcome Page (optional)}
 \usage{
 page_welcome(
   title = "Herzlich Willkommen zum Modul zur automatischen Berufskodierung!",

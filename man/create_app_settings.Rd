@@ -7,13 +7,14 @@
 create_app_settings(
   suggestion_type = "auxco-1.2.x",
   default_num_suggestions = 5,
-  require_id = FALSE,
+  require_respondent_id = FALSE,
   warn_before_leaving = FALSE,
   skip_followup_types = c(),
   save_to_file = TRUE,
   response_output_dir = file.path("output", "responses"),
   handle_data = NULL,
   get_job_suggestion_params = NULL,
+  display_page_ids = TRUE,
   default_tense = "present",
   default_extra_instructions = "on",
   verbose = TRUE,
@@ -28,14 +29,15 @@ Possible options are "auxco-1.2.x" and "kldb-2010".}
 display to users. Accepts all positive integers.
 Defaults to 5.}
 
-\item{require_id}{Are user_ids required?
+\item{require_respondent_id}{Are respondent_ids required?
 Defaults to FALSE}
 
 \item{warn_before_leaving}{Should users be warned that their progress will
 be lost upon leaving the site? Defaults to FALSE.}
 
 \item{skip_followup_types}{A vector of strings corresponding to the
-question_type of followup_question that should be skipped.}
+question_type of followup_question that should be skipped. Allowed `
+values: c("anforderungsniveau", "aufsicht", "spezialisierung", "sonstige")}
 
 \item{save_to_file}{Should responses be saved as files in
 response_output_dir? Defaults to use the SAVE_TO_FILE environment variable
@@ -51,7 +53,11 @@ data (A dataframe of data to save), session (the user's current session).}
 
 \item{get_job_suggestion_params}{List of parameters to pass to
 get_job_suggestion. Refer to \code{\link[=get_job_suggestions]{get_job_suggestions()}} for a list of
-supported parameters.}
+supported parameters. Note that the parameter aggregate_score_threshold
+needs to be set on \code{\link[=page_first_freetext]{page_first_freetext()}} or \code{\link[=page_second_freetext]{page_second_freetext()}}.}
+
+\item{display_page_ids}{Whether \code{page_ids} should be displayed within the
+questionnaires.}
 
 \item{default_tense}{We may not always want to ask for the current
 occupation, but maybe also for the previous occupation in case of
@@ -79,5 +85,5 @@ A list of app_settings.
 This is the primary and most convenient way of configuring the app.
 }
 \examples{
-app_settings <- create_app_settings(require_id = TRUE)
+app_settings <- create_app_settings(require_respondent_id = TRUE)
 }

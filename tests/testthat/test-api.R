@@ -118,6 +118,23 @@ test_that("endpoint '/v1/suggestions' works (w/o suggestions)", {
   expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
 })
 
+test_that("endpoint '/v1/suggestions' works (w/o suggestions due to high threshold)", {
+  # Send API request
+  r <- httr::GET(
+    api_root,
+    port = port,
+    path = "/v1/suggestions",
+    query = list(
+      text = "Friseur",
+      aggregate_score_threshold = 0.98
+    )
+  )
+
+  # Check response
+  expect_equal(r$status_code, 200)
+  expect_snapshot_value(httr::content(r, encoding = "UTF-8"))
+})
+
 test_that("endpoint '/v1/suggestions' works (for KldB)", {
   # With suggestions
   r <- httr::GET(

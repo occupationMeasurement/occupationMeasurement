@@ -1,4 +1,5 @@
 # Generate app_settings based on environment variables
+# Mostly meant to work with Docker, but the functions here may also be useful in other settings.
 create_app_settings_from_env <- function(verbose = FALSE) {
   if (verbose) message("Loading settings for occupationMeasurement app")
 

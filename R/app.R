@@ -4,6 +4,13 @@ options(stringsAsFactors = FALSE) # dont use factors in data.frames
 #' @import data.table
 NULL
 
+#' Validate (and sanitize the questionnaire)
+#'
+#' @param questionnaire The questionnaire passed to [app()]
+#' @param verbose Should information about the questionnaire be printed?
+#'
+#' @return Sanitized questionnaire
+#' @keywords internal
 validate_questionnaire <- function(questionnaire, verbose) {
   page_ids <- lapply(questionnaire, function(page) page$page_id)
   has_duplicates <- sum(duplicated(page_ids)) > 0
@@ -15,6 +22,12 @@ validate_questionnaire <- function(questionnaire, verbose) {
   if (has_duplicates) {
     stop("Duplicated page_ids detected.")
   }
+
+  # Remove any NULLs from the questionnaire
+  # These might be introduced from e.g. "if" statements
+  questionnaire <- questionnaire[!sapply(questionnaire, is.null)]
+
+  return(questionnaire)
 }
 
 
@@ -50,7 +63,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
                 ...) {
   require_dependencies()
 
-  validate_questionnaire(questionnaire, verbose = app_settings$verbose)
+  questionnaire <- validate_questionnaire(questionnaire, verbose = app_settings$verbose)
 
   shiny::addResourcePath("www", resource_dir)
 
@@ -92,23 +105,26 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
     output$MainAction <- renderUI({
       if (is.null(session$userData$user_info$session_id)) {
+        # Save settings on the app level and settings on the session level
+        session$userData$app_settings <- app_settings
+
         # run subsequent code only if no session id exists yet, i.e. on the first page (we could run it again on later pages, but this might take a few milliseconds)
         session$userData$user_info$query <- parseQueryString(session$clientData$url_search)
         session$userData$user_info$url_search <- session$clientData$url_search # this will be used to save url_query in the database
 
         # STOP if no respondent ID available
-        if (is.null(session$userData$user_info$query$id)) {
-          if (app_settings$require_id) {
+        if (is.null(session$userData$user_info$query$respondent_id)) {
+          if (app_settings$require_respondent_id) {
             return(list(p(strong(h5("Error: No ID has been supplied. IDs are required for linking data.")))))
           } else {
-            session$userData$user_info$id <- NA
+            session$userData$user_info$respondent_id <- NA
           }
         } else {
-          session$userData$user_info$id <- session$userData$user_info$query$id
+          session$userData$user_info$respondent_id <- session$userData$user_info$query$respondent_id
         }
 
         # create a unique session_id
-        session$userData$user_info$session_id <- sprintf("%s_%s_%s", session$userData$user_info$id, as.integer(Sys.time()), sample(0L:9L, 1))
+        session$userData$user_info$session_id <- sprintf("%s_%s_%s", session$userData$user_info$respondent_id, as.integer(Sys.time()), sample(0L:9L, 1))
 
         query_value <- function(name_in_query, default, validate = NULL) {
           value_in_query <- session$userData$user_info$query[[name_in_query]]
@@ -135,8 +151,6 @@ app <- function(questionnaire = questionnaire_web_survey(),
         # Create list that will hold questionnaire data
         session$userData$questionnaire_data <- list()
 
-        # Save settings on the app level and settings on the session level
-        session$userData$app_settings <- app_settings
         # Initialize session settings based on query parameters
         # Defaults are set via app_settings
         session$userData$session_settings <- list(
@@ -148,7 +162,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
             validate = c("present", "past")
           ),
           # Is conversational interviewing turned on?
-          # Only in this case are the job titles and the task descriptions shown.
+          # Then some additional instructions for the interviwer will be shown.
           extra_instructions = query_value(
             name_in_query = "extra_instructions",
             default = app_settings$default_extra_instructions,
@@ -174,6 +188,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
       # run Code defined in questionnaire
       page <- questionnaire[[session$userData$control$current_question]]
+      session$userData$current_page_id <- page$page_id
       run_before_output <- execute_run_before(
         page = page,
         session = session,
@@ -206,10 +221,12 @@ app <- function(questionnaire = questionnaire_web_survey(),
       next_question <- session$userData$control$current_question
       repeat({
         next_question <- next_question + 1
+        next_page <- questionnaire[[next_question]]
+        session$userData$current_page_id <- next_page$page_id
         # stop increasing after the last question
         if (next_question > length(questionnaire)) break
         # or if an condition evalutes to TRUE
-        if (check_condition(questionnaire[[next_question]], session = session)) break
+        if (check_condition(next_page, session = session)) break
       })
       # Update current_question if we found the next question
       session$userData$control$current_question <- next_question
@@ -220,7 +237,16 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
     # Go to the previous question
     observeEvent(input$previousButton, {
-      if (session$userData$control$current_question > 1) { # There is no page previous to one.
+      # There is no page previous to one.
+      if (session$userData$control$current_question > 1) {
+        # Collect timestamp / finalize data, also when navigating backwards
+        leaving_page_backwards(
+          page = questionnaire[[session$userData$control$current_question]],
+          session = session,
+          input = input,
+          output = output
+        )
+
         session$userData$control$history <- session$userData$control$history[-length(session$userData$control$history)]
         session$userData$control$current_question <- session$userData$control$history[length(session$userData$control$history)]
       }
@@ -229,14 +255,21 @@ app <- function(questionnaire = questionnaire_web_survey(),
     # On Stop will be called when the shiny app is stopped or when each
     # individual user session ends.
     onSessionEnded(function() {
-      # Save the final, cleaned-up data
-      save_results_overview()
+      # Skip if no session has been initialized
+      if (is.null(session$userData$user_info$session_id)) {
+        return()
+      }
+
+      # Save the final, cleaned-up data (commented out for now: not really needed, and it throws errors if one leaves the site early)
+      save_results_overview(session)
 
       # Save session data (to detect multiple sessions if there are issues)
       session_data <- list(
         session_id = session$userData$user_info$session_id,
         url_search = session$userData$user_info$url_search,
-        user_id = session$userData$user_info$id
+        respondent_id = session$userData$user_info$respondent_id,
+        history = paste0(isolate(session$userData$control$history), collapse = "-"),
+        time_session_ended = as.integer(Sys.time())
       )
 
       save_data("session_info", session_data, session = session)

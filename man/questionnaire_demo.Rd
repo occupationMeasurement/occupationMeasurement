@@ -4,7 +4,11 @@
 \alias{questionnaire_demo}
 \title{A demo questionnaire with additional explanations}
 \usage{
-questionnaire_demo()
+questionnaire_demo(show_feedback_page = TRUE)
+}
+\arguments{
+\item{show_feedback_page}{Show the \code{\link[=page_feedback]{page_feedback()}} to evaluate the fit of
+the chosen suggestion.}
 }
 \value{
 A questionnaire for \code{\link[=app]{app()}} i.e. a list of pages.

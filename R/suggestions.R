@@ -164,7 +164,16 @@ algo_similarity_based_reasoning <- function(text_processed,
   return(suggestions)
 }
 
-#' Make coding suggestions based on a users free text input.
+#' Make coding suggestions based on a user's open-ended text input.
+#'
+#' Given a `text` input, find up to `num_suggestions` possible occupation categories.
+#'
+#' The procedure implemented here is, roughly speaking, as follows:
+#'   1. Predict categories from KldB 2010, including their scores. The first algorithm mentioned in `steps` is used (default: [algo_similarity_based_reasoning()]).
+#'   2. Convert the predicted KldB 2010 categories to `suggestion_type` (default: `auxco-1.2.x`, an n:m mapping, scores are mapped accordingly.). See internal function `convert_suggestions()` for details.
+#'   3. Remove predicted categories if their score is below `item_score_threshold` and only keep the `num_suggestions` top-ranked suggestions.
+#'   4. Start anew, trying the next algorithm in `steps`, if the the top-ranked suggestions have a low chance to be correct. (Technically, this happens if the summed score of the `num_suggestions` top-ranked suggestions is below `aggregate_score_threshold`.)
+#'   5. If `suggestion_type == "auxco-1.2.x"` and `distinctions == TRUE`, insert additional and (highly) similar categories or replace existing ones. See internal function `add_distinctions_auxco()`. Reorder and keep only the `num_suggestions` top-ranked suggestions. Auxco categories which were added during this step can be identified by their scores: It equals 0.05 for categories with high similarity and 0.005 for categories with medium similarity.
 #'
 #' @param text The raw text input from the user.
 #' @param suggestion_type Which type of suggestion to use / provide.
@@ -178,12 +187,14 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'          to predictions e.g. use a specific version of the kldb or auxco.
 #'          Supported datasets are: "auxco-1.2.x", "kldb-2010". By default the datasets
 #'          bundled with this package are used.
-#' @param score_thresholds A named list of thresholds between 0 and 1. Each
-#'   entry should correspond to one of the `steps`. Results from that step will
-#'   only be returned if the sum of their scores is equal to or greater than
-#'   the specified threshold. With a threshold of 0 results will always be
-#'   returned.
-#' @param implausible_suggestion_threshold A threshold between 0 and 1 (usually
+#' @param aggregate_score_threshold A single value or named list of thresholds
+#'   between 0 and 1. If it is a list, each entry should correspond to one of
+#'   the `steps`. If it is a single value, it will apply to all steps.
+#'   Results from that step will only be returned if the sum of
+#'   their scores is equal to or greater than the specified threshold. With a
+#'   aggregate_score_threshold of 0 results will always be returned
+#'   (if there are any).
+#' @param item_score_threshold A threshold between 0 and 1 (usually
 #'   very small, default 0). Results from any step will only be returned if they
 #'   are greater than the specified threshold. Allows the removal of highly
 #'   implausible suggestions.
@@ -221,6 +232,10 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'     )
 #'   )
 #'   ```
+#' @param include_general_id Whether a general column, called "id" should always
+#'   be returned. This will automatically contain the appropriate id for
+#'   different suggestion_types i.e. for "auxco-1-2.x" it will contain the same
+#'   data as the column "auxco_id".
 #'
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
@@ -233,11 +248,8 @@ get_job_suggestions <- function(text,
                                 suggestion_type = "auxco-1.2.x", # or "kldb-2010"
                                 num_suggestions = 5,
                                 suggestion_type_options = list(),
-                                score_thresholds = list(
-                                  simbased_wordwise = 0.535,
-                                  simbased_substring = 0.002
-                                ),
-                                implausible_suggestion_threshold = 0,
+                                aggregate_score_threshold = 0.02,
+                                item_score_threshold = 0,
                                 distinctions = TRUE,
                                 steps = list(
                                   # try similarity "one word at most 1 letter different" first
@@ -254,7 +266,8 @@ get_job_suggestions <- function(text,
                                       sim_name = "substring"
                                     )
                                   )
-                                )) {
+                                ),
+                                include_general_id = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   score <- NULL
 
@@ -312,9 +325,14 @@ get_job_suggestions <- function(text,
       temp_result <- utils::head(temp_result[order(score, decreasing = TRUE)], num_suggestions)
 
       # Remove suggestions that are most likely incorrect
-      temp_result <- temp_result[score > implausible_suggestion_threshold]
+      temp_result <- temp_result[score > item_score_threshold]
 
-      threshold <- score_thresholds[[step_name]]
+      if (is.list(aggregate_score_threshold)) {
+        threshold <- aggregate_score_threshold[[step_name]]
+      } else {
+        threshold <- aggregate_score_threshold
+      }
+
       if (is.null(threshold) || sum(temp_result$score) >= threshold) {
         # Stop running through algorithms if we get good enough results
         result <- temp_result
@@ -352,6 +370,19 @@ get_job_suggestions <- function(text,
       result <- merge(result, get_suggestion_info(suggestion_ids = result$auxco_id, suggestion_type = suggestion_type), by = "auxco_id", sort = FALSE)
     } else if (suggestion_type == "kldb-2010") {
       # Do nothing, maybe add some info from kldb_10 in the future
+    }
+
+    # Always provide a column "id" with the appropriate suggested id
+    # irrespective of suggestion_type
+    if (include_general_id) {
+      if (suggestion_type == "auxco-1.2.x") {
+        id_colname <- "auxco_id"
+      } else if (suggestion_type == "kldb-2010") {
+        id_colname <- "kldb_id"
+      }
+      id_column <- result[, id_colname, with = FALSE]
+      colnames(id_column) <- "id"
+      result <- cbind(id_column, result)
     }
 
     return(result)
@@ -422,26 +453,30 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, sugges
   # Make sure highly improbable suggestions are shown at the end (we may even want to remove them)
   previous_suggestions <- previous_suggestions[score < 0.005, order_indicator := 0L]
 
-  # if a category has high probability to be correct (> 0.6, value is made-up!) add all abgrenzungen (with similarity = high)
-  # preliminary analysis with turtle data suggests that the exact value for the treshold (0.6) and the inserted probability (0.1) has basically no influence. Maybe a smaller threshold would be preferable? Set to 0.3 for testing (looks like a small threshold is most promising if we show many 7 answer options, larger thresholds around 0.7 seem better if we show at most four answer options)
-  previous_suggestions[score > 0.5, order_indicator := 2L] # for later ordering, make sure that the most probable ID is on top and other IDs that have abgrenzung = "hoch" are next to it
+  # if a category has rather high probability to be correct (> 0.2, value is made-up!) add all abgrenzungen with similarity = high. Set their score to 0.05.
+  # preliminary analysis with turtle data suggests that the exact value for the threshold (0.2) and the inserted probability (0.05) have basically no influence. Maybe a smaller threshold would be preferable? Set to 0.3 for testing (looks like a small threshold is most promising if we show many 7 answer options, larger thresholds around 0.7 seem better if we show at most four answer options)
+  previous_suggestions[score > 0.5, order_indicator := 2L] # for later ordering, make sure that the most probable ID is on top and other IDs that have abgrenzung = "hoch" are next to it. If there is no category having score > 0.5, the order_indicator is 0 for all categories and therefore ignored.
   very_similar_distinctions <- rbind(previous_suggestions,
     list(auxco_id = auxco$distinctions[similarity == "hoch" & auxco_id %in% previous_suggestions[score > 0.2, auxco_id], similar_auxco_id]),
     fill = TRUE
   )
-  if (previous_suggestions[score > 0.5, .N] > 0) very_similar_distinctions[is.na(score), order_indicator := 1] # for later ordering
+  if (previous_suggestions[score > 0.5, .N] > 0) very_similar_distinctions[is.na(score), order_indicator := 1] # for later ordering, make sure other IDs that have abgrenzung = "hoch" are shown next to the one with score > 0.5
   very_similar_distinctions[is.na(score), score := 0.05]
-  # now add abrenzungen with similarity = "mittel" (thresholds not tested, but values are choses such that we have only a minor effect if one category dominates)
-  # setting score := 0.005 means that mittel-abgrenzungen are only added at the end of the list below the other suggestions (if it does not push already existing suggestions up)
+
+  # if a category has very high probability to be correct (> 0.8) add add all abrenzungen with similarity = "mittel". Set their scores to 0.005.
+  # (thresholds not tested, but values are choses such that we have only a minor effect if one category with score > 0.8 dominates and nothing happens if no category dominates.)
+  # setting score := 0.005 means that mittel-abgrenzungen are added close to the end of the list (in an earlier version it was always at the end of the list). They are often removed when we only keep num_suggestions below.
   very_similar_distinctions <- rbind(very_similar_distinctions,
     list(auxco_id = auxco$distinctions[similarity == "mittel" & auxco_id %in% previous_suggestions[score > 0.8, auxco_id], similar_auxco_id]),
     fill = TRUE
   )
   very_similar_distinctions[is.na(score), score := 0.005]
   very_similar_distinctions[is.na(order_indicator), order_indicator := 0L] # for later ordering
+
+  # Make sure every auxco_id is only included a single time. Probabilities are added up. (If an auxco_id were added 10 times because of high similarity, the new score is 10*0.05 + its score from previous_suggestions)
   very_similar_distinctions <- very_similar_distinctions[, list(score = sum(score), order_indicator = max(order_indicator)), by = auxco_id]
 
-  # order by score, remove duplicated auxco_ids and probabilities < 0.005 (anekdotische Evidenze: derart kleiner Wert macht Sinn bei "Buchhalterin") and return only the top 7 auxiliary category ids having highest prob
+  # order by order_indicator and score, categories with score < 0.005 were removed in the past (anekdotische Evidenze: derart kleiner Wert macht Sinn bei "Buchhalterin") and return only the top 7 auxiliary category ids having highest prob
   # showing 4 categories may have accuracies around 76-77 percent, for 5-7 categories it is 80% (accurate is measured as "possibility that a respondent can choose a category that is linked to the manual coded KldB-category")
   very_similar_distinctions <- utils::head(very_similar_distinctions[order(order_indicator, score, decreasing = TRUE)], num_suggestions) # instead of this deterministic procedure, one might also draw at random in order to try all categories and find best ones to predict
 
@@ -624,6 +659,17 @@ get_suggestion_info <- function(suggestion_ids,
 
 #' Get the final occupation codes
 #'
+#' The final occupation code will depend on the `suggestion_id` and,
+#' possibly, on `followup_answers`, depending on the `suggestion_id` provided. See
+#' `occupationMeasurement::auxco$followup_questions` for a list of suggestion_ids (=auxco_id)
+#' and their respective recommended follow-up questions.
+#'
+#' The interview situation may not allow to ask these follow-up questions. Some default, but
+#' suboptimal occupation code is returned if `followup_answers` is missing.
+#'
+#' If `followup_answers` is missing or incomplete, one may wish to insert/infer the missing information
+#' by using `standardized_answer_levels`.
+#'
 #' @param suggestion_id Id of the suggestion
 #' @param followup_answers A named list of the question_ids with their
 #'   respective answers to the followup_questions.
@@ -648,12 +694,13 @@ get_suggestion_info <- function(suggestion_ids,
 #'   Multiple codes can be returned at the same time.
 #'   Supported types of codes are "isco_08" and "kldb_10".
 #'   Defaults to "isco_08" and "kldb_10".
+#' @param verbose (default TRUE) whether to return a `message` or not, detailing potential issues with the input provided.
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
 #'
 #' @inheritParams get_job_suggestions
 #'
-#' @return A named list corresponding to the code_type(s) specified. Includes a message if approximate_standardized_answer_levels = FALSE and no exact matching fails.
+#' @return A named list corresponding to the code_type(s) specified. Includes a `message` if `verbose = TRUE`
 #' @export
 #'
 #' @examples
@@ -662,7 +709,7 @@ get_suggestion_info <- function(suggestion_ids,
 #'   "9076",
 #'   followup_answers = list(
 #'     # The first answer option in the first followup question
-#'     "Q9076_1" = 1
+#'     "Q9076_1" = 2
 #'   )
 #' )
 #'
@@ -671,8 +718,23 @@ get_suggestion_info <- function(suggestion_ids,
 #'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
 #'   "9076",
 #'   standardized_answer_levels = list(
-#'     # A response corresponding to the standard ISCO Level "manager"
-#'     "isco_supervisor_manager" = "isco_manager"
+#'     # A response corresponding to the standard ISCO Level "supervisor"
+#'     "isco_supervisor_manager" = "isco_supervisor"
+#'   )
+#' )
+#'
+#' # Same example with approximate matching, due to conflicting information:
+#' # External data suggest the person is not a supervisor, but the person still
+#' # says she does supervisory tasks (Führungsaufgaben, as encoded in "9076").
+#' # If approximate_standardized_answer_levels = TRUE (the default), the
+#' # selected answer "9076" trumps the external data and we will code this
+#' # person as a supervisor.
+#' get_final_codes(
+#' # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
+#' "9076",
+#'   standardized_answer_levels = list(
+#'     # A response corresponding to the standard ISCO Level "not manager nor supervisor"
+#'     "isco_supervisor_manager" = "isco_not_supervising"
 #'   )
 #' )
 get_final_codes <- function(suggestion_id,
@@ -680,6 +742,7 @@ get_final_codes <- function(suggestion_id,
   standardized_answer_levels = NULL,
   approximate_standardized_answer_levels = TRUE,
   code_type = c("isco_08", "kldb_10"),
+  verbose = TRUE,
   suggestion_type = "auxco-1.2.x",
   suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
@@ -687,8 +750,11 @@ get_final_codes <- function(suggestion_id,
 
   stopifnot(suggestion_type == "auxco-1.2.x")
   stopifnot(is.list(followup_answers))
+  stopifnot(!is.null(suggestion_id))
 
   auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
+
+  message <- character(0)
 
   followup_questions <- get_followup_questions(
     suggestion_id = suggestion_id,
@@ -704,7 +770,7 @@ get_final_codes <- function(suggestion_id,
     stop("followup_answers need to be supplied as a named list, with question_ids as names")
   }
   # Check whhether names are set on standardized_answer_levels
-  if (length(standardized_answer_levels) > 0 && !is.character(names(standardized_answer_levels))) {
+  if (length(standardized_answer_levels) > 0 && !is.list(standardized_answer_levels) && !is.character(names(standardized_answer_levels))) {
     stop("standardized_answer_levels need to be supplied as a named list, with the type of level as names")
   }
 
@@ -738,12 +804,20 @@ get_final_codes <- function(suggestion_id,
       # Only fill in the followup answer if there is no answer yet,
       # but there is a matching standardized level
       if (
+        (question_id %in% names(followup_answers)) &&
+          question_type %in% names(remapped_answer_levels)
+      ) {
+        message[length(message) + 1] <- paste("standardized_answer_levels is",
+          "not used: No need to replace", question_id, "in followup_answers.")
+      }
+
+      if (
         !(question_id %in% names(followup_answers)) &&
           question_type %in% names(remapped_answer_levels)
       ) {
         # Fill in the followup answer based on the matching standardized level
         answer_id_matches <- followup_question$answers[
-          corresponding_answer_level == remapped_answer_levels[question_type],
+          corresponding_answer_level == remapped_answer_levels[[question_type]],
           answer_id
         ]
         num_answer_id_matches <- length(answer_id_matches)
@@ -753,35 +827,56 @@ get_final_codes <- function(suggestion_id,
         if (num_answer_id_matches > 1) {
           # When there is more than one match, it doesn't matter which one we use
           final_answer_id_match <- answer_id_matches[1]
+          message[length(message) + 1] <- paste0("Exact match: ",
+              remapped_answer_levels[[question_type]], " -> ", question_id, "=", final_answer_id_match)
         } else if (num_answer_id_matches == 1) {
           # When there is exactly one match use that
           final_answer_id_match <- answer_id_matches
+          message[length(message) + 1] <- paste0("Exact match: ",
+              remapped_answer_levels[[question_type]], " -> ", question_id, "=", final_answer_id_match)
         } else if (num_answer_id_matches == 0) {
           if (!approximate_standardized_answer_levels) {
-            no_matching_success <- TRUE
+            message[length(message) + 1] <- paste0("Failed to find an exact match",
+              " for standardized_answer_levels=", remapped_answer_levels[[question_type]], ".")
           } else {
             # when there are no exact matches, maybe use approximate matching
             if (question_type == "anforderungsniveau") {
-              st_ans_lvl <- substr(x = remapped_answer_levels[question_type], start = 18, stop = 18)
+              st_ans_lvl <- substr(x = remapped_answer_levels[[question_type]], start = 18, stop = 18)
               co_ans_lvl <- substr(x = followup_question$answers$corresponding_answer_level, start = 18, stop = 18)
               index <- which.min(abs(as.integer(co_ans_lvl) - as.integer(st_ans_lvl)))
               final_answer_id_match <- followup_question$answers[index, answer_id]
+              message[length(message) + 1] <- paste0("Approximate match: ",
+                remapped_answer_levels[[question_type]], " -> ",
+                followup_question$answers[index, corresponding_answer_level], " -> ",
+                question_id, "=", final_answer_id_match)
             }
             if (question_type == "aufsicht") {
-              if (remapped_answer_levels[question_type] == "isco_not_supervising") {
+              if (remapped_answer_levels[[question_type]] == "isco_not_supervising") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
+                message[length(message) + 1] <- paste0("Approximate match: ",
+                  remapped_answer_levels[[question_type]], " -> ",
+                  "isco_supervisor", " -> ",
+                  question_id, "=", final_answer_id_match)
               }
-              if (remapped_answer_levels[question_type] == "isco_supervisor") {
+              if (remapped_answer_levels[[question_type]] == "isco_supervisor") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_not_supervising", answer_id
                 ]
+                message[length(message) + 1] <- paste0("Approximate match: ",
+                  remapped_answer_levels[[question_type]], " -> ",
+                  "isco_not_supervising", " -> ",
+                  question_id, "=", final_answer_id_match)
               }
-              if (remapped_answer_levels[question_type] == "isco_manager") {
+              if (remapped_answer_levels[[question_type]] == "isco_manager") {
                 final_answer_id_match <- followup_question$answers[
                   corresponding_answer_level == "isco_supervisor", answer_id
                 ]
+                message[length(message) + 1] <- paste0("Approximate match: ",
+                  remapped_answer_levels[[question_type]], " -> ",
+                  "isco_supervisor", " -> ",
+                  question_id, "=", final_answer_id_match)
               }
             }
           }
@@ -814,7 +909,7 @@ get_final_codes <- function(suggestion_id,
     ]
 
     # Check whether all questions in answer_id_combination have been answered
-    if (setequal(union(question_ids, names(followup_answers)), question_ids)) {
+    if (length(setdiff(question_ids, names(followup_answers))) == 0) {
       # Compare question answers and check whether there are any matches where all questions match
       all_matching <- apply(
         aggregated_answer_encodings[, question_ids, with = FALSE] == followup_answers[question_ids],
@@ -834,17 +929,22 @@ get_final_codes <- function(suggestion_id,
         if ("kldb_10" %in% code_type) {
           result$kldb_10 <- matched_answer_encoding$answer_kldb_id
         }
+        if (verbose) {
+          result$message <- paste(message, collapse = " |&| ")
+        }
         return(result)
       }
+    } else {
+      message[length(message) + 1] <- paste0("Required question_ids (", paste0(question_ids, collapse = ","),
+      ") and provided question_ids (", paste0(names(followup_answers), collapse = ","), ") do not match.")
     }
   }
 
-  # Check normal followup questions (i.e. only look at the last one)
+  # Check normal followup questions
   if (length(followup_questions) > 0 && length(followup_answers) > 0) {
     answer <- NULL
-    # Iterate over followup_questions in reverse order
-    # (i.e. look at the last one first)
-    for (i in rev(seq_along(followup_questions))) {
+    # Iterate over followup_questions
+    for (i in seq_along(followup_questions)) {
       followup_question <- followup_questions[[i]]
 
       # Convert answer to numeric (as sometimes strings are passed)
@@ -852,24 +952,41 @@ get_final_codes <- function(suggestion_id,
       followup_answer_id <- followup_answers[[followup_question$question_id]] |>
         as.numeric()
 
+      if (is.null(followup_answer_id) || length(followup_answer_id) != 1 || is.na(followup_answer_id)) {
+        message[length(message) + 1] <- paste0("Entry missing",
+          " for ", followup_question$question_id, " in followup_answers.")
+        break
+      }
+
       # When converting NULL to numeric a vector of length 0 is intorduced so we also check for that
       if (length(followup_answer_id) > 0 && !is.null(followup_answer_id) && !is.na(followup_answer_id)) {
         question <- followup_questions[[i]]
-        answer <- question$answers[followup_answer_id, ]
-        break
+        answer <- question$answers[answer_id == followup_answer_id, ]
+        if (!is.null(answer) && nrow(answer) > 0 && answer$coding_is_finished == TRUE) {
+          # need to check that coding is not finished with the first follow-up question
+          break
+        }
       }
     }
 
-    if (!is.null(answer)) {
-      # Retrieve answer codes from followup
-      result <- list()
-      if ("isco_08" %in% code_type) {
-        result$isco_08 <- answer$answer_isco_id
+    if (!is.null(answer) && nrow(answer) > 0) {
+      if (answer$answer_kldb_id != "" || answer$answer_isco_id != "") {
+        # Retrieve answer codes from followup
+        result <- list()
+        if ("isco_08" %in% code_type) {
+          result$isco_08 <- answer$answer_isco_id
+        }
+        if ("kldb_10" %in% code_type) {
+          result$kldb_10 <- answer$answer_kldb_id
+        }
+        if (verbose) {
+          result$message <- paste(message, collapse = " |&| ")
+        }
+        return(result)
+      } else {
+        message[length(message) + 1] <- paste("answer_kldb_id and answer_isco_id of selected answer",
+          "from occupationMeasurement::auxco$followup_questions are empty.")
       }
-      if ("kldb_10" %in% code_type) {
-        result$kldb_10 <- answer$answer_kldb_id
-      }
-      return(result)
     }
   }
 
@@ -881,6 +998,12 @@ get_final_codes <- function(suggestion_id,
   )
 
   if (!is.null(selected_suggestion_info)) {
+
+    if (length(followup_questions) > 0) {
+      message[length(message) + 1] <- paste("Returning default code: Improve",
+        "followup_answers (or standardized_answer_levels) to obtain more exact codings.")
+    }
+
     # Retrieve answer codes from selected suggestion
     result <- list()
     if ("isco_08" %in% code_type) {
@@ -889,8 +1012,8 @@ get_final_codes <- function(suggestion_id,
     if ("kldb_10" %in% code_type) {
       result$kldb_10 <- selected_suggestion_info$default_kldb_id
     }
-    if (exists("no_matching_success") && no_matching_success) {
-      result$message <- "The standardized_answer_level provided has no exact match. Returning default values."
+    if (verbose) {
+      result$message <- paste(message, collapse = " |&| ")
     }
     return(result)
   } else {

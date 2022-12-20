@@ -5,12 +5,13 @@
 #' @param default_num_suggestions The number of suggestions to generate and
 #'   display to users. Accepts all positive integers.
 #'   Defaults to 5.
-#' @param require_id Are user_ids required?
+#' @param require_respondent_id Are respondent_ids required?
 #'   Defaults to FALSE
 #' @param warn_before_leaving Should users be warned that their progress will
 #'   be lost upon leaving the site? Defaults to FALSE.
 #' @param skip_followup_types A vector of strings corresponding to the
-#'   question_type of followup_question that should be skipped.
+#'   question_type of followup_question that should be skipped. Allowed `
+#'   values: c("anforderungsniveau", "aufsicht", "spezialisierung", "sonstige")
 #' @param save_to_file Should responses be saved as files in
 #'   response_output_dir? Defaults to use the SAVE_TO_FILE environment variable
 #'   or TRUE if it is not set.
@@ -22,7 +23,10 @@
 #'   data (A dataframe of data to save), session (the user's current session).
 #' @param get_job_suggestion_params List of parameters to pass to
 #'   get_job_suggestion. Refer to [get_job_suggestions()] for a list of
-#'   supported parameters.
+#'   supported parameters. Note that the parameter aggregate_score_threshold
+#'   needs to be set on [page_first_freetext()] or [page_second_freetext()].
+#' @param display_page_ids Whether `page_ids` should be displayed within the
+#'   questionnaires.
 #' @param default_tense We may not always want to ask for the current
 #'   occupation, but maybe also for the previous occupation in case of
 #'   pensioners etc. with a value of "past".
@@ -45,16 +49,17 @@
 #' @export
 #'
 #' @examples
-#' app_settings <- create_app_settings(require_id = TRUE)
+#' app_settings <- create_app_settings(require_respondent_id = TRUE)
 create_app_settings <- function(suggestion_type = "auxco-1.2.x",
                                 default_num_suggestions = 5,
-                                require_id = FALSE,
+                                require_respondent_id = FALSE,
                                 warn_before_leaving = FALSE,
                                 skip_followup_types = c(),
                                 save_to_file = TRUE,
                                 response_output_dir = file.path("output", "responses"),
                                 handle_data = NULL,
                                 get_job_suggestion_params = NULL,
+                                display_page_ids = TRUE,
                                 default_tense = "present",
                                 default_extra_instructions = "on",
                                 verbose = TRUE,
@@ -62,13 +67,14 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
   final_app_settings <- list(
     suggestion_type = suggestion_type,
     default_num_suggestions = default_num_suggestions,
-    require_id = require_id,
+    require_respondent_id = require_respondent_id,
     warn_before_leaving = warn_before_leaving,
     skip_followup_types = skip_followup_types,
     save_to_file = save_to_file,
     response_output_dir = response_output_dir,
     handle_data = handle_data,
     get_job_suggestion_params = get_job_suggestion_params,
+    display_page_ids = display_page_ids,
     default_tense = default_tense,
     default_extra_instructions = default_extra_instructions,
     verbose = verbose
@@ -107,7 +113,7 @@ validate_app_settings <- function(app_settings) {
   }
 
   # Add warnings for odd / dangerous settings
-  if (!app_settings$require_id) {
+  if (!app_settings$require_respondent_id) {
     warning("User Ids are currently not required, this could lead to unmatchable data.")
   }
 

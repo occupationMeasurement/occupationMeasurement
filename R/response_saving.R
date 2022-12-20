@@ -113,6 +113,11 @@ save_data_on_disk <- function(table_name, data, session_id, app_settings) {
 
 # Extract a clean question dataframe from the provided page's data
 extract_questions_df <- function(page_data) {
+  # If page_data is old / stale, return an empty data.table()
+  if (page_data$status == "old") {
+    return(data.table())
+  }
+
   # Create a df / data.table from the question data
   if (length(page_data$questions) > 0) {
     question_dfs <- lapply(page_data$questions, as.data.table)

@@ -211,9 +211,7 @@ test_that("E2E: test case Koch", {
       P_select_suggestion_Q_default_R_id = "9079",
       P_select_suggestion_Q_default_R_text = "Zubereitung von Speisen in Restaurants, Hotels und sonstigen gastronomischen Einrichtungen",
       P_followup_1_Q_default_R_id = "1",
-      P_followup_1_Q_default_R_text = "nur einfache Speisen zum Sofortverkauf in Fast-Food-Restaurants",
-      P_results_Q_NA_R_id = "",
-      P_results_Q_NA_R_text = ""
+      P_followup_1_Q_default_R_text = "nur einfache Speisen zum Sofortverkauf in Fast-Food-Restaurants"
     )
   )
 })

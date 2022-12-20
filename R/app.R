@@ -188,6 +188,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
 
       # run Code defined in questionnaire
       page <- questionnaire[[session$userData$control$current_question]]
+      session$userData$current_page_id <- page$page_id
       run_before_output <- execute_run_before(
         page = page,
         session = session,
@@ -220,10 +221,12 @@ app <- function(questionnaire = questionnaire_web_survey(),
       next_question <- session$userData$control$current_question
       repeat({
         next_question <- next_question + 1
+        next_page <- questionnaire[[next_question]]
+        session$userData$current_page_id <- next_page$page_id
         # stop increasing after the last question
         if (next_question > length(questionnaire)) break
         # or if an condition evalutes to TRUE
-        if (check_condition(questionnaire[[next_question]], session = session)) break
+        if (check_condition(next_page, session = session)) break
       })
       # Update current_question if we found the next question
       session$userData$control$current_question <- next_question

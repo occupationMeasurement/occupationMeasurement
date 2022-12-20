@@ -46,11 +46,25 @@ testthat::test_that("data is transformed correctly", {
       ),
       end = "2022-08-09 15:44:30"
     ),
+    example = list(
+      page_id = "example",
+      respondent_id = NA,
+      session_id = "NA_1660052665_9",
+      status = "old",
+      start = "2022-08-09 15:44:30",
+      questions = list(
+        default = list(
+          question_text = "Some question text",
+          response_text = "koch",
+          response_id = "1234"
+        )
+      )
+    ),
     final = list(
       page_id = "final",
       respondent_id = NA,
       session_id = "NA_1660052665_9",
-      status = "old",
+      status = "new",
       start = "2022-08-09 15:44:30",
       questions = list()
     )

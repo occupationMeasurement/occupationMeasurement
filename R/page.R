@@ -444,6 +444,21 @@ get_item_data <- function(session, page_id, item_id = NULL, key = c("all", "ques
   }
   key <- match.arg(key)
 
+  # When retrieving data for a different page, we have to check whether the data
+  # is still fresh i.e. not marked as "old" from going back, else we return the
+  # default value.
+  if (page_id != session$userData$current_page_id) {
+    status <- get_page_data(
+      session = session,
+      page_id = page_id,
+      key = "status",
+      default = "new"
+    )
+    if (status == "old") {
+      return(default)
+    }
+  }
+
   questions <- get_page_data(
     session = session,
     page_id = page_id,
@@ -468,21 +483,25 @@ get_item_data <- function(session, page_id, item_id = NULL, key = c("all", "ques
 
 # Data Handling Functions
 init_page_data <- function(session, page_id) {
+  # Overwrite certain values when navigation back to a page
+  values_to_overwrite <- list(
+    start = as.character(Sys.time()),
+    questions = list()
+  )
+
   if (is.null(session$userData$questionnaire_data[[page_id]])) {
     # Initialize page info
     session$userData$questionnaire_data[[page_id]] <- list(
       page_id = page_id,
       respondent_id = session$userData$user_info$respondent_id,
-      session_id = session$userData$user_info$session_id
+      session_id = session$userData$user_info$session_id,
+      status = "new"
     )
+  } else {
+    # Page data exists already (so we're navigating backwards)
+    values_to_overwrite[["status"]] <- "old"
   }
 
-  # Overwrite certain values when navigation back to a page
-  values_to_overwrite <- list(
-    status = "old",
-    start = as.character(Sys.time()),
-    questions = list()
-  )
   session$userData$questionnaire_data[[page_id]] <- utils::modifyList(
     session$userData$questionnaire_data[[page_id]],
     values_to_overwrite

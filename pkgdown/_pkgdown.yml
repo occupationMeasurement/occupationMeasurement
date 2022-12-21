@@ -17,6 +17,7 @@ reference:
   - app
   - create_app_settings
   - api
+  - evaluate_performance
 - title: Questionnaires
 - subtitle: Pre-Built
   desc: >

@@ -45,7 +45,7 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #' @param ... Any additional parameters will be forwarded to shiny::shinyApp().
 #'
 #' @return A shiny app.
-#' @seealso `vignette("app")`, [questionnaire_web_survey()]
+#' @seealso `vignette("app")`, [questionnaire_web_survey()], [evaluate_performance()]
 #' @export
 #'
 #' @examples

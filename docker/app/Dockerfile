@@ -1,5 +1,9 @@
 FROM rocker/shiny:4.2.1
 
+LABEL org.opencontainers.image.source=https://github.com/occupationMeasurement/occupationMeasurement
+LABEL org.opencontainers.image.description="Container image of the interactive occupationMeasurement shiny application."
+LABEL org.opencontainers.image.licenses=MIT
+
 # Install libxml2 (a dependency of the xml2 R package)
 RUN apt-get update && apt-get install libxml2
 

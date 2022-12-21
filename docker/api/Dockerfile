@@ -1,6 +1,10 @@
 # Definition: https://github.com/rstudio/plumber/blob/main/Dockerfile
 FROM rstudio/plumber:v1.2.0
 
+LABEL org.opencontainers.image.source=https://github.com/occupationMeasurement/occupationMeasurement
+LABEL org.opencontainers.image.description="Container image of the occupationMeasurement API server for interactive occupation coding."
+LABEL org.opencontainers.image.licenses=MIT
+
 # Install the package and its dependencies
 COPY occupationMeasurement.tar.gz /occupationMeasurement.tar.gz
 COPY container-setup.R /container-setup.R

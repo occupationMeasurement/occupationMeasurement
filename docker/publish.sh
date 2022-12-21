@@ -5,6 +5,5 @@
 docker tag occupationmeasurement/api ghcr.io/occupationmeasurement/api:latest
 docker push ghcr.io/occupationmeasurement/api:latest
 
-# TODO: Also publish app docker image
-# docker tag occupationmeasurement/app ghcr.io/occupationmeasurement/app:latest
-# docker push ghcr.io/occupationMeasurement/app:latest
+docker tag occupationmeasurement/app ghcr.io/occupationmeasurement/app:latest
+docker push ghcr.io/occupationmeasurement/app:latest

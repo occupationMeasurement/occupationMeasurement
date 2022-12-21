@@ -353,6 +353,16 @@ load_kldb <- function() {
     )
   ]
 
+  # Add kldb level 4 labels to KldB level 5
+  kldb_lvl4 <- kldb_data[level == 4, ]
+  kldb_lvl4_labels <- kldb_lvl4$label
+  names(kldb_lvl4_labels) <- kldb_lvl4$kldb_id
+  kldb_data[
+    level == 5,
+    label := kldb_lvl4_labels[substr(kldb_id, 1, 4)]
+  ]
+
+
   # Convert kldb_id to character for overall consistency, joins etc.
   kldb_data[, kldb_id := as.character(kldb_id)]
 

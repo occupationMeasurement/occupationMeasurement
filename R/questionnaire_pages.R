@@ -77,7 +77,8 @@ page_first_freetext <- function(is_interview = FALSE,
       job_suggestion_parameters <- list(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
-        num_suggestions = session$userData$session_settings$num_suggestions
+        num_suggestions = session$userData$session_settings$num_suggestions,
+        include_general_id = TRUE
       )
       # Merge with parameters from app_settings if provided
       if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
@@ -153,7 +154,8 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
       job_suggestion_parameters <- list(
         text = text,
         suggestion_type = session$userData$app_settings$suggestion_type,
-        num_suggestions = session$userData$session_settings$num_suggestions
+        num_suggestions = session$userData$session_settings$num_suggestions,
+        include_general_id = TRUE
       )
       # Merge with parameters from app_settings if provided
       if (!is.null(session$userData$session_settings$get_job_suggestion_params)) {
@@ -188,9 +190,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
     page_id = "select_suggestion",
     condition = function(session, page, ...) {
       return(
-        nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0 &
-          # TODO: Support kldb here as well
-          session$userData$app_settings$suggestion_type == "auxco-1.2.x"
+        nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0
       )
     },
     run_before = function(session, page, input, ...) {
@@ -214,66 +214,59 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         transition_text <- "Wir versuchen nun, Ihren Beruf genauer einzuordnen."
       }
 
+      df_suggestions <- session$userData$user_info$list_suggestions
       # default: suggest categories descriptions from auxiliary classification
       if (session$userData$app_settings$suggestion_type == "auxco-1.2.x") {
-        df_suggestions <- session$userData$user_info$list_suggestions
-
         suggestion_main_label_column <- "task"
+
+        dropdown_supported <- TRUE
+
         # Note: dropdown infromation is currently only shown for interviewers
         suggestion_dropdown_label_column <- "kldb_title_short"
         suggestion_dropdown_content_column <- "task_description"
+      } else if (session$userData$app_settings$suggestion_type == "kldb-2010") {
+        suggestion_main_label_column <- "title"
 
-        # Generate the html of the choices themselves
-        if (session$userData$session_settings$extra_instructions == "off") {
-          # Don't include extra interviewer information
-          style_is_interview <- "display: none" # Interviewerhinweise ausblenden
+        dropdown_supported <- FALSE
 
-          suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
-            tags$div(
-              tags$div(
-                p(tags$b(paste0(i, ". ", df_suggestions[i, suggestion_main_label_column, with = FALSE])))
-              )
-            )
-          })
-        } else {
-          # Show extra information for the interviewer
-          style_is_interview <- ""
-
-          suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
-            tags$div(
-              tags$div(
-                p(tags$b(paste0(i, ". ", df_suggestions[i, suggestion_main_label_column, with = FALSE]))),
-                tagAppendAttributes(p(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_label_column, with = FALSE], icon("question-circle", class = "read-on-demand-icon fa-sm")), `data-click-toggle` = paste0("toggle-pos-", i))
-              ),
-              tags$div(id = paste0("toggle-pos-", i), style = "display: none", em(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_content_column, with = FALSE]))
-            )
-          })
-        }
-
-
-        # append question "Oder machen Sie etwas anderes?" and "*** keine Angabe"
-        suggestions_html[[length(suggestions_html) + 1]] <- tags$div(
-          p(tags$b(paste0("Oder, ", nrow(df_suggestions) + 1, "., ", question_text_other)))
-        )
+        # Note: dropdown infromation is currently only shown for interviewers
+        # suggestion_dropdown_label_column <- "kldb_title_short"
+        # suggestion_dropdown_content_column <- "task_description"
+      } else {
+        stop("Unsupported Suggestion Type")
       }
 
-      # TODO: Encode this somewhere else / don't handle this via suggestion_type / or maybe just remove it
-      # alternative: suggest *job titles* from auxiliary classification
-      if (session$userData$app_settings$suggestion_type == "aux.labels") {
-        df_suggestions <- session$userData$user_info$list_suggestions
+      # Generate the html of the choices themselves
+      if (!dropdown_supported || session$userData$session_settings$extra_instructions == "off") {
+        # Don't include extra interviewer information
+        style_is_interview <- "display: none" # Interviewerhinweise ausblenden
+
         suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
           tags$div(
-            tagAppendAttributes(p(df_suggestions[i, 4], icon("angle-double-down")), `data-click-toggle` = paste0("toggle-pos-", i)),
-            tags$div(id = paste0("toggle-pos-", i), style = "display: none", em(df_suggestions[i, 5]))
+            tags$div(
+              p(tags$b(paste0(i, ". ", df_suggestions[i, suggestion_main_label_column, with = FALSE])))
+            )
           )
         })
-        # append question "Oder machen Sie etwas anderes?"
-        suggestions_html[[length(suggestions_html) + 1]] <- tags$div(
-          p(paste("Oder", question_text_other)),
-          textInput("text_none_selected", label = "Bitte beschreiben Sie mir diese T\u00e4tigkeit genau.", placeholder = "z.B. \u00fcbliche Aufgaben und T\u00e4tigkeiten, erforderliche Kenntnisse und Fertigkeiten", width = "800px"),
-          br()
-        )
+      } else {
+        # Show extra information for the interviewer
+        style_is_interview <- ""
+
+        suggestions_html <- lapply(c(1:nrow(df_suggestions)), function(i) { # access top five entries from df_suggestions
+          tags$div(
+            tags$div(
+              p(tags$b(paste0(i, ". ", df_suggestions[i, suggestion_main_label_column, with = FALSE]))),
+              tagAppendAttributes(p(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_label_column, with = FALSE], icon("question-circle", class = "read-on-demand-icon fa-sm")), `data-click-toggle` = paste0("toggle-pos-", i))
+            ),
+            tags$div(id = paste0("toggle-pos-", i), style = "display: none", em(class = "read-on-demand", df_suggestions[i, suggestion_dropdown_content_column, with = FALSE]))
+          )
+        })
       }
+
+      # append question "Oder machen Sie etwas anderes?" and "*** keine Angabe"
+      suggestions_html[[length(suggestions_html) + 1]] <- tags$div(
+        p(tags$b(paste0("Oder, ", nrow(df_suggestions) + 1, "., ", question_text_other)))
+      )
 
       # Add no-answer option
       suggestions_html[[length(suggestions_html) + 1]] <- if (is_interview) {
@@ -304,6 +297,9 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         save_data("toggle_submitted", data_to_save, session)
       })
 
+      # For saving the data later on
+      session$userData$user_info$suggestion_main_label_column <- suggestion_main_label_column
+
       return(list(
         transition_text = transition_text,
         style_is_interview = style_is_interview,
@@ -313,7 +309,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
     },
     render = function(session, page, run_before_output, ...) {
       # Column names used in data.table (for R CMD CHECK)
-      auxco_id <- NULL
+      auxco_id <- id <- NULL
 
       list(
         div(
@@ -343,7 +339,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         radioButtons("question1", NULL,
           width = "100%",
           choiceNames = run_before_output$suggestions_html,
-          choiceValues = as.list(c(run_before_output$df_suggestions[, auxco_id], "95", "99")),
+          choiceValues = as.list(c(run_before_output$df_suggestions[, id], "95", "99")),
           selected = get_item_data(session = session, page_id = page$page_id, key = "response_id", default = character(0))
         ),
         br(),
@@ -373,6 +369,9 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
       )
     },
     run_after = function(session, page, input, ...) {
+      # Column names used in data.table (for R CMD CHECK)
+      id <- NULL
+
       shown_suggestions <- rbind(session$userData$user_info$list_suggestions,
         data.frame(id = 95, score = 0, task = paste0("Oder etwas anderes?"), stringsAsFactors = FALSE),
         data.frame(id = 99, score = 0, task = paste0("*** Keine Angabe"), stringsAsFactors = FALSE),
@@ -385,14 +384,16 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
         set_item_data(
           session = session,
           page_id = page$page_id,
-          response_id = "EMPTY"
+          response_id = "EMPTY",
+          response_text = ""
         )
       } else {
         # At least some option has been selected
         set_item_data(
           session = session,
           page_id = page$page_id,
-          response_id = input$question1
+          response_id = input$question1,
+          response_text = shown_suggestions[id == input$question1, session$userData$user_info$suggestion_main_label_column, with = FALSE]
         )
         if (input$question1 != "95" & input$question1 != "99") {
           # A proper suggestion has been selected
@@ -521,7 +522,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
       set_item_data(
         session = session,
         page_id = page$page_id,
-        question_text = paste0(question$question_text, " (", question$id, ")")
+        question_text = paste0(question$question_text, " (", question$question_id, ")")
       )
 
       answer_options_html <- lapply(question$answers$answer_text, function(txt) {
@@ -602,7 +603,7 @@ page_results <- function(...) {
     page_id = "results",
     run_before = function(session, page, ...) {
       # Column names used in data.table (for R CMD CHECK)
-      auxco_id <- NULL
+      auxco_id <- id <- NULL
 
       save_results_overview(session)
 
@@ -625,46 +626,52 @@ page_results <- function(...) {
       has_suggestions <- nrow(stats::na.omit(session$userData$user_info$list_suggestions)) > 0
       if (has_suggestions) {
         selected_suggestion_id <- get_item_data(session = session, page_id = "select_suggestion", key = "response_id")
-        selected_suggestion <- suggestions[auxco_id == selected_suggestion_id]
+        selected_suggestion <- suggestions[id == selected_suggestion_id]
       } else {
         selected_suggestion <- NULL
       }
 
+      res$suggestion_type <- session$userData$app_settings$suggestion_type
+
       # And whether one has been picked
       if (!is.null(selected_suggestion) && nrow(selected_suggestion) > 0) {
-        # Auswahl aus Hilfsklassifikation speichern, falls Folgefragen beantwortet wurden, werden KldB und ISCO nachfolgend geupdated
-        res$auswahlHilfsklassifikation <- selected_suggestion$auxco_id
-        res$auswahlHilfsklassifikationText <- selected_suggestion$task
-        res$auxco_id <- selected_suggestion$auxco_id
+        if (res$suggestion_type == "auxco-1.2.x") {
+          # Auswahl aus Hilfsklassifikation speichern, falls Folgefragen beantwortet wurden, werden KldB und ISCO nachfolgend geupdated
+          res$auswahlHilfsklassifikation <- selected_suggestion$auxco_id
+          res$auswahlHilfsklassifikationText <- selected_suggestion$task
+          res$auxco_id <- selected_suggestion$auxco_id
 
-        # Get raw answers to follow up questions
-        res$followUp1Question <- get_item_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
-        res$followUp1Answer <- get_item_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
-        res$followUp2Question <- get_item_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
-        res$followUp2Answer <- get_item_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
+          # Get raw answers to follow up questions
+          res$followUp1Question <- get_item_data(session = session, page_id = "followup_1", key = "question_text", default = NA_character_)
+          res$followUp1Answer <- get_item_data(session = session, page_id = "followup_1", key = "response_text", default = NA_character_)
+          res$followUp2Question <- get_item_data(session = session, page_id = "followup_2", key = "question_text", default = NA_character_)
+          res$followUp2Answer <- get_item_data(session = session, page_id = "followup_2", key = "response_text", default = NA_character_)
 
-        # Retrieve final kldb / isco codes
-        followup_1_id <- get_item_data(session = session, page_id = "followup_1", key = "response_id")
-        followup_2_id <- get_item_data(session = session, page_id = "followup_2", key = "response_id")
+          # Retrieve final kldb / isco codes
+          followup_1_id <- get_item_data(session = session, page_id = "followup_1", key = "response_id")
+          followup_2_id <- get_item_data(session = session, page_id = "followup_2", key = "response_id")
 
-        # Create a named list of followup_answers
-        followup_questions <- get_followup_questions(selected_suggestion$auxco_id)
-        followup_answers <- list(
-          followup_1_id,
-          followup_2_id
-        )
-        names(followup_answers) <- sapply(
-          followup_questions,
-          function(x) x$question_id
-        )
+          # Create a named list of followup_answers
+          followup_questions <- get_followup_questions(selected_suggestion$auxco_id)
+          followup_answers <- list(
+            followup_1_id,
+            followup_2_id
+          )
+          names(followup_answers) <- sapply(
+            followup_questions,
+            function(x) x$question_id
+          )
 
-        final_codes <- get_final_codes(
-          suggestion_id = selected_suggestion_id,
-          followup_answers = followup_answers,
-          code_type = c("isco_08", "kldb_10")
-        )
-        res$kldb <- final_codes$kldb_10
-        res$isco <- final_codes$isco_08
+          final_codes <- get_final_codes(
+            suggestion_id = selected_suggestion_id,
+            followup_answers = followup_answers,
+            code_type = c("isco_08", "kldb_10")
+          )
+          res$kldb <- final_codes$kldb_10
+          res$isco <- final_codes$isco_08
+        } else if (res$suggestion_type == "kldb-2010") {
+          res$kldb <- selected_suggestion_id
+        }
       }
 
       return(list(
@@ -694,13 +701,14 @@ page_results <- function(...) {
           {
             validate(
               need(
-                !is.na(res$kldb) | res$kldb == "EMPTY",
+                !is.na(res$kldb) || res$kldb == "EMPTY",
                 "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit KldB 2010 abgleichen."
               ),
               need(
-                res$auxco_id != "EMPTY" |
-                  (is.na(res$followUp1Question) | (!is.na(res$followUp1Question) & !is.na(res$followUp1Answer))) |
-                  (is.na(res$followUp2Question) | (!is.na(res$followUp2Question) & !is.na(res$followUp2Answer))),
+                res$id != "EMPTY" ||
+                  res$suggestion_type != "auxco-1.2.x" ||
+                  (is.na(res$followUp1Question) || (!is.na(res$followUp1Question) && !is.na(res$followUp1Answer))) ||
+                  (is.na(res$followUp2Question) || (!is.na(res$followUp2Question) && !is.na(res$followUp2Answer))),
                 "Bitte w\u00e4hlen Sie eine Antwort auf der vorherigen Seite"
               )
             )
@@ -721,13 +729,13 @@ page_results <- function(...) {
           {
             validate(
               need(
-                !is.na(res$kldb) | res$kldb == "EMPTY",
+                !is.na(res$isco) || res$isco == "EMPTY",
                 "Wir konnten die von Ihnen eingegebene Berufsbeschreibung nicht mit ISCO-08 abgleichen"
               ),
               need(
-                res$auxco_id != "EMPTY" |
-                  (is.na(res$followUp1Question) | (!is.na(res$followUp1Question) & !is.na(res$followUp1Answer))) |
-                  (is.na(res$followUp2Question) | (!is.na(res$followUp2Question) & !is.na(res$followUp2Answer))),
+                res$id != "EMPTY" ||
+                  (is.na(res$followUp1Question) || (!is.na(res$followUp1Question) && !is.na(res$followUp1Answer))) ||
+                  (is.na(res$followUp2Question) || (!is.na(res$followUp2Question) && !is.na(res$followUp2Answer))),
                 "Bitte w\u00e4hlen Sie eine Antwort auf der vorherigen Seite"
               )
             )

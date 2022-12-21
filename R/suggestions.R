@@ -271,6 +271,14 @@ get_job_suggestions <- function(text,
   # Column names used in data.table (for R CMD CHECK)
   score <- NULL
 
+  if (suggestion_type == "auxco-1.2.x") {
+    id_colname <- "auxco_id"
+  } else if (suggestion_type == "kldb-2010") {
+    id_colname <- "kldb_id"
+  } else {
+    stop("Unsupported suggestion_type.")
+  }
+
   if (length(text) > 1) {
     # Support the coding of multiple entries, by applying the function
     # to every entry. This could in theory be handled quicker, by optimizing it
@@ -375,11 +383,6 @@ get_job_suggestions <- function(text,
     # Always provide a column "id" with the appropriate suggested id
     # irrespective of suggestion_type
     if (include_general_id) {
-      if (suggestion_type == "auxco-1.2.x") {
-        id_colname <- "auxco_id"
-      } else if (suggestion_type == "kldb-2010") {
-        id_colname <- "kldb_id"
-      }
       id_column <- result[, id_colname, with = FALSE]
       colnames(id_column) <- "id"
       result <- cbind(id_column, result)
@@ -388,13 +391,13 @@ get_job_suggestions <- function(text,
     return(result)
   } else {
     # No suggestions, return empty result
-    return(
-      data.table(
-        id = NA_character_,
-        input_text = text,
-        score = 0
-      )
+    empty_result <- data.table(
+      id = NA_character_,
+      input_text = text,
+      score = 0
     )
+    empty_result[[id_colname]] <- empty_result[["id"]]
+    return(empty_result)
   }
 }
 

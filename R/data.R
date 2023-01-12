@@ -207,7 +207,8 @@ load_kldb_raw <- function() {
     skip = 8,
     sep = ";",
     encoding = "UTF-8",
-    check.names = FALSE
+    check.names = FALSE,
+    colClasses = c("character", rep(NA, 11))
   )
 
   return(as.data.table(kldb_df))

@@ -104,12 +104,15 @@ survey.</p>
 <div class="section level2">
 <h2 id="flow">Flow<a class="anchor" aria-label="anchor" href="#flow"></a>
 </h2>
-<p>The flow of the app and its questions can be quite complicated. We
-therefore created the flow diagram below to illustrate how a participant
-will be guided through the app, depending on their responses.</p>
+<p>The flow of the app and its questions can be quite complicated, as we
+tried to optimise the rate of successful codings.</p>
+<p>We created the flow diagram below to illustrate how a participant
+will be guided through the app, depending on their responses. None of
+the complexity is visible to users and the flow is completely handled
+within the app.</p>
 <div class="figure">
-<img src="../reference/figures/app_flow.svg" style="width:100.0%" alt=""><p class="caption">A diagram showing the participant flow within the
-interactive app</p>
+<img src="../reference/figures/app_flow.svg" style="width:100.0%" alt=""><p class="caption">A diagram illustrating the participant flow within
+the interactive app</p>
 </div>
 </div>
 <div class="section level2">
@@ -177,11 +180,11 @@ find a detailed explanation in
 interviews, e.g., if they were to depend on a previous question or input
 from an external questionnaire. To modify these “session”-settings you
 pass them as query parameters:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ask questions in past tense</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>https<span class="sc">:</span><span class="er">//</span>{url<span class="sc">-</span>to<span class="sc">-</span>my<span class="sc">-</span>interactive<span class="sc">-</span>app}<span class="sc">/</span>?tense<span class="ot">=</span>past</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use full range of supported session parameters</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>https<span class="sc">:</span><span class="er">//</span>{url<span class="sc">-</span>to<span class="sc">-</span>my<span class="sc">-</span>interactive<span class="sc">-</span>app}<span class="sc">/</span>?respondent_id<span class="ot">=</span><span class="er">&lt;</span>your_unique_id<span class="sc">&gt;</span><span class="er">&amp;</span>tense<span class="ot">=</span>past<span class="sc">&amp;</span>extra_instructions<span class="ot">=</span>off<span class="sc">&amp;</span>num_suggestions<span class="ot">=</span><span class="dv">10</span></span></code></pre></div>
+<pre><code># Ask questions in past tense
+https://{url-to-my-interactive-app}/?tense=past
+
+# Use full range of supported session parameters
+https://{url-to-my-interactive-app}/?respondent_id=&lt;your_unique_id&gt;&amp;tense=past&amp;extra_instructions=off&amp;num_suggestions=10</code></pre>
 <p>Here is a list of all supported query parameters:</p>
 <ul>
 <li>
@@ -225,7 +228,7 @@ supplied, you can enforce this by setting
 </div>
 </div>
 <div class="section level2">
-<h2 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
+<h2 id="saved-data">Saved Data<a class="anchor" aria-label="anchor" href="#saved-data"></a>
 </h2>
 <p>The app will keep track of data for you and will, by default,
 automatically save data in multiple CSV files. These are saved to the

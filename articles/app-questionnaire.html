@@ -112,25 +112,13 @@ specific types of question pages:</p>
 <li><code><a href="../reference/page_freetext.html">page_freetext()</a></code></li>
 </ul>
 <p>In general each page has a unique <code>page_id</code> to identify
-itself and follows a general principle of lifecycle functions. First,
-its <code>condition</code> will be run to check whether the page should
-be displayed at all. If this function returns <code>FALSE</code> the
-page will be skipped.</p>
-<p>If the condition is <code>TRUE</code>, the page will be shown. To do
-this the function <code>run_before</code> will be run to prepare
-everything for the page, followed by <code>render</code> to generate the
-page’s actual outputs. Data returned from <code>run_before</code> is
-available in <code>render</code> under the name
-<code>run_before_output</code>.</p>
-<p>When the user navigates away from a page and to the next page, the
-function <code>run_after</code> will be called which can be used to
-capture user input and save data. Then, the next page’s
-<code>condition</code> will be checked and so on.</p>
-<p>If the user wants to go back to the previous page,
-<code>run_after</code> will not be called and the <code>condition</code>
-of the page that the user visited before will be checked again. This
-condition should return <code>TRUE</code>, so that the user can correct
-the responses.</p>
+itself and follows a general principle of lifecycle functions. Most of
+these lifecycle functions are optional, except for the
+<code>render</code> function, which should return the shiny <a href="https://shiny.rstudio.com/articles/tag-glossary.html" class="external-link">HTML
+tags</a> or inputs / outputs to be displayed. All lifecycle functions
+take at least the shiny session as arguments, other arguments depend on
+the function itself (supported arguments are listed in
+<code><a href="../reference/new_page.html">new_page()</a></code>).</p>
 <blockquote>
 <p>Tip: When implementing your own pages, we recommend to use
 <code>...</code> as the last parameter in all of them to allow for
@@ -139,6 +127,31 @@ potentially new parameters to be added.</p>
 <p>To find some useful pre-built pages or helper functions to easily
 generate commonly used pages check out all functions whose name starts
 with <code>page_</code> in the reference.</p>
+<div class="section level3">
+<h3 id="page-lifecycle">Page Lifecycle<a class="anchor" aria-label="anchor" href="#page-lifecycle"></a>
+</h3>
+<p>The lifecycle of a page is as follows: First, its
+<code>condition</code> will be run to check whether the page should be
+displayed at all. If this function returns <code>FALSE</code> the page
+will be skipped and the condition for the following one will be
+evaluated.</p>
+<p>If the condition is <code>TRUE</code>, the page will be shown. To do
+this the function <code>run_before</code> will be run to prepare
+everything for the page, followed by <code>render</code> to generate the
+page’s actual outputs (ata returned from <code>run_before</code> is
+available in <code>render</code> under the name
+<code>run_before_output</code>).</p>
+<p>When the user navigates away from a page and to the next page, the
+function <code>run_after</code> will be called which can be used to
+capture user input and save data. Then, the next page’s
+<code>condition</code> will be checked and so on.</p>
+<p>If the user wants to go back to the previous page,
+<code>run_after</code> will not be called and the previous page will be
+shown. The <code>condition</code> of the page that the user visited
+before will not be checked again.</p>
+<p>A more detailed description of the page lifecycle can be found in the
+documentation for <code><a href="../reference/new_page.html">new_page()</a></code>.</p>
+</div>
 <div class="section level3">
 <h3 id="saving-data">Saving Data<a class="anchor" aria-label="anchor" href="#saving-data"></a>
 </h3>

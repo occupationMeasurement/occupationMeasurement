@@ -91,22 +91,40 @@
 
     
     
-<p>This package implements a toolbox of functionality to help with the
-(interactive) coding of occupations.</p>
-<p>This includes (among other things) functionality to generate a list
-of suggestions for occupation categories based on free text input, to
-conduct a flexible interactive survey, to automatically save survey data
-in different forms and to make data and suggestions available via an
-API.</p>
-<p>Occupation coding is currently mainly implemented by using the <a href="https://github.com/occupationMeasurement/auxiliary-classification" class="external-link">German
-Auxiliary Classification of Occupations (AuxCO)</a> as it was
-specifically developed for interview settings. Final occupation codings
-are available for the International Standard Classification of
-Occupations 2008 (ISCO-08) and the German Klassifikation der Berufe 2010
-(KldB-2010).</p>
-<p>Due to limitations in available training data the tool is currently
-only implemented in German. Support for other languages, especially
-English, is planned, but pending on additional data.</p>
+<p>This package implements a toolbox of functionality to help with many
+of the tasks surrounding the accurate coding of occupations.</p>
+<p>The main way of using this package is via the <a href="#interactive-app">interactive app</a> that comes packaged with it.
+This is by far the easiest way of using the package and allows you to
+seamlessly collect occupational data and immediately code it.</p>
+<p>To integrate the package’s functionality into custom survey software
+you can use the included <a href="#json-api">API</a> and if you want to
+use the package programmatically in R, it exposes some <a href="#included-r-functions">functions</a> to easily do this as well.
+Please refer to the sections below on how to use each of these
+functionalities.</p>
+<p>By default the toolbox uses the <a href="https://github.com/occupationMeasurement/auxiliary-classification" class="external-link">German
+Auxiliary Classification of Occupations (AuxCO)</a> to present easier to
+understand categories to respondets. Final occupation codings are
+available for the <a href="https://www.ilo.org/public/english/bureau/stat/isco/isco08/" class="external-link">International
+Standard Classification of Occupations 2008 (ISCO-08)</a> and the <a href="https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html" class="external-link">German
+Klassifikation der Berufe 2010 (KldB-2010)</a>.</p>
+<blockquote>
+<p>Note: Due to limitations in available training data the tool is
+currently only implemented in German. Support for other languages,
+especially English, is planned, but pending on additional data.</p>
+</blockquote>
+<div class="section level2">
+<h2 id="flow">Flow<a class="anchor" aria-label="anchor" href="#flow"></a>
+</h2>
+<p>The diagram below illustrates how participants are routed through the
+interactive occupation coding app.</p>
+<p>This flow is exactly implemented in the interactive app and we
+recommend to base any new implementation in e.g. custom survey software
+to also implement this flow.</p>
+<div class="figure">
+<img src="../reference/figures/app_flow.svg" style="width:100.0%" alt=""><p class="caption">A diagram illustrating the participant flow within
+the interactive app</p>
+</div>
+</div>
 <div class="section level2">
 <h2 id="interactive-app">Interactive App<a class="anchor" aria-label="anchor" href="#interactive-app"></a>
 </h2>

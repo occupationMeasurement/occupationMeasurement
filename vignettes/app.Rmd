@@ -28,7 +28,9 @@ app()
 
 # Flow
 
-The flow of the app and its questions can be quite complicated. We therefore created the flow diagram below to illustrate how a participant will be guided through the app, depending on their responses.
+The flow of the app and its questions can be quite complicated, as we tried to optimise the rate of successful codings.
+
+We created the flow diagram below to illustrate how a participant will be guided through the app, depending on their responses. None of the complexity is visible to users and the flow is completely handled within the app.
 
 
 ```{r app_flow, eval=FALSE, include=FALSE}
@@ -104,7 +106,7 @@ digraph G {
 ')
 ```
 
-![A diagram showing the participant flow within the interactive app](../man/figures/app_flow.svg){width="100%"}
+![A diagram illustrating the participant flow within the interactive app](../man/figures/app_flow.svg){width="100%"}
 
 # Configuration
 
@@ -149,7 +151,7 @@ app(
 
 Some settings can also be varied between individual sessions / interviews, e.g., if they were to depend on a previous question or input from an external questionnaire. To modify these "session"-settings you pass them as query parameters:
 
-```{r eval=FALSE}
+```
 # Ask questions in past tense
 https://{url-to-my-interactive-app}/?tense=past
 
@@ -174,7 +176,7 @@ This can be done adding a query parameter named `respondent_id` to the URL, i.e.
 
 If you want to make sure that a `respondent_id` is always supplied, you can enforce this by setting `require_respondent_id = TRUE` in the `app_settings`.
 
-# Data
+# Saved Data
 
 The app will keep track of data for you and will, by default, automatically save data in multiple CSV files. These are saved to the `response_output_dir` (if `save_to_file` is `TRUE`), which can be configured in the `app_settings` (see the section above for more information). To quickly read the most important data from CSV files, the convenience function `get_responses()` is available.
 

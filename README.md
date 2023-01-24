@@ -4,34 +4,41 @@
 [![R-CMD-check](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-A toolbox to help with all tasks around the interactive coding and measurement of occupations.
+A toolbox to help you with all tasks around the coding and measurement of occupations.
+
+## About
+
+Coding people's occupations into official classifications such as the [International Standard Classification of Occupations ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or [German KldB-2010](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html) is a notoriously difficult problem. This toolbox is designed to make this easier, by helping with many of the tasks surrounding the measurement of occupations: From creating a survey and collecting data all the way to retrieving the final coded responses.
+
+For a detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package. All vignettes are also available in the [online documentation](https://occupationmeasurement.github.io/occupationMeasurement/index.html).
 
 ## Installation
 
 Prerequisites:
 
-- the [R Statistical Software](https://www.r-project.org/)
-- `install.packages("remotes")`
+- The [R Statistical Software](https://www.r-project.org/) (Version 4.1 or higher)
+- The R package [remotes](https://remotes.r-lib.org/) to install packages from github, available via `install.packages("remotes")`
+
+The package can then be installed by running the code below:
 
 ```r
 remotes::install_github("occupationMeasurement/occupationMeasurement")
 ```
 
-For a detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package. All vignettes are also [available online](https://occupationmeasurement.github.io/occupationMeasurement/index.html).
+## Usage
 
-## Using the interactive App
+### Using the interactive App
 
-The interactive app can be started with the `app()`-function. 
+The interactive app is the easiest way to use the package: It provides a fully-featured, interactive survey application to collect and immediately code occupational data. Starting it is as easy as calling the `app()`-function.
+
 More information about the interactive app can be found in `vignette("app")` and the help page `?app`.
 
 ```r
-library(occupationMeasurement)
-
 # Run the interactive shiny app
-occupationMeasurement::app(questionnaire = questionnaire_web_survey())
+occupationMeasurement::app()
 ```
 
-The app also supports custom questionnaires, so you can build your own or use and adapt one of the questionnaires included in the package. E.g., the `questionnaire_demo` will explain the functionality of the app, and `questionnaire_interviewer_administered` is designed to be read by interviewers in CATI and CAPI surveys.
+The app also supports custom questionnaires, so you can build your own or use and adapt one of the questionnaires included in the package. E.g., the `questionnaire_demo()` will explain the functionality of the app, and `questionnaire_interviewer_administered()` is designed to be read by interviewers in [CATI](https://en.wikipedia.org/wiki/Computer-assisted_telephone_interviewing) and [CAPI](https://en.wikipedia.org/wiki/Computer-assisted_personal_interviewing) surveys. The `questionnaire_web_survey()` is intended to be used for internet surveys.
 
 ```r
 library(occupationMeasurement)
@@ -39,11 +46,13 @@ library(occupationMeasurement)
 # Run the app with additional explanations. The best way to get started.
 app(questionnaire = questionnaire_demo())
 
-# Run the app in interviewer-administered surveys
+# Run the app in interviewer-administered ...
 app(questionnaire = questionnaire_interviewer_administered())
+# or online surveys
+app(questionnaire = questionnaire_web_survey())
 ```
 
-## Alternative Usage
+### Alternative Usage
 
 Besides the interactive app, there are also two alternative ways of using this package, with varying degrees of flexibility and convenience:
 
@@ -53,6 +62,8 @@ Besides the interactive app, there are also two alternative ways of using this p
 You can find more information on how to use these functionalities in `vignette("occupationMeasurement")`.
 
 ## Package Development
+
+This section is only relevant when further developing the package itself.
 
 ### Testing
 

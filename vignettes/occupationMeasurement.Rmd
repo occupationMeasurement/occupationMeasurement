@@ -14,13 +14,23 @@ knitr::opts_chunk$set(
 )
 ```
 
-This package implements a toolbox of functionality to help with the (interactive) coding of occupations.
+This package implements a toolbox of functionality to help with many of the tasks surrounding the accurate coding of occupations.
 
-This includes (among other things) functionality to generate a list of suggestions for occupation categories based on free text input, to conduct a flexible interactive survey, to automatically save survey data in different forms and to make data and suggestions available via an API.
+The main way of using this package is via the [interactive app](#interactive-app) that comes packaged with it. This is by far the easiest way of using the package and allows you to seamlessly collect occupational data and immediately code it.
 
-Occupation coding is currently mainly implemented by using the [German Auxiliary Classification of Occupations (AuxCO)](https://github.com/occupationMeasurement/auxiliary-classification) as it was specifically developed for interview settings. Final occupation codings are available for the International Standard Classification of Occupations 2008 (ISCO-08) and the German Klassifikation der Berufe 2010 (KldB-2010).
+To integrate the package's functionality into custom survey software you can use the included [API](#json-api) and if you want to use the package programmatically in R, it exposes some [functions](#included-r-functions) to easily do this as well. Please refer to the sections below on how to use each of these functionalities.
 
-Due to limitations in available training data the tool is currently only implemented in German. Support for other languages, especially English, is planned, but pending on additional data. 
+By default the toolbox uses the [German Auxiliary Classification of Occupations (AuxCO)](https://github.com/occupationMeasurement/auxiliary-classification) to present easier to understand categories to respondets. Final occupation codings are available for the [International Standard Classification of Occupations 2008 (ISCO-08)](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) and the [German Klassifikation der Berufe 2010 (KldB-2010)](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html).
+
+> Note: Due to limitations in available training data the tool is currently only implemented in German. Support for other languages, especially English, is planned, but pending on additional data. 
+
+# Flow
+
+The diagram below illustrates how participants are routed through the interactive occupation coding app.
+
+This flow is exactly implemented in the interactive app and we recommend to base any new implementation in e.g. custom survey software to also implement this flow.
+
+![A diagram illustrating the participant flow within the interactive app](../man/figures/app_flow.svg){width="100%"}
 
 # Interactive App
 

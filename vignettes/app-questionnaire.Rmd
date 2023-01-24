@@ -27,17 +27,23 @@ There exist some helper functions that make it simple to create specific types o
 - `page_choose_one_option()`
 - `page_freetext()`
 
-In general each page has a unique `page_id` to identify itself and follows a general principle of lifecycle functions. First, its `condition` will be run to check whether the page should be displayed at all. If this function returns `FALSE` the page will be skipped.
-
-If the condition is `TRUE`, the page will be shown. To do this the function `run_before` will be run to prepare everything for the page, followed by `render` to generate the page's actual outputs. Data returned from `run_before` is available in `render` under the name `run_before_output`.
-
-When the user navigates away from a page and to the next page, the function `run_after` will be called which can be used to capture user input and save data. Then, the next page's `condition` will be checked and so on.
-
-If the user wants to go back to the previous page, `run_after` will not be called and the `condition` of the page that the user visited before will be checked again. This condition should return `TRUE`, so that the user can correct the responses.
+In general each page has a unique `page_id` to identify itself and follows a general principle of lifecycle functions. Most of these lifecycle functions are optional, except for the `render` function, which should return the shiny [HTML tags](https://shiny.rstudio.com/articles/tag-glossary.html) or inputs / outputs to be displayed. All lifecycle functions take at least the shiny session as arguments, other arguments depend on the function itself (supported arguments are listed in `new_page()`).
 
 > Tip: When implementing your own pages, we recommend to use `...` as the last parameter in all of them to allow for potentially new parameters to be added.
 
 To find some useful pre-built pages or helper functions to easily generate commonly used pages check out all functions whose name starts with `page_` in the reference.
+
+## Page Lifecycle
+
+The lifecycle of a page is as follows: First, its `condition` will be run to check whether the page should be displayed at all. If this function returns `FALSE` the page will be skipped and the condition for the following one will be evaluated.
+
+If the condition is `TRUE`, the page will be shown. To do this the function `run_before` will be run to prepare everything for the page, followed by `render` to generate the page's actual outputs (ata returned from `run_before` is available in `render` under the name `run_before_output`).
+
+When the user navigates away from a page and to the next page, the function `run_after` will be called which can be used to capture user input and save data. Then, the next page's `condition` will be checked and so on.
+
+If the user wants to go back to the previous page, `run_after` will not be called and the previous page will be shown. The `condition` of the page that the user visited before will not be checked again.
+
+A more detailed description of the page lifecycle can be found in the documentation for `new_page()`.
 
 ## Saving Data
 

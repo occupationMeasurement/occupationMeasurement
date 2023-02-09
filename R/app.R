@@ -70,7 +70,7 @@ app <- function(questionnaire = questionnaire_web_survey(),
   ui <- shinyUI(fluidPage(
     tags$head(
       # Load the default / base styles
-      tags$link(rel = "stylesheet", type = "text/css", href = "/www/base-styles.css"),
+      tags$link(rel = "stylesheet", type = "text/css", href = "www/base-styles.css"),
 
       # Include additional user-provided CSS
       # Note that we can't load this via a HTML tag, as we would have to add

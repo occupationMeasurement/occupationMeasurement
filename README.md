@@ -102,4 +102,4 @@ During development, `roxygen2::roxygenise()` is useful to update .Rd-files.
 ## Acknowledgments
 
 This project is funded by the Deutsche Forschungsgemeinschaft (DFG, German
-Research Foundation) – Project number 290773872.
+Research Foundation) – Project numbers 290773872 and 460037581.

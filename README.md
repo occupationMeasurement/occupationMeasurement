@@ -6,6 +6,10 @@
 
 A toolbox to help you with all tasks around the coding and measurement of occupations.
 
+[[online demo](https://occupationmeasurement.shinyapps.io/app_demo/)[^1]]
+
+[^1]: Demo for `questionnaire_demo()` running on shinyapps.io. Alternative demos for `questionnaire_web_survey()` [[demo](https://occupationmeasurement.shinyapps.io/app_web/)] and `questionnaire_interviewer_administered()` [[demo](https://occupationmeasurement.shinyapps.io/app_interviewer/)] are also available. Demos may be unavailable due to bandwidth restrictions.
+
 ## About
 
 Coding people's occupations into official classifications such as the [International Standard Classification of Occupations ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or [German KldB-2010](https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/Archiv-KldB/KldB2010/KldB2010-Nav.html) is a notoriously difficult problem. This toolbox is designed to make this easier, by helping with many of the tasks surrounding the measurement of occupations: From creating a survey and collecting data all the way to retrieving the final coded responses.

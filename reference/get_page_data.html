@@ -12,7 +12,7 @@ to use page$get_item_data instead."><meta property="og:image" content="https://o
     
     <a class="navbar-brand me-2" href="../index.html">occupationMeasurement</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +35,9 @@ to use page$get_item_data instead."><meta property="og:image" content="https://o
     <a class="dropdown-item" href="../articles/app-deployment.html">Deploying to a Server / the Cloud</a>
     <a class="dropdown-item" href="../articles/api.html">Using the API</a>
   </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
@@ -102,9 +105,9 @@ if no key is provided.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span></span>
 <span class="r-in"><span><span class="co"># This code is expected to be run in e.g. run_before</span></span></span>
-<span class="r-in"><span><span class="fu">get_page_data</span><span class="op">(</span>session <span class="op">=</span> <span class="va">session</span>, key <span class="op">=</span> <span class="st">"user_answer"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">occupationMeasurement</span><span class="fu">:::</span><span class="fu">get_page_data</span><span class="op">(</span>session <span class="op">=</span> <span class="va">session</span>, key <span class="op">=</span> <span class="st">"user_answer"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>

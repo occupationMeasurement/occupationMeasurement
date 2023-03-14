@@ -14,7 +14,7 @@ algorithm in get_job_suggestions."><meta property="og:image" content="https://oc
     
     <a class="navbar-brand me-2" href="../index.html">occupationMeasurement</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,9 @@ algorithm in get_job_suggestions."><meta property="og:image" content="https://oc
     <a class="dropdown-item" href="../articles/app-deployment.html">Deploying to a Server / the Cloud</a>
     <a class="dropdown-item" href="../articles/api.html">Using the API</a>
   </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
@@ -199,28 +202,28 @@ but will be ignored in this function.</p></dd>
 <span class="r-in"><span><span class="co"># Comparison of algo_similarity_based_reasoning() with get_job_suggestions()</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Example of using algo_similarity_based_reasoning() directly. Not recommended.</span></span></span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="fu">algo_similarity_based_reasoning</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="preprocess_string.html">preprocess_string</a></span><span class="op">(</span><span class="st">"Arzt"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  sim_name <span class="op">=</span> <span class="st">"wordwise"</span></span></span>
-<span class="r-in"><span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">score</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="fu">algo_similarity_based_reasoning</span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="preprocess_string.html">preprocess_string</a></span><span class="op">(</span><span class="st">"Arzt"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    sim_name <span class="op">=</span> <span class="st">"wordwise"</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">score</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Same output as before, but the function is more adaptable.</span></span></span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="get_job_suggestions.html">get_job_suggestions</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="st">"Arzt"</span>,</span></span>
-<span class="r-in"><span>  suggestion_type <span class="op">=</span> <span class="st">"kldb-2010"</span>,</span></span>
-<span class="r-in"><span>  num_suggestions <span class="op">=</span> <span class="fl">1500</span>,</span></span>
-<span class="r-in"><span>  steps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>    simbased_default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>      algorithm <span class="op">=</span> <span class="va">algo_similarity_based_reasoning</span>,</span></span>
-<span class="r-in"><span>      parameters <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>        sim_name <span class="op">=</span> <span class="st">"wordwise"</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="get_job_suggestions.html">get_job_suggestions</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="st">"Arzt"</span>,</span></span>
+<span class="r-in"><span>    suggestion_type <span class="op">=</span> <span class="st">"kldb-2010"</span>,</span></span>
+<span class="r-in"><span>    num_suggestions <span class="op">=</span> <span class="fl">1500</span>,</span></span>
+<span class="r-in"><span>    steps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>      simbased_default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        algorithm <span class="op">=</span> <span class="va">algo_similarity_based_reasoning</span>,</span></span>
+<span class="r-in"><span>        parameters <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>          sim_name <span class="op">=</span> <span class="st">"wordwise"</span></span></span>
+<span class="r-in"><span>        <span class="op">)</span></span></span>
 <span class="r-in"><span>      <span class="op">)</span></span></span>
 <span class="r-in"><span>    <span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">kldb_id</span>, <span class="va">score</span>, <span class="va">sim_name</span>, kldb_id_title <span class="op">=</span> <span class="va">title</span><span class="op">)</span><span class="op">]</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">kldb_id</span>, <span class="va">score</span>, <span class="va">sim_name</span>, kldb_id_title <span class="op">=</span> <span class="va">title</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>

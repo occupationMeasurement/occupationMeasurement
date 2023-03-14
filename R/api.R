@@ -27,11 +27,14 @@
 #' @seealso `vignette("api")`
 #'
 #' @examples
-#' \dontrun{
-#' api(start = TRUE)
-#'
+#' # Get the plumber router
 #' router <- api(start = FALSE)
+#' \dontrun{
+#' # Start the router
 #' plumber::pr_run(router)
+#'
+#' # Immediately start the API
+#' api(start = TRUE)
 #' }
 api <- function(start = TRUE,
                 file = system.file("plumber", "api", "plumber.R", package = "occupationMeasurement"),

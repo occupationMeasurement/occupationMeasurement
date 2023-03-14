@@ -47,7 +47,6 @@
 #'
 #' @return A list of app_settings.
 #' @export
-#'
 #' @examples
 #' app_settings <- create_app_settings(require_respondent_id = TRUE)
 create_app_settings <- function(suggestion_type = "auxco-1.2.x",

@@ -82,9 +82,15 @@
 #' @param dir The path to the directory which holds the CSVs.
 #' @param add_explanations Whether explanations should be added to some of the
 #'   harder to understand task descriptions. Defaults to TRUE.
-#'
 #' @return A list with multiple data.tables.
 #' @export
+#' @examples
+#' # This function expects the CSV files from
+#' # https://github.com/occupationMeasurement/auxiliary-classification/releases/
+#' # to be there.
+#' \dontrun{
+#' load_auxco("path/to/auxco/")
+#' }
 #' @seealso https://github.com/occupationMeasurement/auxiliary-classification, [auxco]
 load_auxco <- function(dir, add_explanations = TRUE) {
   # Column names used in data.table (for R CMD CHECK)
@@ -224,6 +230,8 @@ load_kldb_raw <- function() {
 #'
 #' @return A cleaned / slimmed version of the KldB 2010.
 #' @export
+#' @examples
+#' load_kldb()
 load_kldb <- function() {
   # Column names used in data.table (for R CMD CHECK)
   level <- title <- label <- kldb_id <- NULL

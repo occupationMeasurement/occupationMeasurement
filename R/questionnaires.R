@@ -6,9 +6,7 @@
 #' @param show_feedback_page Show the [page_feedback()] to evaluate the fit of
 #'   the chosen suggestion.
 #' @return A questionnaire for [app()], i.e. a list of pages.
-#'
 #' @export
-#'
 #' @examples
 #' library(occupationMeasurement)
 #'
@@ -44,9 +42,7 @@ questionnaire_web_survey <- function(show_feedback_page = TRUE) {
 #'
 #' @inheritParams questionnaire_web_survey
 #' @return A questionnaire for [app()] i.e. a list of pages.
-#'
 #' @export
-#'
 #' @examples
 #' library(occupationMeasurement)
 #'
@@ -79,9 +75,7 @@ questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
 #'
 #' @inheritParams questionnaire_web_survey
 #' @return A questionnaire for [app()] i.e. a list of pages.
-#'
 #' @export
-#'
 #' @examples
 #' library(occupationMeasurement)
 #'

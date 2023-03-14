@@ -8,8 +8,18 @@
 #'
 #' @return shiny Action Button
 #' @export
-#'
 #' @seealso [new_page()]
+#' @examples
+#' very_simple_page <- new_page(
+#'   page_id = "example",
+#'   render = function(session, run_before_output, input, output, ...) {
+#'     list(
+#'       shiny::tags$h1("My test page"),
+#'       button_previous(),
+#'       button_next()
+#'     )
+#'   }
+#' )
 button_next <- function(label = "Weiter") {
   actionButton("nextButton", label)
 }

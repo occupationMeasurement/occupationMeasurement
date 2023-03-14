@@ -239,7 +239,6 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
-#'
 #' @examples
 #' get_job_suggestions("Koch")
 #'
@@ -532,9 +531,7 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 #'   (Only for internal use, use [get_final_codes()] to get codes)
 #' @return List of followup questions and their answer options.
 #' @export
-#'
 #' @inheritParams get_job_suggestions
-#'
 #' @examples
 #' # Get followup questions for "Post- und Zustelldienste"
 #' get_followup_questions("1004")
@@ -621,9 +618,7 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' @return Data table with information about the suggestion.
 #' @keywords internal
 #' @export
-#'
 #' @inheritParams get_job_suggestions
-#'
 #' @examples
 #' get_suggestion_info("9079")
 get_suggestion_info <- function(suggestion_ids,
@@ -705,7 +700,6 @@ get_suggestion_info <- function(suggestion_ids,
 #'
 #' @return A named list corresponding to the code_type(s) specified. Includes a `message` if `verbose = TRUE`
 #' @export
-#'
 #' @examples
 #' get_final_codes(
 #'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung

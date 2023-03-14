@@ -31,7 +31,7 @@
 #'   \item{n.draws}{Number of draws from the posterior distribution to determine posterior predictive probabilities. The larger, the more precise the results will be.}
 #'   \item{check_normality}{We would like that the hyperprior distribution is normal. Set check_normality to TRUE to do some diagnostics about this.}
 #' }
-#' 
+#'
 #' @seealso [pretrained_models], which were created using this function.
 #'
 #' @references
@@ -51,8 +51,6 @@
 #'   \item{simulation_control}{The input parameters controlling the Monte Carlo simulation.}
 #' }
 #' @import data.table
-#' @export
-#'
 train_similarity_based_reasoning <- function(anonymized_data,
                                              num_allowed_codes = 1291,
                                              coding_index_w_codes,

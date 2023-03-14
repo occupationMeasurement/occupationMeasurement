@@ -306,8 +306,13 @@ save_results_overview <- function(session) {
 #' @param app_settings The app_settings configuration, should be the same as
 #'   used in [app()].
 #'
-#' @return A combined data.table of user data (based on results_overview).
+#' @return A combined data.table of user data (based on results_overview) or
+#'   NULL if there are no files.
 #' @export
+#' app_settings <- create_app_settings()
+#' \dontrun{
+#' get_responses(app_settings = app_settings)
+#' }
 get_responses <- function(app_settings = create_app_settings()) {
   # Note: This has to match with the pattern of filenames specified in save_data_on_disk
   files_to_read <- list.files(app_settings$response_output_dir, pattern = "_results_overview.*\\.csv$", full.names = T)

@@ -10,6 +10,11 @@
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(page_welcome)
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatischen Berufskodierung!",
                          ...) {
   new_page(
@@ -43,6 +48,18 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_second_freetext(),
+#'   page_select_suggestion(),
+#'   page_none_selected_freetext(),
+#'   page_followup(1),
+#'   page_followup(2)
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_first_freetext <- function(is_interview = FALSE,
   aggregate_score_threshold = 0.535,
   ...
@@ -113,6 +130,18 @@ page_first_freetext <- function(is_interview = FALSE,
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_second_freetext(),
+#'   page_select_suggestion(),
+#'   page_none_selected_freetext(),
+#'   page_followup(1),
+#'   page_followup(2)
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_second_freetext <- function(combine_input_with_first = TRUE,
   is_interview = FALSE, aggregate_score_threshold = 0.02, ...) {
   # TODO: Maybe abstract aways all the duplicated code between page_first_freetext and page_second_freetext
@@ -185,6 +214,18 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_second_freetext(),
+#'   page_select_suggestion(),
+#'   page_none_selected_freetext(),
+#'   page_followup(1),
+#'   page_followup(2)
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_select_suggestion <- function(is_interview = FALSE, ...) {
   new_page(
     page_id = "select_suggestion",
@@ -424,6 +465,18 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_second_freetext(),
+#'   page_select_suggestion(),
+#'   page_none_selected_freetext(),
+#'   page_followup(1),
+#'   page_followup(2)
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_none_selected_freetext <- function(is_interview = FALSE, ...) {
   page_freetext(
     page_id = "none_selected_freetext",
@@ -476,6 +529,18 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_second_freetext(),
+#'   page_select_suggestion(),
+#'   page_none_selected_freetext(),
+#'   page_followup(1),
+#'   page_followup(2)
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because R (sigh)
   new_page(
     page_id = paste0("followup_", index),
@@ -598,6 +663,19 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_second_freetext(),
+#'   page_select_suggestion(),
+#'   page_none_selected_freetext(),
+#'   page_followup(1),
+#'   page_followup(2),
+#'   page_results()
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_results <- function(...) {
   new_page(
     page_id = "results",
@@ -769,6 +847,15 @@ page_results <- function(...) {
 #' @inheritParams page_first_freetext
 #' @return A page object.
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_first_freetext(),
+#'   page_select_suggestion(),
+#'   page_feedback()
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_feedback <- function(is_interview = FALSE, ...) {
   # Column names used in data.table (for R CMD CHECK)
   auxco_id <- NULL
@@ -843,6 +930,13 @@ page_feedback <- function(is_interview = FALSE, ...) {
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
+#' @examples
+#' my_questionnaire <- list(
+#'   page_final()
+#' )
+#' \dontrun{
+#' app(questionnaire = my_questionnaire)
+#' }
 page_final <- function(...) {
   new_page(
     page_id = "final",

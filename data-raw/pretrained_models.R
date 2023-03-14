@@ -34,7 +34,6 @@ set.seed(4666) # random.org 1 - 10000
 #'
 #' @return a data.table with columns Berufsbenennungen, bezMale, and bezFemale, Code, and count_categories.
 #' @import data.table
-#' @export
 prepare_coding_index_ba <- function(path_to_file, count.categories = FALSE) {
   gesamtberufsliste <- data.table(readxl::read_excel(path_to_file, sheet = 2, skip = 4, col_names = c("DKZ-ID", "Codenummer", "Zustand", "Bezeichnung_neutral", "Bezeichnung_maennlich", "Bezeichnung_weiblich")))
 

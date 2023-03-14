@@ -31,7 +31,10 @@ validate_questionnaire <- function(questionnaire, verbose) {
 }
 
 
-#' Start the interactive shiny occupation coding app.
+#' Get an instance of the interactive shiny occupation coding app.
+#'
+#' Printing the returned instance or returning it without saving it in a
+#' variable will start the app.
 #'
 #' @param questionnaire The questionnaire to load.
 #'   (Defaults to the questionnaire returned by \link{questionnaire_web_survey}().)
@@ -43,18 +46,19 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #'   should rather do so with [shiny::addResourcePath] rather than with this
 #'   parameter.
 #' @param ... Any additional parameters will be forwarded to shiny::shinyApp().
-#'
-#' @return A shiny app.
+#' @return A shiny app instance.
 #' @seealso `vignette("app")`, [questionnaire_web_survey()]
 #' @export
-#'
 #' @examples
-#' \dontrun{
-#' app(
+#' app_instance <- app(
 #'   app_settings = create_app_settings(
 #'     save_to_file = TRUE
 #'   )
 #' )
+#'
+#' # Start the app
+#' \dontrun{
+#' app_instance
 #' }
 app <- function(questionnaire = questionnaire_web_survey(),
                 app_settings = create_app_settings(),

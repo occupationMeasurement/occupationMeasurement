@@ -23,7 +23,7 @@ to use set_item_data instead.
 \examples{
 \dontrun{
 # This code is expected to be run in e.g. run_before
-set_page_data(session = session, page_id = "example", values = list(
+occupationMeasurement:::set_page_data(session = session, page_id = "example", values = list(
   user_answer = "Some User Answer"
 ))
 }

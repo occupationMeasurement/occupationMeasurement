@@ -268,7 +268,7 @@ leaving_page_backwards <- function(page, session, input, output, ...) {
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' set_page_data(session = session, page_id = "example", values = list(
+#' occupationMeasurement:::set_page_data(session = session, page_id = "example", values = list(
 #'   user_answer = "Some User Answer"
 #' ))
 #' }
@@ -298,7 +298,7 @@ set_page_data <- function(session, page_id, values) {
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
-#' get_page_data(session = session, key = "user_answer")
+#' occupationMeasurement:::get_page_data(session = session, key = "user_answer")
 #' }
 get_page_data <- function(session, page_id, key = NULL, default = NULL) {
   stopifnot(!is.null(session) && !is.null(page_id))

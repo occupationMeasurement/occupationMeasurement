@@ -29,7 +29,7 @@ to use page$get_item_data instead.
 \examples{
 \dontrun{
 # This code is expected to be run in e.g. run_before
-get_page_data(session = session, key = "user_answer")
+occupationMeasurement:::get_page_data(session = session, key = "user_answer")
 }
 }
 \seealso{

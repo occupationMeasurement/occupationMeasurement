@@ -23,11 +23,13 @@ library(occupationMeasurement)
 # Inspect the code to create the questionnaire_web_survey
 print(questionnaire_web_survey)
 
-\dontrun{
-# Run the app with the questionnaire_web_survey
-app(questionnaire = questionnaire_web_survey())
+if (interactive()){
+  # Run the app with the questionnaire_web_survey
+  app(questionnaire = questionnaire_web_survey())
+}
 
-# This is used by default within app
-app()
+if (interactive()){
+  # This is used by default within app
+  app()
 }
 }

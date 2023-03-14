@@ -17,3 +17,9 @@ NULL if there are no files.
 \description{
 Expects data to be saved as files.
 }
+\examples{
+app_settings <- create_app_settings()
+if (interactive()){
+  get_responses(app_settings = app_settings)
+}
+}

@@ -20,8 +20,8 @@ complete.
 my_questionnaire <- list(
   page_final()
 )
-\dontrun{
-app(questionnaire = my_questionnaire)
+if (interactive()){
+  app(questionnaire = my_questionnaire)
 }
 }
 \seealso{

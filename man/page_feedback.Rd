@@ -26,7 +26,7 @@ my_questionnaire <- list(
   page_select_suggestion(),
   page_feedback()
 )
-\dontrun{
-app(questionnaire = my_questionnaire)
+if (interactive()){
+  app(questionnaire = my_questionnaire)
 }
 }

@@ -64,28 +64,28 @@ get_job_suggestions(
 # Comparison of algo_similarity_based_reasoning() with get_job_suggestions()
 
 # Example of using algo_similarity_based_reasoning() directly. Not recommended.
-\dontrun{
-algo_similarity_based_reasoning(
-  preprocess_string("Arzt"),
-  sim_name = "wordwise"
-)[order(score, decreasing = TRUE)]
+if (interactive()){
+  algo_similarity_based_reasoning(
+    preprocess_string("Arzt"),
+    sim_name = "wordwise"
+  )[order(score, decreasing = TRUE)]
 }
 
 # Same output as before, but the function is more adaptable.
-\dontrun{
-get_job_suggestions(
-  "Arzt",
-  suggestion_type = "kldb-2010",
-  num_suggestions = 1500,
-  steps = list(
-    simbased_default = list(
-      algorithm = algo_similarity_based_reasoning,
-      parameters = list(
-        sim_name = "wordwise"
+if (interactive()){
+  get_job_suggestions(
+    "Arzt",
+    suggestion_type = "kldb-2010",
+    num_suggestions = 1500,
+    steps = list(
+      simbased_default = list(
+        algorithm = algo_similarity_based_reasoning,
+        parameters = list(
+          sim_name = "wordwise"
+        )
       )
     )
-  )
-)[, list(kldb_id, score, sim_name, kldb_id_title = title)]
+  )[, list(kldb_id, score, sim_name, kldb_id_title = title)]
 }
 }
 \references{

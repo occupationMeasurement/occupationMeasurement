@@ -22,8 +22,8 @@ Providing an introduction and greeting participants.
 }
 \examples{
 my_questionnaire <- list(page_welcome)
-\dontrun{
-app(questionnaire = my_questionnaire)
+if (interactive()){
+  app(questionnaire = my_questionnaire)
 }
 }
 \seealso{

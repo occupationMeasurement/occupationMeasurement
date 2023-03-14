@@ -43,7 +43,7 @@ app_instance <- app(
 )
 
 # Start the app
-\dontrun{
+if (interactive()){
 app_instance
 }
 }

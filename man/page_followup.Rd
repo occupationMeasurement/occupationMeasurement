@@ -36,8 +36,8 @@ my_questionnaire <- list(
   page_followup(1),
   page_followup(2)
 )
-\dontrun{
-app(questionnaire = my_questionnaire)
+if (interactive()){
+  app(questionnaire = my_questionnaire)
 }
 }
 \seealso{

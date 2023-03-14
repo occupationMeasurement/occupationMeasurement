@@ -159,7 +159,7 @@ questionnaire_that_saves_two_items <- list(
   very_simple_page
 )
 
-\dontrun{
+if (interactive()){
   app(questionnaire = questionnaire_that_saves_two_items)
 }
 

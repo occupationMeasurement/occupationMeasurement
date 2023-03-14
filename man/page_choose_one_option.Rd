@@ -64,7 +64,7 @@ one_page_questionnaire <- list(
  ),
  page_final()
 )
-\dontrun{
+if (interactive()){
  app(questionnaire = one_page_questionnaire)
 }
 

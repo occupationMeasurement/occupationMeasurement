@@ -25,8 +25,8 @@ library(occupationMeasurement)
 # Inspect the code to create the questionnaire_interviewer_administered
 print(questionnaire_interviewer_administered)
 
-\dontrun{
-# Run the app with the questionnaire_interviewer_administered
-app(questionnaire = questionnaire_interviewer_administered())
+if (interactive()){
+  # Run the app with the questionnaire_interviewer_administered
+  app(questionnaire = questionnaire_interviewer_administered())
 }
 }

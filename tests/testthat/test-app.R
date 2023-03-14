@@ -65,6 +65,7 @@ is_ci <- !is.na(as.logical(Sys.getenv("CI"))) && !as.logical(Sys.getenv("CI"))
 
 test_that("E2E: test case Koch", {
   skip_on_ci()
+  skip_on_cran()
 
   response_dir <- withr::local_tempdir()
 
@@ -87,11 +88,6 @@ test_that("E2E: test case Koch", {
   )
 
   wait_time <- 1
-
-  # To Debug in Chrome
-  if (debug_test_case && is_ci) {
-    app$view()
-  }
 
   # Go to example URL
   app$run_js("window.location.href = '/?respondent_id=test123&tense=present&extra_instructions=on&study_id=Test'")
@@ -218,6 +214,7 @@ test_that("E2E: test case Koch", {
 
 test_that("Followup questions are correctly skipped: ESE test case Textiltechniker)", {
   skip_on_ci()
+  skip_on_cran()
 
   app <- AppDriver$new(
     app_dir = app(

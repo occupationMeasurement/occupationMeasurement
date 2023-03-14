@@ -20,11 +20,11 @@ Authors@R: c(
             comment = c(ORCID = "0000-0003-4058-1543")
         )
     )
-Description: This package provides a set of functions for interactive
-    occupation coding in interviews. It contains the functionality to
-    generate suggestions for occupational categories based on free text input.
-    Pre-trained machine learning models in German and a ready-to-use shiny
-    application is provided for quick and easy data collection.
+Description: Perform interactive occupation coding during interviews (Peycheva, D. and Sakshaug, J., Calderwood, L., 2021) <doi:10.2478/jos-2021-0042>,
+    (Schierholz, M. and Gensicke, M. and Tschersich, N. and Kreuter, F., 2018) <doi:10.1111/rssa.12297>
+    and generate suggestions for occupational categories based on free text
+    input. Pre-trained machine learning models in German and a ready-to-use
+    shiny application is provided for quick and easy data collection.
 License: MIT + file LICENSE
 URL: https://occupationMeasurement.github.io/occupationMeasurement/,
     https://github.com/occupationMeasurement/occupationMeasurement

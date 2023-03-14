@@ -18,7 +18,7 @@ As the interactive app has been built using [shiny](https://shiny.rstudio.com), 
 
 # Using shiny-server ✨
 
-[Shiny-server](https://www.rstudio.com/products/shiny/shiny-server/) is an application to easily run shiny apps on a server.
+[Shiny-server](https://posit.co/products/open-source/shinyserver/) is an application to easily run shiny apps on a server.
 
 Once you have a running instance of shiny-server, you can easily setup the interactive occupationMeasurement shiny app by adding a new script called `app.R` with the following code:
 

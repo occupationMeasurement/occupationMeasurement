@@ -264,6 +264,7 @@ leaving_page_backwards <- function(page, session, input, output, ...) {
 #'   Values are added / overwritten based on the names provided in the list.
 #' @seealso [set_item_data()]
 #' @keywords internal
+#' @return nothing
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
@@ -334,6 +335,7 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #' @param response_text The user's response in text form. (optional)
 #' @param response_id The user's response as an id from a set of choices.
 #'   (optional)
+#' @return nothing
 #' @export
 #' @seealso [get_item_data()]
 #' @examples

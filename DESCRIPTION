@@ -16,7 +16,7 @@ Authors@R: c(
         person(
             "Malte", "Schierholz", ,
             "malte.schierholz@stat.uni-muenchen.de",
-            role = c("aut"),
+            role = c("aut", "cph"),
             comment = c(ORCID = "0000-0003-4058-1543")
         )
     )

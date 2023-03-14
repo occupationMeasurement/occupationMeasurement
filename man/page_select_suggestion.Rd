@@ -19,6 +19,19 @@ A page object.
 \description{
 Display the generated suggestions for the user to pick one.
 }
+\examples{
+my_questionnaire <- list(
+  page_first_freetext(),
+  page_second_freetext(),
+  page_select_suggestion(),
+  page_none_selected_freetext(),
+  page_followup(1),
+  page_followup(2)
+)
+\dontrun{
+app(questionnaire = my_questionnaire)
+}
+}
 \seealso{
 \code{\link[=new_page]{new_page()}}
 }

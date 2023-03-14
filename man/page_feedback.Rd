@@ -20,3 +20,13 @@ A page object.
 \description{
 Page to receive feedback on how well the chosen suggestion fits
 }
+\examples{
+my_questionnaire <- list(
+  page_first_freetext(),
+  page_select_suggestion(),
+  page_feedback()
+)
+\dontrun{
+app(questionnaire = my_questionnaire)
+}
+}

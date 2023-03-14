@@ -50,11 +50,14 @@ A Plumber router
 Start the occupation coding API.
 }
 \examples{
-\dontrun{
-api(start = TRUE)
-
+# Get the plumber router
 router <- api(start = FALSE)
+\dontrun{
+# Start the router
 plumber::pr_run(router)
+
+# Immediately start the API
+api(start = TRUE)
 }
 }
 \seealso{

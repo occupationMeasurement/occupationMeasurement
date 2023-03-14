@@ -25,6 +25,14 @@ expected by other functions in this package.
 This package also includes an already loaded version of the \link{auxco}, which
 can be used straight away \emph{without} calling this function.
 }
+\examples{
+# This function expects the CSV files from
+# https://github.com/occupationMeasurement/auxiliary-classification/releases/
+# to be there.
+\dontrun{
+load_auxco("path/to/auxco/")
+}
+}
 \seealso{
 https://github.com/occupationMeasurement/auxiliary-classification, \link{auxco}
 }

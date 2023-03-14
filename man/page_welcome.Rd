@@ -20,6 +20,12 @@ A page object.
 \description{
 Providing an introduction and greeting participants.
 }
+\examples{
+my_questionnaire <- list(page_welcome)
+\dontrun{
+app(questionnaire = my_questionnaire)
+}
+}
 \seealso{
 \code{\link[=new_page]{new_page()}}
 }

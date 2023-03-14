@@ -11,7 +11,8 @@ get_responses(app_settings = create_app_settings())
 used in \code{\link[=app]{app()}}.}
 }
 \value{
-A combined data.table of user data (based on results_overview).
+A combined data.table of user data (based on results_overview) or
+NULL if there are no files.
 }
 \description{
 Expects data to be saved as files.

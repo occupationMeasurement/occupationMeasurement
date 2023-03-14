@@ -2,7 +2,7 @@
 % Please edit documentation in R/app.R
 \name{app}
 \alias{app}
-\title{Start the interactive shiny occupation coding app.}
+\title{Get an instance of the interactive shiny occupation coding app.}
 \usage{
 app(
   questionnaire = questionnaire_web_survey(),
@@ -29,18 +29,22 @@ parameter.}
 \item{...}{Any additional parameters will be forwarded to shiny::shinyApp().}
 }
 \value{
-A shiny app.
+A shiny app instance.
 }
 \description{
-Start the interactive shiny occupation coding app.
+Printing the returned instance or returning it without saving it in a
+variable will start the app.
 }
 \examples{
-\dontrun{
-app(
+app_instance <- app(
   app_settings = create_app_settings(
     save_to_file = TRUE
   )
 )
+
+# Start the app
+\dontrun{
+app_instance
 }
 }
 \seealso{

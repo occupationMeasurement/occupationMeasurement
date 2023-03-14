@@ -23,6 +23,18 @@ Buttons to navigate between pages.
 \item \code{button_previous()}: Go to the previous page
 
 }}
+\examples{
+very_simple_page <- new_page(
+  page_id = "example",
+  render = function(session, run_before_output, input, output, ...) {
+    list(
+      shiny::tags$h1("My test page"),
+      button_previous(),
+      button_next()
+    )
+  }
+)
+}
 \seealso{
 \code{\link[=new_page]{new_page()}}
 }

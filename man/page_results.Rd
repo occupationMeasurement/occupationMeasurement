@@ -17,6 +17,20 @@ This page is only meant for demonstration purposes. Users can see what they
 entered and which code was being saved. The page is only included in the
 \code{\link[=questionnaire_demo]{questionnaire_demo()}}, but not in the other questionnaire templates.
 }
+\examples{
+my_questionnaire <- list(
+  page_first_freetext(),
+  page_second_freetext(),
+  page_select_suggestion(),
+  page_none_selected_freetext(),
+  page_followup(1),
+  page_followup(2),
+  page_results()
+)
+\dontrun{
+app(questionnaire = my_questionnaire)
+}
+}
 \seealso{
 \code{\link[=new_page]{new_page()}}
 }

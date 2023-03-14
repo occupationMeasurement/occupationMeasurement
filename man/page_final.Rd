@@ -16,6 +16,14 @@ A page object.
 This page saves data in results_overview and marks the questionnaire as
 complete.
 }
+\examples{
+my_questionnaire <- list(
+  page_final()
+)
+\dontrun{
+app(questionnaire = my_questionnaire)
+}
+}
 \seealso{
 \code{\link[=new_page]{new_page()}}
 }

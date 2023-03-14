@@ -308,8 +308,8 @@ save_results_overview <- function(session) {
 #'   NULL if there are no files.
 #' @export
 #' app_settings <- create_app_settings()
-#' \dontrun{
-#' get_responses(app_settings = app_settings)
+#' if (interactive()){
+#'   get_responses(app_settings = app_settings)
 #' }
 get_responses <- function(app_settings = create_app_settings()) {
   # Note: This has to match with the pattern of filenames specified in save_data_on_disk

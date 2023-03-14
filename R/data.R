@@ -81,8 +81,9 @@
 #' # This function expects the CSV files from
 #' # https://github.com/occupationMeasurement/auxiliary-classification/releases/
 #' # to be there.
-#' \dontrun{
-#' load_auxco("path/to/auxco/")
+#' path_to_auxco <- "auxco"
+#' if (dir.exists(path_to_auxco)){
+#'   load_auxco(path_to_auxco)
 #' }
 #' @seealso https://github.com/occupationMeasurement/auxiliary-classification, [auxco]
 load_auxco <- function(dir, add_explanations = TRUE) {

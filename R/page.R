@@ -130,7 +130,7 @@
 #'   very_simple_page
 #' )
 #'
-#' \dontrun{
+#' if (interactive()){
 #'   app(questionnaire = questionnaire_that_saves_two_items)
 #' }
 #'
@@ -296,7 +296,7 @@ set_page_data <- function(session, page_id, values) {
 #' @seealso [get_item_data()]
 #' @keywords internal
 #' @examples
-#' \dontrun{
+#' if (interactive()){
 #' # This code is expected to be run in e.g. run_before
 #' occupationMeasurement:::get_page_data(session = session, key = "user_answer")
 #' }

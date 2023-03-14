@@ -10,8 +10,8 @@
 #' @export
 #' @examples
 #' my_questionnaire <- list(page_welcome)
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatischen Berufskodierung!",
                          ...) {
@@ -53,8 +53,8 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_first_freetext <- function(is_interview = FALSE,
   aggregate_score_threshold = 0.535,
@@ -133,8 +133,8 @@ page_first_freetext <- function(is_interview = FALSE,
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_second_freetext <- function(combine_input_with_first = TRUE,
   is_interview = FALSE, aggregate_score_threshold = 0.02, ...) {
@@ -215,8 +215,8 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_select_suggestion <- function(is_interview = FALSE, ...) {
   new_page(
@@ -464,8 +464,8 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_none_selected_freetext <- function(is_interview = FALSE, ...) {
   page_freetext(
@@ -526,8 +526,8 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because R (sigh)
   new_page(
@@ -659,8 +659,8 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #'   page_followup(2),
 #'   page_results()
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_results <- function(...) {
   new_page(
@@ -837,8 +837,8 @@ page_results <- function(...) {
 #'   page_select_suggestion(),
 #'   page_feedback()
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_feedback <- function(is_interview = FALSE, ...) {
   # Column names used in data.table (for R CMD CHECK)
@@ -916,8 +916,8 @@ page_feedback <- function(is_interview = FALSE, ...) {
 #' my_questionnaire <- list(
 #'   page_final()
 #' )
-#' \dontrun{
-#' app(questionnaire = my_questionnaire)
+#' if (interactive()){
+#'   app(questionnaire = my_questionnaire)
 #' }
 page_final <- function(...) {
   new_page(

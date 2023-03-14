@@ -54,7 +54,7 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #' )
 #'
 #' # Start the app
-#' \dontrun{
+#' if (interactive()){
 #' app_instance
 #' }
 app <- function(questionnaire = questionnaire_web_survey(),

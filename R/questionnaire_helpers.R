@@ -55,7 +55,7 @@ mark_questionnaire_complete <- function() {
 #'  ),
 #'  page_final()
 #' )
-#' \dontrun{
+#' if (interactive()){
 #'  app(questionnaire = one_page_questionnaire)
 #' }
 #'

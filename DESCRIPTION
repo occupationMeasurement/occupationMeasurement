@@ -1,5 +1,5 @@
 Package: occupationMeasurement
-Title: A toolbox to help with all tasks around the interactive coding and measurement of occupations
+Title: A toolbox to help with the interactive measurement of occupations
 Version: 0.2.0
 Authors@R: c(
         person(
@@ -20,7 +20,11 @@ Authors@R: c(
             comment = c(ORCID = "0000-0003-4058-1543")
         )
     )
-Description: This package provides a set of functions for interactive occupation coding in interviews. It contains the functionality to generate suggestions for occupational categories based on free text input. Pre-trained machine learning models in German and a ready-to-use shiny application is provided for quick and easy data collection.
+Description: This package provides a set of functions for interactive
+    occupation coding in interviews. It contains the functionality to
+    generate suggestions for occupational categories based on free text input.
+    Pre-trained machine learning models in German and a ready-to-use shiny
+    application is provided for quick and easy data collection.
 License: MIT + file LICENSE
 URL: https://occupationMeasurement.github.io/occupationMeasurement/,
     https://github.com/occupationMeasurement/occupationMeasurement

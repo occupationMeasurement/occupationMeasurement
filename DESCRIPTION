@@ -1,5 +1,5 @@
 Package: occupationMeasurement
-Title: A toolbox to help with the interactive measurement of occupations
+Title: Interactively Measure Occupations in Interviews and Beyond
 Version: 0.2.0
 Authors@R: c(
         person(

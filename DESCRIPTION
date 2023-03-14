@@ -1,6 +1,6 @@
 Package: occupationMeasurement
 Title: A toolbox to help with all tasks around the interactive coding and measurement of occupations
-Version: 0.1.0.9000
+Version: 0.2.0
 Authors@R: c(
         person(
             "Jan", "Simson", ,

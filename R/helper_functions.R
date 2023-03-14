@@ -5,17 +5,13 @@
 #' punctuation, empty spaces and the word "Diplom".
 #'
 #' [charToRaw()] or [stringi::stri_escape_unicode()] helps to find UTF-8 characters.
-#'
 #' @encoding UTF-8
-#'
 #' @param verbatim The character vector to process.
 #' @param lang The language the text is in.
 #'   Currently only German is supported.
 #'   Defaults to "de" (German).
-#'
 #' @return The same character vector after processing
 #' @export
-#'
 #' @examples
 #' preprocess_string(c(
 #'   "Verkauf von B\u00fcchern, Schreibwaren",

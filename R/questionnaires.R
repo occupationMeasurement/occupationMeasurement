@@ -2,7 +2,6 @@
 #'
 #' The basic default questionnaire. View the function's code to see the
 #' used pages. This function is meant as a template that can be changed to meet your requirements.
-#'
 #' @param show_feedback_page Show the [page_feedback()] to evaluate the fit of
 #'   the chosen suggestion.
 #' @return A questionnaire for [app()], i.e. a list of pages.
@@ -39,7 +38,6 @@ questionnaire_web_survey <- function(show_feedback_page = TRUE) {
 #' A questionnaire for Computer-assisted Interviewing (CAI), i.e. telephone interviewing or personal interviewing. In both modes, interviewer asks questions to an interviewee.
 #'
 #' View the function's code to see the used pages. This function is meant as a template that can be changed to meet your requirements.
-#'
 #' @inheritParams questionnaire_web_survey
 #' @return A questionnaire for [app()] i.e. a list of pages.
 #' @export
@@ -72,7 +70,6 @@ questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
 #'
 #' Note, that this function has more complex code to create
 #' the additional pages.
-#'
 #' @inheritParams questionnaire_web_survey
 #' @return A questionnaire for [app()] i.e. a list of pages.
 #' @export

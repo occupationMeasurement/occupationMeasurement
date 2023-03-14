@@ -5,10 +5,8 @@ options(stringsAsFactors = FALSE) # dont use factors in data.frames
 NULL
 
 #' Validate (and sanitize the questionnaire)
-#'
 #' @param questionnaire The questionnaire passed to [app()]
 #' @param verbose Should information about the questionnaire be printed?
-#'
 #' @return Sanitized questionnaire
 #' @keywords internal
 validate_questionnaire <- function(questionnaire, verbose) {
@@ -35,7 +33,6 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #'
 #' Printing the returned instance or returning it without saving it in a
 #' variable will start the app.
-#'
 #' @param questionnaire The questionnaire to load.
 #'   (Defaults to the questionnaire returned by \link{questionnaire_web_survey}().)
 #' @param app_settings The app_settings to use. Check the documentation for

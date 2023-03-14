@@ -302,10 +302,8 @@ save_results_overview <- function(session) {
 #' Convenience function to aggregate all saved results_overview files.
 #'
 #' Expects data to be saved as files.
-#'
 #' @param app_settings The app_settings configuration, should be the same as
 #'   used in [app()].
-#'
 #' @return A combined data.table of user data (based on results_overview) or
 #'   NULL if there are no files.
 #' @export

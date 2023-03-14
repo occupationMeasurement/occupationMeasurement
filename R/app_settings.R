@@ -1,7 +1,6 @@
 #' Create app_settings.
 #'
 #' This is the primary and most convenient way of configuring the app.
-#'
 #' @param default_num_suggestions The number of suggestions to generate and
 #'   display to users. Accepts all positive integers.
 #'   Defaults to 5.
@@ -42,9 +41,7 @@
 #'   Defaults to TRUE.
 #' @param .validate Whether the created app_settings should be validated.
 #'   Defaults to TRUE.
-#'
 #' @inheritParams get_job_suggestions
-#'
 #' @return A list of app_settings.
 #' @export
 #' @examples

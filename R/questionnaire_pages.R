@@ -3,10 +3,8 @@
 #' Welcome Page (optional)
 #'
 #' Providing an introduction and greeting participants.
-#'
 #' @param title The heading with which to greet participants.
 #' @param ... All additional parameters are passed to [new_page()]
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -36,7 +34,6 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #'
 #' Here, the description of the job can be entered in an open freetext field
 #' and suggestions will be generated based on the input.
-#'
 #' @param is_interview Should the page show slightly different / additional
 #'  instructions and answer options for an interview that is conducted by
 #'  another person? Defaults to FALSE.
@@ -44,7 +41,6 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #'   suggestions has to be higher than this threshold for suggestions to be
 #'   shown. The parameter is passed on to [get_job_suggestions()].
 #' @param ... All additional parameters are passed to [new_page()]
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -122,11 +118,9 @@ page_first_freetext <- function(is_interview = FALSE,
 #'
 #' If the first freetext question didn't provide satisfactory results,
 #' ask for more details and try again.
-#'
 #' @param combine_input_with_first Should input be combined with the
 #'   previous question?
 #' @inheritParams page_first_freetext
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -208,9 +202,7 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
 }
 
 #' Display the generated suggestions for the user to pick one.
-#'
 #' @inheritParams page_first_freetext
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -459,9 +451,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 }
 
 #' An additional freetext page to show when no suggestion has been selected.
-#'
 #' @inheritParams page_first_freetext
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -517,7 +507,6 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #'
 #' To disambiguate between similar occupations. Depending on the suggestion,
 #' multiple followup questions can be shown.
-#'
 #' @param index The index of the followup question (1-based).
 #'   To show the first followup question (if there are any) use
 #'   page_followup(index = 1), to show a potential second followup question use
@@ -525,7 +514,6 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #'   For example [questionnaire_web_survey()] uses
 #'   `..., page_followup(index = 1), page_followup(index = 2), ...`
 #' @inheritParams page_first_freetext
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -657,9 +645,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #' This page is only meant for demonstration purposes. Users can see what they
 #' entered and which code was being saved. The page is only included in the
 #' [questionnaire_demo()], but not in the other questionnaire templates.
-#'
 #' @param ... All additional parameters are passed to [new_page()]
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
@@ -840,10 +826,8 @@ page_results <- function(...) {
 }
 
 #' Page to receive feedback on how well the chosen suggestion fits
-#'
 #' @param ... All additional parameters are passed first passed on to
 #'   [page_choose_one_option()] and then [new_page()].
-#'
 #' @inheritParams page_first_freetext
 #' @return A page object.
 #' @export
@@ -924,9 +908,7 @@ page_feedback <- function(is_interview = FALSE, ...) {
 #'
 #' This page saves data in results_overview and marks the questionnaire as
 #' complete.
-#'
 #' @param ... All additional parameters are passed to [new_page()]
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export

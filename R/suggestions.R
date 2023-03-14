@@ -20,10 +20,8 @@ create_document_term_matrix <- function(input) {
 #' The Algorithm used here corresponds to Algorithm #10 in (Schierholz, 2019).
 #' Note: This function should not be used directly, but rather as a step /
 #' algorithm in get_job_suggestions.
-#'
 #' @references Schierholz, M. (2019). New Methods for Job and Occupation Classification (Ph.D. Thesis). University of Mannheim.
 #' @seealso [get_job_suggestions()]
-#'
 #' @param text_processed The processed user input.
 #'   Will be provided by get_job_suggestions.
 #' @param sim_name Which similarity measure to use.
@@ -174,7 +172,6 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'   3. Remove predicted categories if their score is below `item_score_threshold` and only keep the `num_suggestions` top-ranked suggestions.
 #'   4. Start anew, trying the next algorithm in `steps`, if the the top-ranked suggestions have a low chance to be correct. (Technically, this happens if the summed score of the `num_suggestions` top-ranked suggestions is below `aggregate_score_threshold`.)
 #'   5. If `suggestion_type == "auxco-1.2.x"` and `distinctions == TRUE`, insert additional and (highly) similar categories or replace existing ones. See internal function `add_distinctions_auxco()`. Reorder and keep only the `num_suggestions` top-ranked suggestions. Auxco categories which were added during this step can be identified by their scores: It equals 0.05 for categories with high similarity and 0.005 for categories with medium similarity.
-#'
 #' @param text The raw text input from the user.
 #' @param suggestion_type Which type of suggestion to use / provide.
 #'   Possible options are "auxco-1.2.x" and "kldb-2010".
@@ -236,7 +233,6 @@ algo_similarity_based_reasoning <- function(text_processed,
 #'   be returned. This will automatically contain the appropriate id for
 #'   different suggestion_types i.e. for "auxco-1-2.x" it will contain the same
 #'   data as the column "auxco_id".
-#'
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
 #' @examples
@@ -401,16 +397,12 @@ get_job_suggestions <- function(text,
 }
 
 #' Convert suggestion from one suggestion format into the other
-#'
 #' @param suggestions A data.table of suggestions as returned by one of the
 #'   prediction algorithms e.g. [algo_similarity_based_reasoning()].
 #' @param from The current suggestion_type in which suggestions are passed.
 #' @param to The suggestion_type in which suggestions should be.
-#'
 #' @return A data.table of suggestions in the "to" format
-#'
 #' @inheritParams get_job_suggestions
-#'
 #' @keywords internal
 convert_suggestions <- function(suggestions, from, to, suggestion_type_options = list()) {
   # Column names used in data.table (for R CMD CHECK)
@@ -520,7 +512,6 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 }
 
 #' Get potential follow-up questions for a suggestion.
-#'
 #' @param suggestion_id Id of the suggestion
 #' @param tense Which tense i.e. time to use for questions & answers,
 #'   this can be "present" or "past". Defaults to "present".
@@ -606,7 +597,6 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' This includes a descriptive title, job descriptions etc.
 #' To retrieve information regarding followup questions use
 #' \link{get_followup_questions}.
-#'
 #' @param suggestion_ids Suggestion id(s) to retrieve information for.
 #'   This should typically be a character vector.
 #' @param suggestion_type Which suggestion type is being used.
@@ -614,7 +604,6 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' @param include_default_codes Whether default id encodings should be returned
 #'   with the rest of infromation e.g. KldB-IDs. Defaults to FALSE.
 #'   (Only for internal use, use [get_final_codes()] to get codes)
-#'
 #' @return Data table with information about the suggestion.
 #' @keywords internal
 #' @export
@@ -667,7 +656,6 @@ get_suggestion_info <- function(suggestion_ids,
 #'
 #' If `followup_answers` is missing or incomplete, one may wish to insert/infer the missing information
 #' by using `standardized_answer_levels`.
-#'
 #' @param suggestion_id Id of the suggestion
 #' @param followup_answers A named list of the question_ids with their
 #'   respective answers to the followup_questions.
@@ -695,9 +683,7 @@ get_suggestion_info <- function(suggestion_ids,
 #' @param verbose (default TRUE) whether to return a `message` or not, detailing potential issues with the input provided.
 #' @param suggestion_type Which suggestion type is being used.
 #'   Only auxco-based suggestion_types are supported.
-#'
 #' @inheritParams get_job_suggestions
-#'
 #' @return A named list corresponding to the code_type(s) specified. Includes a `message` if `verbose = TRUE`
 #' @export
 #' @examples

@@ -37,7 +37,6 @@
 #' Use of `render_before`, `render_after` is discouraged if not necessary,
 #' as these two life-cycle functions have only been added to allow for easier
 #' modification and extension of existing pages.
-#'
 #' @param page_id A unique string identifiying this page. (Required)
 #'   This will be used to store data.
 #' @param render Function to render the page. (Required)
@@ -62,10 +61,8 @@
 #'   outputs to existing pages.
 #' @param run_after Function that handles the user input when they leave the
 #'   page. This function has access to the shiny session and shiny input.
-#'
 #' @return A new `page` object.
 #' @export
-#'
 #' @examples
 #' very_simple_page <- new_page(
 #'   page_id = "example",
@@ -161,7 +158,6 @@ new_page <- function(page_id, render, condition = NULL, run_before = NULL, rende
 }
 
 #' Called internally by the shiny server.
-#'
 #' @param session The shiny session
 #' @param ... All additional arguments are passed along
 #' @keywords internal
@@ -185,7 +181,6 @@ check_condition <- function(page, session, ...) {
 }
 
 #' Called internally by the shiny server.
-#'
 #' @param session The shiny session
 #' @param ... All additional arguments are passed along
 #' @keywords internal
@@ -202,7 +197,6 @@ execute_run_before <- function(page, session, input, output, ...) {
 }
 
 #' Called internally by the shiny server.
-#'
 #' @param session The shiny session
 #' @param run_before_output The output from `run_before`
 #' @param ... All additional arguments are passed along
@@ -222,7 +216,6 @@ execute_render <- function(page, session, run_before_output, ...) {
 }
 
 #' Called internally by the shiny server when navigating to the next page.
-#'
 #' @param session The shiny session
 #' @param input The shiny input
 #' @param ... All additional arguments are passed along
@@ -252,7 +245,6 @@ execute_run_after <- function(page, session, input, output, ...) {
 }
 
 #' Called internally by the shiny server when navigating to the previous page.
-#'
 #' @param session The shiny session
 #' @param input The shiny input
 #' @param ... All additional arguments are passed along
@@ -267,14 +259,11 @@ leaving_page_backwards <- function(page, session, input, output, ...) {
 #' Data is automatically linked to a page's page_id.
 #' Note that page data is *not* automatically saved and you probably want
 #' to use set_item_data instead.
-#'
 #' @param session The shiny session
 #' @param values A named list of values to add / overwrite in the page data.
 #'   Values are added / overwritten based on the names provided in the list.
-#'
 #' @seealso [set_item_data()]
 #' @keywords internal
-#'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
@@ -294,7 +283,6 @@ set_page_data <- function(session, page_id, values) {
 #'
 #' Note that page data is *not* automatically saved and you probably want
 #' to use page$get_item_data instead.
-#'
 #' @param session The shiny session
 #' @param key The key for which to retrieve a value. (Optional)
 #'   If no key is provided, the page's whole data will be returned.
@@ -302,13 +290,10 @@ set_page_data <- function(session, page_id, values) {
 #'   present in the questionnaire data.
 #' @param page_id The page for which to retrieve data.
 #'   Defaults to the page where data the function is being called from.
-#'
 #' @return The page data value at the provided key or the whole page's data
 #'   if no key is provided.
-#'
 #' @seealso [get_item_data()]
 #' @keywords internal
-#'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
@@ -340,7 +325,6 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #' question. The `question_text` is typically
 #' saved in `run_before` and the reply (`response_text` and/or `response_id`) is
 #' typically saved in `run_after`.
-#'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
 #' @param item_id The item for which to set/update data.
@@ -350,10 +334,8 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #' @param response_text The user's response in text form. (optional)
 #' @param response_id The user's response as an id from a set of choices.
 #'   (optional)
-#'
 #' @export
 #' @seealso [get_item_data()]
-#'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before
@@ -413,7 +395,6 @@ set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL
 #' Retrieve data for an item.
 #'
 #' Each page in the questionnaire can have multiple items on it.
-#'
 #' @param session The shiny session
 #' @param page_id The page for which to retrieve data.
 #' @param item_id The item for which to retrieve data.
@@ -423,11 +404,9 @@ set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL
 #'   If no key is provided, the items's whole data will be returned.
 #' @param default A default value to return if the key or page is not
 #'   present in the questionnaire data.
-#'
 #' @return The items's data.
 #' @export
 #' @seealso [set_item_data()]
-#'
 #' @examples
 #' \dontrun{
 #' # This code is expected to be run in e.g. run_before

@@ -25,13 +25,10 @@ set.seed(4666) # random.org 1 - 10000
 #' behaviour in \code{\link{predictWithCodingIndex}} by setting
 #' \code{max.count.categories}. This parameter allows to exclude ambiguous job
 #' titles (those with large values in count_categories) from the coding index.
-#'
 #' @references
 #' Gesamtberufsliste_der_BA_Januar_2019.xlsx. Bundesagentur für Arbeit (2019): Gesamtberufsliste der Bundesagentur für Arbeit (Datenstand: 3.1.2019). Quelle: DKZ-Download-Portal: ein Angebot der Bundesagentur für Arbeit. Stand: (01/2019)
-#'
 #' @param path_to_file path to downloaded file
 #' @param count.categories (default: \code{FALSE}). The default sets the column \code{count_categories} to 0, avoiding lengthy computations. With \code{count.categories = TRUE} an indicator of job title ambiguity is calculated. See below.
-#'
 #' @return a data.table with columns Berufsbenennungen, bezMale, and bezFemale, Code, and count_categories.
 #' @import data.table
 prepare_coding_index_ba <- function(path_to_file, count.categories = FALSE) {

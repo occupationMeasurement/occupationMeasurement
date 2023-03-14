@@ -1,5 +1,4 @@
 #' Start the occupation coding API.
-#'
 #' @param start Whether to immediately start the api. (Defaults to TRUE)
 #' @param file Path to the `plumber.R` file describing the API.
 #'   Defaults to `plumber/api/plumber.R` within the installed package.
@@ -21,11 +20,9 @@
 #'   [plumber security page](https://www.rplumber.io/articles/security.html#cross-origin-resource-sharing-cors),
 #'   and [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin).
 #'   Defaults to NULL to not set any header at all.
-#'
 #' @return A Plumber router
 #' @export
 #' @seealso `vignette("api")`
-#'
 #' @examples
 #' # Get the plumber router
 #' router <- api(start = FALSE)

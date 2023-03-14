@@ -1,7 +1,6 @@
 #' Train Similarity Based Probability Model with anonymized training data
 #'
 #' This function requires the mvtnorm package.
-#'
 #' @param anonymized_data \code{surveyCountsSubstringSimilarity} or \code{surveyCountsWordwiseSimilarity}
 #' @param num_allowed_codes the number of allowed codes in the target classification. There are 1286 categories in the KldB 2010 plus 5 special codes in both anonymized training data sets, so the default value is 1291.
 #' @param coding_index_w_codes a data.table with columns
@@ -31,14 +30,11 @@
 #'   \item{n.draws}{Number of draws from the posterior distribution to determine posterior predictive probabilities. The larger, the more precise the results will be.}
 #'   \item{check_normality}{We would like that the hyperprior distribution is normal. Set check_normality to TRUE to do some diagnostics about this.}
 #' }
-#'
 #' @seealso [pretrained_models], which were created using this function.
-#'
 #' @references
 #' Schierholz, Malte (2019): New methods for job and occupation classification. Dissertation, Mannheim. \url{https://madoc.bib.uni-mannheim.de/50617/}, pp. 206-208 and p. 268, pp. 308-320
 #'
 #' \url{https://github.com/malsch/occupationCoding} (function trainSimilarityBasedReasoning2 is implemented here)
-#'
 #' @return a list with components
 #' \describe{
 #'   \item{prediction.datasets$modelProb}{Contains all entries from the coding index. dist = "official" if the entry stems from coding_index_w_codes and dist = selfcreated if the entry stems from coding_index_without_codes. \code{string.prob} is used for weighting purposes (model averaging) if a new verbal answer is similar to multiple strings. \code{unobserved.mean.theta} gives a probability (usually very low) for any category that was not observed in the training data together with this string.}

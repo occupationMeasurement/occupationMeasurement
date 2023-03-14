@@ -6,7 +6,6 @@
 #' This service uses the ESCO classification of the European Commission. The descriptions used here are taken from the ESCO classification (v1.1, Occupations pillar) of the European Commission, which is based on ISCO-08.
 #'
 #' More information on the ISCO-08: https://isco-ilo.netlify.app/en/isco-08/, https://www.ilo.org/public/english/bureau/stat/isco/isco08/
-#'
 #' @format A data frame with 619 rows and 3 variables:
 #' \describe{
 #'   \item{\code{code}}{character. Unique ISCO-08 identifier / code.}
@@ -16,7 +15,6 @@
 "isco_08_en"
 
 #' Pretrained ML models to be used with the package.
-#'
 #' @seealso [algo_similarity_based_reasoning()], [train_similarity_based_reasoning()], https://github.com/malsch/occupationCoding
 #' @format A nested list with pretrained machine learning models:
 #' \describe{
@@ -26,7 +24,6 @@
 #' }
 #'
 #' This training data always predicts a 5-digit code from the 2010 German Classification of Occupations, with some exceptions: -0004 stands for 'Not precise enough/uncodable', -0006 stands for 'Multiple Jobs', -0012 stands for 'Blue-collar workers', -0019 stands for 'Volunteer/Social Service', and -0030 stands for 'Student assistant'.
-#'
 #' @source
 #' Data from the following surveys were pooled:
 #'
@@ -52,13 +49,10 @@
 #' German Auxiliary Classification of Occupations (AuxCO)
 #'
 #' Berufs-Hilfsklassifikation mit Tätigkeitsbeschreibungen.
-#'
 #' @seealso
 #' https://github.com/occupationMeasurement/auxiliary-classification, [load_auxco()]
-#'
 #' @references
 #' Schierholz, Malte; Brenner, Lorraine; Cohausz, Lea; Damminger, Lisa; Fast, Lisa; Hörig, Ann-Kathrin; Huber, Anna-Lena; Ludwig, Theresa; Petry, Annabell; Tschischka, Laura (2018): Vorstellung einer Hilfsklassifikation mit Tätigkeitsbeschreibungen für Zwecke der Berufskodierung. (IAB-Discussion Paper, 2018), Nürnberg, 45 S. https://www.iab.de/183/section.aspx/Publikation/k180509301
-#'
 #' @format A list with data.tables:
 #' \describe{
 #'   \item{\code{categories}}{data.table. Main list of AuxCO categories including their descriptions etc.}
@@ -78,7 +72,6 @@
 #'
 #' This package also includes an already loaded version of the [auxco], which
 #' can be used straight away *without* calling this function.
-#'
 #' @param dir The path to the directory which holds the CSVs.
 #' @param add_explanations Whether explanations should be added to some of the
 #'   harder to understand task descriptions. Defaults to TRUE.
@@ -227,7 +220,6 @@ load_kldb_raw <- function() {
 #' Source: https://www.klassifikationsserver.de/klassService/index.jsp?variant=kldb2010
 #'
 #' More information on the KldB 2010: https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/KldB2010-Fassung2020/KldB2010-Fassung2020-Nav.html The KldB 2010 has been revised in 2020. These changes have not been implemented here yet.
-#'
 #' @return A cleaned / slimmed version of the KldB 2010.
 #' @export
 #' @examples
@@ -390,11 +382,9 @@ load_kldb <- function() {
 }
 
 #' Load a standard dataset, while supporting overriding by the user.
-#'
 #' @param dataset_name Name of the dataset. Currently supported values are
 #'   "auxco-1.2.x", "kldb-2010", "isco-08"
 #' @param user_provided_data List of datasets provided by the user.
-#'
 #' @return The requested dataset.
 #' @keywords internal
 get_data <- function(dataset_name, user_provided_data = list()) {

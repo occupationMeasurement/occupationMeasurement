@@ -3,9 +3,7 @@
 #' Go to the next page
 #'
 #' Buttons to navigate between pages.
-#'
 #' @param label What label the button should have.
-#'
 #' @return shiny Action Button
 #' @export
 #' @seealso [new_page()]
@@ -33,7 +31,6 @@ mark_questionnaire_complete <- function() {
 }
 
 #' Show a page with multiple radio button options where once can be picked.
-#'
 #' @inheritParams page_freetext
 #' @param list_of_choices A list of answering options.
 #'   This can either be just a simple list of values or a named list with the
@@ -46,11 +43,9 @@ mark_questionnaire_complete <- function() {
 #' @param choice_labels List or vector of only the choice names to be shown.
 #'   This has to be matched by an equal-length vector in list_of_choices.
 #' @param ... Other parametrs are passed on to `new_page()`
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-#'
 #' @examples
 #' one_page_questionnaire <- list(
 #'  page_choose_one_option(
@@ -146,7 +141,6 @@ page_choose_one_option <- function(page_id,
 }
 
 #' Show a page with a text field where free text can be entered.
-#'
 #' @param page_id A unique string identifiying this page. Used to store data.
 #' @param question_text The question / text to display.
 #'   This can be either a string, which will simply be displayed or a function
@@ -171,11 +165,9 @@ page_choose_one_option <- function(page_id,
 #' @param run_after Similar to `run_after` in `new_page()`, passed explicitly
 #'   here as this page adds some of its own code to `run_after`.
 #' @param ... Other parametrs are passed on to `new_page()`
-#'
 #' @return A page object.
 #' @seealso [new_page()]
 #' @export
-#'
 #' @examples
 #' page_freetext(
 #'   "test_page_freetext",

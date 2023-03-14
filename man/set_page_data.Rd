@@ -12,6 +12,9 @@ set_page_data(session, page_id, values)
 \item{values}{A named list of values to add / overwrite in the page data.
 Values are added / overwritten based on the names provided in the list.}
 }
+\value{
+nothing
+}
 \description{
 Data is automatically linked to a page's page_id.
 Note that page data is \emph{not} automatically saved and you probably want

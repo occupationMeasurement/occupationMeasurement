@@ -307,6 +307,7 @@ save_results_overview <- function(session) {
 #' @return A combined data.table of user data (based on results_overview) or
 #'   NULL if there are no files.
 #' @export
+#' @examples
 #' app_settings <- create_app_settings()
 #' if (interactive()){
 #'   get_responses(app_settings = app_settings)

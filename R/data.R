@@ -224,7 +224,10 @@ load_kldb_raw <- function() {
 #' @return A cleaned / slimmed version of the KldB 2010.
 #' @export
 #' @examples
+#' \dontrun{
+#' # This will download data
 #' load_kldb()
+#' }
 load_kldb <- function() {
   # Column names used in data.table (for R CMD CHECK)
   level <- title <- label <- kldb_id <- NULL

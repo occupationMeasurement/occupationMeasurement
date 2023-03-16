@@ -265,13 +265,6 @@ leaving_page_backwards <- function(page, session, input, output, ...) {
 #' @seealso [set_item_data()]
 #' @keywords internal
 #' @return nothing
-#' @examples
-#' \dontrun{
-#' # This code is expected to be run in e.g. run_before
-#' occupationMeasurement:::set_page_data(session = session, page_id = "example", values = list(
-#'   user_answer = "Some User Answer"
-#' ))
-#' }
 set_page_data <- function(session, page_id, values) {
   # Add / Overwrite all provided values in the questionnaire data
   session$userData$questionnaire_data[[page_id]] <- utils::modifyList(
@@ -295,11 +288,6 @@ set_page_data <- function(session, page_id, values) {
 #'   if no key is provided.
 #' @seealso [get_item_data()]
 #' @keywords internal
-#' @examples
-#' if (interactive()){
-#' # This code is expected to be run in e.g. run_before
-#' occupationMeasurement:::get_page_data(session = session, key = "user_answer")
-#' }
 get_page_data <- function(session, page_id, key = NULL, default = NULL) {
   stopifnot(!is.null(session) && !is.null(page_id))
 

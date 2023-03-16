@@ -1,4 +1,9 @@
-api_settings <- occupationMeasurement:::parse_env_settings(
+default_api_settings <- list(
+  # Don't auto-start the api as we do it manually below
+  start = FALSE,
+  log_to_file = TRUE
+)
+user_api_settings <- occupationMeasurement:::parse_env_settings(
   possible_params = c(
     "LOG_TO_CONSOLE",
     "LOG_TO_FILE",
@@ -9,8 +14,8 @@ api_settings <- occupationMeasurement:::parse_env_settings(
   verbose = TRUE
 )
 
-# Don't auto-start the api as we do it manually below
-api_settings$start <- FALSE
+# Combine user and default settings
+api_settings <- utils::modifyList(default_api_settings, user_api_settings)
 
 # Load our custom api
 pr <- do.call(occupationMeasurement::api, api_settings)

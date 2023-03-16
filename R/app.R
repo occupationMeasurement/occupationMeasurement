@@ -1,5 +1,3 @@
-options(stringsAsFactors = FALSE) # dont use factors in data.frames
-
 #' @import shiny
 #' @import data.table
 NULL

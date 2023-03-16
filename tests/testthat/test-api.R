@@ -44,6 +44,7 @@ api_process <- callr::r_bg(
 
     api(
       start = FALSE,
+      log_to_file = TRUE,
       log_filepath = log_file,
       allow_origin = "https://occupationMeasurement.github.io"
     ) |>

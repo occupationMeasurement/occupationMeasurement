@@ -327,22 +327,30 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #' @export
 #' @seealso [get_item_data()]
 #' @examples
-#' \dontrun{
-#' # This code is expected to be run in e.g. run_before
+#' # Set up a "fake" shiny session to store data
+#' session <- shiny::MockShinySession$new()
+#' session$userData <- list(
+#'   current_page_id = "other_page",
+#'   questionnaire_data = list(
+#'     example_page = list(
+#'     )
+#'   )
+#' )
+#'
+#' # This code is expected to be run in e.g. run_before or run_after
+#' # It doesn't really make sense to run this code outside
 #' set_item_data(
 #'   session = session,
-#'   page_id = "example",
+#'   page_id = "example_page",
 #'   question_text = "How are you?"
 #' )
 #'
-#' # This code is expected to be run in e.g. run_after
 #' set_item_data(
 #'   session = session,
-#'   page_id = "example",
+#'   page_id = "example_page",
 #'   response_id = 3,
 #'   response_text = "I'm doing great! (response_id = 3)"
 #' )
-#' }
 set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL, response_text = NULL, response_id = NULL) {
   if (is.null(item_id)) {
     item_id <- "default"
@@ -398,15 +406,29 @@ set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL
 #' @export
 #' @seealso [set_item_data()]
 #' @examples
-#' \dontrun{
+#' # Set up a "fake" shiny session to store data
+#' session <- shiny::MockShinySession$new()
+#' session$userData <- list(
+#'   current_page_id = "other_page",
+#'   questionnaire_data = list(
+#'     example_page = list(
+#'     )
+#'   )
+#' )
+#'
+#' # This code is expected to be run in e.g. run_before or run_after
+#' # It doesn't really make sense to run this code outside
+#' set_item_data(
+#'   session = session,
+#'   page_id = "example_page",
+#'   question_text = "How are you?"
+#' )
+#'
 #' # This code is expected to be run in e.g. run_before
 #' get_item_data(
 #'   session = session,
-#'   page_id = "example",
-#'   key = "response_text",
-#'   default = "alright"
+#'   page_id = "example_page"
 #' )
-#' }
 get_item_data <- function(session, page_id, item_id = NULL, key = c("all", "question_text", "response_text", "response_id"), default = NULL) {
   if (is.null(item_id)) {
     item_id <- "default"

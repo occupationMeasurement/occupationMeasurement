@@ -1,6 +1,9 @@
 #' Create app_settings.
 #'
 #' This is the primary and most convenient way of configuring the app.
+#' @param save_to_file Should responses be saved as files in
+#'   response_output_dir? Defaults to use the SAVE_TO_FILE environment variable.
+#'   We recommend setting this to TRUE.
 #' @param default_num_suggestions The number of suggestions to generate and
 #'   display to users. Accepts all positive integers.
 #'   Defaults to 5.
@@ -11,9 +14,6 @@
 #' @param skip_followup_types A vector of strings corresponding to the
 #'   question_type of followup_question that should be skipped. Allowed `
 #'   values: c("anforderungsniveau", "aufsicht", "spezialisierung", "sonstige")
-#' @param save_to_file Should responses be saved as files in
-#'   response_output_dir? Defaults to use the SAVE_TO_FILE environment variable
-#'   or TRUE if it is not set.
 #' @param response_output_dir Path to the directory in which to store data
 #'   from the app. Defaults to `./output/responses/`.
 #' @param handle_data Callback function to handle data from the app.
@@ -45,13 +45,17 @@
 #' @return A list of app_settings.
 #' @export
 #' @examples
-#' app_settings <- create_app_settings(require_respondent_id = TRUE)
-create_app_settings <- function(suggestion_type = "auxco-1.2.x",
+#' app_settings <- create_app_settings(
+#'   # Important to save results from the app
+#'   save_to_file = TRUE,
+#'   require_respondent_id = TRUE
+#' )
+create_app_settings <- function(save_to_file,
+                                suggestion_type = "auxco-1.2.x",
                                 default_num_suggestions = 5,
                                 require_respondent_id = FALSE,
                                 warn_before_leaving = FALSE,
                                 skip_followup_types = c(),
-                                save_to_file = TRUE,
                                 response_output_dir = file.path("output", "responses"),
                                 handle_data = NULL,
                                 get_job_suggestion_params = NULL,
@@ -61,12 +65,12 @@ create_app_settings <- function(suggestion_type = "auxco-1.2.x",
                                 verbose = TRUE,
                                 .validate = TRUE) {
   final_app_settings <- list(
+    save_to_file = save_to_file,
     suggestion_type = suggestion_type,
     default_num_suggestions = default_num_suggestions,
     require_respondent_id = require_respondent_id,
     warn_before_leaving = warn_before_leaving,
     skip_followup_types = skip_followup_types,
-    save_to_file = save_to_file,
     response_output_dir = response_output_dir,
     handle_data = handle_data,
     get_job_suggestion_params = get_job_suggestion_params,

@@ -164,7 +164,9 @@ load_auxco <- function(dir, add_explanations = TRUE) {
   return(auxco)
 }
 
-load_kldb_raw <- function() {
+#' @describeIn load_kldb Load raw KldB 2010 dataset.
+#' @export
+load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir", tempdir())) {
   terms_of_use <- "
     (c) Statistik der Bundesagentur f\u00fcr Arbeit
     Sie k\u00f6nnen Informationen speichern, (auch auszugsweise) mit Quellenangabe
@@ -179,7 +181,7 @@ load_kldb_raw <- function() {
   "
 
   # Create cache dir if it doesn't exist yet
-  cache_path <- file.path("cache")
+  cache_path <- file.path(cache_dir)
   dir.create(cache_path, showWarnings = FALSE)
 
   kldb_archive_path <- file.path(cache_path, "kldb_2010_archive.zip")
@@ -221,18 +223,26 @@ load_kldb_raw <- function() {
 #' Source: https://www.klassifikationsserver.de/klassService/index.jsp?variant=kldb2010
 #'
 #' More information on the KldB 2010: https://statistik.arbeitsagentur.de/DE/Navigation/Grundlagen/Klassifikationen/Klassifikation-der-Berufe/KldB2010-Fassung2020/KldB2010-Fassung2020-Nav.html The KldB 2010 has been revised in 2020. These changes have not been implemented here yet.
+#' @param cache_dir The path to the directory where the downloaded data should be stored.
+#'   We recommend setting this to "cache" to store data in the working directory. This
+#'   will prevent reloading the data time and time again. This can be set globally via
+#'   `options(occupationMeasurement.cache_dir = "cache")`.
 #' @return A cleaned / slimmed version of the KldB 2010.
 #' @export
 #' @examples
-#' \dontrun{
-#' # This will download data
-#' load_kldb()
-#' }
-load_kldb <- function() {
+#' # We recommend using a non-temporary directory for caching, so data is
+#' # downloaded only once and not time and time again
+#' cache_dir = tempdir()
+#' # Note: The dataset will be downloaded from the internet
+#' # Load the cleaned dataset
+#' load_kldb(cache_dir = cache_dir)
+#' # Load the raw dataset
+#' load_kldb_raw(cache_dir = cache_dir)
+load_kldb <- function(cache_dir = getOption("occupationMeasurement.cache_dir", tempdir())) {
   # Column names used in data.table (for R CMD CHECK)
   level <- title <- label <- kldb_id <- NULL
 
-  kldb_data <- load_kldb_raw()
+  kldb_data <- load_kldb_raw(cache_dir = cache_dir)
 
   kldb_new_names <- c(
     "kldb_id",

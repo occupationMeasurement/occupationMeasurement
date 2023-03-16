@@ -6,7 +6,7 @@
 #' @param log_to_console Whether to requests should be logged in the console.
 #'   Defaults to TRUE.
 #' @param log_to_file Whether to requests should be logged in a file.
-#'   Defaults to TRUE.
+#'   Defaults to FALSE.
 #'   Note: The file format used here is a CSV file for easier analysis.
 #' @param log_filepath The path to a CSV file in which to save the structured
 #'   logs.
@@ -40,9 +40,9 @@
 #'   api(start = TRUE)
 #' }
 api <- function(start = TRUE,
+                log_to_file = FALSE,
                 file = system.file("plumber", "api", "plumber.R", package = "occupationMeasurement"),
                 log_to_console = TRUE,
-                log_to_file = TRUE,
                 log_filepath = file.path("output", "log_api.csv"),
                 require_identifier = FALSE,
                 allow_origin = NULL) {

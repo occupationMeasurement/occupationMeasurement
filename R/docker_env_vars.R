@@ -36,8 +36,17 @@ create_app_settings_from_env <- function(verbose = FALSE) {
     reference_function = "occupationMeasurement::create_app_settings"
   )
 
+  # Provide default params for create_app_settings
+  default_app_settings_params <- list(
+    save_to_file = TRUE
+  )
+  app_settings_params <- utils::modifyList(
+    default_app_settings_params,
+    app_settings_params_from_env
+  )
+
   # Actually generate the app_settings taking into account defaults etc.
-  app_settings <- do.call(create_app_settings, app_settings_params_from_env)
+  app_settings <- do.call(create_app_settings, app_settings_params)
 
   return(app_settings)
 }

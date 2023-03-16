@@ -34,15 +34,29 @@ The items's data.
 Each page in the questionnaire can have multiple items on it.
 }
 \examples{
-\dontrun{
+# Set up a "fake" shiny session to store data
+session <- shiny::MockShinySession$new()
+session$userData <- list(
+  current_page_id = "other_page",
+  questionnaire_data = list(
+    example_page = list(
+    )
+  )
+)
+
+# This code is expected to be run in e.g. run_before or run_after
+# It doesn't really make sense to run this code outside
+set_item_data(
+  session = session,
+  page_id = "example_page",
+  question_text = "How are you?"
+)
+
 # This code is expected to be run in e.g. run_before
 get_item_data(
   session = session,
-  page_id = "example",
-  key = "response_text",
-  default = "alright"
+  page_id = "example_page"
 )
-}
 }
 \seealso{
 \code{\link[=set_item_data]{set_item_data()}}

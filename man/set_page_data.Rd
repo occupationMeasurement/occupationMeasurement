@@ -20,14 +20,6 @@ Data is automatically linked to a page's page_id.
 Note that page data is \emph{not} automatically saved and you probably want
 to use set_item_data instead.
 }
-\examples{
-\dontrun{
-# This code is expected to be run in e.g. run_before
-occupationMeasurement:::set_page_data(session = session, page_id = "example", values = list(
-  user_answer = "Some User Answer"
-))
-}
-}
 \seealso{
 \code{\link[=set_item_data]{set_item_data()}}
 }

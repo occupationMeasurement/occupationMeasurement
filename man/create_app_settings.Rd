@@ -5,12 +5,12 @@
 \title{Create app_settings.}
 \usage{
 create_app_settings(
+  save_to_file,
   suggestion_type = "auxco-1.2.x",
   default_num_suggestions = 5,
   require_respondent_id = FALSE,
   warn_before_leaving = FALSE,
   skip_followup_types = c(),
-  save_to_file = TRUE,
   response_output_dir = file.path("output", "responses"),
   handle_data = NULL,
   get_job_suggestion_params = NULL,
@@ -22,6 +22,10 @@ create_app_settings(
 )
 }
 \arguments{
+\item{save_to_file}{Should responses be saved as files in
+response_output_dir? Defaults to use the SAVE_TO_FILE environment variable.
+We recommend setting this to TRUE.}
+
 \item{suggestion_type}{Which type of suggestion to use / provide.
 Possible options are "auxco-1.2.x" and "kldb-2010".}
 
@@ -38,10 +42,6 @@ be lost upon leaving the site? Defaults to FALSE.}
 \item{skip_followup_types}{A vector of strings corresponding to the
 question_type of followup_question that should be skipped. Allowed `
 values: c("anforderungsniveau", "aufsicht", "spezialisierung", "sonstige")}
-
-\item{save_to_file}{Should responses be saved as files in
-response_output_dir? Defaults to use the SAVE_TO_FILE environment variable
-or TRUE if it is not set.}
 
 \item{response_output_dir}{Path to the directory in which to store data
 from the app. Defaults to \verb{./output/responses/}.}
@@ -85,5 +85,9 @@ A list of app_settings.
 This is the primary and most convenient way of configuring the app.
 }
 \examples{
-app_settings <- create_app_settings(require_respondent_id = TRUE)
+app_settings <- create_app_settings(
+  # Important to save results from the app
+  save_to_file = TRUE,
+  require_respondent_id = TRUE
+)
 }

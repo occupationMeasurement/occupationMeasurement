@@ -6,9 +6,9 @@
 \usage{
 api(
   start = TRUE,
+  log_to_file = FALSE,
   file = system.file("plumber", "api", "plumber.R", package = "occupationMeasurement"),
   log_to_console = TRUE,
-  log_to_file = TRUE,
   log_filepath = file.path("output", "log_api.csv"),
   require_identifier = FALSE,
   allow_origin = NULL
@@ -17,16 +17,16 @@ api(
 \arguments{
 \item{start}{Whether to immediately start the api. (Defaults to TRUE)}
 
+\item{log_to_file}{Whether to requests should be logged in a file.
+Defaults to FALSE.
+Note: The file format used here is a CSV file for easier analysis.}
+
 \item{file}{Path to the \code{plumber.R} file describing the API.
 Defaults to \code{plumber/api/plumber.R} within the installed package.
 Refer to this file to understand how the API is implemented.}
 
 \item{log_to_console}{Whether to requests should be logged in the console.
 Defaults to TRUE.}
-
-\item{log_to_file}{Whether to requests should be logged in a file.
-Defaults to TRUE.
-Note: The file format used here is a CSV file for easier analysis.}
 
 \item{log_filepath}{The path to a CSV file in which to save the structured
 logs.}

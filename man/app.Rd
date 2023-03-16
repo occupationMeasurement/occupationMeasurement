@@ -6,7 +6,7 @@
 \usage{
 app(
   questionnaire = questionnaire_web_survey(),
-  app_settings = create_app_settings(),
+  app_settings = create_app_settings(save_to_file = TRUE),
   css_file = NULL,
   resource_dir = system.file("www", package = "occupationMeasurement"),
   ...
@@ -38,6 +38,7 @@ variable will start the app.
 \examples{
 app_instance <- app(
   app_settings = create_app_settings(
+    # Important to save results from the app
     save_to_file = TRUE
   )
 )

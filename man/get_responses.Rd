@@ -4,7 +4,7 @@
 \alias{get_responses}
 \title{Convenience function to aggregate all saved results_overview files.}
 \usage{
-get_responses(app_settings = create_app_settings())
+get_responses(app_settings = create_app_settings(save_to_file = TRUE))
 }
 \arguments{
 \item{app_settings}{The app_settings configuration, should be the same as
@@ -18,7 +18,7 @@ NULL if there are no files.
 Expects data to be saved as files.
 }
 \examples{
-app_settings <- create_app_settings()
+app_settings <- create_app_settings(save_to_file = TRUE)
 if (interactive()){
   get_responses(app_settings = app_settings)
 }

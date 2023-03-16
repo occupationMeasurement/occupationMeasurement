@@ -40,22 +40,30 @@ saved in \code{run_before} and the reply (\code{response_text} and/or \code{resp
 typically saved in \code{run_after}.
 }
 \examples{
-\dontrun{
-# This code is expected to be run in e.g. run_before
+# Set up a "fake" shiny session to store data
+session <- shiny::MockShinySession$new()
+session$userData <- list(
+  current_page_id = "other_page",
+  questionnaire_data = list(
+    example_page = list(
+    )
+  )
+)
+
+# This code is expected to be run in e.g. run_before or run_after
+# It doesn't really make sense to run this code outside
 set_item_data(
   session = session,
-  page_id = "example",
+  page_id = "example_page",
   question_text = "How are you?"
 )
 
-# This code is expected to be run in e.g. run_after
 set_item_data(
   session = session,
-  page_id = "example",
+  page_id = "example_page",
   response_id = 3,
   response_text = "I'm doing great! (response_id = 3)"
 )
-}
 }
 \seealso{
 \code{\link[=get_item_data]{get_item_data()}}

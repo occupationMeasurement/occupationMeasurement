@@ -26,12 +26,6 @@ if no key is provided.
 Note that page data is \emph{not} automatically saved and you probably want
 to use page$get_item_data instead.
 }
-\examples{
-if (interactive()){
-# This code is expected to be run in e.g. run_before
-occupationMeasurement:::get_page_data(session = session, key = "user_answer")
-}
-}
 \seealso{
 \code{\link[=get_item_data]{get_item_data()}}
 }

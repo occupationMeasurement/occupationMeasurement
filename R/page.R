@@ -130,7 +130,7 @@
 #'   very_simple_page
 #' )
 #'
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = questionnaire_that_saves_two_items)
 #' }
 #'
@@ -172,8 +172,8 @@ check_condition <- function(page, session, ...) {
     return(
       # Treat empty vector (i.e. of length 0) as FALSE
       length(condition_result) > 0 &&
-      # Use the result itself
-      condition_result
+        # Use the result itself
+        condition_result
     )
   } else {
     return(TRUE)
@@ -332,8 +332,7 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #' session$userData <- list(
 #'   current_page_id = "other_page",
 #'   questionnaire_data = list(
-#'     example_page = list(
-#'     )
+#'     example_page = list()
 #'   )
 #' )
 #'
@@ -411,8 +410,7 @@ set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL
 #' session$userData <- list(
 #'   current_page_id = "other_page",
 #'   questionnaire_data = list(
-#'     example_page = list(
-#'     )
+#'     example_page = list()
 #'   )
 #' )
 #'

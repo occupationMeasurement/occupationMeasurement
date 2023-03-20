@@ -82,7 +82,7 @@
 #' # https://github.com/occupationMeasurement/auxiliary-classification/releases/
 #' # to be there.
 #' path_to_auxco <- "auxco"
-#' if (dir.exists(path_to_auxco)){
+#' if (dir.exists(path_to_auxco)) {
 #'   load_auxco(path_to_auxco)
 #' }
 #' @seealso https://github.com/occupationMeasurement/auxiliary-classification, [auxco]
@@ -232,7 +232,7 @@ load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir
 #' @examples
 #' # We recommend using a non-temporary directory for caching, so data is
 #' # downloaded only once and not time and time again
-#' cache_dir = tempdir()
+#' cache_dir <- tempdir()
 #' # Note: The dataset will be downloaded from the internet
 #' # Load the cleaned dataset
 #' load_kldb(cache_dir = cache_dir)

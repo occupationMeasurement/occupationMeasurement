@@ -164,7 +164,7 @@ extract_questions_wide <- function(questionnaire_data) {
   # Return empty data.table if no / empty data has been passed
   if (
     is.null(questionnaire_data) ||
-    length(questionnaire_data) == 0
+      length(questionnaire_data) == 0
   ) {
     return(data.table())
   }
@@ -290,7 +290,7 @@ save_results_overview <- function(session) {
   # Check whether response_overview has already been saved
   if (
     is.null(session$userData$results_overview_saved_hash) ||
-    hash != session$userData$results_overview_saved_hash
+      hash != session$userData$results_overview_saved_hash
   ) {
     save_data("results_overview", final_data, session)
 
@@ -309,7 +309,7 @@ save_results_overview <- function(session) {
 #' @export
 #' @examples
 #' app_settings <- create_app_settings(save_to_file = TRUE)
-#' if (interactive()){
+#' if (interactive()) {
 #'   get_responses(app_settings = app_settings)
 #' }
 get_responses <- function(app_settings = create_app_settings(save_to_file = TRUE)) {

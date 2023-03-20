@@ -45,8 +45,7 @@ session <- shiny::MockShinySession$new()
 session$userData <- list(
   current_page_id = "other_page",
   questionnaire_data = list(
-    example_page = list(
-    )
+    example_page = list()
   )
 )
 

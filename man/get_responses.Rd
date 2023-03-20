@@ -19,7 +19,7 @@ Expects data to be saved as files.
 }
 \examples{
 app_settings <- create_app_settings(save_to_file = TRUE)
-if (interactive()){
+if (interactive()) {
   get_responses(app_settings = app_settings)
 }
 }

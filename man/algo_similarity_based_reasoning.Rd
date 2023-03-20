@@ -64,7 +64,7 @@ get_job_suggestions(
 # Comparison of algo_similarity_based_reasoning() with get_job_suggestions()
 
 # Example of using algo_similarity_based_reasoning() directly. Not recommended.
-if (interactive()){
+if (interactive()) {
   algo_similarity_based_reasoning(
     preprocess_string("Arzt"),
     sim_name = "wordwise"
@@ -72,7 +72,7 @@ if (interactive()){
 }
 
 # Same output as before, but the function is more adaptable.
-if (interactive()){
+if (interactive()) {
   get_job_suggestions(
     "Arzt",
     suggestion_type = "kldb-2010",

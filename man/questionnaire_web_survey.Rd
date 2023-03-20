@@ -23,12 +23,12 @@ library(occupationMeasurement)
 # Inspect the code to create the questionnaire_web_survey
 print(questionnaire_web_survey)
 
-if (interactive()){
+if (interactive()) {
   # Run the app with the questionnaire_web_survey
   app(questionnaire = questionnaire_web_survey())
 }
 
-if (interactive()){
+if (interactive()) {
   # This is used by default within app
   app()
 }

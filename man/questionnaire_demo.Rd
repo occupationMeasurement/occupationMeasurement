@@ -26,7 +26,7 @@ library(occupationMeasurement)
 # Inspect the code to create the questionnaire_demo
 print(questionnaire_demo)
 
-if (interactive()){
+if (interactive()) {
   # Run the app with the questionnaire_demo
   app(questionnaire = questionnaire_demo())
 }

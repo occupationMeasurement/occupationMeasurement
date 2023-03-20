@@ -20,7 +20,7 @@ complete.
 my_questionnaire <- list(
   page_final()
 )
-if (interactive()){
+if (interactive()) {
   app(questionnaire = my_questionnaire)
 }
 }

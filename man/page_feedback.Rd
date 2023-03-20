@@ -26,7 +26,7 @@ my_questionnaire <- list(
   page_select_suggestion(),
   page_feedback()
 )
-if (interactive()){
+if (interactive()) {
   app(questionnaire = my_questionnaire)
 }
 }

@@ -100,8 +100,8 @@ get_final_codes(
 # selected answer "9076" trumps the external data and we will code this
 # person as a supervisor.
 get_final_codes(
-# Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
-"9076",
+  # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
+  "9076",
   standardized_answer_levels = list(
     # A response corresponding to the standard ISCO Level "not manager nor supervisor"
     "isco_supervisor_manager" = "isco_not_supervising"

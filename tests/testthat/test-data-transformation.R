@@ -109,7 +109,7 @@ testthat::test_that("extract_questions_wide is robust", {
 
   testthat::expect_equal(
     extract_questions_wide(
-      questionnaire_data =  list(
+      questionnaire_data = list(
         welcome = list(
           page_id = "test",
           respondent_id = "test_123",

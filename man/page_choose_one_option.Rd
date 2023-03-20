@@ -57,15 +57,15 @@ Show a page with multiple radio button options where once can be picked.
 }
 \examples{
 one_page_questionnaire <- list(
- page_choose_one_option(
-   "test_page_radio",
-   question_text = "Hello there! Please pick your favorite number from the options below:",
-   list_of_choices = list(One = 1, Two = 2, Three = 3)
- ),
- page_final()
+  page_choose_one_option(
+    "test_page_radio",
+    question_text = "Hello there! Please pick your favorite number from the options below:",
+    list_of_choices = list(One = 1, Two = 2, Three = 3)
+  ),
+  page_final()
 )
-if (interactive()){
- app(questionnaire = one_page_questionnaire)
+if (interactive()) {
+  app(questionnaire = one_page_questionnaire)
 }
 
 }

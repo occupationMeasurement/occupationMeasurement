@@ -53,8 +53,8 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #' )
 #'
 #' # Start the app
-#' if (interactive()){
-#' app_instance
+#' if (interactive()) {
+#'   app_instance
 #' }
 app <- function(questionnaire = questionnaire_web_survey(),
                 app_settings = create_app_settings(save_to_file = TRUE),
@@ -172,8 +172,8 @@ app <- function(questionnaire = questionnaire_web_survey(),
           num_suggestions = as.integer(query_value(
             name_in_query = "num_suggestions",
             default = app_settings$default_num_suggestions,
-            validate = function(val) !is.na(as.integer(val)))
-          )
+            validate = function(val) !is.na(as.integer(val))
+          ))
         )
       }
 

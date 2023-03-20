@@ -6,9 +6,8 @@
 
 ## Notes
 
-Thank you for the quick turnaround and helpful comments. We addressed each of the comments by implementing the following changes:
+Thank you again for the quick turnaround and helpful comments. We addressed each of the comments by implementing the following changes:
 
- - Moved authors out of brackets in the Description field in DESCRIPTION
- - Removed examples for non-exported functions
- - Updated functions to not store data outside of temp directories by default
- - Removed any global changes to `options()`
+ - Reset changes to user's options after each change to `par()` using `on.exit()` with the old settings
+ - Make outputs to console easily suppressable by using `message()` or making them conditional on an argument
+   - Note: We decided to keep one call to `cat()` in `api.R`, since it is conditional on the `log_to_console` argument and therefore easy to suppress. It could also be surprising to users if output would be suppressed despite `log_to_console` being explicitly set to `TRUE`. We could also easily 

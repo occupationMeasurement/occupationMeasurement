@@ -10,7 +10,7 @@
 #' @export
 #' @examples
 #' my_questionnaire <- list(page_welcome)
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatischen Berufskodierung!",
@@ -53,13 +53,13 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
-page_first_freetext <- function(is_interview = FALSE,
-  aggregate_score_threshold = 0.535,
-  ...
-  ) {
+page_first_freetext <- function(
+    is_interview = FALSE,
+    aggregate_score_threshold = 0.535,
+    ...) {
   page_freetext(
     page_id = "freetext_1",
     is_interview = is_interview,
@@ -76,7 +76,6 @@ page_first_freetext <- function(is_interview = FALSE,
       list(
         # Move to the top when next or previous button is clicked (this works for all pages, after being called once)
         tags$script('$("body").on("click", "#nextButton, #previousButton", function() {$(window).scrollTop(0) });'),
-
         p(run_before_output$question_text),
         if (is_interview) p(class = "interviewer", "INT: Angaben des Befragten vollst\u00e4ndig eintragen. Bitte auf Rechtschreibung achten und ggf. buchstabieren lassen.")
       )
@@ -133,11 +132,12 @@ page_first_freetext <- function(is_interview = FALSE,
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
-page_second_freetext <- function(combine_input_with_first = TRUE,
-  is_interview = FALSE, aggregate_score_threshold = 0.02, ...) {
+page_second_freetext <- function(
+    combine_input_with_first = TRUE,
+    is_interview = FALSE, aggregate_score_threshold = 0.02, ...) {
   # TODO: Maybe abstract aways all the duplicated code between page_first_freetext and page_second_freetext
   page_freetext(
     page_id = "freetext_2",
@@ -215,7 +215,7 @@ page_second_freetext <- function(combine_input_with_first = TRUE,
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_select_suggestion <- function(is_interview = FALSE, ...) {
@@ -464,7 +464,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_none_selected_freetext <- function(is_interview = FALSE, ...) {
@@ -526,7 +526,7 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #'   page_followup(1),
 #'   page_followup(2)
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because R (sigh)
@@ -659,7 +659,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #'   page_followup(2),
 #'   page_results()
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_results <- function(...) {
@@ -817,7 +817,6 @@ page_results <- function(...) {
         ),
         button_previous(),
         button_next(),
-
         h4(tags$a("Neustart", href = paste0("/", session$userData$user_info$url_search)))
       )
     },
@@ -837,7 +836,7 @@ page_results <- function(...) {
 #'   page_select_suggestion(),
 #'   page_feedback()
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_feedback <- function(is_interview = FALSE, ...) {
@@ -916,7 +915,7 @@ page_feedback <- function(is_interview = FALSE, ...) {
 #' my_questionnaire <- list(
 #'   page_final()
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
 #' }
 page_final <- function(...) {

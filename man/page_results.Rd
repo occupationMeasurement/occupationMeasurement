@@ -27,7 +27,7 @@ my_questionnaire <- list(
   page_followup(2),
   page_results()
 )
-if (interactive()){
+if (interactive()) {
   app(questionnaire = my_questionnaire)
 }
 }

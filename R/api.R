@@ -30,12 +30,12 @@
 #'   # If this is TRUE, the log directory will immediately be created
 #'   log_to_file = FALSE
 #' )
-#' if (interactive()){
+#' if (interactive()) {
 #'   # Start the router
 #'   plumber::pr_run(router)
 #' }
 #'
-#' if (interactive()){
+#' if (interactive()) {
 #'   # Immediately start the API
 #'   api(start = TRUE)
 #' }
@@ -139,7 +139,7 @@ api <- function(start = TRUE,
         # Return an error if no identifier has been provided
         if (
           startsWith(req$PATH_INFO, matching_prefix) &&
-          (is.null(identifier) || is.na(identifier) || identifier == "")
+            (is.null(identifier) || is.na(identifier) || identifier == "")
         ) {
           res$status <- 400 # Bad Request
           return(list(error = "Missing query argument: identifier"))

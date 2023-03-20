@@ -65,7 +65,7 @@ digraph G {
   ];
   check_suggestions -> free_text_2 [ label = "1st time"; style="dashed" ];
   free_text_2 -> generate_suggestions;
-  
+
   check_generate_suggestions -> pick_suggestion [ label = "Yes"; style="dashed" ];
   check_generate_suggestions -> check_suggestions [ label = "No"; style="dashed" ];
   pick_suggestion [
@@ -77,7 +77,7 @@ digraph G {
     label = "Did the participant pick\none of the suggestions?";
     shape = diamond;
   ];
-  
+
   check_pick_suggestions -> free_text_manual [ label = "No (none match)"; style="dashed" ];
   check_suggestions -> free_text_manual [ label = "2nd time"; style="dashed" ];
   free_text_manual [

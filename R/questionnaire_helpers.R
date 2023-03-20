@@ -48,15 +48,15 @@ mark_questionnaire_complete <- function() {
 #' @export
 #' @examples
 #' one_page_questionnaire <- list(
-#'  page_choose_one_option(
-#'    "test_page_radio",
-#'    question_text = "Hello there! Please pick your favorite number from the options below:",
-#'    list_of_choices = list(One = 1, Two = 2, Three = 3)
-#'  ),
-#'  page_final()
+#'   page_choose_one_option(
+#'     "test_page_radio",
+#'     question_text = "Hello there! Please pick your favorite number from the options below:",
+#'     list_of_choices = list(One = 1, Two = 2, Three = 3)
+#'   ),
+#'   page_final()
 #' )
-#' if (interactive()){
-#'  app(questionnaire = one_page_questionnaire)
+#' if (interactive()) {
+#'   app(questionnaire = one_page_questionnaire)
 #' }
 #'
 page_choose_one_option <- function(page_id,
@@ -225,7 +225,6 @@ page_freetext <- function(page_id,
     render = function(session, page, run_before_output, ...) {
       list(
         if (render_question_text) p(run_before_output$question_text),
-
         if (trigger_next_on_enter) {
           # Known issue with IE11: If one types fast and presses enter,
           # not the complete text gets used/is saved.
@@ -236,7 +235,6 @@ page_freetext <- function(page_id,
                         }
                       });'))
         },
-
         textInput(
           paste0(page$page_id, "_text"),
           NULL,

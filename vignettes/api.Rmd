@@ -87,7 +87,7 @@ digraph G {
 
   suggestions -> check_followup_questions [ label = "Respondent chose\na suggestion"];
   check_followup_questions -> next_followup_question [ label = "Yes"; style="dashed" ];
-  check_followup_questions -> final_codes [ label = "No"; style="dashed" ]; 
+  check_followup_questions -> final_codes [ label = "No"; style="dashed" ];
   next_followup_question -> check_finished_post_followup [ label = "Respondend chose\nan answer"];
   check_finished_post_followup:w -> next_followup_question:w [ label = "No"; style="dashed" ];
   check_finished_post_followup -> final_codes [ label = "Yes"; style="dashed" ];

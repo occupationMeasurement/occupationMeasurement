@@ -1,4 +1,3 @@
-
 testthat::test_that("app_settings are generated from env vars", {
   withr::local_envvar(
     # Check strings

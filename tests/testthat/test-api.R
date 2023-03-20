@@ -73,10 +73,13 @@ test_that("API is running and endpoint '/' works", {
   # wait 15 seconds for the API to initialize
   max_s <- 15
   for (i in 1:max_s) {
-    try({
-      r <- httr::GET(url = api_root, port = port, path = "/")
-      break()
-    }, silent = TRUE)
+    try(
+      {
+        r <- httr::GET(url = api_root, port = port, path = "/")
+        break()
+      },
+      silent = TRUE
+    )
     Sys.sleep(1)
   }
 

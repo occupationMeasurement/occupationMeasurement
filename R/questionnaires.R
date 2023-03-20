@@ -12,12 +12,12 @@
 #' # Inspect the code to create the questionnaire_web_survey
 #' print(questionnaire_web_survey)
 #'
-#' if (interactive()){
+#' if (interactive()) {
 #'   # Run the app with the questionnaire_web_survey
 #'   app(questionnaire = questionnaire_web_survey())
 #' }
 #'
-#' if (interactive()){
+#' if (interactive()) {
 #'   # This is used by default within app
 #'   app()
 #' }
@@ -49,7 +49,7 @@ questionnaire_web_survey <- function(show_feedback_page = TRUE) {
 #' # Inspect the code to create the questionnaire_interviewer_administered
 #' print(questionnaire_interviewer_administered)
 #'
-#' if (interactive()){
+#' if (interactive()) {
 #'   # Run the app with the questionnaire_interviewer_administered
 #'   app(questionnaire = questionnaire_interviewer_administered())
 #' }
@@ -81,7 +81,7 @@ questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
 #' # Inspect the code to create the questionnaire_demo
 #' print(questionnaire_demo)
 #'
-#' if (interactive()){
+#' if (interactive()) {
 #'   # Run the app with the questionnaire_demo
 #'   app(questionnaire = questionnaire_demo())
 #' }
@@ -152,19 +152,21 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
     # Use a higher aggregate_score_threshold here, since time is more
     # expensive in telephone surveys and reading options alound much slower
     # than reading them yourself in a web-survey
-    page_second_freetext(is_interview = TRUE, aggregate_score_threshold = 0.4,
+    page_second_freetext(
+      is_interview = TRUE, aggregate_score_threshold = 0.4,
       render_after = function(...) {
         shiny::tags$div(
           class = "demo-text",
           shiny::tags$p("Wenn bei der ersten Freitextfrage eine sehr allgemeine Antwort gegeben wird (z.B. Angestellter, Arbeiterin, Projektleiter, Managerin) oder der eingegebene Begriff nicht hinterlegt ist, k\u00f6nnen keine
             spezifischen Antworten vorgeschlagen werden. Es muss zun\u00e4chst nach n\u00e4heren Details gefragt werden."),
-            shiny::tags$p('Die verlangte G\u00fcte der Vorschl\u00e4ge kann mithilfe des Parameters "aggregate_score_threshold" kontrolliert
+          shiny::tags$p('Die verlangte G\u00fcte der Vorschl\u00e4ge kann mithilfe des Parameters "aggregate_score_threshold" kontrolliert
               und auf die Umst\u00e4nde der jeweiligen Befragung angepasst werden. Es gilt eine Abw\u00e4gung zu treffen: Mit einem sehr kleinen threshold
               erhalten fast alle Befragten Vorschl\u00e4ge, aber einige dieser Vorschl\u00e4ge sind sehr schlecht und die Befragten w\u00e4hlen evtl. keine Antwort aus.
               Es wird empfohlen bei der ersten Freitextfrage einen h\u00f6heren Threshold zu w\u00e4hlen (default: 0.535) und ggf. bei der zweiten Freitextfrage
               einen niedrigen Wert zu w\u00e4hlen (hier: 0.4, aber auch Werte nahe 0 k\u00f6nnen sinnvoll sein.).')
-          )
-      }),
+        )
+      }
+    ),
     page_select_suggestion(
       is_interview = TRUE,
       render_after = function(session, ...) {
@@ -234,7 +236,7 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
           shiny::tags$p("Falls der Befragte sich f\u00fcr keine der zuvor angezeigten Beschreibungen entscheiden konnte, ist
             eine manuelle Kodierung n\u00f6tig. Hierf\u00fcr werden hier weitere Details erfasst. Die Seite wird \u00fcbersprungen,
             wenn eine Beschreibung ausgew\u00e4hlt wurde oder wenn bereits zwei Freitextfragen beantwortet wurden.")
-          )
+        )
       }
     ),
     page_followup(1,
@@ -262,18 +264,20 @@ questionnaire_demo <- function(show_feedback_page = TRUE) {
     ),
     page_followup(2, is_interview = TRUE),
     page_results(),
-    if (show_feedback_page) page_feedback(
-      is_interview = TRUE,
-      render_after = function(...) {
-        shiny::tags$div(
-          class = "demo-text",
-          shiny::tags$p("Es ist schwierig, geeignete Antworten f\u00fcr die Berufs-Hilfsklassifikation zu formulieren. Mithilfe eines klassischen Pretests
+    if (show_feedback_page) {
+      page_feedback(
+        is_interview = TRUE,
+        render_after = function(...) {
+          shiny::tags$div(
+            class = "demo-text",
+            shiny::tags$p("Es ist schwierig, geeignete Antworten f\u00fcr die Berufs-Hilfsklassifikation zu formulieren. Mithilfe eines klassischen Pretests
             k\u00f6nnen die Antworten auch nicht getestet werden, da viele Berufe extrem selten sind und im Pretest nie vorkommen."),
-          shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tats\u00e4chlich ausge\u00fcbte T\u00e4tigkeit nur unzureichend beschreiben.
+            shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tats\u00e4chlich ausge\u00fcbte T\u00e4tigkeit nur unzureichend beschreiben.
             Wenn bei bestimmten Antworten Probleme festgestellt werden, kann eine \u00dcberarbeitung der Berufs-Hilfsklassifikation erforderlich sein.")
-        )
-      }
-    ),
+          )
+        }
+      )
+    },
     page_final()
   )
 }

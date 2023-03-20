@@ -44,8 +44,8 @@ app_instance <- app(
 )
 
 # Start the app
-if (interactive()){
-app_instance
+if (interactive()) {
+  app_instance
 }
 }
 \seealso{

@@ -22,7 +22,7 @@ Providing an introduction and greeting participants.
 }
 \examples{
 my_questionnaire <- list(page_welcome)
-if (interactive()){
+if (interactive()) {
   app(questionnaire = my_questionnaire)
 }
 }

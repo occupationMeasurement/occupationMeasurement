@@ -36,7 +36,7 @@ More information on the KldB 2010: https://statistik.arbeitsagentur.de/DE/Naviga
 \examples{
 # We recommend using a non-temporary directory for caching, so data is
 # downloaded only once and not time and time again
-cache_dir = tempdir()
+cache_dir <- tempdir()
 # Note: The dataset will be downloaded from the internet
 # Load the cleaned dataset
 load_kldb(cache_dir = cache_dir)

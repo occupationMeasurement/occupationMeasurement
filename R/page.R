@@ -163,7 +163,7 @@ new_page <- function(page_id, render, condition = NULL, run_before = NULL, rende
 #' @keywords internal
 check_condition <- function(page, session, ...) {
   if (session$userData$app_settings$verbose) {
-    cat("Check Condition:", page$page_id, "\n")
+    message(paste("Check Condition:", page$page_id))
   }
 
   if (!is.null(page$condition)) {
@@ -186,7 +186,7 @@ check_condition <- function(page, session, ...) {
 #' @keywords internal
 execute_run_before <- function(page, session, input, output, ...) {
   if (session$userData$app_settings$verbose) {
-    cat("Show Page:", page$page_id, "\n")
+    message(paste("Show Page:", page$page_id))
   }
 
   # Initialize trial data e.g. set first timestamp, set ids etc.
@@ -233,14 +233,14 @@ execute_run_after <- function(page, session, input, output, ...) {
 
   # Show a detailed message of the page's data if enabled
   if (session$userData$app_settings$verbose) {
-    cat(
+    message(paste(
       "Page data for", page$page_id, ":",
       get_page_data(session = session, page_id = page$page_id) |>
         utils::str() |>
         utils::capture.output() |>
         paste(collapse = "\n"),
       "\n"
-    )
+    ))
   }
 }
 

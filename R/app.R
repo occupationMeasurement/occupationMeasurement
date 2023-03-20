@@ -12,7 +12,7 @@ validate_questionnaire <- function(questionnaire, verbose) {
   has_duplicates <- sum(duplicated(page_ids)) > 0
 
   if (verbose || has_duplicates) {
-    cat("Page Ids:", paste(page_ids, collapse = ", "), "\n")
+    message(paste("Page Ids:", paste(page_ids, collapse = ", ")))
   }
 
   if (has_duplicates) {

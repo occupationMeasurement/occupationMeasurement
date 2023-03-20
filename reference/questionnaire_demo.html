@@ -162,16 +162,17 @@ the additional pages.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$li("Berufsspezifische Spezialisierungen"), </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$li("Sonstige")), shiny::tags$p("Die beiden erstgenannten Arten (Führungs-/Aufsichtstätigkeit bzw. Anforderungsniveau)\n            werden von vielen Befragungen bereits an anderer Stelle erhoben. Beides kann dabei auf jeweils unterschiedliche Weise\n            operationalisiert werden. Wenn solche Informationen bereits anderweitig erfasst werden, ist zu prüfen, ob man\n            die entsprechende Information hier erneut erheben oder Befragungszeit einsparen möchte und die entsprechenden\n            Folgefragen bei der Befragung auslässt."))</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     }), page_followup(2, is_interview = TRUE), page_results(), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         if (show_feedback_page) page_feedback(is_interview = TRUE, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             render_after = function(...) {</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         if (show_feedback_page) {</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             page_feedback(is_interview = TRUE, render_after = function(...) {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$div(class = "demo-text", shiny::tags$p("Es ist schwierig, geeignete Antworten für die Berufs-Hilfsklassifikation zu formulieren. Mithilfe eines klassischen Pretests\n            können die Antworten auch nicht getestet werden, da viele Berufe extrem selten sind und im Pretest nie vorkommen."), </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tatsächlich ausgeübte Tätigkeit nur unzureichend beschreiben.\n            Wenn bei bestimmten Antworten Probleme festgestellt werden, kann eine Überarbeitung der Berufs-Hilfsklassifikation erforderlich sein."))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             }), page_final())</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             })</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         }, page_final())</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55c7075ad908&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x5635f201fcc0&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:occupationMeasurement&gt;</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="co"># Run the app with the questionnaire_demo</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="app.html">app</a></span><span class="op">(</span>questionnaire <span class="op">=</span> <span class="fu">questionnaire_demo</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>

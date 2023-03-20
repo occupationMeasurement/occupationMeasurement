@@ -101,7 +101,7 @@ will prevent reloading the data time and time again. This can be set globally vi
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># We recommend using a non-temporary directory for caching, so data is</span></span></span>
 <span class="r-in"><span><span class="co"># downloaded only once and not time and time again</span></span></span>
-<span class="r-in"><span><span class="va">cache_dir</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cache_dir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># Note: The dataset will be downloaded from the internet</span></span></span>
 <span class="r-in"><span><span class="co"># Load the cleaned dataset</span></span></span>
 <span class="r-in"><span><span class="fu">load_kldb</span><span class="op">(</span>cache_dir <span class="op">=</span> <span class="va">cache_dir</span><span class="op">)</span></span></span>

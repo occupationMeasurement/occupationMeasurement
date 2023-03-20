@@ -71,7 +71,7 @@ api <- function(start = TRUE,
         basename()
     )
 
-    cat("Logging to file:", log_filepath_full, "\n")
+    message(paste("Logging to file:", log_filepath_full))
   }
 
   # Add request logging

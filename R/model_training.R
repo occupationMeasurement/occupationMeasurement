@@ -170,7 +170,8 @@ train_similarity_based_reasoning <- function(anonymized_data,
       grad.log.p <- mapply(function(phi1, phi2) gradient.p.log.phi.y(c(phi1, phi2), data, K), grid[, 1], grid[, 2])
       grad.normal.approximation <- -solve(variance) %*% t(grid - c(rep(modus[1], 60), rep(modus[2], 60)))
 
-      graphics::par(mfrow = c(1, 2))
+      oldpar <- graphics::par(mfrow = c(1, 2))
+      on.exit(graphics::par(oldpar))
       graphics::plot(grid[, 1], grad.log.p[1, ], type = "l", ylab = "dp \ d phi_D", xlab = "phi_D")
       graphics::points(grid[, 1], grad.normal.approximation[1, ], type = "l", col = 2)
       graphics::legend("topright", legend = c("deriv p(phi_D | y)", "deriv Normal approx"), fill = c(1, 2))
@@ -178,7 +179,6 @@ train_similarity_based_reasoning <- function(anonymized_data,
       graphics::plot(grid[, 2], grad.log.p[2, ], type = "l", ylab = "dp \ d phi_U", xlab = "phi_U")
       graphics::points(grid[, 2], grad.normal.approximation[2, ], type = "l", col = 2)
       graphics::legend("topright", legend = c("deriv p(phi_U | y)", "deriv Normal approx"), fill = c(1, 2))
-      graphics::par(mfrow = c(1, 1))
     }
 
     # string (model) probability (and posterior expectation for those categories that were not observed in the training data)
@@ -284,7 +284,8 @@ train_similarity_based_reasoning <- function(anonymized_data,
     # # check normality approximation
     plot.distribution.phi.given.y <- function(modus, sd, data, K) {
       phi <- seq(modus - 5 * sd, modus + 5 * sd, by = 0.00001) # look at modus +- 5 standard deviations
-      graphics::par(mfrow = c(1, 2))
+      oldpar <- graphics::par(mfrow = c(1, 2))
+      on.exit(graphics::par(oldpar))
 
       ###### plot distribution
       log.f.phi <- sapply(phi, p.log.phi.y.sd, data, K) # this is the form of the log density for p(phi | y)

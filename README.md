@@ -24,7 +24,14 @@ For a detailed overview of the package refer to `vignette("occupationMeasurement
 Prerequisites:
 
 - The [R Statistical Software](https://www.r-project.org/) (Version 4.1 or higher)
-- The R package [remotes](https://remotes.r-lib.org/) to install packages from github, available via `install.packages("remotes")`
+
+The package can be installed directly from CRAN by running the code below:
+
+```r
+install.packages("occupationMeasurement")
+```
+
+To install the latest development version from GitHub, run you will need the R package [remotes](https://remotes.r-lib.org/) available via `install.packages("remotes")`.
 
 The package can then be installed by running the code below:
 

@@ -112,13 +112,11 @@
 <p>Prerequisites:</p>
 <ul>
 <li>The <a href="https://www.r-project.org/" class="external-link">R Statistical Software</a> (Version 4.1 or higher)</li>
+<li>The R package <a href="https://remotes.r-lib.org/" class="external-link">remotes</a> to install packages from github, available via <code>install.packages("remotes")</code>
+</li>
 </ul>
-<p>The package can be installed directly from CRAN by running the code below:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"occupationMeasurement"</span><span class="op">)</span></span></code></pre></div>
-<p>To install the latest development version from GitHub, run you will need the R package <a href="https://remotes.r-lib.org/" class="external-link">remotes</a> available via <code>install.packages("remotes")</code>.</p>
 <p>The package can then be installed by running the code below:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"occupationMeasurement/occupationMeasurement"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -129,11 +127,11 @@
 </h3>
 <p>The interactive app is the easiest way to use the package: It provides a fully-featured, interactive survey application to collect and immediately code occupational data. Starting it is as easy as calling the <code><a href="reference/app.html">app()</a></code>-function.</p>
 <p>More information about the interactive app can be found in <code><a href="articles/app.html">vignette("app")</a></code> and the help page <code><a href="reference/app.html">?app</a></code>.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Run the interactive shiny app</span></span>
 <span><span class="fu">occupationMeasurement</span><span class="fu">::</span><span class="fu"><a href="reference/app.html">app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>The app also supports custom questionnaires, so you can build your own or use and adapt one of the questionnaires included in the package. E.g., the <code><a href="reference/questionnaire_demo.html">questionnaire_demo()</a></code> will explain the functionality of the app, and <code><a href="reference/questionnaire_interviewer_administered.html">questionnaire_interviewer_administered()</a></code> is designed to be read by interviewers in <a href="https://en.wikipedia.org/wiki/Computer-assisted_telephone_interviewing" class="external-link">CATI</a> and <a href="https://en.wikipedia.org/wiki/Computer-assisted_personal_interviewing" class="external-link">CAPI</a> surveys. The <code><a href="reference/questionnaire_web_survey.html">questionnaire_web_survey()</a></code> is intended to be used for internet surveys.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://occupationMeasurement.github.io/occupationMeasurement/" class="external-link">occupationMeasurement</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Run the app with additional explanations. The best way to get started.</span></span>
@@ -163,24 +161,24 @@
 <h3 id="testing">Testing<a class="anchor" aria-label="anchor" href="#testing"></a>
 </h3>
 <p>The included tests can be run with the following snippet.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/test.html" class="external-link">test</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>It is recommended to also run a more detailed check via the following snippet.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/check.html" class="external-link">check</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="formatting">Formatting<a class="anchor" aria-label="anchor" href="#formatting"></a>
 </h3>
 <p>After making changes to the code, it is advised to automatically format all code with the {styler} package. This can be done with the following snippet.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">styler</span><span class="fu">::</span><span class="fu"><a href="https://styler.r-lib.org/reference/style_pkg.html" class="external-link">style_pkg</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h3>
 <p>The documentation website is powered by {pkgdown}. It can be rebuilt with the following snippet.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>To set up everything for hosting the documentation on github pages use <code><a href="https://usethis.r-lib.org/reference/use_pkgdown.html" class="external-link">usethis::use_pkgdown_github_pages()</a></code>.</p>
 <p>During development, <code><a href="https://roxygen2.r-lib.org/reference/roxygenize.html" class="external-link">roxygen2::roxygenise()</a></code> is useful to update .Rd-files.</p>
@@ -232,7 +230,6 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://CRAN.R-project.org/package=occupationMeasurement" class="external-link"><img src="https://www.r-pkg.org/badges/version/occupationMeasurement" alt="CRAN status"></a></li>
 </ul>
 </div>
 

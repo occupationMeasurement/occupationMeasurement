@@ -54,7 +54,7 @@ The machine-learning algorithm used in our instrument is able to work with anony
 
 The toolbox is released under the MIT license alongside extensive [online documentation](https://occupationMeasurement.github.io/occupationMeasurement). Quality of the software is ensured using automated testing via continuous integration.
 
-[^2]: Package `occupationMeasurement` on CRAN: <https://cran.r-project.org/web/packages/occupationMeasurement/index.html>.
+[^2]: Package "occupationMeasurement" on CRAN: <https://cran.r-project.org/web/packages/occupationMeasurement/index.html>.
 
 # Related Work
 

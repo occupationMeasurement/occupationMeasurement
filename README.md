@@ -113,6 +113,14 @@ To set up everything for hosting the documentation on github pages use `usethis:
 
 During development, `roxygen2::roxygenise()` is useful to update .Rd-files.
 
+## Getting Help & Contributing
+
+If you encounter any issues / bugs in the package, feel free to file an [issue on GitHub](https://github.com/occupationMeasurement/occupationMeasurement/issues), ideally alongside a clear reproducible example or description.
+
+We also welcome contributions to the package. If you want to contribute to the development of the package, we recommend to first open an [issue](https://github.com/occupationMeasurement/occupationMeasurement/issues) to discuss your ideas and plans, before working on a pull request.
+
+If you have any questions about the package or plan to use it in a project, feel free to reach out to one of the maintainers via email. The list of maintainers and their email addresses is in the `DESCRIPTION` file.
+
 ## Acknowledgments
 
 This project is funded by the Deutsche Forschungsgemeinschaft (DFG, German

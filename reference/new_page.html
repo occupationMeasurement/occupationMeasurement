@@ -147,7 +147,7 @@ internally.</p></li>
 </ol><p>Each of the life-cycle functions above is annotated with the
 paramaters it has access to. <code>session</code>, <code>input</code> and <code>output</code> are
 passed directly from shiny and correspond to the objects made available by
-<code><a href="https://shiny.rstudio.com/reference/shiny/latest/shinyServer.html" class="external-link">shiny::shinyServer()</a></code>, <code>run_before_output</code> is available for convenience and
+<code><a href="https://rdrr.io/pkg/shiny/man/shinyServer.html" class="external-link">shiny::shinyServer()</a></code>, <code>run_before_output</code> is available for convenience and
 corresponds to whatever is returned by <code>run_before</code>.</p>
 <p>Some side-effects occur:</p><ul><li><p><code>occupationMeasurement:::init_page_data</code> is called before 1. <code>run_before</code>.
 It sets up an internal representation of the page data to be saved.</p></li>
@@ -180,7 +180,7 @@ modification and extension of existing pages.</p>
 <span class="r-in"><span>  render <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">session</span>, <span class="va">run_before_output</span>, <span class="va">page</span>, <span class="va">input</span>, <span class="va">output</span>, <span class="va">...</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>      <span class="fu">shiny</span><span class="fu">::</span><span class="va"><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">tags</a></span><span class="op">$</span><span class="fu">h1</span><span class="op">(</span><span class="st">"Questions"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>      <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://shiny.rstudio.com/reference/shiny/latest/textAreaInput.html" class="external-link">textAreaInput</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>      <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textAreaInput.html" class="external-link">textAreaInput</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>        inputId <span class="op">=</span> <span class="st">"day_freetext"</span>,</span></span>
 <span class="r-in"><span>        label <span class="op">=</span> <span class="st">"How was your day? Please give a detailed answer."</span>,</span></span>
 <span class="r-in"><span>        value <span class="op">=</span> <span class="fu"><a href="get_item_data.html">get_item_data</a></span><span class="op">(</span></span></span>

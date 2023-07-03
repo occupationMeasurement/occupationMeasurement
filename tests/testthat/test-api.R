@@ -75,9 +75,15 @@ test_that("API is running and endpoint '/' works", {
   for (i in 1:max_s) {
     try(
       {
+        # Get output if the API crashed
+        if (!api_process$is_alive()) {
+          print(api_process$get_result())
+        }
+
         r <- httr::GET(url = api_root, port = port, path = "/")
         break()
       },
+      # Set this to FALSE if the API is not initializing properly to enable debugging it
       silent = TRUE
     )
     Sys.sleep(1)

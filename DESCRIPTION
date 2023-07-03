@@ -42,21 +42,7 @@ Imports:
     text2vec (>= 0.6.1),
     tm (>= 0.7.8)
 Suggests:
-    plumber,
-    devtools,
-    testthat,
-    shinytest2,
-    httr,
-    withr,
-    callr,
-    usethis,
-    mvtnorm,
-    readxl,
-    styler,
-    knitr,
-    rmarkdown,
-    DiagrammeR,
-    sessioninfo
+    plumber
 Depends:
     R (>= 4.1)
 LazyData: true

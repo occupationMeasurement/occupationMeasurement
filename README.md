@@ -77,7 +77,29 @@ You can find more information on how to use these functionalities in `vignette("
 
 ## Package Development
 
-This section is only relevant when further developing the package itself.
+This section is only relevant when further developing the package itself. 
+
+By default the package will only install dependencies it absolutely needs to run. For developing the package or running tests, the following packages can be installed via the snippet below.
+
+```r
+# Install development dependencies
+install.packages(c(
+  "devtools",
+  "testthat",
+  "shinytest2",
+  "httr",
+  "withr",
+  "callr",
+  "usethis",
+  "mvtnorm",
+  "readxl",
+  "styler",
+  "knitr",
+  "rmarkdown",
+  "DiagrammeR",
+  "sessioninfo"
+))
+```
 
 ### Testing
 

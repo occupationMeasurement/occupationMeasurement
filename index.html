@@ -156,42 +156,61 @@
 </div>
 </div>
 <div class="section level2">
+<h2 id="getting-help--contributing">Getting Help &amp; Contributing<a class="anchor" aria-label="anchor" href="#getting-help--contributing"></a>
+</h2>
+<p>If you encounter any issues / bugs in the package, feel free to file an <a href="https://github.com/occupationMeasurement/occupationMeasurement/issues" class="external-link">issue on GitHub</a>, ideally alongside a clear reproducible example or description.</p>
+<p>We also welcome contributions to the package. If you want to contribute to the development of the package, we recommend to first open an <a href="https://github.com/occupationMeasurement/occupationMeasurement/issues" class="external-link">issue</a> to discuss your ideas and plans, before working on a pull request.</p>
+<p>If you have any questions about the package or plan to use it in a project, feel free to reach out to one of the maintainers via email. The list of maintainers and their email addresses is in the <code>DESCRIPTION</code> file.</p>
+</div>
+<div class="section level2">
 <h2 id="package-development">Package Development<a class="anchor" aria-label="anchor" href="#package-development"></a>
 </h2>
 <p>This section is only relevant when further developing the package itself.</p>
+<p>By default the package will only install dependencies it absolutely needs to run. For developing the package or running tests, the following packages can be installed via the snippet below.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Install development dependencies</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  <span class="st">"devtools"</span>,</span>
+<span>  <span class="st">"testthat"</span>,</span>
+<span>  <span class="st">"shinytest2"</span>,</span>
+<span>  <span class="st">"httr"</span>,</span>
+<span>  <span class="st">"withr"</span>,</span>
+<span>  <span class="st">"callr"</span>,</span>
+<span>  <span class="st">"usethis"</span>,</span>
+<span>  <span class="st">"mvtnorm"</span>,</span>
+<span>  <span class="st">"readxl"</span>,</span>
+<span>  <span class="st">"styler"</span>,</span>
+<span>  <span class="st">"knitr"</span>,</span>
+<span>  <span class="st">"rmarkdown"</span>,</span>
+<span>  <span class="st">"DiagrammeR"</span>,</span>
+<span>  <span class="st">"sessioninfo"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="testing">Testing<a class="anchor" aria-label="anchor" href="#testing"></a>
 </h3>
 <p>The included tests can be run with the following snippet.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/test.html" class="external-link">test</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>It is recommended to also run a more detailed check via the following snippet.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/check.html" class="external-link">check</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="formatting">Formatting<a class="anchor" aria-label="anchor" href="#formatting"></a>
 </h3>
 <p>After making changes to the code, it is advised to automatically format all code with the {styler} package. This can be done with the following snippet.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">styler</span><span class="fu">::</span><span class="fu"><a href="https://styler.r-lib.org/reference/style_pkg.html" class="external-link">style_pkg</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h3>
 <p>The documentation website is powered by {pkgdown}. It can be rebuilt with the following snippet.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>To set up everything for hosting the documentation on github pages use <code><a href="https://usethis.r-lib.org/reference/use_pkgdown.html" class="external-link">usethis::use_pkgdown_github_pages()</a></code>.</p>
 <p>During development, <code><a href="https://roxygen2.r-lib.org/reference/roxygenize.html" class="external-link">roxygen2::roxygenise()</a></code> is useful to update .Rd-files.</p>
 </div>
-</div>
-<div class="section level2">
-<h2 id="getting-help--contributing">Getting Help &amp; Contributing<a class="anchor" aria-label="anchor" href="#getting-help--contributing"></a>
-</h2>
-<p>If you encounter any issues / bugs in the package, feel free to file an <a href="https://github.com/occupationMeasurement/occupationMeasurement/issues" class="external-link">issue on GitHub</a>, ideally alongside a clear reproducible example or description.</p>
-<p>We also welcome contributions to the package. If you want to contribute to the development of the package, we recommend to first open an <a href="https://github.com/occupationMeasurement/occupationMeasurement/issues" class="external-link">issue</a> to discuss your ideas and plans, before working on a pull request.</p>
-<p>If you have any questions about the package or plan to use it in a project, feel free to reach out to one of the maintainers via email. The list of maintainers and their email addresses is in the <code>DESCRIPTION</code> file.</p>
 </div>
 <div class="section level2">
 <h2 id="acknowledgments">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>

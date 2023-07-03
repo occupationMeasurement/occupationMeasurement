@@ -69,11 +69,11 @@ my_simple_questionnaire <- list(
   new_page(
     page_id = "test",
     render = function(...) {
-      return(
+      return(list(
         p("Hello!"),
         button_previous(),
         button_next()
-      )
+      ))
     }
   ),
 

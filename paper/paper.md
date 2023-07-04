@@ -52,7 +52,7 @@ The toolbox uses a specifically developed list of occupational task descriptions
 
 The machine-learning algorithm used in our instrument is able to work with anonymized training data while retaining predictive performance on-par with other machine learning and non-machine-learning algorithms [@schierholz2019; @schierholz2021]. This enables sharing training data as well as trained models, allowing on the one hand out-of-the-box usage of our instrument without the need for labeled data or pre-training, but also the further sharing of newly trained models by users of the toolbox. Anonymized training data and pre-trained models in German are included with the package.
 
-The toolbox is released under the MIT license alongside extensive [online documentation](https://occupationMeasurement.github.io/occupationMeasurement). Quality of the software is ensured using automated testing via continuous integration.
+The toolbox is released under the MIT license alongside extensive [online documentation](https://occupationMeasurement.github.io/occupationMeasurement). Quality of the software is ensured using automated testing via continuous integration. The toolbox has successfully been piloted with various modes of data collection in collaboration with different German survey institutes.
 
 [^2]: Package "occupationMeasurement" on CRAN: <https://cran.r-project.org/web/packages/occupationMeasurement/index.html>.
 

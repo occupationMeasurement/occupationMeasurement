@@ -42,7 +42,16 @@ Imports:
     text2vec (>= 0.6.1),
     tm (>= 0.7.8)
 Suggests:
-    plumber
+    plumber,
+    knitr,
+    mvtnorm,
+    callr,
+    devtools,
+    httr,
+    sessioninfo,
+    shinytest2,
+    testthat,
+    withr
 Depends:
     R (>= 4.1)
 LazyData: true

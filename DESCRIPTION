@@ -1,6 +1,6 @@
 Package: occupationMeasurement
 Title: Interactively Measure Occupations in Interviews and Beyond
-Version: 0.2.0.9000
+Version: 0.3.0
 Authors@R: c(
         person(
             "Jan", "Simson", ,

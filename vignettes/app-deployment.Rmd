@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-As the interactive app has been built using [shiny](https://shiny.rstudio.com), there are several ways of deploying it. Two of the most common ways are explained in this document and additional information on deploying a shiny application can be found [here](https://shiny.rstudio.com/deploy/).
+As the interactive app has been built using [shiny](https://shiny.posit.co), there are several ways of deploying it. Two of the most common ways are explained in this document and additional information on deploying a shiny application can be found [here](https://shiny.posit.co/r/deploy.html).
 
 # Using shiny-server ✨
 

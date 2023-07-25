@@ -16,6 +16,7 @@ _\.new\.png$
 ^docker$
 ^examples$
 ^.vscode$
+^revdep$
 ^.lintr$
 ^.Renviron.*$
 ^\.github$

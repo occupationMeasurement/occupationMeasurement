@@ -1,6 +1,6 @@
 Package: occupationMeasurement
 Title: Interactively Measure Occupations in Interviews and Beyond
-Version: 0.2.0.9000
+Version: 0.3.0
 Authors@R: c(
         person(
             "Jan", "Simson", ,
@@ -43,20 +43,15 @@ Imports:
     tm (>= 0.7.8)
 Suggests:
     plumber,
-    devtools,
-    testthat,
-    shinytest2,
-    httr,
-    withr,
-    callr,
-    usethis,
-    mvtnorm,
-    readxl,
-    styler,
     knitr,
-    rmarkdown,
-    DiagrammeR,
-    sessioninfo
+    mvtnorm,
+    callr,
+    devtools,
+    httr,
+    sessioninfo,
+    shinytest2,
+    testthat,
+    withr
 Depends:
     R (>= 4.1)
 LazyData: true

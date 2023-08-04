@@ -445,7 +445,7 @@ add_distinctions_auxco <- function(previous_suggestions, num_suggestions, sugges
   auxco <- get_data("auxco-1.2.x", user_provided_data = suggestion_type_options$datasets)
 
   # Make sure highly improbable suggestions are shown at the end (we may even want to remove them)
-  previous_suggestions <- previous_suggestions[score < 0.005, order_indicator := 0L]
+  previous_suggestions[score < 0.005, order_indicator := 0L]
 
   # if a category has rather high probability to be correct (> 0.2, value is made-up!) add all abgrenzungen with similarity = high. Set their score to 0.05.
   # preliminary analysis with turtle data suggests that the exact value for the threshold (0.2) and the inserted probability (0.05) have basically no influence. Maybe a smaller threshold would be preferable? Set to 0.3 for testing (looks like a small threshold is most promising if we show many 7 answer options, larger thresholds around 0.7 seem better if we show at most four answer options)

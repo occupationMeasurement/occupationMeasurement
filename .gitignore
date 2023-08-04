@@ -17,6 +17,7 @@ inst/doc
 /doc/
 /Meta/
 .vscode/
+revdep/
 
 .Rprofile
 .R-version

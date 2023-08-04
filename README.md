@@ -75,9 +75,39 @@ Besides the interactive app, there are also two alternative ways of using this p
 
 You can find more information on how to use these functionalities in `vignette("occupationMeasurement")`.
 
+## Getting Help & Contributing
+
+If you encounter any issues / bugs in the package, feel free to file an [issue on GitHub](https://github.com/occupationMeasurement/occupationMeasurement/issues), ideally alongside a clear reproducible example or description.
+
+We also welcome contributions to the package. If you want to contribute to the development of the package, we recommend to first open an [issue](https://github.com/occupationMeasurement/occupationMeasurement/issues) to discuss your ideas and plans, before working on a pull request.
+
+If you have any questions about the package or plan to use it in a project, feel free to reach out to one of the maintainers via email. The list of maintainers and their email addresses is in the `DESCRIPTION` file.
+
 ## Package Development
 
-This section is only relevant when further developing the package itself.
+This section is only relevant when further developing the package itself. 
+
+By default the package will only install dependencies it absolutely needs to run. For developing the package or running tests, the following packages can be installed via the snippet below.
+
+```r
+# Install development dependencies
+install.packages(c(
+  "devtools",
+  "testthat",
+  "shinytest2",
+  "httr",
+  "withr",
+  "callr",
+  "usethis",
+  "mvtnorm",
+  "readxl",
+  "styler",
+  "knitr",
+  "rmarkdown",
+  "DiagrammeR",
+  "sessioninfo"
+))
+```
 
 ### Testing
 

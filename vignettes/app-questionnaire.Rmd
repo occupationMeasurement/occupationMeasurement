@@ -27,7 +27,7 @@ There exist some helper functions that make it simple to create specific types o
 - `page_choose_one_option()`
 - `page_freetext()`
 
-In general each page has a unique `page_id` to identify itself and follows a general principle of lifecycle functions. Most of these lifecycle functions are optional, except for the `render` function, which should return the shiny [HTML tags](https://shiny.rstudio.com/articles/tag-glossary.html) or inputs / outputs to be displayed. All lifecycle functions take at least the shiny session as arguments, other arguments depend on the function itself (supported arguments are listed in `new_page()`).
+In general each page has a unique `page_id` to identify itself and follows a general principle of lifecycle functions. Most of these lifecycle functions are optional, except for the `render` function, which should return the shiny [HTML tags](https://shiny.posit.co/r/articles/build/tag-glossary/) or inputs / outputs to be displayed. All lifecycle functions take at least the shiny session as arguments, other arguments depend on the function itself (supported arguments are listed in `new_page()`).
 
 > Tip: When implementing your own pages, we recommend to use `...` as the last parameter in all of them to allow for potentially new parameters to be added.
 

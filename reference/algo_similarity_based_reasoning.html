@@ -123,99 +123,31 @@ but will be ignored in this function.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Use with default settings</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="get_job_suggestions.html">get_job_suggestions</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="st">"Arzt"</span>,</span></span>
-<span class="r-in"><span>  steps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>    simbased_default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>      algorithm <span class="op">=</span> <span class="va">algo_similarity_based_reasoning</span></span></span>
-<span class="r-in"><span>    <span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    auxco_id input_text      score                                        title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:     7028       Arzt 0.69811730                       Allgemeinarzt /-ärztin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:     7029       Arzt 0.05000000 Facharzt/-ärztin – Kinder- und Jugendmedizin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:     7030       Arzt 0.04799465                                 Internist/in</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:     7031       Arzt 0.04223624                                   Chirurg/in</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:     7032       Arzt 0.03263888                               Anästhesist/in</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                         task</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                      Untersuchung von Patienten und Diagnose von Krankheiten sowie Festlegung geeigneter Therapiemaßnahmen oder Überweisung zu Fachärzten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2: Untersuchung von minderjährigen Patienten und Diagnose von Kinderkrankheiten sowie Festlegung geeigneter Therapiemaßnahmen oder Überweisung zu Fachärzten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:                                                                                               Diagnose und Behandlung von Erkrankungen der inneren Organe</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                                                                                                                 Durchführung von chirurgischen Eingriffen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                                                           Durchführung von Anästhesien und Aufrechterhaltung der vitalen Funktionen während der Operation</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                       task_description</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                                                                                                                                                                                                                                      z.B. Krankheitsbild ermitteln; Diagnose stellen; Röntgenuntersuchungen und andere Diagnoseverfahren veranlassen; Medikamente und Physiotherapie verschreiben; Patienten über Therapiemöglichkeiten informieren; ärztliche Gutachten anfertigen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                                                                                                                                                    z.B. Labor- und Röntgenuntersuchungen veranlassen; Krankheitsbilder ermitteln; Eltern über Therapiemöglichkeiten informieren; Medikamente und andere Behandlungsmaßnahmen bei Kinderkrankheiten, Erkältungskrankheiten, Epilepsie oder ADHS verschreiben; ärztliche Gutachten verfassen; über Vorsorgeuntersuchungen informieren</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3: z.B. Krankheitsbild ermitteln; Ultraschall-, Röntgen-,EKG -, EEG -, CTG-, Endoskopie-Untersuchungen durchführen; Erkrankungen der Lunge, des Herzens und Kreislaufs, der Verdauungsorgane, der Nieren, des Blutes und des Stoffwechsels behandeln; Infektionskrankheiten therapieren; über Therapmöglichkeiten informieren; Therapieverlauf kontrollieren; über Vorsorgeuntersuchungen informieren; Medikamente verschreiben; ärztliche Gutachten anfertigen; Befunde dokumentieren</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                                                                                                                                                                                             z.B. Labor-, Röntgen-, Ultraschalluntersuchungen veranlassen; Operationen durchführen; unfallchirurgische Eingriffe tätigen; minimalinvasive Eingriffe vornehmen; therapeutische Maßnahmen für Rehabilitanden veranlassen; Arztberichte und Gutachten anfertigen; Befunde dokumentieren</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                                                                                                                                                                          z.B. Schmerzanalyse durchführen; Katheter und Sonden legen; Narkose und künstliche Beatmung durchführen; lebenswichtige Körperfunktionen kontrollieren; akute Notfälle erkennen und behandeln; lebensrettende Wiederbelebungsmaßnahmen durchführen; palliativmedizinisch zu versorgende Patienten betreuen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                         kldb_title_short</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                Ärzte/Ärztinnen (ohne Spezialisierung)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2: Fachärzte/-ärztinnen in der Kinder- und Jugendmedizin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:           Fachärzte/-ärztinnen in der Inneren Medizin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                 Fachärzte/-ärztinnen in der Chirurgie</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:           Fachärzte/-ärztinnen in der Anästhesiologie</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                   notes</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1: Nachfrage nach Kinder- u. Jugendmedizin hinzufügen? Hier wäre mit 81414 eine genauere Zuordnung möglich (2023-07-26)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    has_followup_questions</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                   TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                  FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:                  FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                  FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                  FALSE</span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># Use with substring similarity</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="get_job_suggestions.html">get_job_suggestions</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="st">"Arzt"</span>,</span></span>
-<span class="r-in"><span>  steps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>    simbased_substring <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>      algorithm <span class="op">=</span> <span class="va">algo_similarity_based_reasoning</span>,</span></span>
-<span class="r-in"><span>      parameters <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>        sim_name <span class="op">=</span> <span class="st">"substring"</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="get_job_suggestions.html">get_job_suggestions</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="st">"Arzt"</span>,</span></span>
+<span class="r-in"><span>    steps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>      simbased_default <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>        algorithm <span class="op">=</span> <span class="va">algo_similarity_based_reasoning</span></span></span>
 <span class="r-in"><span>      <span class="op">)</span></span></span>
 <span class="r-in"><span>    <span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    auxco_id input_text      score                  title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:     7001       Arzt 0.35804461          Arzthelfer/in</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:     7002       Arzt 0.22836029      Zahnarzthelfer/in</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:     7028       Arzt 0.19479173 Allgemeinarzt /-ärztin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:     7003       Arzt 0.08253183        Arztsekretär/in</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:     7034       Arzt 0.05222537      Zahnarzt/ -ärztin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                    task</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                                                Unterstützung von Ärzten bei der  Untersuchung, Behandlung und Beratung von Patienten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                                            Unterstützung von Zahnärzten bei der  Untersuchung, Behandlung und Beratung von Patienten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3: Untersuchung von Patienten und Diagnose von Krankheiten sowie Festlegung geeigneter Therapiemaßnahmen oder Überweisung zu Fachärzten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                                                           Durchführung von Sekretariatstätigkeiten in Krankenhäusern oder Arztpraxen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                                                                       Diagnose und Behandlung von Zahn-, Mund- und Kieferkrankheiten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                             task_description</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                                                                                                                                                                                                                                                        z.B. Verbände anlegen; Proben für Laboruntersuchungen nehmen; medizinische Instrumente vorbereiten und warten; Patienten empfangen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                                                                                                                                                                         z.B. Füllungen oder Abdrucksmassen anrühren; Röntgenaufnahmen anfertigen; zahnmedizinische Materialien und Instrumente vorbereiten; Patienten vorbeugende Maßnahmen der Mundhygiene erklären; Patienten empfangen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:                                                                                                                                            z.B. Krankheitsbild ermitteln; Diagnose stellen; Röntgenuntersuchungen und andere Diagnoseverfahren veranlassen; Medikamente und Physiotherapie verschreiben; Patienten über Therapiemöglichkeiten informieren; ärztliche Gutachten anfertigen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                                                                                                                                                   z.B. Patienten empfangen; Korrespondenz mit Patienten und Krankenkassen; Termine vereinbaren und Sprechstunden planen; Versicherungsformulare ausfüllen; Atteste oder Krankenberichte verfassen; Leistungen mit Krankenkassen abrechnen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5: z.B. Zahnfüllungen anfertigen oder Inlays einsetzen; erkrankte Zähne aufbohren; Zähne überkronen; Wurzelkanäle behandeln; Beläge und entzündetes Gewebe aus Zahnfleischtaschen entfernen; über Zahnersatz und Zahnersatzpflege informieren und beraten; abgebrochene Zahnwurzeln entfernen; Weisheits- oder andere erkrankte Zähne extrahieren; Zahnspangen in Auftrag geben und anpassen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                            kldb_title_short</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                             Medizinische Fachangestellte</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                         Zahnmedizinische Fachangestellte</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:                   Ärzte/Ärztinnen (ohne Spezialisierung)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:               Verwaltung im Sozial- und Gesundheitswesen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5: Zahnärzte/-ärztinnen und Kieferorthopäden/-orthopädinnen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                   notes</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3: Nachfrage nach Kinder- u. Jugendmedizin hinzufügen? Hier wäre mit 81414 eine genauere Zuordnung möglich (2023-07-26)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                                                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    has_followup_questions</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:                   TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:                   TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:                   TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:                   TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5:                  FALSE</span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Use with substring similarity</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span> <span class="fu"><a href="get_job_suggestions.html">get_job_suggestions</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>   <span class="st">"Arzt"</span>,</span></span>
+<span class="r-in"><span>   steps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>     simbased_substring <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>       algorithm <span class="op">=</span> <span class="va">algo_similarity_based_reasoning</span>,</span></span>
+<span class="r-in"><span>       parameters <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>         sim_name <span class="op">=</span> <span class="st">"substring"</span></span></span>
+<span class="r-in"><span>       <span class="op">)</span></span></span>
+<span class="r-in"><span>     <span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="op">)</span></span></span>
+<span class="r-in"><span> <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Comparison of algo_similarity_based_reasoning() with get_job_suggestions()</span></span></span>
 <span class="r-in"><span></span></span>

@@ -50,13 +50,13 @@ A Plumber router
 Start the occupation coding API.
 }
 \examples{
-# Get the plumber router
-router <- api(
-  start = FALSE,
-  # If this is TRUE, the log directory will immediately be created
-  log_to_file = FALSE
-)
 if (interactive()) {
+  # Get the plumber router
+  router <- api(
+    start = FALSE,
+    # If this is TRUE, the log directory will immediately be created
+    log_to_file = FALSE
+  )
   # Start the router
   plumber::pr_run(router)
 }

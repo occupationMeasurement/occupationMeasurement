@@ -39,27 +39,31 @@ algorithm in get_job_suggestions.
 }
 \examples{
 # Use with default settings
-get_job_suggestions(
-  "Arzt",
-  steps = list(
-    simbased_default = list(
-      algorithm = algo_similarity_based_reasoning
-    )
-  )
-)
-
-# Use with substring similarity
-get_job_suggestions(
-  "Arzt",
-  steps = list(
-    simbased_substring = list(
-      algorithm = algo_similarity_based_reasoning,
-      parameters = list(
-        sim_name = "substring"
+if (interactive()) {
+  get_job_suggestions(
+    "Arzt",
+    steps = list(
+      simbased_default = list(
+        algorithm = algo_similarity_based_reasoning
       )
     )
   )
-)
+}
+
+# Use with substring similarity
+if (interactive()) {
+ get_job_suggestions(
+   "Arzt",
+   steps = list(
+     simbased_substring = list(
+       algorithm = algo_similarity_based_reasoning,
+       parameters = list(
+         sim_name = "substring"
+       )
+     )
+   )
+ )
+}
 
 # Comparison of algo_similarity_based_reasoning() with get_job_suggestions()
 

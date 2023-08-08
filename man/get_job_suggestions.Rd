@@ -108,7 +108,11 @@ The procedure implemented here is, roughly speaking, as follows:
 }
 }
 \examples{
-get_job_suggestions("Koch")
+if (interactive()) {
+  get_job_suggestions("Koch")
+}
 
-get_job_suggestions("Schlosser")
+if (interactive()) {
+  get_job_suggestions("Schlosser")
+}
 }

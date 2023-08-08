@@ -39,27 +39,31 @@ create_document_term_matrix <- function(input) {
 #' @export
 #' @examples
 #' # Use with default settings
-#' get_job_suggestions(
-#'   "Arzt",
-#'   steps = list(
-#'     simbased_default = list(
-#'       algorithm = algo_similarity_based_reasoning
-#'     )
-#'   )
-#' )
-#'
-#' # Use with substring similarity
-#' get_job_suggestions(
-#'   "Arzt",
-#'   steps = list(
-#'     simbased_substring = list(
-#'       algorithm = algo_similarity_based_reasoning,
-#'       parameters = list(
-#'         sim_name = "substring"
+#' if (interactive()) {
+#'   get_job_suggestions(
+#'     "Arzt",
+#'     steps = list(
+#'       simbased_default = list(
+#'         algorithm = algo_similarity_based_reasoning
 #'       )
 #'     )
 #'   )
-#' )
+#' }
+#'
+#' # Use with substring similarity
+#' if (interactive()) {
+#'  get_job_suggestions(
+#'    "Arzt",
+#'    steps = list(
+#'      simbased_substring = list(
+#'        algorithm = algo_similarity_based_reasoning,
+#'        parameters = list(
+#'          sim_name = "substring"
+#'        )
+#'      )
+#'    )
+#'  )
+#' }
 #'
 #' # Comparison of algo_similarity_based_reasoning() with get_job_suggestions()
 #'
@@ -236,9 +240,13 @@ algo_similarity_based_reasoning <- function(text_processed,
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
 #' @examples
-#' get_job_suggestions("Koch")
+#' if (interactive()) {
+#'   get_job_suggestions("Koch")
+#' }
 #'
-#' get_job_suggestions("Schlosser")
+#' if (interactive()) {
+#'   get_job_suggestions("Schlosser")
+#' }
 get_job_suggestions <- function(text,
                                 suggestion_type = "auxco-1.2.x", # or "kldb-2010"
                                 num_suggestions = 5,

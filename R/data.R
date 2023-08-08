@@ -46,7 +46,7 @@
 #' [train_similarity_based_reasoning()] is then used to train the ML models. See data-raw/pretrained_models.R for the raw counts and further details.
 "pretrained_models"
 
-#' German Auxiliary Classification of Occupations (AuxCO)
+#' German Auxiliary Classification of Occupations (AuxCO) v1.2.3
 #'
 #' Berufs-Hilfsklassifikation mit Tätigkeitsbeschreibungen.
 #' @seealso

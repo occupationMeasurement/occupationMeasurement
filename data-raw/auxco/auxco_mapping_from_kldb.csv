@@ -158,7 +158,6 @@ kldb_id,auxco_id,auxco_title,kldb_title
 26304,1733,Elektrotechniker/in,Berufe in der Elektrotechnik (ohne Spezialisierung) - hoch komplexe Tätigkeiten
 26313,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Informations- und Telekommunikationstechnik - komplexe Spezialistentätigkeiten
 26314,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Informations- und Telekommunikationstechnik - hoch komplexe Tätigkeiten
-26303,1734,Techniker/in - Informations- und Kommunikationselektronik,Berufe in der Elektrotechnik (ohne Spezialisierung) - komplexe Spezialistentätigkeiten
 26323,1735,Mikrosystemtechniker/in,Berufe in der Mikrosystemtechnik - komplexe Spezialistentätigkeiten
 26324,1735,Mikrosystemtechniker/in,Berufe in der Mikrosystemtechnik - hoch komplexe Tätigkeiten
 26333,1736,Bordelektroniktechniker/in,"Berufe in der Luftverkehrs-, Schiffs- und Fahrzeugelektronik - komplexe Spezialistentätigkeiten"
@@ -744,7 +743,6 @@ kldb_id,auxco_id,auxco_title,kldb_title
 41284,4210,Molekularbiologe/-biologin,Biologie (s.s.T.) - Experte
 41284,4212,Genetiker/in,Biologie (s.s.T.) - Experte
 41284,4213,Biochemiker/in,Biologie (s.s.T.) - Experte
-41284,4214,Bioniker/in,Biologie (s.s.T.) - Experte
 41384,4219,Chemiker/in mit spezifischem Fachgebiet,Chemie (s.s.T.) - Experte
 41482,4224,Fachkraft für physikalische Messgeräte und Apparaturen,Physik (s.s.T.) - Fachkraft
 41483,4225,Messtechniker/in - Strahlenbelastung und physikalische Größen,Physik (s.s.T.) - Spezialist
@@ -759,7 +757,6 @@ kldb_id,auxco_id,auxco_title,kldb_title
 42293,4239,Schornsteinfegermeister/in,Aufsicht - Umweltschutztechnik
 42312,4240,Betriebsassistent/in - Umweltschutz,"Umweltschutzverwalt.,-beratung-Fachkraft"
 42314,4242,Umweltschutzbeauftragte/r,"Umweltschutzverwaltung,-beratung-Experte"
-42314,4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),"Umweltschutzverwaltung,-beratung-Experte"
 42324,4246,Störfallbeauftragte/r,"Gewäs.Immissions,Abfallbeauf.-Experte"
 42334,4248,Dekontaminateur/in,Strahlenschutzbeauftragte - Experte
 42394,4249,Leiter/in – Sachverständigenbüro für Umweltfragen,Führung - Umweltmanagement und -beratung
@@ -778,6 +775,7 @@ kldb_id,auxco_id,auxco_title,kldb_title
 51393,1005,Lagerleiter/in,"Aufsichtskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
 51394,1005,Lagerleiter/in,"Führungskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
 51393,1006,Verladeaufseher/in,"Aufsichtskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
+51394,1006,Verladeaufseher/in,"Führungskräfte - Lagerwirtschaft, Post und Zustellung, Güterumschlag"
 51132,1743,Matrose/Matrosin,Techn. Schiffsverkehrsbetrieb-Fachkraft
 51193,1743,Matrose/Matrosin,"Aufsichtskräfte - Technischer Betrieb im Eisenbahn-, Luft- und Schiffsverkehr"
 51133,1743,Matrose/Matrosin,Techn. Schiffsverkehrsbetrieb-Spezialist
@@ -1395,8 +1393,7 @@ kldb_id,auxco_id,auxco_title,kldb_title
 94134,1203,Dirigent/in / Chorleiter/in,Dirigenten/Dirigentinnen - hoch komplexe Tätigkeiten
 94144,1204,Komponist/in,Komponisten/Komponistinnen - hoch komplexe Tätigkeiten
 94183,1205,Musik- und Sounddesigner/in,"Musik-, Gesangs- und Dirigententätigkeiten (sonstige spezifische Tätigkeiten) - komplexe Spezialistentätigkeiten"
-94184,1206,Korrepetior/in - Gesang/Instrumentalisten/,"Musik-, Gesangs- und Dirigententätigkeiten (sonstige spezifische Tätigkeiten) - hoch komplexe Tätigkeiten"
-94184,1207,Korrepetitor/in - Ballett/Tanz,"Musik-, Gesangs- und Dirigententätigeiten (sonstige spezifische Tätigkeiten) - hoch komplexe Tätigkeiten"
+94184,1206,Korrepetitor/in,"Musik-, Gesangs- und Dirigententätigkeiten (sonstige spezifische Tätigkeiten) - hoch komplexe Tätigkeiten"
 94214,1208,Schauspieler/in,Schauspieler/innen - hoch komplexe Tätigkeiten
 94224,1209,Tänzer/in / Choreograf/in,Tänzer/innen und Choreografen/Choreografinnen - hoch komplexe Tätigkeiten
 94232,1210,Model,"Mannequins, Dressmen und sonstige Models - fachlich ausgerichtete Tätigkeiten"
@@ -1599,7 +1596,6 @@ kldb_id,auxco_id,auxco_title,kldb_title
 41204,4210,Molekularbiologe/-biologin,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
 41204,4212,Genetiker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
 41204,4213,Biochemiker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
-41204,4214,Bioniker/in,Berufe in der Biologie (ohne Spezialisierung) - hoch komplexe Tätigkeiten
 41283,4002,Biotechniker/in,Berufe in der Biologie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
 41383,1790,Chemiker/in,Berufe in der Chemie (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten
 42283,1785,Wasserwerksingenieur/in,Berufe in der Umweltschutztechnik (sonstige spezifische Tätigkeitsangabe) - komplexe Spezialistentätigkeiten

@@ -3,7 +3,7 @@
 \docType{data}
 \name{auxco}
 \alias{auxco}
-\title{German Auxiliary Classification of Occupations (AuxCO)}
+\title{German Auxiliary Classification of Occupations (AuxCO) v1.2.3}
 \format{
 A list with data.tables:
 \describe{

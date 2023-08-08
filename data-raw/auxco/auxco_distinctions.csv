@@ -245,8 +245,10 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 9217,Leiter/in - Baustoffherstellung,9213,Aufbereitungsmechaniker/in,mittel,21293
 9218,Steinmetzmeister/in,9216,Steinmetz/in,hoch,21293
 9218,Steinmetzmeister/in,5141,Kunsthandwerksmeister/in,hoch,21293
+9219,Leiter/in - Gestein- und Mineralienaufbereitung,9211,Leiter/in - Berg- und Tagebau,hoch,21293
+9219,Leiter/in - Gestein- und Mineralienaufbereitung,9217,Leiter/in - Baustoffherstellung,hoch,21293
+9219,Leiter/in - Gestein- und Mineralienaufbereitung,9218,Steinmetzmeister/in,hoch,21293
 9219,Leiter/in - Gestein- und Mineralienaufbereitung,9212,Kohleaufbereiter/in,mittel,21293
-9219,Leiter/in - Gestein- und Mineralienaufbereitung,9216,Steinmetz/in,mittel,21293
 9220,Glasmacher/in,9221,Glasmaschinenführer/in,hoch,21312
 9220,Glasmacher/in,5145,Glasbläser/in,hoch,21312
 9220,Glasmacher/in,9228,Glasveredler/in,mittel,21312
@@ -1393,6 +1395,7 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 3023,Maler/in und Lackierer/in,5186,Lackierer/in,hoch,33212
 3023,Maler/in und Lackierer/in,5189,Fahrzeuglackierer/in,mittel,33212
 5303,Restaurator/in - Maler- und Lackiererhandwerk,3023,Maler/in und Lackierer/in,hoch,33213
+5303,Restaurator/in - Maler- und Lackiererhandwerk,5133,Kunstmaler/in,hoch,33213
 5303,Restaurator/in - Maler- und Lackiererhandwerk,5314,"Handwerksmeister/in - Maler-, Lackier- und Stuckateurarbeiten",mittel,33213
 5303,Restaurator/in - Maler- und Lackiererhandwerk,5187,Farb- und Lacktechniker/in,mittel,33213
 5304,Stuckateur/in,5305,Restaurator/in - Stuckateurhandwerk,hoch,33222
@@ -1598,8 +1601,6 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 4212,Genetiker/in,4210,Molekularbiologe/-biologin,hoch,41284
 4213,Biochemiker/in,4007,Mikrobiologe/-biologin,hoch,41284
 4213,Biochemiker/in,4008,Humanbiologe/-biologin,mittel,41284
-4214,Bioniker/in,4007,Mikrobiologe/-biologin,hoch,41284
-4214,Bioniker/in,4008,Humanbiologe/-biologin,mittel,41284
 1789,Biologisch-Technische/r Laborleiter/in,4002,Biotechniker/in,hoch,41293
 1789,Biologisch-Technische/r Laborleiter/in,1792,Laborleiter/in in der Chemie,mittel,41293
 1790,Chemiker/in,1791,Chemikant/in / Pharmakant/in,hoch,41303
@@ -1756,7 +1757,6 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 1799,Umweltschutzingenieur/in,1758,Ingenieur/in - Abfallwirtschaft,mittel,42204
 1799,Umweltschutzingenieur/in,4234,Umweltschutztechnische/r Assistent/in,mittel,42204
 1799,Umweltschutzingenieur/in,4242,Umweltschutzbeauftragte/r,hoch,42204
-1799,Umweltschutzingenieur/in,4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),hoch,42204
 1799,Umweltschutzingenieur/in,4700,Klimaschutzmanager/in,hoch,42204
 1799,Umweltschutzingenieur/in,1787,Organsiator/in - Abfallwirtschaft,mittel,42204
 4237,Schornsteinfeger/in,4239,Schornsteinfegermeister/in,hoch,42212
@@ -1781,28 +1781,18 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 4242,Umweltschutzbeauftragte/r,4254,Energieberater/in,hoch,42314
 4242,Umweltschutzbeauftragte/r,4255,Abfall- und Umweltberater/in,hoch,42314
 4242,Umweltschutzbeauftragte/r,1799,Umweltschutzingenieur/in,hoch,42314
-4242,Umweltschutzbeauftragte/r,4243,Beamter/in - Umweltverwaltung (höh. techn. Dienst),hoch,42314
 4242,Umweltschutzbeauftragte/r,4700,Klimaschutzmanager/in,mittel,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),4249,Leiter/in – Sachverständigenbüro für Umweltfragen,hoch,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),4254,Energieberater/in,hoch,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),4255,Abfall- und Umweltberater/in,hoch,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),1799,Umweltschutzingenieur/in,hoch,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),4004,"Biologe/Biologin, Fachgebiet Ökologie",mittel,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),4242,Umweltschutzbeauftragte/r,hoch,42314
-4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),4700,Klimaschutzmanager/in,hoch,42314
 4700,Klimaschutzmanager/in,4249,Leiter/in – Sachverständigenbüro für Umweltfragen,hoch,42314
 4700,Klimaschutzmanager/in,4254,Energieberater/in,hoch,42314
 4700,Klimaschutzmanager/in,4255,Abfall- und Umweltberater/in,hoch,42314
 4700,Klimaschutzmanager/in,1799,Umweltschutzingenieur/in,mittel,42314
 4700,Klimaschutzmanager/in,4242,Umweltschutzbeauftragte/r,mittel,42314
-4700,Klimaschutzmanager/in,4243,Beamter/in - Umweltverwaltung (höh. techn. Dienst),hoch,42314
 1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",1758,Ingenieur/in - Abfallwirtschaft,hoch,42323
 1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",1787,Organsiator/in - Abfallwirtschaft,mittel,42323
 1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",4249,Leiter/in – Sachverständigenbüro für Umweltfragen,hoch,42323
 1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",4242,Umweltschutzbeauftragte/r,hoch,42323
 1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",4246,Störfallbeauftragte/r,hoch,42323
 4246,Störfallbeauftragte/r,1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",mittel,42324
-4246,Störfallbeauftragte/r,4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),mittel,42324
 4246,Störfallbeauftragte/r,5064,Arbeitsschutzingenieur/in,hoch,42324
 1773,Strahlenschutzbeauftragte/r,4248,Dekontaminateur/in,mittel,42333
 1773,Strahlenschutzbeauftragte/r,1774,"Gewässer-, Abfall- und Immissionsschutzbeauftragte/r",mittel,42333
@@ -3445,6 +3435,7 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 5132,Skulpturenrestaurator/in,5137,Restaurator/in - Vergolderhandwerk,mittel,93313
 5133,Kunstmaler/in,5128,bildende/r Künstler/in,hoch,93323
 5133,Kunstmaler/in,5219,Grafikdesigner/in,mittel,93323
+5133,Kunstmaler/in,5303,Restaurator/in - Maler- und Lackiererhandwerk,mittel,93323
 5133,Kunstmaler/in,5144,Glas- und Porzellanmaler/in,mittel,93323
 5134,Drechsler/in,5128,bildende/r Künstler/in,hoch,93332
 5134,Drechsler/in,5127,Kunsthandwerker/in,hoch,93332
@@ -3560,12 +3551,9 @@ auxco_id,title,similar_auxco_id,similar_title,similarity,default_kldb_id
 1205,Musik- und Sounddesigner/in,1206,Korrepetior/in - Gesang/Instrumentalisten/,hoch,94183
 1205,Musik- und Sounddesigner/in,1204,Komponist/in,hoch,94183
 1205,Musik- und Sounddesigner/in,1200,Musiker/in,mittel,94183
-1206,Korrepetior/in - Gesang/Instrumentalisten/,1205,Musik- und Sounddesigner/in,hoch,94184
-1206,Korrepetior/in - Gesang/Instrumentalisten/,1200,Musiker/in,hoch,94184
-1206,Korrepetior/in - Gesang/Instrumentalisten/,8041,Musiklehrer/in,mittel,94184
-1207,Korrepetitor/in - Ballett/Tanz,1205,Musik- und Sounddesigner/in,mittel,94184
-1207,Korrepetitor/in - Ballett/Tanz,1200,Musiker/in,hoch,94184
-1207,Korrepetitor/in - Ballett/Tanz,8041,Musiklehrer/in,mittel,94184
+1206,Korrepetitor/in,1205,Musik- und Sounddesigner/in,hoch,94184
+1206,Korrepetitor/in,1200,Musiker/in,hoch,94184
+1206,Korrepetitor/in,8041,Musiklehrer/in,mittel,94184
 1208,Schauspieler/in,1213,Kleindarsteller/in,hoch,94214
 1208,Schauspieler/in,1217,Komiker/in / Kabarettist/in,hoch,94214
 1209,Tänzer/in / Choreograf/in,1230,Regisseur/in,hoch,94224

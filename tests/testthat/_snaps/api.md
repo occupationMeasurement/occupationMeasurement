@@ -9,6 +9,7 @@
         "task": "Färben, Schneiden und Frisieren von Haaren",
         "task_description": "z.B. Kundentermine vereinbaren; Haare nach Anweisung waschen, shampoonieren und föhnen; Frisierplätze und Waschbecken reinigen; nach Kundenwünschen Maßtoupet oder Maßperücke aus Echt- oder Kunsthaar anfertigen; Arbeitsmaterialien reinigen und bereitstellen",
         "kldb_title_short": "Friseurgewerbe",
+        "notes": "",
         "has_followup_questions": true
       },
       {
@@ -19,6 +20,7 @@
         "task": "Führungsaufgaben mit Personalverantwortung im kosmetischen Bereich",
         "task_description": "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. Kunden beraten; im Salon praktisch mitarbeiten; Mitarbeiter fachlich unterstützen; Studioaussattung festlegen; Personaleinsatz planen und bei Aus- und Weiterbildung mitwirken; Kundenkartei und Terminkalender führen; Werbemaßnahmen durchführen",
         "kldb_title_short": "Körperpflege (Führungskraft)",
+        "notes": "",
         "has_followup_questions": false
       },
       {
@@ -29,6 +31,7 @@
         "task": "Führungsaufgaben mit Personalverantwortung im Friseurwesen",
         "task_description": "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. Kunden hinsichtlich Haarpflege, Trendfrisuren, Typveränderung und kosmetischer Produkte beraten; Haare schneiden und färben; Mitarbeiter fachlich unterstützen; Salonaussattung festlegen; Kundenkartei und Terminkalender führen; Personaleinsatz planen und bei Aus- und Weiterbildung mitwirken",
         "kldb_title_short": "Körperpflege (Führungskraft)",
+        "notes": "",
         "has_followup_questions": false
       },
       {
@@ -39,6 +42,7 @@
         "task": "Führungsaufgaben mit Personalverantwortung in der Maskenbildnerei beim Film, der Oper oder im Theater",
         "task_description": "Führungsaufgaben mit Personalverantwortung bedeutet, dass untergeordnete Arbeitskräfte beaufsichtigt und angeleitet werden. Weitere Aufgaben sind z.B. Kunden beraten; bei Aufträgen praktisch mitarbeiten; Mitarbeiter fachlich unterstützen; Maskenbildnerausstattung festlegen; Personaleinsatz planen und bei Aus- und Weiterbildung mitwirken",
         "kldb_title_short": "Körperpflege (Führungskraft)",
+        "notes": "Annahme: Management (zusätlich zur Aufsichtkraft) ist hier nie der Schwerpunkt der Tätigkeit. Falls unzutreffen, evtl. ISCO 1439 oder eine andere Manager-Kategorie hinzufügen? (2023-07-26)",
         "has_followup_questions": false
       },
       {
@@ -49,6 +53,7 @@
         "task": "Planung und Organisation von Events, Konzerten, Festivals, Konferenzen, Messen, Feiern oder anderen Großveranstaltungen",
         "task_description": "z.B. Kunden zu geplanten Events beraten und Angebote erstellen; für Konferenzen und Messen bei potenziellen Teilnehmern werben; Anmeldungen entgegennehmen; Räumlichkeiten, Catering, Beschilderung und Transport organisieren; Künstler engagieren und ein Programm planen",
         "kldb_title_short": "Veranstaltungsservice und -management",
+        "notes": "",
         "has_followup_questions": true
       }
     ]

@@ -53,7 +53,7 @@ isco_id,auxco_id,auxco_title,isco_title
 3142,1504,Fachagrarwirt/in - Zucht- und Fleischleistungsprüfung,Agricultural technicians
 2132,1505,Ingenieur/in - Vieh- und Fleischwirtschaft,"Farming, forestry and fishery advisers"
 6122,1506,Tierwirt/in - Geflügelhaltung,Poultry producers
-6121,1507,Klauenpfleger/in,Livestock and dairy producers
+5164,1507,Klauenpfleger/in,Pet Groomers and Animal Care Workers
 3142,1508,Fachberater/in – Geflügelzucht,Agricultural technicians
 6123,1509,Imker/in,Apiarists and sericulturists
 3142,1510,Bienenzuchtberater/in,Agricultural technicians
@@ -69,8 +69,8 @@ isco_id,auxco_id,auxco_title,isco_title
 2132,1520,Fischereitechniker/in,"Farming, forestry and fisheries advisers"
 6129,1710,Tierwirtschaftsmeister/in,Animal producers not elsewhere classified
 1311,1710,Tierwirtschaftsmeister/in,Agricultural and forestry production managers
-6121,1710,Tierwirtschaftsmeister/in,Livestock and dairy producers
 6122,1710,Tierwirtschaftsmeister/in,Poultry producers
+6121,1710,Tierwirtschaftsmeister/in,Livestock and dairy producers
 6123,1710,Tierwirtschaftsmeister/in,Apiarists and sericulturists
 6121,1711,Pferdewirtschaftsmeister/in,Livestock and dairy producers
 1311,1711,Pferdewirtschaftsmeister/in,Agricultural and forestry production manager
@@ -172,6 +172,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2152,1736,Bordelektroniktechniker/in,Electronics engineers
 3119,1737,Konstruktionstechniker/in,Physical and engineering science technicians not elsewhere classified
 2149,1737,Konstruktionstechniker/in,Engineering professionals not elsewhere classified
+3118,1737,Konstruktionstechniker/in,Draughtspersons
 3119,1738,Qualitätssicherungstechniker/In,Physical and engineering science technicians not elsewhere classified
 2141,1738,Qualitätssicherungstechniker/In,Industrial and production engineers
 3115,1739,Textiltechniker/in,Mechanical engineering technicians
@@ -181,7 +182,7 @@ isco_id,auxco_id,auxco_title,isco_title
 3119,1741,Bekleidungstechniker/in,Physical and Engineering Science Technicians Not Elsewhere Classified
 2149,1741,Bekleidungstechniker/in,Engineering professionals not elsewhere classified
 3119,1742,Ledertechniker/in,Physical and engineering science technicians not elsewhere classified
-2141,1742,Ledertechniker/in,Industrial and production engineers
+2149,1742,Ledertechniker/in,Engineering Professionals Not Elsewhere Classified
 9329,1751,"Helfer/in - Mineralgewinnung, -aufbereitung",Manufacturing labourers not elsewhere classified
 9329,1752,Helfer/in - Rohkohlenaufbereitung,Manufacturing labourers not elsewhere classified
 9329,1753,Helfer/in - Baustoffherstellung,Manufacturing labourers not elsewhere classified
@@ -332,7 +333,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2166,5220,Video- und Game-Designer/in,Graphic and multimedia designers
 2513,5221,Informationsarchitekt/in,Web and multimedia developers
 7321,5222,Mediengestalter/in - Digital und Print,Pre-press technicians
-2166,5224,Art-Direktor/in,Graphic and multimedia designers
+3122,5224,Art-Direktor/in,Manufacturing Supervisors
 1222,5224,Art-Direktor/in,Advertising and public relations managers
 8132,5229,Fotolaborant/in,Photographic products machine operators
 3119,5230,Foto- und Medientechniker/in,Physical and engineering science technicians not elsewhere classified
@@ -454,6 +455,7 @@ isco_id,auxco_id,auxco_title,isco_title
 3122,9217,Leiter/in - Baustoffherstellung,Manufacturing supervisors
 3122,9218,Steinmetzmeister/in,Manufacturing supervisors
 3122,9219,Leiter/in - Gestein- und Mineralienaufbereitung,Manufacturing supervisors
+1321,9219,Leiter/in - Gestein- und Mineralienaufbereitung,Manufacturing Managers
 7315,9220,Glasmacher/in,"Glass makers, cutters, grinders and finishers"
 8181,9221,Glasmaschinenführer/in,Glass and ceramics plant operators
 9329,9221,Glasmaschinenführer/in,Manufacturing labourers not elsewhere classified
@@ -661,6 +663,7 @@ isco_id,auxco_id,auxco_title,isco_title
 1321,1800,Produktionsleiter/in in der Chemie,Manufacturing Managers
 3141,4001,Biologisch-Technische/r Assistent/in,Biotechniker (ohne medizinische Fachberufe)
 3141,4002,Biotechniker/in,Biotechniker (ohne medizinische Fachberufe)
+2131,4002,Biotechniker/in,"Biologists, Botanists, Zoologists and Related Professionals"
 3212,4003,Fachkraft für medizinisch-biologische Präparation,Medizintechniker im Bereich Labor und Pathologie
 2131,4004,"Biologe/Biologin, Fachgebiet Ökologie","Biologen, Botaniker, Zoologen und verwandte Berufe"
 2131,4005,"Biologe/Biologin, Fachgebiet Botanik","Biologen, Botaniker, Zoologen und verwandte Berufe"
@@ -738,9 +741,9 @@ isco_id,auxco_id,auxco_title,isco_title
 1349,4206,Mathe- und Statistik Abteilungsleiter/in,Professional services managers not elsewhere classified
 2131,4210,Molekularbiologe/-biologin,"Biologists, botanists, zoologists and related professionals"
 2131,4212,Genetiker/in,"Biologists, botanists, zoologists and related professionals"
-2113,4213,Biochemiker/in,Chemists
-2149,4214,Bioniker/in,Engineering professionals not elsewhere classified
+2131,4213,Biochemiker/in,"Biologists, Botanists, Zoologists and Related Professionals"
 2113,4219,Chemiker/in mit spezifischem Fachgebiet,Chemists
+2145,4219,Chemiker/in mit spezifischem Fachgebiet,Chemical Engineers
 3111,4224,Fachkraft für physikalische Messgeräte und Apparaturen,Chemical and physical science technicians
 3111,4225,Messtechniker/in - Strahlenbelastung und physikalische Größen,Chemical and physical science technicians
 2111,4226,Akustiker/in,Physicists and astronomers
@@ -754,7 +757,6 @@ isco_id,auxco_id,auxco_title,isco_title
 7133,4239,Schornsteinfegermeister/in,Fassadenreiniger und Schornsteinfeger/Rauchfangkehrer
 4110,4240,Betriebsassistent/in - Umweltschutz,General office clerks
 2133,4242,Umweltschutzbeauftragte/r,Environmental protection professionals
-2143,4243,Beamt(er/in) - Umweltverwaltung (höh. techn. Dienst),Environmental engineers
 2263,4246,Störfallbeauftragte/r,Environmental and occupational health and hygiene professionals
 2263,4248,Dekontaminateur/in,Environmental and occupational health and hygiene professionals
 1349,4249,Leiter/in – Sachverständigenbüro für Umweltfragen,Professional services managers not elsewhere classified
@@ -773,6 +775,7 @@ isco_id,auxco_id,auxco_title,isco_title
 4321,1005,Lagerleiter/in,Stock clerks
 1324,1005,Lagerleiter/in,"Supply, distribution and related managers"
 4323,1006,Verladeaufseher/in,Transport clerks
+1324,1006,Verladeaufseher/in,"Supply, distribution and related managers"
 8350,1743,Matrose/Matrosin,Ships' deck crews and related workers
 3151,1743,Matrose/Matrosin,Ships' engineers
 3155,1744,Flugsicherungstechniker/in,Air traffic safety electronics technicians
@@ -909,7 +912,7 @@ isco_id,auxco_id,auxco_title,isco_title
 7133,5223,Fassadenreiniger/in,Building structure cleaners
 9111,5225,Reinigungskraft in Privathaushalten,Domestic cleaners and helpers
 9112,5226,Gebäudeinnenreiniger/in,"Cleaners and helpers in offices, hotels and other establishments"
-9629,5227,Toilettenwärter/in,Elementary Workers Not Elsewhere Classified
+9112,5227,Toilettenwärter/in,"Cleaners and Helpers in Offices, Hotels and Other Establishments"
 3359,8083,Justizvollzugsfachwirt/in (gehobener Justizvollzugsdienst),Government regulatory associate professionals not elsewhere classified
 4323,9900,Luftverkehrskaufmann/-frau,Bürokräfte in der Transportwirtschaft und verwandte Berufe
 4221,9900,Luftverkehrskaufmann/-frau,Travel consultants and clerks
@@ -978,7 +981,7 @@ isco_id,auxco_id,auxco_title,isco_title
 5223,6065,Fachverkäufer/in - Garten- und Heimwerkerbedarf,Shop sales assistants
 5223,6066,Automobilkaufmann/-frau,Shop sales assistants
 1431,6067,Sport- und Fitnessökonom/in,"Sports, recreation and cultural centre managers"
-3343,6068,Sport- und Fitnessfachwirt/in,Administrative and executive secretaries
+3332,6068,Sport- und Fitnessfachwirt/in,Conference and Event Planners
 4224,6070,Rezeptionist/in - Hotel,Hotel receptionists
 1412,6071,Betriebswirt/in - Systemgastronomie,Restaurant managers
 5132,6072,Barkeeper/in,Bartenders
@@ -997,7 +1000,7 @@ isco_id,auxco_id,auxco_title,isco_title
 5246,6090,Servicekraft - Systemgastronomie,Food service counter attendants
 5131,6092,Food-and-Beverage-Assistant,Waiters
 5131,6093,Bankettleiterassistent/in,Waiters
-5111,6094,Zugsteward/-stewardess,Travel attendants and travel stewards
+5131,6094,Zugsteward/-stewardess,"Waiters, Waitresses and Bartenders"
 5131,6095,Büfettkraft,Waiters
 5131,6097,Sommelier/Sommelière,Waiters
 4226,6098,Eintrittskartenkontrolleur/in,Receptionists (general)
@@ -1090,8 +1093,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2411,3581,Wirtschaftsprüfer/in,Accountants
 3312,3582,Kreditsachbearbeiter/in,Credit and loans officers
 3321,3584,Versicherungsagent/in,Insurance representatives
-3321,3585,Versicherungsgutachter/in,Insurance representatives
-3315,3585,Versicherungsgutachter/in,Valuers and loss assessors
+3315,3585,Versicherungsgutachter/in,Valuers and Loss Assessors
 2412,3586,Versicherungsberater/in,Financial and investment advisers
 4311,3587,Steuerfachmann/-frau,Accounting and bookkeeping clerks
 3313,3587,Steuerfachmann/-frau,Accounting associate professionals
@@ -1175,7 +1177,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2269,7049,Musik- oder Kunsttherapeut/in,Health professionals not elsewhere classified
 2230,7050,Heilpraktiker/in,Traditional and complementary medicine professionals
 2265,7051,Diätassistent/in,Dieticians and nutritionists
-3434,7052,Verpflegungsmanager/in (Diätküchenleiter/in),Chefs
+2265,7052,Verpflegungsmanager/in (Diätküchenleiter/in),Dieticians and Nutritionists
 3259,7053,Diabetesassistent/in ,Health associate professionals not elsewhere classified
 2269,7053,Diabetesassistent/in ,Health professionals not elsewhere classified
 1342,7056,therapeutische/r Einrichtungsleiter/in,Health service managers
@@ -1229,11 +1231,10 @@ isco_id,auxco_id,auxco_title,isco_title
 2635,8004,Sozialpädagoge/- pädagogin,social work an counselling professionals
 3412,8004,Sozialpädagoge/- pädagogin,social work associate professionals
 3412,8005,Heimerzieher/in,Social work associate professionals 
-5321,8006,Heilerziehungspfleger/in in Privathaushalten,Health care assistants
+5322,8006,Heilerziehungspfleger/in in Privathaushalten,Home-based Personal Care Workers
 3412,8006,Heilerziehungspfleger/in in Privathaushalten,Social work associate professionals
-5321,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Health care assistants
+5321,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Institution-based Personal Care Workers
 3412,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Social work associate professionals
-5322,8007,Heilerziehungspfleger/in in Pflegeeinrichtungen,Home-based personal care workers
 3412,8008,Heilpädagoge/ -pädagogin,Social work associate professionals
 2352,8008,Heilpädagoge/ -pädagogin,Special needs teachers
 5152,8010,Familienpfleger/in für Notsituationen,Domestic housekeepers
@@ -1309,9 +1310,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2652,1203,Dirigent/in / Chorleiter/in,"Musicians, singers and composers"
 2652,1204,Komponist/in,"Musicians, singers and composers"
 2652,1205,Musik- und Sounddesigner/in,"Musicians, singers and composers"
-2652,1206,Korrepetior/in - Gesang/Instrumentalisten/,"Musicians, singers and composers"
-2653,1206,Korrepetior/in - Gesang/Instrumentalisten/,Dancers and choreographers
-2652,1207,Korrepetitor/in - Ballett/Tanz,"Musicians, singers and composers"
+2652,1206,Korrepetitor/in,"Musicians, singers and composers"
 2655,1208,Schauspieler/in,Actors
 2653,1209,Tänzer/in / Choreograf/in,Dancers and choreographers
 5241,1210,Model,Fashion and other models
@@ -1335,6 +1334,7 @@ isco_id,auxco_id,auxco_title,isco_title
 3521,1233,Technische/r Assistent/in - Bühne/Film/Fernsehen,Broadcasting and audio-visual technicians
 3435,1234,Beleuchter/in,Artistic and cultural associate professionals not elsewhere classified
 2149,1235,Ingenieur/in – Veranstaltungstechnik,Engineering professionals not elsewhere classified
+3435,1235,Ingenieur/in – Veranstaltungstechnik,Other Artistic and Cultural Associate Professionals
 3435,1237,Souffleur/Souffleuse,Artistic and cultural associate professionals not elsewhere classified
 3339,1238,Künstlervermittler/in,Business services agents not elsewhere classified
 2654,1239,Programmgestalter/in für Rundfunk und Fernsehen,"Film, stage and related directors and producers"
@@ -1403,7 +1403,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2641,3524,Technische/r Redakteur/in,Authors and related writers
 2641,3525,Drehbuchautor/in,Authors and related writers
 3339,3526,Listbroker/in,Business services agents not elsewhere classified
-3514,3527,Community-Manager/in,Web technicians
+2642,3527,Community-Manager/in,Journalists
 3432,5124,Ausstellungsgestalter/in,Interior designers and decorators
 3432,5125,Raumausstatter/in- Restaurierungsarbeiten,Interior designers and decorators
 3123,5126,Raumausstattermeister/in,Construction supervisors
@@ -1411,7 +1411,7 @@ isco_id,auxco_id,auxco_title,isco_title
 2651,5128,bildende/r Künstler/in,Visual artists
 2651,5129,Bildhauer/in,Visual artists
 7317,5130,Holzbildhauer/in,"Handicraft workers in wood, basketry and related materials "
-7113,5131,Steinbildhauer/in,"Stonemasons, stone cutters, splitters and carvers"
+7319,5131,Steinbildhauer/in,Handicraft Workers not Elsewhere Classified
 2651,5132,Skulpturenrestaurator/in,Visual artists
 2651,5133,Kunstmaler/in,Visual artists
 7317,5134,Drechsler/in,"Handicraft workers in wood, basketry and related materials"

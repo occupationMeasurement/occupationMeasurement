@@ -6,7 +6,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "notes", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -54,6 +54,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Köche/Köchinnen", "Speisenzubereitung (Führungskraft)", "Köche/Köchinnen", "Fischverarbeitung", "Gastronomieservice (ohne Spezialisierung)"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["", "", "", "", ""]
         },
         {
           "type": "logical",
@@ -181,7 +186,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "notes", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -231,6 +236,11 @@
           "value": ["Metallerzeugung (ohne Spezialisierung)", "Fahrzeugtechnik", "Lebensmittelherstellung (ohne Spezialisierung)", "Hochbau, Tiefbau (ohne Spezialisierung)", "Kunststoff- und Kautschukherstellung"]
         },
         {
+          "type": "character",
+          "attributes": {},
+          "value": ["", "", "", "", ""]
+        },
+        {
           "type": "logical",
           "attributes": {},
           "value": [false, false, false, true, false]
@@ -246,7 +256,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "notes", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -294,6 +304,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Studentische Hilfskraft", "Hochschullehre und -forschung", "Büro- und Sekretariatskräfte (ohne Spezialisierung)", "Büro- und Sekretariatskräfte", "Büro- und Sekretariatskräfte (ohne Spezialisierung)"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Studentische Hilfskraft ist nicht in KldB/ISCO enthalten. Weitere Antwortmöglichkeiten hinzufügen? man könnte noch Hausmann/-frau, Rentner, Bufti/FSJ/Zivi, arbeitslos und Schüler ergänzen. Aber dazu fehlen uns Trainingsdaten, weshalb dies zum aktuellen Zeitpunkt keinen Sinn macht. (2022-10-20)", "", "Wird SEHR häufig ausgewählt. Aber auch sehr schwierig, wie man dies gut formuliert. Im Kern geht es um allgemeine Bürotätigkeiten und nicht um die Spezialisierung \"\"Bearbeitung von Korrespondenz und anderen Dokumenten\"\" (so ist SekretärIn in ISCO definiert). Zusätzlich die Schwierigkeit, ob \"\"Schreiben und Beantworten von Geschäftsbriefen, technischen Schriften oder Verträgen\"\" genügend der Tätigkeit in 3343 entspricht, oder ob man hier eine weitere Folgefrage zum Anforderungsniveau benötigt.  (2023-07-26)", "", "Dokumente sortieren und Kuverts addressieren ist explizit (aber für mich inhaltlich kaum nachvollziehbar) in den Definitionen von 71442/4413 angegeben, weshalb nicht 71401/4110 ausgewählt wurde. Man könnte noch Extra-Antworten für Korrektur- und Kodierarbeiten hinzufügen.. Insgesamt sehr schwierig, wie man diese taetigkeiten optimal beschreibt. (2023-07-26)"]
         },
         {
           "type": "logical",
@@ -431,7 +446,7 @@
                 {
                   "type": "character",
                   "attributes": {},
-                  "value": ["Über die Zucht von Nutztieren", "Über die Zucht von Geflügeltieren", "Über die Zucht von Bienen", "Über die Zucht anderer Tiere"]
+                  "value": ["Über die Zucht von Geflügeltieren", "Über die Zucht von Nutztieren", "Über die Zucht von Bienen", "Über die Zucht anderer Tiere"]
                 },
                 {
                   "type": "character",
@@ -605,7 +620,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "notes", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -653,6 +668,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Angehörige der regulären Streitkräfte in sonstigen Rängen", "Öffentliche Verwaltung (ohne Spezialisierung)", "Öffentliche Verwaltung (ohne Spezialisierung)", "Ärzte/Ärztinnen (ohne Spezialisierung)", "Fachärzte/-ärztinnen in der Anästhesiologie"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["", "", "", "Nachfrage nach Kinder- u. Jugendmedizin hinzufügen? Hier wäre mit 81414 eine genauere Zuordnung möglich (2023-07-26)", ""]
         },
         {
           "type": "logical",
@@ -730,7 +750,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "has_followup_questions"]
+          "value": ["auxco_id", "input_text", "score", "title", "task", "task_description", "kldb_title_short", "notes", "has_followup_questions"]
         },
         "class": {
           "type": "character",
@@ -778,6 +798,11 @@
           "type": "character",
           "attributes": {},
           "value": ["Studentische Hilfskraft", "Spanlose Metallbearbeitung", "Elektrotechnik (ohne Spezialisierung)", "Informations- und Telekommunikationstechnik", "Informatik (ohne Spezialisierung)"]
+        },
+        {
+          "type": "character",
+          "attributes": {},
+          "value": ["Studentische Hilfskraft ist nicht in KldB/ISCO enthalten. Weitere Antwortmöglichkeiten hinzufügen? man könnte noch Hausmann/-frau, Rentner, Bufti/FSJ/Zivi, arbeitslos und Schüler ergänzen. Aber dazu fehlen uns Trainingsdaten, weshalb dies zum aktuellen Zeitpunkt keinen Sinn macht. (2022-10-20)", "", "Schwer zu erstellen, weil die 26301 vielen ISCO-Kategorien zugeordnet werden kann. Aus Zeitmangel wurde die 9329 dann bei der Erstellung nicht beachtet (vgl. Word-Dokumentation). Wegen Hilfsarbeiten ist diese Kategorie aber vielleicht passender als 8212 (2023-07-26)", "", "halboffene Folgefrage macht technische Schwierigkeiten und ist nicht umgesetzt (2022-09-09)"]
         },
         {
           "type": "logical",

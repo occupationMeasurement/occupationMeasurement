@@ -234,6 +234,7 @@ At the moment these are only saved when the `suggestion_type` is `auxco-1.2.x`.
 - **task**: The task of the suggestion. This is the main field 
 - **task_description**: A more detailed description of the task associated with the suggestion.
 - **kldb_title_short**: A shortend version of the suggestion's title.
+- **notes**: Clarifying notes on the suggestion. These are not to be displayed to the user, but for clarification of the coded category.
 - **has_followup_questions**: Whether this suggestion has any followup questions.
 - **id**: The `response_id` corresponding with this option. Use to also identify "other" response options than suggested occupations.
 - **session_id**: A unique session id, identifying this exaxct session / completion of the survey. 

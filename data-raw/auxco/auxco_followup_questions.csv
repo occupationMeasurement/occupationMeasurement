@@ -5,6 +5,9 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 1005,Q1005_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
 1005,Q1005_1,1,answer_option,"","","",1,Ja,"",51394,1324,isco_manager,TRUE
 1005,Q1005_1,1,answer_option,"","","",2,Nein,"",51393,4321,isco_supervisor,TRUE
+1006,Q1006_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+1006,Q1006_1,1,answer_option,"","","",1,Ja,"",51394,1324,isco_manager,TRUE
+1006,Q1006_1,1,answer_option,"","","",2,Nein,"",51393,4323,isco_supervisor,TRUE
 1012,Q1012_1,1,question,sonstige,Schließt Ihre Arbeit auch die Haltung und Zucht von Tieren mit ein?,Hat Ihre Arbeit auch die Haltung und Zucht von Tieren mit eingeschlossen?,"","","","","","",
 1012,Q1012_1,1,answer_option,"","","",1,Ja,"",11102,6130,"",TRUE
 1012,Q1012_1,1,answer_option,"","","",2,Nein,"",11102,6111,"",TRUE
@@ -41,15 +44,12 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 1100,Q1100_1,1,answer_option,"","","",7,Altphilologie und/oder Neogriechisch,"",91174,2643,"",TRUE
 1100,Q1100_1,1,answer_option,"","","",8,Es handelt sich um einen anderen spezifischen Sprachraum (z.B. Skandinavistik),"",91184,2643,"",TRUE
 1100,Q1100_1,1,answer_option,"","","",9,Mehr als eine Antwort trifft zu,"",91104,2643,"",TRUE
-1206,Q1206_1,1,question,sonstige,Wen begleiten Sie mit dem Klavier?,Wen haben Sie mit dem Klavier begleitet?,"","","","","","",
-1206,Q1206_1,1,answer_option,"","","",1,Tänzer/innen,"",94184,2653,"",TRUE
-1206,Q1206_1,1,answer_option,"","","",2,Sänger/innen oder ähnliches,"",94184,2652,"",TRUE
 1227,Q1227_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 1227,Q1227_1,1,answer_option,"","","",1,Ja,"",94404,2654,isco_skill_level_4,TRUE
 1227,Q1227_1,1,answer_option,"","","",2,Nein,"",94403,3435,isco_skill_level_3,TRUE
 1235,Q1235_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 1235,Q1235_1,1,answer_option,"","","",1,Ja,"",94514,2149,isco_skill_level_4,TRUE
-1235,Q1235_1,1,answer_option,"","","",2,Nein,"",94513,2149,isco_skill_level_3,TRUE
+1235,Q1235_1,1,answer_option,"","","",2,Nein,"",94513,3435,isco_skill_level_3,TRUE
 1240,Q1240_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
 1240,Q1240_1,1,answer_option,"","","",1,Ja,"",94494,1431,isco_manager,TRUE
 1240,Q1240_1,1,answer_option,"","","",2,Nein,"",94493,2654,isco_supervisor,TRUE
@@ -88,8 +88,8 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 1710,Q1710_1,1,answer_option,"","","",1,Ja,"",11294,1311,isco_manager,TRUE
 1710,Q1710_1,1,answer_option,"","","",2,Nein,"",11293,6129,isco_supervisor,FALSE
 1710,Q1710_2,2,question,sonstige,Über die Zucht welcher Tiere führen Sie Aufsicht?,Über die Zucht welcher Tiere haben Sie Aufsicht geführt?,"","","","","","",
-1710,Q1710_2,2,answer_option,"","","",1,Über die Zucht von Nutztieren,"",11293,6121,"",TRUE
-1710,Q1710_2,2,answer_option,"","","",2,Über die Zucht von Geflügeltieren,"",11293,6122,"",TRUE
+1710,Q1710_2,2,answer_option,"","","",1,Über die Zucht von Geflügeltieren,"",11293,6122,"",TRUE
+1710,Q1710_2,2,answer_option,"","","",2,Über die Zucht von Nutztieren,"",11293,6121,"",TRUE
 1710,Q1710_2,2,answer_option,"","","",3,Über die Zucht von Bienen,"",11293,6123,"",TRUE
 1710,Q1710_2,2,answer_option,"","","",4,Über die Zucht anderer Tiere,"",11293,6129,"",TRUE
 1711,Q1711_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
@@ -190,7 +190,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 1734,Q1734_1,1,answer_option,"","","",1,Ja,"",26314,2153,isco_skill_level_4,TRUE
 1734,Q1734_1,1,answer_option,"","","",2,Nein,"",26313,3522,isco_skill_level_3,FALSE
 1734,Q1734_2,2,question,spezialisierung,Liegt der Schwerpunkt Ihrer Arbeit im Bereich Rundfunk oder im Bereich Telekommunikationstechnik?,Lag der Schwerpunkt Ihrer Arbeit im Bereich Rundfunk oder im Bereich Telekommunikationstechnik?,"","","","","","",
-1734,Q1734_2,2,answer_option,"","","",1,Rundfunk,"",26303,3521,"",TRUE
+1734,Q1734_2,2,answer_option,"","","",1,Rundfunk,"",26313,3521,"",TRUE
 1734,Q1734_2,2,answer_option,"","","",2,Telekommunikationstechnik,"",26313,3522,"",TRUE
 1735,Q1735_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 1735,Q1735_1,1,answer_option,"","","",1,Ja,"",26324,2152,isco_skill_level_4,TRUE
@@ -200,7 +200,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 1736,Q1736_1,1,answer_option,"","","",2,Nein,"",26333,3114,isco_skill_level_3,TRUE
 1737,Q1737_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 1737,Q1737_1,1,answer_option,"","","",1,Ja,"",27224,2149,isco_skill_level_4,TRUE
-1737,Q1737_1,1,answer_option,"","","",2,Nein,"",27223,3119,isco_skill_level_3,TRUE
+1737,Q1737_1,1,answer_option,"","","",2,Nein,"",27223,3118,isco_skill_level_3,TRUE
 1738,Q1738_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 1738,Q1738_1,1,answer_option,"","","",1,Ja,"",27314,2141,isco_skill_level_4,TRUE
 1738,Q1738_1,1,answer_option,"","","",2,Nein,"",27313,3119,isco_skill_level_3,TRUE
@@ -221,7 +221,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 1741,Q1741_1,1,answer_option,"","","",1,Ja,"",28224,2149,isco_skill_level_4,TRUE
 1741,Q1741_1,1,answer_option,"","","",2,Nein,"",28223,3119,isco_skill_level_3,TRUE
 1742,Q1742_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
-1742,Q1742_1,1,answer_option,"","","",1,Ja,"",28314,2141,isco_skill_level_4,TRUE
+1742,Q1742_1,1,answer_option,"","","",1,Ja,"",28314,2149,isco_skill_level_4,TRUE
 1742,Q1742_1,1,answer_option,"","","",2,Nein,"",28313,3119,isco_skill_level_3,TRUE
 1743,Q1743_1,1,question,aufsicht,"Gehört es zu Ihren beruflichen Aufgaben, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","Hat es zu Ihren beruflichen Aufgaben gehört, die Arbeit anderer Arbeitnehmer zu beaufsichtigen oder ihnen zu sagen, was sie tun müssen?","","","","","","",
 1743,Q1743_1,1,answer_option,"","","",1,Ja,"",51193,3151,isco_supervisor,TRUE
@@ -653,8 +653,8 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 3584,Q3584_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",72133,3321,isco_skill_level_3,TRUE
 3585,Q3585_1,1,question,anforderungsniveau,Welche Ausbildung ist für diese Tätigkeit in der Regel erforderlich?,Welche Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
 3585,Q3585_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",72132,3315,isco_skill_level_2,TRUE
-3585,Q3585_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",72133,3321,isco_skill_level_3,TRUE
-3585,Q3585_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",72133,3321,isco_skill_level_3,TRUE
+3585,Q3585_1,1,answer_option,"","","",2,eine berufliche Weiterbildung,"",72133,3315,isco_skill_level_3,TRUE
+3585,Q3585_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",72133,3315,isco_skill_level_3,TRUE
 3587,Q3587_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
 3587,Q3587_1,1,answer_option,"","","",1,eine abgeschlossene Berufsausbildung,"",72302,4311,isco_skill_level_2,TRUE
 3587,Q3587_1,1,answer_option,"","","",2,eine Fortbildung zum Steuerfachwirt oder vergleichbar,"",72303,3313,isco_skill_level_3,TRUE
@@ -667,7 +667,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 4002,Q4002_1,1,question,anforderungsniveau,Welche Art von Ausbildung ist für Ihre Tätigkeit in der Regel erforderlich?,Welche Art von Ausbildung war für diese Tätigkeit in der Regel erforderlich?,"","","","","","",
 4002,Q4002_1,1,answer_option,"","","",1,Techniker/in der Fachrichtung Biotechnik oder eine verwandte Weiterbildung,"",41213,3141,isco_skill_level_3,TRUE
 4002,Q4002_1,1,answer_option,"","","",2,ein abgeschlossenes Bachelorstudium im Bereich Biotechnologie oder ein vergleichbares Studium,"",41213,3141,isco_skill_level_3,TRUE
-4002,Q4002_1,1,answer_option,"","","",3,ein abgeschlossenes Masterstudium im Bereich Biotechnologie oder ein vergleichbares Studium,"",41214,3141,isco_skill_level_4,TRUE
+4002,Q4002_1,1,answer_option,"","","",3,ein abgeschlossenes Masterstudium im Bereich Biotechnologie oder ein vergleichbares Studium,"",41214,2131,isco_skill_level_4,TRUE
 4014,Q4014_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 4014,Q4014_1,1,answer_option,"","","",1,nein,"",41323,3111,isco_skill_level_3,TRUE
 4014,Q4014_1,1,answer_option,"","","",2,ja,"",41324,2145,isco_skill_level_4,TRUE
@@ -856,7 +856,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 4219,Q4219_1,1,answer_option,"","","",4,"Chemische Analyse von Stoffen zu vorgegeben Zwecken, z.B. in der Forensik oder Produktionsüberwachung","",41384,2113,"",TRUE
 4219,Q4219_1,1,answer_option,"","","",5,"Chemische Analyse von Arzneimitteln, z.B. im Hinblick auf toxikologische Risiken","",41384,2113,"",TRUE
 4219,Q4219_1,1,answer_option,"","","",6,Lebensmittelchemie,"",41384,2113,"",TRUE
-4219,Q4219_1,1,answer_option,"","","",7,Planung und Überwachung von Geschäfts- und Produktionsprozessen in der chemischen und pharmazeutischen Industrie,"",41384,2113,"",TRUE
+4219,Q4219_1,1,answer_option,"","","",7,Planung und Überwachung von Geschäfts- und Produktionsprozessen in der chemischen und pharmazeutischen Industrie,"",41384,2145,"",TRUE
 4219,Q4219_1,1,answer_option,"","","",8,"Erforschung von Inhaltsstoffen natürlicher Organismen und Nutzung dieser Stoffe für Pharmazie, Landwirtschaft, Lebensmittelherstellung","",41384,2113,"",TRUE
 5001,Q5001_1,1,question,sonstige,Führen Sie Lageraufzeichnungen durch?,Haben Sie Lageraufzeichnungen durchgeführt?,"","","","","","",
 5001,Q5001_1,1,answer_option,"","","",1,Ja,"",51312,4321,"",TRUE
@@ -972,7 +972,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 5222,Q5222_1,1,answer_option,"","","",3,ein abgeschlossenes Bachelorstudium,"",23213,7321,isco_skill_level_3,TRUE
 5224,Q5224_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
 5224,Q5224_1,1,answer_option,"","","",1,Ja,"",23294,1222,isco_manager,TRUE
-5224,Q5224_1,1,answer_option,"","","",2,Nein,"",23293,2166,isco_supervisor,TRUE
+5224,Q5224_1,1,answer_option,"","","",2,Nein,"",23293,3122,isco_supervisor,TRUE
 5226,Q5226_1,1,question,anforderungsniveau,Mussten Sie für diese Tätigkeit neues Wissen lernen?,Mussten Sie für diese Tätigkeit neues Wissen lernen?,"","","","","","",
 5226,Q5226_1,1,answer_option,"","","",1,Ja,"",54112,9112,isco_skill_level_2,TRUE
 5226,Q5226_1,1,answer_option,"","","",2,Nein,"",54101,9112,isco_skill_level_1,TRUE
@@ -1198,10 +1198,10 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 8004,Q8004_1,1,answer_option,"","","",2,Nein,"",83123,3412,isco_skill_level_3,TRUE
 8006,Q8006_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,War für diese Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,"","","","","","",
 8006,Q8006_1,1,answer_option,"","","",1,Ja,"",83132,3412,isco_skill_level_2,TRUE
-8006,Q8006_1,1,answer_option,"","","",2,Nein,"",83131,5321,isco_skill_level_1,TRUE
+8006,Q8006_1,1,answer_option,"","","",2,Nein,"",83131,5322,isco_skill_level_1,TRUE
 8007,Q8007_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,War für diese Tätigkeit in der Regel eine staatliche Anerkennung erforderlich?,"","","","","","",
 8007,Q8007_1,1,answer_option,"","","",1,Ja,"",83132,3412,isco_skill_level_2,TRUE
-8007,Q8007_1,1,answer_option,"","","",2,Nein,"",83131,5322,isco_skill_level_1,TRUE
+8007,Q8007_1,1,answer_option,"","","",2,Nein,"",83131,5321,isco_skill_level_1,TRUE
 8008,Q8008_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,War für diese Tätigkeit in der Regel ein abgeschlossenes Masterstudium erforderlich?,"","","","","","",
 8008,Q8008_1,1,answer_option,"","","",1,ja,"",83134,2352,isco_skill_level_4,TRUE
 8008,Q8008_1,1,answer_option,"","","",2,nein,"",83133,3412,isco_skill_level_3,TRUE
@@ -1298,7 +1298,7 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 9079,Q9079_1,1,answer_option,"","","",4,nur Fleischgerichte und Grillgerichte sowie gebratene und frittierte Speisen,"",29322,5120,"",TRUE
 9079,Q9079_1,1,answer_option,"","","",5,"nur Fonds, Soßen und Buttermischungen","",29382,5120,"",TRUE
 9079,Q9079_1,1,answer_option,"","","",6,nur warme Beilagen,"",29382,5120,"",TRUE
-9079,Q9079_1,1,answer_option,"","","",7,nur diätische Mahlzeiten,"",29322,5120,"",TRUE
+9079,Q9079_1,1,answer_option,"","","",7,nur diätische Mahlzeiten,"",29382,5120,"",TRUE
 9079,Q9079_1,1,answer_option,"","","",8,oder trifft nichts davon auf Sie zu?,"",29302,5120,"",TRUE
 9088,Q9088_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
 9088,Q9088_1,1,answer_option,"","","",1,Ja,"",29394,1412,isco_manager,TRUE
@@ -1373,6 +1373,9 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 9216,Q9216_1,1,answer_option,"","","",2,eine abgeschlossene Berufsausbildung,"",21232,7113,isco_skill_level_2,TRUE
 9216,Q9216_1,1,answer_option,"","","",3,eine berufliche Weiterbildung,"",21233,7113,isco_skill_level_3,TRUE
 9216,Q9216_1,1,answer_option,"","","",4,ein abgeschlossenes Bachelorstudium,"",21233,7113,isco_skill_level_3,TRUE
+9219,Q9219_1,1,question,aufsicht,"Sind Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","Waren Sie befugt strategische Entscheidungen zu treffen, z.B. zur Einführung neuer Verfahren, zu finanziellen Investitionen oder zur Einstellung und Entlassung von Personal?","","","","","","",
+9219,Q9219_1,1,answer_option,"","","",1,Ja,"",21293,1321,isco_manager,TRUE
+9219,Q9219_1,1,answer_option,"","","",2,Nein,"",21293,3122,isco_supervisor,TRUE
 9221,Q9221_1,1,question,anforderungsniveau,Ist für Ihre Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,War für diese Tätigkeit in der Regel eine abgeschlossene Berufsausbildung erforderlich?,"","","","","","",
 9221,Q9221_1,1,answer_option,"","","",1,Ja,"",21312,8181,isco_skill_level_2,TRUE
 9221,Q9221_1,1,answer_option,"","","",2,Nein,"",21311,9329,isco_skill_level_1,TRUE
@@ -1400,8 +1403,8 @@ auxco_id,question_id,question_index,entry_type,question_type,question_text_prese
 9900,Q9900_1,1,answer_option,"","","",1,Ja,"","","",isco_skill_level_3,FALSE
 9900,Q9900_1,1,answer_option,"","","",2,Nein,"","","",isco_skill_level_2,FALSE
 9900,Q9900_2,2,question,spezialisierung,Welche Aufgaben führen Sie dabei in der Regel aus?,Welche Aufgaben haben Sie dabei in der Regel ausgeführt?,"","","","","","",
-9900,Q9900_2,2,answer_option,"","","",1,für Fluggäste Beratungs- und Serviceleistungen erbringen,"","","","",TRUE
-9900,Q9900_2,2,answer_option,"","","",2,mit anderen Unternehmen Geschäftsbeziehungen unterhalten,"","","","",TRUE
+9900,Q9900_2,2,answer_option,"","","",1,für Fluggäste Beratungs- und Serviceleistungen am Flughafen erbringen,"","","","",TRUE
+9900,Q9900_2,2,answer_option,"","","",2,an Großkunden Transport- und Beförderungsleistungen verkaufen oder mit ihnen Geschäftsbeziehungen unterhalten,"","","","",TRUE
 9900,Q9900_2,2,answer_option,"","","",3,Transportleistungen koordinieren,"","","","",TRUE
 9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=1&Q9900_2=1,51643,4221,"",
 9900,,,aggregated_answer_encoding,"","","","","",Q9900_1=2&Q9900_2=1,51642,4221,"",

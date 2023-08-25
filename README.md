@@ -1,6 +1,7 @@
 # occupationMeasurement <img src="man/figures/logo.png" width="120" align="right" />
 
 <!-- badges: start -->
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.05505/status.svg)](https://doi.org/10.21105/joss.05505)
 [![R-CMD-check](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/occupationMeasurement/occupationMeasurement/actions/workflows/R-CMD-check.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/occupationMeasurement)](https://CRAN.R-project.org/package=occupationMeasurement)
 <!-- badges: end -->

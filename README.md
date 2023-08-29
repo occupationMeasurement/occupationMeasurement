@@ -18,6 +18,10 @@ Coding people's occupations into official classifications such as the [Internati
 
 For a detailed overview of the package refer to `vignette("occupationMeasurement")` or take a look at `browseVignettes("occupationMeasurement")` to see a list of vignettes describing the package. All vignettes are also available in the [online documentation](https://occupationmeasurement.github.io/occupationMeasurement/index.html).
 
+Please cite our publication when using the software:
+
+Jan Simson, Olga Kononykhina, and Malte Schierholz (2023). occupationMeasurement: A Comprehensive Toolbox for Interactive Occupation Coding in Surveys. Journal of Open Source Software, 8(88), 5505, https://doi.org/10.21105/joss.05505
+
 <img src="man/figures/app_flow_screenshots.png" width="50%" align="right" alt="Screenshots illustrating the flow within the interactive application."/>
 
 ## Installation

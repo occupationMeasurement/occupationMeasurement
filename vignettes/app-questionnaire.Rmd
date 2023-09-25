@@ -12,6 +12,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+data.table::setDTthreads(1)
 ```
 
 When using the interactive shiny app you can use one of the different available questionnaires to e.g. conduct a web survey (`questionnaire_web_survey()`) or collect data from interviewer-administered (phone) interviews (`questionnaire_interviewer_administered()`).

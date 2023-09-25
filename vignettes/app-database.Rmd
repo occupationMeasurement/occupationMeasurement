@@ -12,6 +12,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+data.table::setDTthreads(1)
 ```
 
 Results from interactive occupation coding with the package via `app()` can easily be saved in a database by following this guide.

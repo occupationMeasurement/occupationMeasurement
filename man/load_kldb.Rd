@@ -34,6 +34,8 @@ More information on the KldB 2010: https://statistik.arbeitsagentur.de/DE/Naviga
 
 }}
 \examples{
+data.table::setDTthreads(2)
+
 # We recommend using a non-temporary directory for caching, so data is
 # downloaded only once and not time and time again
 cache_dir <- tempdir()

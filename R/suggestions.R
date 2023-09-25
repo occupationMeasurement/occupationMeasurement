@@ -38,6 +38,8 @@ create_document_term_matrix <- function(input) {
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' # Use with default settings
 #' get_job_suggestions(
 #'   "Arzt",
@@ -236,6 +238,8 @@ algo_similarity_based_reasoning <- function(text_processed,
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' get_job_suggestions("Koch")
 #'
 #' get_job_suggestions("Schlosser")
@@ -524,6 +528,8 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 #' @export
 #' @inheritParams get_job_suggestions
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' # Get followup questions for "Post- und Zustelldienste"
 #' get_followup_questions("1004")
 get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco-1.2.x", suggestion_type_options = list(), include_answer_codes = FALSE) {
@@ -609,6 +615,8 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' @export
 #' @inheritParams get_job_suggestions
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' get_suggestion_info("9079")
 get_suggestion_info <- function(suggestion_ids,
                                 suggestion_type = "auxco-1.2.x",
@@ -687,6 +695,8 @@ get_suggestion_info <- function(suggestion_ids,
 #' @return A named list corresponding to the code_type(s) specified. Includes a `message` if `verbose = TRUE`
 #' @export
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' get_final_codes(
 #'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
 #'   "9076",

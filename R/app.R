@@ -45,6 +45,8 @@ validate_questionnaire <- function(questionnaire, verbose) {
 #' @seealso `vignette("app")`, [questionnaire_web_survey()]
 #' @export
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' app_instance <- app(
 #'   app_settings = create_app_settings(
 #'     # Important to save results from the app

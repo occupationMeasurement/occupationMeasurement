@@ -38,6 +38,8 @@ Note: This function should not be used directly, but rather as a step /
 algorithm in get_job_suggestions.
 }
 \examples{
+data.table::setDTthreads(2)
+
 # Use with default settings
 get_job_suggestions(
   "Arzt",

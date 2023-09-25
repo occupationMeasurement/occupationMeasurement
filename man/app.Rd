@@ -36,6 +36,8 @@ Printing the returned instance or returning it without saving it in a
 variable will start the app.
 }
 \examples{
+data.table::setDTthreads(2)
+
 app_instance <- app(
   app_settings = create_app_settings(
     # Important to save results from the app

@@ -6,3 +6,7 @@ library(shiny)
 
 # Load application support files into testing environment
 suppressWarnings(shinytest2::load_app_env())
+
+# Limit number of threads used by data.table
+# More info here: https://github.com/Rdatatable/data.table/issues/5658
+data.table::setDTthreads(2)

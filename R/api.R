@@ -24,6 +24,8 @@
 #' @export
 #' @seealso `vignette("api")`
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' # Get the plumber router
 #' router <- api(
 #'   start = FALSE,

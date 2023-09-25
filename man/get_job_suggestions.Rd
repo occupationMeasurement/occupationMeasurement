@@ -108,6 +108,8 @@ The procedure implemented here is, roughly speaking, as follows:
 }
 }
 \examples{
+data.table::setDTthreads(2)
+
 get_job_suggestions("Koch")
 
 get_job_suggestions("Schlosser")

@@ -26,6 +26,8 @@ This package also includes an already loaded version of the \link{auxco}, which
 can be used straight away \emph{without} calling this function.
 }
 \examples{
+data.table::setDTthreads(2)
+
 # This function expects the CSV files from
 # https://github.com/occupationMeasurement/auxiliary-classification/releases/
 # to be there.

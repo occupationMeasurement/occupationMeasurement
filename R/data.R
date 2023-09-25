@@ -78,6 +78,8 @@
 #' @return A list with multiple data.tables.
 #' @export
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' # This function expects the CSV files from
 #' # https://github.com/occupationMeasurement/auxiliary-classification/releases/
 #' # to be there.
@@ -238,6 +240,8 @@ load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir
 #' @return A cleaned / slimmed version of the KldB 2010.
 #' @export
 #' @examples
+#' data.table::setDTthreads(2)
+#'
 #' # We recommend using a non-temporary directory for caching, so data is
 #' # downloaded only once and not time and time again
 #' cache_dir <- tempdir()

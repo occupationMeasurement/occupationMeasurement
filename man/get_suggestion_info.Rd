@@ -38,6 +38,8 @@ To retrieve information regarding followup questions use
 \link{get_followup_questions}.
 }
 \examples{
+data.table::setDTthreads(2)
+
 get_suggestion_info("9079")
 }
 \keyword{internal}

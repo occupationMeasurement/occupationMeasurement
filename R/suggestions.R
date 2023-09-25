@@ -108,7 +108,8 @@ algo_similarity_based_reasoning <- function(text_processed,
       probabilities$wordwise$modelProb[, string],
       document_term_matrix@Dimnames[[2]],
       method = "osa",
-      weight = c(d = 1, i = 1, s = 1, t = 1)
+      weight = c(d = 1, i = 1, s = 1, t = 1),
+      nthread = data.table::getDTthreads()
     )
     # indices of words at most one character apart
     wordwise_str_distances_ind <- which(wordwise_str_distances <= 1, arr.ind = TRUE)

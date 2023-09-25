@@ -38,7 +38,7 @@ To retrieve information regarding followup questions use
 \link{get_followup_questions}.
 }
 \examples{
-data.table::setDTthreads(2)
+\dontshow{data.table::setDTthreads(1)}
 
 get_suggestion_info("9079")
 }

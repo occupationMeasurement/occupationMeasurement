@@ -74,7 +74,7 @@ If \code{followup_answers} is missing or incomplete, one may wish to insert/infe
 by using \code{standardized_answer_levels}.
 }
 \examples{
-data.table::setDTthreads(2)
+\dontshow{data.table::setDTthreads(1)}
 
 get_final_codes(
   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung

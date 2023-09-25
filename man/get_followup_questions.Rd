@@ -39,7 +39,7 @@ List of followup questions and their answer options.
 Get potential follow-up questions for a suggestion.
 }
 \examples{
-data.table::setDTthreads(2)
+\dontshow{data.table::setDTthreads(1)}
 
 # Get followup questions for "Post- und Zustelldienste"
 get_followup_questions("1004")

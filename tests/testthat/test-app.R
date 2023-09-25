@@ -183,7 +183,9 @@ test_that("E2E: test case Koch", {
   app$run_js("window.numberOfChanges = 0;") # reset counter
 
   # Check final output
-  app$expect_text("body")
+  if (!detect_kldb_unavailable()) {
+    app$expect_text("body")
+  }
 
   # To Output Shiny Logs in the end
   # print(app$get_logs())

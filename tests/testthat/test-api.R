@@ -146,6 +146,8 @@ test_that("endpoint '/v1/suggestions' works (w/o suggestions due to high thresho
 })
 
 test_that("endpoint '/v1/suggestions' works (for KldB)", {
+  skip_if_kldb_unavailable()
+
   # With suggestions
   r <- httr::GET(
     api_root,

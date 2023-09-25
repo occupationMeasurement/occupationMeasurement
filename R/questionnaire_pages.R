@@ -744,7 +744,12 @@ page_results <- function(...) {
     },
     render = function(session, page, run_before_output, ...) {
       res <- run_before_output$res
-      kldb_10 <- get_data("kldb-2010")
+      kldb_10 <- tryCatch({
+        get_data("kldb-2010")
+      }, error = function(e) {
+        warning("Could not load KldB 2010 data.")
+        return(NULL)
+      })
 
       list(
         h2("Ergebnis\u00fcberblick"),
@@ -776,10 +781,14 @@ page_results <- function(...) {
                 "Bitte w\u00e4hlen Sie eine Antwort auf der vorherigen Seite"
               )
             )
-            tabKldb <- data.frame(
-              Kategorie = c("Kldb Code", "Kldb Titel", "Kldb Inhalt"),
-              Ergebnis = c(res$kldb, kldb_10$title[res$kldb == kldb_10$kldb_id], kldb_10$description[res$kldb == kldb_10$kldb_id])
-            )
+            if (!is.null(kldb_10)) {
+              tabKldb <- data.frame(
+                Kategorie = c("Kldb Code", "Kldb Titel", "Kldb Inhalt"),
+                Ergebnis = c(res$kldb, kldb_10$title[res$kldb == kldb_10$kldb_id], kldb_10$description[res$kldb == kldb_10$kldb_id])
+              )
+            } else {
+              tabKldb <- data.frame(error = "Could not load KldB 2010 data.")
+            }
             tabKldb
           },
           striped = TRUE,

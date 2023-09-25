@@ -9,3 +9,21 @@ local_package <- function(pkg = file.path("..", ".."), .local_envir = .GlobalEnv
   # Install the package
   devtools::install(pkg = pkg, quick = TRUE, quiet = TRUE, upgrade = "never")
 }
+
+detect_kldb_unavailable <- function() {
+  kldb <- tryCatch(
+    {
+      load_kldb()
+    },
+    error = function(e) {
+      return(NULL)
+    }
+  )
+  return(is.null(kldb))
+}
+
+skip_if_kldb_unavailable <- function() {
+  if (detect_kldb_unavailable()) {
+    skip(("Kldb is currently not available, this can happen temporarily. If the issue persists please contact the package maintainer."))
+  }
+}

@@ -28,6 +28,8 @@ To disambiguate between similar occupations. Depending on the suggestion,
 multiple followup questions can be shown.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(
   page_first_freetext(),
   page_second_freetext(),

@@ -29,6 +29,8 @@ Here, the description of the job can be entered in an open freetext field
 and suggestions will be generated based on the input.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(
   page_first_freetext(),
   page_second_freetext(),

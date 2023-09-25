@@ -108,6 +108,8 @@ The procedure implemented here is, roughly speaking, as follows:
 }
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 if (interactive()) {
   get_job_suggestions("Koch")
 }

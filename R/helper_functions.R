@@ -13,6 +13,8 @@
 #' @return The same character vector after processing
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' preprocess_string(c(
 #'   "Verkauf von B\u00fcchern, Schreibwaren",
 #'   "Fach\u00e4rztin f\u00fcr Kinder- und Jugendmedizin im \u00f6ffentlichen Gesundheitswesen",

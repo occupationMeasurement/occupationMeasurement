@@ -242,6 +242,8 @@ algo_similarity_based_reasoning <- function(text_processed,
 #' @return A data.table with suggestions or NULL if no suggestions were found.
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' if (interactive()) {
 #'   get_job_suggestions("Koch")
 #' }

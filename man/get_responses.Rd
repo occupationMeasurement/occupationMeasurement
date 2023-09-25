@@ -18,6 +18,8 @@ NULL if there are no files.
 Expects data to be saved as files.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 app_settings <- create_app_settings(save_to_file = TRUE)
 if (interactive()) {
   get_responses(app_settings = app_settings)

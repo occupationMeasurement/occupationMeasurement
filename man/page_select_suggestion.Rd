@@ -20,6 +20,8 @@ A page object.
 Display the generated suggestions for the user to pick one.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(
   page_first_freetext(),
   page_second_freetext(),

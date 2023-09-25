@@ -64,6 +64,8 @@
 #' @return A new `page` object.
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' very_simple_page <- new_page(
 #'   page_id = "example",
 #'   render = function(session, run_before_output, input, output, ...) {
@@ -327,6 +329,8 @@ get_page_data <- function(session, page_id, key = NULL, default = NULL) {
 #' @export
 #' @seealso [get_item_data()]
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' # Set up a "fake" shiny session to store data
 #' session <- shiny::MockShinySession$new()
 #' session$userData <- list(
@@ -405,6 +409,8 @@ set_item_data <- function(session, page_id, item_id = NULL, question_text = NULL
 #' @export
 #' @seealso [set_item_data()]
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' # Set up a "fake" shiny session to store data
 #' session <- shiny::MockShinySession$new()
 #' session$userData <- list(

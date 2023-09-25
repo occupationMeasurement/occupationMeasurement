@@ -7,7 +7,7 @@
 #' @return A questionnaire for [app()], i.e. a list of pages.
 #' @export
 #' @examples
-#' library(occupationMeasurement)
+#' \dontshow{data.table::setDTthreads(1)}
 #'
 #' # Inspect the code to create the questionnaire_web_survey
 #' print(questionnaire_web_survey)
@@ -44,7 +44,7 @@ questionnaire_web_survey <- function(show_feedback_page = TRUE) {
 #' @return A questionnaire for [app()] i.e. a list of pages.
 #' @export
 #' @examples
-#' library(occupationMeasurement)
+#' \dontshow{data.table::setDTthreads(1)}
 #'
 #' # Inspect the code to create the questionnaire_interviewer_administered
 #' print(questionnaire_interviewer_administered)
@@ -76,7 +76,7 @@ questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
 #' @return A questionnaire for [app()] i.e. a list of pages.
 #' @export
 #' @examples
-#' library(occupationMeasurement)
+#' \dontshow{data.table::setDTthreads(1)}
 #'
 #' # Inspect the code to create the questionnaire_demo
 #' print(questionnaire_demo)

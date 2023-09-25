@@ -85,6 +85,8 @@ A list of app_settings.
 This is the primary and most convenient way of configuring the app.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 app_settings <- create_app_settings(
   # Important to save results from the app
   save_to_file = TRUE,

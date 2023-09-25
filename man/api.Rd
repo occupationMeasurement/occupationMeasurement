@@ -50,6 +50,8 @@ A Plumber router
 Start the occupation coding API.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 if (interactive()) {
   # Get the plumber router
   router <- api(

@@ -8,6 +8,8 @@
 #' @export
 #' @seealso [new_page()]
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' very_simple_page <- new_page(
 #'   page_id = "example",
 #'   render = function(session, run_before_output, input, output, ...) {
@@ -47,6 +49,8 @@ mark_questionnaire_complete <- function() {
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' one_page_questionnaire <- list(
 #'   page_choose_one_option(
 #'     "test_page_radio",
@@ -169,6 +173,8 @@ page_choose_one_option <- function(page_id,
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' page_freetext(
 #'   "test_page_freetext",
 #'   question_text = "Hello there! Please fill in your name below:",

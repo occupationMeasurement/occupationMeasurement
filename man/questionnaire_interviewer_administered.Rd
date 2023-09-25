@@ -20,7 +20,7 @@ A questionnaire for Computer-assisted Interviewing (CAI), i.e. telephone intervi
 View the function's code to see the used pages. This function is meant as a template that can be changed to meet your requirements.
 }
 \examples{
-library(occupationMeasurement)
+\dontshow{data.table::setDTthreads(1)}
 
 # Inspect the code to create the questionnaire_interviewer_administered
 print(questionnaire_interviewer_administered)

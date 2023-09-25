@@ -56,6 +56,8 @@ A page object.
 Show a page with multiple radio button options where once can be picked.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 one_page_questionnaire <- list(
   page_choose_one_option(
     "test_page_radio",

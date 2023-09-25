@@ -40,6 +40,8 @@ saved in \code{run_before} and the reply (\code{response_text} and/or \code{resp
 typically saved in \code{run_after}.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 # Set up a "fake" shiny session to store data
 session <- shiny::MockShinySession$new()
 session$userData <- list(

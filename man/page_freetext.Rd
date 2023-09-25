@@ -61,6 +61,8 @@ A page object.
 Show a page with a text field where free text can be entered.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 page_freetext(
   "test_page_freetext",
   question_text = "Hello there! Please fill in your name below:",

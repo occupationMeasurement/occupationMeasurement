@@ -21,7 +21,7 @@ Note, that this function has more complex code to create
 the additional pages.
 }
 \examples{
-library(occupationMeasurement)
+\dontshow{data.table::setDTthreads(1)}
 
 # Inspect the code to create the questionnaire_demo
 print(questionnaire_demo)

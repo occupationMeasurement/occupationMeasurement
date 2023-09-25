@@ -34,6 +34,8 @@ The items's data.
 Each page in the questionnaire can have multiple items on it.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 # Set up a "fake" shiny session to store data
 session <- shiny::MockShinySession$new()
 session$userData <- list(

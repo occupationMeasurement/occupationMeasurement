@@ -21,6 +21,8 @@ A page object.
 Page to receive feedback on how well the chosen suggestion fits
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(
   page_first_freetext(),
   page_select_suggestion(),

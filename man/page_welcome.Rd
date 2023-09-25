@@ -21,6 +21,8 @@ A page object.
 Providing an introduction and greeting participants.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(page_welcome)
 if (interactive()) {
   app(questionnaire = my_questionnaire)

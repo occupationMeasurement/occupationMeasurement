@@ -17,6 +17,8 @@ This page saves data in results_overview and marks the questionnaire as
 complete.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(
   page_final()
 )

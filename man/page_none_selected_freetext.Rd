@@ -20,6 +20,8 @@ A page object.
 An additional freetext page to show when no suggestion has been selected.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 my_questionnaire <- list(
   page_first_freetext(),
   page_second_freetext(),

@@ -93,6 +93,8 @@ as these two life-cycle functions have only been added to allow for easier
 modification and extension of existing pages.
 }
 \examples{
+\dontshow{data.table::setDTthreads(1)}
+
 very_simple_page <- new_page(
   page_id = "example",
   render = function(session, run_before_output, input, output, ...) {

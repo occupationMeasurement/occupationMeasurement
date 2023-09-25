@@ -9,6 +9,8 @@
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(page_welcome)
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
@@ -45,6 +47,8 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -124,6 +128,8 @@ page_first_freetext <- function(
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -207,6 +213,8 @@ page_second_freetext <- function(
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -456,6 +464,8 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -518,6 +528,8 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -650,6 +662,8 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -840,6 +854,8 @@ page_results <- function(...) {
 #' @return A page object.
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_select_suggestion(),
@@ -921,6 +937,8 @@ page_feedback <- function(is_interview = FALSE, ...) {
 #' @seealso [new_page()]
 #' @export
 #' @examples
+#' \dontshow{data.table::setDTthreads(1)}
+#'
 #' my_questionnaire <- list(
 #'   page_final()
 #' )

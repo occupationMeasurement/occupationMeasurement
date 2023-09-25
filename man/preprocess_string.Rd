@@ -28,10 +28,12 @@ punctuation, empty spaces and the word "Diplom".
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 preprocess_string(c(
   "Verkauf von B\u00fcchern, Schreibwaren",
   "Fach\u00e4rztin f\u00fcr Kinder- und Jugendmedizin im \u00f6ffentlichen Gesundheitswesen",
   "Industriemechaniker",
   "Dipl.-Ing. - Agrarwirtschaft (Landwirtschaft)"
 ))
+}
 }

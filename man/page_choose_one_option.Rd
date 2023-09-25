@@ -58,6 +58,7 @@ Show a page with multiple radio button options where once can be picked.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 one_page_questionnaire <- list(
   page_choose_one_option(
     "test_page_radio",
@@ -69,7 +70,7 @@ one_page_questionnaire <- list(
 if (interactive()) {
   app(questionnaire = one_page_questionnaire)
 }
-
+}
 }
 \seealso{
 \code{\link[=new_page]{new_page()}}

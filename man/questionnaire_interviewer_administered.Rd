@@ -22,11 +22,13 @@ View the function's code to see the used pages. This function is meant as a temp
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 # Inspect the code to create the questionnaire_interviewer_administered
 print(questionnaire_interviewer_administered)
 
 if (interactive()) {
   # Run the app with the questionnaire_interviewer_administered
   app(questionnaire = questionnaire_interviewer_administered())
+}
 }
 }

@@ -31,6 +31,7 @@ and suggestions will be generated based on the input.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 my_questionnaire <- list(
   page_first_freetext(),
   page_second_freetext(),
@@ -41,6 +42,7 @@ my_questionnaire <- list(
 )
 if (interactive()) {
   app(questionnaire = my_questionnaire)
+}
 }
 }
 \seealso{

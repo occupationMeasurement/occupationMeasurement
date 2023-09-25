@@ -19,11 +19,13 @@ complete.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 my_questionnaire <- list(
   page_final()
 )
 if (interactive()) {
   app(questionnaire = my_questionnaire)
+}
 }
 }
 \seealso{

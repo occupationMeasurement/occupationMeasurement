@@ -40,6 +40,7 @@ algorithm in get_job_suggestions.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 # Use with default settings
 if (interactive()) {
   get_job_suggestions(
@@ -92,6 +93,7 @@ if (interactive()) {
       )
     )
   )[, list(kldb_id, score, sim_name, kldb_id_title = title)]
+}
 }
 }
 \references{

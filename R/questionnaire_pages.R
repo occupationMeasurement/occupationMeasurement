@@ -11,9 +11,11 @@
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(page_welcome)
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatischen Berufskodierung!",
                          ...) {
@@ -49,6 +51,7 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -59,6 +62,7 @@ page_welcome <- function(title = "Herzlich Willkommen zum Modul zur automatische
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_first_freetext <- function(
     is_interview = FALSE,
@@ -130,6 +134,7 @@ page_first_freetext <- function(
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -140,6 +145,7 @@ page_first_freetext <- function(
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_second_freetext <- function(
     combine_input_with_first = TRUE,
@@ -215,6 +221,7 @@ page_second_freetext <- function(
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -225,6 +232,7 @@ page_second_freetext <- function(
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_select_suggestion <- function(is_interview = FALSE, ...) {
   new_page(
@@ -466,6 +474,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -476,6 +485,7 @@ page_select_suggestion <- function(is_interview = FALSE, ...) {
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_none_selected_freetext <- function(is_interview = FALSE, ...) {
   page_freetext(
@@ -530,6 +540,7 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -540,6 +551,7 @@ page_none_selected_freetext <- function(is_interview = FALSE, ...) {
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because R (sigh)
   new_page(
@@ -664,6 +676,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_second_freetext(),
@@ -675,6 +688,7 @@ page_followup <- function(index, is_interview = FALSE, ...) { # 1 based because 
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_results <- function(...) {
   new_page(
@@ -856,6 +870,7 @@ page_results <- function(...) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_first_freetext(),
 #'   page_select_suggestion(),
@@ -863,6 +878,7 @@ page_results <- function(...) {
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_feedback <- function(is_interview = FALSE, ...) {
   # Column names used in data.table (for R CMD CHECK)
@@ -939,11 +955,13 @@ page_feedback <- function(is_interview = FALSE, ...) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' my_questionnaire <- list(
 #'   page_final()
 #' )
 #' if (interactive()) {
 #'   app(questionnaire = my_questionnaire)
+#' }
 #' }
 page_final <- function(...) {
   new_page(

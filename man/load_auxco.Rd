@@ -28,12 +28,14 @@ can be used straight away \emph{without} calling this function.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 # This function expects the CSV files from
 # https://github.com/occupationMeasurement/auxiliary-classification/releases/
 # to be there.
 path_to_auxco <- "auxco"
 if (dir.exists(path_to_auxco)) {
   load_auxco(path_to_auxco)
+}
 }
 }
 \seealso{

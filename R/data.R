@@ -80,12 +80,14 @@
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # This function expects the CSV files from
 #' # https://github.com/occupationMeasurement/auxiliary-classification/releases/
 #' # to be there.
 #' path_to_auxco <- "auxco"
 #' if (dir.exists(path_to_auxco)) {
 #'   load_auxco(path_to_auxco)
+#' }
 #' }
 #' @seealso https://github.com/occupationMeasurement/auxiliary-classification, [auxco]
 load_auxco <- function(dir, add_explanations = TRUE) {
@@ -242,6 +244,7 @@ load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # We recommend using a non-temporary directory for caching, so data is
 #' # downloaded only once and not time and time again
 #' cache_dir <- tempdir()
@@ -250,6 +253,7 @@ load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir
 #' load_kldb(cache_dir = cache_dir)
 #' # Load the raw dataset
 #' load_kldb_raw(cache_dir = cache_dir)
+#' }
 load_kldb <- function(cache_dir = getOption("occupationMeasurement.cache_dir", tempdir())) {
   # Column names used in data.table (for R CMD CHECK)
   level <- title <- label <- kldb_id <- NULL

@@ -36,6 +36,7 @@ More information on the KldB 2010: https://statistik.arbeitsagentur.de/DE/Naviga
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 # We recommend using a non-temporary directory for caching, so data is
 # downloaded only once and not time and time again
 cache_dir <- tempdir()
@@ -44,4 +45,5 @@ cache_dir <- tempdir()
 load_kldb(cache_dir = cache_dir)
 # Load the raw dataset
 load_kldb_raw(cache_dir = cache_dir)
+}
 }

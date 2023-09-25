@@ -22,6 +22,7 @@ An additional freetext page to show when no suggestion has been selected.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 my_questionnaire <- list(
   page_first_freetext(),
   page_second_freetext(),
@@ -32,6 +33,7 @@ my_questionnaire <- list(
 )
 if (interactive()) {
   app(questionnaire = my_questionnaire)
+}
 }
 }
 \seealso{

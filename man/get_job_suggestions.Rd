@@ -110,11 +110,13 @@ The procedure implemented here is, roughly speaking, as follows:
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 if (interactive()) {
   get_job_suggestions("Koch")
 }
 
 if (interactive()) {
   get_job_suggestions("Schlosser")
+}
 }
 }

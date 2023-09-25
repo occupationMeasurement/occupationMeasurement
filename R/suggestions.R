@@ -40,6 +40,7 @@ create_document_term_matrix <- function(input) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # Use with default settings
 #' if (interactive()) {
 #'   get_job_suggestions(
@@ -92,6 +93,7 @@ create_document_term_matrix <- function(input) {
 #'       )
 #'     )
 #'   )[, list(kldb_id, score, sim_name, kldb_id_title = title)]
+#' }
 #' }
 algo_similarity_based_reasoning <- function(text_processed,
                                             sim_name = "wordwise",
@@ -245,12 +247,14 @@ algo_similarity_based_reasoning <- function(text_processed,
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' if (interactive()) {
 #'   get_job_suggestions("Koch")
 #' }
 #'
 #' if (interactive()) {
 #'   get_job_suggestions("Schlosser")
+#' }
 #' }
 get_job_suggestions <- function(text,
                                 suggestion_type = "auxco-1.2.x", # or "kldb-2010"
@@ -539,8 +543,10 @@ add_distinctions_kldb <- function(previous_suggestions, num_suggestions, suggest
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # Get followup questions for "Post- und Zustelldienste"
 #' get_followup_questions("1004")
+#' }
 get_followup_questions <- function(suggestion_id, tense = "present", suggestion_type = "auxco-1.2.x", suggestion_type_options = list(), include_answer_codes = FALSE) {
   # Column names used in data.table (for R CMD CHECK)
   entry_type <- question_id <- auxco_id <- NULL
@@ -626,7 +632,9 @@ get_followup_questions <- function(suggestion_id, tense = "present", suggestion_
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' get_suggestion_info("9079")
+#' }
 get_suggestion_info <- function(suggestion_ids,
                                 suggestion_type = "auxco-1.2.x",
                                 suggestion_type_options = list(),
@@ -706,6 +714,7 @@ get_suggestion_info <- function(suggestion_ids,
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' get_final_codes(
 #'   # Führungsaufgaben mit Personalverantwortung  bei der Lebensmittelherstellung
 #'   "9076",
@@ -739,6 +748,7 @@ get_suggestion_info <- function(suggestion_ids,
 #'     "isco_supervisor_manager" = "isco_not_supervising"
 #'   )
 #' )
+#' }
 get_final_codes <- function(
     suggestion_id,
     followup_answers = list(),

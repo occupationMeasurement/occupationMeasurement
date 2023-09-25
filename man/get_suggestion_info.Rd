@@ -40,6 +40,8 @@ To retrieve information regarding followup questions use
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 get_suggestion_info("9079")
+}
 }
 \keyword{internal}

@@ -9,6 +9,7 @@
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # Inspect the code to create the questionnaire_web_survey
 #' print(questionnaire_web_survey)
 #'
@@ -20,6 +21,7 @@
 #' if (interactive()) {
 #'   # This is used by default within app
 #'   app()
+#' }
 #' }
 questionnaire_web_survey <- function(show_feedback_page = TRUE) {
   list(
@@ -46,12 +48,14 @@ questionnaire_web_survey <- function(show_feedback_page = TRUE) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # Inspect the code to create the questionnaire_interviewer_administered
 #' print(questionnaire_interviewer_administered)
 #'
 #' if (interactive()) {
 #'   # Run the app with the questionnaire_interviewer_administered
 #'   app(questionnaire = questionnaire_interviewer_administered())
+#' }
 #' }
 questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
   list(
@@ -78,6 +82,7 @@ questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
 #' @examples
 #' \dontshow{data.table::setDTthreads(1)}
 #'
+#' \dontrun{
 #' # Inspect the code to create the questionnaire_demo
 #' print(questionnaire_demo)
 #'
@@ -85,7 +90,7 @@ questionnaire_interviewer_administered <- function(show_feedback_page = TRUE) {
 #'   # Run the app with the questionnaire_demo
 #'   app(questionnaire = questionnaire_demo())
 #' }
-#'
+#' }
 questionnaire_demo <- function(show_feedback_page = TRUE) {
   list(
     page_welcome(

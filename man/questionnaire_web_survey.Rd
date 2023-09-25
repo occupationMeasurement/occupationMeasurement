@@ -20,6 +20,7 @@ used pages. This function is meant as a template that can be changed to meet you
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 # Inspect the code to create the questionnaire_web_survey
 print(questionnaire_web_survey)
 
@@ -31,5 +32,6 @@ if (interactive()) {
 if (interactive()) {
   # This is used by default within app
   app()
+}
 }
 }

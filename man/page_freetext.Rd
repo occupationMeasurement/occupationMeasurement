@@ -63,11 +63,13 @@ Show a page with a text field where free text can be entered.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 page_freetext(
   "test_page_freetext",
   question_text = "Hello there! Please fill in your name below:",
   no_answer_checkbox = TRUE
 )
+}
 }
 \seealso{
 \code{\link[=new_page]{new_page()}}

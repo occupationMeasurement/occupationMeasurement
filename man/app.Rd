@@ -38,6 +38,7 @@ variable will start the app.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 app_instance <- app(
   app_settings = create_app_settings(
     # Important to save results from the app
@@ -48,6 +49,7 @@ app_instance <- app(
 # Start the app
 if (interactive()) {
   app_instance
+}
 }
 }
 \seealso{

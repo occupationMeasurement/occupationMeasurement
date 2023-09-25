@@ -95,6 +95,7 @@ modification and extension of existing pages.
 \examples{
 \dontshow{data.table::setDTthreads(1)}
 
+\dontrun{
 very_simple_page <- new_page(
   page_id = "example",
   render = function(session, run_before_output, input, output, ...) {
@@ -164,5 +165,5 @@ questionnaire_that_saves_two_items <- list(
 if (interactive()) {
   app(questionnaire = questionnaire_that_saves_two_items)
 }
-
+}
 }

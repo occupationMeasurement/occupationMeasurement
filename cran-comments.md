@@ -7,7 +7,7 @@
 This is a minor, incremental release with mainly QoL fixes.
 {styler} has been removed per request by its author from `Suggests` to reduce its number of reverse dependencies.
 
-Adressing existing NOTEs: The reference to `stringi` has been removed and `DiagrammeR` has been removed from `Suggests`.
+Adressing existing NOTEs: The reference to `stringi` has been removed and `DiagrammeR` has been removed from `Suggests`. Proper error handling has been put in place, in case one of the online resources is not available.
 
 ## revdepcheck results
 

@@ -195,23 +195,31 @@ load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir
 
     # Download the kldb file (which is a zip archive)
     url <- "https://www.klassifikationsserver.de/klassService/jsp/variant/downloadexport?type=EXPORT_CSV_VARIANT&variant=kldb2010&language=DE"
-    utils::download.file(url, destfile = kldb_archive_path, mode = "wb")
+    tryCatch({
+      utils::download.file(url, destfile = kldb_archive_path, mode = "wb")
+    }, error = function(e) {
+      stop("Could not download the KldB 2010 dataset. Please try again later.")
+    })
   }
 
   # Get the CSV filename
   # (R cannot extract the file directly due to special characters in the name)
-  filename_in_zip <- utils::unzip(zipfile = kldb_archive_path, list = TRUE)[1, "Name"]
+  kldb_df <- tryCatch({
+    filename_in_zip <- utils::unzip(zipfile = kldb_archive_path, list = TRUE)[1, "Name"]
 
-  # Unzip the file in-place and read its' contents
-  # (fread does not support reading from this kind of stream)
-  kldb_df <- utils::read.csv2(
-    unz(kldb_archive_path, filename_in_zip),
-    skip = 8,
-    sep = ";",
-    encoding = "UTF-8",
-    check.names = FALSE,
-    colClasses = c("character", rep(NA, 11))
-  )
+    # Unzip the file in-place and read its' contents
+    # (fread does not support reading from this kind of stream)
+    utils::read.csv2(
+      unz(kldb_archive_path, filename_in_zip),
+      skip = 8,
+      sep = ";",
+      encoding = "UTF-8",
+      check.names = FALSE,
+      colClasses = c("character", rep(NA, 11))
+    )
+  }, error = function(e) {
+    stop("Could not extract the KldB 2010 dataset. This could be related to an issue when downloading the archive.")
+  })
 
   return(as.data.table(kldb_df))
 }

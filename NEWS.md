@@ -1,5 +1,9 @@
 # occupationMeasurement (development version)
 
+# occupationMeasurement 0.3.1
+
+* Gracefully handle unavailability of the KldB 2010 classification
+
 # occupationMeasurement 0.3.0
 
 * This release is accompanying an article in the Journal of Open Source Software

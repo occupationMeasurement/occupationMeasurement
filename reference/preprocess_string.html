@@ -98,16 +98,16 @@ Defaults to "de" (German).</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">preprocess_string</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/openmp-utils.html" class="external-link">setDTthreads</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="fu">preprocess_string</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"Verkauf von B\u00fcchern, Schreibwaren"</span>,</span></span>
 <span class="r-in"><span>  <span class="st">"Fach\u00e4rztin f\u00fcr Kinder- und Jugendmedizin im \u00f6ffentlichen Gesundheitswesen"</span>,</span></span>
 <span class="r-in"><span>  <span class="st">"Industriemechaniker"</span>,</span></span>
 <span class="r-in"><span>  <span class="st">"Dipl.-Ing. - Agrarwirtschaft (Landwirtschaft)"</span></span></span>
 <span class="r-in"><span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "VERKAUF VON BUECHERN SCHREIBWAREN"                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "FACHAERZTIN FUER KINDER UND JUGENDMEDIZIN IM OEFFENTLICHEN GESUNDHEITSWESEN"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "INDUSTRIEMECHANIKER"                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "INGENIEUR AGRARWIRTSCHAFT LANDWIRTSCHAFT"                                   </span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

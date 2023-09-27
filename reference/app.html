@@ -116,23 +116,20 @@ parameter.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/openmp-utils.html" class="external-link">setDTthreads</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/openmp-utils.html" class="external-link">setDTthreads</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="va">app_instance</span> <span class="op">&lt;-</span> <span class="fu">app</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  app_settings <span class="op">=</span> <span class="fu"><a href="create_app_settings.html">create_app_settings</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>    <span class="co"># Important to save results from the app</span></span></span>
 <span class="r-in"><span>    save_to_file <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required namespace: stringdist</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required namespace: text2vec</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required namespace: tm</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>User Ids are currently not required, this could lead to unmatchable data.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Page Ids: freetext_1, freetext_2, select_suggestion, none_selected_freetext, followup_1, followup_2, feedback, final</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Start the app</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="va">app_instance</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>

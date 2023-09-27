@@ -151,104 +151,15 @@ here as this page adds some of its own code to <code>run_after</code>.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">page_freetext</span><span class="op">(</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/openmp-utils.html" class="external-link">setDTthreads</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="fu">page_freetext</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"test_page_freetext"</span>,</span></span>
 <span class="r-in"><span>  question_text <span class="op">=</span> <span class="st">"Hello there! Please fill in your name below:"</span>,</span></span>
 <span class="r-in"><span>  no_answer_checkbox <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $page_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "test_page_freetext"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $condition</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $run_before</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function (session, page, ...) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (is.function(question_text)) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         actual_question_text &lt;- question_text(session, page, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             ...)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     else {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         actual_question_text &lt;- question_text</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     set_item_data(session = session, page_id = page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         question_text = actual_question_text)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (no_answer_checkbox) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         set_item_data(session = session, page_id = page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             item_id = "no_answer", question_text = actual_question_text)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (!is.null(run_before)) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         extra_run_before_output &lt;- run_before(session, page, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             ...)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     else {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         extra_run_before_output &lt;- list()</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     utils::modifyList(list(question_text = actual_question_text), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         extra_run_before_output)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55d5aef501f0&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55d5b51f1148&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $render_before</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $render</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function (session, page, run_before_output, ...) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     list(if (render_question_text) p(run_before_output$question_text), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         if (trigger_next_on_enter) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             tags$script(paste0("var $nextButton = $(\"#nextButton\");\n                      $(\"#", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 page$page_id, "_text\").on(\"keyup\", function(e) {\n                        if(e.keyCode == 13){\n                          $nextButton.click();\n                        }\n                      });"))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         }, textInput(paste0(page$page_id, "_text"), NULL, value = get_item_data(session = session, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             page_id = page$page_id, key = "response_text"), width = "80%"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         br(), if (no_answer_checkbox) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             checkboxInput(paste0(page$page_id, "_chk_no_answer"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 label = if (is_interview) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   p(class = "interviewer", "*** Keine Angabe")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 } else {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   p("Keine Angabe")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 }, value = get_item_data(session = session, page_id = page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   item_id = "no_answer", key = "response_id", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   default = FALSE) == "no_answer_checked", width = "100%")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         }, if (previous_button) button_previous(), if (next_button) button_next())</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55d5aef31ff8&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55d5b51f1148&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $render_after</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $run_after</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function (session, page, input, ...) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     set_item_data(session = session, page_id = page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         response_text = if (is.null(input[[paste0(page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             "_text")]])) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             ""</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         else input[[paste0(page$page_id, "_text")]])</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (no_answer_checkbox) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         no_answer_checked &lt;- if (is.null(input[[paste0(page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             "_chk_no_answer")]])) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         else input[[paste0(page$page_id, "_chk_no_answer")]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         set_item_data(session = session, page_id = page$page_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             item_id = "no_answer", response_id = if (no_answer_checked) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 "no_answer_checked"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             else "no_answer_unchecked", response_text = if (no_answer_checked) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 "Keine Angabe"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             else "")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (!is.null(run_after)) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         run_after(session, page, input, ...)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55d5aef0db18&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55d5b51f1148&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "page"</span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

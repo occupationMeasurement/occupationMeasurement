@@ -88,95 +88,17 @@ the additional pages.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://occupationMeasurement.github.io/occupationMeasurement/" class="external-link">occupationMeasurement</a></span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/openmp-utils.html" class="external-link">setDTthreads</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="co"># Inspect the code to create the questionnaire_demo</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">questionnaire_demo</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function (show_feedback_page = TRUE) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     list(page_welcome(title = "Herzlich Willkommen zum Demo-Modul zur automatischen Berufskodierung!", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         render_after = function(...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$div(class = "demo-text", h3("Hinweise zum Demo-Modul"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 h4("Zum Fragebogen:"), p("Der im folgenden dargestellte Fragebogen entspricht dem questionnaire_interviewer_administered, der für interviewergestützte Befragungen entwickelt wurde (z.B. Telefonbefragungen). Dabei wird Text in drei Farb-Codes verwendet:"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 tags$ul(tags$li("Schwarzer Text: Muss zwingend vom Interviewer vorgelesen werden."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   tags$li("Roter Text: Enthält Intervieweranweisungen. Soll auf keinen Fall vom Interviewer vorgelesen werden."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   tags$li("Grüner Text: Optional. Darf vorgelesen werden, falls dies zur Unterstützung des Befragten hilfreich ist.")), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 p("Weitere Erläuterungen stehen zu Demonstrationszwecken unterhalb der Buttons."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 h4("Wem sollen die folgenden Fragen gestellt werden?"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 p("Die befragte Person ist erwerbstätig. Bei Personen ohne Job (Arbeitslose, Schüler, Rentner, Hausmänner, ...) machen die folgenden Fragen ggf. weniger Sinn. Alle Nicht-Erwerbstätigen sollten also bereits vorher herausgefiltert worden sein (prinzipiell ließe sich dies ändern, aber dafür bräuchten wir Trainingsdaten)."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 p("Falls Nebenjobs vorhanden sind, muss bereits klargestellt worden sein, dass wir nur die Haupt-Erwerbstätigkeit erfassen wollen (oder nachfolgende Formulierungen müssen angepasst werden)."))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         }), page_first_freetext(is_interview = TRUE, render_after = function(...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         shiny::tags$div(class = "demo-text", shiny::tags$p("Es gibt mehrere mögliche Abläufe / Flows durch das Tool, je nach Antwort des Befragten."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$p("Mit der Liste an Beispielantworten unten können Sie die unterschiedlichen Abläufe testen:"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$ol(shiny::tags$li("Standardbeispiel: \"Koch\""), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Verschiedene Folgefragen werden gestellt, wenn die Antworten 1, 2 oder 4 ausgewählt werden. Auf die Antwort 2 folgt beispielsweise eine Folgefrage zur Aufsichtstätigkeit (strategische Entscheidungsbefugnis: Ja/Nein?, eine überaus typische Folgefrage)"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   shiny::tags$li("Wenn die Antwort \"etwas anderes\" gewählt wird, wird um eine Präzisierung der Tätigkeit gebeten für eine spätere manuelle Kodierung."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   ), shiny::tags$li("Beispiel: \"Elektrotechniker\""), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Wenn Antwort 1 ausgewählt wird, werden zwei Folgefragen benötigt (ein seltener Fall). Auf die Antworten 1 und 4 folgen Fragen nach dem Anforderungsniveau (Abgeschlossenes Masterstudium: Ja/Nein?, eine weitere überaus typische Folgefrage)."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   ), shiny::tags$li("Beispiel: \"Deponiearbeiter\""), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Antwort 1 ist ein gutes Beispiel dafür, welche Antworten bei einer Folgefrage zum Anforderungsniveau in etwa möglich sind."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   ), shiny::tags$li("Beispiel: \"Schiffslotsin\""), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Antwort 1 ist ein gutes Beispiel dafür, welche Antworten bei einer Folgefrage zur Aufsichtstätigkeit möglich sind."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   ), shiny::tags$li("Beispiel: \"Briefmarkensammler\" und in der anschließenden Freitextfrage erneut \"Briefmarkensammler\" (Algorithmus findet keine Vorschläge)"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Der Algorithmus findet keine Vorschläge und manuelle Kodierung ist nötig."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   ), shiny::tags$li("Beispiel: \"Backwaren\"  und in der anschließenden zweiten Freitextfrage \"In der Bäckerei backen\" (Algorithmus findet Vorschläge erst nach Präzisierung)"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Da hier bereits zwei Freitextfragen gestellt wurden, wird bei der Auswahl von \"etwas anderes\" keine dritte Freitextfrage gestellt."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   ), shiny::tags$li("Beispiel: \"Kräutersammler\" (Algorithmus findet nur einen einzigen Vorschlag)"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$ul(shiny::tags$li("Die Frage ist etwas anders formuliert als sonst."))))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }), page_second_freetext(is_interview = TRUE, aggregate_score_threshold = 0.4, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         render_after = function(...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$div(class = "demo-text", shiny::tags$p("Wenn bei der ersten Freitextfrage eine sehr allgemeine Antwort gegeben wird (z.B. Angestellter, Arbeiterin, Projektleiter, Managerin) oder der eingegebene Begriff nicht hinterlegt ist, können keine\n            spezifischen Antworten vorgeschlagen werden. Es muss zunächst nach näheren Details gefragt werden."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$p("Die verlangte Güte der Vorschläge kann mithilfe des Parameters \"aggregate_score_threshold\" kontrolliert\n              und auf die Umstände der jeweiligen Befragung angepasst werden. Es gilt eine Abwägung zu treffen: Mit einem sehr kleinen threshold\n              erhalten fast alle Befragten Vorschläge, aber einige dieser Vorschläge sind sehr schlecht und die Befragten wählen evtl. keine Antwort aus.\n              Es wird empfohlen bei der ersten Freitextfrage einen höheren Threshold zu wählen (default: 0.535) und ggf. bei der zweiten Freitextfrage\n              einen niedrigen Wert zu wählen (hier: 0.4, aber auch Werte nahe 0 können sinnvoll sein.)."))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         }), page_select_suggestion(is_interview = TRUE, render_after = function(session, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         ...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         shiny::tags$div(class = "demo-text", shiny::tags$ul(shiny::tags$li("Auf dieser Seite wurde maschinelles Lernen angewandt um die wahrscheinlichsten Antwortoptionen zu finden,\n            damit wir Ihren Job in die Klassifikation der Berufe 2010 (KldB 2010) und in die International Standard Classification of Occupations (ISCO-08) einordnen können."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$li("Die fünf oben gezeigten Antworten sind die fünf wahrscheinlichsten berufsbezogenen Beschreibungen,\n            von denen der Machine-Learning-Algorithmus vorhersagt, dass sie Ihren Job passend beschreiben\n            und bei der Zuweisung von KldB- und ISCO-Codes helfen würden."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$li("Ca. 65-85% der Befragten wählen bisherigen Erfahrungen zufolge eine Beschreibung aus und können somit bereits während der Befragung kodiert werden."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$li("Die Liste aller berufsbezogenenen Beschreibungen besteht aus über 1100 möglichen Antworten und wurde vom\n            LMU-Team auf der Grundlage der offiziellen KldB-Klassifikation und unter Nutzung der ISCO-Klassifikation entwickelt.\n            Die vollständige Liste der Antworten (und evtl. weitere Folgefragen) sind", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 tags$a(href = "https://github.com/occupationMeasurement/auxiliary-classification", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   "in der Berufs-Hilfsklassifikation\n            mit Tätigkeitsbeschreibungen auf Github", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   target = "_blank"), "ersichtlich. Als Sie Ihre berufliche Tätigkeit auf der vorherigen Seite eingegeben haben, hat der\n            Algorithmus auf der Grundlage Ihrer vorherigen Antwort die Wahrscheinlichkeiten\n            aller 1100+ Jobbeschreibungen aus unserer Liste berechnet und zeigt Ihnen die 5 wahrscheinlichsten an."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$li("Die Standard-KldB- und -ISCO-Codes sind Codes, die vom LMU-Team jeder Antwortoption zugeordnet wurden, weil sie\n            besonders plausibel sind. Allerdings sind manchmal weitere Nachfragen nötig um die korrekte Kategorien genau zu\n            erfassen. Wenn Nachfragen gestellt werden, sind die hier abgebildeten KldB-/ISCO-Codes daher nicht final."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             ), shiny::tags$p("Unten sehen Sie technische Details zu den oben angezeigten Beschreibungen:"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             renderTable({</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 default_suggestion_codes &lt;- get_suggestion_info(session$userData$user_info$list_suggestions$auxco_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   include_default_codes = TRUE)[, c("auxco_id", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   "default_kldb_id", "default_isco_id"), with = FALSE]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 suggestions &lt;- merge(session$userData$user_info$list_suggestions, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   default_suggestion_codes, sort = FALSE, by = "auxco_id")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 tabprobabilities &lt;- data.frame(AuxCo_Id = suggestions$auxco_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   Wahrscheinlichkeit = round(suggestions$score, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                     digits = 2), Berufsbezeichnung = suggestions$title, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   Taetigkeit = suggestions$task, Standard_KldB_Code = suggestions$default_kldb_id, </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   Standard_ISCO_Code = suggestions$default_isco_id)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 tabprobabilities</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             }, striped = TRUE, pagelength = 5, spacing = "l", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 width = "100%", align = "l", colnames = TRUE))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }), page_none_selected_freetext(is_interview = TRUE, render_after = function(...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         shiny::tags$div(class = "demo-text", shiny::tags$p("Falls der Befragte sich für keine der zuvor angezeigten Beschreibungen entscheiden konnte, ist\n            eine manuelle Kodierung nötig. Hierfür werden hier weitere Details erfasst. Die Seite wird übersprungen,\n            wenn eine Beschreibung ausgewählt wurde oder wenn bereits zwei Freitextfragen beantwortet wurden."))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }), page_followup(1, is_interview = TRUE, render_after = function(...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         shiny::tags$div(class = "demo-text", shiny::tags$p("Die zuvor ausgewählte Beschreibung erlaubt keine präzise Zuordnung in die ISCO-08 bzw. in\n          die KldB 2010 auf der höchsten Detailstufe."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$p("Abhängig von der ausgewählten Beschreibung werden daher maximal zwei Folgefragen gestellt\n          um eine genauere Zuordnung vorzunehmen. Vier Arten von möglichen Folgefragen können unterschieden werden:"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             shiny::tags$ul(shiny::tags$li("Führungs- und Aufsichtstätigkeiten (ISCO: managerial and supervisory occupations)"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$li("Anforderungsniveau (ISCO: skill level)"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$li("Berufsspezifische Spezialisierungen"), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$li("Sonstige")), shiny::tags$p("Die beiden erstgenannten Arten (Führungs-/Aufsichtstätigkeit bzw. Anforderungsniveau)\n            werden von vielen Befragungen bereits an anderer Stelle erhoben. Beides kann dabei auf jeweils unterschiedliche Weise\n            operationalisiert werden. Wenn solche Informationen bereits anderweitig erfasst werden, ist zu prüfen, ob man\n            die entsprechende Information hier erneut erheben oder Befragungszeit einsparen möchte und die entsprechenden\n            Folgefragen bei der Befragung auslässt."))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }), page_followup(2, is_interview = TRUE), page_results(), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         if (show_feedback_page) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             page_feedback(is_interview = TRUE, render_after = function(...) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 shiny::tags$div(class = "demo-text", shiny::tags$p("Es ist schwierig, geeignete Antworten für die Berufs-Hilfsklassifikation zu formulieren. Mithilfe eines klassischen Pretests\n            können die Antworten auch nicht getestet werden, da viele Berufe extrem selten sind und im Pretest nie vorkommen."), </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   shiny::tags$p("Daher wird mit dieser Frage erfasst, welche Antworten die tatsächlich ausgeübte Tätigkeit nur unzureichend beschreiben.\n            Wenn bei bestimmten Antworten Probleme festgestellt werden, kann eine Überarbeitung der Berufs-Hilfsklassifikation erforderlich sein."))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             })</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         }, page_final())</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55d5b89ef498&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:occupationMeasurement&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="co"># Run the app with the questionnaire_demo</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="app.html">app</a></span><span class="op">(</span>questionnaire <span class="op">=</span> <span class="fu">questionnaire_demo</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

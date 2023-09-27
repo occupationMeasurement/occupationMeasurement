@@ -19,9 +19,7 @@ package_info <- package_info[package_info$package == "occupationMeasurement", ]
 # will correspond to different things based on how the package was loaded.
 # For R CMD CHECK it will correspond to the built package which just needs
 # to be laoded, for devtools::test it will correspond to the package source
-installed_via_check <- package_info$path != "" && package_info$source == "local"
-
-if (installed_via_check) {
+if (testthat::is_checking()) {
   # Re-use the installation from R CMD CHECK and directly load
   # via library()
   temporary_library_path <- package_info$loadedpath |>
@@ -36,7 +34,7 @@ if (installed_via_check) {
 
 api_process <- callr::r_bg(
   function() {
-    if (installed_via_check) {
+    if (testthat::is_checking()) {
       library(occupationMeasurement, lib.loc = temporary_library_path)
     } else {
       library(occupationMeasurement)

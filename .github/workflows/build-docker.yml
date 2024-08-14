@@ -1,0 +1,90 @@
+name: Build & Push Docker Images
+
+on:
+  # Run manually
+  workflow_dispatch:
+  # Run for any new tag starting with "v" e.g. "v1.2.3"
+  push:
+    tags:
+      - "v*"
+    branches:
+      - feature/docker/*
+
+jobs:
+  build-docker:
+    runs-on: ubuntu-latest
+
+    name: Build ${{ matrix.config.target }} (${{ matrix.config.os }})
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {os: ubuntu-latest,   target: 'app'}
+          - {os: ubuntu-latest,   target: 'api'}
+
+    # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Uses the `docker/login-action` action to log in to the Container registry registry using the account and password that will publish the packages.
+      # Once published, the packages are scoped to the account defined here.
+      - name: Log in to the Github Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # This step uses docker/metadata-action
+      # to extract tags and labels that will be applied to the specified image.
+      # The `id` "meta" allows the output of this step to be referenced in a subsequent step.
+      # The `images` value provides the base name for the tags and labels.
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/occupationMeasurement/${{ matrix.config.target }}
+          tags: |
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+            # commit hash
+            type=sha
+            # semver based on tag (if present), e.g. v0.1.2
+            # output 0.1.2
+            type=semver,pattern={{version}}
+            # output 0.1
+            type=semver,pattern={{major}}.{{minor}}
+            # disabled if major zero
+            type=semver,pattern={{major}},enable=${{ !startsWith(github.ref, 'refs/tags/v0.') }}
+            # Support for branch or PR names (currently not enabled)
+            type=ref,event=branch
+            type=ref,event=pr
+            # Always set the dev tag
+            type=raw,value=dev
+
+      # Setup R + dependencies and build package
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "release"
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: devtools
+      - name: Build Package
+        run: R -e "devtools::build(pkg = '.', path = 'docker/occupationMeasurement.tar.gz')"
+
+      # Build and push the actual Docker image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./docker/
+          file: ./${{ matrix.config.target }}/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

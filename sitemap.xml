@@ -1,177 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/404.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/api.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app-database.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app-deployment.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app-questionnaire.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/occupationMeasurement.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/index.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/algo_similarity_based_reasoning.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/api.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/app.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/auxco.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/button_next.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/check_condition.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/convert_suggestions.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/create_app_settings.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/execute_render.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/execute_run_after.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/execute_run_before.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_data.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_final_codes.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_followup_questions.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_item_data.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_job_suggestions.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_page_data.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_responses.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_suggestion_info.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/isco_08_en.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/leaving_page_backwards.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/load_auxco.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/load_kldb.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/new_page.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_choose_one_option.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_feedback.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_final.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_first_freetext.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_followup.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_freetext.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_none_selected_freetext.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_results.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_second_freetext.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_select_suggestion.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_welcome.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/preprocess_string.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/pretrained_models.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/questionnaire_demo.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/questionnaire_interviewer_administered.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/questionnaire_web_survey.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/set_item_data.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/set_page_data.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/train_similarity_based_reasoning.html</loc>
-  </url>
-  <url>
-    <loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/validate_questionnaire.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/404.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/LICENSE-text.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/LICENSE.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/api.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app-database.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app-deployment.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app-questionnaire.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/app.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/index.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/articles/occupationMeasurement.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/authors.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/index.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/news/index.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/algo_similarity_based_reasoning.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/api.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/app.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/auxco.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/button_next.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/check_condition.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/convert_suggestions.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/create_app_settings.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/execute_render.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/execute_run_after.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/execute_run_before.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_data.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_final_codes.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_followup_questions.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_item_data.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_job_suggestions.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_page_data.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_responses.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/get_suggestion_info.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/index.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/isco_08_en.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/leaving_page_backwards.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/load_auxco.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/load_kldb.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/new_page.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_choose_one_option.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_feedback.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_final.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_first_freetext.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_followup.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_freetext.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_none_selected_freetext.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_results.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_second_freetext.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_select_suggestion.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/page_welcome.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/preprocess_string.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/pretrained_models.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/questionnaire_demo.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/questionnaire_interviewer_administered.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/questionnaire_web_survey.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/set_item_data.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/set_page_data.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/train_similarity_based_reasoning.html</loc></url>
+<url><loc>https://occupationmeasurement.github.io/occupationMeasurement/reference/validate_questionnaire.html</loc></url>
 </urlset>
+

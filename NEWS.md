@@ -1,8 +1,13 @@
 # occupationMeasurement (development version)
 
+# occupationMeasurement 0.3.2
+
+* Fix a minor bug in detection of `R CMD CHECK` on CRAN Windows servers
+
 # occupationMeasurement 0.3.1
 
 * Gracefully handle unavailability of the KldB 2010 classification
+* Disable multithreading in examples and tests to comply with new CRAN policy
 
 # occupationMeasurement 0.3.0
 

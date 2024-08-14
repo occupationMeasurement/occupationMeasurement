@@ -198,7 +198,7 @@ load_kldb_raw <- function(cache_dir = getOption("occupationMeasurement.cache_dir
     ))
 
     # Download the kldb file (which is a zip archive)
-    url <- "https://www.klassifikationsserver.de/klassService/jsp/variant/downloadexport?type=EXPORT_CSV_VARIANT&variant=kldb2010&language=DE"
+    url <- "https://www.klassifikationsserver.de/klassService/thyme/variant/download/kldb2010?file=variant&type=csv"
     tryCatch({
       utils::download.file(url, destfile = kldb_archive_path, mode = "wb")
     }, error = function(e) {

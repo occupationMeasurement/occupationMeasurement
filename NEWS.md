@@ -1,5 +1,9 @@
 # occupationMeasurement (development version)
 
+# occupationMeasurement 0.3.3
+
+* Fix broken URL to download KldB 2010 classification
+ 
 # occupationMeasurement 0.3.2
 
 * Fix a minor bug in detection of `R CMD CHECK` on CRAN Windows servers
